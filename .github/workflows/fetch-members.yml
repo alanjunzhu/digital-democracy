@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v5
         with:
@@ -35,6 +37,7 @@ jobs:
             echo "No data changes detected."
           else
             git commit -m "chore: update members data [$(date -u +%Y-%m-%d)]"
-            git pull --rebase origin main
-            git push
+            git fetch origin main
+            git rebase origin/main
+            git push origin main
           fi
