@@ -3,7 +3,7 @@ name: Fetch Members Data
 on:
   schedule:
     - cron: '0 2 * * 0'  # Weekly, Sunday at 2am UTC
-  workflow_dispatch:       # Manual trigger
+  workflow_dispatch:
 
 permissions:
   contents: write
