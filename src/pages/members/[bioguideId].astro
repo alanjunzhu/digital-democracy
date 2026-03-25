@@ -4,7 +4,7 @@ import PartyBadge from '../../components/shared/PartyBadge.astro';
 import ChamberBadge from '../../components/shared/ChamberBadge.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
-import { formatState, formatDate } from '../../lib/utils';
+import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
 import type { MemberDetail } from '../../lib/types';
 
 export function getStaticPaths() {
@@ -33,11 +33,20 @@ const districtLabel = member.chamber === 'House' && member.district
   ? `, District ${member.district}`
   : '';
 
-// Cross-link: find bills sponsored by this member
+// Cross-link: find bills sponsored by this member, with stage info
 let sponsoredBills: any[] = [];
+let billsByStage: Record<string, any[]> = {};
 try {
   const billsIndex = JSON.parse(readFileSync(join(process.cwd(), 'data', 'bills', 'index.json'), 'utf-8'));
-  sponsoredBills = billsIndex.bills.filter((b: any) => b.sponsor?.bioguideId === bioguideId).slice(0, 10);
+  sponsoredBills = billsIndex.bills
+    .filter((b: any) => b.sponsor?.bioguideId === bioguideId)
+    .map((b: any) => ({ ...b, stage: getBillStage(b.latestAction) }));
+
+  // Group by stage
+  for (const b of sponsoredBills) {
+    if (!billsByStage[b.stage]) billsByStage[b.stage] = [];
+    billsByStage[b.stage].push(b);
+  }
 } catch {}
 
 // Cross-link: find votes (House members only)
@@ -45,9 +54,19 @@ let memberVotes: any[] = [];
 try {
   if (member.chamber === 'House') {
     const votesIndex = JSON.parse(readFileSync(join(process.cwd(), 'data', 'votes', 'index.json'), 'utf-8'));
-    memberVotes = votesIndex.votes.slice(0, 5);
+    memberVotes = votesIndex.votes.slice(0, 20);
   }
 } catch {}
+
+// Voting record stats
+const voteStats = {
+  total: memberVotes.length,
+  passed: memberVotes.filter((v: any) => v.result === 'Passed' || v.result === 'Agreed to').length,
+  failed: memberVotes.filter((v: any) => v.result === 'Failed' || v.result === 'Rejected').length,
+};
+
+// Stage display order
+const stageOrder = [...BILL_STAGES, 'Other'] as const;
 ---
 
 <Layout title={member.name} description={`${member.name} - ${member.party} ${member.chamber === 'Senate' ? 'Senator' : 'Representative'} from ${formatState(member.state)}`}>
@@ -114,6 +133,28 @@ try {
       </div>
     </div>
 
+    <!-- Quick Stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
+        <div class="text-2xl font-bold text-blue-600">{sponsoredBills.length}</div>
+        <div class="text-xs text-gray-500 mt-1">Bills Sponsored</div>
+      </div>
+      {member.chamber === 'House' && (
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
+          <div class="text-2xl font-bold text-emerald-600">{voteStats.total}</div>
+          <div class="text-xs text-gray-500 mt-1">Recent Votes</div>
+        </div>
+      )}
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
+        <div class="text-2xl font-bold text-green-600">{billsByStage['Signed into Law']?.length || 0}</div>
+        <div class="text-xs text-gray-500 mt-1">Signed into Law</div>
+      </div>
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
+        <div class="text-2xl font-bold text-yellow-600">{billsByStage['In Committee']?.length || 0}</div>
+        <div class="text-xs text-gray-500 mt-1">In Committee</div>
+      </div>
+    </div>
+
     <!-- Details Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Bio -->
@@ -159,41 +200,117 @@ try {
       )}
     </div>
 
-    <!-- Sponsored Bills -->
+    <!-- Sponsored Bills by Stage -->
     {sponsoredBills.length > 0 && (
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-3">Sponsored Bills</h2>
-        <div class="space-y-2">
-          {sponsoredBills.map((b: any) => (
-            <a href={`${base}bills/${b.billId}/`} class="flex items-start gap-3 py-2 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded">
-              <span class="font-mono text-sm font-semibold text-blue-700 whitespace-nowrap">{b.type} {b.number}</span>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-gray-900 line-clamp-1">{b.title}</p>
-                <p class="text-xs text-gray-400">{b.introducedDate}</p>
-              </div>
-            </a>
-          ))}
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Sponsored Legislation</h2>
+
+        {/* Stage pipeline visualization */}
+        <div class="flex flex-wrap gap-2 mb-4">
+          {stageOrder.map(s => {
+            const count = billsByStage[s]?.length || 0;
+            if (count === 0) return null;
+            const sc = STAGE_COLORS[s as keyof typeof STAGE_COLORS] || STAGE_COLORS['Other'];
+            return (
+              <span class={`inline-flex items-center gap-1.5 rounded-full text-xs px-3 py-1.5 font-medium ${sc.bg} ${sc.text}`}>
+                <span class={`w-2 h-2 rounded-full ${sc.dot}`}></span>
+                {s}: {count}
+              </span>
+            );
+          })}
         </div>
-        <a href={`${base}bills/`} class="text-blue-600 hover:underline text-sm mt-3 inline-block">View all bills &rarr;</a>
+
+        {/* Bills grouped by stage */}
+        <div class="space-y-6">
+          {stageOrder.map(s => {
+            const bills = billsByStage[s];
+            if (!bills || bills.length === 0) return null;
+            const sc = STAGE_COLORS[s as keyof typeof STAGE_COLORS] || STAGE_COLORS['Other'];
+            return (
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class={`w-2.5 h-2.5 rounded-full ${sc.dot}`}></span>
+                  <h3 class="text-sm font-semibold text-gray-700">{s}</h3>
+                  <span class="text-xs text-gray-400">({bills.length})</span>
+                </div>
+                <div class="space-y-1 pl-4 border-l-2 border-gray-100">
+                  {bills.slice(0, 10).map((b: any) => (
+                    <a href={`${base}bills/${b.billId}/`} class="flex items-start gap-3 py-2 hover:bg-gray-50 -mx-2 px-2 rounded">
+                      <span class="font-mono text-sm font-semibold text-blue-700 whitespace-nowrap">{b.type} {b.number}</span>
+                      <div class="flex-1 min-w-0">
+                        <p class="text-sm text-gray-900 line-clamp-1">{b.title}</p>
+                        <p class="text-xs text-gray-400">{b.introducedDate}{b.latestActionDate ? ` · Last action: ${b.latestActionDate}` : ''}</p>
+                      </div>
+                    </a>
+                  ))}
+                  {bills.length > 10 && (
+                    <p class="text-xs text-gray-400 pl-2">...and {bills.length - 10} more</p>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <a href={`${base}bills/`} class="text-blue-600 hover:underline text-sm mt-4 inline-block">View all bills &rarr;</a>
       </div>
     )}
 
-    <!-- Recent House Votes (for House members) -->
+    <!-- Voting Record (House members) -->
     {memberVotes.length > 0 && (
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-3">Recent House Votes</h2>
-        <div class="space-y-2">
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Voting Record</h2>
+
+        {/* Vote stats summary */}
+        <div class="grid grid-cols-3 gap-4 mb-4">
+          <div class="text-center p-3 bg-gray-50 rounded-lg">
+            <div class="text-xl font-bold text-gray-900">{voteStats.total}</div>
+            <div class="text-xs text-gray-500">Total Votes</div>
+          </div>
+          <div class="text-center p-3 bg-green-50 rounded-lg">
+            <div class="text-xl font-bold text-green-600">{voteStats.passed}</div>
+            <div class="text-xs text-gray-500">Passed</div>
+          </div>
+          <div class="text-center p-3 bg-red-50 rounded-lg">
+            <div class="text-xl font-bold text-red-600">{voteStats.failed}</div>
+            <div class="text-xs text-gray-500">Failed</div>
+          </div>
+        </div>
+
+        {/* Individual votes */}
+        <div class="space-y-1">
           {memberVotes.map((v: any) => (
-            <a href={`${base}votes/${v.voteId}/`} class="flex items-start gap-3 py-2 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded">
-              <span class="font-mono text-xs text-gray-500 whitespace-nowrap">#{v.rollCallNumber}</span>
-              <p class="text-sm text-gray-900 line-clamp-1 flex-1">{v.question}</p>
-              <span class={`inline-flex items-center rounded-full text-xs px-1.5 py-0.5 ${v.result === 'Passed' || v.result === 'Agreed to' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+            <a href={`${base}votes/${v.voteId}/`} class="flex items-start gap-3 py-2.5 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded">
+              <div class="flex flex-col items-center min-w-[3rem]">
+                <span class="font-mono text-xs text-gray-500">#{v.rollCallNumber}</span>
+                <span class="text-[10px] text-gray-400">{v.date}</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-sm text-gray-900 line-clamp-1">{v.question}</p>
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="text-xs text-gray-400">
+                    Yea: {v.totalYea} · Nay: {v.totalNay}
+                  </span>
+                  {v.billId && (
+                    <span class="text-xs text-blue-600 font-mono">{v.billId}</span>
+                  )}
+                </div>
+              </div>
+              <span class={`inline-flex items-center rounded-full text-xs px-2 py-0.5 font-medium whitespace-nowrap ${
+                v.result === 'Passed' || v.result === 'Agreed to' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+              }`}>
                 {v.result}
               </span>
             </a>
           ))}
         </div>
         <a href={`${base}votes/`} class="text-blue-600 hover:underline text-sm mt-3 inline-block">View all votes &rarr;</a>
+      </div>
+    )}
+
+    {/* Message for Senate members about votes */}
+    {member.chamber === 'Senate' && (
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-6 text-sm text-amber-800">
+        Senate vote data is not yet available through the Congress.gov API v3. House voting records are available for House members.
       </div>
     )}
   </div>

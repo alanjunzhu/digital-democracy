@@ -4,6 +4,7 @@ import ChamberBadge from '../../components/shared/ChamberBadge.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import type { BillDetail } from '../../lib/types';
+import { getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
 
 export function getStaticPaths() {
   const billsDir = join(process.cwd(), 'data', 'bills');
@@ -32,6 +33,13 @@ const partyColor = (p: string) => {
   if (p === 'R') return 'text-red-700';
   return 'text-purple-700';
 };
+
+const billStage = getBillStage(bill.latestAction);
+const stageColor = STAGE_COLORS[billStage];
+
+// Build progress pipeline
+const stageIndex = BILL_STAGES.indexOf(billStage);
+const progressStages = ['Introduced', 'In Committee', 'Passed One Chamber', 'Passed Both Chambers', 'Signed into Law'] as const;
 ---
 
 <Layout title={`${bill.type} ${bill.number}`} description={bill.title}>
@@ -46,6 +54,9 @@ const partyColor = (p: string) => {
       <div class="flex items-center gap-3 mb-3">
         <span class="font-mono text-lg font-bold text-blue-700">{bill.type} {bill.number}</span>
         <ChamberBadge chamber={bill.originChamber} />
+        <span class={`inline-flex items-center rounded-full text-xs px-2.5 py-1 font-semibold ${stageColor.bg} ${stageColor.text}`}>
+          {billStage}
+        </span>
         {bill.policyArea && (
           <span class="inline-flex items-center rounded-full text-xs px-2 py-0.5 bg-gray-100 text-gray-600">
             {bill.policyArea}
@@ -53,6 +64,38 @@ const partyColor = (p: string) => {
         )}
       </div>
       <h1 class="text-2xl font-bold text-gray-900 mb-4">{bill.title}</h1>
+
+      {/* Legislative Progress Pipeline */}
+      <div class="flex items-center gap-1 mb-4 overflow-x-auto pb-1">
+        {progressStages.map((s, i) => {
+          const isActive = BILL_STAGES.indexOf(billStage) >= BILL_STAGES.indexOf(s);
+          const isCurrent = billStage === s;
+          const sc = STAGE_COLORS[s];
+          return (
+            <div class="flex items-center">
+              {i > 0 && (
+                <div class={`w-4 sm:w-8 h-0.5 ${isActive ? sc.dot : 'bg-gray-200'}`} />
+              )}
+              <div class={`flex items-center gap-1 px-2 py-1 rounded-full text-[10px] sm:text-xs font-medium whitespace-nowrap ${
+                isCurrent ? `${sc.bg} ${sc.text} ring-2 ring-offset-1 ring-current` :
+                isActive ? `${sc.bg} ${sc.text}` : 'bg-gray-100 text-gray-400'
+              }`}>
+                <span class={`w-1.5 h-1.5 rounded-full ${isActive ? sc.dot : 'bg-gray-300'}`}></span>
+                {s}
+              </div>
+            </div>
+          );
+        })}
+        {billStage === 'Vetoed' && (
+          <div class="flex items-center">
+            <div class="w-4 sm:w-8 h-0.5 bg-red-400" />
+            <div class="flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 ring-2 ring-offset-1 ring-current whitespace-nowrap">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+              Vetoed
+            </div>
+          </div>
+        )}
+      </div>
 
       <div class="flex flex-wrap gap-6 text-sm text-gray-600">
         {bill.sponsor && (
