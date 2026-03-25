@@ -1,0 +1,43 @@
+---
+import PartyBadge from '../shared/PartyBadge.astro';
+import ChamberBadge from '../shared/ChamberBadge.astro';
+import type { MemberSummary } from '../../lib/types';
+import { formatState } from '../../lib/utils';
+
+interface Props {
+  member: MemberSummary;
+}
+
+const { member } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const districtLabel = member.chamber === 'House' && member.district
+  ? `District ${member.district}`
+  : '';
+---
+
+<a
+  href={`${base}members/${member.bioguideId}/`}
+  class="block bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all p-4 group"
+>
+  <div class="flex items-start gap-3">
+    <img
+      src={member.imageUrl}
+      alt={member.name}
+      class="w-16 h-20 object-cover rounded bg-gray-200"
+      loading="lazy"
+      onerror="this.style.display='none'"
+    />
+    <div class="flex-1 min-w-0">
+      <h3 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate">
+        {member.name}
+      </h3>
+      <div class="flex items-center gap-2 mt-1">
+        <PartyBadge party={member.party} size="sm" />
+        <ChamberBadge chamber={member.chamber} size="sm" />
+      </div>
+      <p class="text-sm text-gray-500 mt-1">
+        {formatState(member.state)}{districtLabel ? `, ${districtLabel}` : ''}
+      </p>
+    </div>
+  </div>
+</a>

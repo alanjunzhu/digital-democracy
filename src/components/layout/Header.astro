@@ -1,0 +1,58 @@
+---
+const base = import.meta.env.BASE_URL;
+const navItems = [
+  { href: `${base}`, label: 'Home' },
+  { href: `${base}members/`, label: 'Members' },
+  { href: `${base}bills/`, label: 'Bills' },
+  { href: `${base}votes/`, label: 'Votes' },
+  { href: `${base}committees/`, label: 'Committees' },
+];
+---
+
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href={base} class="flex items-center gap-2 text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+        <span class="text-2xl">🏛️</span>
+        <span>Congress Tracker</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        {navItems.map(item => (
+          <a
+            href={item.href}
+            class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 text-gray-600 hover:text-gray-900"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden pb-4">
+      {navItems.map(item => (
+        <a
+          href={item.href}
+          class="block py-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

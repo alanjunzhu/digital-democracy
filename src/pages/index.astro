@@ -1,0 +1,131 @@
+---
+import Layout from '../components/layout/Layout.astro';
+import PartyBadge from '../components/shared/PartyBadge.astro';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+let membersData = { total: 0, members: [], lastUpdated: '', congress: 119 };
+try {
+  const dataPath = join(process.cwd(), 'data', 'members', 'index.json');
+  membersData = JSON.parse(readFileSync(dataPath, 'utf-8'));
+} catch {}
+
+const senators = membersData.members.filter((m: any) => m.chamber === 'Senate');
+const representatives = membersData.members.filter((m: any) => m.chamber === 'House');
+const democrats = membersData.members.filter((m: any) => m.party === 'Democrat');
+const republicans = membersData.members.filter((m: any) => m.party === 'Republican');
+const independents = membersData.members.filter((m: any) => m.party === 'Independent');
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Home">
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Track the US Congress
+        </h1>
+        <p class="text-xl text-blue-200 mb-8">
+          An open-source transparency tool for the {membersData.congress}th Congress.
+          Browse members, bills, votes, and committees — all powered by public data.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href={`${base}members/`}
+            class="inline-flex items-center px-6 py-3 bg-white text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+          >
+            Browse Members
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="text-3xl font-bold text-gray-900">{membersData.total}</div>
+        <div class="text-sm text-gray-500 mt-1">Total Members</div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="text-3xl font-bold text-amber-600">{senators.length}</div>
+        <div class="text-sm text-gray-500 mt-1">Senators</div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="text-3xl font-bold text-emerald-600">{representatives.length}</div>
+        <div class="text-sm text-gray-500 mt-1">Representatives</div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="flex items-center justify-center gap-3">
+          <span class="text-xl font-bold text-blue-600">{democrats.length}</span>
+          <span class="text-gray-400">|</span>
+          <span class="text-xl font-bold text-red-600">{republicans.length}</span>
+          {independents.length > 0 && (
+            <>
+              <span class="text-gray-400">|</span>
+              <span class="text-xl font-bold text-purple-600">{independents.length}</span>
+            </>
+          )}
+        </div>
+        <div class="text-sm text-gray-500 mt-1">D | R{independents.length > 0 ? ' | I' : ''}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Members Preview -->
+  {membersData.members.length > 0 && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">Members of Congress</h2>
+        <a href={`${base}members/`} class="text-blue-600 hover:text-blue-800 font-medium text-sm">
+          View all &rarr;
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {membersData.members.slice(0, 8).map((m: any) => (
+          <a
+            href={`${base}members/${m.bioguideId}/`}
+            class="block bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all p-4 group"
+          >
+            <div class="flex items-start gap-3">
+              <img
+                src={m.imageUrl}
+                alt={m.name}
+                class="w-14 h-18 object-cover rounded bg-gray-200"
+                loading="lazy"
+              />
+              <div class="flex-1 min-w-0">
+                <h3 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate text-sm">
+                  {m.name}
+                </h3>
+                <div class="flex items-center gap-1 mt-1">
+                  <PartyBadge party={m.party} size="sm" />
+                </div>
+                <p class="text-xs text-gray-500 mt-1">{m.state} &middot; {m.chamber}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Coming Soon / About -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About Congress Tracker</h2>
+      <p class="text-gray-600 mb-4">
+        Congress Tracker is a free, open-source tool that makes it easy to follow what's happening
+        in the US Congress. All data comes from official public sources including the
+        <a href="https://api.congress.gov" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Congress.gov API</a>
+        and the
+        <a href="https://github.com/unitedstates/congress-legislators" class="text-blue-600 hover:underline" target="_blank" rel="noopener">unitedstates project</a>.
+      </p>
+      <p class="text-gray-600">
+        The site updates automatically via GitHub Actions and is hosted on GitHub Pages — no servers to maintain.
+      </p>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,33 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-gray-400 mt-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-white font-semibold mb-2">Congress Tracker</h3>
+        <p class="text-sm">
+          An open-source tool for tracking US Congress activity.
+          Built with data from Congress.gov and other public sources.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-2">Data Sources</h3>
+        <ul class="text-sm space-y-1">
+          <li><a href="https://api.congress.gov" class="hover:text-white transition-colors" target="_blank" rel="noopener">Congress.gov API</a></li>
+          <li><a href="https://github.com/unitedstates/congress-legislators" class="hover:text-white transition-colors" target="_blank" rel="noopener">unitedstates/congress-legislators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-2">Links</h3>
+        <ul class="text-sm space-y-1">
+          <li><a href="https://github.com/alanjunzhu/digital-democracy" class="hover:text-white transition-colors" target="_blank" rel="noopener">Source Code</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-8 pt-4 text-sm text-center">
+      <p>&copy; {year} Congress Tracker. Data is public domain.</p>
+    </div>
+  </div>
+</footer>

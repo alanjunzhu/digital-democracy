@@ -1,0 +1,22 @@
+---
+interface Props {
+  party: string;
+  size?: 'sm' | 'md';
+}
+
+const { party, size = 'md' } = Astro.props;
+
+const colors: Record<string, string> = {
+  Democrat: 'bg-blue-100 text-blue-800',
+  Republican: 'bg-red-100 text-red-800',
+  Independent: 'bg-purple-100 text-purple-800',
+};
+
+const label = party === 'Democrat' ? 'D' : party === 'Republican' ? 'R' : 'I';
+const colorClass = colors[party] || 'bg-gray-100 text-gray-800';
+const sizeClass = size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-sm px-2 py-0.5';
+---
+
+<span class={`inline-flex items-center font-semibold rounded-full ${colorClass} ${sizeClass}`}>
+  {label}
+</span>

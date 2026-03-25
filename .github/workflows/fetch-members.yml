@@ -1,0 +1,39 @@
+name: Fetch Members Data
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Weekly, Sunday at 2am UTC
+  workflow_dispatch:       # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch members data
+        run: node scripts/fetch-members.mjs
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No data changes detected."
+          else
+            git commit -m "chore: update members data [$(date -u +%Y-%m-%d)]"
+            git push
+          fi

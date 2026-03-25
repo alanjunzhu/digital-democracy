@@ -1,0 +1,14 @@
+---
+interface Props {
+  chamber: 'Senate' | 'House';
+  size?: 'sm' | 'md';
+}
+
+const { chamber, size = 'md' } = Astro.props;
+const colorClass = chamber === 'Senate' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800';
+const sizeClass = size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-sm px-2 py-0.5';
+---
+
+<span class={`inline-flex items-center font-medium rounded-full ${colorClass} ${sizeClass}`}>
+  {chamber}
+</span>

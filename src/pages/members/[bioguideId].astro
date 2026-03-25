@@ -1,0 +1,146 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import PartyBadge from '../../components/shared/PartyBadge.astro';
+import ChamberBadge from '../../components/shared/ChamberBadge.astro';
+import { readFileSync, readdirSync, existsSync } from 'fs';
+import { join } from 'path';
+import { formatState, formatDate } from '../../lib/utils';
+import type { MemberDetail } from '../../lib/types';
+
+export function getStaticPaths() {
+  const membersDir = join(process.cwd(), 'data', 'members');
+  const paths: { params: { bioguideId: string } }[] = [];
+
+  if (existsSync(membersDir)) {
+    const files = readdirSync(membersDir);
+    for (const file of files) {
+      if (file === 'index.json') continue;
+      if (!file.endsWith('.json')) continue;
+      const bioguideId = file.replace('.json', '');
+      paths.push({ params: { bioguideId } });
+    }
+  }
+
+  return paths;
+}
+
+const { bioguideId } = Astro.params;
+const dataPath = join(process.cwd(), 'data', 'members', `${bioguideId}.json`);
+const member: MemberDetail = JSON.parse(readFileSync(dataPath, 'utf-8'));
+const base = import.meta.env.BASE_URL;
+
+const districtLabel = member.chamber === 'House' && member.district
+  ? `, District ${member.district}`
+  : '';
+---
+
+<Layout title={member.name} description={`${member.name} - ${member.party} ${member.chamber === 'Senate' ? 'Senator' : 'Representative'} from ${formatState(member.state)}`}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Back link -->
+    <a href={`${base}members/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
+      &larr; All Members
+    </a>
+
+    <!-- Profile Header -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+      <div class="flex flex-col sm:flex-row items-start gap-6">
+        <img
+          src={member.imageUrl}
+          alt={member.name}
+          class="w-32 h-40 object-cover rounded-lg bg-gray-200 shadow-sm"
+          onerror="this.style.display='none'"
+        />
+        <div class="flex-1">
+          <h1 class="text-3xl font-bold text-gray-900">{member.name}</h1>
+          <div class="flex items-center gap-3 mt-2">
+            <PartyBadge party={member.party} />
+            <ChamberBadge chamber={member.chamber} />
+          </div>
+          <p class="text-lg text-gray-600 mt-2">
+            {formatState(member.state)}{districtLabel}
+          </p>
+
+          {/* Contact & Links */}
+          <div class="flex flex-wrap gap-4 mt-4 text-sm">
+            {member.website && (
+              <a href={member.website} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+                Official Website
+              </a>
+            )}
+            {member.phone && (
+              <span class="text-gray-600">
+                Phone: {member.phone}
+              </span>
+            )}
+            {member.url && (
+              <a href={member.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+                Congress.gov
+              </a>
+            )}
+          </div>
+
+          {/* Social Media */}
+          {member.socialMedia && (
+            <div class="flex gap-4 mt-3 text-sm">
+              {member.socialMedia.twitter && (
+                <a href={`https://twitter.com/${member.socialMedia.twitter}`} target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-500">
+                  @{member.socialMedia.twitter}
+                </a>
+              )}
+              {member.socialMedia.facebook && (
+                <a href={`https://facebook.com/${member.socialMedia.facebook}`} target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600">
+                  Facebook
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <!-- Details Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Bio -->
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">Details</h2>
+        <dl class="space-y-2 text-sm">
+          {member.birthDate && (
+            <div class="flex justify-between">
+              <dt class="text-gray-500">Born</dt>
+              <dd class="text-gray-900">{member.birthDate}</dd>
+            </div>
+          )}
+          {member.gender && (
+            <div class="flex justify-between">
+              <dt class="text-gray-500">Gender</dt>
+              <dd class="text-gray-900">{member.gender === 'M' ? 'Male' : member.gender === 'F' ? 'Female' : member.gender}</dd>
+            </div>
+          )}
+          {member.officeAddress && (
+            <div>
+              <dt class="text-gray-500">Office</dt>
+              <dd class="text-gray-900 mt-0.5">{member.officeAddress}</dd>
+            </div>
+          )}
+        </dl>
+      </div>
+
+      <!-- Service History -->
+      {member.terms && member.terms.length > 0 && (
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">Service History</h2>
+          <div class="space-y-2 text-sm">
+            {member.terms.slice().reverse().map((term) => (
+              <div class="flex items-center gap-2 py-1 border-b border-gray-100 last:border-0">
+                <span class={`inline-block w-2 h-2 rounded-full ${term.chamber === 'Senate' ? 'bg-amber-500' : 'bg-emerald-500'}`}></span>
+                <span class="text-gray-900">{term.chamber}</span>
+                <span class="text-gray-400 flex-1"></span>
+                <span class="text-gray-500">{term.startDate}{term.endDate ? ` - ${term.endDate}` : ' - Present'}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</Layout>
