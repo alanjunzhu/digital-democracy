@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Social Welfare",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/227",
-  "summary": "",
+  "summary": "<p><strong>Clergy Act</strong></p><p>This bill establishes a two-year window for certain members of the clergy and Christian Science practitioners to revoke their exemption from Social Security and Medicare taxes on ministerial earnings. Under current law, such individuals who object to participation in public insurance programs on religious or conscientious grounds may apply to the Internal Revenue Service (IRS) for an irrevocable exemption and will not receive Social Security or Medicare benefits in retirement unless they have qualifying credits from other employment.</p><p>The IRS must develop a plan to inform members of the clergy and Christian Science practitioners of their eligibility to revoke prior exemptions, pursuant to the bill's changes.</p>",
   "cosponsors": 21,
-  "committees": [],
+  "committees": [
+    "Ways and Means Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -59,5 +61,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/227/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/227/text"
 }

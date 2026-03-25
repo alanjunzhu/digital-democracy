@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/307",
-  "summary": "",
+  "summary": "<p><strong>Amputation Reduction and Compassion Act of 2025&nbsp;or the ARC Act of </strong><strong>2025&nbsp;</strong></p><p>This bill provides for coverage of peripheral artery disease screening tests without cost-sharing under Medicare and Medicaid for certain at-risk individuals. It also requires the development of certain educational programs, a payment model, and Medicare quality measures to reduce amputations relating to such disease.</p>",
   "cosponsors": 43,
-  "committees": [],
+  "committees": [
+    "Ways and Means Committee",
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -44,5 +47,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/307/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/307/text"
 }

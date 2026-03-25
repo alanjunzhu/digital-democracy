@@ -16,9 +16,11 @@
   "originChamber": "Senate",
   "policyArea": "Commerce",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/28",
-  "summary": "",
+  "summary": "<p><strong>Informing Consumers about Smart Devices Act</strong></p> <p>This bill requires manufacturers of internet-connected devices (e.g., smart appliances) that are equipped with a camera or microphone to disclose to consumers prior to purchase that a camera or microphone is part of the device.</p> <p>The bill does not apply to mobile phones, laptops, or other devices that a consumer would reasonably expect to include a camera or microphone.</p>",
   "cosponsors": 3,
-  "committees": [],
+  "committees": [
+    "Commerce, Science, and Transportation Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -46,5 +48,5 @@
       "text": "Introduced in Senate"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/s/28/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/28/text"
 }

@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/94",
-  "summary": "",
+  "summary": "<p>This bill removes Pakistan's designation as a major non-NATO ally, a status that allows for various benefits such as access to excess U.S. defense supplies and participation in cooperative defense research and development projects.</p><p>The President may not redesignate Pakistan as a major non-NATO ally without certifying that the country has taken various actions against the Haqqani Network, including continuing to conduct military actions against the Taliban-affiliated group and prosecuting its leaders.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Foreign Affairs Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/94/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/94/text"
 }

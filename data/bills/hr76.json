@@ -16,9 +16,17 @@
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/76",
-  "summary": "",
+  "summary": "<p><strong>Fund and Complete the Border Wall Act</strong></p><p>This bill establishes funding for a U.S.-Mexico border barrier and revises how border patrol agents are compensated for overtime.</p><p>The Department of the Treasury shall set up an account for funding the design, construction, and maintenance of the barrier. The funds in the account are appropriated only for that purpose and for vehicles and equipment for border patrol agents.</p><p>For each fiscal year, financial assistance to a country shall be reduced by $2,000 for each citizen or national of that country apprehended for illegally entering the United States through its southern border. The reduced amount shall be transferred to the border barrier account. The Department of State may opt not to reduce amounts appropriated to Mexico for various military and law enforcement-related activities.</p><p>This bill establishes a 5% fee on foreign remittance transfers and increases the fee for the arrival/departure I-94 form for various aliens entering the United States, with part of the fees going to the border barrier account.</p><p>By December 31, 2025, the Department of Homeland Security shall (1) take all actions necessary, including constructing barriers, to prevent illegal crossings along the U.S.-Mexico barrier; and (2) achieve operational control over all U.S. international borders.</p><p>The bill changes how border patrol agents receive overtime pay when working up to 100 hours in a two-week period. For hours worked above 80, an agent shall receive at least 150% of the agent's regular hourly rate.</p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Homeland Security Committee",
+    "Appropriations Committee",
+    "Education and Workforce Committee",
+    "Financial Services Committee",
+    "Foreign Affairs Committee",
+    "Judiciary Committee",
+    "Ways and Means Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -70,5 +78,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/76/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/76/text"
 }

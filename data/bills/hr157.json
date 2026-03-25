@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/157",
-  "summary": "",
+  "summary": "<p><b>Citizen Legislature Anti-Corruption Reform of Congress Act or the CLEAN Congress Act</b></p> <p>This bill (1) requires bills, orders, resolutions, or votes submitted by Congress to the President to include only one subject that is clearly and descriptively expressed in the measure's title; and (2) makes ineffective any provision of law that excludes its application to a Member of Congress or to an employee in a Member's office.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/157/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/157/text"
 }

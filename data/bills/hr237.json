@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/237",
-  "summary": "",
+  "summary": "<p><strong>Paws Off Act of 2025 </strong></p><p>This bill forbids the sale of food that contains xylitol unless the food's label contains a warning about the toxic effects of xylitol for dogs if ingested.</p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/237/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/237/text"
 }

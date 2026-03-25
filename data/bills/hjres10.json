@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10",
-  "summary": "",
+  "summary": "<p>This joint resolution proposes a constitutional amendment prohibiting total outlays for a fiscal year from exceeding total receipts for that fiscal year unless Congress authorizes the excess by a three-fifths roll call vote of each chamber. The prohibition excludes outlays for repayment of debt principal and receipts derived from borrowing.</p> <p>The amendment requires a three-fifths roll call vote of each chamber to increase the public debt limit. It prohibits a bill to increase revenue from becoming law unless it has been approved by a majority roll call vote of each chamber. </p> <p>The amendment also requires the President to submit an annual budget in which total outlays do not exceed total receipts.</p> <p>Congress may waive these requirements due to a declaration of war or a military conflict that causes an imminent and serious military threat to national security. </p>",
   "cosponsors": 15,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hjres/10/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/10/text"
 }

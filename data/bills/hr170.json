@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/170",
-  "summary": "",
+  "summary": "<p><strong>USPS Subpoena Authority Act</strong></p><p>This bill expands the administrative subpoena authority of the U.S. Postal Service (USPS).</p><p>Specifically, the bill authorizes subpoenas to investigate additional violations of law that involve the mail, including violations related to controlled substances and hazardous materials.</p><p>The bill also expands the senior USPS officials to whom subpoena approval authority may be delegated to include the Chief Postal Inspector.</p>",
   "cosponsors": 3,
-  "committees": [],
+  "committees": [
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/170/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/170/text"
 }

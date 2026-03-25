@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/95",
-  "summary": "",
+  "summary": "<p><strong>One Bill, One Subject Transparency Act</strong></p><p>This bill prohibits any bill or joint resolution from addressing more than one subject and establishes related enforcement mechanisms.</p><p>The bill requires bills and joint resolutions to address only one subject, which must be clearly and descriptively expressed in the bill or joint resolution's title. Appropriations bills may only contain provisions that are germane to the subject matter of the underlying bill.&nbsp;However, appropriations bills may limit&nbsp;the expenditure of appropriated funds.</p><p>The bill voids&nbsp;<br/></p><ul><li>any act (i.e., law) or joint resolution with a title that addresses two or more unrelated subjects;</li><li>any provision of an act or joint resolution concerning a subject that is not clearly and descriptively expressed in the title;</li><li>any provision of an appropriations act that contains general legislation or change of existing law provision not germane to the subject matter of the underlying bill;</li><li>any provision of an appropriations act that addresses a subject outside of the jurisdiction of the relevant subcommittee of the Committees on Appropriations of the House and of the Senate.</li></ul><p>The bill also authorizes any person aggrieved by the enforcement or threat of enforcement of an act enacted after this bill that does not comply with the requirements of this bill&nbsp;to sue the United States.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/95/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/95/text"
 }

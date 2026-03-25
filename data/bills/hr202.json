@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/202",
-  "summary": "",
+  "summary": "<p><strong>Commission to Relocate the Federal Bureaucracy Act</strong></p><p>This bill establishes a commission to study the relocation of nonsecurity-related federal agencies based in the Washington, DC, metropolitan area to other areas throughout the United States.&nbsp;Within one year of the bill's enactment the commission must submit a report to Congress that includes relocation recommendations based on specified considerations.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/202/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/202/text"
 }

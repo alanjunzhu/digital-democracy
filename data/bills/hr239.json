@@ -16,9 +16,16 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/239",
-  "summary": "",
+  "summary": "<p><strong>Justice for Kennedy Act of 2025 or the JFK Act of 2025</strong></p><p>This bill directs the National Archives and Records Administration, the Internal Revenue Service, the Central Intelligence Agency, the Federal Bureau of Investigation, the Department of Defense, and the Department of State to publicly disclose in unclassified and unredacted form any assassination record and information in their control or possession relevant to the assassination of President John F. Kennedy.</p><p>The Department of Justice must petition any court in the United States or in a foreign country to publicly disclose in such form any assassination record and information relevant to the assassination of President Kennedy that is held under seal of the court or under the injunction of secrecy of a grand jury.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Intelligence (Permanent Select) Committee",
+    "Armed Services Committee",
+    "Foreign Affairs Committee",
+    "Ways and Means Committee",
+    "Judiciary Committee",
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -60,5 +67,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/239/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/239/text"
 }

@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/34",
-  "summary": "",
+  "summary": "<p>This resolution expresses the sense of the House of Representatives that the National Security Agency's bulk collection telephone records program was unconstitutional and that all federal charges against Edward Snowden should be dropped. (Mr. Snowden disclosed information about the program and was subsequently charged for unauthorized disclosure of national defense information, unauthorized disclosure of classified communication intelligence, and theft of government property).<br/><br/></p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Intelligence (Permanent Select) Committee",
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -41,5 +44,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/34/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/34/text"
 }

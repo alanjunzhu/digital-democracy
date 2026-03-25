@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/238",
-  "summary": "",
+  "summary": "<p><strong>Healthy Technology Act of 2025 </strong></p><p>This bill establishes that artificial intelligence (AI) or machine learning technology may be eligible to prescribe drugs.</p><p>Currently, certain drugs may be dispensed only upon a prescription provided by a practitioner licensed by law to administer the drug. Under this bill, an AI or machine learning technology may qualify as such a prescribing practitioner if the technology is (1) authorized by state law to prescribe the drug involved; and (2) approved, cleared, or authorized under certain federal provisions pertaining to medical devices and products.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/238/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/238/text"
 }

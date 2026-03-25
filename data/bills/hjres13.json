@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Crime and Law Enforcement",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/13",
-  "summary": "",
+  "summary": "<p>This joint resolution proposes a constitutional amendment limiting the pardon power of the President.</p><p>The amendment prohibits the President from granting a pardon or reprieve to himself or herself, to relatives or members of the administration, to paid campaign employees, to a person or entity for an offense motivated by an interest of any of those people, or to a person or entity for an offense directed by or coordinated with the President.</p><p>The amendment also invalidates pardons issued for a corrupt purpose.</p>",
   "cosponsors": 5,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hjres/13/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/13/text"
 }

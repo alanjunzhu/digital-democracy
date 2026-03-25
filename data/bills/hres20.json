@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/20",
-  "summary": "",
+  "summary": "<p>This resolution establishes&nbsp;the House Select Committee on Electoral Reform to examine current methods of electing Members of Congress, consider alternative&nbsp;methods of election, and report appropriate recommendations to Congress and the President.</p><p>Specifically, the committee must (1) determine how alternative methods of election would affect the responsiveness, accountability, and functionality of Congress; (2) conduct hearings to take testimony and receive evidence from appropriate expert witnesses; and (3) examine federal barriers to state experimentation with alternative electoral systems.&nbsp;The committee must consider alternatives to current methods that include&nbsp;adopting multi-member congressional districts with proportional representation;&nbsp;adjusting the total number of Members of the House of Representatives; adopting alternative methods of voting (e.g., ranked-choice voting); and holding open and nonpartisan primaries.</p><p>The committee shall be made up of 14 Members of Congress appointed by the Speaker of the House, 7 of whom shall be appointed in consultation with the minority leader. The committee's co-chairs shall be designated by the Speaker and minority leader, respectively.&nbsp;The resolution provides that the committee must hold its first meeting within 30 days after all of its members have been appointed.</p><p>The committee shall issue its final report to Congress and the President within one year after the committee's first meeting.</p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Rules Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/20/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/20/text"
 }

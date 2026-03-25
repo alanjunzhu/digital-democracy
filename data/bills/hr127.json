@@ -16,9 +16,14 @@
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/127",
-  "summary": "",
+  "summary": "<p><b>Protection from Obamacare Mandates and Congressional Equity Act</b></p> <p>This bill alters provisions relating to the requirement to maintain minimum essential health care coverage (i.e., the individual mandate), as well as provisions relating to health care coverage for certain executive branch and congressional employees. </p> <p>Specifically, the bill exempts individuals from the requirement to maintain minimum essential health care coverage if they reside in a county where fewer than two health insurers offer insurance on the health insurance exchange. Under current law, there is no penalty for failing to maintain minimum essential health care coverage.</p> <p>The bill also requires certain executive branch and congressional employees to participate in health insurance exchanges. Under current law, Members of Congress and their designated staff are required to obtain coverage through health insurance exchanges, rather than the Federal Employee Health Benefits (FEHB) Program. Current regulations authorize government contributions toward such coverage and require Members of Congress to designate which members of their staff are required to obtain coverage through an exchange. </p><p>The bill requires all congressional staff, including employees of congressional committees and leadership offices, to obtain coverage through an exchange. The bill also prohibits Members of Congress from having the discretion to determine which of their employees are eligible to enroll through an exchange. Further, the President, Vice President, and executive branch political appointees must also obtain coverage through exchanges, rather than FEHB. The government is prohibited from contributing to or subsidizing the health insurance coverage of the officials and employees subject to this requirement, including Members of Congress and their staff.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Oversight and Government Reform Committee",
+    "Committee on House Administration",
+    "Energy and Commerce Committee",
+    "Ways and Means Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -50,5 +55,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/127/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/127/text"
 }

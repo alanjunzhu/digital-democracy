@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/90",
-  "summary": "",
+  "summary": "<p><strong>Health Coverage Choice Act</strong></p><p>This bill extends the maximum duration of short-term, limited-duration health insurance plans. The bill increases the maximum authorized initial term of such plans to a period that is less than 12 months (with a total duration of no more than 36 months, including renewals).</p><p>Current regulations limit the initial term to no more than three months and the maximum coverage duration to no more than four months, including renewals or extensions.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/90/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/90/text"
 }

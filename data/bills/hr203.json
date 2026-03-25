@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Transportation and Public Works",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/203",
-  "summary": "",
+  "summary": "<p><strong>Red Light Act</strong></p><p>This bill directs the Department of Transportation to withhold all of a state's share of certain&nbsp;federal highway funds (specifically, funds for the National Highway Performance Program, the Highway Safety Improvement Program, and the Congestion Mitigation and Air Quality Improvement Program) in FY2023 and thereafter if such state has enacted a law to provide driver's licenses or other identification cards to aliens who are unlawfully present in the United States.</p>",
   "cosponsors": 4,
-  "committees": [],
+  "committees": [
+    "Transportation and Infrastructure Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +42,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/203/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/203/text"
 }

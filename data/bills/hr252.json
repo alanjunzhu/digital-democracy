@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Transportation and Public Works",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/252",
-  "summary": "",
+  "summary": "<p><strong>Secure Our Ports Act of 2025</strong></p><p>This bill prohibits owners or operators of certain U.S. maritime transportation facilities from contracting for the lease, ownership, or operation of facilities with enterprises partly or wholly owned by China, Iran, North Korea, or Russia. The covered facilities are located at ports in areas that are subject to enhanced transportation security requirements, including the requirement for an Area Maritime Transportation Security Plan.</p>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Commerce, Science, and Transportation Committee",
+    "Transportation and Infrastructure Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -102,5 +105,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/252/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/252/text"
 }

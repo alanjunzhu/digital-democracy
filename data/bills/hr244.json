@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/244",
-  "summary": "",
+  "summary": "<p><strong>Veterans' True Choice Act of 2025</strong></p><p>This bill allows covered veterans to receive coverage under TRICARE Select, a health care program of the Department of Defense (DOD). Veterans covered by this bill include those with service-connected disabilities, former prisoners of war, Purple Heart recipients, Medal of Honor recipients, those discharged from service due to disability, and those entitled to disability compensation.</p><p>The Department of Veterans Affairs (VA) must reimburse DOD's costs of enrolling eligible veteran beneficiaries in the program.</p><p>A covered veteran may not concurrently receive medical care from DOD and the VA.</p>",
   "cosponsors": 3,
-  "committees": [],
+  "committees": [
+    "Veterans' Affairs Committee",
+    "Armed Services Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -45,5 +48,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/244/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/244/text"
 }

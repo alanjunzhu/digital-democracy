@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/72",
-  "summary": "",
+  "summary": "<p><b>TBI and PTSD Treatment Act</b></p> <p>This bill requires the Department of Veterans Affairs to furnish hyperbaric oxygen therapy through a provider authorized by the Veterans Community Care Program to veterans who have a traumatic brain injury or post-traumatic stress disorder.</p>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Veterans' Affairs Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +42,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/72/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/72/text"
 }

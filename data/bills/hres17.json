@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/17",
-  "summary": "",
+  "summary": "<p>This resolution condemns Turkey's continued occupation of Cyprus and calls on Turkey to withdraw all of its troops from the island. It also calls on Turkey to adhere to NATO's democratic principles and mission.</p>",
   "cosponsors": 5,
-  "committees": [],
+  "committees": [
+    "Foreign Affairs Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/17/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/17/text"
 }

@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/159",
-  "summary": "",
+  "summary": "<p><strong>Citizen Legislature Anti-Corruption Reform of Public Service Act or the CLEAN Public Service Act</strong></p><p>This bill excludes Members of Congress from further retirement coverage under the Civil Service Retirement System or the Federal Employees Retirement System following the enactment of the bill. It also prohibits further government contributions or deductions from a Member's basic pay for deposit in the Treasury to the credit of the Civil Service Retirement and Disability Fund.</p><p>This exclusion does not affect a Member's eligibility to participate in the Thrift Savings Plan.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Oversight and Government Reform Committee",
+    "Committee on House Administration"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +43,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/159/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/159/text"
 }

@@ -16,9 +16,13 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/142",
-  "summary": "",
+  "summary": "<p><strong>Regulations from the Executive in Need of Scrutiny Act of 20</strong><strong>25</strong></p><p>This bill revises provisions relating to congressional review of agency rulemaking.</p><p>Specifically, the bill establishes a&nbsp;congressional approval&nbsp;process for a major rule.&nbsp;A major rule may only take effect if Congress approves of the rule. A <em>major rule</em> is a rule that has resulted in or is likely to result in (1) an annual effect on the economy of $100 million or more; (2) a major increase in costs or prices for consumers, individual industries, government agencies, or geographic regions; or (3) significant adverse effects on competition, employment, investment, productivity, innovation, or the ability of U.S.-based enterprises to compete with foreign-based enterprises.</p><p>The bill generally preserves the current congressional review process for a nonmajor rule.</p>",
   "cosponsors": 93,
-  "committees": [],
+  "committees": [
+    "Budget Committee",
+    "Rules Committee",
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -45,5 +49,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/142/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/142/text"
 }

@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Crime and Law Enforcement",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/26",
-  "summary": "",
+  "summary": "<p>This resolution deems certain conduct of members of antifa as domestic terrorism and designates antifa as a domestic terrorist organization.</p> <p>The resolution calls on the Department of Justice to (1) prosecute crimes of domestic terrorism by antifa, and (2) use all available tools and resources to combat the spread of such terrorism by antifa.</p>",
   "cosponsors": 5,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/26/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/26/text"
 }

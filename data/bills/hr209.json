@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/209",
-  "summary": "",
+  "summary": "<p><strong>Inaction Has Consequences Act </strong></p><p>This bill withholds the salaries of Members of a chamber of Congress that has not passed each of the annual appropriations bills before the beginning of the fiscal year, beginning with FY2026. Salaries are released on the earlier of (1) the date on which the chamber of Congress passes the bills, or (2) the last day of the Congress.</p>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Committee on House Administration"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/209/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/209/text"
 }

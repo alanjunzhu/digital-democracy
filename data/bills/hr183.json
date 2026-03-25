@@ -16,9 +16,13 @@
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/183",
-  "summary": "",
+  "summary": "<p><strong>Law Enforcement Officer Recreation Pass Act</strong></p><p>This bill directs the Forest Service and the Department of the Interior to make the National Parks and Federal Recreational Lands Pass available, without charge and for the lifetime of the passholder, to law enforcement officers.</p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Energy and Natural Resources Committee",
+    "Agriculture Committee",
+    "Natural Resources Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -116,5 +120,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/183/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/183/text"
 }

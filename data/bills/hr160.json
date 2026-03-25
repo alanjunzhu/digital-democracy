@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/160",
-  "summary": "",
+  "summary": "<p><strong>Restoring Faith in Elections Act</strong></p><p>This bill establishes certain standards for voting, including voting by mail, in federal elections. It also establishes certain requirements for voter registration and maintenance of official lists of eligible voters.</p><p>First, the bill establishes certain requirements for voting by mail in federal elections, including by requiring mail-in ballots to be received by the time the polls close on election day.</p><p>Additionally, the bill makes it unlawful to possess or return a mail-in ballot completed by another person (commonly referred to as ballot harvesting), with exceptions. A violator is subject to criminal penalties—a fine, a prison term of up to one year, or both.</p><p>Further, the bill establishes certain requirements for reporting results of federal elections, including by requiring states to count all eligible ballots within 24 hours after the election.</p><p>Next, the bill provides for the automatic registration of eligible voters. The Election Assistance Commission must make grants to states to implement these automatic voter registration programs.</p><p>It also requires states and jurisdictions to use standards that apply equally to all methods of voting used in federal elections, including standards related to signature verification.</p><p>Finally, the bill establishes the National Deconfliction Voting Database and Clearinghouse to serve as a database and clearinghouse for voter registration records and lists of eligible voters. Additionally, each state must certify that it has removed ineligible voters from the official list of eligible voters prior to the federal election.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Science, Space, and Technology Committee",
+    "Committee on House Administration"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +43,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/160/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/160/text"
 }

@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/11",
-  "summary": "",
+  "summary": "<p>This joint resolution proposes a constitutional amendment prohibiting total outlays for a fiscal year from exceeding total receipts for that fiscal year unless (1) Congress authorizes the excess by a three-fifths vote of each chamber, and (2) total outlays do not exceed a specified percentage of the estimated gross domestic product of the United States. The prohibition excludes outlays for repayment of debt principal and receipts derived from borrowing. </p> <p>The amendment requires a three-fifths vote of each chamber of Congress to increase revenue or increase the limit on the debt of the United States. </p> <p>The amendment also requires the President to submit an annual budget in which total outlays do not exceed total receipts. The President's budget must also include justifications and specified details regarding funding proposed for departments and agencies. </p> <p>Congress may waive the requirements due to a declaration of war, a military conflict, an event that causes an imminent and serious military threat to national security, or a natural disaster.</p>",
   "cosponsors": 4,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hjres/11/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/11/text"
 }

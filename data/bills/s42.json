@@ -16,9 +16,11 @@
   "originChamber": "Senate",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/42",
-  "summary": "",
+  "summary": "<p><strong>Build the Wall Act of 2025</strong></p><p>This bill establishes the Southern Border Wall Construction Fund to be used by the Department of Homeland Security to construct and maintain physical barriers along the U.S.-Mexico border. All unobligated amounts in the Coronavirus State and Local Fiscal Recovery Funds must be immediately deposited in the Southern Border Wall Construction Fund.</p>",
   "cosponsors": 5,
-  "committees": [],
+  "committees": [
+    "Finance Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -30,5 +32,5 @@
       "text": "Introduced in Senate"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/s/42/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/42/text"
 }

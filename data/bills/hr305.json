@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Education",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/305",
-  "summary": "",
+  "summary": "<p><strong>One School, One Nurse Act of </strong><strong>2025</strong></p><p>This bill directs the Department of Education (ED) to award competitive grants to eligible entities for recruiting, hiring, and retaining school nurses. An eligible entity is a local educational agency (LEA) or a partnership between a state educational agency and a consortium of LEAs in the state.</p><p>Further, ED must specify in regulation the recommended nurse-to-student ratios for elementary and secondary schools.</p>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee",
+    "Education and Workforce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +43,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/305/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/305/text"
 }

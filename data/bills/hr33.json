@@ -18,7 +18,11 @@
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/33",
   "summary": "",
   "cosponsors": 46,
-  "committees": [],
+  "committees": [
+    "Finance Committee",
+    "Rules Committee",
+    "Ways and Means Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -83,5 +87,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/33/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/33/text"
 }

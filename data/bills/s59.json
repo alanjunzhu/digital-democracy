@@ -16,9 +16,11 @@
   "originChamber": "Senate",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/59",
-  "summary": "",
+  "summary": "<p><strong>One Subject at a Time Act</strong></p><p>This bill requires each bill or joint resolution to include no more than one subject and the subject to be clearly and descriptively expressed in the measure's title.</p><p>Further, an appropriations bill may not contain any general legislation or change to existing law that is not germane to the subject of such bill.</p><p>The bill voids an entire law or joint resolution that has a title which addresses two or more unrelated subjects.&nbsp;For noncompliant provisions of a law or joint resolution, the bill voids the specific noncompliant provisions.&nbsp;For example, this includes appropriation provisions that are outside of&nbsp;the relevant subcommittee's jurisdiction.&nbsp;</p><p>Additionally, a person (individual or entity) who is aggrieved by the enforcement, or the attempted enforcement, of a law that passed without complying with this bill's requirements may sue the United States for appropriate relief.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Rules and Administration Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -30,5 +32,5 @@
       "text": "Introduced in Senate"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/s/59/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/59/text"
 }

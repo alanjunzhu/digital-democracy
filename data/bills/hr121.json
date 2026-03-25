@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/121",
-  "summary": "",
+  "summary": "<p><strong>No Vaccine Passports Act</strong></p> <p>This bill prohibits certain actions related to vaccine passports and proof of COVID-19 vaccination.</p> <p>Specifically, a federal agency may not issue a vaccine passport, vaccine pass, or other standardized documentation for the purpose of certifying the COVID-19 vaccination status of a U.S. citizen to a third party, or otherwise publish or share any COVID-19 vaccination record of a U.S. citizen or similar health information.</p> <p> Additionally, proof of COVID-19 vaccination shall not be required to access federal or congressional property or services. </p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Committee on House Administration",
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +43,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/121/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/121/text"
 }

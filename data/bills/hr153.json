@@ -16,9 +16,14 @@
   "originChamber": "House",
   "policyArea": "Emergency Management",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/153",
-  "summary": "",
+  "summary": "<p><b>Post-Disaster Assistance Online Accountability Act</b></p> <p>This bill establishes a centralized location to publish information on disaster assistance provided by federal agencies.</p> <p> The Small Business Administration, the Department of Housing and Urban Development, and any agencies providing disaster assistance must make available to the public on a quarterly basis information regarding (1) the total amount of assistance provided by the agency; (2) the amount provided that was expended or obligated; and (3) all projects or activities for which assistance was expended, obligated, or used.</p> <ul> </ul> <ul> </ul>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Homeland Security and Governmental Affairs Committee",
+    "Transportation and Infrastructure Committee",
+    "Financial Services Committee",
+    "Small Business Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -93,5 +98,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/153/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/153/text"
 }

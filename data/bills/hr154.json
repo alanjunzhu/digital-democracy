@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/154",
-  "summary": "",
+  "summary": "<p><b>Election Day Act</b></p> <p>This bill establishes Election Day as a federal holiday.</p>",
   "cosponsors": 12,
-  "committees": [],
+  "committees": [
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/154/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/154/text"
 }

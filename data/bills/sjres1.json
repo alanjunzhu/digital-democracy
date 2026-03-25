@@ -16,9 +16,11 @@
   "originChamber": "Senate",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1",
-  "summary": "",
+  "summary": "<p>This joint resolution proposes an amendment to the Constitution establishing term limits for individuals serving in the Senate and the House of Representatives.</p><p>The proposed amendment makes an individual who has served two terms in the Senate ineligible for appointment or election to the Senate and an individual who has served three terms as a Member of the House of Representatives ineligible for election to the House of Representatives.</p><p>The joint resolution provides that the amendment shall be valid when ratified by the legislatures of three-fourths of the states within seven years after the date of its submission for ratification.</p><p>Under Article V of the Constitution, both chambers of Congress may propose an amendment by a vote of two-thirds of all Members present for such vote. A proposed amendment must be ratified by the states as prescribed in Article V and as specified by Congress.</p>",
   "cosponsors": 19,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -30,5 +32,5 @@
       "text": "Introduced in Senate"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/sjres/1/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1/text"
 }

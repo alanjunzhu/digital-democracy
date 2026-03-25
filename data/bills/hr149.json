@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/149",
-  "summary": "",
+  "summary": "<p><strong>Lead by Example Act of </strong><strong>2025</strong></p><p>This bill provides that, beginning January 3, 2027, the only health care plan the federal government may make available to Members of Congress and congressional staff shall be health care provided through the Department of Veterans Affairs (VA).</p><p>By September 15, 2025, the VA and the Office of Personnel Management shall jointly submit to Congress a plan to carry out this bill, including recommendations for any necessary legislative actions.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Veterans' Affairs Committee",
+    "Committee on House Administration"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -45,5 +48,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/149/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/149/text"
 }

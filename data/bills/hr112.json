@@ -16,9 +16,13 @@
   "originChamber": "House",
   "policyArea": "Agriculture and Food",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/112",
-  "summary": "",
+  "summary": "<p><strong>Farewell to Unnecessary Energy Lifelines Reform Act of 2025 or the FUEL Reform Act </strong></p><p>This bill repeals Title IX (Energy) of the Farm Security and Rural Investment Act of 2002 (i.e., the 2002 farm bill). The title authorizes various energy programs that are administered by the Department of Agriculture and primarily provide support and incentives for renewable energy projects. For example, these programs include the BioPreferred Program; the&nbsp;Rural Energy for America Program; and the&nbsp;Biorefinery, Renewable Chemical, and Biobased Product Manufacturing Assistance Program.&nbsp;</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Agriculture Committee",
+    "Science, Space, and Technology Committee",
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -50,5 +54,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/112/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/112/text"
 }

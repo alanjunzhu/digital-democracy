@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Arts, Culture, Religion",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/29",
-  "summary": "",
+  "summary": "<p>This resolution recognizes the historic contributions of Okinawan Americans to the United States and urges the people of the United States to honor the 125th anniversary of Okinawan immigration to the United States.</p>",
   "cosponsors": 5,
-  "committees": [],
+  "committees": [
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/29/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/29/text"
 }

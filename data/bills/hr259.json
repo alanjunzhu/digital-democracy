@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/259",
-  "summary": "",
+  "summary": "<p><strong>No Funding for Illegal Migrant Billboards Act</strong></p><p>This bill prohibits the Department of Homeland Security (DHS) from obligating or expending funds to advertise the Office of the Immigration Detention Ombudsman or its functions to the general public. The office’s functions include investigating violations of the rights of individuals in immigration detention, inspecting immigration detention facilities, and providing assistance to individuals affected by the potential misconduct of DHS officers.</p>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Homeland Security Committee",
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -45,5 +48,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/259/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/259/text"
 }

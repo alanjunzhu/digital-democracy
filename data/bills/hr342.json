@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/342",
-  "summary": "",
+  "summary": "<p><strong>Honor Inauguration Day Act</strong></p><p>This bill requires the U.S. flag to be flown at its highest peak on each presidential Inauguration Day.</p>",
   "cosponsors": 17,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/342/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/342/text"
 }

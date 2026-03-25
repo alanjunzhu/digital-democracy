@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Taxation",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/14",
-  "summary": "",
+  "summary": "<p>This joint resolution proposes a constitutional amendment repealing the Sixteenth Amendment to the Constitution. The Sixteenth Amendment to the Constitution, ratified in 1913, specifies that Congress may collect federal income taxes.</p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -39,5 +41,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hjres/14/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/14/text"
 }

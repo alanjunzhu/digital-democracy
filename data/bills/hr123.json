@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Environmental Protection",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/123",
-  "summary": "",
+  "summary": "<p><b>Improving Science in Chemical Assessments Act</b></p> <p>This bill modifies procedures related to specified chemical assessments performed by the Environmental Protection Agency (EPA). Specifically, chemical hazard identification and dose response assessments must be performed by the appropriate EPA program office (they are currently performed by the Integrated Risk Information System program).</p> <p>Additionally, the bill requires the EPA to establish a steering committee to ensure there is no duplication of effort by relevant program offices in conducting covered assessments.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee",
+    "Science, Space, and Technology Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +43,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/123/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/123/text"
 }

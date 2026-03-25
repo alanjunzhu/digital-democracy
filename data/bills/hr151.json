@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/151",
-  "summary": "",
+  "summary": "<p><strong>Equal Representation Act</strong></p><p>This bill requires that the statement sent by the President to Congress after the decennial census indicating the number of persons in each state&nbsp;exclude&nbsp;noncitizens. (This&nbsp;statement is the basis for reapportionment of U.S. Representatives.)</p><p>The bill also requires&nbsp;any questionnaire used in the&nbsp;decennial census to include a checkbox or other similar option for respondents to indicate whether the respondent and each household member is (1) a U.S. citizen, (2) a U.S. national but not a citizen, (3) a non-U.S. national (<em>alien </em>under federal law) lawfully residing in the United States, or (4) a non-U.S. national unlawfully residing in the United States.</p><p>The Department of Commerce must make public the number of persons in each state, disaggregated by each of these four categories.</p>",
   "cosponsors": 66,
-  "committees": [],
+  "committees": [
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -49,5 +51,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/151/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/151/text"
 }

@@ -16,9 +16,18 @@
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/191",
-  "summary": "",
+  "summary": "<p><strong>Inflation Reduction Act of 2025</strong></p><p>This bill repeals the Inflation Reduction Act of 2022 and rescinds any unobligated funds made available by the act.</p>",
   "cosponsors": 15,
-  "committees": [],
+  "committees": [
+    "Oversight and Government Reform Committee",
+    "Transportation and Infrastructure Committee",
+    "Science, Space, and Technology Committee",
+    "Financial Services Committee",
+    "Natural Resources Committee",
+    "Agriculture Committee",
+    "Energy and Commerce Committee",
+    "Ways and Means Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -70,5 +79,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/191/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/191/text"
 }

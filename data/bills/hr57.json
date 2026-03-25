@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/57",
-  "summary": "",
+  "summary": "<p><strong>Ending Catch and Release Act of 2025</strong></p><p>This bill changes the treatment of certain non-U.S. nationals (<em>aliens</em> under federal law) without lawful immigration status, including by prohibiting the release of asylum seekers into the United States while their cases are pending.</p><p>The Department of Homeland Security (DHS) may not (with some exceptions) release an individual who is not clearly entitled to admission into the United States while the individual's case is pending, even if the individual is an asylum seeker. DHS may instead detain the individual or return the individual to a neighboring country in certain situations.</p><p>The bill also expands expedited removal from the United States (i.e., removal without further hearing or review) to include individuals present in the United States without being admitted, with certain exceptions. Under current law, individuals are subject to expedited removal if they lack proper documentation or obtained an immigration benefit through fraud; such individuals are still subject to expedited removal under the bill.</p><p>The bill also modifies the standard for establishing a credible fear of persecution to avoid expedited removal. Generally, an asylum seeker may avoid expedited removal if an asylum officer finds such a credible fear. Under this bill, an officer may find credible fear if it is more likely than not the individual can establish their eligibility for asylum, whereas under current law, the officer may find credible fear if there is a <em>significant possibility</em> that the individual can establish their eligibility.</p>",
   "cosponsors": 3,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/57/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/57/text"
 }

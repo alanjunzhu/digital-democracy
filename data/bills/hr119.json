@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/119",
-  "summary": "",
+  "summary": "<p>This bill prohibits any entity that receives specified COVID-19 relief funds from mandating that its employees receive COVID-19 vaccines. An entity that violates this prohibition must return the funding it received.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee",
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +43,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/119/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/119/text"
 }

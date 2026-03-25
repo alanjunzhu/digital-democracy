@@ -16,9 +16,11 @@
   "originChamber": "Senate",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/18",
-  "summary": "",
+  "summary": "<p>This resolution permits Senators to object to the consideration of a measure unless a required amount of time has passed since the measure's introduction. Specifically, the resolution requires that one session day elapse for every 20 pages included in the measure (plus one session day for any number of remaining pages less than 20).&nbsp;An objection raised on these grounds may be waived or suspended only by an affirmative vote of three-fifths of the Senators.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Rules and Administration Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -30,5 +32,5 @@
       "text": "Introduced in Senate"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/sres/18/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/18/text"
 }

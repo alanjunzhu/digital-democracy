@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/214",
-  "summary": "",
+  "summary": "<p><strong>District of Columbia Legislative Home Rule Act</strong></p><p>This bill eliminates the authority of Congress to nullify recently enacted laws of the District of Columbia (DC).</p><p>Current law generally provides Congress with a 30-day period in which to review and nullify measures enacted by the DC Council (60 days for measures involving criminal law).&nbsp;An enacted measure is nullified if Congress passes and&nbsp;the President signs a joint resolution of disapproval. If there is no congressional action during the review period, the measure becomes law.</p><p>The bill eliminates this&nbsp;congressional review period and process.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Rules Committee",
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -44,5 +47,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/214/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/214/text"
 }

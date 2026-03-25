@@ -16,9 +16,11 @@
   "originChamber": "Senate",
   "policyArea": "Social Welfare",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/36",
-  "summary": "",
+  "summary": "<p><strong>Protect Our Seniors Act</strong></p><p>This bill establishes Senate budget enforcement procedures (known as points of order) against measures that (1) reduce Medicare or Social Security benefits, or (2) use revenue or savings from the Medicare program to offset the cost of provisions unrelated to carrying out Medicare.</p><p>Points of order are prohibitions against certain&nbsp;categories of legislation or congressional action. A point of order raised on the grounds established under the bill may be waived or suspended only by an affirmative vote of two-thirds of the Senators.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Rules and Administration Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -30,5 +32,5 @@
       "text": "Introduced in Senate"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/s/36/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/36/text"
 }

@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Environmental Protection",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/313",
-  "summary": "",
+  "summary": "<p><strong>Natural Gas Tax Repeal Act</strong></p><p>This bill eliminates a program administered by the Environmental Protection Agency that provides support for reducing methane emissions from the oil and gas sector. It also repeals a charge on methane emissions from&nbsp;facilities that contain petroleum and natural gas systems and emit 25,000 metric tons or more of greenhouse gases per year.</p>",
   "cosponsors": 5,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/313/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/313/text"
 }

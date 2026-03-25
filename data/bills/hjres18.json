@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Environmental Protection",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/18",
-  "summary": "",
+  "summary": "<p>This joint resolution nullifies the rule titled <em>National Primary Drinking Water Regulations for Lead and Copper: Improvements (LCRI)</em>, which was submitted by the Environmental Protection Agency on October 30, 2024. The rule modifies the regulations under the Safe Drinking Water Act to further reduce lead in drinking water, including by directing water systems to replace all lead and certain galvanized service lines under their control within 10 years.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hjres/18/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/18/text"
 }

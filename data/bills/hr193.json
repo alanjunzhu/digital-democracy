@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/193",
-  "summary": "",
+  "summary": "<p><strong>Maintaining Innovation and Safe Technologies Act</strong></p><p>This bill requires the Centers for Medicare &amp; Medicaid Services (CMS) to issue guidance on payment requirements for certain remote monitoring devices (e.g., glucose monitors) under Medicare medical services. Specifically, the CMS must issue guidance on payment requirements for devices that use artificial intelligence components and that transmit information to health care providers.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Ways and Means Committee",
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +43,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/193/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/193/text"
 }

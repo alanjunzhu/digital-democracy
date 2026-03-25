@@ -16,9 +16,14 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/79",
-  "summary": "",
+  "summary": "<p><strong>Freedom from Mandates Act</strong></p><p>This bill nullifies certain executive orders regarding COVID-19 safety and prohibits the Departments of Labor and Health and Human Services (HHS) from taking specified actions with respect to vaccination against COVID-19.</p><p>Specifically, the bill nullifies Executive Order 14042 (relating to ensuring adequate COVID-19 safety protocols for federal contractors) and Executive Order 14043 (requiring COVID-19 vaccination for federal employees).</p><p>Labor may not issue any rule requiring employers to mandate vaccination of employees against COVID-19 or requiring testing of employees who are unvaccinated.</p><p>HHS may not (1) require a health care provider, as a condition of participation in the Medicare or Medicaid program, to mandate vaccination of employees against COVID-19 or require testing of employees who are unvaccinated; or (2) otherwise penalize such a provider for failure to mandate such vaccination or require such testing.</p>",
   "cosponsors": 3,
-  "committees": [],
+  "committees": [
+    "Ways and Means Committee",
+    "Energy and Commerce Committee",
+    "Education and Workforce Committee",
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -50,5 +55,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/79/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/79/text"
 }

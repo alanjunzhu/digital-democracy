@@ -18,7 +18,9 @@
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/262",
   "summary": "",
   "cosponsors": 24,
-  "committees": [],
+  "committees": [
+    "Ways and Means Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/262/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/262/text"
 }

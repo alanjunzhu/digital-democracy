@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/303",
-  "summary": "",
+  "summary": "<p><strong>Retired Pay Restoration Act</strong></p> <p>This bill allows the receipt of both military retired pay and veterans' disability compensation with respect to any service-connected disability. Under current law, only individuals with service-connected disabilities rated at 50% or more receive both without offset.</p> <p> Individuals who were retired or separated after at least 20 years of military service due to a service-connected disability shall be eligible for the full concurrent receipt of both veterans' disability compensation and either military retired pay or combat-related special pay.</p>",
   "cosponsors": 9,
-  "committees": [],
+  "committees": [
+    "Veterans' Affairs Committee",
+    "Armed Services Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -45,5 +48,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/303/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/303/text"
 }

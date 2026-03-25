@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Transportation and Public Works",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/234",
-  "summary": "",
+  "summary": "<p><b>HOV Lanes for Heroes Act</b></p> <p>This bill provides authority for a public authority to allow a disabled veteran to use a high occupancy vehicle (HOV) facility if such veteran has a license plate that clearly identifies the vehicle, a registered transponder, or other method of qualifying identification.</p> <p>The public authority may not charge a toll to the veteran for use of the HOV facility.</p>",
   "cosponsors": 3,
-  "committees": [],
+  "committees": [
+    "Transportation and Infrastructure Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +42,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/234/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/234/text"
 }

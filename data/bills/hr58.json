@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/58",
-  "summary": "",
+  "summary": "<p><b>Voter Integrity Protection Act</b></p> <p>This bill imposes additional immigration-related penalties for non-U.S. nationals (<i>aliens</i> under federal law) who vote in an election for federal office.</p> <p> It shall be an aggravated felony for a non-U.S. national who is unlawfully present to violate an existing prohibition against a non-U.S. national voting in a federal election. (An aggravated felony conviction carries various immigration consequences, such as rendering the non-U.S. national inadmissible, deportable, and barred from establishing good moral character for naturalization.)</p> <p>A non-U.S. national who is unlawfully present and who knowingly violates the prohibition against voting in a federal election shall be deportable.</p>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/58/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/58/text"
 }

@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Housing and Community Development",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/225",
-  "summary": "",
+  "summary": "<p><strong>HUD Transparency Act of 2025</strong></p><p>This bill requires the Office of Inspector General of the Department of Housing and Urban Development (HUD) to annually testify before Congress.</p><p>Specifically, the office must testify regarding</p><ul><li>efforts to detect and prevent fraud, waste, and abuse;</li><li>ability to conduct and supervise audits, investigations, and reviews;</li><li>actions to identify opportunities for HUD programs to progress and succeed;</li><li>recommendations to improve overall efficiency and public accountability;</li><li>the extent to which HUD has resources sufficient to carry out its statutory mission; and&nbsp;</li><li>ongoing activities regarding any such additional work.</li></ul>",
   "cosponsors": 12,
-  "committees": [],
+  "committees": [
+    "Banking, Housing, and Urban Affairs Committee",
+    "Financial Services Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -92,5 +95,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/225/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/225/text"
 }

@@ -16,9 +16,11 @@
   "originChamber": "Senate",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
-  "summary": "",
+  "summary": "<p>This joint resolution proposes constitutional amendments that (1) authorize the President to reduce or disapprove any appropriation in a bill or joint resolution using a line-item veto; (2) prohibit Members of Congress from serving more than six terms in the House of Representatives or two terms in the Senate; and (3) prohibit a chamber of Congress from agreeing to legislation that imposes, authorizes, or raises any tax or fee unless the legislation contains no other subject and is agreed to by an affirmative vote of at least two-thirds of the chamber.&nbsp;</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -30,5 +32,5 @@
       "text": "Introduced in Senate"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/sjres/2/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2/text"
 }

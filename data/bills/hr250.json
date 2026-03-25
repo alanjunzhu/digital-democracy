@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/250",
-  "summary": "",
+  "summary": "<p>This bill requires the Joint Committee on the Library to contract for and place a&nbsp;statue of Benjamin Franklin in the Capitol.</p><p>The committee shall place the statue in a permanent public location&nbsp;where it is accessible during a guided tour provided by the Capitol Visitor Center.</p><p>The contract must be executed by December 31, 2025, and the&nbsp;statue must be placed by&nbsp;December 31, 2026.&nbsp;</p>",
   "cosponsors": 34,
-  "committees": [],
+  "committees": [
+    "Rules and Administration Committee",
+    "Committee on House Administration"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -68,5 +71,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/250/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/250/text"
 }

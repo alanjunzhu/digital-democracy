@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9",
-  "summary": "",
+  "summary": "<p>This resolution reaffirms that the United States in not a party to the Rome Statute and does not recognize the jurisdiction of the International Criminal Court (ICC). &nbsp;The resolution also (1) condemns the ICC's issuance of arrest warrant applications for Israeli Prime Minister Benjamin Netanyahu and&nbsp;Israeli Minister of Defense Yoav Gallant, and (2) supports Israel's right to defend itself and its leaders from unwarranted international legal actions.&nbsp;</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Foreign Affairs Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/9/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9/text"
 }

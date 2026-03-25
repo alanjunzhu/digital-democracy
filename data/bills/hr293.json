@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Agriculture and Food",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/293",
-  "summary": "",
+  "summary": "<p><strong>Making Agricultural Products Locally Essential Act (MAPLE) Act</strong></p><p>This bill includes maple syrup as one of the eligible&nbsp;foods under the&nbsp;Senior Farmers' Market Nutrition Program (SFMNP).</p><p>As background, the Department of Agriculture's&nbsp;SFMNP provides grants to participating states to provide low-income seniors with coupons/vouchers that&nbsp;may be used at farmers’ markets, roadside stands, and community supported agriculture programs to purchase eligible foods (i.e., fresh, nutritious, unprepared, locally-grown fruits, vegetables, herbs, and honey).</p>",
   "cosponsors": 5,
-  "committees": [],
+  "committees": [
+    "Agriculture Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +42,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/293/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/293/text"
 }

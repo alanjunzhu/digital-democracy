@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/8",
-  "summary": "",
+  "summary": "<p>This joint resolution proposes a constitutional amendment that authorizes the President to use a line item veto to reduce an appropriation in a bill or joint resolution. </p> <p>Under the amendment, the President must notify Congress within 10 days of using this authority to reduce an appropriation. The House and Senate may then consider disapproval of the reduction. </p> <p>If at least two-thirds of each chamber of Congress votes to disapprove the reduction, the amount of the appropriation that is subject to the reduction must be returned to the amount that was originally presented to the President. </p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hjres/8/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8/text"
 }

@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/7",
-  "summary": "",
+  "summary": "<p>This resolution expresses support for women nationwide to have access to comprehensive, convenient, compassionate, life-affirming, and high-quality health care.</p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/7/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7/text"
 }

@@ -16,9 +16,11 @@
   "originChamber": "Senate",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/55",
-  "summary": "",
+  "summary": "<p><strong>Read the Bills Act</strong></p><p>This bill establishes requirements for bills and resolutions to be introduced or considered by the Senate or the House of Representatives.</p><p>First, the bill requires any bill or resolution to cite&nbsp;the specific powers granted to Congress in the Constitution to enact all provisions in the proposed measure. Without this information, the measure may not be accepted by the Clerk of the House or the Secretary of the Senate or submitted for a final vote. Each measure must also set forth the current law such measure is amending and show the proposed modifications to the law (except where a complete section of law is stricken).&nbsp;</p><p>Further, a vote on final passage of such measure&nbsp;may not occur&nbsp;unless (1) the full text of the measure is published at least seven days before the vote, (2) public notice of the calendar week during which the vote is scheduled to take place is posted at least six days before the Monday of such week, and (3) the full text of the measure is read verbatim to the assembled body in each chamber. Members must affirm in writing that they read the measure in full or were present throughout the reading before voting in favor of passing the measure (i.e., such requirements do not apply for a member who votes against passage).</p><p>The bill also authorizes a person aggrieved by a violation of the bill's provisions to sue for appropriate relief (such as an injunction against enacting the measure).</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Rules and Administration Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -30,5 +32,5 @@
       "text": "Introduced in Senate"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/s/55/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/55/text"
 }

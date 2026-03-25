@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/16",
-  "summary": "",
+  "summary": "<p><strong></strong>This joint resolution proposes a constitutional amendment to lower the minimum age for the right to vote from 18 to 16.</p>",
   "cosponsors": 6,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hjres/16/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/16/text"
 }

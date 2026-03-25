@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/36",
-  "summary": "",
+  "summary": "<p><strong>Finding Federal Savings Committee Resolution</strong></p> <p>This resolution establishes the House Committee on the Elimination of Nonessential Federal Programs to analyze underperforming or nonessential federal programs and recommend actions to modify or eliminate those programs. The resolution also establishes expedited procedures for legislation reported by the committee to eliminate programs or rescind funding.</p> <p>The committee shall cease to exist at the end of the 120th Congress.</p>",
   "cosponsors": 6,
-  "committees": [],
+  "committees": [
+    "Rules Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/36/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/36/text"
 }

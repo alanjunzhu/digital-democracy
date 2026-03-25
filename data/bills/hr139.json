@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/139",
-  "summary": "",
+  "summary": "<p><strong>Sunshine Protection Act of 2025</strong></p><p>This bill makes daylight saving time the new, permanent standard time.</p><p>States with areas exempt from daylight saving time may choose the standard time for those areas.</p>",
   "cosponsors": 31,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/139/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/139/text"
 }

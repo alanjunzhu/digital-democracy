@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/253",
-  "summary": "",
+  "summary": "<p><b>Bipartisan Restoring Faith in Government Act</b></p> <p>This bill prohibits Members of Congress (and their spouses and dependents) from purchasing or selling certain investments, such as individual stocks and related financial instruments that are not diversified investment funds, U.S. Treasury securities, or other specified holdings.</p> <p>Members must divest prohibited investments within 90 days by selling them or placing them in a qualified blind trust. The bill also restricts communications between trustees and beneficiaries related to investments held in qualified blind trusts.</p> <p>Members must certify their compliance with the supervising ethics office, which must make the certificates publicly available online.</p> <p>Violations are subject to specified civil penalties. Additionally, losses stemming from a transaction involving a prohibited investment that violates the provisions of the bill may not be deducted from income taxes.</p>",
   "cosponsors": 14,
-  "committees": [],
+  "committees": [
+    "Ways and Means Committee",
+    "Committee on House Administration"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +43,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/253/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/253/text"
 }

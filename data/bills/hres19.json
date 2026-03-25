@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/19",
-  "summary": "",
+  "summary": "<p>This resolution expresses the sense of the House of Representatives that the House should not adjourn until all of the annual appropriations bills for the current fiscal year have been enacted. </p>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Appropriations Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/19/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/19/text"
 }

@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/8",
-  "summary": "",
+  "summary": "<p>This resolution expresses that the House of Representatives (1) reaffirms and reiterates its commitment to ensuring secure elections throughout the United States, and (2) recognizes that the presentation of valid photograph identification is a fundamental component of secure elections throughout the United States.</p>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Committee on House Administration"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/8/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8/text"
 }

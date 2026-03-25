@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Environmental Protection",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/102",
-  "summary": "",
+  "summary": "<p><strong>American Sovereignty and Species Protection Act of 2025</strong></p><p>This bill limits the protection of endangered or threatened species to species that are native to the United States. In addition, the bill prohibits certain funding for endangered or threatened species from being used to acquire lands, waters, or other interests in foreign countries.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Natural Resources Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/102/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/102/text"
 }

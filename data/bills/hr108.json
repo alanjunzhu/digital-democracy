@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/108",
-  "summary": "",
+  "summary": "<p><strong>Space Research Innovation Act</strong></p><p>This bill directs the National Aeronautics and Space Administration (NASA) to establish a university-affiliated research center to fund analyses and engineering support related to cislunar and deep&nbsp;space missions and interplanetary research. Entities eligible to participate in the center include institutions of higher education, operators of federally funded research and development centers, and nonprofit research institutions.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Science, Space, and Technology Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/108/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/108/text"
 }

@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/359",
-  "summary": "",
+  "summary": "<p><strong>Cost-Share Accountability Act of 2025</strong></p><p>This bill requires the Department of Energy (DOE) to report on the use of its authority to reduce or eliminate the nonfederal&nbsp;cost-sharing requirements for federally-funded projects regarding research, development, demonstration, and commercial application activities under the Energy Policy Act of 2005. DOE must submit a report within 120 days of the enactment of this bill and at least quarterly thereafter.</p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Energy and Natural Resources Committee",
+    "Science, Space, and Technology Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -78,5 +81,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/359/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/359/text"
 }

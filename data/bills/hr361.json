@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/361",
-  "summary": "",
+  "summary": "<p><strong>Make Greenland Great Again Act</strong></p><p>This bill authorizes the President to seek to enter into negotiations with Denmark to acquire Greenland.</p><p>If such an agreement is reached, the President must transmit the agreement and related materials to Congress within five calendar days.&nbsp;The agreement shall go into effect 60 calendar days after such transmission unless Congress enacts a joint resolution of disapproval.</p>",
   "cosponsors": 16,
-  "committees": [],
+  "committees": [
+    "Foreign Affairs Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/361/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/361/text"
 }

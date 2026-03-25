@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/270",
-  "summary": "",
+  "summary": "<p>This bill authorizes the Department of State to waive the requirement for U.S. citizens to repay the costs of evacuation from foreign countries when their lives are endangered by war or acts of terrorism.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Foreign Affairs Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/270/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/270/text"
 }

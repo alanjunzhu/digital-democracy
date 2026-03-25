@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/64",
-  "summary": "",
+  "summary": "<p><strong>Grant's Law</strong></p><p>This bill requires the Department of Justice to detain a non-U.S. national (<em>alien</em> under federal law) found to be unlawfully present in the United States and arrested for various crimes that would render the individual deportable or inadmissible.</p><p>The Department of Homeland Security (DHS) may release the individual to an appropriate authority for proceedings related to the arrest, but DHS must resume custody for any period that the individual is not in such authority's custody.</p><p>If the individual is not convicted of crimes for which the individual was arrested, DHS must continue to detain the individual until removal proceedings are completed. DHS must complete such removal proceedings within 90 days.</p>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/64/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/64/text"
 }

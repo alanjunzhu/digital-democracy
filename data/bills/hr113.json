@@ -16,9 +16,13 @@
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/113",
-  "summary": "",
+  "summary": "<p><strong>Budget Process Enhancement Act</strong></p> <p>This bill modifies the federal budget process to withhold the salaries of Members of Congress and cancel the salaries of certain employees of the Office of Management and Budget when certain budget process requirements are not met.</p> <p>The bill also changes the assumptions that the Congressional Budget Office uses to calculate its baseline for discretionary spending to eliminate certain adjustments for inflation and other factors. (A baseline is a projection of federal spending and receipts during a fiscal year under current law.) </p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Oversight and Government Reform Committee",
+    "Committee on House Administration",
+    "Budget Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -45,5 +49,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/113/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/113/text"
 }

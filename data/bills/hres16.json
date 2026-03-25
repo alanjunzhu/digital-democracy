@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/16",
-  "summary": "",
+  "summary": "<p>This resolution condemns Russia for committing acts of genocide against the Ukrainian people. It also calls on the United States, in cooperation with North Atlantic Treaty Organization and European Union allies, to undertake measures to support the Ukrainian government to prevent further acts of Russian genocide against the Ukrainian people.</p>",
   "cosponsors": 18,
-  "committees": [],
+  "committees": [
+    "Foreign Affairs Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/16/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/16/text"
 }

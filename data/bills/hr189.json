@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/189",
-  "summary": "",
+  "summary": "<p><strong>Securities and Exchange Commission Real Estate Leasing Authority Revocation Act </strong></p><p>This bill revokes the authority of the Securities and Exchange Commission (SEC) to lease general purpose office space and instead provides for the General Services Administration to lease such space for the SEC. The bill's provisions do not affect those leases entered into by the SEC before this bill's enactment.</p><p>The Government Accountability Office must (1) complete a review under which it shall update a 2016 report with respect to independent leasing authorities, and (2) report to Congress on the review.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Banking, Housing, and Urban Affairs Committee",
+    "Transportation and Infrastructure Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -77,5 +80,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/189/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/189/text"
 }

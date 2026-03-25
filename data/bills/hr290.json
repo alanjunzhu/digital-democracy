@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Agriculture and Food",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/290",
-  "summary": "",
+  "summary": "<p><strong>Rural Telehealth and Education Enhancement Act of 2025</strong></p><p>This bill reauthorizes the Distance Learning and Telemedicine Program through FY2030. This&nbsp;Department of Agriculture&nbsp;program provides grants to help rural communities gain the technology and training necessary to engage in telemedicine and distance learning.</p>",
   "cosponsors": 7,
-  "committees": [],
+  "committees": [
+    "Agriculture Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -40,5 +42,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/290/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/290/text"
 }

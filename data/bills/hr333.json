@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/333",
-  "summary": "",
+  "summary": "<p><strong>Disabled Veterans Tax Termination Act</strong></p> <p>This bill modifies provisions related to military retired pay. Specifically, the bill authorizes veterans with a service-connected disability of less than 50% to concurrently receive both retired pay and disability compensation. The bill also makes qualified disability retirees with less than 20 years of retirement-creditable service eligible for concurrent receipt, subject to specified reductions in retired pay.</p>",
   "cosponsors": 3,
-  "committees": [],
+  "committees": [
+    "Veterans' Affairs Committee",
+    "Armed Services Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -45,5 +48,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/333/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/333/text"
 }

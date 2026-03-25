@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/129",
-  "summary": "",
+  "summary": "<p><b>Abolish the ATF Act</b></p> <p>This bill abolishes the Bureau of Alcohol, Tobacco, Firearms and Explosives. </p>",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/129/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/129/text"
 }

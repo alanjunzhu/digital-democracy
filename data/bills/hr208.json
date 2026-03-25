@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/208",
-  "summary": "",
+  "summary": "<p><strong>No Budget, No Pay Act </strong></p><p>This bill withholds the salaries of Members of a chamber of Congress that has not agreed to a budget resolution for the next fiscal year&nbsp;by April 15, as required by the Congressional Budget Act of 1974.</p><p>Salaries are withheld from April 16 until the earlier of (1) the day on which the chamber of Congress agrees to a budget resolution for the next fiscal year, or (2) the last day of the Congress.</p>",
   "cosponsors": 3,
-  "committees": [],
+  "committees": [
+    "Committee on House Administration"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/208/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/208/text"
 }

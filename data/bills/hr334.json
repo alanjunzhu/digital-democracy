@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/334",
-  "summary": "",
+  "summary": "<p>This bill provides statutory authority for the application of certain technical and procedural standards to systems that transmit artificial or prerecorded telephone messages generated using artificial intelligence.</p><p>Specifically, the standards require (1) that such messages clearly identify and state the telephone number or address of the individual or entity initiating the call, and (2) that any system making such phone calls release a recipient’s telephone line within five seconds of notification that the recipient has ended the call. Such standards are prescribed and implemented by the Federal Communications Commission (FCC) and apply under current law to any system used to transmit an artificial or prerecorded voice message by telephone.&nbsp;</p><p>The bill also permits the FCC to apply the standards to other technologies used to transmit artificial and prerecorded telephone messages as it deems appropriate.&nbsp;</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Energy and Commerce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/334/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/334/text"
 }

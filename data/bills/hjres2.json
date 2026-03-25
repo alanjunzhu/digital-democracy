@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/2",
-  "summary": "",
+  "summary": "<p>This joint resolution proposes a constitutional amendment that prohibits total outlays for any fiscal year from exceeding total receipts for that fiscal year.</p><p>The amendment also prohibits (1) increases to the federal debt limit, and (2) a bill that increases revenue from becoming law unless the bill has been approved by two-thirds of each chamber of Congress with a roll call vote.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hjres/2/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2/text"
 }

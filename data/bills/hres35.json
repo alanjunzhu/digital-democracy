@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Education",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/35",
-  "summary": "",
+  "summary": "<p>This resolution recognizes the 112th anniversary of the founding of Delta Sigma Theta Sorority, Incorporated.</p>",
   "cosponsors": 9,
-  "committees": [],
+  "committees": [
+    "Education and Workforce Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -36,5 +38,5 @@
       "text": "Submitted in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hres/35/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/35/text"
 }

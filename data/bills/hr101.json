@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Law",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/101",
-  "summary": "",
+  "summary": "<p><strong>Judicial Administration and Improvement Act of 2025&nbsp;</strong></p><p>This bill divides the U.S. Court of Appeals for the Ninth Circuit into two judicial circuits: (1) the Ninth Circuit, and (2) a new Twelfth Circuit.</p><p>The Ninth Circuit is composed of California, Guam, Hawaii, Oregon, Washington, and Northern Mariana Islands. The new Twelfth Circuit is composed of Alaska, Arizona, Idaho, Montana, and Nevada.</p>",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    "Judiciary Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/101/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/101/text"
 }

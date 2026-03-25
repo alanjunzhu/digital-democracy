@@ -16,9 +16,11 @@
   "originChamber": "House",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/254",
-  "summary": "",
+  "summary": "<p><strong>American Science First Act</strong></p> <p>This bill prohibits the National Science Foundation (NSF) from providing grants or other forms of assistance to certain foreign individuals and entities. Specifically, the NSF may not support any individual or entity that is affiliated or otherwise has a relationship, including but not limited to a research partnership, joint venture, or contract, with</p> <ul> <li>an entity included on the entity list under the Export Administration Regulations, which identifies foreign entities subject to license requirements for the export, reexport, or transfer of certain items;</li> <li>a Chinese military company operating in the United States or any of its territories or possessions on the list required under the Strom Thurmond National Defense Authorization Act for Fiscal Year 1999, or required under the Mac Thornberry National Defense Authorization Act for Fiscal Year 2021, or any successor list; or</li> <li>any parent, subsidiary, affiliate of, or entity owned by or controlled by any such entity.</li> </ul>",
   "cosponsors": 2,
-  "committees": [],
+  "committees": [
+    "Science, Space, and Technology Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -35,5 +37,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/254/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/254/text"
 }

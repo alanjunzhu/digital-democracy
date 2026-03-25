@@ -16,9 +16,12 @@
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/323",
-  "summary": "",
+  "summary": "This bill designates the facility of the United States Postal Service located at 80 Prospect Street in Avon, New York, as the \"Officer Anthony Mazurkiewicz Memorial Post Office Building\".",
   "cosponsors": 24,
-  "committees": [],
+  "committees": [
+    "Homeland Security and Governmental Affairs Committee",
+    "Oversight and Government Reform Committee"
+  ],
   "subjects": [],
   "actions": [
     {
@@ -78,5 +81,5 @@
       "text": "Introduced in House"
     }
   ],
-  "textUrl": "https://api.congress.gov/v3/bill/119/hr/323/text?format=json"
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/323/text"
 }
