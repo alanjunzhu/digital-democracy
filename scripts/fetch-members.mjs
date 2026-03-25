@@ -46,8 +46,13 @@ async function fetchSocialMedia() {
     const data = await fetchJSON(url);
     const index = {};
     for (const entry of data) {
-      index[entry.id.bioguide] = entry.social;
+      const social = entry.social || entry;
+      index[entry.id.bioguide] = social;
     }
+    // Debug: show a sample
+    const sampleKey = Object.keys(index)[0];
+    console.log(`  Got social data for ${Object.keys(index).length} members`);
+    console.log(`  Sample (${sampleKey}):`, JSON.stringify(index[sampleKey])?.slice(0, 200));
     return index;
   } catch (err) {
     console.warn(`  Warning: Could not fetch social media data: ${err.message}`);

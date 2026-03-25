@@ -39,9 +39,28 @@ async function fetchBillDetail(congress, type, number) {
   await sleep(300);
   try {
     const data = await fetchJSON(url);
-    return data.bill || null;
+    const bill = data.bill || data;
+    // Debug first bill
+    if (number <= 10) {
+      console.log(`  [debug] Bill ${type}${number} keys:`, Object.keys(bill));
+      console.log(`  [debug] summaries:`, JSON.stringify(bill.summaries)?.slice(0, 150));
+      console.log(`  [debug] subjects:`, JSON.stringify(bill.subjects)?.slice(0, 150));
+      console.log(`  [debug] committees:`, JSON.stringify(bill.committees)?.slice(0, 150));
+    }
+    return bill;
   } catch (err) {
     console.warn(`  Warning: Could not fetch detail for ${type}${number}: ${err.message}`);
+    return null;
+  }
+}
+
+async function fetchBillSubResource(congress, type, number, resource) {
+  const url = `${getCongressAPIBaseUrl()}/bill/${congress}/${type}/${number}/${resource}?api_key=${API_KEY}&format=json&limit=50`;
+  await sleep(300);
+  try {
+    const data = await fetchJSON(url);
+    return data;
+  } catch (err) {
     return null;
   }
 }
@@ -71,7 +90,7 @@ function formatBillType(type) {
   return map[type.toLowerCase()] || type.toUpperCase();
 }
 
-function normalizeBill(bill, detail, actions) {
+function normalizeBill(bill, detail, actions, extraData) {
   const type = normalizeBillType(bill.type);
   const num = bill.number;
   const billId = `${type}${num}`;
@@ -100,18 +119,42 @@ function normalizeBill(bill, detail, actions) {
     url: `https://www.congress.gov/bill/${CONGRESS_NUMBER}th-congress/${originChamber.toLowerCase()}-bill/${num}`,
   };
 
+  // Extract summaries — may be inline array or from sub-resource
+  const summariesArr = extraData?.summaries?.summaries || detail?.summaries || [];
+  const summaryText = Array.isArray(summariesArr) && summariesArr.length > 0
+    ? (summariesArr[summariesArr.length - 1].text || summariesArr[0].text || '')
+    : '';
+
+  // Extract subjects — may be inline or from sub-resource
+  const subjectsData = extraData?.subjects || detail?.subjects || {};
+  const legislativeSubjects = subjectsData?.legislativeSubjects || subjectsData?.subjects || [];
+  const subjectNames = Array.isArray(legislativeSubjects)
+    ? legislativeSubjects.map(s => s.name || s).filter(Boolean)
+    : [];
+
+  // Extract committees — may be inline or from sub-resource
+  const committeesData = extraData?.committees?.committees || detail?.committees || [];
+  const committeeNames = Array.isArray(committeesData)
+    ? committeesData.map(c => c.name || c.committee?.name).filter(Boolean)
+    : [];
+
+  // Cosponsors count
+  const cosponsorsCount = typeof detail?.cosponsors === 'number'
+    ? detail.cosponsors
+    : detail?.cosponsors?.count || 0;
+
   const billDetail = {
     ...summary,
-    summary: detail?.summaries?.[0]?.text || '',
-    cosponsors: detail?.cosponsors?.count || 0,
-    committees: (detail?.committees?.item || []).map(c => c.name).filter(Boolean),
-    subjects: detail?.subjects?.legislativeSubjects?.map(s => s.name).filter(Boolean) || [],
+    summary: summaryText,
+    cosponsors: cosponsorsCount,
+    committees: committeeNames,
+    subjects: subjectNames,
     actions: (actions || []).map(a => ({
       date: a.actionDate || '',
       text: a.text || '',
       chamber: a.actionCode?.startsWith('H') ? 'House' : a.actionCode?.startsWith('S') ? 'Senate' : undefined,
     })).slice(0, 20),
-    textUrl: detail?.textVersions?.url || `https://www.congress.gov/bill/${CONGRESS_NUMBER}th-congress/${originChamber.toLowerCase()}-bill/${num}/text`,
+    textUrl: `https://www.congress.gov/bill/${CONGRESS_NUMBER}th-congress/${originChamber.toLowerCase()}-bill/${num}/text`,
   };
 
   return { summary, detail: billDetail };
@@ -135,7 +178,16 @@ async function main() {
       fetchBillActions(CONGRESS_NUMBER, type, num),
     ]);
 
-    const { summary, detail: billDetail } = normalizeBill(bill, detail, actions);
+    // Fetch sub-resources for richer data (summaries, subjects, committees)
+    let extraData = {};
+    const [summariesRes, subjectsRes, committeesRes] = await Promise.all([
+      fetchBillSubResource(CONGRESS_NUMBER, type, num, 'summaries'),
+      fetchBillSubResource(CONGRESS_NUMBER, type, num, 'subjects'),
+      fetchBillSubResource(CONGRESS_NUMBER, type, num, 'committees'),
+    ]);
+    extraData = { summaries: summariesRes, subjects: subjectsRes, committees: committeesRes };
+
+    const { summary, detail: billDetail } = normalizeBill(bill, detail, actions, extraData);
     summaries.push(summary);
     writeJSON(`bills/${summary.billId}.json`, billDetail);
 
