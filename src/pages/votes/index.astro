@@ -1,13 +1,34 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
+import VoteFilter from '../../components/interactive/VoteFilter';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+let votesData = { total: 0, votes: [], lastUpdated: '', congress: 119 };
+try {
+  const dataPath = join(process.cwd(), 'data', 'votes', 'index.json');
+  votesData = JSON.parse(readFileSync(dataPath, 'utf-8'));
+} catch {}
+
+const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="Votes" description="Browse roll call votes in the US Congress.">
+<Layout title="Votes" description="Browse recent House roll call votes with party breakdowns.">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <h1 class="text-3xl font-bold text-gray-900 mb-4">Votes</h1>
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-12 text-center">
-      <p class="text-gray-500 text-lg">Vote tracking coming soon.</p>
-      <p class="text-gray-400 text-sm mt-2">This section will show roll call votes with member-by-member breakdowns.</p>
+    <div class="mb-6">
+      <h1 class="text-3xl font-bold text-gray-900">House Votes</h1>
+      <p class="text-gray-500 mt-1">
+        {votesData.congress}th Congress &middot; {votesData.total} roll call votes
+      </p>
     </div>
+
+    {votesData.votes.length > 0 ? (
+      <VoteFilter votes={votesData.votes} baseUrl={base} client:load />
+    ) : (
+      <div class="text-center py-16 text-gray-500">
+        <p class="text-lg">No vote data available yet.</p>
+        <p class="mt-2 text-sm">Run the data fetch script to populate vote data.</p>
+      </div>
+    )}
   </div>
 </Layout>

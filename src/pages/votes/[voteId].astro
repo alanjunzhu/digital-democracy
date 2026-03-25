@@ -1,0 +1,144 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import { readFileSync, readdirSync, existsSync } from 'fs';
+import { join } from 'path';
+import type { VoteDetail } from '../../lib/types';
+
+export function getStaticPaths() {
+  const votesDir = join(process.cwd(), 'data', 'votes');
+  const paths: { params: { voteId: string } }[] = [];
+
+  if (existsSync(votesDir)) {
+    const files = readdirSync(votesDir);
+    for (const file of files) {
+      if (file === 'index.json') continue;
+      if (!file.endsWith('.json')) continue;
+      const voteId = file.replace('.json', '');
+      paths.push({ params: { voteId } });
+    }
+  }
+
+  return paths;
+}
+
+const { voteId } = Astro.params;
+const dataPath = join(process.cwd(), 'data', 'votes', `${voteId}.json`);
+const vote: VoteDetail = JSON.parse(readFileSync(dataPath, 'utf-8'));
+const base = import.meta.env.BASE_URL;
+
+const totalVotes = vote.totalYea + vote.totalNay;
+const yeaPct = totalVotes > 0 ? Math.round((vote.totalYea / totalVotes) * 100) : 0;
+const nayPct = 100 - yeaPct;
+
+const resultColor = (r: string) => {
+  if (r === 'Passed' || r === 'Agreed to') return 'bg-green-100 text-green-800';
+  if (r === 'Failed' || r === 'Rejected') return 'bg-red-100 text-red-800';
+  return 'bg-gray-100 text-gray-800';
+};
+
+const partyRows = [
+  { label: 'Democrats', color: 'text-blue-700', data: vote.partyBreakdown.democratic },
+  { label: 'Republicans', color: 'text-red-700', data: vote.partyBreakdown.republican },
+  { label: 'Independents', color: 'text-purple-700', data: vote.partyBreakdown.independent },
+];
+---
+
+<Layout title={`Roll Call #${vote.rollCallNumber}`} description={vote.question}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Back link -->
+    <a href={`${base}votes/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
+      &larr; All Votes
+    </a>
+
+    <!-- Vote Header -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="font-mono text-lg font-bold text-gray-700">Roll Call #{vote.rollCallNumber}</span>
+        <span class={`inline-flex items-center font-semibold rounded-full text-sm px-2.5 py-0.5 ${resultColor(vote.result)}`}>
+          {vote.result}
+        </span>
+      </div>
+      <h1 class="text-2xl font-bold text-gray-900 mb-3">{vote.question}</h1>
+
+      {vote.description && vote.description !== vote.question && (
+        <p class="text-gray-600 mb-3">{vote.description}</p>
+      )}
+
+      <div class="flex flex-wrap gap-6 text-sm text-gray-600">
+        {vote.date && (
+          <div><span class="text-gray-400">Date:</span> {vote.date}</div>
+        )}
+        {vote.voteType && (
+          <div><span class="text-gray-400">Type:</span> {vote.voteType}</div>
+        )}
+        {vote.billId && (
+          <div>
+            <span class="text-gray-400">Bill:</span>{' '}
+            <a href={`${base}bills/${vote.billId}/`} class="text-blue-600 hover:underline">
+              {vote.billId.toUpperCase()}
+            </a>
+          </div>
+        )}
+      </div>
+
+      <div class="mt-3">
+        <a href={vote.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">
+          View on Clerk.house.gov
+        </a>
+      </div>
+    </div>
+
+    <!-- Vote Tally -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+      <h2 class="text-lg font-semibold text-gray-900 mb-4">Vote Tally</h2>
+
+      <!-- Overall bar -->
+      <div class="mb-6">
+        <div class="flex justify-between text-sm font-semibold mb-1">
+          <span class="text-green-700">Yea: {vote.totalYea}</span>
+          <span class="text-red-700">Nay: {vote.totalNay}</span>
+        </div>
+        <div class="h-6 bg-gray-100 rounded-full overflow-hidden flex">
+          <div class="bg-green-500 h-full flex items-center justify-center text-xs text-white font-bold" style={`width: ${yeaPct}%`}>
+            {yeaPct > 10 ? `${yeaPct}%` : ''}
+          </div>
+          <div class="bg-red-500 h-full flex items-center justify-center text-xs text-white font-bold" style={`width: ${nayPct}%`}>
+            {nayPct > 10 ? `${nayPct}%` : ''}
+          </div>
+        </div>
+      </div>
+
+      <!-- Party breakdown table -->
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-gray-200">
+            <th class="text-left py-2 text-gray-500 font-medium">Party</th>
+            <th class="text-center py-2 text-green-700 font-medium">Yea</th>
+            <th class="text-center py-2 text-red-700 font-medium">Nay</th>
+            <th class="text-center py-2 text-gray-500 font-medium">Not Voting</th>
+          </tr>
+        </thead>
+        <tbody>
+          {partyRows.map(row => (
+            (row.data.yea + row.data.nay + row.data.notVoting > 0) && (
+              <tr class="border-b border-gray-100">
+                <td class={`py-2 font-semibold ${row.color}`}>{row.label}</td>
+                <td class="py-2 text-center">{row.data.yea}</td>
+                <td class="py-2 text-center">{row.data.nay}</td>
+                <td class="py-2 text-center text-gray-400">{row.data.notVoting}</td>
+              </tr>
+            )
+          ))}
+          <tr class="font-bold">
+            <td class="py-2">Total</td>
+            <td class="py-2 text-center text-green-700">{vote.totalYea}</td>
+            <td class="py-2 text-center text-red-700">{vote.totalNay}</td>
+            <td class="py-2 text-center text-gray-400">
+              {partyRows.reduce((sum, r) => sum + r.data.notVoting, 0)}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Layout>

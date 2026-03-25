@@ -85,3 +85,60 @@ export interface MembersIndex {
   total: number;
   members: MemberSummary[];
 }
+
+// Committee types
+
+export interface CommitteeSummary {
+  systemCode: string;
+  name: string;
+  chamber: 'House' | 'Senate' | 'Joint';
+  committeeType?: string;
+  url: string;
+  subcommittees?: { systemCode: string; name: string }[];
+}
+
+export interface CommitteeDetail extends CommitteeSummary {
+  bills?: string[];
+}
+
+export interface CommitteesIndex {
+  lastUpdated: string;
+  congress: number;
+  total: number;
+  committees: CommitteeSummary[];
+}
+
+// Vote types (House only — Senate not available in API v3)
+
+export interface VoteSummary {
+  voteId: string;
+  rollCallNumber: number;
+  congress: number;
+  session: number;
+  date: string;
+  question: string;
+  result: string;
+  billType?: string;
+  billNumber?: number;
+  billId?: string;
+  partyBreakdown: {
+    democratic: { yea: number; nay: number; notVoting: number };
+    republican: { yea: number; nay: number; notVoting: number };
+    independent: { yea: number; nay: number; notVoting: number };
+  };
+  totalYea: number;
+  totalNay: number;
+  url: string;
+}
+
+export interface VoteDetail extends VoteSummary {
+  description?: string;
+  voteType?: string;
+}
+
+export interface VotesIndex {
+  lastUpdated: string;
+  congress: number;
+  total: number;
+  votes: VoteSummary[];
+}

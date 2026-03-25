@@ -33,6 +33,16 @@ jobs:
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
 
+      - name: Fetch committees data
+        run: node scripts/fetch-committees.mjs
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+
+      - name: Fetch votes data
+        run: node scripts/fetch-votes.mjs
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+
       - name: Commit data changes
         run: |
           git config user.name "github-actions[bot]"

@@ -1,0 +1,80 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import ChamberBadge from '../../components/shared/ChamberBadge.astro';
+import { readFileSync, readdirSync, existsSync } from 'fs';
+import { join } from 'path';
+import type { CommitteeDetail } from '../../lib/types';
+
+export function getStaticPaths() {
+  const committeesDir = join(process.cwd(), 'data', 'committees');
+  const paths: { params: { committeeId: string } }[] = [];
+
+  if (existsSync(committeesDir)) {
+    const files = readdirSync(committeesDir);
+    for (const file of files) {
+      if (file === 'index.json') continue;
+      if (!file.endsWith('.json')) continue;
+      const committeeId = file.replace('.json', '');
+      paths.push({ params: { committeeId } });
+    }
+  }
+
+  return paths;
+}
+
+const { committeeId } = Astro.params;
+const dataPath = join(process.cwd(), 'data', 'committees', `${committeeId}.json`);
+const committee: CommitteeDetail = JSON.parse(readFileSync(dataPath, 'utf-8'));
+const base = import.meta.env.BASE_URL;
+
+const chamberColor = (ch: string) => {
+  if (ch === 'Senate') return 'bg-amber-100 text-amber-800';
+  if (ch === 'House') return 'bg-emerald-100 text-emerald-800';
+  return 'bg-blue-100 text-blue-800';
+};
+---
+
+<Layout title={committee.name} description={`${committee.name} — ${committee.chamber} Committee`}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Back link -->
+    <a href={`${base}committees/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
+      &larr; All Committees
+    </a>
+
+    <!-- Committee Header -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class={`inline-flex items-center font-medium rounded-full text-xs px-2 py-0.5 ${chamberColor(committee.chamber)}`}>
+          {committee.chamber}
+        </span>
+        {committee.committeeType && (
+          <span class="text-sm text-gray-400">{committee.committeeType}</span>
+        )}
+        <span class="font-mono text-xs text-gray-400">{committee.systemCode}</span>
+      </div>
+      <h1 class="text-2xl font-bold text-gray-900 mb-4">{committee.name}</h1>
+
+      <a href={committee.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">
+        View on Congress.gov
+      </a>
+    </div>
+
+    <!-- Subcommittees -->
+    {committee.subcommittees && committee.subcommittees.length > 0 && (
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">
+          Subcommittees ({committee.subcommittees.length})
+        </h2>
+        <div class="space-y-2">
+          {committee.subcommittees.map(sc => (
+            <div class="flex items-center gap-3 py-2 border-b border-gray-100 last:border-0">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+              <span class="text-sm text-gray-700">{sc.name}</span>
+              <span class="font-mono text-xs text-gray-400">{sc.systemCode}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</Layout>
