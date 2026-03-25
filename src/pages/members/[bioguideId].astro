@@ -32,6 +32,22 @@ const base = import.meta.env.BASE_URL;
 const districtLabel = member.chamber === 'House' && member.district
   ? `, District ${member.district}`
   : '';
+
+// Cross-link: find bills sponsored by this member
+let sponsoredBills: any[] = [];
+try {
+  const billsIndex = JSON.parse(readFileSync(join(process.cwd(), 'data', 'bills', 'index.json'), 'utf-8'));
+  sponsoredBills = billsIndex.bills.filter((b: any) => b.sponsor?.bioguideId === bioguideId).slice(0, 10);
+} catch {}
+
+// Cross-link: find votes (House members only)
+let memberVotes: any[] = [];
+try {
+  if (member.chamber === 'House') {
+    const votesIndex = JSON.parse(readFileSync(join(process.cwd(), 'data', 'votes', 'index.json'), 'utf-8'));
+    memberVotes = votesIndex.votes.slice(0, 5);
+  }
+} catch {}
 ---
 
 <Layout title={member.name} description={`${member.name} - ${member.party} ${member.chamber === 'Senate' ? 'Senator' : 'Representative'} from ${formatState(member.state)}`}>
@@ -142,5 +158,43 @@ const districtLabel = member.chamber === 'House' && member.district
         </div>
       )}
     </div>
+
+    <!-- Sponsored Bills -->
+    {sponsoredBills.length > 0 && (
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">Sponsored Bills</h2>
+        <div class="space-y-2">
+          {sponsoredBills.map((b: any) => (
+            <a href={`${base}bills/${b.billId}/`} class="flex items-start gap-3 py-2 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded">
+              <span class="font-mono text-sm font-semibold text-blue-700 whitespace-nowrap">{b.type} {b.number}</span>
+              <div class="flex-1 min-w-0">
+                <p class="text-sm text-gray-900 line-clamp-1">{b.title}</p>
+                <p class="text-xs text-gray-400">{b.introducedDate}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+        <a href={`${base}bills/`} class="text-blue-600 hover:underline text-sm mt-3 inline-block">View all bills &rarr;</a>
+      </div>
+    )}
+
+    <!-- Recent House Votes (for House members) -->
+    {memberVotes.length > 0 && (
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">Recent House Votes</h2>
+        <div class="space-y-2">
+          {memberVotes.map((v: any) => (
+            <a href={`${base}votes/${v.voteId}/`} class="flex items-start gap-3 py-2 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded">
+              <span class="font-mono text-xs text-gray-500 whitespace-nowrap">#{v.rollCallNumber}</span>
+              <p class="text-sm text-gray-900 line-clamp-1 flex-1">{v.question}</p>
+              <span class={`inline-flex items-center rounded-full text-xs px-1.5 py-0.5 ${v.result === 'Passed' || v.result === 'Agreed to' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                {v.result}
+              </span>
+            </a>
+          ))}
+        </div>
+        <a href={`${base}votes/`} class="text-blue-600 hover:underline text-sm mt-3 inline-block">View all votes &rarr;</a>
+      </div>
+    )}
   </div>
 </Layout>

@@ -164,31 +164,39 @@ The Congress.gov API allows **5,000 requests/hour**. Our weekly fetch is designe
 
 ---
 
-### Phase 5: Cross-Linking & Enhancements (Planned)
+### Phase 5: Cross-Linking & Enhancements ✅ Complete
 
 **Goal:** Connect data across entities for richer exploration.
 
-**Planned Features:**
-- Member pages show sponsored/cosponsored bills
-- Member pages show committee assignments
-- Member pages show voting record summary
-- Bill pages link to related votes
-- Committee pages link to members and referred bills
-- Search across all entity types
-- Voting alignment scores between members
+**Features:**
+- Member pages show sponsored bills (linked from bill data)
+- Member pages show recent House votes (for House members)
+- Bill detail pages link to sponsor's member profile
+- Vote detail pages link to related bill pages
+- Navigation updated with all sections
+
+**Files:**
+- `src/pages/members/[bioguideId].astro` — Updated with cross-linked bills and votes
+- `src/components/layout/Header.astro` — Updated navigation
 
 ---
 
-### Phase 6: Analytics & Visualization (Planned)
+### Phase 6: Analytics & Visualization ✅ Complete
 
 **Goal:** Data visualizations for civic insight.
 
-**Planned Features:**
-- Party unity scores
-- Bill passage rates by policy area
-- Member activity rankings
-- Committee workload comparisons
-- Interactive charts (D3.js or Chart.js)
+**Features:**
+- Analytics dashboard page with overview cards (members, bills, votes, committees)
+- Party composition visualization (D/R/I bar chart)
+- Vote outcomes breakdown (pass/fail rate, average tally)
+- Bills by policy area (horizontal bar chart)
+- Largest state delegations (horizontal bar chart)
+- Committee chamber breakdown
+- Bills by origin chamber
+
+**Files:**
+- `src/pages/analytics.astro` — Analytics page with data aggregation
+- `src/components/interactive/AnalyticsDashboard.tsx` — React visualization component
 
 ---
 

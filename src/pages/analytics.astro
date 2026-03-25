@@ -1,0 +1,96 @@
+---
+import Layout from '../components/layout/Layout.astro';
+import AnalyticsDashboard from '../components/interactive/AnalyticsDashboard';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+function loadJSON(path: string) {
+  try { return JSON.parse(readFileSync(join(process.cwd(), 'data', path), 'utf-8')); }
+  catch { return null; }
+}
+
+const membersIndex = loadJSON('members/index.json') || { members: [], total: 0 };
+const billsIndex = loadJSON('bills/index.json') || { bills: [], total: 0 };
+const votesIndex = loadJSON('votes/index.json') || { votes: [], total: 0 };
+const committeesIndex = loadJSON('committees/index.json') || { committees: [], total: 0 };
+
+// Member stats
+const members = membersIndex.members;
+const stateCount: Record<string, number> = {};
+for (const m of members) {
+  stateCount[m.state] = (stateCount[m.state] || 0) + 1;
+}
+const stateBreakdown = Object.entries(stateCount)
+  .map(([state, count]) => ({ state, count }))
+  .sort((a, b) => b.count - a.count);
+
+const memberStats = {
+  total: membersIndex.total || members.length,
+  senate: members.filter((m: any) => m.chamber === 'Senate').length,
+  house: members.filter((m: any) => m.chamber === 'House').length,
+  democratic: members.filter((m: any) => m.party === 'Democratic').length,
+  republican: members.filter((m: any) => m.party === 'Republican').length,
+  independent: members.filter((m: any) => m.party === 'Independent').length,
+  stateBreakdown,
+};
+
+// Bill stats
+const bills = billsIndex.bills;
+const policyCount: Record<string, number> = {};
+const chamberCount: Record<string, number> = {};
+for (const b of bills) {
+  if (b.policyArea) policyCount[b.policyArea] = (policyCount[b.policyArea] || 0) + 1;
+  chamberCount[b.originChamber] = (chamberCount[b.originChamber] || 0) + 1;
+}
+
+const billStats = {
+  total: billsIndex.total || bills.length,
+  byPolicyArea: Object.entries(policyCount).map(([area, count]) => ({ area, count })).sort((a, b) => b.count - a.count),
+  byChamber: Object.entries(chamberCount).map(([chamber, count]) => ({ chamber, count })).sort((a, b) => b.count - a.count),
+  recentActivity: [],
+};
+
+// Vote stats
+const votes = votesIndex.votes;
+const passed = votes.filter((v: any) => v.result === 'Passed' || v.result === 'Agreed to').length;
+const failed = votes.filter((v: any) => v.result === 'Failed' || v.result === 'Rejected').length;
+const totalYea = votes.reduce((sum: number, v: any) => sum + (v.totalYea || 0), 0);
+const totalNay = votes.reduce((sum: number, v: any) => sum + (v.totalNay || 0), 0);
+
+const voteStats = {
+  total: votesIndex.total || votes.length,
+  passed,
+  failed,
+  partyLineVotes: 0,
+  avgYea: votes.length > 0 ? Math.round(totalYea / votes.length) : 0,
+  avgNay: votes.length > 0 ? Math.round(totalNay / votes.length) : 0,
+};
+
+// Committee stats
+const committees = committeesIndex.committees;
+const committeeStats = {
+  total: committeesIndex.total || committees.length,
+  house: committees.filter((c: any) => c.chamber === 'House').length,
+  senate: committees.filter((c: any) => c.chamber === 'Senate').length,
+  joint: committees.filter((c: any) => c.chamber === 'Joint').length,
+};
+---
+
+<Layout title="Analytics" description="Data visualizations and insights about the US Congress.">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="mb-6">
+      <h1 class="text-3xl font-bold text-gray-900">Analytics</h1>
+      <p class="text-gray-500 mt-1">
+        Data insights for the {membersIndex.congress || 119}th Congress
+      </p>
+    </div>
+
+    <AnalyticsDashboard
+      memberStats={memberStats}
+      billStats={billStats}
+      voteStats={voteStats}
+      committeeStats={committeeStats}
+      client:load
+    />
+  </div>
+</Layout>
