@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://alanjunzhu.github.io',
-  base: '/digital-democracy',
+  base: '/digital-democracy/',
   integrations: [
     react(),
     tailwind(),
