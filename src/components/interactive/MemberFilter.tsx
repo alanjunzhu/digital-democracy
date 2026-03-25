@@ -105,7 +105,7 @@ export default function MemberFilter({ members, baseUrl }: Props) {
             >
               <option value="all">All States</option>
               {states.map(s => (
-                <option key={s} value={s}>{STATE_NAMES[s] || s} ({s})</option>
+                <option key={s} value={s}>{s}</option>
               ))}
             </select>
           </div>

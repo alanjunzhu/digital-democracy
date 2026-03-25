@@ -109,9 +109,9 @@ function normalizeMember(congressMember, detail, legData, socialData) {
     district: chamber === 'House' ? district : undefined,
     chamber,
     imageUrl: `https://bioguide.congress.gov/bioguide/photo/${bioguideId[0]}/${bioguideId}.jpg`,
-    url: congressMember.url || '',
-    website: legData?.terms?.slice(-1)?.[0]?.url || '',
-    phone: legData?.terms?.slice(-1)?.[0]?.phone || '',
+    url: `https://www.congress.gov/member/${bioguideId}`,
+    website: legData?.terms?.slice(-1)?.[0]?.url || detail?.addressInformation?.website || '',
+    phone: legData?.terms?.slice(-1)?.[0]?.phone || detail?.addressInformation?.phoneNumber || '',
   };
 
   // Build detailed info
