@@ -27,7 +27,14 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - uses: withastro/action@v3
+      - name: List data files
+        run: ls data/members/ | head -10 && ls data/members/ | wc -l
+      - name: Build Astro site
+        run: npx astro build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
 
   deploy:
     needs: build
