@@ -1,0 +1,39 @@
+{
+  "congress": 119,
+  "type": "H.R.",
+  "number": "200",
+  "billId": "hr200",
+  "title": "Federal Freeze Act",
+  "introducedDate": "2025-01-03",
+  "sponsor": {
+    "bioguideId": "T000478",
+    "name": "Claudia Tenney",
+    "party": "R",
+    "state": "NY"
+  },
+  "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
+  "latestActionDate": "2025-01-03",
+  "originChamber": "House",
+  "policyArea": "Government Operations and Politics",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/200",
+  "summary": "",
+  "cosponsors": 0,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-01-03",
+      "text": "Referred to the House Committee on Oversight and Government Reform.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Introduced in House"
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Introduced in House"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/hr/200/text?format=json"
+}

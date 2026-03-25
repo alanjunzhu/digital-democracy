@@ -1,0 +1,42 @@
+{
+  "congress": 119,
+  "type": "S.Res.",
+  "number": "10",
+  "billId": "sres10",
+  "title": "A resolution notifying the House of Representatives of the election of a Secretary of the Senate.",
+  "introducedDate": "2025-01-03",
+  "sponsor": {
+    "bioguideId": "T000250",
+    "name": "John Thune",
+    "party": "R",
+    "state": "SD"
+  },
+  "latestAction": "Message on Senate action sent to the House.",
+  "latestActionDate": "2025-01-06",
+  "originChamber": "Senate",
+  "policyArea": "Congress",
+  "url": "https://www.congress.gov/bill/119th-congress/senate-bill/10",
+  "summary": "",
+  "cosponsors": 0,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-01-06",
+      "text": "Message on Senate action sent to the House."
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Submitted in the Senate, considered, and agreed to without amendment by Unanimous Consent. (consideration: CR S8; text: CR S8)"
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Passed/agreed to in Senate: Submitted in the Senate, considered, and agreed to without amendment by Unanimous Consent."
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Introduced in Senate"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/sres/10/text?format=json"
+}

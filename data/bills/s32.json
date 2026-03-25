@@ -1,0 +1,64 @@
+{
+  "congress": 119,
+  "type": "S.",
+  "number": "32",
+  "billId": "s32",
+  "title": "LACA",
+  "introducedDate": "2025-01-08",
+  "sponsor": {
+    "bioguideId": "C001098",
+    "name": "Ted Cruz",
+    "party": "R",
+    "state": "TX"
+  },
+  "latestAction": "Held at the desk.",
+  "latestActionDate": "2025-02-13",
+  "originChamber": "Senate",
+  "policyArea": "Law",
+  "url": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
+  "summary": "",
+  "cosponsors": 1,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-02-13",
+      "text": "Held at the desk.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-02-13",
+      "text": "Received in the House.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-02-13",
+      "text": "Message on Senate action sent to the House."
+    },
+    {
+      "date": "2025-02-12",
+      "text": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S932; text: CR S932)"
+    },
+    {
+      "date": "2025-02-12",
+      "text": "Passed/agreed to in Senate: Passed Senate without amendment by Unanimous Consent."
+    },
+    {
+      "date": "2025-02-12",
+      "text": "Senate Committee on the Judiciary discharged by Unanimous Consent."
+    },
+    {
+      "date": "2025-02-12",
+      "text": "Senate Committee on the Judiciary discharged by Unanimous Consent."
+    },
+    {
+      "date": "2025-01-08",
+      "text": "Read twice and referred to the Committee on the Judiciary."
+    },
+    {
+      "date": "2025-01-08",
+      "text": "Introduced in Senate"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/s/32/text?format=json"
+}

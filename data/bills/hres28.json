@@ -1,0 +1,40 @@
+{
+  "congress": 119,
+  "type": "H.Res.",
+  "number": "28",
+  "billId": "hres28",
+  "title": "BRIDGE to Congress Resolution",
+  "introducedDate": "2025-01-09",
+  "sponsor": {
+    "bioguideId": "G000600",
+    "name": "Marie Perez",
+    "party": "D",
+    "state": "WA"
+  },
+  "latestAction": "Referred to the House Committee on Rules.",
+  "latestActionDate": "2025-01-09",
+  "originChamber": "House",
+  "policyArea": "Congress",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/28",
+  "summary": "",
+  "cosponsors": 1,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-01-09",
+      "text": "Referred to the House Committee on Rules.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Submitted in House",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Submitted in House"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/hres/28/text?format=json"
+}

@@ -1,0 +1,49 @@
+{
+  "congress": 119,
+  "type": "H.R.",
+  "number": "280",
+  "billId": "hr280",
+  "title": "COAL Act of 2025",
+  "introducedDate": "2025-01-09",
+  "sponsor": {
+    "bioguideId": "H001096",
+    "name": "Harriet Hageman",
+    "party": "R",
+    "state": "WY"
+  },
+  "latestAction": "Subcommittee Hearings Held",
+  "latestActionDate": "2025-09-03",
+  "originChamber": "House",
+  "policyArea": "Energy",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/280",
+  "summary": "",
+  "cosponsors": 4,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-09-03",
+      "text": "Subcommittee Hearings Held",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-07-02",
+      "text": "Referred to the Subcommittee on Energy and Mineral Resources.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Referred to the House Committee on Natural Resources.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/hr/280/text?format=json"
+}

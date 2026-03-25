@@ -1,0 +1,44 @@
+{
+  "congress": 119,
+  "type": "H.R.",
+  "number": "289",
+  "billId": "hr289",
+  "title": "SAP Act of 2025",
+  "introducedDate": "2025-01-09",
+  "sponsor": {
+    "bioguideId": "L000600",
+    "name": "Nicholas Langworthy",
+    "party": "R",
+    "state": "NY"
+  },
+  "latestAction": "Referred to the Subcommittee on Forestry and Horticulture.",
+  "latestActionDate": "2025-02-14",
+  "originChamber": "House",
+  "policyArea": "Agriculture and Food",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/289",
+  "summary": "",
+  "cosponsors": 4,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-02-14",
+      "text": "Referred to the Subcommittee on Forestry and Horticulture.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Referred to the House Committee on Agriculture.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/hr/289/text?format=json"
+}

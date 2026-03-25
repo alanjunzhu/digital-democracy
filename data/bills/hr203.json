@@ -1,0 +1,44 @@
+{
+  "congress": 119,
+  "type": "H.R.",
+  "number": "203",
+  "billId": "hr203",
+  "title": "Red Light Act",
+  "introducedDate": "2025-01-03",
+  "sponsor": {
+    "bioguideId": "T000478",
+    "name": "Claudia Tenney",
+    "party": "R",
+    "state": "NY"
+  },
+  "latestAction": "Referred to the Subcommittee on Highways and Transit.",
+  "latestActionDate": "2025-01-04",
+  "originChamber": "House",
+  "policyArea": "Transportation and Public Works",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/203",
+  "summary": "",
+  "cosponsors": 4,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-01-04",
+      "text": "Referred to the Subcommittee on Highways and Transit.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Referred to the House Committee on Transportation and Infrastructure.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Introduced in House"
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Introduced in House"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/hr/203/text?format=json"
+}

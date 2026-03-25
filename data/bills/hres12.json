@@ -1,0 +1,40 @@
+{
+  "congress": 119,
+  "type": "H.Res.",
+  "number": "12",
+  "billId": "hres12",
+  "title": "Stay on Schedule (S.O.S.) Resolution",
+  "introducedDate": "2025-01-03",
+  "sponsor": {
+    "bioguideId": "W000804",
+    "name": "Robert Wittman",
+    "party": "R",
+    "state": "VA"
+  },
+  "latestAction": "Referred to the House Committee on Rules.",
+  "latestActionDate": "2025-01-03",
+  "originChamber": "House",
+  "policyArea": "Congress",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/12",
+  "summary": "",
+  "cosponsors": 2,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-01-03",
+      "text": "Referred to the House Committee on Rules.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Submitted in House",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-03",
+      "text": "Submitted in House"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/hres/12/text?format=json"
+}

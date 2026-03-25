@@ -1,0 +1,39 @@
+{
+  "congress": 119,
+  "type": "H.R.",
+  "number": "306",
+  "billId": "hr306",
+  "title": "ESCRA Act",
+  "introducedDate": "2025-01-09",
+  "sponsor": {
+    "bioguideId": "M001238",
+    "name": "Sarah McBride",
+    "party": "D",
+    "state": "DE"
+  },
+  "latestAction": "Referred to the House Committee on Financial Services.",
+  "latestActionDate": "2025-01-09",
+  "originChamber": "House",
+  "policyArea": "Finance and Financial Sector",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/306",
+  "summary": "",
+  "cosponsors": 5,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-01-09",
+      "text": "Referred to the House Committee on Financial Services.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/hr/306/text?format=json"
+}

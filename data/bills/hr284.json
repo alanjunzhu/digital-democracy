@@ -1,0 +1,44 @@
+{
+  "congress": 119,
+  "type": "H.R.",
+  "number": "284",
+  "billId": "hr284",
+  "title": "GLRI Act of 2025",
+  "introducedDate": "2025-01-09",
+  "sponsor": {
+    "bioguideId": "J000295",
+    "name": "David Joyce",
+    "party": "R",
+    "state": "OH"
+  },
+  "latestAction": "Referred to the Subcommittee on Water Resources and Environment.",
+  "latestActionDate": "2025-01-10",
+  "originChamber": "House",
+  "policyArea": "Environmental Protection",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/284",
+  "summary": "",
+  "cosponsors": 42,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-01-10",
+      "text": "Referred to the Subcommittee on Water Resources and Environment.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Referred to the House Committee on Transportation and Infrastructure.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/hr/284/text?format=json"
+}

@@ -1,0 +1,39 @@
+{
+  "congress": 119,
+  "type": "H.R.",
+  "number": "256",
+  "billId": "hr256",
+  "title": "SAVE Act",
+  "introducedDate": "2025-01-09",
+  "sponsor": {
+    "bioguideId": "B000740",
+    "name": "Stephanie Bice",
+    "party": "R",
+    "state": "OK"
+  },
+  "latestAction": "Referred to the House Committee on Energy and Commerce.",
+  "latestActionDate": "2025-01-09",
+  "originChamber": "House",
+  "policyArea": "Energy",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/256",
+  "summary": "",
+  "cosponsors": 7,
+  "committees": [],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-01-09",
+      "text": "Referred to the House Committee on Energy and Commerce.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    },
+    {
+      "date": "2025-01-09",
+      "text": "Introduced in House"
+    }
+  ],
+  "textUrl": "https://api.congress.gov/v3/bill/119/hr/256/text?format=json"
+}
