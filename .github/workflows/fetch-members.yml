@@ -35,5 +35,6 @@ jobs:
             echo "No data changes detected."
           else
             git commit -m "chore: update members data [$(date -u +%Y-%m-%d)]"
+            git pull --rebase origin main
             git push
           fi
