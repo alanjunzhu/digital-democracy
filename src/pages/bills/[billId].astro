@@ -1,0 +1,156 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import ChamberBadge from '../../components/shared/ChamberBadge.astro';
+import { readFileSync, readdirSync, existsSync } from 'fs';
+import { join } from 'path';
+import type { BillDetail } from '../../lib/types';
+
+export function getStaticPaths() {
+  const billsDir = join(process.cwd(), 'data', 'bills');
+  const paths: { params: { billId: string } }[] = [];
+
+  if (existsSync(billsDir)) {
+    const files = readdirSync(billsDir);
+    for (const file of files) {
+      if (file === 'index.json') continue;
+      if (!file.endsWith('.json')) continue;
+      const billId = file.replace('.json', '');
+      paths.push({ params: { billId } });
+    }
+  }
+
+  return paths;
+}
+
+const { billId } = Astro.params;
+const dataPath = join(process.cwd(), 'data', 'bills', `${billId}.json`);
+const bill: BillDetail = JSON.parse(readFileSync(dataPath, 'utf-8'));
+const base = import.meta.env.BASE_URL;
+
+const partyColor = (p: string) => {
+  if (p === 'D') return 'text-blue-700';
+  if (p === 'R') return 'text-red-700';
+  return 'text-purple-700';
+};
+---
+
+<Layout title={`${bill.type} ${bill.number}`} description={bill.title}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Back link -->
+    <a href={`${base}bills/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
+      &larr; All Bills
+    </a>
+
+    <!-- Bill Header -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="font-mono text-lg font-bold text-blue-700">{bill.type} {bill.number}</span>
+        <ChamberBadge chamber={bill.originChamber} />
+        {bill.policyArea && (
+          <span class="inline-flex items-center rounded-full text-xs px-2 py-0.5 bg-gray-100 text-gray-600">
+            {bill.policyArea}
+          </span>
+        )}
+      </div>
+      <h1 class="text-2xl font-bold text-gray-900 mb-4">{bill.title}</h1>
+
+      <div class="flex flex-wrap gap-6 text-sm text-gray-600">
+        {bill.sponsor && (
+          <div>
+            <span class="text-gray-400">Sponsor:</span>{' '}
+            <a href={`${base}members/${bill.sponsor.bioguideId}/`} class="text-blue-600 hover:underline font-medium">
+              {bill.sponsor.name}
+            </a>
+            {bill.sponsor.party && (
+              <span class={`ml-1 ${partyColor(bill.sponsor.party)}`}>({bill.sponsor.party})</span>
+            )}
+          </div>
+        )}
+        {bill.introducedDate && (
+          <div>
+            <span class="text-gray-400">Introduced:</span> {bill.introducedDate}
+          </div>
+        )}
+        <div>
+          <span class="text-gray-400">Cosponsors:</span> {bill.cosponsors}
+        </div>
+      </div>
+
+      <div class="flex gap-4 mt-4 text-sm">
+        <a href={bill.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+          Congress.gov
+        </a>
+        {bill.textUrl && (
+          <a href={bill.textUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+            Full Text
+          </a>
+        )}
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Summary -->
+      {bill.summary && (
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">Summary</h2>
+          <div class="text-sm text-gray-700 prose prose-sm max-w-none" set:html={bill.summary} />
+        </div>
+      )}
+
+      <!-- Latest Action -->
+      {bill.latestAction && (
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">Latest Action</h2>
+          <p class="text-sm text-gray-700">{bill.latestAction}</p>
+          {bill.latestActionDate && (
+            <p class="text-xs text-gray-400 mt-1">{bill.latestActionDate}</p>
+          )}
+        </div>
+      )}
+
+      <!-- Committees -->
+      {bill.committees && bill.committees.length > 0 && (
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">Committees</h2>
+          <ul class="space-y-1 text-sm text-gray-700">
+            {bill.committees.map(c => (
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                {c}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <!-- Subjects -->
+      {bill.subjects && bill.subjects.length > 0 && (
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">Subjects</h2>
+          <div class="flex flex-wrap gap-2">
+            {bill.subjects.map(s => (
+              <span class="inline-flex items-center rounded-full text-xs px-2 py-1 bg-blue-50 text-blue-700">
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Action History -->
+      {bill.actions && bill.actions.length > 0 && (
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">Action History</h2>
+          <div class="space-y-2 text-sm">
+            {bill.actions.map(a => (
+              <div class="flex items-start gap-3 py-1.5 border-b border-gray-100 last:border-0">
+                <span class="text-gray-400 whitespace-nowrap min-w-[90px]">{a.date}</span>
+                <span class="text-gray-700">{a.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</Layout>

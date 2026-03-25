@@ -1,4 +1,4 @@
-name: Fetch Members Data
+name: Fetch Congress Data
 
 on:
   schedule:
@@ -28,6 +28,11 @@ jobs:
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
 
+      - name: Fetch bills data
+        run: node scripts/fetch-bills.mjs
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+
       - name: Commit data changes
         run: |
           git config user.name "github-actions[bot]"
@@ -36,7 +41,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No data changes detected."
           else
-            git commit -m "chore: update members data [$(date -u +%Y-%m-%d)]"
+            git commit -m "chore: update congress data [$(date -u +%Y-%m-%d)]"
             git fetch origin main
             git rebase origin/main
             git push origin main

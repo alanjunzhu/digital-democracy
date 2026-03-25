@@ -1,13 +1,34 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
+import BillFilter from '../../components/interactive/BillFilter';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+let billsData = { total: 0, bills: [], lastUpdated: '', congress: 119 };
+try {
+  const dataPath = join(process.cwd(), 'data', 'bills', 'index.json');
+  billsData = JSON.parse(readFileSync(dataPath, 'utf-8'));
+} catch {}
+
+const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="Bills" description="Browse bills introduced in the US Congress.">
+<Layout title="Bills" description="Browse recent bills introduced in the US Congress. Filter by chamber, policy area, and search by title or sponsor.">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <h1 class="text-3xl font-bold text-gray-900 mb-4">Bills</h1>
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-12 text-center">
-      <p class="text-gray-500 text-lg">Bills tracking coming soon.</p>
-      <p class="text-gray-400 text-sm mt-2">This section will include searchable bills, status tracking, and sponsor information.</p>
+    <div class="mb-6">
+      <h1 class="text-3xl font-bold text-gray-900">Bills</h1>
+      <p class="text-gray-500 mt-1">
+        {billsData.congress}th Congress &middot; {billsData.total} bills
+      </p>
     </div>
+
+    {billsData.bills.length > 0 ? (
+      <BillFilter bills={billsData.bills} baseUrl={base} client:load />
+    ) : (
+      <div class="text-center py-16 text-gray-500">
+        <p class="text-lg">No bill data available yet.</p>
+        <p class="mt-2 text-sm">Run the data fetch script to populate bill data.</p>
+      </div>
+    )}
   </div>
 </Layout>

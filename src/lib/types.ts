@@ -41,10 +41,42 @@ export interface BillSummary {
   congress: number;
   type: string;
   number: number;
+  billId: string;
   title: string;
-  introducedDate?: string;
+  introducedDate: string;
+  sponsor?: {
+    bioguideId: string;
+    name: string;
+    party: string;
+    state: string;
+  };
   latestAction?: string;
   latestActionDate?: string;
+  originChamber: 'Senate' | 'House';
+  policyArea?: string;
+  url: string;
+}
+
+export interface BillDetail extends BillSummary {
+  summary?: string;
+  cosponsors: number;
+  committees?: string[];
+  subjects?: string[];
+  actions: BillAction[];
+  textUrl?: string;
+}
+
+export interface BillAction {
+  date: string;
+  text: string;
+  chamber?: string;
+}
+
+export interface BillsIndex {
+  lastUpdated: string;
+  congress: number;
+  total: number;
+  bills: BillSummary[];
 }
 
 export interface MembersIndex {

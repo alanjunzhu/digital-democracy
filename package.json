@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch:members": "node scripts/fetch-members.mjs"
+    "fetch:members": "node scripts/fetch-members.mjs",
+    "fetch:bills": "node scripts/fetch-bills.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
