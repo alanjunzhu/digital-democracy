@@ -1,6 +1,6 @@
 export function getPartyColor(party: string): string {
   switch (party) {
-    case 'Democrat': return '#2563eb';
+    case 'Democratic': return '#2563eb';
     case 'Republican': return '#dc2626';
     case 'Independent': return '#7c3aed';
     default: return '#6b7280';

@@ -49,12 +49,12 @@ export default function MemberFilter({ members, baseUrl }: Props) {
   }, [members, search, chamber, party, state]);
 
   const partyColor = (p: string) => {
-    if (p === 'Democrat') return 'bg-blue-100 text-blue-800';
+    if (p === 'Democratic') return 'bg-blue-100 text-blue-800';
     if (p === 'Republican') return 'bg-red-100 text-red-800';
     return 'bg-purple-100 text-purple-800';
   };
 
-  const partyLabel = (p: string) => p === 'Democrat' ? 'D' : p === 'Republican' ? 'R' : 'I';
+  const partyLabel = (p: string) => p === 'Democratic' ? 'D' : p === 'Republican' ? 'R' : 'I';
 
   return (
     <div>
@@ -91,7 +91,7 @@ export default function MemberFilter({ members, baseUrl }: Props) {
               className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
             >
               <option value="all">All Parties</option>
-              <option value="Democrat">Democrat</option>
+              <option value="Democratic">Democratic</option>
               <option value="Republican">Republican</option>
               <option value="Independent">Independent</option>
             </select>

@@ -12,7 +12,7 @@ try {
 
 const senators = membersData.members.filter((m: any) => m.chamber === 'Senate');
 const representatives = membersData.members.filter((m: any) => m.chamber === 'House');
-const democrats = membersData.members.filter((m: any) => m.party === 'Democrat');
+const democrats = membersData.members.filter((m: any) => m.party === 'Democratic');
 const republicans = membersData.members.filter((m: any) => m.party === 'Republican');
 const independents = membersData.members.filter((m: any) => m.party === 'Independent');
 const base = import.meta.env.BASE_URL;
