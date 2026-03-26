@@ -49,21 +49,33 @@ try {
   }
 } catch {}
 
-// Cross-link: find votes (House members only)
+// Cross-link: find votes for this specific member
 let memberVotes: any[] = [];
+let voteStats = { total: 0, yea: 0, nay: 0, notVoting: 0, present: 0 };
 try {
-  if (member.chamber === 'House') {
+  const byMemberPath = join(process.cwd(), 'data', 'votes', 'by-member.json');
+  if (existsSync(byMemberPath)) {
+    const byMemberData = JSON.parse(readFileSync(byMemberPath, 'utf-8'));
+    const myVotes = byMemberData.members?.[bioguideId] || [];
+    memberVotes = myVotes.sort((a: any, b: any) => {
+      if (a.date !== b.date) return b.date.localeCompare(a.date);
+      return b.rollCallNumber - a.rollCallNumber;
+    });
+    voteStats.total = memberVotes.length;
+    for (const v of memberVotes) {
+      const cast = (v.voteCast || '').toLowerCase();
+      if (cast === 'yea' || cast === 'aye') voteStats.yea++;
+      else if (cast === 'nay' || cast === 'no') voteStats.nay++;
+      else if (cast === 'not voting') voteStats.notVoting++;
+      else if (cast === 'present') voteStats.present++;
+    }
+  } else if (member.chamber === 'House') {
+    // Fallback to general votes index if by-member doesn't exist yet
     const votesIndex = JSON.parse(readFileSync(join(process.cwd(), 'data', 'votes', 'index.json'), 'utf-8'));
     memberVotes = votesIndex.votes.slice(0, 20);
+    voteStats.total = memberVotes.length;
   }
 } catch {}
-
-// Voting record stats
-const voteStats = {
-  total: memberVotes.length,
-  passed: memberVotes.filter((v: any) => v.result === 'Passed' || v.result === 'Agreed to').length,
-  failed: memberVotes.filter((v: any) => v.result === 'Failed' || v.result === 'Rejected').length,
-};
 
 // Stage display order
 const stageOrder = [...BILL_STAGES, 'Other'] as const;
@@ -139,10 +151,10 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
         <div class="text-2xl font-bold text-blue-600">{sponsoredBills.length}</div>
         <div class="text-xs text-gray-500 mt-1">Bills Sponsored</div>
       </div>
-      {member.chamber === 'House' && (
+      {voteStats.total > 0 && (
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
           <div class="text-2xl font-bold text-emerald-600">{voteStats.total}</div>
-          <div class="text-xs text-gray-500 mt-1">Recent Votes</div>
+          <div class="text-xs text-gray-500 mt-1">Votes Cast</div>
         </div>
       )}
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
@@ -255,60 +267,93 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
       </div>
     )}
 
-    <!-- Voting Record (House members) -->
+    <!-- Voting Record -->
     {memberVotes.length > 0 && (
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-4">Voting Record</h2>
 
         {/* Vote stats summary */}
-        <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
           <div class="text-center p-3 bg-gray-50 rounded-lg">
             <div class="text-xl font-bold text-gray-900">{voteStats.total}</div>
             <div class="text-xs text-gray-500">Total Votes</div>
           </div>
           <div class="text-center p-3 bg-green-50 rounded-lg">
-            <div class="text-xl font-bold text-green-600">{voteStats.passed}</div>
-            <div class="text-xs text-gray-500">Passed</div>
+            <div class="text-xl font-bold text-green-600">{voteStats.yea}</div>
+            <div class="text-xs text-gray-500">Voted Yea</div>
           </div>
           <div class="text-center p-3 bg-red-50 rounded-lg">
-            <div class="text-xl font-bold text-red-600">{voteStats.failed}</div>
-            <div class="text-xs text-gray-500">Failed</div>
+            <div class="text-xl font-bold text-red-600">{voteStats.nay}</div>
+            <div class="text-xs text-gray-500">Voted Nay</div>
+          </div>
+          <div class="text-center p-3 bg-yellow-50 rounded-lg">
+            <div class="text-xl font-bold text-yellow-600">{voteStats.notVoting + voteStats.present}</div>
+            <div class="text-xs text-gray-500">Not Voting / Present</div>
           </div>
         </div>
 
-        {/* Individual votes */}
+        {/* Yea/Nay ratio bar */}
+        {(voteStats.yea + voteStats.nay) > 0 && (
+          <div class="mb-4">
+            <div class="flex rounded-full overflow-hidden h-3">
+              <div class="bg-green-500" style={`width: ${(voteStats.yea / (voteStats.yea + voteStats.nay + voteStats.notVoting + voteStats.present) * 100).toFixed(1)}%`}></div>
+              <div class="bg-red-500" style={`width: ${(voteStats.nay / (voteStats.yea + voteStats.nay + voteStats.notVoting + voteStats.present) * 100).toFixed(1)}%`}></div>
+              <div class="bg-yellow-400" style={`width: ${((voteStats.notVoting + voteStats.present) / (voteStats.yea + voteStats.nay + voteStats.notVoting + voteStats.present) * 100).toFixed(1)}%`}></div>
+            </div>
+            <div class="flex justify-between text-[10px] text-gray-400 mt-1">
+              <span>Yea {((voteStats.yea / voteStats.total) * 100).toFixed(0)}%</span>
+              <span>Nay {((voteStats.nay / voteStats.total) * 100).toFixed(0)}%</span>
+            </div>
+          </div>
+        )}
+
+        {/* Individual votes with this member's position */}
         <div class="space-y-1">
-          {memberVotes.map((v: any) => (
-            <a href={`${base}votes/${v.voteId}/`} class="flex items-start gap-3 py-2.5 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded">
-              <div class="flex flex-col items-center min-w-[3rem]">
-                <span class="font-mono text-xs text-gray-500">#{v.rollCallNumber}</span>
-                <span class="text-[10px] text-gray-400">{v.date}</span>
-              </div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-gray-900 line-clamp-1">{v.question}</p>
-                <div class="flex items-center gap-2 mt-1">
-                  <span class="text-xs text-gray-400">
-                    Yea: {v.totalYea} · Nay: {v.totalNay}
-                  </span>
-                  {v.billId && (
-                    <span class="text-xs text-blue-600 font-mono">{v.billId}</span>
-                  )}
+          {memberVotes.slice(0, 50).map((v: any) => {
+            const castLower = (v.voteCast || '').toLowerCase();
+            const castColor = (castLower === 'yea' || castLower === 'aye')
+              ? 'bg-green-100 text-green-800'
+              : (castLower === 'nay' || castLower === 'no')
+              ? 'bg-red-100 text-red-800'
+              : 'bg-yellow-100 text-yellow-800';
+            return (
+              <a href={`${base}votes/${v.voteId}/`} class="flex items-start gap-3 py-2.5 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded">
+                <div class="flex flex-col items-center min-w-[3rem]">
+                  <span class="font-mono text-xs text-gray-500">#{v.rollCallNumber}</span>
+                  <span class="text-[10px] text-gray-400">{v.date}</span>
                 </div>
-              </div>
-              <span class={`inline-flex items-center rounded-full text-xs px-2 py-0.5 font-medium whitespace-nowrap ${
-                v.result === 'Passed' || v.result === 'Agreed to' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-              }`}>
-                {v.result}
-              </span>
-            </a>
-          ))}
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-gray-900 line-clamp-1">{v.question}</p>
+                  <div class="flex items-center gap-2 mt-1">
+                    {v.billId && (
+                      <span class="text-xs text-blue-600 font-mono">{v.billId}</span>
+                    )}
+                    {v.result && (
+                      <span class={`text-xs ${v.result === 'Passed' || v.result === 'Agreed to' ? 'text-green-600' : 'text-red-600'}`}>
+                        {v.result}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                {/* This member's vote position */}
+                {v.voteCast && (
+                  <span class={`inline-flex items-center rounded-full text-xs px-2.5 py-1 font-semibold whitespace-nowrap ${castColor}`}>
+                    {v.voteCast}
+                  </span>
+                )}
+              </a>
+            );
+          })}
+          {memberVotes.length > 50 && (
+            <p class="text-xs text-gray-400 text-center py-2">Showing 50 of {memberVotes.length} votes</p>
+          )}
         </div>
         <a href={`${base}votes/`} class="text-blue-600 hover:underline text-sm mt-3 inline-block">View all votes &rarr;</a>
       </div>
     )}
 
     {/* Message for Senate members about votes */}
-    {member.chamber === 'Senate' && (
+    {member.chamber === 'Senate' && memberVotes.length === 0 && (
       <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-6 text-sm text-amber-800">
         Senate vote data is not yet available through the Congress.gov API v3. House voting records are available for House members.
       </div>

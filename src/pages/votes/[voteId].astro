@@ -11,7 +11,7 @@ export function getStaticPaths() {
   if (existsSync(votesDir)) {
     const files = readdirSync(votesDir);
     for (const file of files) {
-      if (file === 'index.json') continue;
+      if (file === 'index.json' || file === 'by-member.json') continue;
       if (!file.endsWith('.json')) continue;
       const voteId = file.replace('.json', '');
       paths.push({ params: { voteId } });
@@ -41,6 +41,18 @@ const partyRows = [
   { label: 'Republicans', color: 'text-red-700', data: vote.partyBreakdown.republican },
   { label: 'Independents', color: 'text-purple-700', data: vote.partyBreakdown.independent },
 ];
+
+// Group member votes by position
+const memberVotes = vote.memberVotes || [];
+const yeaVotes = memberVotes.filter(mv => ['yea', 'aye'].includes(mv.voteCast.toLowerCase()));
+const nayVotes = memberVotes.filter(mv => ['nay', 'no'].includes(mv.voteCast.toLowerCase()));
+const otherVotes = memberVotes.filter(mv => !['yea', 'aye', 'nay', 'no'].includes(mv.voteCast.toLowerCase()));
+
+const partyColor = (p: string) => {
+  if (p === 'D' || p === 'Democratic') return 'text-blue-700';
+  if (p === 'R' || p === 'Republican') return 'text-red-700';
+  return 'text-purple-700';
+};
 ---
 
 <Layout title={`Roll Call #${vote.rollCallNumber}`} description={vote.question}>
@@ -140,5 +152,72 @@ const partyRows = [
         </tbody>
       </table>
     </div>
+
+    <!-- Individual Member Votes -->
+    {memberVotes.length > 0 && (
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Individual Votes ({memberVotes.length} members)</h2>
+
+        {/* Yea votes */}
+        {yeaVotes.length > 0 && (
+          <div class="mb-6">
+            <h3 class="text-sm font-semibold text-green-700 mb-2 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+              Yea ({yeaVotes.length})
+            </h3>
+            <div class="flex flex-wrap gap-1.5">
+              {yeaVotes.map(mv => (
+                <a
+                  href={`${base}members/${mv.bioguideId}/`}
+                  class={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-green-50 hover:bg-green-100 transition-colors ${partyColor(mv.party)}`}
+                >
+                  {mv.name} ({mv.party}-{mv.state})
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Nay votes */}
+        {nayVotes.length > 0 && (
+          <div class="mb-6">
+            <h3 class="text-sm font-semibold text-red-700 mb-2 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+              Nay ({nayVotes.length})
+            </h3>
+            <div class="flex flex-wrap gap-1.5">
+              {nayVotes.map(mv => (
+                <a
+                  href={`${base}members/${mv.bioguideId}/`}
+                  class={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-red-50 hover:bg-red-100 transition-colors ${partyColor(mv.party)}`}
+                >
+                  {mv.name} ({mv.party}-{mv.state})
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Not Voting / Present */}
+        {otherVotes.length > 0 && (
+          <div>
+            <h3 class="text-sm font-semibold text-gray-500 mb-2 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-gray-400"></span>
+              Not Voting / Present ({otherVotes.length})
+            </h3>
+            <div class="flex flex-wrap gap-1.5">
+              {otherVotes.map(mv => (
+                <a
+                  href={`${base}members/${mv.bioguideId}/`}
+                  class={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors ${partyColor(mv.party)}`}
+                >
+                  {mv.name} ({mv.party}-{mv.state}) - {mv.voteCast}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    )}
   </div>
 </Layout>

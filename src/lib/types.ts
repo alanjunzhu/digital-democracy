@@ -131,9 +131,18 @@ export interface VoteSummary {
   url: string;
 }
 
+export interface MemberVotePosition {
+  bioguideId: string;
+  name: string;
+  party: string;
+  state: string;
+  voteCast: string;
+}
+
 export interface VoteDetail extends VoteSummary {
   description?: string;
   voteType?: string;
+  memberVotes?: MemberVotePosition[];
 }
 
 export interface VotesIndex {
