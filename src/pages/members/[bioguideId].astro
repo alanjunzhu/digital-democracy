@@ -352,10 +352,10 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
       </div>
     )}
 
-    {/* Message for Senate members about votes */}
-    {member.chamber === 'Senate' && memberVotes.length === 0 && (
-      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-6 text-sm text-amber-800">
-        Senate vote data is not yet available through the Congress.gov API v3. House voting records are available for House members.
+    {/* Message when no votes found */}
+    {memberVotes.length === 0 && (
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-6 text-sm text-gray-600">
+        No voting record data available yet. Run the data fetch workflow to populate vote data.
       </div>
     )}
   </div>

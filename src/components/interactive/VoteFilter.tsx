@@ -9,10 +9,12 @@ interface Props {
 export default function VoteFilter({ votes, baseUrl }: Props) {
   const [search, setSearch] = useState('');
   const [result, setResult] = useState<string>('all');
+  const [chamber, setChamber] = useState<string>('all');
 
   const filtered = useMemo(() => {
     return votes.filter(v => {
       if (result !== 'all' && v.result !== result) return false;
+      if (chamber !== 'all' && v.chamber !== chamber) return false;
       if (search) {
         const q = search.toLowerCase();
         const questionMatch = v.question.toLowerCase().includes(q);
@@ -21,16 +23,23 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
       }
       return true;
     });
-  }, [votes, search, result]);
+  }, [votes, search, result, chamber]);
 
   const results = useMemo(() => {
     return [...new Set(votes.map(v => v.result).filter(Boolean))].sort();
   }, [votes]);
 
+  const houseCount = votes.filter(v => v.chamber === 'House').length;
+  const senateCount = votes.filter(v => v.chamber === 'Senate').length;
+
   const resultColor = (r: string) => {
-    if (r === 'Passed' || r === 'Agreed to') return 'bg-green-100 text-green-800';
-    if (r === 'Failed' || r === 'Rejected') return 'bg-red-100 text-red-800';
+    if (r === 'Passed' || r === 'Agreed to' || r === 'Confirmed') return 'bg-green-100 text-green-800';
+    if (r === 'Failed' || r === 'Rejected' || r === 'Not Sustained') return 'bg-red-100 text-red-800';
     return 'bg-gray-100 text-gray-800';
+  };
+
+  const chamberColor = (c: string) => {
+    return c === 'Senate' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800';
   };
 
   const barWidth = (yea: number, nay: number) => {
@@ -43,7 +52,7 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
     <div>
       {/* Filters */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Search</label>
             <input
@@ -53,6 +62,18 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
               onChange={e => setSearch(e.target.value)}
               className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
             />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Chamber</label>
+            <select
+              value={chamber}
+              onChange={e => setChamber(e.target.value)}
+              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
+            >
+              <option value="all">All Chambers ({votes.length})</option>
+              {houseCount > 0 && <option value="House">House ({houseCount})</option>}
+              {senateCount > 0 && <option value="Senate">Senate ({senateCount})</option>}
+            </select>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Result</label>
@@ -73,17 +94,12 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
         </div>
       </div>
 
-      {/* Info banner */}
-      <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-6 text-sm text-amber-800">
-        House roll call votes only. Senate votes are not yet available in the Congress.gov API.
-      </div>
-
       {/* Results */}
       {filtered.length === 0 ? (
         <div className="text-center py-12 text-gray-500">
           <p className="text-lg">No votes match your filters.</p>
           <button
-            onClick={() => { setSearch(''); setResult('all'); }}
+            onClick={() => { setSearch(''); setResult('all'); setChamber('all'); }}
             className="mt-2 text-blue-600 hover:text-blue-800"
           >
             Clear filters
@@ -99,9 +115,12 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
+                  <div className="flex items-center gap-2 mb-1 flex-wrap">
                     <span className="font-mono text-sm font-semibold text-gray-600">
-                      Roll Call #{v.rollCallNumber}
+                      #{v.rollCallNumber}
+                    </span>
+                    <span className={`inline-flex items-center font-medium rounded-full text-xs px-1.5 py-0.5 ${chamberColor(v.chamber || 'House')}`}>
+                      {v.chamber || 'House'}
                     </span>
                     <span className={`inline-flex items-center font-medium rounded-full text-xs px-1.5 py-0.5 ${resultColor(v.result)}`}>
                       {v.result}

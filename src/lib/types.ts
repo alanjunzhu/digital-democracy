@@ -115,6 +115,7 @@ export interface VoteSummary {
   rollCallNumber: number;
   congress: number;
   session: number;
+  chamber: 'House' | 'Senate';
   date: string;
   question: string;
   result: string;

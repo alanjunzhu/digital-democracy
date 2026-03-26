@@ -1,263 +1,415 @@
 #!/usr/bin/env node
 /**
- * Fetch House roll call votes from Congress.gov API v3.
- * Also fetches per-member vote positions so each member's voting record is available.
+ * Fetch roll call votes from official sources:
+ *   - House: clerk.house.gov XML (no API key needed)
+ *   - Senate: senate.gov XML (no API key needed)
+ *
+ * These provide individual member vote positions (Yea/Nay/Not Voting).
  *
  * Outputs:
  *   data/votes/index.json          - Summary list of recent votes
  *   data/votes/{voteId}.json       - Individual vote details with member positions
- *   data/votes/by-member.json      - Lookup of member bioguideId -> their vote positions
+ *   data/votes/by-member.json      - Lookup: bioguideId -> vote positions
  */
 
-import { fetchJSON, getCongressAPIBaseUrl, sleep } from './lib/api-client.mjs';
 import { writeJSON } from './lib/data-writer.mjs';
+import { sleep } from './lib/api-client.mjs';
 
-const API_KEY = process.env.CONGRESS_API_KEY;
 const CONGRESS_NUMBER = 119;
 const SESSION = 1;
-const MAX_VOTES = 150;
+const YEAR = 2025; // 119th Congress, 1st session starts Jan 2025
+const MAX_HOUSE_VOTES = 200;
+const MAX_SENATE_VOTES = 200;
 
-if (!API_KEY) {
-  console.error('Error: CONGRESS_API_KEY environment variable is required.');
-  process.exit(1);
+// ─── XML Parsing Helpers ───
+
+function extractTag(xml, tag) {
+  const regex = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`, 'i');
+  const match = xml.match(regex);
+  return match ? match[1].trim() : '';
 }
 
-async function fetchVoteList() {
-  console.log(`Fetching House roll call votes (Congress ${CONGRESS_NUMBER}, Session ${SESSION})...`);
+function extractAttr(xml, attr) {
+  const regex = new RegExp(`${attr}="([^"]*)"`, 'i');
+  const match = xml.match(regex);
+  return match ? match[1].trim() : '';
+}
 
-  // Congress.gov API v3 endpoint for House roll call votes
-  const baseUrl = `${getCongressAPIBaseUrl()}/house-roll-call-vote/${CONGRESS_NUMBER}/${SESSION}`;
-  const url = `${baseUrl}?api_key=${API_KEY}&limit=250&format=json`;
+function extractAllTags(xml, tag) {
+  const regex = new RegExp(`<${tag}[^>]*>[\\s\\S]*?</${tag}>`, 'gi');
+  return xml.match(regex) || [];
+}
 
-  await sleep(500);
+function extractSelfClosingOrTag(xml, tag) {
+  // Match both <tag>content</tag> and <tag attr="val" />
+  const regex = new RegExp(`<${tag}[^>]*(?:>([\\s\\S]*?)</${tag}>|/>)`, 'i');
+  const match = xml.match(regex);
+  return match ? (match[1] || '').trim() : '';
+}
+
+// ─── House Votes (clerk.house.gov) ───
+
+async function fetchHouseVoteXML(rollCall) {
+  const paddedRC = String(rollCall).padStart(3, '0');
+  const url = `https://clerk.house.gov/evs/${YEAR}/roll${paddedRC}.xml`;
+  await sleep(300);
   try {
-    const data = await fetchJSON(url);
-    console.log(`  [debug] Response keys:`, Object.keys(data));
-
-    // The response wraps votes in "houseRollCallVotes"
-    const votes = data.houseRollCallVotes || [];
-    if (Array.isArray(votes) && votes.length > 0) {
-      console.log(`  Found ${votes.length} votes`);
-      console.log(`  [debug] Vote[0] keys:`, Object.keys(votes[0]));
-      console.log(`  [debug] Vote[0] sample:`, JSON.stringify(votes[0]).slice(0, 300));
-      return votes.slice(0, MAX_VOTES);
-    }
-
-    // Fallback: try to find array in any top-level key
-    for (const key of Object.keys(data)) {
-      if (Array.isArray(data[key]) && data[key].length > 0) {
-        console.log(`  Found ${data[key].length} votes under key '${key}'`);
-        console.log(`  [debug] Vote[0] keys:`, Object.keys(data[key][0]));
-        return data[key].slice(0, MAX_VOTES);
-      }
-    }
-
-    console.log(`  [debug] Full response (first 1000 chars):`, JSON.stringify(data).slice(0, 1000));
-  } catch (err) {
-    console.warn(`  Vote list fetch failed: ${err.message}`);
+    const response = await fetch(url);
+    if (!response.ok) return null;
+    return await response.text();
+  } catch {
+    return null;
   }
-
-  // Fallback: try alternate endpoint name
-  console.log('  Trying alternate endpoint: house-vote...');
-  const altUrl = `${getCongressAPIBaseUrl()}/house-vote/${CONGRESS_NUMBER}/${SESSION}?api_key=${API_KEY}&limit=250&format=json`;
-  await sleep(500);
-  try {
-    const data = await fetchJSON(altUrl);
-    console.log(`  [debug] Alt response keys:`, Object.keys(data));
-
-    for (const key of Object.keys(data)) {
-      if (Array.isArray(data[key]) && data[key].length > 0) {
-        console.log(`  Found ${data[key].length} votes under key '${key}'`);
-        return data[key].slice(0, MAX_VOTES);
-      }
-    }
-    console.log(`  [debug] Alt full response (first 1000 chars):`, JSON.stringify(data).slice(0, 1000));
-  } catch (err) {
-    console.warn(`  Alt endpoint failed: ${err.message}`);
-  }
-
-  // Fallback: try fetching individual known roll call numbers
-  console.log('  Trying to fetch individual roll call votes directly...');
-  const directVotes = [];
-  for (let rc = 1; rc <= 10; rc++) {
-    const rcUrl = `${getCongressAPIBaseUrl()}/house-roll-call-vote/${CONGRESS_NUMBER}/${SESSION}/${rc}?api_key=${API_KEY}&format=json`;
-    await sleep(400);
-    try {
-      const data = await fetchJSON(rcUrl);
-      const vote = data.houseRollCallVote || data.houseVote || data;
-      if (vote && (vote.rollCallNumber || vote.rollCall)) {
-        directVotes.push(vote);
-        if (rc <= 2) {
-          console.log(`  [debug] Direct vote ${rc} keys:`, Object.keys(vote));
-          console.log(`  [debug] Direct vote ${rc} sample:`, JSON.stringify(vote).slice(0, 400));
-        }
-      }
-    } catch (err) {
-      if (rc <= 2) console.log(`  [debug] Direct vote ${rc} failed: ${err.message}`);
-    }
-  }
-  if (directVotes.length > 0) {
-    console.log(`  Found ${directVotes.length} votes via direct fetch`);
-    return directVotes;
-  }
-
-  console.warn('  No votes found from any method.');
-  return [];
 }
 
-async function fetchVoteDetailWithMembers(rollCallNumber) {
-  // First try the detailed endpoint that includes member positions
-  const endpoints = [
-    `${getCongressAPIBaseUrl()}/house-roll-call-vote/${CONGRESS_NUMBER}/${SESSION}/${rollCallNumber}`,
-    `${getCongressAPIBaseUrl()}/house-vote/${CONGRESS_NUMBER}/${SESSION}/${rollCallNumber}`,
-  ];
+function parseHouseVoteXML(xml) {
+  // Extract vote metadata
+  const rollCall = parseInt(extractTag(xml, 'rollcall-num')) || 0;
+  const question = extractTag(xml, 'vote-question') || '';
+  const result = extractTag(xml, 'vote-result') || '';
+  const voteType = extractTag(xml, 'vote-type') || '';
+  const dateStr = extractTag(xml, 'action-date') || '';
+  const timeStr = extractTag(xml, 'action-time') || '';
+  const legNum = extractTag(xml, 'legis-num') || '';
 
-  for (const baseUrl of endpoints) {
-    const url = `${baseUrl}?api_key=${API_KEY}&format=json`;
-    await sleep(350);
-    try {
-      const data = await fetchJSON(url);
-      const vote = data.houseRollCallVote || data.houseVote || data.vote || data;
-      if (vote && (vote.rollCallNumber || vote.rollCall)) {
-        return vote;
-      }
-    } catch (err) {
-      // try next
+  // Parse date
+  let date = '';
+  if (dateStr) {
+    // Format: "20-Jan-2025" or similar
+    const parsed = new Date(dateStr);
+    if (!isNaN(parsed.getTime())) {
+      date = parsed.toISOString().split('T')[0];
+    } else {
+      date = dateStr;
     }
   }
 
-  return null;
-}
-
-function extractMemberVotes(voteDetail) {
-  // The API returns member votes under "results" or "members" or "voteResults"
-  const possibleFields = ['results', 'members', 'voteResults', 'memberVotes'];
-  let memberVotes = [];
-
-  for (const field of possibleFields) {
-    const data = voteDetail[field];
-    if (Array.isArray(data) && data.length > 0) {
-      memberVotes = data;
-      break;
+  // Parse bill reference from legis-num
+  let billType, billNumber, billId;
+  if (legNum) {
+    const billMatch = legNum.match(/(H\.\s*R\.|H\.?\s*Res\.|H\.\s*J\.\s*Res\.|H\.\s*Con\.\s*Res\.|S\.|S\.\s*Res\.|S\.\s*J\.\s*Res\.|S\.\s*Con\.\s*Res\.)\s*(\d+)/i);
+    if (billMatch) {
+      const rawType = billMatch[1].replace(/\s+/g, '').replace(/\./g, '').toLowerCase();
+      billNumber = parseInt(billMatch[2]);
+      // Normalize type
+      const typeMap = { 'hr': 'hr', 'hres': 'hres', 'hjres': 'hjres', 'hconres': 'hconres', 's': 's', 'sres': 'sres', 'sjres': 'sjres', 'sconres': 'sconres' };
+      billType = typeMap[rawType] || rawType;
+      billId = `${billType}${billNumber}`;
     }
   }
 
-  // Normalize member vote entries
-  return memberVotes.map(mv => ({
-    bioguideId: mv.bioguideId || mv.member?.bioguideId || '',
-    name: [mv.firstName, mv.lastName].filter(Boolean).join(' ') ||
-          mv.memberName || mv.name || '',
-    party: mv.voteParty || mv.party || '',
-    state: mv.voteState || mv.state || '',
-    voteCast: mv.voteCast || mv.vote || mv.position || '',
-  })).filter(mv => mv.bioguideId);
-}
+  // Parse party totals
+  const totalsXML = extractTag(xml, 'vote-totals') || '';
+  const partyTotals = extractAllTags(totalsXML, 'totals-by-party');
 
-function parsePartyTotals(partyTotal) {
-  if (!partyTotal) return { democratic: z(), republican: z(), independent: z() };
+  const partyBreakdown = { democratic: z(), republican: z(), independent: z() };
+  for (const pt of partyTotals) {
+    const party = extractTag(pt, 'party').toLowerCase();
+    const yea = parseInt(extractTag(pt, 'yea-total')) || 0;
+    const nay = parseInt(extractTag(pt, 'nay-total')) || 0;
+    const present = parseInt(extractTag(pt, 'present-total')) || 0;
+    const notVoting = parseInt(extractTag(pt, 'not-voting-total')) || 0;
+    const data = { yea, nay, notVoting: notVoting + present };
 
-  function extract(obj) {
-    if (!obj) return z();
-    return {
-      yea: obj.yeaTotal || obj.yea || 0,
-      nay: obj.nayTotal || obj.nay || 0,
-      notVoting: (obj.notVotingTotal || obj.notVoting || 0) + (obj.presentTotal || obj.present || 0),
-    };
+    if (party === 'democratic' || party === 'democrat') partyBreakdown.democratic = data;
+    else if (party === 'republican') partyBreakdown.republican = data;
+    else if (party === 'independent') partyBreakdown.independent = data;
   }
 
-  function z() { return { yea: 0, nay: 0, notVoting: 0 }; }
+  // Fallback: parse totals-by-vote if party totals are empty
+  if (partyBreakdown.democratic.yea === 0 && partyBreakdown.republican.yea === 0) {
+    const totalsByVote = extractAllTags(totalsXML, 'totals-by-vote');
+    if (totalsByVote.length > 0) {
+      const tv = totalsByVote[0];
+      partyBreakdown.democratic.yea = parseInt(extractTag(tv, 'yea-total')) || 0;
+      partyBreakdown.democratic.nay = parseInt(extractTag(tv, 'nay-total')) || 0;
+    }
+  }
 
-  return {
-    democratic: extract(partyTotal.democratic || partyTotal.Democrat || partyTotal.D),
-    republican: extract(partyTotal.republican || partyTotal.Republican || partyTotal.R),
-    independent: extract(partyTotal.independent || partyTotal.Independent || partyTotal.I),
-  };
-}
-
-function normalizeVote(vote) {
-  const rollCall = vote.rollCallNumber || vote.rollCall || 0;
-  const voteId = `rc${rollCall}`;
-
-  const partyBreakdown = parsePartyTotals(vote.votePartyTotal || vote.partyTotal);
   const totalYea = partyBreakdown.democratic.yea + partyBreakdown.republican.yea + partyBreakdown.independent.yea;
   const totalNay = partyBreakdown.democratic.nay + partyBreakdown.republican.nay + partyBreakdown.independent.nay;
 
-  // Extract bill reference
-  const legType = vote.legislationType || '';
-  const legNum = vote.legislationNumber || '';
-  let billType, billNumber, billId;
-  if (legType && legNum) {
-    billType = legType.toLowerCase().replace(/\./g, '');
-    billNumber = parseInt(legNum);
-    billId = `${billType}${billNumber}`;
+  // Parse individual member votes
+  const memberVotes = [];
+  const recordedVotes = extractAllTags(xml, 'recorded-vote');
+  for (const rv of recordedVotes) {
+    const legislator = rv.match(/<legislator[^>]*>([\s\S]*?)<\/legislator>/i);
+    if (!legislator) continue;
+
+    const fullTag = legislator[0];
+    const name = legislator[1].trim();
+    const bioguideId = extractAttr(fullTag, 'name-id') || extractAttr(fullTag, 'bioguide-id') || '';
+    const party = extractAttr(fullTag, 'party') || '';
+    const state = extractAttr(fullTag, 'state') || '';
+    const voteCast = extractTag(rv, 'vote') || '';
+
+    if (bioguideId) {
+      memberVotes.push({
+        bioguideId,
+        name,
+        party,
+        state,
+        voteCast,
+      });
+    }
   }
 
-  // Extract member votes
-  const memberPositions = extractMemberVotes(vote);
-
-  const summary = {
-    voteId,
+  return {
+    voteId: `h-rc${rollCall}`,
     rollCallNumber: rollCall,
     congress: CONGRESS_NUMBER,
     session: SESSION,
-    date: vote.date || vote.startDate || vote.actionDate || '',
-    question: vote.voteQuestion || vote.question || '',
-    result: vote.result || '',
-    billType: billType || undefined,
-    billNumber: billNumber || undefined,
-    billId: billId || undefined,
+    chamber: 'House',
+    date,
+    question,
+    result,
+    voteType,
+    billType,
+    billNumber,
+    billId,
     partyBreakdown,
     totalYea,
     totalNay,
-    url: `https://clerk.house.gov/Votes/${new Date().getFullYear()}${String(rollCall).padStart(3, '0')}`,
+    memberVotes,
+    url: `https://clerk.house.gov/Votes/${YEAR}${String(rollCall).padStart(3, '0')}`,
   };
-
-  const detail = {
-    ...summary,
-    description: vote.description || vote.voteQuestion || '',
-    voteType: vote.voteType || '',
-    memberVotes: memberPositions,
-  };
-
-  return { summary, detail };
 }
 
-async function main() {
-  console.log('=== Fetching House Roll Call Votes ===\n');
+function z() { return { yea: 0, nay: 0, notVoting: 0 }; }
 
-  const rawVotes = await fetchVoteList();
+// ─── Senate Votes (senate.gov) ───
 
-  if (rawVotes.length === 0) {
-    console.log('\nNo votes found from list endpoint. Attempting to fetch by iterating roll call numbers...');
+async function fetchSenateVoteXML(voteNumber) {
+  const congress = String(CONGRESS_NUMBER);
+  const session = String(SESSION);
+  const paddedVote = String(voteNumber).padStart(5, '0');
+  const url = `https://www.senate.gov/legislative/LIS/roll_call_votes/vote${congress}${session}/vote_${congress}_${session}_${paddedVote}.xml`;
+  await sleep(300);
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return null;
+    return await response.text();
+  } catch {
+    return null;
+  }
+}
+
+function parseSenateVoteXML(xml) {
+  const voteNumber = parseInt(extractTag(xml, 'vote_number')) || 0;
+  const question = extractTag(xml, 'vote_question_text') || extractTag(xml, 'question') || '';
+  const result = extractTag(xml, 'vote_result_text') || extractTag(xml, 'vote_result') || '';
+  const voteDate = extractTag(xml, 'vote_date') || '';
+  const title = extractTag(xml, 'vote_title') || '';
+  const docTitle = extractTag(xml, 'document_title') || '';
+
+  // Parse date
+  let date = '';
+  if (voteDate) {
+    const parsed = new Date(voteDate);
+    if (!isNaN(parsed.getTime())) {
+      date = parsed.toISOString().split('T')[0];
+    } else {
+      date = voteDate;
+    }
   }
 
-  // If we got votes from the list, we need to fetch each one's detail for member positions
-  let votes = rawVotes;
-  const needsDetailFetch = votes.length > 0 && !votes[0].results && !votes[0].members;
+  // Try to extract bill reference from document
+  const docName = extractTag(xml, 'document_name') || '';
+  let billType, billNumber, billId;
+  if (docName) {
+    const billMatch = docName.match(/(H\.\s*R\.|S\.|H\.J\.Res\.|S\.J\.Res\.|H\.Con\.Res\.|S\.Con\.Res\.)\s*(\d+)/i);
+    if (billMatch) {
+      const rawType = billMatch[1].replace(/\s+/g, '').replace(/\./g, '').toLowerCase();
+      billNumber = parseInt(billMatch[2]);
+      const typeMap = { 'hr': 'hr', 's': 's', 'hjres': 'hjres', 'sjres': 'sjres', 'hconres': 'hconres', 'sconres': 'sconres' };
+      billType = typeMap[rawType] || rawType;
+      billId = `${billType}${billNumber}`;
+    }
+  }
 
-  if (votes.length === 0) {
-    // Try brute-force fetching roll calls 1 through MAX_VOTES
-    console.log(`Fetching roll calls 1-${MAX_VOTES} individually...`);
-    let consecutiveFails = 0;
-    for (let rc = 1; rc <= MAX_VOTES + 50; rc++) {
-      const detail = await fetchVoteDetailWithMembers(rc);
-      if (detail) {
-        votes.push(detail);
-        consecutiveFails = 0;
-        if (rc % 25 === 0) console.log(`  Fetched ${votes.length} votes so far (at RC ${rc})...`);
-      } else {
-        consecutiveFails++;
-        if (consecutiveFails >= 10) {
-          console.log(`  Stopping after ${consecutiveFails} consecutive missing roll calls at RC ${rc}`);
-          break;
-        }
+  // Parse counts
+  const countXml = extractTag(xml, 'count') || xml;
+  const yeas = parseInt(extractTag(countXml, 'yeas')) || 0;
+  const nays = parseInt(extractTag(countXml, 'nays')) || 0;
+
+  // Parse individual member votes
+  const memberVotes = [];
+  const members = extractAllTags(xml, 'member');
+  const partyCount = { D: { yea: 0, nay: 0, nv: 0 }, R: { yea: 0, nay: 0, nv: 0 }, I: { yea: 0, nay: 0, nv: 0 } };
+
+  for (const m of members) {
+    const firstName = extractTag(m, 'first_name') || '';
+    const lastName = extractTag(m, 'last_name') || '';
+    const party = extractTag(m, 'party') || '';
+    const state = extractTag(m, 'state') || '';
+    const voteCast = extractTag(m, 'vote_cast') || '';
+    const lisId = extractTag(m, 'lis_member_id') || '';
+    const bioguideId = extractTag(m, 'member_full') ? '' : ''; // Senate XML doesn't always have bioguide
+
+    const name = `${firstName} ${lastName}`.trim();
+    const castLower = voteCast.toLowerCase();
+    const partyKey = party === 'D' ? 'D' : party === 'R' ? 'R' : 'I';
+
+    if (castLower === 'yea' || castLower === 'aye') partyCount[partyKey].yea++;
+    else if (castLower === 'nay' || castLower === 'no') partyCount[partyKey].nay++;
+    else partyCount[partyKey].nv++;
+
+    memberVotes.push({
+      bioguideId: lisId || '', // Will try to cross-reference later
+      name,
+      party,
+      state,
+      voteCast,
+    });
+  }
+
+  const partyBreakdown = {
+    democratic: { yea: partyCount.D.yea, nay: partyCount.D.nay, notVoting: partyCount.D.nv },
+    republican: { yea: partyCount.R.yea, nay: partyCount.R.nay, notVoting: partyCount.R.nv },
+    independent: { yea: partyCount.I.yea, nay: partyCount.I.nay, notVoting: partyCount.I.nv },
+  };
+
+  return {
+    voteId: `s-rc${voteNumber}`,
+    rollCallNumber: voteNumber,
+    congress: CONGRESS_NUMBER,
+    session: SESSION,
+    chamber: 'Senate',
+    date,
+    question: title || question,
+    result,
+    voteType: '',
+    billType,
+    billNumber,
+    billId,
+    partyBreakdown,
+    totalYea: yeas || (partyCount.D.yea + partyCount.R.yea + partyCount.I.yea),
+    totalNay: nays || (partyCount.D.nay + partyCount.R.nay + partyCount.I.nay),
+    memberVotes,
+    url: `https://www.senate.gov/legislative/LIS/roll_call_votes/vote${CONGRESS_NUMBER}${SESSION}/vote_${CONGRESS_NUMBER}_${SESSION}_${String(voteNumber).padStart(5, '0')}.htm`,
+  };
+}
+
+// ─── Cross-reference Senate members with bioguide IDs ───
+
+function crossRefSenateMembers(votes, membersIndex) {
+  // Build a lookup by last name + state
+  const lookup = {};
+  for (const m of membersIndex) {
+    const key = `${m.lastName?.toLowerCase()}_${m.state?.toLowerCase()}`;
+    lookup[key] = m.bioguideId;
+    // Also try with full state name
+    const key2 = `${m.lastName?.toLowerCase()}_${m.state}`;
+    lookup[key2] = m.bioguideId;
+  }
+
+  for (const vote of votes) {
+    for (const mv of vote.memberVotes) {
+      if (mv.bioguideId) continue; // Already has one
+      const lastName = mv.name.split(' ').pop()?.toLowerCase() || '';
+      const state = mv.state?.toLowerCase() || '';
+      const key = `${lastName}_${state}`;
+      if (lookup[key]) {
+        mv.bioguideId = lookup[key];
       }
     }
-    console.log(`  Total votes fetched: ${votes.length}`);
+  }
+}
+
+// ─── Main ───
+
+async function main() {
+  console.log('=== Fetching Roll Call Votes ===\n');
+
+  // Try to load members index for cross-referencing Senate bioguide IDs
+  let membersIndex = [];
+  try {
+    const { readFileSync } = await import('fs');
+    const { join } = await import('path');
+    const data = JSON.parse(readFileSync(join(process.cwd(), 'data', 'members', 'index.json'), 'utf-8'));
+    membersIndex = data.members || [];
+    console.log(`Loaded ${membersIndex.length} members for cross-reference`);
+  } catch {
+    console.log('No members index found for cross-reference');
   }
 
-  if (votes.length === 0) {
-    console.log('No votes found. Writing empty index.');
+  // ── Fetch House Votes ──
+  console.log(`\n--- House Votes (clerk.house.gov, year ${YEAR}) ---`);
+  const houseVotes = [];
+  let consecutiveFails = 0;
+
+  for (let rc = 1; rc <= MAX_HOUSE_VOTES + 50; rc++) {
+    const xml = await fetchHouseVoteXML(rc);
+    if (xml) {
+      try {
+        const vote = parseHouseVoteXML(xml);
+        if (vote.rollCallNumber > 0) {
+          houseVotes.push(vote);
+          consecutiveFails = 0;
+          if (rc <= 2) {
+            console.log(`  [debug] House RC ${rc}: "${vote.question}" -> ${vote.result}`);
+            console.log(`  [debug]   Members: ${vote.memberVotes.length}, Yea: ${vote.totalYea}, Nay: ${vote.totalNay}`);
+          }
+        }
+      } catch (err) {
+        console.warn(`  Error parsing House RC ${rc}: ${err.message}`);
+      }
+    } else {
+      consecutiveFails++;
+      if (consecutiveFails >= 10) {
+        console.log(`  Stopping House after ${rc} roll calls (${consecutiveFails} consecutive misses)`);
+        break;
+      }
+    }
+    if (rc % 25 === 0) console.log(`  Checked ${rc} roll calls, found ${houseVotes.length} votes...`);
+  }
+  console.log(`  Total House votes: ${houseVotes.length}`);
+
+  // ── Fetch Senate Votes ──
+  console.log(`\n--- Senate Votes (senate.gov) ---`);
+  const senateVotes = [];
+  consecutiveFails = 0;
+
+  for (let vn = 1; vn <= MAX_SENATE_VOTES + 50; vn++) {
+    const xml = await fetchSenateVoteXML(vn);
+    if (xml) {
+      try {
+        const vote = parseSenateVoteXML(xml);
+        if (vote.rollCallNumber > 0) {
+          senateVotes.push(vote);
+          consecutiveFails = 0;
+          if (vn <= 2) {
+            console.log(`  [debug] Senate vote ${vn}: "${vote.question}" -> ${vote.result}`);
+            console.log(`  [debug]   Members: ${vote.memberVotes.length}, Yea: ${vote.totalYea}, Nay: ${vote.totalNay}`);
+          }
+        }
+      } catch (err) {
+        console.warn(`  Error parsing Senate vote ${vn}: ${err.message}`);
+      }
+    } else {
+      consecutiveFails++;
+      if (consecutiveFails >= 10) {
+        console.log(`  Stopping Senate after ${vn} votes (${consecutiveFails} consecutive misses)`);
+        break;
+      }
+    }
+    if (vn % 25 === 0) console.log(`  Checked ${vn} votes, found ${senateVotes.length} votes...`);
+  }
+  console.log(`  Total Senate votes: ${senateVotes.length}`);
+
+  // Cross-reference Senate members with bioguide IDs
+  if (senateVotes.length > 0 && membersIndex.length > 0) {
+    crossRefSenateMembers(senateVotes, membersIndex);
+    const sampleVote = senateVotes[0];
+    const withBioguide = sampleVote.memberVotes.filter(mv => mv.bioguideId).length;
+    console.log(`  Cross-referenced: ${withBioguide}/${sampleVote.memberVotes.length} members have bioguide IDs`);
+  }
+
+  // ── Combine and Write ──
+  const allVotes = [...houseVotes, ...senateVotes];
+
+  if (allVotes.length === 0) {
+    console.log('\nNo votes found. Writing empty index.');
     writeJSON('votes/index.json', {
       lastUpdated: new Date().toISOString(),
       congress: CONGRESS_NUMBER,
@@ -267,61 +419,50 @@ async function main() {
     return;
   }
 
-  // Fetch details with member positions if needed
-  const summaries = [];
-  const byMember = {}; // bioguideId -> [{voteId, rollCall, voteCast, question, date, billId}]
-  let processed = 0;
-
-  for (const vote of votes) {
-    let fullVote = vote;
-
-    if (needsDetailFetch) {
-      const rc = vote.rollCallNumber || vote.rollCall;
-      if (!rc) continue;
-      const detail = await fetchVoteDetailWithMembers(rc);
-      if (detail) fullVote = detail;
-    }
-
-    const { summary, detail } = normalizeVote(fullVote);
-    summaries.push(summary);
-    writeJSON(`votes/${summary.voteId}.json`, detail);
-
-    // Index member votes
-    if (detail.memberVotes) {
-      for (const mv of detail.memberVotes) {
-        if (!mv.bioguideId) continue;
-        if (!byMember[mv.bioguideId]) byMember[mv.bioguideId] = [];
-        byMember[mv.bioguideId].push({
-          voteId: summary.voteId,
-          rollCallNumber: summary.rollCallNumber,
-          date: summary.date,
-          question: summary.question,
-          result: summary.result,
-          billId: summary.billId || null,
-          voteCast: mv.voteCast,
-        });
-      }
-    }
-
-    processed++;
-    if (processed % 25 === 0) {
-      console.log(`  Processed ${processed}/${votes.length} votes`);
-    }
-  }
-
-  // Sort by date descending, then roll call descending
-  summaries.sort((a, b) => {
+  // Sort by date descending
+  allVotes.sort((a, b) => {
     if (a.date !== b.date) return b.date.localeCompare(a.date);
     return b.rollCallNumber - a.rollCallNumber;
   });
 
-  const index = {
+  const summaries = [];
+  const byMember = {};
+
+  for (const vote of allVotes) {
+    // Summary (without member positions)
+    const { memberVotes, ...summary } = vote;
+    summaries.push(summary);
+
+    // Write detail file with member positions
+    writeJSON(`votes/${vote.voteId}.json`, vote);
+
+    // Index by member
+    for (const mv of memberVotes) {
+      const id = mv.bioguideId;
+      if (!id) continue;
+      if (!byMember[id]) byMember[id] = [];
+      byMember[id].push({
+        voteId: vote.voteId,
+        rollCallNumber: vote.rollCallNumber,
+        chamber: vote.chamber,
+        date: vote.date,
+        question: vote.question,
+        result: vote.result,
+        billId: vote.billId || null,
+        voteCast: mv.voteCast,
+      });
+    }
+  }
+
+  // Write index
+  writeJSON('votes/index.json', {
     lastUpdated: new Date().toISOString(),
     congress: CONGRESS_NUMBER,
     total: summaries.length,
+    houseTotal: houseVotes.length,
+    senateTotal: senateVotes.length,
     votes: summaries,
-  };
-  writeJSON('votes/index.json', index);
+  });
 
   // Write by-member index
   const memberCount = Object.keys(byMember).length;
@@ -332,12 +473,15 @@ async function main() {
     members: byMember,
   });
 
-  console.log(`\nDone! Wrote ${summaries.length} vote files + index.`);
-  console.log(`  Member voting records: ${memberCount} members`);
+  console.log(`\n=== Done! ===`);
+  console.log(`  House votes: ${houseVotes.length}`);
+  console.log(`  Senate votes: ${senateVotes.length}`);
+  console.log(`  Total vote files: ${allVotes.length}`);
+  console.log(`  Members with vote records: ${memberCount}`);
+
   if (memberCount > 0) {
     const sampleId = Object.keys(byMember)[0];
     console.log(`  Sample member ${sampleId}: ${byMember[sampleId].length} votes`);
-    console.log(`  Sample vote:`, JSON.stringify(byMember[sampleId][0]).slice(0, 200));
   }
 }
 
