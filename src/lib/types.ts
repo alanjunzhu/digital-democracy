@@ -129,6 +129,7 @@ export interface VoteSummary {
   };
   totalYea: number;
   totalNay: number;
+  topic?: string;
   url: string;
 }
 
