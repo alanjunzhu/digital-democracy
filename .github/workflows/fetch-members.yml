@@ -43,6 +43,11 @@ jobs:
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
 
+      - name: Fetch financial data
+        run: node scripts/fetch-finances.mjs
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+
       - name: Commit data changes
         run: |
           git config user.name "github-actions[bot]"

@@ -77,6 +77,23 @@ try {
   }
 } catch {}
 
+// Cross-link: financial data (stock trades)
+let stockTrades: any[] = [];
+try {
+  const financePath = join(process.cwd(), 'data', 'finances', 'by-member.json');
+  if (existsSync(financePath)) {
+    const financeData = JSON.parse(readFileSync(financePath, 'utf-8'));
+    const memberFinance = financeData.members?.[bioguideId];
+    if (memberFinance) {
+      stockTrades = memberFinance.trades || [];
+      // Sort by date descending
+      stockTrades.sort((a: any, b: any) =>
+        (b.transactionDate || '').localeCompare(a.transactionDate || '')
+      );
+    }
+  }
+} catch {}
+
 // Group votes by topic for categorized display
 let votesByTopic: Record<string, any[]> = {};
 const topicOrder: string[] = [];
@@ -444,6 +461,103 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
     {memberVotes.length === 0 && (
       <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-6 text-sm text-gray-600">
         No voting record data available yet. Run the data fetch workflow to populate vote data.
+      </div>
+    )}
+
+    <!-- Stock Trading Activity -->
+    {stockTrades.length > 0 && (
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">
+          Stock Trading Activity
+          <span class="text-sm font-normal text-gray-500 ml-2">({stockTrades.length} transactions)</span>
+        </h2>
+
+        {/* Trade summary */}
+        {(() => {
+          const purchases = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('purchase')).length;
+          const sales = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('sale')).length;
+          const tickers = [...new Set(stockTrades.map((t: any) => t.ticker).filter(Boolean))];
+          return (
+            <div class="grid grid-cols-3 gap-4 mb-4">
+              <div class="text-center p-3 bg-green-50 rounded-lg">
+                <div class="text-xl font-bold text-green-600">{purchases}</div>
+                <div class="text-xs text-gray-500">Purchases</div>
+              </div>
+              <div class="text-center p-3 bg-red-50 rounded-lg">
+                <div class="text-xl font-bold text-red-600">{sales}</div>
+                <div class="text-xs text-gray-500">Sales</div>
+              </div>
+              <div class="text-center p-3 bg-blue-50 rounded-lg">
+                <div class="text-xl font-bold text-blue-600">{tickers.length}</div>
+                <div class="text-xs text-gray-500">Unique Stocks</div>
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* Top tickers */}
+        {(() => {
+          const tickerCount = {} as any;
+          for (const t of stockTrades) {
+            if (t.ticker) tickerCount[t.ticker] = (tickerCount[t.ticker] || 0) + 1;
+          }
+          const topTickers = Object.entries(tickerCount)
+            .sort(([, a], [, b]) => (b as number) - (a as number))
+            .slice(0, 10);
+          return topTickers.length > 0 && (
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              {topTickers.map(([ticker, count]) => (
+                <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700 font-mono">
+                  {ticker} <span class="text-blue-400">({count})</span>
+                </span>
+              ))}
+            </div>
+          );
+        })()}
+
+        {/* Trade list */}
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs">
+            <thead>
+              <tr class="border-b border-gray-200 text-gray-500">
+                <th class="text-left py-2 font-medium">Date</th>
+                <th class="text-left py-2 font-medium">Ticker</th>
+                <th class="text-left py-2 font-medium">Asset</th>
+                <th class="text-left py-2 font-medium">Type</th>
+                <th class="text-right py-2 font-medium">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              {stockTrades.slice(0, 25).map((t: any) => {
+                const typeColor = (t.type || '').toLowerCase().includes('purchase')
+                  ? 'text-green-700 bg-green-50'
+                  : (t.type || '').toLowerCase().includes('sale')
+                  ? 'text-red-700 bg-red-50'
+                  : 'text-gray-700 bg-gray-50';
+                return (
+                  <tr class="border-b border-gray-50 hover:bg-gray-50">
+                    <td class="py-1.5 text-gray-500 whitespace-nowrap">{t.transactionDate}</td>
+                    <td class="py-1.5 font-mono font-semibold text-blue-700">{t.ticker || '—'}</td>
+                    <td class="py-1.5 text-gray-700 max-w-[200px] truncate">{t.assetDescription}</td>
+                    <td class="py-1.5">
+                      <span class={`inline-flex rounded text-[10px] px-1.5 py-0.5 font-medium ${typeColor}`}>
+                        {t.type}
+                      </span>
+                    </td>
+                    <td class="py-1.5 text-right text-gray-600 whitespace-nowrap">{t.amount}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          {stockTrades.length > 25 && (
+            <p class="text-xs text-gray-400 mt-2">Showing 25 of {stockTrades.length} transactions</p>
+          )}
+        </div>
+
+        <p class="text-[10px] text-gray-400 mt-3">
+          Source: House/Senate Stock Watcher. Data from financial disclosure reports filed with Congress.
+        </p>
       </div>
     )}
   </div>
