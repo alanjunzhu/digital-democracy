@@ -1,8 +1,7 @@
 /**
- * Shared API client with rate limiting, pagination, and retry logic.
+ * Shared API client with rate limiting, pagination, retry, and batch concurrency.
  */
 
-const DEFAULT_DELAY_MS = 500;
 const MAX_RETRIES = 3;
 
 export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
@@ -51,7 +50,6 @@ export async function* paginateCongressAPI(baseUrl, apiKey, { limit = 250, maxPa
     const separator = baseUrl.includes('?') ? '&' : '?';
     const url = `${baseUrl}${separator}api_key=${apiKey}&limit=${limit}&offset=${offset}&format=json`;
 
-    await sleep(DEFAULT_DELAY_MS);
     const data = await fetchJSON(url);
     yield data;
 
@@ -63,6 +61,79 @@ export async function* paginateCongressAPI(baseUrl, apiKey, { limit = 250, maxPa
     offset += limit;
     page++;
   }
+}
+
+/**
+ * Process items in concurrent batches with rate limiting.
+ * Much faster than sequential processing while respecting API limits.
+ *
+ * @param {Array} items - Items to process
+ * @param {Function} processFn - async (item, index) => result
+ * @param {Object} options
+ * @param {number} options.concurrency - Max concurrent requests (default: 10)
+ * @param {number} options.delayMs - Delay between batch starts (default: 100)
+ * @param {string} options.label - Label for progress logging
+ */
+export async function batchProcess(items, processFn, { concurrency = 10, delayMs = 100, label = 'items' } = {}) {
+  const results = new Array(items.length);
+  let completed = 0;
+  let nextIndex = 0;
+  const startTime = Date.now();
+
+  async function worker() {
+    while (nextIndex < items.length) {
+      const idx = nextIndex++;
+      if (delayMs > 0 && idx > 0) {
+        await sleep(delayMs);
+      }
+      try {
+        results[idx] = await processFn(items[idx], idx);
+      } catch (err) {
+        results[idx] = null;
+      }
+      completed++;
+      if (completed % 50 === 0 || completed === items.length) {
+        const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+        console.log(`  ${label}: ${completed}/${items.length} (${elapsed}s)`);
+      }
+    }
+  }
+
+  // Launch concurrent workers
+  const workers = Array.from({ length: Math.min(concurrency, items.length) }, () => worker());
+  await Promise.all(workers);
+
+  return results;
+}
+
+/**
+ * Fetch multiple URLs concurrently, returning results in order.
+ * Null for failed/404 requests.
+ */
+export async function batchFetchJSON(urls, { concurrency = 10, delayMs = 100, label = 'requests' } = {}) {
+  return batchProcess(urls, async (url) => {
+    try {
+      return await fetchJSON(url);
+    } catch {
+      return null;
+    }
+  }, { concurrency, delayMs, label });
+}
+
+/**
+ * Fetch multiple URLs as text concurrently, returning results in order.
+ * Null for failed/404 requests.
+ */
+export async function batchFetchText(urls, { concurrency = 15, delayMs = 50, label = 'requests' } = {}) {
+  return batchProcess(urls, async (url) => {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) return null;
+      return await response.text();
+    } catch {
+      return null;
+    }
+  }, { concurrency, delayMs, label });
 }
 
 export function sleep(ms) {

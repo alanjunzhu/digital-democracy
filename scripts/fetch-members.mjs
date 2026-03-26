@@ -9,7 +9,7 @@
  *   data/members/{bioguideId}.json - Individual member details
  */
 
-import { fetchJSON, paginateCongressAPI, getCongressAPIBaseUrl, sleep } from './lib/api-client.mjs';
+import { fetchJSON, paginateCongressAPI, getCongressAPIBaseUrl, batchProcess } from './lib/api-client.mjs';
 import { writeJSON, readJSON } from './lib/data-writer.mjs';
 
 const API_KEY = process.env.CONGRESS_API_KEY;
@@ -27,7 +27,6 @@ async function fetchLegislatorsYaml() {
   try {
     const data = await fetchJSON(url);
     console.log(`  Got ${data.length} legislators from unitedstates project`);
-    // Index by bioguide ID
     const index = {};
     for (const leg of data) {
       index[leg.id.bioguide] = leg;
@@ -49,10 +48,7 @@ async function fetchSocialMedia() {
       const social = entry.social || entry;
       index[entry.id.bioguide] = social;
     }
-    // Debug: show a sample
-    const sampleKey = Object.keys(index)[0];
     console.log(`  Got social data for ${Object.keys(index).length} members`);
-    console.log(`  Sample (${sampleKey}):`, JSON.stringify(index[sampleKey])?.slice(0, 200));
     return index;
   } catch (err) {
     console.warn(`  Warning: Could not fetch social media data: ${err.message}`);
@@ -75,18 +71,6 @@ async function fetchCongressMembers() {
   return allMembers;
 }
 
-async function fetchMemberDetail(bioguideId) {
-  const url = `${getCongressAPIBaseUrl()}/member/${bioguideId}?api_key=${API_KEY}&format=json`;
-  await sleep(300);
-  try {
-    const data = await fetchJSON(url);
-    return data.member || null;
-  } catch (err) {
-    console.warn(`  Warning: Could not fetch detail for ${bioguideId}: ${err.message}`);
-    return null;
-  }
-}
-
 function normalizeMember(congressMember, detail, legData, socialData) {
   const bioguideId = congressMember.bioguideId;
   const currentTerm = detail?.terms?.slice(-1)[0] || {};
@@ -98,12 +82,9 @@ function normalizeMember(congressMember, detail, legData, socialData) {
   );
 
   const party = congressMember.partyName || 'Unknown';
-
-  // Get state and district
   const state = congressMember.state || legData?.terms?.slice(-1)?.[0]?.state || '';
   const district = legData?.terms?.slice(-1)?.[0]?.district;
 
-  // Build member summary
   const summary = {
     bioguideId,
     name: congressMember.name || `${congressMember.firstName} ${congressMember.lastName}`,
@@ -119,7 +100,6 @@ function normalizeMember(congressMember, detail, legData, socialData) {
     phone: legData?.terms?.slice(-1)?.[0]?.phone || detail?.addressInformation?.phoneNumber || '',
   };
 
-  // Build detailed info
   const memberDetail = {
     ...summary,
     birthDate: legData?.bio?.birthday || detail?.birthYear?.toString() || '',
@@ -138,7 +118,7 @@ function normalizeMember(congressMember, detail, legData, socialData) {
       youtube: socialData.youtube || socialData.youtube_id || undefined,
     } : undefined,
     officeAddress: legData?.terms?.slice(-1)?.[0]?.address || detail?.addressInformation?.officeAddress || '',
-    sponsoredBills: detail?.sponsoredLegislation?.count ? [] : [],
+    sponsoredBills: [],
   };
 
   return { summary, detail: memberDetail };
@@ -146,6 +126,7 @@ function normalizeMember(congressMember, detail, legData, socialData) {
 
 async function main() {
   console.log('=== Fetching Congress Members ===\n');
+  const startTime = Date.now();
 
   // Fetch all data sources in parallel
   const [congressMembers, legIndex, socialIndex] = await Promise.all([
@@ -154,31 +135,38 @@ async function main() {
     fetchSocialMedia(),
   ]);
 
-  console.log('\nFetching individual member details...');
-  const summaries = [];
-  let processed = 0;
+  console.log('\nFetching individual member details (batched, 10 concurrent)...');
 
-  for (const cm of congressMembers) {
+  // Batch fetch all member details — 10 concurrent requests
+  // Congress.gov rate limit is 5,000/hr ≈ 83/min. 10 concurrent with 100ms delay is safe.
+  const details = await batchProcess(
+    congressMembers,
+    async (cm) => {
+      const url = `${getCongressAPIBaseUrl()}/member/${cm.bioguideId}?api_key=${API_KEY}&format=json`;
+      try {
+        const data = await fetchJSON(url);
+        return data.member || null;
+      } catch {
+        return null;
+      }
+    },
+    { concurrency: 10, delayMs: 100, label: 'member details' }
+  );
+
+  // Normalize all members
+  const summaries = [];
+  for (let i = 0; i < congressMembers.length; i++) {
+    const cm = congressMembers[i];
     const bioguideId = cm.bioguideId;
     if (!bioguideId) continue;
 
-    // Fetch detail from Congress.gov
-    const detail = await fetchMemberDetail(bioguideId);
-
-    // Merge with unitedstates data
+    const detail = details[i];
     const legData = legIndex[bioguideId] || null;
     const socialData = socialIndex[bioguideId] || null;
 
     const { summary, detail: memberDetail } = normalizeMember(cm, detail, legData, socialData);
     summaries.push(summary);
-
-    // Write individual member file
     writeJSON(`members/${bioguideId}.json`, memberDetail);
-
-    processed++;
-    if (processed % 50 === 0) {
-      console.log(`  Processed ${processed}/${congressMembers.length} members`);
-    }
   }
 
   // Sort summaries: Senate first, then House; within each by state then name
@@ -188,7 +176,6 @@ async function main() {
     return a.lastName.localeCompare(b.lastName);
   });
 
-  // Write index
   const index = {
     lastUpdated: new Date().toISOString(),
     congress: CONGRESS_NUMBER,
@@ -197,12 +184,12 @@ async function main() {
   };
   writeJSON('members/index.json', index);
 
-  // Write meta
   writeJSON('meta/last-updated.json', {
     members: new Date().toISOString(),
   });
 
-  console.log(`\nDone! Wrote ${summaries.length} member files + index.`);
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+  console.log(`\nDone! Wrote ${summaries.length} member files + index in ${elapsed}s.`);
 }
 
 main().catch(err => {
