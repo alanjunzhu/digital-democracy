@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 /**
  * Fetch all committees from Congress.gov API.
- * Only ~3 API calls needed (one per chamber type).
+ * Fetches all 3 chamber types in parallel.
  *
  * Outputs:
  *   data/committees/index.json          - Summary list of all committees
  *   data/committees/{systemCode}.json   - Individual committee details
  */
 
-import { fetchJSON, getCongressAPIBaseUrl, sleep } from './lib/api-client.mjs';
+import { fetchJSON, getCongressAPIBaseUrl } from './lib/api-client.mjs';
 import { writeJSON } from './lib/data-writer.mjs';
 
 const API_KEY = process.env.CONGRESS_API_KEY;
@@ -22,15 +22,14 @@ if (!API_KEY) {
 async function fetchCommitteesByChamber(chamber) {
   console.log(`Fetching ${chamber} committees...`);
   const url = `${getCongressAPIBaseUrl()}/committee/${CONGRESS_NUMBER}/${chamber}?api_key=${API_KEY}&limit=250&format=json`;
-  await sleep(500);
   try {
     const data = await fetchJSON(url);
     const committees = data.committees || [];
     console.log(`  Got ${committees.length} ${chamber} committees`);
-    return committees;
+    return { chamber, committees };
   } catch (err) {
     console.warn(`  Warning: Could not fetch ${chamber} committees: ${err.message}`);
-    return [];
+    return { chamber, committees: [] };
   }
 }
 
@@ -50,27 +49,23 @@ function normalizeCommittee(committee, chamber) {
     subcommittees: subcommittees.length > 0 ? subcommittees : undefined,
   };
 
-  const detail = {
-    ...summary,
-  };
-
-  return { summary, detail };
+  return { summary, detail: { ...summary } };
 }
 
 async function main() {
   console.log('=== Fetching Congress Committees ===\n');
+  const startTime = Date.now();
 
-  // Only 3 API calls total!
-  const chambers = ['house', 'senate', 'joint'];
+  // Fetch all 3 chamber types in parallel
   const chamberLabels = { house: 'House', senate: 'Senate', joint: 'Joint' };
-  const allSummaries = [];
+  const results = await Promise.all(
+    ['house', 'senate', 'joint'].map(c => fetchCommitteesByChamber(c))
+  );
 
-  for (const chamber of chambers) {
-    const committees = await fetchCommitteesByChamber(chamber);
+  const allSummaries = [];
+  for (const { chamber, committees } of results) {
     for (const c of committees) {
       const { summary, detail } = normalizeCommittee(c, chamberLabels[chamber]);
-
-      // Only write full committees (systemCode ends in "00"), skip subcommittees
       if (summary.systemCode) {
         allSummaries.push(summary);
         writeJSON(`committees/${summary.systemCode}.json`, detail);
@@ -78,7 +73,6 @@ async function main() {
     }
   }
 
-  // Sort by chamber then name
   allSummaries.sort((a, b) => {
     const chamberOrder = { Senate: 0, House: 1, Joint: 2 };
     if (a.chamber !== b.chamber) return (chamberOrder[a.chamber] || 3) - (chamberOrder[b.chamber] || 3);
@@ -93,7 +87,8 @@ async function main() {
   };
   writeJSON('committees/index.json', index);
 
-  console.log(`\nDone! Wrote ${allSummaries.length} committee files + index.`);
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+  console.log(`\nDone! Wrote ${allSummaries.length} committee files + index in ${elapsed}s.`);
 }
 
 main().catch(err => {

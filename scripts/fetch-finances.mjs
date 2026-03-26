@@ -12,7 +12,7 @@
  */
 
 import { writeJSON } from './lib/data-writer.mjs';
-import { fetchJSON, sleep, getCongressAPIBaseUrl } from './lib/api-client.mjs';
+import { fetchJSON, getCongressAPIBaseUrl, batchProcess } from './lib/api-client.mjs';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
@@ -20,110 +20,61 @@ const API_KEY = process.env.CONGRESS_API_KEY || '';
 const CONGRESS_NUMBER = 119;
 
 // ─── Sector / Industry Mapping ───
-// Maps stock tickers and keywords to sectors, and committees to sectors
 
 const COMMITTEE_SECTOR_MAP = {
-  // Defense & Military
-  'Armed Services': 'Defense',
-  'Defense': 'Defense',
-  'Veterans': 'Defense',
-  'Intelligence': 'Defense',
-  'Central Intelligence': 'Defense',
-  'Homeland Security': 'Defense',
-  // Finance
-  'Financial Services': 'Finance',
-  'Banking': 'Finance',
-  'Capital Markets': 'Finance',
-  'Securities': 'Finance',
-  'Insurance': 'Finance',
-  'Monetary Policy': 'Finance',
-  // Energy
-  'Energy': 'Energy',
-  'Oil': 'Energy',
-  'Natural Resources': 'Energy',
-  'Nuclear': 'Energy',
-  'Power': 'Energy',
-  // Health & Pharma
-  'Health': 'Healthcare',
-  'Drug': 'Healthcare',
-  'Medicare': 'Healthcare',
-  'Medicaid': 'Healthcare',
-  'Bioethics': 'Healthcare',
-  // Tech
-  'Technology': 'Technology',
-  'Communications': 'Technology',
-  'Cyber': 'Technology',
-  'Innovation': 'Technology',
-  'Digital': 'Technology',
-  'Artificial Intelligence': 'Technology',
-  'Science': 'Technology',
-  'Space': 'Technology',
-  // Transportation
-  'Transportation': 'Transportation',
-  'Aviation': 'Transportation',
-  'Railroad': 'Transportation',
-  'Maritime': 'Transportation',
-  'Highway': 'Transportation',
-  'Coast Guard': 'Transportation',
-  // Agriculture
-  'Agriculture': 'Agriculture',
-  'Farm': 'Agriculture',
-  'Food': 'Agriculture',
-  'Forestry': 'Agriculture',
-  'Nutrition': 'Agriculture',
-  // Commerce/Trade
-  'Commerce': 'Commerce',
-  'Trade': 'Commerce',
-  'Consumer': 'Commerce',
-  'Manufacturing': 'Commerce',
-  'Small Business': 'Commerce',
+  'Armed Services': 'Defense', 'Defense': 'Defense', 'Veterans': 'Defense',
+  'Intelligence': 'Defense', 'Central Intelligence': 'Defense', 'Homeland Security': 'Defense',
+  'Financial Services': 'Finance', 'Banking': 'Finance', 'Capital Markets': 'Finance',
+  'Securities': 'Finance', 'Insurance': 'Finance', 'Monetary Policy': 'Finance',
+  'Energy': 'Energy', 'Oil': 'Energy', 'Natural Resources': 'Energy',
+  'Nuclear': 'Energy', 'Power': 'Energy',
+  'Health': 'Healthcare', 'Drug': 'Healthcare', 'Medicare': 'Healthcare',
+  'Medicaid': 'Healthcare', 'Bioethics': 'Healthcare',
+  'Technology': 'Technology', 'Communications': 'Technology', 'Cyber': 'Technology',
+  'Innovation': 'Technology', 'Digital': 'Technology', 'Artificial Intelligence': 'Technology',
+  'Science': 'Technology', 'Space': 'Technology',
+  'Transportation': 'Transportation', 'Aviation': 'Transportation', 'Railroad': 'Transportation',
+  'Maritime': 'Transportation', 'Highway': 'Transportation', 'Coast Guard': 'Transportation',
+  'Agriculture': 'Agriculture', 'Farm': 'Agriculture', 'Food': 'Agriculture',
+  'Forestry': 'Agriculture', 'Nutrition': 'Agriculture',
+  'Commerce': 'Commerce', 'Trade': 'Commerce', 'Consumer': 'Commerce',
+  'Manufacturing': 'Commerce', 'Small Business': 'Commerce',
 };
 
-// Well-known tickers to sectors
 const TICKER_SECTOR_MAP = {
-  // Defense
   'LMT': 'Defense', 'RTX': 'Defense', 'BA': 'Defense', 'NOC': 'Defense',
   'GD': 'Defense', 'LHX': 'Defense', 'HII': 'Defense', 'TDG': 'Defense',
   'LDOS': 'Defense', 'BAH': 'Defense', 'KTOS': 'Defense', 'PLTR': 'Defense',
-  // Big Tech
   'AAPL': 'Technology', 'MSFT': 'Technology', 'GOOGL': 'Technology', 'GOOG': 'Technology',
   'META': 'Technology', 'AMZN': 'Technology', 'NVDA': 'Technology', 'AMD': 'Technology',
   'INTC': 'Technology', 'CRM': 'Technology', 'ORCL': 'Technology', 'CSCO': 'Technology',
   'AVGO': 'Technology', 'ADBE': 'Technology', 'NFLX': 'Technology', 'TSM': 'Technology',
   'QCOM': 'Technology', 'TXN': 'Technology', 'MU': 'Technology', 'ANET': 'Technology',
-  // Finance
   'JPM': 'Finance', 'BAC': 'Finance', 'WFC': 'Finance', 'GS': 'Finance',
   'MS': 'Finance', 'C': 'Finance', 'BLK': 'Finance', 'SCHW': 'Finance',
   'AXP': 'Finance', 'V': 'Finance', 'MA': 'Finance', 'COF': 'Finance',
   'BRK.A': 'Finance', 'BRK.B': 'Finance', 'USB': 'Finance', 'PNC': 'Finance',
-  // Energy
   'XOM': 'Energy', 'CVX': 'Energy', 'COP': 'Energy', 'SLB': 'Energy',
   'EOG': 'Energy', 'OXY': 'Energy', 'MPC': 'Energy', 'PSX': 'Energy',
   'VLO': 'Energy', 'HAL': 'Energy', 'DVN': 'Energy', 'HES': 'Energy',
   'FSLR': 'Energy', 'ENPH': 'Energy', 'NEE': 'Energy',
-  // Healthcare / Pharma
   'JNJ': 'Healthcare', 'PFE': 'Healthcare', 'UNH': 'Healthcare', 'MRK': 'Healthcare',
   'ABBV': 'Healthcare', 'LLY': 'Healthcare', 'TMO': 'Healthcare', 'ABT': 'Healthcare',
   'BMY': 'Healthcare', 'AMGN': 'Healthcare', 'GILD': 'Healthcare', 'ISRG': 'Healthcare',
   'MDT': 'Healthcare', 'DHR': 'Healthcare', 'REGN': 'Healthcare', 'MRNA': 'Healthcare',
   'BNTX': 'Healthcare', 'CVS': 'Healthcare', 'CI': 'Healthcare', 'HCA': 'Healthcare',
-  // Transportation
   'DAL': 'Transportation', 'UAL': 'Transportation', 'LUV': 'Transportation',
   'AAL': 'Transportation', 'UPS': 'Transportation', 'FDX': 'Transportation',
   'CSX': 'Transportation', 'UNP': 'Transportation', 'NSC': 'Transportation',
   'UBER': 'Transportation', 'LYFT': 'Transportation',
-  // Agriculture / Food
   'ADM': 'Agriculture', 'BG': 'Agriculture', 'DE': 'Agriculture',
   'AGCO': 'Agriculture', 'CF': 'Agriculture', 'MOS': 'Agriculture',
   'TSN': 'Agriculture', 'KO': 'Agriculture', 'PEP': 'Agriculture',
-  // Telecom
   'T': 'Technology', 'VZ': 'Technology', 'TMUS': 'Technology', 'CMCSA': 'Technology',
-  // Real Estate
   'AMT': 'Real Estate', 'PLD': 'Real Estate', 'CCI': 'Real Estate',
   'SPG': 'Real Estate', 'O': 'Real Estate',
 };
 
-// Keywords in asset descriptions to sectors
 const ASSET_KEYWORD_SECTORS = [
   { keywords: ['defense', 'military', 'weapon', 'aerospace', 'lockheed', 'raytheon', 'boeing', 'northrop'], sector: 'Defense' },
   { keywords: ['pharma', 'biotech', 'health', 'medical', 'hospital', 'drug', 'therapeutic', 'pfizer', 'moderna', 'johnson'], sector: 'Healthcare' },
@@ -230,7 +181,7 @@ async function fetchSenateStockTrades() {
   }
 }
 
-// ─── Fetch Committee Memberships ───
+// ─── Fetch Committee Memberships (batched) ───
 
 async function fetchCommitteeMemberships() {
   if (!API_KEY) {
@@ -239,16 +190,13 @@ async function fetchCommitteeMemberships() {
   }
 
   console.log('Fetching committee memberships from Congress.gov API...');
-  const memberships = {}; // bioguideId -> [committee names]
+  const memberships = {};
 
-  // Load committee list
   const committeesPath = join(process.cwd(), 'data', 'committees', 'index.json');
   let committees = [];
   try {
     const data = JSON.parse(readFileSync(committeesPath, 'utf-8'));
-    // Only get parent committees (not subcommittees)
     committees = (data.committees || []).filter(c => !c.committeeType || c.committeeType !== 'Subcommittee');
-    // If no committeeType field, filter by systemCode length
     if (committees.length === 0) {
       committees = (data.committees || []).filter(c => (c.systemCode || '').length <= 4);
     }
@@ -258,39 +206,36 @@ async function fetchCommitteeMemberships() {
     return {};
   }
 
-  // For each committee, try to get members
-  // This is expensive on API calls, so we limit to main standing committees
   const standingCommittees = committees.filter(c =>
     !c.name?.toLowerCase().includes('subcommittee')
   ).slice(0, 50);
 
-  for (const committee of standingCommittees) {
-    const code = committee.systemCode;
-    if (!code) continue;
+  // Batch fetch committee memberships — 8 concurrent, 150ms delay
+  await batchProcess(
+    standingCommittees,
+    async (committee) => {
+      const code = committee.systemCode;
+      if (!code) return;
 
-    const url = `${getCongressAPIBaseUrl()}/committee/${code}?api_key=${API_KEY}&format=json`;
-    await sleep(400);
-    try {
-      const data = await fetchJSON(url);
-      const comm = data.committee || data;
+      try {
+        const data = await fetchJSON(
+          `${getCongressAPIBaseUrl()}/committee/${code}?api_key=${API_KEY}&format=json`
+        );
+        const comm = data.committee || data;
+        let memberList = comm.members || comm.currentMembers || [];
 
-      // Try to get members from various response fields
-      const memberList = comm.members || comm.currentMembers || [];
-      if (Array.isArray(memberList)) {
-        for (const m of memberList) {
-          const bioguide = m.bioguideId || m.bioguide_id || '';
-          if (!bioguide) continue;
-          if (!memberships[bioguide]) memberships[bioguide] = [];
-          memberships[bioguide].push(committee.name);
-        }
-      }
-
-      // Also try sub-URL for members
-      if (memberList.length === 0) {
-        const membersUrl = `${getCongressAPIBaseUrl()}/committee/${code}/members?api_key=${API_KEY}&format=json&limit=100`;
-        await sleep(300);
-        try {
-          const mData = await fetchJSON(membersUrl);
+        if (Array.isArray(memberList) && memberList.length > 0) {
+          for (const m of memberList) {
+            const bioguide = m.bioguideId || m.bioguide_id || '';
+            if (!bioguide) continue;
+            if (!memberships[bioguide]) memberships[bioguide] = [];
+            memberships[bioguide].push(committee.name);
+          }
+        } else {
+          // Try sub-URL for members
+          const mData = await fetchJSON(
+            `${getCongressAPIBaseUrl()}/committee/${code}/members?api_key=${API_KEY}&format=json&limit=100`
+          );
           const members = mData.members || mData.committeeMemberships || [];
           for (const m of (Array.isArray(members) ? members : [])) {
             const bioguide = m.bioguideId || m.bioguide_id || '';
@@ -298,29 +243,25 @@ async function fetchCommitteeMemberships() {
             if (!memberships[bioguide]) memberships[bioguide] = [];
             memberships[bioguide].push(committee.name);
           }
-        } catch {}
-      }
-    } catch (err) {
-      // Skip silently
-    }
-  }
+        }
+      } catch {}
+    },
+    { concurrency: 8, delayMs: 150, label: 'committee memberships' }
+  );
 
-  const memberCount = Object.keys(memberships).length;
-  console.log(`  Mapped ${memberCount} members to committees`);
+  console.log(`  Mapped ${Object.keys(memberships).length} members to committees`);
   return memberships;
 }
 
 // ─── Build Member Financial Profiles ───
 
 function buildMemberProfiles(allTrades, committeeMemberships) {
-  // Load members index
   let membersIndex = [];
   try {
     const data = JSON.parse(readFileSync(join(process.cwd(), 'data', 'members', 'index.json'), 'utf-8'));
     membersIndex = data.members || [];
   } catch {}
 
-  // Load bills for cross-referencing
   let billsIndex = [];
   try {
     const data = JSON.parse(readFileSync(join(process.cwd(), 'data', 'bills', 'index.json'), 'utf-8'));
@@ -332,17 +273,14 @@ function buildMemberProfiles(allTrades, committeeMemberships) {
   for (const m of membersIndex) {
     const full = m.name?.toLowerCase().trim() || '';
     nameLookup[full] = m.bioguideId;
-    // Try "Last, First" format
     const parts = full.split(',').map(s => s.trim());
     if (parts.length === 2) {
       nameLookup[`${parts[1]} ${parts[0]}`] = m.bioguideId;
     }
-    // "First Last"
     const nameParts = full.split(' ');
     if (nameParts.length >= 2) {
       nameLookup[`${nameParts[nameParts.length - 1]}_${m.state?.toLowerCase()}`] = m.bioguideId;
     }
-    // Also try "Hon. First Last" -> "First Last"
     const withoutHon = full.replace(/^hon\.\s*/i, '');
     nameLookup[withoutHon] = m.bioguideId;
   }
@@ -359,7 +297,6 @@ function buildMemberProfiles(allTrades, committeeMemberships) {
       nameLookup[nameLower.replace(/^hon\.\s*/i, '')] ||
       null;
 
-    // Try last name + state
     if (!bioguideId && trade.state) {
       const lastName = nameLower.includes(',')
         ? nameLower.split(',')[0].trim()
@@ -380,7 +317,6 @@ function buildMemberProfiles(allTrades, committeeMemberships) {
       };
     }
 
-    // Determine trade sector
     const sector = getTickerSector(trade.ticker, trade.assetDescription);
     trade.sector = sector;
     byMember[bioguideId].trades.push(trade);
@@ -398,7 +334,7 @@ function buildMemberProfiles(allTrades, committeeMemberships) {
     }
   }
 
-  // Analyze conflicts for each member
+  // Analyze conflicts
   for (const [bioguideId, profile] of Object.entries(byMember)) {
     const committees = profile.committees;
     const committeeSectorSet = new Set();
@@ -410,7 +346,6 @@ function buildMemberProfiles(allTrades, committeeMemberships) {
     }
     profile.committeeSectors = [...committeeSectorSet];
 
-    // Flag trades in sectors that overlap with committee assignments
     const tradeSectors = Object.keys(profile.sectors);
     const overlapping = tradeSectors.filter(s => committeeSectorSet.has(s));
 
@@ -457,10 +392,8 @@ function buildMemberProfiles(allTrades, committeeMemberships) {
       }
     }
 
-    // Sort trades by date descending
     profile.trades.sort((a, b) => (b.transactionDate || '').localeCompare(a.transactionDate || ''));
 
-    // Summary stats
     const purchases = profile.trades.filter(t => (t.type || '').toLowerCase().includes('purchase'));
     const sales = profile.trades.filter(t => (t.type || '').toLowerCase().includes('sale'));
     profile.summary = {
@@ -502,15 +435,19 @@ function getBillSector(policyArea) {
 
 async function main() {
   console.log('=== Fetching Financial Data & Conflict Analysis ===\n');
+  const startTime = Date.now();
 
-  const houseTrades = await fetchHouseStockTrades();
-  const senateTrades = await fetchSenateStockTrades();
+  // Fetch House and Senate stock trades in parallel
+  const [houseTrades, senateTrades] = await Promise.all([
+    fetchHouseStockTrades(),
+    fetchSenateStockTrades(),
+  ]);
+
   const allTrades = [...houseTrades, ...senateTrades];
-
   allTrades.sort((a, b) => (b.transactionDate || '').localeCompare(a.transactionDate || ''));
   console.log(`\nTotal trades: ${allTrades.length}`);
 
-  // Fetch committee memberships for conflict analysis
+  // Fetch committee memberships for conflict analysis (batched)
   const committeeMemberships = await fetchCommitteeMemberships();
 
   // Build profiles with conflict detection
@@ -522,15 +459,14 @@ async function main() {
     members: byMember,
   });
 
-  // Summary stats
   const totalFlags = Object.values(byMember).reduce((sum, p) => sum + p.flags.length, 0);
   const highFlags = Object.values(byMember).reduce((sum, p) => sum + p.flags.filter(f => f.severity === 'high').length, 0);
 
-  console.log(`\n=== Done! ===`);
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+  console.log(`\n=== Done in ${elapsed}s! ===`);
   console.log(`  Members with trades: ${Object.keys(byMember).length}`);
   console.log(`  Total conflict flags: ${totalFlags} (${highFlags} high severity)`);
 
-  // Show top flagged members
   const flagged = Object.entries(byMember)
     .filter(([, p]) => p.flags.length > 0)
     .sort(([, a], [, b]) => b.flags.length - a.flags.length)

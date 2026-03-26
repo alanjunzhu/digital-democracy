@@ -7,12 +7,12 @@
  *   data/bills/{billId}.json       - Individual bill details
  */
 
-import { fetchJSON, paginateCongressAPI, getCongressAPIBaseUrl, sleep } from './lib/api-client.mjs';
+import { fetchJSON, paginateCongressAPI, getCongressAPIBaseUrl, batchProcess } from './lib/api-client.mjs';
 import { writeJSON } from './lib/data-writer.mjs';
 
 const API_KEY = process.env.CONGRESS_API_KEY;
 const CONGRESS_NUMBER = 119;
-const MAX_BILLS = 500; // Fetch up to 500 recent bills
+const MAX_BILLS = 500;
 
 if (!API_KEY) {
   console.error('Error: CONGRESS_API_KEY environment variable is required.');
@@ -32,49 +32,6 @@ async function fetchRecentBills() {
   }
 
   return allBills.slice(0, MAX_BILLS);
-}
-
-async function fetchBillDetail(congress, type, number) {
-  const url = `${getCongressAPIBaseUrl()}/bill/${congress}/${type}/${number}?api_key=${API_KEY}&format=json`;
-  await sleep(300);
-  try {
-    const data = await fetchJSON(url);
-    const bill = data.bill || data;
-    // Debug first bill
-    if (number <= 10) {
-      console.log(`  [debug] Bill ${type}${number} keys:`, Object.keys(bill));
-      console.log(`  [debug] summaries:`, JSON.stringify(bill.summaries)?.slice(0, 150));
-      console.log(`  [debug] subjects:`, JSON.stringify(bill.subjects)?.slice(0, 150));
-      console.log(`  [debug] committees:`, JSON.stringify(bill.committees)?.slice(0, 150));
-    }
-    return bill;
-  } catch (err) {
-    console.warn(`  Warning: Could not fetch detail for ${type}${number}: ${err.message}`);
-    return null;
-  }
-}
-
-async function fetchBillSubResource(congress, type, number, resource) {
-  const url = `${getCongressAPIBaseUrl()}/bill/${congress}/${type}/${number}/${resource}?api_key=${API_KEY}&format=json&limit=50`;
-  await sleep(300);
-  try {
-    const data = await fetchJSON(url);
-    return data;
-  } catch (err) {
-    return null;
-  }
-}
-
-async function fetchBillActions(congress, type, number) {
-  const url = `${getCongressAPIBaseUrl()}/bill/${congress}/${type}/${number}/actions?api_key=${API_KEY}&format=json&limit=50`;
-  await sleep(300);
-  try {
-    const data = await fetchJSON(url);
-    return data.actions || [];
-  } catch (err) {
-    console.warn(`  Warning: Could not fetch actions for ${type}${number}: ${err.message}`);
-    return [];
-  }
 }
 
 function normalizeBillType(type) {
@@ -119,26 +76,25 @@ function normalizeBill(bill, detail, actions, extraData) {
     url: `https://www.congress.gov/bill/${CONGRESS_NUMBER}th-congress/${originChamber.toLowerCase()}-bill/${num}`,
   };
 
-  // Extract summaries — may be inline array or from sub-resource
+  // Extract summaries
   const summariesArr = extraData?.summaries?.summaries || detail?.summaries || [];
   const summaryText = Array.isArray(summariesArr) && summariesArr.length > 0
     ? (summariesArr[summariesArr.length - 1].text || summariesArr[0].text || '')
     : '';
 
-  // Extract subjects — may be inline or from sub-resource
+  // Extract subjects
   const subjectsData = extraData?.subjects || detail?.subjects || {};
   const legislativeSubjects = subjectsData?.legislativeSubjects || subjectsData?.subjects || [];
   const subjectNames = Array.isArray(legislativeSubjects)
     ? legislativeSubjects.map(s => s.name || s).filter(Boolean)
     : [];
 
-  // Extract committees — may be inline or from sub-resource
+  // Extract committees
   const committeesData = extraData?.committees?.committees || detail?.committees || [];
   const committeeNames = Array.isArray(committeesData)
     ? committeesData.map(c => c.name || c.committee?.name).filter(Boolean)
     : [];
 
-  // Cosponsors count
   const cosponsorsCount = typeof detail?.cosponsors === 'number'
     ? detail.cosponsors
     : detail?.cosponsors?.count || 0;
@@ -160,41 +116,62 @@ function normalizeBill(bill, detail, actions, extraData) {
   return { summary, detail: billDetail };
 }
 
+/**
+ * Fetch all data for a single bill (detail + actions + sub-resources) in one go.
+ * Uses Promise.all to parallelize the 5 API calls per bill.
+ */
+async function fetchBillAllData(congress, type, num) {
+  const base = `${getCongressAPIBaseUrl()}/bill/${congress}/${type}/${num}`;
+  const qs = `api_key=${API_KEY}&format=json`;
+
+  const [detailRes, actionsRes, summariesRes, subjectsRes, committeesRes] = await Promise.all([
+    fetchJSON(`${base}?${qs}`).catch(() => null),
+    fetchJSON(`${base}/actions?${qs}&limit=50`).catch(() => null),
+    fetchJSON(`${base}/summaries?${qs}&limit=50`).catch(() => null),
+    fetchJSON(`${base}/subjects?${qs}&limit=50`).catch(() => null),
+    fetchJSON(`${base}/committees?${qs}&limit=50`).catch(() => null),
+  ]);
+
+  return {
+    detail: detailRes?.bill || detailRes || null,
+    actions: actionsRes?.actions || [],
+    extraData: {
+      summaries: summariesRes,
+      subjects: subjectsRes,
+      committees: committeesRes,
+    },
+  };
+}
+
 async function main() {
   console.log('=== Fetching Congress Bills ===\n');
+  const startTime = Date.now();
 
   const bills = await fetchRecentBills();
-  console.log(`\nFetching details for ${bills.length} bills...`);
+  console.log(`\nFetching details for ${bills.length} bills (batched, 5 concurrent)...`);
+  console.log('  Each bill fetches 5 sub-resources in parallel.\n');
+
+  // Process bills in concurrent batches of 5
+  // Each bill makes 5 parallel API calls internally, so effective concurrency is 5×5=25
+  // Congress.gov rate limit: 5,000/hr. At ~25 concurrent with 200ms delay, we use ~500/min = safe.
+  const results = await batchProcess(
+    bills,
+    async (bill) => {
+      const type = normalizeBillType(bill.type);
+      const num = bill.number;
+      const data = await fetchBillAllData(CONGRESS_NUMBER, type, num);
+      return { bill, ...data };
+    },
+    { concurrency: 5, delayMs: 200, label: 'bill details' }
+  );
 
   const summaries = [];
-  let processed = 0;
-
-  for (const bill of bills) {
-    const type = normalizeBillType(bill.type);
-    const num = bill.number;
-
-    const [detail, actions] = await Promise.all([
-      fetchBillDetail(CONGRESS_NUMBER, type, num),
-      fetchBillActions(CONGRESS_NUMBER, type, num),
-    ]);
-
-    // Fetch sub-resources for richer data (summaries, subjects, committees)
-    let extraData = {};
-    const [summariesRes, subjectsRes, committeesRes] = await Promise.all([
-      fetchBillSubResource(CONGRESS_NUMBER, type, num, 'summaries'),
-      fetchBillSubResource(CONGRESS_NUMBER, type, num, 'subjects'),
-      fetchBillSubResource(CONGRESS_NUMBER, type, num, 'committees'),
-    ]);
-    extraData = { summaries: summariesRes, subjects: subjectsRes, committees: committeesRes };
-
+  for (const result of results) {
+    if (!result) continue;
+    const { bill, detail, actions, extraData } = result;
     const { summary, detail: billDetail } = normalizeBill(bill, detail, actions, extraData);
     summaries.push(summary);
     writeJSON(`bills/${summary.billId}.json`, billDetail);
-
-    processed++;
-    if (processed % 50 === 0) {
-      console.log(`  Processed ${processed}/${bills.length} bills`);
-    }
   }
 
   // Sort by latest action date descending
@@ -213,11 +190,12 @@ async function main() {
   writeJSON('bills/index.json', index);
 
   writeJSON('meta/last-updated.json', {
-    members: undefined, // preserve existing
+    members: undefined,
     bills: new Date().toISOString(),
   });
 
-  console.log(`\nDone! Wrote ${summaries.length} bill files + index.`);
+  const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+  console.log(`\nDone! Wrote ${summaries.length} bill files + index in ${elapsed}s.`);
 }
 
 main().catch(err => {
