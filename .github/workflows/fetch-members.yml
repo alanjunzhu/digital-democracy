@@ -9,163 +9,56 @@ permissions:
   contents: write
 
 jobs:
-  # Phase 1: Independent data sources run in parallel
-  fetch-members:
+  fetch-and-commit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
         with:
+          ref: main
           fetch-depth: 0
+
       - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
+
       - run: npm ci
-      - name: Fetch members data
-        run: node scripts/fetch-members.mjs
+
+      # Phase 1: Independent data sources run in parallel (background processes)
+      - name: "Fetch members, bills, committees (parallel)"
+        run: |
+          node scripts/fetch-members.mjs &
+          PID_MEMBERS=$!
+          node scripts/fetch-bills.mjs &
+          PID_BILLS=$!
+          node scripts/fetch-committees.mjs &
+          PID_COMMITTEES=$!
+
+          # Wait for all to finish, fail if any fail
+          FAILED=0
+          wait $PID_MEMBERS || { echo "::error::fetch-members failed"; FAILED=1; }
+          wait $PID_BILLS || { echo "::error::fetch-bills failed"; FAILED=1; }
+          wait $PID_COMMITTEES || { echo "::error::fetch-committees failed"; FAILED=1; }
+          exit $FAILED
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
-      - uses: actions/upload-artifact@v4
-        with:
-          name: members-data
-          path: data/members/
-          retention-days: 1
 
-  fetch-bills:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Fetch bills data
-        run: node scripts/fetch-bills.mjs
-        env:
-          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
-      - uses: actions/upload-artifact@v4
-        with:
-          name: bills-data
-          path: data/bills/
-          retention-days: 1
+      # Phase 2: Votes + finances depend on members/bills/committees data
+      - name: "Fetch votes and finances (parallel)"
+        run: |
+          node scripts/fetch-votes.mjs &
+          PID_VOTES=$!
+          node scripts/fetch-finances.mjs &
+          PID_FINANCES=$!
 
-  fetch-committees:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Fetch committees data
-        run: node scripts/fetch-committees.mjs
-        env:
-          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
-      - uses: actions/upload-artifact@v4
-        with:
-          name: committees-data
-          path: data/committees/
-          retention-days: 1
-
-  # Phase 2: Votes depend on members + bills (for cross-reference)
-  fetch-votes:
-    needs: [fetch-members, fetch-bills]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - uses: actions/download-artifact@v4
-        with:
-          name: members-data
-          path: data/members/
-      - uses: actions/download-artifact@v4
-        with:
-          name: bills-data
-          path: data/bills/
-      - name: Fetch votes data
-        run: node scripts/fetch-votes.mjs
-      - uses: actions/upload-artifact@v4
-        with:
-          name: votes-data
-          path: data/votes/
-          retention-days: 1
-
-  # Phase 3: Finances depend on members, bills, committees (for conflict detection)
-  fetch-finances:
-    needs: [fetch-members, fetch-bills, fetch-committees]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - uses: actions/download-artifact@v4
-        with:
-          name: members-data
-          path: data/members/
-      - uses: actions/download-artifact@v4
-        with:
-          name: bills-data
-          path: data/bills/
-      - uses: actions/download-artifact@v4
-        with:
-          name: committees-data
-          path: data/committees/
-      - name: Fetch financial data
-        run: node scripts/fetch-finances.mjs
+          FAILED=0
+          wait $PID_VOTES || { echo "::error::fetch-votes failed"; FAILED=1; }
+          wait $PID_FINANCES || { echo "::error::fetch-finances failed"; FAILED=1; }
+          exit $FAILED
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
-      - uses: actions/upload-artifact@v4
-        with:
-          name: finances-data
-          path: data/finances/
-          retention-days: 1
 
-  # Phase 4: Collect all data and commit
-  commit-data:
-    needs: [fetch-members, fetch-bills, fetch-committees, fetch-votes, fetch-finances]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - uses: actions/download-artifact@v4
-        with:
-          name: members-data
-          path: data/members/
-      - uses: actions/download-artifact@v4
-        with:
-          name: bills-data
-          path: data/bills/
-      - uses: actions/download-artifact@v4
-        with:
-          name: committees-data
-          path: data/committees/
-      - uses: actions/download-artifact@v4
-        with:
-          name: votes-data
-          path: data/votes/
-      - uses: actions/download-artifact@v4
-        with:
-          name: finances-data
-          path: data/finances/
       - name: Commit data changes
         run: |
           git config user.name "github-actions[bot]"
@@ -175,7 +68,6 @@ jobs:
             echo "No data changes detected."
           else
             git commit -m "chore: update congress data [$(date -u +%Y-%m-%d)]"
-            git fetch origin main
-            git rebase origin/main
+            git pull origin main --rebase
             git push origin main
           fi
