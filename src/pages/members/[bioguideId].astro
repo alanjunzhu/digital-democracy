@@ -77,19 +77,22 @@ try {
   }
 } catch {}
 
-// Cross-link: financial data (stock trades)
+// Cross-link: financial data (stock trades + conflict analysis)
+let financeProfile: any = null;
 let stockTrades: any[] = [];
+let conflictFlags: any[] = [];
+let sectorBreakdown: any[] = [];
+let memberCommittees: string[] = [];
 try {
   const financePath = join(process.cwd(), 'data', 'finances', 'by-member.json');
   if (existsSync(financePath)) {
     const financeData = JSON.parse(readFileSync(financePath, 'utf-8'));
-    const memberFinance = financeData.members?.[bioguideId];
-    if (memberFinance) {
-      stockTrades = memberFinance.trades || [];
-      // Sort by date descending
-      stockTrades.sort((a: any, b: any) =>
-        (b.transactionDate || '').localeCompare(a.transactionDate || '')
-      );
+    financeProfile = financeData.members?.[bioguideId];
+    if (financeProfile) {
+      stockTrades = financeProfile.trades || [];
+      conflictFlags = financeProfile.flags || [];
+      sectorBreakdown = financeProfile.summary?.topSectors || [];
+      memberCommittees = financeProfile.committees || [];
     }
   }
 } catch {}
@@ -464,100 +467,232 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
       </div>
     )}
 
-    <!-- Stock Trading Activity -->
+    <!-- Financial Transparency & Potential Conflicts -->
     {stockTrades.length > 0 && (
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-4">
-          Stock Trading Activity
-          <span class="text-sm font-normal text-gray-500 ml-2">({stockTrades.length} transactions)</span>
-        </h2>
-
-        {/* Trade summary */}
-        {(() => {
-          const purchases = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('purchase')).length;
-          const sales = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('sale')).length;
-          const tickers = [...new Set(stockTrades.map((t: any) => t.ticker).filter(Boolean))];
-          return (
-            <div class="grid grid-cols-3 gap-4 mb-4">
-              <div class="text-center p-3 bg-green-50 rounded-lg">
-                <div class="text-xl font-bold text-green-600">{purchases}</div>
-                <div class="text-xs text-gray-500">Purchases</div>
+      <div class="space-y-6 mt-6">
+        {/* Conflict Alert Banner */}
+        {conflictFlags.length > 0 && (
+          <div class={`rounded-lg border-2 p-5 ${conflictFlags.some((f: any) => f.severity === 'high') ? 'border-red-300 bg-red-50' : 'border-amber-300 bg-amber-50'}`}>
+            <div class="flex items-start gap-3">
+              <div class={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold ${conflictFlags.some((f: any) => f.severity === 'high') ? 'bg-red-200 text-red-700' : 'bg-amber-200 text-amber-700'}`}>
+                !
               </div>
-              <div class="text-center p-3 bg-red-50 rounded-lg">
-                <div class="text-xl font-bold text-red-600">{sales}</div>
-                <div class="text-xs text-gray-500">Sales</div>
-              </div>
-              <div class="text-center p-3 bg-blue-50 rounded-lg">
-                <div class="text-xl font-bold text-blue-600">{tickers.length}</div>
-                <div class="text-xs text-gray-500">Unique Stocks</div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-900 text-sm">
+                  {conflictFlags.filter((f: any) => f.severity === 'high').length > 0
+                    ? `${conflictFlags.filter((f: any) => f.severity === 'high').length} Potential Conflict(s) of Interest Detected`
+                    : `${conflictFlags.length} Financial Activity Flag(s)`}
+                </h3>
+                <div class="mt-2 space-y-2">
+                  {conflictFlags.map((flag: any, i: number) => (
+                    <div class={`text-xs p-2.5 rounded ${flag.severity === 'high' ? 'bg-red-100 text-red-800' : 'bg-amber-100 text-amber-800'}`}>
+                      <div class="flex items-center gap-2">
+                        <span class={`inline-flex items-center rounded text-[10px] px-1.5 py-0.5 font-semibold uppercase ${flag.severity === 'high' ? 'bg-red-200 text-red-900' : 'bg-amber-200 text-amber-900'}`}>
+                          {flag.type === 'committee_overlap' ? 'Committee Overlap' : 'Trade Timing'}
+                        </span>
+                        <span class="font-medium">{flag.sector}</span>
+                      </div>
+                      <p class="mt-1">{flag.description}</p>
+                      {flag.relatedCommittees && (
+                        <div class="mt-1 flex flex-wrap gap-1">
+                          {flag.relatedCommittees.map((c: string) => (
+                            <span class="inline-flex text-[10px] px-1.5 py-0.5 rounded bg-white/50">{c}</span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          );
-        })()}
+          </div>
+        )}
 
-        {/* Top tickers */}
-        {(() => {
-          const tickerCount = {} as any;
-          for (const t of stockTrades) {
-            if (t.ticker) tickerCount[t.ticker] = (tickerCount[t.ticker] || 0) + 1;
-          }
-          const topTickers = Object.entries(tickerCount)
-            .sort(([, a], [, b]) => (b as number) - (a as number))
-            .slice(0, 10);
-          return topTickers.length > 0 && (
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              {topTickers.map(([ticker, count]) => (
-                <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700 font-mono">
-                  {ticker} <span class="text-blue-400">({count})</span>
-                </span>
-              ))}
+        {/* Financial Overview Card */}
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-4">Financial Disclosures & Trading</h2>
+
+          {/* Stats Row */}
+          {(() => {
+            const purchases = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('purchase')).length;
+            const sales = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('sale')).length;
+            const tickers = [...new Set(stockTrades.map((t: any) => t.ticker).filter(Boolean))];
+            return (
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+                <div class="text-center p-3 bg-gray-50 rounded-lg">
+                  <div class="text-xl font-bold text-gray-900">{stockTrades.length}</div>
+                  <div class="text-[10px] text-gray-500">Total Trades</div>
+                </div>
+                <div class="text-center p-3 bg-green-50 rounded-lg">
+                  <div class="text-xl font-bold text-green-600">{purchases}</div>
+                  <div class="text-[10px] text-gray-500">Purchases</div>
+                </div>
+                <div class="text-center p-3 bg-red-50 rounded-lg">
+                  <div class="text-xl font-bold text-red-600">{sales}</div>
+                  <div class="text-[10px] text-gray-500">Sales</div>
+                </div>
+                <div class="text-center p-3 bg-blue-50 rounded-lg">
+                  <div class="text-xl font-bold text-blue-600">{tickers.length}</div>
+                  <div class="text-[10px] text-gray-500">Unique Stocks</div>
+                </div>
+              </div>
+            );
+          })()}
+
+          {/* Sector Breakdown with Committee Overlap Highlighting */}
+          {sectorBreakdown.length > 0 && (
+            <div class="mb-5">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2">Trading by Sector</h3>
+              <div class="space-y-2">
+                {sectorBreakdown.map((s: any) => {
+                  const isOverlap = financeProfile?.committeeSectors?.includes(s.sector);
+                  return (
+                    <div class={`flex items-center gap-3 p-2.5 rounded-lg ${isOverlap ? 'bg-red-50 border border-red-200' : 'bg-gray-50'}`}>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2">
+                          <span class={`text-sm font-medium ${isOverlap ? 'text-red-800' : 'text-gray-800'}`}>{s.sector}</span>
+                          {isOverlap && (
+                            <span class="inline-flex items-center text-[9px] px-1.5 py-0.5 rounded bg-red-200 text-red-800 font-semibold uppercase">
+                              Committee Overlap
+                            </span>
+                          )}
+                        </div>
+                        <div class="flex gap-3 mt-1 text-xs text-gray-500">
+                          <span>{s.total} trades</span>
+                          <span class="text-green-600">{s.purchases} buy</span>
+                          <span class="text-red-600">{s.sales} sell</span>
+                        </div>
+                      </div>
+                      {/* Mini bar */}
+                      <div class="w-24 h-3 bg-gray-200 rounded-full overflow-hidden flex">
+                        <div class="bg-green-500 h-full" style={`width: ${s.total > 0 ? (s.purchases / s.total * 100).toFixed(0) : 0}%`}></div>
+                        <div class="bg-red-500 h-full" style={`width: ${s.total > 0 ? (s.sales / s.total * 100).toFixed(0) : 0}%`}></div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          );
-        })()}
-
-        {/* Trade list */}
-        <div class="overflow-x-auto">
-          <table class="w-full text-xs">
-            <thead>
-              <tr class="border-b border-gray-200 text-gray-500">
-                <th class="text-left py-2 font-medium">Date</th>
-                <th class="text-left py-2 font-medium">Ticker</th>
-                <th class="text-left py-2 font-medium">Asset</th>
-                <th class="text-left py-2 font-medium">Type</th>
-                <th class="text-right py-2 font-medium">Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              {stockTrades.slice(0, 25).map((t: any) => {
-                const typeColor = (t.type || '').toLowerCase().includes('purchase')
-                  ? 'text-green-700 bg-green-50'
-                  : (t.type || '').toLowerCase().includes('sale')
-                  ? 'text-red-700 bg-red-50'
-                  : 'text-gray-700 bg-gray-50';
-                return (
-                  <tr class="border-b border-gray-50 hover:bg-gray-50">
-                    <td class="py-1.5 text-gray-500 whitespace-nowrap">{t.transactionDate}</td>
-                    <td class="py-1.5 font-mono font-semibold text-blue-700">{t.ticker || '—'}</td>
-                    <td class="py-1.5 text-gray-700 max-w-[200px] truncate">{t.assetDescription}</td>
-                    <td class="py-1.5">
-                      <span class={`inline-flex rounded text-[10px] px-1.5 py-0.5 font-medium ${typeColor}`}>
-                        {t.type}
-                      </span>
-                    </td>
-                    <td class="py-1.5 text-right text-gray-600 whitespace-nowrap">{t.amount}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          {stockTrades.length > 25 && (
-            <p class="text-xs text-gray-400 mt-2">Showing 25 of {stockTrades.length} transactions</p>
           )}
-        </div>
 
-        <p class="text-[10px] text-gray-400 mt-3">
-          Source: House/Senate Stock Watcher. Data from financial disclosure reports filed with Congress.
-        </p>
+          {/* Committee Assignments (for context) */}
+          {memberCommittees.length > 0 && (
+            <div class="mb-5">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2">Committee Assignments</h3>
+              <div class="flex flex-wrap gap-1.5">
+                {memberCommittees.map((c: string) => {
+                  const sectors = [] as string[];
+                  const cLower = c.toLowerCase();
+                  if (cLower.includes('armed') || cLower.includes('defense') || cLower.includes('intelligence') || cLower.includes('homeland')) sectors.push('Defense');
+                  if (cLower.includes('financial') || cLower.includes('banking')) sectors.push('Finance');
+                  if (cLower.includes('energy')) sectors.push('Energy');
+                  if (cLower.includes('health')) sectors.push('Healthcare');
+                  if (cLower.includes('technology') || cLower.includes('science') || cLower.includes('cyber')) sectors.push('Technology');
+                  const hasTrades = sectors.some(s => sectorBreakdown.some((sb: any) => sb.sector === s));
+                  return (
+                    <span class={`inline-flex items-center text-xs px-2.5 py-1 rounded-lg ${hasTrades ? 'bg-red-50 text-red-700 border border-red-200 font-medium' : 'bg-gray-100 text-gray-600'}`}>
+                      {c}
+                      {hasTrades && <span class="ml-1 text-red-400">*</span>}
+                    </span>
+                  );
+                })}
+              </div>
+              <p class="text-[10px] text-gray-400 mt-1">* has stock trades in related sector</p>
+            </div>
+          )}
+
+          {/* Top Tickers */}
+          {(() => {
+            const tickerCount = {} as any;
+            const tickerSector = {} as any;
+            for (const t of stockTrades) {
+              if (t.ticker && t.ticker !== '--') {
+                tickerCount[t.ticker] = (tickerCount[t.ticker] || 0) + 1;
+                if (t.sector) tickerSector[t.ticker] = t.sector;
+              }
+            }
+            const topTickers = Object.entries(tickerCount)
+              .sort(([, a], [, b]) => (b as number) - (a as number))
+              .slice(0, 15);
+            return topTickers.length > 0 && (
+              <div class="mb-5">
+                <h3 class="text-sm font-semibold text-gray-700 mb-2">Most Traded Stocks</h3>
+                <div class="flex flex-wrap gap-1.5">
+                  {topTickers.map(([ticker, count]) => {
+                    const sector = tickerSector[ticker];
+                    const isOverlap = sector && financeProfile?.committeeSectors?.includes(sector);
+                    return (
+                      <span class={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full font-mono ${isOverlap ? 'bg-red-100 text-red-800 ring-1 ring-red-300' : 'bg-blue-50 text-blue-700'}`}>
+                        {ticker}
+                        <span class="opacity-60">({count})</span>
+                        {isOverlap && <span class="text-red-400 text-[9px]">!</span>}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })()}
+
+          {/* Transaction Table */}
+          <details class="group">
+            <summary class="cursor-pointer text-sm font-medium text-blue-600 hover:text-blue-800 mb-3 select-none">
+              View all {stockTrades.length} transactions
+            </summary>
+            <div class="overflow-x-auto">
+              <table class="w-full text-xs">
+                <thead>
+                  <tr class="border-b border-gray-200 text-gray-500">
+                    <th class="text-left py-2 font-medium">Date</th>
+                    <th class="text-left py-2 font-medium">Ticker</th>
+                    <th class="text-left py-2 font-medium">Asset</th>
+                    <th class="text-left py-2 font-medium">Sector</th>
+                    <th class="text-left py-2 font-medium">Type</th>
+                    <th class="text-right py-2 font-medium">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stockTrades.slice(0, 50).map((t: any) => {
+                    const typeColor = (t.type || '').toLowerCase().includes('purchase')
+                      ? 'text-green-700 bg-green-50'
+                      : (t.type || '').toLowerCase().includes('sale')
+                      ? 'text-red-700 bg-red-50'
+                      : 'text-gray-700 bg-gray-50';
+                    const isOverlap = t.sector && financeProfile?.committeeSectors?.includes(t.sector);
+                    return (
+                      <tr class={`border-b border-gray-50 ${isOverlap ? 'bg-red-50/50' : 'hover:bg-gray-50'}`}>
+                        <td class="py-1.5 text-gray-500 whitespace-nowrap">{t.transactionDate}</td>
+                        <td class="py-1.5 font-mono font-semibold text-blue-700">{t.ticker || '—'}</td>
+                        <td class="py-1.5 text-gray-700 max-w-[180px] truncate">{t.assetDescription}</td>
+                        <td class="py-1.5">
+                          {t.sector ? (
+                            <span class={`inline-flex text-[10px] px-1.5 py-0.5 rounded ${isOverlap ? 'bg-red-100 text-red-700 font-medium' : 'bg-gray-100 text-gray-600'}`}>
+                              {t.sector}{isOverlap ? ' !' : ''}
+                            </span>
+                          ) : (
+                            <span class="text-gray-300">—</span>
+                          )}
+                        </td>
+                        <td class="py-1.5">
+                          <span class={`inline-flex rounded text-[10px] px-1.5 py-0.5 font-medium ${typeColor}`}>{t.type}</span>
+                        </td>
+                        <td class="py-1.5 text-right text-gray-600 whitespace-nowrap">{t.amount}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+              {stockTrades.length > 50 && (
+                <p class="text-xs text-gray-400 mt-2">Showing 50 of {stockTrades.length} transactions</p>
+              )}
+            </div>
+          </details>
+
+          <p class="text-[10px] text-gray-400 mt-3 border-t border-gray-100 pt-3">
+            Source: House/Senate Stock Watcher. Data from financial disclosure reports required by the STOCK Act.
+            Red highlights indicate trades in sectors related to this member's committee assignments — this does not necessarily indicate wrongdoing.
+          </p>
+        </div>
       </div>
     )}
   </div>
