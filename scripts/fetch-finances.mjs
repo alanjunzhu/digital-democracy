@@ -218,9 +218,17 @@ async function fetchCommitteeMemberships() {
       if (!code) return;
 
       try {
-        const data = await fetchJSON(
-          `${getCongressAPIBaseUrl()}/committee/${code}?api_key=${API_KEY}&format=json`
-        );
+        // Try with congress number first, then without
+        let data = await fetchJSON(
+          `${getCongressAPIBaseUrl()}/committee/${CONGRESS_NUMBER}/${code}?api_key=${API_KEY}&format=json`
+        ).catch(() => null);
+        if (!data) {
+          data = await fetchJSON(
+            `${getCongressAPIBaseUrl()}/committee/${code}?api_key=${API_KEY}&format=json`
+          ).catch(() => null);
+        }
+        if (!data) return;
+
         const comm = data.committee || data;
         let memberList = comm.members || comm.currentMembers || [];
 
@@ -234,8 +242,9 @@ async function fetchCommitteeMemberships() {
         } else {
           // Try sub-URL for members
           const mData = await fetchJSON(
-            `${getCongressAPIBaseUrl()}/committee/${code}/members?api_key=${API_KEY}&format=json&limit=100`
-          );
+            `${getCongressAPIBaseUrl()}/committee/${CONGRESS_NUMBER}/${code}/members?api_key=${API_KEY}&format=json&limit=100`
+          ).catch(() => null);
+          if (!mData) return;
           const members = mData.members || mData.committeeMemberships || [];
           for (const m of (Array.isArray(members) ? members : [])) {
             const bioguide = m.bioguideId || m.bioguide_id || '';

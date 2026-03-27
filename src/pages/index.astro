@@ -16,6 +16,12 @@ try {
   billsData = JSON.parse(readFileSync(dataPath, 'utf-8'));
 } catch {}
 
+let votesData: any = { total: 0, votes: [], houseTotal: 0, senateTotal: 0 };
+try {
+  const dataPath = join(process.cwd(), 'data', 'votes', 'index.json');
+  votesData = JSON.parse(readFileSync(dataPath, 'utf-8'));
+} catch {}
+
 const senators = membersData.members.filter((m: any) => m.chamber === 'Senate');
 const representatives = membersData.members.filter((m: any) => m.chamber === 'House');
 const democrats = membersData.members.filter((m: any) => m.party === 'Democratic');
@@ -70,18 +76,8 @@ const base = import.meta.env.BASE_URL;
         <div class="text-sm text-gray-500 mt-1">Representatives</div>
       </div>
       <div class="bg-white rounded-lg shadow-md p-6 text-center">
-        <div class="flex items-center justify-center gap-3">
-          <span class="text-xl font-bold text-blue-600">{democrats.length}</span>
-          <span class="text-gray-400">|</span>
-          <span class="text-xl font-bold text-red-600">{republicans.length}</span>
-          {independents.length > 0 && (
-            <>
-              <span class="text-gray-400">|</span>
-              <span class="text-xl font-bold text-purple-600">{independents.length}</span>
-            </>
-          )}
-        </div>
-        <div class="text-sm text-gray-500 mt-1">D | R{independents.length > 0 ? ' | I' : ''}</div>
+        <div class="text-3xl font-bold text-indigo-600">{votesData.total}</div>
+        <div class="text-sm text-gray-500 mt-1">Roll Call Votes</div>
       </div>
     </div>
   </section>
@@ -156,6 +152,54 @@ const base = import.meta.env.BASE_URL;
             </div>
           </a>
         ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Recent Votes Preview -->
+  {votesData.votes.length > 0 && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">Recent Votes</h2>
+        <a href={`${base}votes/`} class="text-blue-600 hover:text-blue-800 font-medium text-sm">
+          View all &rarr;
+        </a>
+      </div>
+      <div class="space-y-3">
+        {votesData.votes.slice(0, 5).map((v: any) => {
+          const passed = v.result === 'Passed' || v.result === 'Agreed to';
+          const total = v.totalYea + v.totalNay;
+          const yeaPct = total > 0 ? Math.round((v.totalYea / total) * 100) : 50;
+          return (
+            <a
+              href={`${base}votes/${v.voteId}/`}
+              class="block bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all p-4 group"
+            >
+              <div class="flex items-start gap-3">
+                <div class={`mt-1 w-2.5 h-2.5 rounded-full flex-shrink-0 ${passed ? 'bg-green-500' : 'bg-red-500'}`}></div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
+                    {v.question}
+                  </h3>
+                  <div class="flex items-center gap-2 mt-1.5">
+                    <div class="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden flex max-w-[200px]">
+                      <div class="bg-green-500 h-full" style={`width: ${yeaPct}%`}></div>
+                      <div class="bg-red-500 h-full" style={`width: ${100 - yeaPct}%`}></div>
+                    </div>
+                    <span class="text-xs text-gray-500">{v.totalYea}–{v.totalNay}</span>
+                    <span class={`inline-flex items-center rounded-full text-[10px] px-1.5 py-0.5 font-medium ${v.chamber === 'Senate' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}`}>
+                      {v.chamber}
+                    </span>
+                    {v.date && <span class="text-xs text-gray-400">{v.date}</span>}
+                  </div>
+                </div>
+                <span class={`text-xs font-semibold ${passed ? 'text-green-600' : 'text-red-600'}`}>
+                  {v.result}
+                </span>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </section>
   )}

@@ -20,6 +20,9 @@ export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
         await sleep(wait);
         continue;
       }
+      if (response.status === 404) {
+        return null; // Don't retry 404s — resource doesn't exist
+      }
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText} for ${url}`);
       }
@@ -35,6 +38,7 @@ export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
 
 export async function fetchJSON(url, options = {}) {
   const response = await fetchWithRetry(url, options);
+  if (!response) return null; // 404 returns null
   return response.json();
 }
 

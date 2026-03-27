@@ -40,6 +40,30 @@ const stageColor = STAGE_COLORS[billStage];
 // Build progress pipeline
 const stageIndex = BILL_STAGES.indexOf(billStage);
 const progressStages = ['Introduced', 'In Committee', 'Passed One Chamber', 'Passed Both Chambers', 'Signed into Law'] as const;
+
+// Cross-link: find votes on this bill
+let billVotes: any[] = [];
+try {
+  const votesPath = join(process.cwd(), 'data', 'votes', 'index.json');
+  if (existsSync(votesPath)) {
+    const votesData = JSON.parse(readFileSync(votesPath, 'utf-8'));
+    billVotes = (votesData.votes || []).filter((v: any) => v.billId === billId);
+  }
+} catch {}
+
+// Cross-link: map committee names to system codes for linking
+let committeeLinks: Record<string, string> = {};
+try {
+  const committeesPath = join(process.cwd(), 'data', 'committees', 'index.json');
+  if (existsSync(committeesPath)) {
+    const committeesData = JSON.parse(readFileSync(committeesPath, 'utf-8'));
+    for (const c of committeesData.committees || []) {
+      if (c.name && c.systemCode) {
+        committeeLinks[c.name] = c.systemCode;
+      }
+    }
+  }
+} catch {}
 ---
 
 <Layout title={`${bill.type} ${bill.number}`} description={bill.title}>
@@ -156,12 +180,17 @@ const progressStages = ['Introduced', 'In Committee', 'Passed One Chamber', 'Pas
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Committees</h2>
           <ul class="space-y-1 text-sm text-gray-700">
-            {bill.committees.map(c => (
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                {c}
-              </li>
-            ))}
+            {bill.committees.map(c => {
+              const code = committeeLinks[c];
+              return (
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  {code ? (
+                    <a href={`${base}committees/${code}/`} class="text-blue-600 hover:underline">{c}</a>
+                  ) : c}
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
@@ -176,6 +205,36 @@ const progressStages = ['Introduced', 'In Committee', 'Passed One Chamber', 'Pas
                 {s}
               </span>
             ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Votes on This Bill -->
+      {billVotes.length > 0 && (
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">Roll Call Votes ({billVotes.length})</h2>
+          <div class="space-y-2">
+            {billVotes.map((v: any) => {
+              const passed = v.result === 'Passed' || v.result === 'Agreed to';
+              return (
+                <a href={`${base}votes/${v.voteId}/`} class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-100">
+                  <div class={`w-2 h-2 rounded-full ${passed ? 'bg-green-500' : 'bg-red-500'}`}></div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm text-gray-900 line-clamp-1">{v.question}</p>
+                    <div class="flex items-center gap-3 mt-0.5 text-xs text-gray-500">
+                      <span>{v.date}</span>
+                      <span class={`inline-flex items-center rounded-full px-1.5 py-0.5 text-[10px] font-medium ${v.chamber === 'Senate' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}`}>
+                        {v.chamber}
+                      </span>
+                    </div>
+                  </div>
+                  <div class="text-right text-xs">
+                    <span class={`font-semibold ${passed ? 'text-green-600' : 'text-red-600'}`}>{v.result}</span>
+                    <div class="text-gray-400 mt-0.5">{v.totalYea}Y - {v.totalNay}N</div>
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       )}

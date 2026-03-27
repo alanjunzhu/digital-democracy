@@ -71,6 +71,36 @@ async function fetchCongressMembers() {
   return allMembers;
 }
 
+function extractCommittees(detail) {
+  if (!detail) return [];
+  // Congress.gov API member detail may include committee assignments
+  const committees = [];
+  // Try various response structures
+  const sources = [
+    detail.committees,
+    detail.committeeAssignments,
+    detail.currentCommittees,
+  ];
+  for (const src of sources) {
+    if (Array.isArray(src)) {
+      for (const c of src) {
+        const name = c.name || c.committeeName || '';
+        if (name && !committees.includes(name)) committees.push(name);
+      }
+    } else if (src && typeof src === 'object') {
+      // Could be { url: "...", count: N } style reference
+      const items = src.items || src.committees || [];
+      if (Array.isArray(items)) {
+        for (const c of items) {
+          const name = c.name || c.committeeName || '';
+          if (name && !committees.includes(name)) committees.push(name);
+        }
+      }
+    }
+  }
+  return committees;
+}
+
 function normalizeMember(congressMember, detail, legData, socialData) {
   const bioguideId = congressMember.bioguideId;
   const currentTerm = detail?.terms?.slice(-1)[0] || {};
@@ -118,6 +148,7 @@ function normalizeMember(congressMember, detail, legData, socialData) {
       youtube: socialData.youtube || socialData.youtube_id || undefined,
     } : undefined,
     officeAddress: legData?.terms?.slice(-1)?.[0]?.address || detail?.addressInformation?.officeAddress || '',
+    committees: extractCommittees(detail),
     sponsoredBills: [],
   };
 

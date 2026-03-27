@@ -63,7 +63,7 @@ export default function AnalyticsDashboard({ memberStats, billStats, voteStats, 
         </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 text-center">
           <div className="text-3xl font-bold text-emerald-600">{voteStats.total}</div>
-          <div className="text-sm text-gray-500 mt-1">House Votes</div>
+          <div className="text-sm text-gray-500 mt-1">Roll Call Votes</div>
         </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 text-center">
           <div className="text-3xl font-bold text-purple-600">{committeeStats.total}</div>

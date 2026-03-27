@@ -10,11 +10,28 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
   const [search, setSearch] = useState('');
   const [result, setResult] = useState<string>('all');
   const [chamber, setChamber] = useState<string>('all');
+  const [topic, setTopic] = useState<string>('all');
+
+  // Extract unique topics with counts
+  const topicCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const v of votes) {
+      const t = (v as any).topic || 'Uncategorized';
+      counts[t] = (counts[t] || 0) + 1;
+    }
+    return Object.entries(counts)
+      .sort(([, a], [, b]) => b - a)
+      .filter(([name]) => name !== 'Uncategorized' && name !== 'Procedural');
+  }, [votes]);
 
   const filtered = useMemo(() => {
     return votes.filter(v => {
       if (result !== 'all' && v.result !== result) return false;
       if (chamber !== 'all' && v.chamber !== chamber) return false;
+      if (topic !== 'all') {
+        const vTopic = (v as any).topic || 'Uncategorized';
+        if (vTopic !== topic) return false;
+      }
       if (search) {
         const q = search.toLowerCase();
         const questionMatch = v.question.toLowerCase().includes(q);
@@ -23,7 +40,7 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
       }
       return true;
     });
-  }, [votes, search, result, chamber]);
+  }, [votes, search, result, chamber, topic]);
 
   const results = useMemo(() => {
     return [...new Set(votes.map(v => v.result).filter(Boolean))].sort();
@@ -42,17 +59,41 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
     return c === 'Senate' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800';
   };
 
+  const topicColor = (t: string) => {
+    const colors: Record<string, string> = {
+      'Immigration': 'bg-orange-100 text-orange-700',
+      'Armed Forces and National Security': 'bg-slate-100 text-slate-700',
+      'Health': 'bg-pink-100 text-pink-700',
+      'Taxation': 'bg-emerald-100 text-emerald-700',
+      'Economics and Public Finance': 'bg-green-100 text-green-700',
+      'Education': 'bg-violet-100 text-violet-700',
+      'Energy': 'bg-amber-100 text-amber-700',
+      'Environmental Protection': 'bg-teal-100 text-teal-700',
+      'Crime and Law Enforcement': 'bg-red-100 text-red-700',
+      'International Affairs': 'bg-sky-100 text-sky-700',
+      'Nominations': 'bg-indigo-100 text-indigo-700',
+    };
+    return colors[t] || 'bg-gray-100 text-gray-600';
+  };
+
   const barWidth = (yea: number, nay: number) => {
     const total = yea + nay;
     if (total === 0) return 50;
     return Math.round((yea / total) * 100);
   };
 
+  const clearFilters = () => {
+    setSearch('');
+    setResult('all');
+    setChamber('all');
+    setTopic('all');
+  };
+
   return (
     <div>
       {/* Filters */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Search</label>
             <input
@@ -73,6 +114,19 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
               <option value="all">All Chambers ({votes.length})</option>
               {houseCount > 0 && <option value="House">House ({houseCount})</option>}
               {senateCount > 0 && <option value="Senate">Senate ({senateCount})</option>}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Topic</label>
+            <select
+              value={topic}
+              onChange={e => setTopic(e.target.value)}
+              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
+            >
+              <option value="all">All Topics</option>
+              {topicCounts.map(([t, count]) => (
+                <option key={t} value={t}>{t} ({count})</option>
+              ))}
             </select>
           </div>
           <div>
@@ -99,7 +153,7 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
         <div className="text-center py-12 text-gray-500">
           <p className="text-lg">No votes match your filters.</p>
           <button
-            onClick={() => { setSearch(''); setResult('all'); setChamber('all'); }}
+            onClick={clearFilters}
             className="mt-2 text-blue-600 hover:text-blue-800"
           >
             Clear filters
@@ -128,6 +182,11 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
                     {v.billId && (
                       <span className="text-xs text-blue-600 font-medium">
                         {v.billId.toUpperCase()}
+                      </span>
+                    )}
+                    {(v as any).topic && (
+                      <span className={`inline-flex items-center rounded-full text-[10px] px-1.5 py-0.5 font-medium ${topicColor((v as any).topic)}`}>
+                        {(v as any).topic}
                       </span>
                     )}
                   </div>

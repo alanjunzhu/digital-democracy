@@ -77,12 +77,29 @@ try {
   }
 } catch {}
 
+// Cross-link: committee assignments (from member data or committees index)
+let memberCommittees: string[] = [];
+let committeeLinks: Record<string, string> = {};
+try {
+  const committeesPath = join(process.cwd(), 'data', 'committees', 'index.json');
+  if (existsSync(committeesPath)) {
+    const committeesData = JSON.parse(readFileSync(committeesPath, 'utf-8'));
+    // Build name -> systemCode lookup
+    for (const c of committeesData.committees || []) {
+      if (c.name && c.systemCode) committeeLinks[c.name] = c.systemCode;
+    }
+  }
+  // First try from member's own data
+  if (member.committees && member.committees.length > 0) {
+    memberCommittees = member.committees;
+  }
+} catch {}
+
 // Cross-link: financial data (stock trades + conflict analysis)
 let financeProfile: any = null;
 let stockTrades: any[] = [];
 let conflictFlags: any[] = [];
 let sectorBreakdown: any[] = [];
-let memberCommittees: string[] = [];
 try {
   const financePath = join(process.cwd(), 'data', 'finances', 'by-member.json');
   if (existsSync(financePath)) {
@@ -92,7 +109,10 @@ try {
       stockTrades = financeProfile.trades || [];
       conflictFlags = financeProfile.flags || [];
       sectorBreakdown = financeProfile.summary?.topSectors || [];
-      memberCommittees = financeProfile.committees || [];
+      // Override committees with finance-provided ones if available (more accurate)
+      if (financeProfile.committees && financeProfile.committees.length > 0) {
+        memberCommittees = financeProfile.committees;
+      }
     }
   }
 } catch {}
@@ -467,6 +487,27 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
       </div>
     )}
 
+    <!-- Committee Assignments (standalone, shows even without finance data) -->
+    {memberCommittees.length > 0 && stockTrades.length === 0 && (
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">Committee Assignments</h2>
+        <div class="flex flex-wrap gap-1.5">
+          {memberCommittees.map((c: string) => {
+            const code = committeeLinks[c];
+            return code ? (
+              <a href={`${base}committees/${code}/`} class="inline-flex items-center text-xs px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors">
+                {c}
+              </a>
+            ) : (
+              <span class="inline-flex items-center text-xs px-2.5 py-1 rounded-lg bg-gray-100 text-gray-700">
+                {c}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+    )}
+
     <!-- Financial Transparency & Potential Conflicts -->
     {stockTrades.length > 0 && (
       <div class="space-y-6 mt-6">
@@ -589,11 +630,13 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
                   if (cLower.includes('health')) sectors.push('Healthcare');
                   if (cLower.includes('technology') || cLower.includes('science') || cLower.includes('cyber')) sectors.push('Technology');
                   const hasTrades = sectors.some(s => sectorBreakdown.some((sb: any) => sb.sector === s));
+                  const code = committeeLinks[c];
+                  const Tag = code ? 'a' : 'span';
                   return (
-                    <span class={`inline-flex items-center text-xs px-2.5 py-1 rounded-lg ${hasTrades ? 'bg-red-50 text-red-700 border border-red-200 font-medium' : 'bg-gray-100 text-gray-600'}`}>
+                    <a href={code ? `${base}committees/${code}/` : '#'} class={`inline-flex items-center text-xs px-2.5 py-1 rounded-lg ${hasTrades ? 'bg-red-50 text-red-700 border border-red-200 font-medium' : 'bg-gray-100 text-gray-600'} ${code ? 'hover:opacity-80' : ''}`}>
                       {c}
                       {hasTrades && <span class="ml-1 text-red-400">*</span>}
-                    </span>
+                    </a>
                   );
                 })}
               </div>
