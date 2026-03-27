@@ -11,7 +11,8 @@
     "fetch:members": "node scripts/fetch-members.mjs",
     "fetch:bills": "node scripts/fetch-bills.mjs",
     "fetch:committees": "node scripts/fetch-committees.mjs",
-    "fetch:votes": "node scripts/fetch-votes.mjs"
+    "fetch:votes": "node scripts/fetch-votes.mjs",
+    "fetch:finances": "node scripts/fetch-finances.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
