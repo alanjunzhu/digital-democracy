@@ -1,8 +1,8 @@
-name: Fetch Bills Data
+name: Fetch Bills
 
 on:
   schedule:
-    - cron: '0 11 * * 1,4'  # Monday & Thursday at 6 AM EST (11:00 UTC)
+    - cron: '0 11 * * *'  # Daily at 6:00 AM EST (11:00 UTC)
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Fetch bills from Congress.gov
+      - name: Fetch bills from Congress.gov API
         run: node scripts/fetch-bills.mjs
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
