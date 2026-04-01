@@ -1,0 +1,43 @@
+name: Fetch Votes Data
+
+on:
+  schedule:
+    - cron: '0 11 * * 2,5'  # Tuesday and Friday at 6AM EST (11:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-votes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch votes data
+        run: node scripts/fetch-votes.mjs
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/votes/ data/meta/
+          if git diff --staged --quiet; then
+            echo "No vote data changes detected."
+          else
+            git commit -m "chore: update votes data [$(date -u +%Y-%m-%d)]"
+            git pull origin main --rebase
+            git push origin main
+          fi
