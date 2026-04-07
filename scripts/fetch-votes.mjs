@@ -25,6 +25,8 @@ const SESSIONS = [
 ];
 // Probe up to this many roll calls per session per chamber
 const MAX_PROBE = 300;
+// Only include votes from March 1, 2025 6:00 AM EST (11:00 UTC) onwards
+const FROM_DATE = '2025-03-01';
 
 // ─── XML Parsing Helpers ───
 
@@ -335,6 +337,7 @@ function inferTopicFromQuestion(question) {
 
 async function main() {
   console.log('=== Fetching Roll Call Votes (Concurrent) ===\n');
+  console.log(`Filtering votes from: ${FROM_DATE}`);
   const startTime = Date.now();
 
   // Load members index for Senate cross-reference
@@ -373,12 +376,17 @@ async function main() {
     });
 
     let houseFound = 0;
+    let houseSkipped = 0;
     for (let i = 0; i < houseResults.length; i++) {
       const xml = houseResults[i];
       if (!xml) continue;
       try {
         const vote = parseHouseVoteXML(xml, session, year);
         if (vote.rollCallNumber > 0) {
+          if (vote.date && vote.date < FROM_DATE) {
+            houseSkipped++;
+            continue;
+          }
           allHouseVotes.push(vote);
           houseFound++;
         }
@@ -386,7 +394,7 @@ async function main() {
         console.warn(`  Error parsing House S${session} RC ${i + 1}: ${err.message}`);
       }
     }
-    console.log(`  Found ${houseFound} House votes for session ${session}`);
+    console.log(`  Found ${houseFound} House votes for session ${session} (skipped ${houseSkipped} before ${FROM_DATE})`);
 
     // ── Senate Votes: batch fetch all URLs concurrently ──
     console.log(`\n--- Senate Votes (Session ${session}) ---`);
@@ -398,12 +406,17 @@ async function main() {
     });
 
     let senateFound = 0;
+    let senateSkipped = 0;
     for (let i = 0; i < senateResults.length; i++) {
       const xml = senateResults[i];
       if (!xml) continue;
       try {
         const vote = parseSenateVoteXML(xml, session);
         if (vote.rollCallNumber > 0) {
+          if (vote.date && vote.date < FROM_DATE) {
+            senateSkipped++;
+            continue;
+          }
           allSenateVotes.push(vote);
           senateFound++;
         }
@@ -411,7 +424,7 @@ async function main() {
         console.warn(`  Error parsing Senate S${session} #${i + 1}: ${err.message}`);
       }
     }
-    console.log(`  Found ${senateFound} Senate votes for session ${session}`);
+    console.log(`  Found ${senateFound} Senate votes for session ${session} (skipped ${senateSkipped} before ${FROM_DATE})`);
   }
 
   console.log(`\nTotal: ${allHouseVotes.length} House + ${allSenateVotes.length} Senate`);

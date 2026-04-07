@@ -13,6 +13,8 @@ import { writeJSON } from './lib/data-writer.mjs';
 const API_KEY = process.env.CONGRESS_API_KEY;
 const CONGRESS_NUMBER = 119;
 const MAX_BILLS = 500;
+// Only fetch bills from March 1, 2025 6:00 AM EST (11:00 UTC) onwards
+const FROM_DATETIME = '2025-03-01T11:00:00Z';
 
 if (!API_KEY) {
   console.error('Error: CONGRESS_API_KEY environment variable is required.');
@@ -21,7 +23,8 @@ if (!API_KEY) {
 
 async function fetchRecentBills() {
   console.log(`Fetching bills from Congress.gov API (Congress ${CONGRESS_NUMBER})...`);
-  const baseUrl = `${getCongressAPIBaseUrl()}/bill/${CONGRESS_NUMBER}`;
+  console.log(`  Filtering from: ${FROM_DATETIME}`);
+  const baseUrl = `${getCongressAPIBaseUrl()}/bill/${CONGRESS_NUMBER}?fromDateTime=${encodeURIComponent(FROM_DATETIME)}`;
   const allBills = [];
 
   for await (const page of paginateCongressAPI(baseUrl, API_KEY, { limit: 250, maxPages: 2 })) {
