@@ -1,8 +1,46 @@
 {
-  "lastUpdated": "2026-04-27T12:21:02.297Z",
+  "lastUpdated": "2026-04-30T12:15:14.961Z",
   "congress": 119,
   "total": 500,
   "bills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": "161",
+      "billId": "hr161",
+      "title": "New Source Review Permitting Improvement Act",
+      "introducedDate": "2025-01-03",
+      "sponsor": {
+        "bioguideId": "G000568",
+        "name": "H. Griffith",
+        "party": "R",
+        "state": "VA"
+      },
+      "latestAction": "Placed on the Union Calendar, Calendar No. 542.",
+      "latestActionDate": "2026-04-28",
+      "originChamber": "House",
+      "policyArea": "Environmental Protection",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/161"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": "227",
+      "billId": "hr227",
+      "title": "Clergy Act",
+      "introducedDate": "2025-01-07",
+      "sponsor": {
+        "bioguideId": "F000480",
+        "name": "Vince Fong",
+        "party": "R",
+        "state": "CA"
+      },
+      "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
+      "latestActionDate": "2026-04-28",
+      "originChamber": "House",
+      "policyArea": "Social Welfare",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/227"
+    },
     {
       "congress": 119,
       "type": "H.R.",
@@ -158,25 +196,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": "161",
-      "billId": "hr161",
-      "title": "New Source Review Permitting Improvement Act",
-      "introducedDate": "2025-01-03",
-      "sponsor": {
-        "bioguideId": "G000568",
-        "name": "H. Griffith",
-        "party": "R",
-        "state": "VA"
-      },
-      "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 28 - 23.",
-      "latestActionDate": "2026-01-21",
-      "originChamber": "House",
-      "policyArea": "Environmental Protection",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/161"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": "224",
       "billId": "hr224",
       "title": "Disabled Veterans Housing Support Act",
@@ -249,25 +268,6 @@
       "originChamber": "House",
       "policyArea": "Public Lands and Natural Resources",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/179"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": "227",
-      "billId": "hr227",
-      "title": "Clergy Act",
-      "introducedDate": "2025-01-07",
-      "sponsor": {
-        "bioguideId": "F000480",
-        "name": "Vince Fong",
-        "party": "R",
-        "state": "CA"
-      },
-      "latestAction": "Placed on the Union Calendar, Calendar No. 370.",
-      "latestActionDate": "2026-01-07",
-      "originChamber": "House",
-      "policyArea": "Social Welfare",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/227"
     },
     {
       "congress": 119,
