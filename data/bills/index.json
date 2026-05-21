@@ -1,8 +1,46 @@
 {
-  "lastUpdated": "2026-05-18T14:30:22.597Z",
+  "lastUpdated": "2026-05-21T14:14:24.775Z",
   "congress": 119,
   "total": 500,
   "bills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": "210",
+      "billId": "hr210",
+      "title": "Dental Care for Veterans Act",
+      "introducedDate": "2025-01-06",
+      "sponsor": {
+        "bioguideId": "B001285",
+        "name": "Julia Brownley",
+        "party": "D",
+        "state": "CA"
+      },
+      "latestAction": "Committee Hearings Held",
+      "latestActionDate": "2026-05-20",
+      "originChamber": "House",
+      "policyArea": "Armed Forces and National Security",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/210"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": "301",
+      "billId": "hr301",
+      "title": "GEO Act",
+      "introducedDate": "2025-01-09",
+      "sponsor": {
+        "bioguideId": "M001228",
+        "name": "Celeste Maloy",
+        "party": "R",
+        "state": "UT"
+      },
+      "latestAction": "Placed on the Union Calendar, Calendar No. 568.",
+      "latestActionDate": "2026-05-20",
+      "originChamber": "House",
+      "policyArea": "Energy",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/301"
+    },
     {
       "congress": 119,
       "type": "H.R.",
@@ -97,44 +135,6 @@
       "originChamber": "House",
       "policyArea": "Native Americans",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/41"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": "210",
-      "billId": "hr210",
-      "title": "Dental Care for Veterans Act",
-      "introducedDate": "2025-01-06",
-      "sponsor": {
-        "bioguideId": "B001285",
-        "name": "Julia Brownley",
-        "party": "D",
-        "state": "CA"
-      },
-      "latestAction": "Committee Hearings Held",
-      "latestActionDate": "2026-03-18",
-      "originChamber": "House",
-      "policyArea": "Armed Forces and National Security",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/210"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": "301",
-      "billId": "hr301",
-      "title": "GEO Act",
-      "introducedDate": "2025-01-09",
-      "sponsor": {
-        "bioguideId": "M001228",
-        "name": "Celeste Maloy",
-        "party": "R",
-        "state": "UT"
-      },
-      "latestAction": "Ordered to be Reported by Unanimous Consent.",
-      "latestActionDate": "2026-03-05",
-      "originChamber": "House",
-      "policyArea": "Energy",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/301"
     },
     {
       "congress": 119,
