@@ -1,8 +1,65 @@
 {
-  "lastUpdated": "2026-06-01T16:39:04.603Z",
+  "lastUpdated": "2026-06-04T14:00:28.305Z",
   "congress": 119,
   "total": 500,
   "bills": [
+    {
+      "congress": 119,
+      "type": "H.J.Res.",
+      "number": "1",
+      "billId": "hjres1",
+      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+      "introducedDate": "2025-01-03",
+      "sponsor": {
+        "bioguideId": "B001302",
+        "name": "Andy Biggs",
+        "party": "R",
+        "state": "AZ"
+      },
+      "latestAction": "Ordered to be Reported by the Yeas and Nays: 15 - 8.",
+      "latestActionDate": "2026-06-03",
+      "originChamber": "House",
+      "policyArea": "Law",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": "175",
+      "billId": "hr175",
+      "title": "Deport Alien Gang Members Act",
+      "introducedDate": "2025-01-03",
+      "sponsor": {
+        "bioguideId": "M001177",
+        "name": "Tom McClintock",
+        "party": "R",
+        "state": "CA"
+      },
+      "latestAction": "Ordered to be Reported Adversely (Amended) by the Yeas and Nays: 15 - 8.",
+      "latestActionDate": "2026-06-03",
+      "originChamber": "House",
+      "policyArea": "Immigration",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/175"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": "41",
+      "billId": "hr41",
+      "title": "Unrecognized Southeast Alaska Native Communities Recognition and Compensation Act",
+      "introducedDate": "2025-01-03",
+      "sponsor": {
+        "bioguideId": "B001323",
+        "name": "Nicholas Begich",
+        "party": "R",
+        "state": "AK"
+      },
+      "latestAction": "Received in the Senate.",
+      "latestActionDate": "2026-06-03",
+      "originChamber": "House",
+      "policyArea": "Native Americans",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/41"
+    },
     {
       "congress": 119,
       "type": "H.R.",
@@ -116,25 +173,6 @@
       "originChamber": "House",
       "policyArea": "Government Operations and Politics",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/151"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": "41",
-      "billId": "hr41",
-      "title": "Unrecognized Southeast Alaska Native Communities Recognition and Compensation Act",
-      "introducedDate": "2025-01-03",
-      "sponsor": {
-        "bioguideId": "B001323",
-        "name": "Nicholas Begich",
-        "party": "R",
-        "state": "AK"
-      },
-      "latestAction": "Placed on the Union Calendar, Calendar No. 499.",
-      "latestActionDate": "2026-04-02",
-      "originChamber": "House",
-      "policyArea": "Native Americans",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/41"
     },
     {
       "congress": 119,
@@ -6199,25 +6237,6 @@
     },
     {
       "congress": 119,
-      "type": "H.J.Res.",
-      "number": "1",
-      "billId": "hjres1",
-      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
-      "introducedDate": "2025-01-03",
-      "sponsor": {
-        "bioguideId": "B001302",
-        "name": "Andy Biggs",
-        "party": "R",
-        "state": "AZ"
-      },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2025-01-03",
-      "originChamber": "House",
-      "policyArea": "Law",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1"
-    },
-    {
-      "congress": 119,
       "type": "H.R.",
       "number": "68",
       "billId": "hr68",
@@ -6861,25 +6880,6 @@
       "originChamber": "House",
       "policyArea": "Congress",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/4"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": "175",
-      "billId": "hr175",
-      "title": "Deport Alien Gang Members Act",
-      "introducedDate": "2025-01-03",
-      "sponsor": {
-        "bioguideId": "M001177",
-        "name": "Tom McClintock",
-        "party": "R",
-        "state": "CA"
-      },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2025-01-03",
-      "originChamber": "House",
-      "policyArea": "Immigration",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/175"
     },
     {
       "congress": 119,
