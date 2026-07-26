@@ -1,8 +1,27 @@
 {
-  "lastUpdated": "2026-07-23T12:25:28.936Z",
+  "lastUpdated": "2026-07-26T05:40:14.313Z",
   "congress": 119,
   "total": 500,
   "bills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": "204",
+      "billId": "hr204",
+      "title": "ACRES Act",
+      "introducedDate": "2025-01-03",
+      "sponsor": {
+        "bioguideId": "T000165",
+        "name": "Thomas Tiffany",
+        "party": "R",
+        "state": "WI"
+      },
+      "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 490.",
+      "latestActionDate": "2026-07-23",
+      "originChamber": "House",
+      "policyArea": "Public Lands and Natural Resources",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/204"
+    },
     {
       "congress": 119,
       "type": "H.R.",
@@ -230,25 +249,6 @@
       "originChamber": "House",
       "policyArea": "Government Operations and Politics",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/151"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": "204",
-      "billId": "hr204",
-      "title": "ACRES Act",
-      "introducedDate": "2025-01-03",
-      "sponsor": {
-        "bioguideId": "T000165",
-        "name": "Thomas Tiffany",
-        "party": "R",
-        "state": "WI"
-      },
-      "latestAction": "Committee on Energy and Natural Resources. Ordered to be reported without amendment favorably.",
-      "latestActionDate": "2026-03-04",
-      "originChamber": "House",
-      "policyArea": "Public Lands and Natural Resources",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/204"
     },
     {
       "congress": 119,
