@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-08-16T03:09:11.918Z",
+  "lastUpdated": "2026-08-18T11:30:42.350Z",
   "congress": 119,
-  "total": 416,
+  "total": 466,
   "houseTotal": 205,
-  "senateTotal": 211,
+  "senateTotal": 261,
   "votes": [
     {
       "voteId": "h1-rc205",
@@ -2150,6 +2150,146 @@
       "topic": null
     },
     {
+      "voteId": "s1-rc267",
+      "rollCallNumber": 267,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-21",
+      "question": "Motion to Recess for Ninety Minutes",
+      "result": "Motion Rejected (46-51)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 55,
+      "billId": "sjres55",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 44,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 51,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 2,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 46,
+      "totalNay": 51,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00267.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc266",
+      "rollCallNumber": 266,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-21",
+      "question": "Motion to Table the Appeal that Two Points of Order are Not in Order at the Same Time",
+      "result": "Motion to Table Agreed to (51-46)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 55,
+      "billId": "sjres55",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 46,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00266.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc265",
+      "rollCallNumber": 265,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-21",
+      "question": "Motion to Table the Submitted Point of Order: Shall Points of Order Be in Order under the Congressional Review Act?",
+      "result": "Motion to Table Failed (46-52)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 55,
+      "billId": "sjres55",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 44,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 52,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 2,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 46,
+      "totalNay": 52,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00265.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc263",
+      "rollCallNumber": 263,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-21",
+      "question": "Motion to Proceed to S. 1582",
+      "result": "Motion to Proceed Agreed to (69-31)",
+      "voteType": "",
+      "billType": "s",
+      "billNumber": 1582,
+      "billId": "s1582",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 18,
+          "nay": 27,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 2,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 69,
+      "totalNay": 31,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00263.htm",
+      "topic": "Procedural"
+    },
+    {
       "voteId": "h1-rc138",
       "rollCallNumber": 138,
       "congress": 119,
@@ -2310,6 +2450,38 @@
       "topic": "Procedural"
     },
     {
+      "voteId": "s1-rc261",
+      "rollCallNumber": 261,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-19",
+      "question": "Confirmation: Charles Kushner, of New York, to be Ambassador of the United States of America to the French Republic and the Principality of Monaco",
+      "result": "Nomination Confirmed (51-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 1,
+          "nay": 42,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 1,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00261.htm",
+      "topic": "International Affairs"
+    },
+    {
       "voteId": "h1-rc133",
       "rollCallNumber": 133,
       "congress": 119,
@@ -2374,6 +2546,73 @@
       "topic": "Procedural"
     },
     {
+      "voteId": "s1-rc259",
+      "rollCallNumber": 259,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-15",
+      "question": "Motion to Discharge S. Res. 195",
+      "result": "Motion to Discharge Rejected (45-50)",
+      "voteType": "",
+      "billType": "s",
+      "billNumber": 195,
+      "billId": "s195",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 44,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 50,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 1
+        }
+      },
+      "totalYea": 45,
+      "totalNay": 50,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00259.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc258",
+      "rollCallNumber": 258,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-15",
+      "question": "Confirmation: Sean Donahue, of F.L., to be an Assistant Administrator of the Environmental Protection Agency",
+      "result": "Nomination Confirmed (51-46)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 46,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00258.htm",
+      "topic": "Environmental Protection"
+    },
+    {
       "voteId": "h1-rc131",
       "rollCallNumber": 131,
       "congress": 119,
@@ -2435,6 +2674,166 @@
       "totalYea": 20,
       "totalNay": 182,
       "url": "https://clerk.house.gov/Votes/2025130",
+      "topic": null
+    },
+    {
+      "voteId": "s1-rc257",
+      "rollCallNumber": 257,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-14",
+      "question": "Motion to Invoke Cloture: Sean Donahue to be an Assistant Administrator of the Environmental Protection Agency",
+      "result": "Cloture Motion Agreed to (52-47)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00257.htm",
+      "topic": "Environmental Protection"
+    },
+    {
+      "voteId": "s1-rc254",
+      "rollCallNumber": 254,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-14",
+      "question": "Confirmation: Emil Michael, of Florida, to be Under Secretary of Defense for Research and Engineering",
+      "result": "Nomination Confirmed (54-43)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 2,
+          "nay": 42,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 54,
+      "totalNay": 43,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00254.htm",
+      "topic": "Armed Forces and National Security"
+    },
+    {
+      "voteId": "s1-rc252",
+      "rollCallNumber": 252,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-14",
+      "question": "Confirmation: Michael Rigas, of Virginia, to be Deputy Secretary of State for Management and Resources",
+      "result": "Nomination Confirmed (51-46)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 1,
+          "nay": 44,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 46,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00252.htm",
+      "topic": "Energy"
+    },
+    {
+      "voteId": "s1-rc251",
+      "rollCallNumber": 251,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-14",
+      "question": "Motion to Invoke Cloture: Michael Rigas to be Deputy Secretary of State for Management and Resources",
+      "result": "Cloture Motion Agreed to (51-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 1,
+          "nay": 44,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 1,
+          "notVoting": 1
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00251.htm",
+      "topic": "Energy"
+    },
+    {
+      "voteId": "s1-rc250",
+      "rollCallNumber": 250,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-14",
+      "question": "Confirmation: Katharine MacGregor, of Florida, to be Deputy Secretary of the Interior",
+      "result": "Nomination Confirmed (54-40)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 4,
+          "nay": 40,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 49,
+          "nay": 0,
+          "notVoting": 4
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 1
+        }
+      },
+      "totalYea": 54,
+      "totalNay": 40,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00250.htm",
       "topic": null
     },
     {
@@ -2598,6 +2997,198 @@
       "topic": "Procedural"
     },
     {
+      "voteId": "s1-rc249",
+      "rollCallNumber": 249,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-13",
+      "question": "Motion to Invoke Cloture: Katharine MacGregor to be Deputy Secretary of the Interior",
+      "result": "Cloture Motion Agreed to (57-41)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 4,
+          "nay": 40,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 57,
+      "totalNay": 41,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00249.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc248",
+      "rollCallNumber": 248,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-13",
+      "question": "Confirmation: James Danly, of Tennessee, to be Deputy Secretary of Energy",
+      "result": "Nomination Confirmed (52-44)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 43,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 44,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00248.htm",
+      "topic": "Energy"
+    },
+    {
+      "voteId": "s1-rc247",
+      "rollCallNumber": 247,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-13",
+      "question": "Motion to Invoke Cloture: James Danly to be Deputy Secretary of Energy",
+      "result": "Cloture Motion Agreed to (53-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 1,
+          "nay": 44,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00247.htm",
+      "topic": "Energy"
+    },
+    {
+      "voteId": "s1-rc246",
+      "rollCallNumber": 246,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-13",
+      "question": "Confirmation: Troy Meink, of Virginia, to be Secretary of the Air Force",
+      "result": "Nomination Confirmed (74-25)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 21,
+          "nay": 24,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 74,
+      "totalNay": 25,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00246.htm",
+      "topic": null
+    },
+    {
+      "voteId": "s1-rc245",
+      "rollCallNumber": 245,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-13",
+      "question": "Motion to Invoke Cloture: Troy Meink to be Secretary of the Air Force",
+      "result": "Cloture Motion Agreed to (72-26)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 20,
+          "nay": 25,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 72,
+      "totalNay": 26,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00245.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc244",
+      "rollCallNumber": 244,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-13",
+      "question": "Confirmation: Reed Rubinstein, of Maryland, to be Legal Adviser of the Department of State",
+      "result": "Nomination Confirmed (52-46)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 46,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00244.htm",
+      "topic": "Environmental Protection"
+    },
+    {
       "voteId": "h1-rc124",
       "rollCallNumber": 124,
       "congress": 119,
@@ -2660,6 +3251,207 @@
       "totalNay": 1,
       "url": "https://clerk.house.gov/Votes/2025123",
       "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc243",
+      "rollCallNumber": 243,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-12",
+      "question": "Motion to Invoke Cloture: Reed Rubinstein to be Legal Adviser of the Department of State",
+      "result": "Cloture Motion Agreed to (52-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 43,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00243.htm",
+      "topic": "Environmental Protection"
+    },
+    {
+      "voteId": "s1-rc242",
+      "rollCallNumber": 242,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-12",
+      "question": "Confirmation: Monica Crowley, of New York, to be Chief of Protocol and to have the rank of Ambassador",
+      "result": "Nomination Confirmed (52-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 43,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00242.htm",
+      "topic": "International Affairs"
+    },
+    {
+      "voteId": "s1-rc241",
+      "rollCallNumber": 241,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-12",
+      "question": "Motion to Invoke Cloture: Monica Crowley to be Chief of Protocol and to have the rank of Ambassador",
+      "result": "Cloture Motion Agreed to (53-47)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00241.htm",
+      "topic": "International Affairs"
+    },
+    {
+      "voteId": "s1-rc240",
+      "rollCallNumber": 240,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-08",
+      "question": "Motion to Invoke Cloture: Motion to proceed to S. 1582",
+      "result": "Cloture on the Motion to Proceed Rejected (48-49, 3/5 majority required)",
+      "voteType": "",
+      "billType": "s",
+      "billNumber": 1582,
+      "billId": "s1582",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 48,
+          "nay": 3,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 48,
+      "totalNay": 49,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00240.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc239",
+      "rollCallNumber": 239,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-08",
+      "question": "H.J. Res. 60",
+      "result": "Joint Resolution Passed (50-43)",
+      "voteType": "",
+      "billType": "hjres",
+      "billNumber": 60,
+      "billId": "hjres60",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 41,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 50,
+      "totalNay": 43,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00239.htm",
+      "topic": null
+    },
+    {
+      "voteId": "s1-rc238",
+      "rollCallNumber": 238,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-08",
+      "question": "S.J. Res. 7",
+      "result": "Joint Resolution Passed (50-38)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 7,
+      "billId": "sjres7",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 36,
+          "notVoting": 9
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 50,
+      "totalNay": 38,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00238.htm",
+      "topic": null
     },
     {
       "voteId": "h1-rc122",
@@ -2726,6 +3518,41 @@
       "topic": "Procedural"
     },
     {
+      "voteId": "s1-rc237",
+      "rollCallNumber": 237,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-07",
+      "question": "S.J. Res. 13",
+      "result": "Joint Resolution Passed (52-47)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 13,
+      "billId": "sjres13",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00237.htm",
+      "topic": null
+    },
+    {
       "voteId": "h1-rc120",
       "rollCallNumber": 120,
       "congress": 119,
@@ -2788,6 +3615,178 @@
       "totalNay": 0,
       "url": "https://clerk.house.gov/Votes/2025119",
       "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc236",
+      "rollCallNumber": 236,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-06",
+      "question": "Motion to proceed to H.J. Res. 60",
+      "result": "Motion to Proceed Agreed to (53-47)",
+      "voteType": "",
+      "billType": "hjres",
+      "billNumber": 60,
+      "billId": "hjres60",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00236.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc235",
+      "rollCallNumber": 235,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-06",
+      "question": "Motion to proceed to S.J. Res. 7",
+      "result": "Motion to Proceed Agreed to (53-47)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 7,
+      "billId": "sjres7",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00235.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc234",
+      "rollCallNumber": 234,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-06",
+      "question": "Confirmation: Frank Bisignano, of New Jersey, to be Commissioner of Social Security Administration",
+      "result": "Nomination Confirmed (53-47)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00234.htm",
+      "topic": null
+    },
+    {
+      "voteId": "s1-rc233",
+      "rollCallNumber": 233,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-06",
+      "question": "Motion to proceed to S.J. Res. 13",
+      "result": "Motion to Proceed Agreed to (53-46)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 13,
+      "billId": "sjres13",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 1,
+          "notVoting": 1
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 46,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00233.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc232",
+      "rollCallNumber": 232,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-06",
+      "question": "H.J.Res. 61",
+      "result": "Joint Resolution Passed (55-45)",
+      "voteType": "",
+      "billType": "hjres",
+      "billNumber": 61,
+      "billId": "hjres61",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 2,
+          "nay": 43,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 55,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00232.htm",
+      "topic": null
     },
     {
       "voteId": "h1-rc118",
@@ -2854,6 +3853,41 @@
       "topic": "Procedural"
     },
     {
+      "voteId": "s1-rc231",
+      "rollCallNumber": 231,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-05",
+      "question": "Motion to proceed to H.J. Res. 61",
+      "result": "Motion to Proceed Agreed to (51-43)",
+      "voteType": "",
+      "billType": "hjres",
+      "billNumber": 61,
+      "billId": "hjres61",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 2,
+          "nay": 41,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 49,
+          "nay": 0,
+          "notVoting": 4
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 43,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00231.htm",
+      "topic": "Procedural"
+    },
+    {
       "voteId": "h1-rc116",
       "rollCallNumber": 116,
       "congress": 119,
@@ -2916,6 +3950,73 @@
       "totalNay": 0,
       "url": "https://clerk.house.gov/Votes/2025115",
       "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc230",
+      "rollCallNumber": 230,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-01",
+      "question": "Motion to Invoke Cloture: Frank Bisignano to be Commissioner of the Social Security Administration",
+      "result": "Cloture Motion Agreed to (50-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 1,
+          "notVoting": 1
+        }
+      },
+      "totalYea": 50,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00230.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc229",
+      "rollCallNumber": 229,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-05-01",
+      "question": "S.J.Res. 31",
+      "result": "Joint Resolution Passed (52-46)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 31,
+      "billId": "sjres31",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 46,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00229.htm",
+      "topic": null
     },
     {
       "voteId": "s1-rc228",
@@ -3049,6 +4150,41 @@
       "totalYea": 52,
       "totalNay": 40,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00227.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc226",
+      "rollCallNumber": 226,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-30",
+      "question": "Motion to Table the Motion to Reconsider the Vote by which S.J.Res. 49 Failed of Passage",
+      "result": "Motion to Table Agreed to (49-49, Vice President of the United States, voted Yea)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 49,
+      "billId": "sjres49",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 49,
+          "nay": 3,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 49,
+      "totalNay": 49,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00226.htm",
       "topic": "Procedural"
     },
     {
@@ -3862,6 +4998,38 @@
       "totalNay": 26,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00211.htm",
       "topic": null
+    },
+    {
+      "voteId": "s1-rc210",
+      "rollCallNumber": 210,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-11",
+      "question": "Motion to Invoke Cloture: Lt. Gen. John D. Caine (Retired) to be Major General in the Regular Air Force",
+      "result": "Cloture Motion Agreed to (59-25)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 14,
+          "nay": 25,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 44,
+          "nay": 0,
+          "notVoting": 9
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 1
+        }
+      },
+      "totalYea": 59,
+      "totalNay": 25,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00210.htm",
+      "topic": "Procedural"
     },
     {
       "voteId": "s1-rc209",
@@ -4702,6 +5870,38 @@
       "topic": "International Affairs"
     },
     {
+      "voteId": "s1-rc193",
+      "rollCallNumber": 193,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-08",
+      "question": "Confirmation: Elbridge Colby, of the District of Columbia, to be Under Secretary of Defense for Policy",
+      "result": "Nomination Confirmed (54-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 3,
+          "nay": 42,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 1,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 54,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00193.htm",
+      "topic": "Armed Forces and National Security"
+    },
+    {
       "voteId": "h1-rc92",
       "rollCallNumber": 92,
       "congress": 119,
@@ -4764,6 +5964,38 @@
       "totalNay": 211,
       "url": "https://clerk.house.gov/Votes/2025091",
       "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc192",
+      "rollCallNumber": 192,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-07",
+      "question": "Motion to Invoke Cloture: Elbridge Colby to be Under Secretary of Defense for Policy",
+      "result": "Cloture Motion Agreed to (53-39)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 3,
+          "nay": 38,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 1,
+          "notVoting": 1
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 39,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00192.htm",
+      "topic": "Armed Forces and National Security"
     },
     {
       "voteId": "h1-rc90",
@@ -5249,6 +6481,70 @@
       "topic": null
     },
     {
+      "voteId": "s1-rc178",
+      "rollCallNumber": 178,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-04",
+      "question": "Bennet Amdt. No. 1646",
+      "result": "Amendment Rejected (48-51)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 44,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 2,
+          "nay": 51,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 2,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 48,
+      "totalNay": 51,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00178.htm",
+      "topic": null
+    },
+    {
+      "voteId": "s1-rc177",
+      "rollCallNumber": 177,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-04",
+      "question": "Padilla Amdt. No. 1774",
+      "result": "Amendment Rejected (48-51)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 44,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 2,
+          "nay": 51,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 2,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 48,
+      "totalNay": 51,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00177.htm",
+      "topic": null
+    },
+    {
       "voteId": "s1-rc176",
       "rollCallNumber": 176,
       "congress": 119,
@@ -5441,6 +6737,38 @@
       "topic": null
     },
     {
+      "voteId": "s1-rc170",
+      "rollCallNumber": 170,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-04",
+      "question": "Sullivan Amdt. No. 2035",
+      "result": "Amendment Agreed to (51-48)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 2,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 48,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00170.htm",
+      "topic": null
+    },
+    {
       "voteId": "s1-rc169",
       "rollCallNumber": 169,
       "congress": 119,
@@ -5540,6 +6868,41 @@
       "topic": "Health"
     },
     {
+      "voteId": "s1-rc166",
+      "rollCallNumber": 166,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-03",
+      "question": "Motion to Discharge S.J. Res. 26",
+      "result": "Motion to Discharge Rejected (15-83)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 26,
+      "billId": "sjres26",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 14,
+          "nay": 29,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 53,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 15,
+      "totalNay": 83,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00166.htm",
+      "topic": "Procedural"
+    },
+    {
       "voteId": "s1-rc165",
       "rollCallNumber": 165,
       "congress": 119,
@@ -5605,6 +6968,38 @@
       "totalNay": 45,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00164.htm",
       "topic": "Health"
+    },
+    {
+      "voteId": "s1-rc163",
+      "rollCallNumber": 163,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-03",
+      "question": "Confirmation: Dean Sauer, of Missouri, to be Solicitor General of the United States",
+      "result": "Nomination Confirmed (52-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 43,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00163.htm",
+      "topic": null
     },
     {
       "voteId": "s1-rc162",
@@ -5710,6 +7105,70 @@
       "totalNay": 48,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00160.htm",
       "topic": null
+    },
+    {
+      "voteId": "s1-rc159",
+      "rollCallNumber": 159,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-02",
+      "question": "Motion to Invoke Cloture: Harmeet Dhillon to be an Assistant Attorney General",
+      "result": "Cloture Motion Agreed to (52-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 43,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00159.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc158",
+      "rollCallNumber": 158,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-04-02",
+      "question": "Motion to Invoke Cloture: Dean Sauer to be Solicitor General of the United States",
+      "result": "Cloture Motion Agreed to (53-46)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 46,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00158.htm",
+      "topic": "Procedural"
     },
     {
       "voteId": "s1-rc157",
@@ -5934,6 +7393,70 @@
       "totalNay": 0,
       "url": "https://clerk.house.gov/Votes/2025084",
       "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc155",
+      "rollCallNumber": 155,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-03-27",
+      "question": "Confirmation: Paul Lawrence, of Virginia, to be Deputy Secretary of Veterans Affairs",
+      "result": "Nomination Confirmed (51-45)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 1,
+          "notVoting": 1
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00155.htm",
+      "topic": "Armed Forces and National Security"
+    },
+    {
+      "voteId": "s1-rc154",
+      "rollCallNumber": 154,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-03-27",
+      "question": "Motion to Invoke Cloture: Paul Lawrence to be Deputy Secretary of Veterans Affairs",
+      "result": "Cloture Motion Agreed to (53-47)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00154.htm",
+      "topic": "Armed Forces and National Security"
     },
     {
       "voteId": "s1-rc153",
@@ -6192,6 +7715,143 @@
       "totalYea": 6,
       "totalNay": 182,
       "url": "https://clerk.house.gov/Votes/2025077",
+      "topic": null
+    },
+    {
+      "voteId": "s1-rc152",
+      "rollCallNumber": 152,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-03-26",
+      "question": "Motion to Proceed to S.J.Res. 18",
+      "result": "Motion to Proceed Agreed to (52-47)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 18,
+      "billId": "sjres18",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 1,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00152.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc151",
+      "rollCallNumber": 151,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-03-26",
+      "question": "H.J.Res. 25",
+      "result": "Joint Resolution Passed (70-28)",
+      "voteType": "",
+      "billType": "hjres",
+      "billNumber": 25,
+      "billId": "hjres25",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 17,
+          "nay": 26,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 70,
+      "totalNay": 28,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00151.htm",
+      "topic": null
+    },
+    {
+      "voteId": "s1-rc150",
+      "rollCallNumber": 150,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-03-26",
+      "question": "Motion to Proceed to H.J.Res. 25",
+      "result": "Motion to Proceed Agreed to (70-28)",
+      "voteType": "",
+      "billType": "hjres",
+      "billNumber": 25,
+      "billId": "hjres25",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 18,
+          "nay": 26,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 70,
+      "totalNay": 28,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00150.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc149",
+      "rollCallNumber": 149,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-03-26",
+      "question": "Confirmation: Michael Faulkender, of Maryland, to be Deputy Secretary of the Treasury",
+      "result": "Nomination Confirmed (53-43)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 41,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 53,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 43,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00149.htm",
       "topic": null
     },
     {
