@@ -3,5 +3,10 @@
   "name": "Financial Services and General Government Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsap23"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsap00",
+    "name": "Appropriations Committee"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Agriculture Committee",
   "chamber": "House",
   "committeeType": "Standing",
-  "url": "https://www.congress.gov/committee/house/hsag00",
+  "url": "https://www.congress.gov/committee/house-agriculture/hsag00",
   "subcommittees": [
     {
       "systemCode": "hsag22",
@@ -29,5 +29,6 @@
       "systemCode": "hsag29",
       "name": "Livestock, Dairy, and Poultry Subcommittee"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

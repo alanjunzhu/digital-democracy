@@ -3,5 +3,10 @@
   "name": "Near East, South Asia, Central Asia, and Counterterrorism Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssfr07"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssfr00",
+    "name": "Foreign Relations Committee"
+  }
 }

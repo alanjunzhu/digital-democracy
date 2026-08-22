@@ -3,5 +3,10 @@
   "name": "Fiscal Responsibility and Economic Growth Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssfi14"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssfi00",
+    "name": "Finance Committee"
+  }
 }

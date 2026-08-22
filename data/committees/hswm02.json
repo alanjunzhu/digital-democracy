@@ -3,5 +3,10 @@
   "name": "Health Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hswm02"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hswm00",
+    "name": "Ways and Means Committee"
+  }
 }

@@ -3,5 +3,10 @@
   "name": "Intelligence and Special Operations Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsas26"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsas00",
+    "name": "Armed Services Committee"
+  }
 }

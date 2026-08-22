@@ -3,7 +3,7 @@
   "name": "Judiciary Committee",
   "chamber": "Senate",
   "committeeType": "Standing",
-  "url": "https://www.congress.gov/committee/senate/ssju00",
+  "url": "https://www.congress.gov/committee/senate-judiciary/ssju00",
   "subcommittees": [
     {
       "systemCode": "ssju01",
@@ -37,5 +37,6 @@
       "systemCode": "ssju22",
       "name": "Crime and Counterterrorism Subcommittee"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

@@ -3,5 +3,10 @@
   "name": "Health Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsvr03"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsvr00",
+    "name": "Veterans' Affairs Committee"
+  }
 }

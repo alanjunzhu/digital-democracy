@@ -3,5 +3,10 @@
   "name": "Personnel Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssas17"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssas00",
+    "name": "Armed Services Committee"
+  }
 }

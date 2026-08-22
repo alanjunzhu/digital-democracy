@@ -3,5 +3,10 @@
   "name": "Health, Employment, Labor, and Pensions Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsed02"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsed00",
+    "name": "Education and Workforce Committee"
+  }
 }

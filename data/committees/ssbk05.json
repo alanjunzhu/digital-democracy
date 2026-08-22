@@ -3,5 +3,10 @@
   "name": "National Security and International Trade and Finance Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssbk05"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssbk00",
+    "name": "Banking, Housing, and Urban Affairs Committee"
+  }
 }

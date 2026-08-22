@@ -3,5 +3,10 @@
   "name": "Energy Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/sseg01"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "sseg00",
+    "name": "Energy and Natural Resources Committee"
+  }
 }

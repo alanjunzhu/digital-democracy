@@ -3,5 +3,10 @@
   "name": "Counterterrorism and Intelligence Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hshm05"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hshm00",
+    "name": "Homeland Security Committee"
+  }
 }

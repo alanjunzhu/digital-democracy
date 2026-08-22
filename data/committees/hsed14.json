@@ -3,5 +3,10 @@
   "name": "Early Childhood, Elementary, and Secondary Education Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsed14"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsed00",
+    "name": "Education and Workforce Committee"
+  }
 }

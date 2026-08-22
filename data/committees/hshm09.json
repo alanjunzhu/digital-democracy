@@ -3,5 +3,10 @@
   "name": "Oversight, Investigations, and Accountability Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hshm09"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hshm00",
+    "name": "Homeland Security Committee"
+  }
 }

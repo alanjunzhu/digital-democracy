@@ -3,5 +3,10 @@
   "name": "Europe and Regional Security Cooperation Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssfr01"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssfr00",
+    "name": "Foreign Relations Committee"
+  }
 }

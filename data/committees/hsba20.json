@@ -3,5 +3,10 @@
   "name": "Financial Institutions and Monetary Policy Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsba20"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsba00",
+    "name": "Financial Services Committee"
+  }
 }

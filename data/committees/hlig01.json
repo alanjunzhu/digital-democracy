@@ -3,5 +3,10 @@
   "name": "Central Intelligence Agency Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hlig01"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hlig00",
+    "name": "Intelligence (Permanent Select) Committee"
+  }
 }

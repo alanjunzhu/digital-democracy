@@ -3,5 +3,10 @@
   "name": "Department of Homeland Security Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssap14"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssap00",
+    "name": "Appropriations Committee"
+  }
 }

@@ -3,5 +3,10 @@
   "name": "Workforce Protections Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsed10"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsed00",
+    "name": "Education and Workforce Committee"
+  }
 }

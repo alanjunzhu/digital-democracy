@@ -3,5 +3,10 @@
   "name": "Task Force on the Declassification of Federal Secrets Subcommittee",
   "chamber": "House",
   "committeeType": "Task Force",
-  "url": "https://www.congress.gov/committee/house/hzgo34"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hzgo00",
+    "name": ""
+  }
 }

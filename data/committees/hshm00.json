@@ -3,7 +3,7 @@
   "name": "Homeland Security Committee",
   "chamber": "House",
   "committeeType": "Standing",
-  "url": "https://www.congress.gov/committee/house/hshm00",
+  "url": "https://www.congress.gov/committee/house-homeland-security/hshm00",
   "subcommittees": [
     {
       "systemCode": "hshm11",
@@ -29,5 +29,6 @@
       "systemCode": "hshm07",
       "name": "Transportation and Maritime Security Subcommittee"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

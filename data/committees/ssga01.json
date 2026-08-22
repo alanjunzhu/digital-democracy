@@ -3,5 +3,10 @@
   "name": "Permanent Subcommittee on Investigations",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssga01"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssga00",
+    "name": "Homeland Security and Governmental Affairs Committee"
+  }
 }

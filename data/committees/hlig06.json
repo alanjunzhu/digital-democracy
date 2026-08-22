@@ -3,5 +3,10 @@
   "name": "National Intelligence Enterprise Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hlig06"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hlig00",
+    "name": "Intelligence (Permanent Select) Committee"
+  }
 }

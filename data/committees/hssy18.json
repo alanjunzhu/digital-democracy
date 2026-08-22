@@ -3,5 +3,10 @@
   "name": "Environment Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hssy18"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hssy00",
+    "name": "Science, Space, and Technology Committee"
+  }
 }

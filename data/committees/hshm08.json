@@ -3,5 +3,10 @@
   "name": "Cybersecurity and Infrastructure Protection Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hshm08"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hshm00",
+    "name": "Homeland Security Committee"
+  }
 }

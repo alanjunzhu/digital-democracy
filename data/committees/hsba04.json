@@ -3,5 +3,10 @@
   "name": "Housing and Insurance Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsba04"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsba00",
+    "name": "Financial Services Committee"
+  }
 }

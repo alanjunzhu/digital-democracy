@@ -3,5 +3,10 @@
   "name": "State, Foreign Operations, and Related Programs Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssap20"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssap00",
+    "name": "Appropriations Committee"
+  }
 }

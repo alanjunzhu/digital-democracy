@@ -3,5 +3,10 @@
   "name": "Global Health, Global Human Rights, and International Organizations Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsfa06"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsfa00",
+    "name": "Foreign Affairs Committee"
+  }
 }

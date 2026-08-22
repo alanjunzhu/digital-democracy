@@ -3,5 +3,10 @@
   "name": "Environment Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsif18"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsif00",
+    "name": "Energy and Commerce Committee"
+  }
 }

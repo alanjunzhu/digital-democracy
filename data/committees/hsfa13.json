@@ -3,5 +3,10 @@
   "name": "Middle East and North Africa Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsfa13"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsfa00",
+    "name": "Foreign Affairs Committee"
+  }
 }

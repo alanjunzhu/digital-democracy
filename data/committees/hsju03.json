@@ -3,5 +3,10 @@
   "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsju03"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsju00",
+    "name": "Judiciary Committee"
+  }
 }

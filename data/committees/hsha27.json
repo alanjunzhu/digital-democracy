@@ -3,5 +3,10 @@
   "name": "Modernization and Innovation Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsha27"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsha00",
+    "name": "Committee on House Administration"
+  }
 }

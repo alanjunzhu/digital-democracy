@@ -3,5 +3,10 @@
   "name": "Federal Law Enforcement Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsgo33"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsgo00",
+    "name": "Oversight and Government Reform Committee"
+  }
 }

@@ -3,5 +3,10 @@
   "name": "Technology Modernization Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsvr11"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsvr00",
+    "name": "Veterans' Affairs Committee"
+  }
 }

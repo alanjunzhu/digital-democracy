@@ -3,5 +3,10 @@
   "name": "Health Care Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssfi10"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssfi00",
+    "name": "Finance Committee"
+  }
 }

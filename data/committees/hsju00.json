@@ -3,7 +3,7 @@
   "name": "Judiciary Committee",
   "chamber": "House",
   "committeeType": "Standing",
-  "url": "https://www.congress.gov/committee/house/hsju00",
+  "url": "https://www.congress.gov/committee/house-judiciary/hsju00",
   "subcommittees": [
     {
       "systemCode": "hlqj00",
@@ -33,5 +33,6 @@
       "systemCode": "hsju13",
       "name": "Oversight Subcommittee"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

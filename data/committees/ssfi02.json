@@ -3,5 +3,10 @@
   "name": "Social Security, Pensions, and Family Policy Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssfi02"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssfi00",
+    "name": "Finance Committee"
+  }
 }

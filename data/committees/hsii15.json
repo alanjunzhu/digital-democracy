@@ -3,5 +3,10 @@
   "name": "Oversight and Investigations Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsii15"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsii00",
+    "name": "Natural Resources Committee"
+  }
 }
