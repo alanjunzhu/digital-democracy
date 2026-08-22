@@ -28,26 +28,11 @@
  */
 
 import { rowOnOrBefore } from './stock-prices.mjs';
+import { normalizeOwner } from './finance-sources.mjs';
+
+export { normalizeOwner };
 
 export const BENCHMARK_LABEL = 'S&P 500';
-
-/** Owner codes arrive in long and short forms from different sources. */
-const OWNER_LABELS = {
-  SP: 'Spouse',
-  SPOUSE: 'Spouse',
-  JT: 'Joint',
-  JOINT: 'Joint',
-  DC: 'Dependent child',
-  'DEPENDENT CHILD': 'Dependent child',
-  CHILD: 'Dependent child',
-  SELF: 'Self',
-};
-
-export function normalizeOwner(owner) {
-  const key = String(owner || '').trim().toUpperCase();
-  if (!key) return null;
-  return OWNER_LABELS[key] || null;
-}
 
 /**
  * "$1,001 - $15,000" -> { min: 1001, max: 15000, mid: 8000.5 }
@@ -140,13 +125,23 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
 
   const seriesByTicker = new Map(priced.map((p) => [p.trade.ticker, p.series]));
 
-  const firstTrade = priced
+  // Start at the first purchase, not the first trade. An unmatched sale ahead of
+  // it deploys no capital, so every line would sit flat at 0% until the first
+  // buy — a stretch of chart that looks like performance and is really absence.
+  const firstPurchase = priced
+    .filter((p) => p.purchase)
     .map((p) => p.trade.transactionDate)
     .sort()[0];
+  if (!firstPurchase) {
+    // Every sale here is of a position bought before the disclosure window, so
+    // report them rather than returning a bare reason.
+    skipped.unmatchedSales += priced.filter((p) => p.sale).length;
+    return { ok: false, reason: 'no_priced_purchases', skipped };
+  }
 
   // The benchmark trades every market day, so its dates are the shared calendar.
   const calendar = benchmarkSeries
-    .filter((row) => row.date >= firstTrade)
+    .filter((row) => row.date >= firstPurchase)
     .map((row) => row.date);
   if (calendar.length < 2) {
     return { ok: false, reason: 'window_too_short', skipped };
@@ -165,10 +160,18 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
     return true;
   }
 
+  const benchmarkStart = benchmarkSeries[0].date;
+
   let followerSkipped = 0;
   for (const entry of priced) {
     if (!addEvent(entry.trade.transactionDate, { kind: 'member', entry })) {
-      skipped.outsideBenchmark++;
+      // A trade before the first purchase is a sale of a position acquired
+      // earlier — unrepresentable for the same reason as any other unmatched
+      // sale, and quite different from one the benchmark simply cannot price.
+      const pricedByBenchmark =
+        entry.trade.transactionDate >= benchmarkStart && entry.trade.transactionDate <= windowEnd;
+      if (pricedByBenchmark && entry.sale) skipped.unmatchedSales++;
+      else skipped.outsideBenchmark++;
     }
     // A filing dated before the trade it reports is bad upstream data; fall back
     // to the transaction date rather than letting the follower act early.

@@ -214,3 +214,20 @@ test('trades outside the benchmark range are counted, not silently dropped', () 
   // Only the representable purchase contributes.
   assert.ok(Math.abs(result.summary.contributed - 8000.5) < 0.01);
 });
+
+test('the chart starts at the first purchase, not an earlier sale', () => {
+  const result = buildPortfolioSeries(
+    [
+      // An unmatched sale two months before any buying deploys no capital.
+      { ticker: 'WIN', type: 'Sale (Full)', transactionDate: '2025-01-02', amount: '$1,001 - $15,000' },
+      { ticker: 'WIN', type: 'Purchase', transactionDate: '2025-03-03', amount: '$1,001 - $15,000' },
+    ],
+    lookup({ SPY, WIN: WINNER }),
+  );
+
+  assert.equal(result.ok, true);
+  assert.equal(result.dates[0], '2025-03-03');
+  // The earlier sale is unrepresentable, not un-pricable.
+  assert.equal(result.skipped.unmatchedSales, 1);
+  assert.equal(result.skipped.outsideBenchmark, 0);
+});

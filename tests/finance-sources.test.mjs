@@ -3,6 +3,7 @@ import { test } from 'node:test';
 
 import {
   dedupeNameTokens,
+  transactionFamily,
   mapKadoaTrade,
   mergeFinanceTrades,
   normalizeMemberName,
@@ -98,4 +99,50 @@ test('adjacent repeated name tokens collapse', () => {
   // Only adjacent repeats collapse — a real repeated surname survives.
   assert.equal(dedupeNameTokens('John Smith John'), 'John Smith John');
   assert.equal(dedupeNameTokens(''), '');
+});
+
+test('one filing parsed by two sources dedupes despite different wording', () => {
+  // CongressWatch and Kadoa describe the same BAC sale from the same PDF.
+  const congresswatch = {
+    member: 'James A. Himes',
+    ticker: 'BAC',
+    type: 'Sale',
+    owner: 'Joint',
+    amount: '$1,001 - $15,000',
+    transactionDate: '2026-07-20',
+    url: 'https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035047.pdf',
+  };
+  const kadoa = { ...congresswatch, type: 'Sale (Full)', owner: 'JT', source: 'kadoa' };
+
+  assert.equal(tradeDedupeKey(congresswatch), tradeDedupeKey(kadoa));
+  assert.equal(mergeFinanceTrades([congresswatch], [kadoa]).length, 1);
+});
+
+test('genuinely different line items in one filing stay separate', () => {
+  const base = {
+    member: 'Scott Franklin',
+    ticker: 'CMCSA',
+    type: 'Sale (Full)',
+    transactionDate: '2025-08-04',
+    url: 'https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2025/20030918.pdf',
+  };
+  // Same filing, but a spouse account and the member's own, at different sizes.
+  const spouse = { ...base, owner: 'SP', amount: '$1,001 - $15,000' };
+  const self = { ...base, owner: '', amount: '$15,001 - $50,000' };
+
+  assert.notEqual(tradeDedupeKey(spouse), tradeDedupeKey(self));
+  assert.equal(mergeFinanceTrades([spouse], [self]).length, 2);
+});
+
+test('trades with no filing url keep the member-scoped key', () => {
+  const a = { member: 'A', ticker: 'X', type: 'Purchase', amount: '$1', transactionDate: '2025-01-01' };
+  const b = { member: 'B', ticker: 'X', type: 'Purchase', amount: '$1', transactionDate: '2025-01-01' };
+  assert.notEqual(tradeDedupeKey(a), tradeDedupeKey(b));
+});
+
+test('transaction wording collapses to a family', () => {
+  assert.equal(transactionFamily('Sale (Full)'), 'sale');
+  assert.equal(transactionFamily('Sale (Partial)'), 'sale');
+  assert.equal(transactionFamily('Purchase'), 'purchase');
+  assert.equal(transactionFamily('Exchange'), 'exchange');
 });
