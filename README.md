@@ -11,9 +11,9 @@ A free, open-source transparency tool for monitoring the **119th United States C
 - **Member Directory** — All 535+ members with photos, party, state, chamber, and contact info
 - **Member Profiles** — Biography, service history, sponsored bills grouped by legislative stage, voting record categorized by policy topic, and a financial transparency section
 - **Financial Conflict Detection** — Cross-references member stock trades (via STOCK Act disclosures) with their committee assignments to flag potential conflicts of interest
-- **Bill Tracking** — Recent bills filterable by stage (Introduced / In Committee / Passed / Signed into Law) with grouping and summaries
+- **Bill Tracking** — The most recently active bills, filterable by stage (Introduced / In Committee / Passed / Signed into Law) with grouping and summaries
 - **Roll Call Votes** — House and Senate votes for both sessions of the 119th Congress, filterable by chamber and topic
-- **Committee Directory** — All standing committees in both chambers
+- **Committee Directory** — All standing committees in both chambers, each listing the legislation referred to it
 - **Analytics Dashboard** — Party breakdown, bill stage distribution, and voting patterns
 - **Automated Weekly Updates** — GitHub Actions fetches fresh data from official sources every Sunday
 - **Fully Static** — Built with Astro, fast to load, and free to host on GitHub Pages
@@ -24,7 +24,7 @@ A free, open-source transparency tool for monitoring the **119th United States C
 
 | Source | Data Provided |
 |--------|---------------|
-| [Congress.gov API v3](https://api.congress.gov/) | Members, bills, committees |
+| [Congress.gov API v3](https://api.congress.gov/) | Members, bills, committees, committee legislation |
 | [unitedstates.io](https://theunitedstates.io/) | Biographical info, service history, contact details, social media |
 | [clerk.house.gov XML](https://clerk.house.gov/legislative/legvotes.aspx) | House roll call votes (no API key required) |
 | [senate.gov XML](https://www.senate.gov/legislative/votes_new.htm) | Senate roll call votes (no API key required) |
@@ -83,13 +83,17 @@ digital-democracy/
 │       └── global.css                   # Tailwind directives
 ├── scripts/
 │   ├── fetch-members.mjs                # Fetch all members (Congress.gov + unitedstates.io)
-│   ├── fetch-bills.mjs                  # Fetch recent bills with sub-resources
-│   ├── fetch-committees.mjs             # Fetch committee list
+│   ├── fetch-bills.mjs                  # Fetch recently active bills with sub-resources
+│   ├── fetch-committees.mjs             # Fetch committees + the legislation referred to each
 │   ├── fetch-votes.mjs                  # Fetch House + Senate XML votes
 │   ├── fetch-finances.mjs               # Fetch stock trades + conflict analysis
+│   ├── fix-data-urls.mjs                # Rebuild stored congress.gov URLs (no API calls)
 │   └── lib/
 │       ├── api-client.mjs               # HTTP client with retry, pagination, batch concurrency
 │       └── data-writer.mjs              # File I/O utilities
+├── shared/
+│   └── congress-urls.mjs                # congress.gov URL builders used by scripts and pages
+├── tests/                               # node --test unit tests
 ├── data/                                # Generated JSON (committed to repo)
 │   ├── members/                         # index.json + {bioguideId}.json
 │   ├── bills/                           # index.json + {billId}.json
@@ -135,6 +139,14 @@ npm run dev
 ```
 
 The site will be available at `http://localhost:4321/digital-democracy/`.
+
+### Tests
+
+```bash
+npm test
+```
+
+Covers the congress.gov URL builders and the normalization the fetch scripts apply to API responses.
 
 ### Build for Production
 
