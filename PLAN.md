@@ -177,10 +177,37 @@ Now a start date more than `MAX_PRICE_STALENESS_DAYS` past its nearest close is
 refused outright, and a horizon the series never reaches returns null with
 `horizonComplete: false` so the UI can say the window is still running.
 
-**Next.** A member-level chart: portfolio mirroring their disclosed trades
-against both a cash baseline and SPY, with committee-overlap trades marked. That
-needs a midpoint parser for the disclosed amount ranges (`$1,001 - $15,000`),
-and must be labeled an estimate — disclosures give ranges, not positions.
+### Member portfolio vs the market
+
+**Goal.** One chart per member answering "if you had mirrored their disclosed
+purchases, how would you have done?" — against the S&P 500 and against not
+investing.
+
+**Model.** Every purchase contributes the midpoint of its amount range to all
+lines on the same day; identical cash flows are what make the comparison fair, so
+the cash line doubles as the capital-deployed line. A sale closes up to the
+quantity held from earlier in-window purchases and moves the proceeds to that
+portfolio's own cash sleeve — the benchmark is untouched by it, and that
+divergence is the value or cost of the decision to sell. A fourth line repeats the
+purchases on each trade's disclosure date, so the gap to the member line is the
+part of the return the filings never made available. The chart plots growth per
+dollar invested; raw dollars squeeze every line into the top of the plot, because
+contributions arrive in a lump early.
+
+**Traps found while building it.** The follower line needs its *own*
+contributed-to-date as its denominator — measured against the member's it reads as
+a 22% loss for the crime of not having bought yet. Valuing holdings by scanning
+each price series per day is quadratic and a member with 1,500 trades across 80
+tickers dominates the build, so each series is walked once against the shared
+calendar. Members who only sold in the window contribute nothing and produced an
+all-zero chart; that is now refused rather than drawn. And the y-axis tick range
+has to round *up* to cover the maximum, or the best-performing series clips out of
+frame.
+
+**Honest limits, all on the page.** Disclosures give ranges, not positions, so
+81% of trades sit in the widest-relative bracket and every value is an estimate.
+Sales of positions acquired before the window cannot be represented and are
+counted. Trades with no cached price are excluded and counted.
 
 ### Party alignment scores
 

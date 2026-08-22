@@ -220,3 +220,56 @@ export interface PrecomputedTiming {
   prices?: PricePoint[];
   counterfactuals?: TradeCounterfactuals;
 }
+
+export interface PortfolioMarker {
+  date: string;
+  ticker: string;
+  type: string;
+  isPurchase: boolean;
+  amountMid: number;
+  amountLabel: string;
+  owner: string | null;
+  sector: string | null;
+  committeeOverlap: boolean;
+  disclosureDate: string | null;
+}
+
+export interface PortfolioSummary {
+  asOf: string | null;
+  endMember: number | null;
+  endBenchmark: number | null;
+  endCash: number | null;
+  endFollower: number | null;
+  contributed: number;
+  returnPct: number | null;
+  benchmarkReturnPct: number | null;
+  vsBenchmarkPct: number | null;
+  vsCashPct: number | null;
+  followerReturnPct: number | null;
+  /** Member's edge over the index minus what a filing reader could have captured. */
+  disclosureGapPct: number | null;
+}
+
+/** Output of buildPortfolioSeries() in shared/portfolio-series.mjs. */
+export interface MemberPortfolio {
+  ok: true;
+  estimated: boolean;
+  benchmarkTicker: string;
+  contributed: number;
+  dates: string[];
+  member: number[];
+  benchmark: number[];
+  cash: number[];
+  follower: number[];
+  followerCash: number[];
+  markers: PortfolioMarker[];
+  followerSkipped: number;
+  skipped: {
+    noPrice: number;
+    noAmount: number;
+    unmatchedSales: number;
+    /** Dated outside the benchmark series, so they could not be simulated. */
+    outsideBenchmark: number;
+  };
+  summary: PortfolioSummary;
+}

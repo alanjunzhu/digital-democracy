@@ -6,10 +6,13 @@ import MemberVoteRow from '../../components/shared/MemberVoteRow.astro';
 import MemberFilingRow from '../../components/shared/MemberFilingRow.astro';
 import ExpandableTradeList from '../../components/shared/ExpandableTradeList.astro';
 import TradeTimingExplorer from '../../components/interactive/TradeTimingExplorer';
+import MemberPortfolioChart from '../../components/interactive/MemberPortfolioChart';
 import { tickerQuoteUrl, tradeDisclosureUrl } from '../../../shared/finance-sources.mjs';
 import { buildTradeContext, isPurchaseType, isSaleType } from '../../../shared/trade-timing.mjs';
 import { createTimingAttacher } from '../../../shared/timing-precompute.mjs';
 import { loadDataJSON } from '../../../shared/data-loader.mjs';
+import { buildPortfolioSeries, BENCHMARK_LABEL } from '../../../shared/portfolio-series.mjs';
+import { createPriceCacheReader, decodePriceSeries, BENCHMARK_TICKER } from '../../../shared/price-cache.mjs';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
@@ -224,6 +227,30 @@ const overlapTimingTrades = financeProfile
         );
     })()
   : [];
+
+// Portfolio counterfactual: mirror the disclosed purchases against the index and
+// against not investing. Prices come from the build-time cache, never the browser.
+let memberPortfolio: any = null;
+if (financeProfile && stockTrades.length > 0) {
+  const readPriceCache = createPriceCacheReader(loadDataJSON);
+  const decoded = new Map<string, any>();
+  const getSeries = (ticker: string) => {
+    if (!decoded.has(ticker)) decoded.set(ticker, decodePriceSeries(readPriceCache(ticker)));
+    const rows = decoded.get(ticker);
+    return rows?.length ? rows : null;
+  };
+
+  const overlapSectors = new Set(financeProfile.committeeSectors || []);
+  const tradesForPortfolio = stockTrades.map((t: any) => ({
+    ...t,
+    committeeOverlap: t.sector != null && overlapSectors.has(t.sector),
+  }));
+
+  const built = buildPortfolioSeries(tradesForPortfolio, getSeries, {
+    benchmarkTicker: BENCHMARK_TICKER,
+  });
+  if (built.ok) memberPortfolio = built;
+}
 
 // Group votes by topic for categorized display
 let votesByTopic: Record<string, any[]> = {};
@@ -675,6 +702,15 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
               </div>
             </div>
           </div>
+        )}
+
+        {memberPortfolio && (
+          <MemberPortfolioChart
+            portfolio={memberPortfolio}
+            memberName={member.name}
+            benchmarkLabel={BENCHMARK_LABEL}
+            client:load
+          />
         )}
 
         {overlapTimingTrades.length > 0 && (

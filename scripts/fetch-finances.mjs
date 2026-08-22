@@ -16,6 +16,7 @@ import { writeJSON, readJSON } from './lib/data-writer.mjs';
 import { fetchWithRetry, batchFetchJSON, mergeFetchOptions } from './lib/api-client.mjs';
 import { fetchUnitedstatesFile, mapCommitteeMemberships } from './lib/unitedstates.mjs';
 import {
+  dedupeNameTokens,
   HOUSE_FILING_TYPES,
   mapKadoaTrade,
   mergeFinanceTrades,
@@ -568,7 +569,7 @@ export function buildMemberProfiles(allTrades, committeeMemberships) {
   const byMember = {};
 
   for (const trade of allTrades) {
-    const memberName = (trade.member || '').trim();
+    const memberName = dedupeNameTokens(trade.member);
     const bioguideId = matchTradeBioguide(trade, nameLookup);
 
     if (!bioguideId) continue;

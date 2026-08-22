@@ -75,10 +75,19 @@ export function collectTickerWindows(financeData, { includeAll = false } = {}) {
   }
 
   const rows = [...windows.values()].sort((a, b) => b.trades - a.trades);
-  // The benchmark backs the "vs S&P 500" baseline and must span every trade.
+
+  // The benchmark drives the portfolio calendar, so its series has to span every
+  // trade. Members do trade SPY themselves, and left as an ordinary ticker its
+  // window would start at their first SPY trade — silently truncating everyone
+  // else's history. Widen it whether or not it is already in the list.
   const spanStart = rows.map((r) => r.first).filter(Boolean).sort()[0] || null;
-  if (spanStart && !windows.has(BENCHMARK_TICKER)) {
-    rows.unshift({ ticker: BENCHMARK_TICKER, first: spanStart, last: today(), trades: 0, overlap: false, benchmark: true });
+  if (spanStart) {
+    const existing = rows.findIndex((r) => r.ticker === BENCHMARK_TICKER);
+    const benchmark = existing >= 0 ? rows.splice(existing, 1)[0] : { ticker: BENCHMARK_TICKER, trades: 0, overlap: false };
+    benchmark.first = spanStart;
+    benchmark.last = today();
+    benchmark.benchmark = true;
+    rows.unshift(benchmark);
   }
 
   return rows;

@@ -111,3 +111,26 @@ test('a start date past the end of the series is not priced from a stale close',
   // of 120, and 30 days on reaches the 2025-03-01 close of 130.
   assert.ok(Math.abs(forwardReturnDetail(prices, '2025-02-03', 30).pct - 8.3333) < 0.001);
 });
+
+test('the benchmark window spans every trade even when members trade it themselves', () => {
+  const withSpyTrades = {
+    members: {
+      A000001: {
+        committeeSectors: ['Technology'],
+        trades: [
+          { ticker: 'MSFT', sector: 'Technology', type: 'Purchase', transactionDate: '2024-08-22' },
+          // A member trading SPY must not shrink the benchmark's own window.
+          { ticker: 'SPY', sector: 'Finance', type: 'Purchase', transactionDate: '2025-11-13' },
+        ],
+      },
+    },
+  };
+
+  const rows = collectTickerWindows(withSpyTrades, { includeAll: true });
+  const benchmark = rows.find((r) => r.ticker === BENCHMARK_TICKER);
+  assert.equal(rows[0].ticker, BENCHMARK_TICKER, 'benchmark is fetched first');
+  assert.equal(benchmark.benchmark, true);
+  assert.equal(benchmark.first, '2024-08-22', 'window widened back to the earliest trade');
+  // It is still only listed once.
+  assert.equal(rows.filter((r) => r.ticker === BENCHMARK_TICKER).length, 1);
+});
