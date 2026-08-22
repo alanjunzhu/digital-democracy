@@ -9,51 +9,63 @@
  *   data/members/{bioguideId}.json - Individual member details
  */
 
+import { pathToFileURL } from 'url';
 import { fetchJSON, paginateCongressAPI, getCongressAPIBaseUrl, batchProcess } from './lib/api-client.mjs';
 import { writeJSON, readJSON } from './lib/data-writer.mjs';
 
 const API_KEY = process.env.CONGRESS_API_KEY;
 const CONGRESS_NUMBER = 119; // Current congress
 
-if (!API_KEY) {
-  console.error('Error: CONGRESS_API_KEY environment variable is required.');
-  console.error('Get a free key at: https://api.data.gov/signup/');
-  process.exit(1);
+
+/**
+ * theunitedstates.io stopped resolving, which silently emptied every member's
+ * name, website and social links. The same files are published by the project's
+ * GitHub Pages site, so try that first and keep the old host as a fallback.
+ */
+const LEGISLATOR_HOSTS = [
+  'https://unitedstates.github.io/congress-legislators',
+  'https://theunitedstates.io/congress-legislators',
+];
+
+export async function fetchLegislatorFile(fileName, label) {
+  for (const host of LEGISLATOR_HOSTS) {
+    try {
+      const data = await fetchJSON(`${host}/${fileName}`);
+      if (Array.isArray(data) && data.length > 0) {
+        console.log(`  Got ${data.length} ${label} records from ${host}`);
+        return data;
+      }
+      console.warn(`  ${host} returned no ${label} records`);
+    } catch (err) {
+      console.warn(`  ${host} unavailable for ${label}: ${err.message}`);
+    }
+  }
+  console.warn(`  Warning: no source returned ${label}; existing values will be kept.`);
+  return null;
 }
 
 async function fetchLegislatorsYaml() {
   console.log('Fetching unitedstates/congress-legislators data...');
-  const url = 'https://theunitedstates.io/congress-legislators/legislators-current.json';
-  try {
-    const data = await fetchJSON(url);
-    console.log(`  Got ${data.length} legislators from unitedstates project`);
-    const index = {};
-    for (const leg of data) {
-      index[leg.id.bioguide] = leg;
-    }
-    return index;
-  } catch (err) {
-    console.warn(`  Warning: Could not fetch legislators data: ${err.message}`);
-    return {};
+  const data = await fetchLegislatorFile('legislators-current.json', 'legislator');
+  if (!data) return null;
+
+  const index = {};
+  for (const leg of data) {
+    if (leg?.id?.bioguide) index[leg.id.bioguide] = leg;
   }
+  return index;
 }
 
 async function fetchSocialMedia() {
   console.log('Fetching social media data...');
-  const url = 'https://theunitedstates.io/congress-legislators/legislators-social-media.json';
-  try {
-    const data = await fetchJSON(url);
-    const index = {};
-    for (const entry of data) {
-      const social = entry.social || entry;
-      index[entry.id.bioguide] = social;
-    }
-    console.log(`  Got social data for ${Object.keys(index).length} members`);
-    return index;
-  } catch (err) {
-    console.warn(`  Warning: Could not fetch social media data: ${err.message}`);
-    return {};
+  const data = await fetchLegislatorFile('legislators-social-media.json', 'social media');
+  if (!data) return null;
+
+  const index = {};
+  for (const entry of data) {
+    if (entry?.id?.bioguide) index[entry.id.bioguide] = entry.social || entry;
   }
+  return index;
 }
 
 async function fetchCongressMembers() {
@@ -69,6 +81,70 @@ async function fetchCongressMembers() {
 
   console.log(`  Total: ${allMembers.length} members from Congress.gov`);
   return allMembers;
+}
+
+/**
+ * Congress.gov lists members as "Last, First Middle" without separate name
+ * fields, so parse it rather than leaving names empty when the supplementary
+ * source is unavailable.
+ */
+export function splitMemberName(name) {
+  const raw = String(name || '').replace(/\s+/g, ' ').trim();
+  if (!raw) return { firstName: '', lastName: '' };
+
+  if (!raw.includes(',')) {
+    const words = raw.split(' ');
+    return { firstName: words[0], lastName: words.length > 1 ? words[words.length - 1] : '' };
+  }
+
+  const [family, ...rest] = raw.split(',');
+  // "Smith, John, Jr." — the suffix follows the given names.
+  const given = (rest.join(',').split(',')[0] || '').trim();
+  return { firstName: given.split(' ')[0] || '', lastName: family.trim() };
+}
+
+/** Senate first, then House; within a chamber by state, then surname. */
+export function compareMembers(a, b) {
+  if (a.chamber !== b.chamber) return a.chamber === 'Senate' ? -1 : 1;
+  if (a.state !== b.state) return (a.state || '').localeCompare(b.state || '');
+  return (a.lastName || '').localeCompare(b.lastName || '');
+}
+
+export function isEmptyValue(value) {
+  if (value === undefined || value === null || value === '') return true;
+  if (Array.isArray(value)) return value.length === 0;
+  if (typeof value === 'object') return Object.values(value).every(isEmptyValue);
+  return false;
+}
+
+/**
+ * Fill blanks in a freshly built record from the record already on disk.
+ *
+ * A fetch that loses one of its sources should leave what it cannot refresh
+ * alone. Without this, an outage at the supplementary source rewrote all 553
+ * members with empty names and websites.
+ */
+export function preserveExistingValues(next, previous) {
+  if (!previous || typeof previous !== 'object' || Array.isArray(previous)) return next;
+
+  const merged = { ...next };
+  for (const key of Object.keys(next)) {
+    const nextValue = merged[key];
+    const previousValue = previous[key];
+    if (isEmptyValue(previousValue)) continue;
+
+    if (isEmptyValue(nextValue)) {
+      merged[key] = previousValue;
+    } else if (
+      nextValue && previousValue &&
+      typeof nextValue === 'object' && !Array.isArray(nextValue) &&
+      typeof previousValue === 'object' && !Array.isArray(previousValue)
+    ) {
+      merged[key] = preserveExistingValues(nextValue, previousValue);
+    }
+  }
+
+  return merged;
 }
 
 function extractCommittees(detail) {
@@ -101,7 +177,7 @@ function extractCommittees(detail) {
   return committees;
 }
 
-function normalizeMember(congressMember, detail, legData, socialData) {
+export function normalizeMember(congressMember, detail, legData, socialData) {
   const bioguideId = congressMember.bioguideId;
   const currentTerm = detail?.terms?.slice(-1)[0] || {};
 
@@ -115,11 +191,13 @@ function normalizeMember(congressMember, detail, legData, socialData) {
   const state = congressMember.state || legData?.terms?.slice(-1)?.[0]?.state || '';
   const district = legData?.terms?.slice(-1)?.[0]?.district;
 
+  const parsedName = splitMemberName(congressMember.name);
+
   const summary = {
     bioguideId,
     name: congressMember.name || `${congressMember.firstName} ${congressMember.lastName}`,
-    firstName: congressMember.firstName || legData?.name?.first || '',
-    lastName: congressMember.lastName || legData?.name?.last || '',
+    firstName: congressMember.firstName || legData?.name?.first || parsedName.firstName,
+    lastName: congressMember.lastName || legData?.name?.last || parsedName.lastName,
     party,
     state,
     district: chamber === 'House' ? district : undefined,
@@ -159,6 +237,12 @@ async function main() {
   console.log('=== Fetching Congress Members ===\n');
   const startTime = Date.now();
 
+  if (!API_KEY) {
+    console.error('Error: CONGRESS_API_KEY environment variable is required.');
+    console.error('Get a free key at: https://api.data.gov/signup/');
+    process.exit(1);
+  }
+
   // Fetch all data sources in parallel
   const [congressMembers, legIndex, socialIndex] = await Promise.all([
     fetchCongressMembers(),
@@ -184,7 +268,7 @@ async function main() {
     { concurrency: 10, delayMs: 100, label: 'member details' }
   );
 
-  // Normalize all members
+  // Normalize all members, keeping anything a failed source could not refresh
   const summaries = [];
   for (let i = 0; i < congressMembers.length; i++) {
     const cm = congressMembers[i];
@@ -192,20 +276,16 @@ async function main() {
     if (!bioguideId) continue;
 
     const detail = details[i];
-    const legData = legIndex[bioguideId] || null;
-    const socialData = socialIndex[bioguideId] || null;
+    const legData = legIndex?.[bioguideId] || null;
+    const socialData = socialIndex?.[bioguideId] || null;
 
     const { summary, detail: memberDetail } = normalizeMember(cm, detail, legData, socialData);
-    summaries.push(summary);
-    writeJSON(`members/${bioguideId}.json`, memberDetail);
+    const previous = readJSON(`members/${bioguideId}.json`);
+    summaries.push(preserveExistingValues(summary, previous));
+    writeJSON(`members/${bioguideId}.json`, preserveExistingValues(memberDetail, previous));
   }
 
-  // Sort summaries: Senate first, then House; within each by state then name
-  summaries.sort((a, b) => {
-    if (a.chamber !== b.chamber) return a.chamber === 'Senate' ? -1 : 1;
-    if (a.state !== b.state) return a.state.localeCompare(b.state);
-    return a.lastName.localeCompare(b.lastName);
-  });
+  summaries.sort(compareMembers);
 
   const index = {
     lastUpdated: new Date().toISOString(),
@@ -215,7 +295,14 @@ async function main() {
   };
   writeJSON('members/index.json', index);
 
+  const missingNames = summaries.filter(m => !m.firstName || !m.lastName).length;
+  const missingWebsites = summaries.filter(m => !m.website).length;
+  if (missingNames > 0 || missingWebsites > 0) {
+    console.warn(`Warning: ${missingNames} member(s) without a parsed name, ${missingWebsites} without a website.`);
+  }
+
   writeJSON('meta/last-updated.json', {
+    ...(readJSON('meta/last-updated.json') || {}),
     members: new Date().toISOString(),
   });
 
@@ -223,7 +310,9 @@ async function main() {
   console.log(`\nDone! Wrote ${summaries.length} member files + index in ${elapsed}s.`);
 }
 
-main().catch(err => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch(err => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  });
+}
