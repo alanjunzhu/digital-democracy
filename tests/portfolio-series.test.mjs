@@ -196,3 +196,21 @@ test('the follower is measured against its own deployed capital', () => {
   // The member tripled, so the whole 200% was unavailable to a filing reader.
   assert.ok(Math.abs(result.summary.disclosureGapPct - 200) < 0.01);
 });
+
+test('trades outside the benchmark range are counted, not silently dropped', () => {
+  // The benchmark only starts in 2025, so a 2024 purchase cannot be simulated.
+  const result = buildPortfolioSeries(
+    [
+      { ticker: 'WIN', type: 'Purchase', transactionDate: '2024-06-01', amount: '$1,001 - $15,000' },
+      { ticker: 'WIN', type: 'Purchase', transactionDate: '2025-02-03', amount: '$1,001 - $15,000' },
+    ],
+    lookup({
+      SPY,
+      WIN: seriesFrom([['2024-06-01', 10], ...WINNER.map((r) => [r.date, r.close])]),
+    }),
+  );
+
+  assert.equal(result.skipped.outsideBenchmark, 1);
+  // Only the representable purchase contributes.
+  assert.ok(Math.abs(result.summary.contributed - 8000.5) < 0.01);
+});

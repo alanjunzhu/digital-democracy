@@ -111,7 +111,7 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
   }
 
   const priced = [];
-  const skipped = { noPrice: 0, noAmount: 0, unmatchedSales: 0 };
+  const skipped = { noPrice: 0, noAmount: 0, unmatchedSales: 0, outsideBenchmark: 0 };
 
   for (const trade of trades || []) {
     const purchase = isPurchase(trade.type);
@@ -154,9 +154,12 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
   const windowEnd = calendar[calendar.length - 1];
 
   // Events keyed by the date each portfolio acts on them.
+  const windowStart = calendar[0];
   const byDate = new Map();
   function addEvent(date, event) {
-    if (!date || date > windowEnd) return false;
+    // Only calendar days are simulated, so an event outside the benchmark's own
+    // range would never be applied. Report it rather than losing it.
+    if (!date || date > windowEnd || date < windowStart) return false;
     if (!byDate.has(date)) byDate.set(date, []);
     byDate.get(date).push(event);
     return true;
@@ -164,7 +167,9 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
 
   let followerSkipped = 0;
   for (const entry of priced) {
-    addEvent(entry.trade.transactionDate, { kind: 'member', entry });
+    if (!addEvent(entry.trade.transactionDate, { kind: 'member', entry })) {
+      skipped.outsideBenchmark++;
+    }
     // A filing dated before the trade it reports is bad upstream data; fall back
     // to the transaction date rather than letting the follower act early.
     const disclosed = entry.trade.disclosureDate && entry.trade.disclosureDate >= entry.trade.transactionDate

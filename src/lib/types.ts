@@ -264,6 +264,12 @@ export interface MemberPortfolio {
   followerCash: number[];
   markers: PortfolioMarker[];
   followerSkipped: number;
-  skipped: { noPrice: number; noAmount: number; unmatchedSales: number };
+  skipped: {
+    noPrice: number;
+    noAmount: number;
+    unmatchedSales: number;
+    /** Dated outside the benchmark series, so they could not be simulated. */
+    outsideBenchmark: number;
+  };
   summary: PortfolioSummary;
 }

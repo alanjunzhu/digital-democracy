@@ -320,10 +320,14 @@ export default function MemberPortfolioChart({
             modelled.
           </p>
         )}
-        {(skipped.noPrice > 0 || skipped.noAmount > 0) && (
+        {(skipped.noPrice > 0 || skipped.noAmount > 0 || skipped.outsideBenchmark > 0) && (
           <p>
             Excluded: {skipped.noPrice} trade{skipped.noPrice === 1 ? '' : 's'} with no cached price
-            history, {skipped.noAmount} with no reported amount.
+            history, {skipped.noAmount} with no reported amount
+            {skipped.outsideBenchmark > 0
+              ? `, ${skipped.outsideBenchmark} dated before the benchmark series begins`
+              : ''}
+            .
           </p>
         )}
         <p className="text-gray-400 pt-1 border-t border-gray-200">
