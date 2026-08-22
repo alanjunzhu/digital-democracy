@@ -110,6 +110,24 @@ export function getBillId(type, number) {
   return `${normalizeBillType(type)}${number}`;
 }
 
+/**
+ * Parse a House/Senate citation ("S. Res. 817", "H.R. 1") into our bill id.
+ * Longer type names are tried first so a resolution is not stored as a bill.
+ *
+ * @param {string} text
+ * @returns {{ billType: string, billNumber: number, billId: string } | null}
+ */
+export function parseLegislativeCitation(text) {
+  const match = String(text || '').match(
+    /(S\.?\s*Con\.?\s*Res\.?|H\.?\s*Con\.?\s*Res\.?|S\.?\s*J\.?\s*Res\.?|H\.?\s*J\.?\s*Res\.?|S\.?\s*Res\.?|H\.?\s*Res\.?|H\.?\s*R\.?|S\.)\s*(\d+)/i
+  );
+  if (!match) return null;
+  const billType = normalizeBillType(match[1]);
+  const billNumber = parseInt(match[2], 10);
+  if (!BILL_TYPE_PATHS[billType] || !Number.isFinite(billNumber) || billNumber < 1) return null;
+  return { billType, billNumber, billId: getBillId(billType, billNumber) };
+}
+
 /** Committees whose congress.gov slug cannot be derived from their name. */
 const UNDERIVABLE_COMMITTEE_NAME = /commission|caucus|task force|select committee on|select subcommittee/i;
 

@@ -31,6 +31,7 @@ The site is static. Node scripts fetch public data into `data/`, that JSON is co
 | [House Clerk disclosures](https://disclosures-clerk.house.gov/) | STOCK Act periodic transaction reports when House Stock Watcher S3 is closed |
 | [House Stock Watcher](https://housestockwatcher.com/) | House trades with tickers (when the S3 dump is reachable) |
 | [Senate Stock Watcher](https://senatestockwatcher.com/) | Senate trades with tickers (when the S3 dump is reachable) |
+| [CongressWatch](https://congresswatch.vercel.app/) | Public PTR aggregate with tickers + bioguide ids (fallback when Stock Watcher S3 is closed) |
 
 Votes, finances, and the unitedstates files need no Congress.gov key. Members, bills, and committees do.
 
@@ -94,6 +95,7 @@ digital-democracy/
 │   ├── fix-data-urls.mjs                # Rebuild stored congress.gov URLs (no API)
 │   ├── backfill-member-bio.mjs          # Refill names/websites/socials (no API key)
 │   ├── commit-data.sh                   # Publish regenerated data without rebase races
+│   ├── repair-vote-records.mjs          # Map Senate LIS ids and fix bill citations (no API)
 │   └── lib/
 │       ├── api-client.mjs               # Retry, pagination, batch fetch, User-Agent
 │       ├── data-writer.mjs              # Read/write under data/ (or CONGRESS_DATA_DIR)
@@ -119,7 +121,8 @@ digital-democracy/
 │   └── meta/                            # last-updated.json
 ├── .github/workflows/
 │   ├── deploy.yml                       # Test, build, deploy Pages on push to main
-│   ├── fetch-members.yml                # Weekly full fetch (members, bills, committees, votes, finances)
+│   ├── ci.yml                           # Tests, typecheck, and Astro build on pull requests
+│   ├── fetch-members.yml                # Weekly full fetch (sequential; includes sponsored bills + finances)
 │   ├── fetch-bills.yml                  # Bills only (Mon/Thu)
 │   └── fetch-votes.yml                  # Votes only (Tue/Fri)
 ├── public/
@@ -162,7 +165,7 @@ CONGRESS_API_KEY=your_key_here npm run fetch:members
 CONGRESS_API_KEY=your_key_here npm run fetch:bills
 CONGRESS_API_KEY=your_key_here npm run fetch:committees
 npm run fetch:votes
-node scripts/fetch-finances.mjs
+npm run fetch:finances
 ```
 
 | Variable | Used by |
@@ -201,7 +204,8 @@ All three data workflows check out `main`, write JSON, and publish with `scripts
 
 | Workflow | Schedule | What it writes |
 |----------|----------|----------------|
-| **Fetch Congress Data** (`fetch-members.yml`) | Sunday 02:00 UTC | All of `data/` — phase 1 members/bills/committees in parallel, then votes + finances |
+| **CI** (`ci.yml`) | Pull requests | `npm test`, `tsc`, `astro build` |
+| **Fetch Congress Data** (`fetch-members.yml`) | Sunday 02:00 UTC | All of `data/` — members, then bills, then committees, then votes + finances |
 | **Fetch Bills Data** (`fetch-bills.yml`) | Monday and Thursday 11:00 UTC | `data/bills/`, `data/meta/` |
 | **Fetch Votes Data** (`fetch-votes.yml`) | Tuesday and Friday 11:00 UTC | `data/votes/`, `data/meta/` |
 | **Deploy to GitHub Pages** (`deploy.yml`) | Push to `main` | `npm test`, `astro build`, Pages deploy |
@@ -224,7 +228,7 @@ All three data workflows check out `main`, write JSON, and publish with `scripts
 - **Committee overlap** (high) — trades in a sector the member's committee covers
 - **Bill timing** (medium) — trades within 30 days of sponsoring related legislation
 
-Ticker-level analysis needs the Stock Watcher dumps. When those S3 buckets return 403, the script stores House Clerk PTR filings (PDF links, no tickers) and still attaches committee memberships so profiles are not blank. A fetch that gets no trades at all keeps the file already in `data/`.
+Ticker-level analysis needs the Stock Watcher dumps. When those S3 buckets return 403, the script pulls [CongressWatch](https://congresswatch.vercel.app/data/trades.json) (parsed House Clerk + Senate PTR filings with tickers and bioguide ids) and still keeps House Clerk PTR PDF links. A fetch that gets no trades at all keeps the file already in `data/`.
 
 > Highlights on member pages are potential conflicts from public disclosures, not findings of wrongdoing.
 
@@ -238,7 +242,10 @@ Ticker-level analysis needs the Stock Watcher dumps. When those S3 buckets retur
 - [x] Committee directory with referred legislation
 - [x] STOCK Act filings and conflict flags
 - [x] Data publishing that survives concurrent workflow runs
-- [ ] Voting alignment scores
+- [x] Senate votes joined to member pages by bioguide id
+- [x] Sponsored-legislation fetch for member profiles
+- [x] Party alignment scores and analytics graphs
+- [x] CongressWatch finance fallback when Stock Watcher is closed
 - [ ] Amendment tracking
 - [ ] Hearing schedules
 

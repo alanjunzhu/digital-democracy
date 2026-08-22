@@ -7,6 +7,7 @@ import {
   matchTradeBioguide,
   parseHouseFdXml,
   parseUsDate,
+  partitionFinanceTrades,
 } from '../scripts/fetch-finances.mjs';
 
 test('Clerk filing dates are stored as ISO dates', () => {
@@ -73,4 +74,21 @@ test('committee-only members still get a finance profile', () => {
   });
   assert.equal(profiles.S001195.committees[0], 'Ways and Means Committee');
   assert.equal(profiles.S001195.trades.length, 0);
+});
+
+test('PTR filings are split from ticker trades for the member page', () => {
+  const { filings, tickerTrades } = partitionFinanceTrades([
+    { type: 'PTR filing', assetDescription: 'Periodic Transaction Report', url: 'https://example.test/ptr.pdf' },
+    { type: 'Purchase', ticker: 'AAPL', assetDescription: 'Apple Inc' },
+  ]);
+  assert.equal(filings.length, 1);
+  assert.equal(tickerTrades.length, 1);
+  assert.equal(tickerTrades[0].ticker, 'AAPL');
+});
+
+test('a CongressWatch trade with a bioguide id does not need a name match', () => {
+  assert.equal(
+    matchTradeBioguide({ bioguideId: 'C001068', member: 'Someone Else', state: '' }, {}),
+    'C001068'
+  );
 });

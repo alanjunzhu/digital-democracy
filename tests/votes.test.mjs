@@ -2,9 +2,13 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
 import {
+  applyVoteRecordRepairs,
+  buildSenateNameLookup,
   chooseSessionVotes,
   houseVoteUrl,
+  isBioguideId,
   probeRollCalls,
+  resolveSenateBioguide,
   senateVoteUrl,
 } from '../scripts/fetch-votes.mjs';
 
@@ -61,4 +65,44 @@ test('roll-call probing stops after a run of consecutive misses', async () => {
   } finally {
     globalThis.fetch = originalFetch;
   }
+});
+
+test('Senate LIS ids map to bioguide ids using last name and state abbreviation', () => {
+  assert.equal(isBioguideId('B001319'), true);
+  assert.equal(isBioguideId('S428'), false);
+
+  const lookup = buildSenateNameLookup([
+    { bioguideId: 'B001319', lastName: 'Britt', state: 'Alabama', chamber: 'Senate' },
+    { bioguideId: 'V000128', lastName: 'Van Hollen', state: 'Maryland', chamber: 'Senate' },
+    { bioguideId: 'A000055', lastName: 'Aderholt', state: 'Alabama', chamber: 'House' },
+  ]);
+
+  assert.equal(resolveSenateBioguide({ name: 'Katie Britt', state: 'AL', bioguideId: 'S428' }, lookup), 'B001319');
+  assert.equal(resolveSenateBioguide({ name: 'Chris Van Hollen', state: 'MD', bioguideId: 'S317' }, lookup), 'V000128');
+  assert.equal(
+    resolveSenateBioguide(
+      { name: 'Ben Ray Lujan', state: 'NM', bioguideId: 'S306' },
+      buildSenateNameLookup([{ bioguideId: 'L000570', lastName: 'Luján', state: 'New Mexico', chamber: 'Senate' }])
+    ),
+    'L000570'
+  );
+  assert.equal(resolveSenateBioguide({ name: 'Katie Britt', state: 'AL', bioguideId: 'B001319' }, lookup), 'B001319');
+});
+
+test('stored Senate votes get bioguide ids and resolution bill ids', () => {
+  const lookup = buildSenateNameLookup([
+    { bioguideId: 'B001319', lastName: 'Britt', state: 'Alabama', chamber: 'Senate' },
+  ]);
+  const repaired = applyVoteRecordRepairs({
+    voteId: 's2-rc217',
+    chamber: 'Senate',
+    question: 'S. Res. 817',
+    billId: 's817',
+    billType: 's',
+    billNumber: 817,
+    memberVotes: [{ bioguideId: 'S428', name: 'Katie Britt', state: 'AL', voteCast: 'Yea' }],
+  }, lookup);
+
+  assert.equal(repaired.billId, 'sres817');
+  assert.equal(repaired.memberVotes[0].bioguideId, 'B001319');
 });

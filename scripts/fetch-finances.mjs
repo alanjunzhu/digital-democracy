@@ -187,6 +187,21 @@ export function parseHouseFdXml(xml) {
   return filings;
 }
 
+export function partitionFinanceTrades(trades) {
+  const filings = [];
+  const tickerTrades = [];
+  for (const trade of trades || []) {
+    const type = String(trade.type || '').toLowerCase();
+    const description = String(trade.assetDescription || '');
+    if (type === 'ptr filing' || description === 'Periodic Transaction Report') {
+      filings.push(trade);
+    } else {
+      tickerTrades.push(trade);
+    }
+  }
+  return { filings, tickerTrades };
+}
+
 async function fetchJsonUrl(url) {
   const response = await fetchWithRetry(url);
   if (!response) return null;
@@ -218,6 +233,49 @@ async function fetchHouseClerkPtrFilings() {
 }
 
 // ─── Fetch Stock Trades ───
+
+async function fetchCongressWatchTrades() {
+  console.log('Fetching ticker trades from CongressWatch (Clerk + Senate PTR aggregate)...');
+  const url = process.env.CONGRESSWATCH_TRADES_URL
+    || 'https://congresswatch.vercel.app/data/trades.json';
+  try {
+    const data = await fetchJsonUrl(url);
+    if (!Array.isArray(data) || data.length === 0) {
+      console.warn('  CongressWatch returned no trades');
+      return [];
+    }
+
+    const cutoffStr = twoYearCutoff();
+    const recent = data.filter(t => (t.transaction_date || t.disclosure_date || '') >= cutoffStr);
+    console.log(`  ${data.length} total, ${recent.length} since ${cutoffStr}`);
+
+    return recent.map(t => ({
+      chamber: t.chamber === 'Senate' ? 'Senate' : 'House',
+      member: t.member_name || '',
+      ticker: t.ticker === '--' ? '' : (t.ticker || ''),
+      assetDescription: t.asset_description || '',
+      type: t.type || '',
+      amount: t.amount || '',
+      transactionDate: t.transaction_date || '',
+      disclosureDate: t.disclosure_date || t.transaction_date || '',
+      district: t.district || '',
+      party: t.party || '',
+      state: t.state || '',
+      owner: t.owner || '',
+      url: t.ptr_link || '',
+      bioguideId: t.bioguide_id || '',
+      source: 'congresswatch',
+    }));
+  } catch (err) {
+    console.warn(`  CongressWatch unavailable: ${err.message}`);
+    return [];
+  }
+}
+
+export function preferBioguideOnTrade(trade, nameLookup) {
+  if (trade.bioguideId) return trade.bioguideId;
+  return matchTradeBioguide(trade, nameLookup);
+}
 
 async function fetchHouseStockTrades() {
   console.log('Fetching House stock trades...');
@@ -326,6 +384,8 @@ export function buildNameLookup(membersIndex) {
 }
 
 export function matchTradeBioguide(trade, nameLookup) {
+  if (trade.bioguideId) return trade.bioguideId;
+
   const nameLower = (trade.member || '').trim().toLowerCase();
   let bioguideId =
     nameLookup[nameLower] ||
@@ -502,13 +562,26 @@ async function main() {
   console.log('=== Fetching Financial Data & Conflict Analysis ===\n');
   const startTime = Date.now();
 
-  // Fetch House and Senate stock trades in parallel
-  const [houseTrades, senateTrades] = await Promise.all([
+  // Prefer live Stock Watcher dumps; when those S3 buckets are closed, use
+  // CongressWatch's public aggregate (parsed Clerk/Senate PTRs with tickers).
+  // House Clerk XML remains a last-resort filing list without tickers.
+  const [houseTrades, senateTrades, congressWatchTrades] = await Promise.all([
     fetchHouseStockTrades(),
     fetchSenateStockTrades(),
+    fetchCongressWatchTrades(),
   ]);
 
-  const allTrades = [...houseTrades, ...senateTrades];
+  let allTrades = [...houseTrades, ...senateTrades];
+  const watcherTickerCount = allTrades.filter(t => t.ticker).length;
+  const watchFilingsOnly = allTrades.length > 0 && watcherTickerCount === 0;
+
+  if (congressWatchTrades.length > 0 && (allTrades.length === 0 || watchFilingsOnly)) {
+    console.log(`\nUsing CongressWatch ticker trades (${congressWatchTrades.length}); Stock Watcher had ${watcherTickerCount} tickers.`);
+    // Keep Clerk PTR filings that CongressWatch may not have mirrored yet.
+    const ptrOnly = allTrades.filter(t => String(t.type || '').toLowerCase() === 'ptr filing');
+    allTrades = [...congressWatchTrades, ...ptrOnly];
+  }
+
   allTrades.sort((a, b) => (b.transactionDate || '').localeCompare(a.transactionDate || ''));
   console.log(`\nTotal trades: ${allTrades.length}`);
 
@@ -530,6 +603,11 @@ async function main() {
     lastUpdated: new Date().toISOString(),
     totalMembers: Object.keys(byMember).length,
     members: byMember,
+    source: congressWatchTrades.length && (watcherTickerCount === 0)
+      ? 'congresswatch+clerk-ptr'
+      : watcherTickerCount > 0
+        ? 'stock-watcher'
+        : 'clerk-ptr',
   });
 
   const totalFlags = Object.values(byMember).reduce((sum, p) => sum + p.flags.length, 0);

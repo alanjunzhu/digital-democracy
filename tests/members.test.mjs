@@ -6,6 +6,7 @@ import {
   fetchLegislatorFile,
   isEmptyValue,
   normalizeMember,
+  normalizeSponsoredLegislation,
   preserveExistingValues,
   splitMemberName,
 } from '../scripts/fetch-members.mjs';
@@ -199,4 +200,34 @@ test('a member absent from the supplementary source is left alone', () => {
   assert.equal(filled.firstName, 'Marco', 'still parsed from the Congress.gov name');
   assert.equal(filled.lastName, 'Rubio');
   assert.equal(filled.website, '');
+});
+
+test('sponsored legislation is stored as bill summaries for this congress', () => {
+  const bills = normalizeSponsoredLegislation([
+    {
+      congress: 119,
+      type: 'HR',
+      number: '21',
+      title: 'A sponsored bill',
+      introducedDate: '2025-01-03',
+      latestAction: { actionDate: '2025-01-04', text: 'Referred to committee' },
+    },
+    { congress: 118, type: 'S', number: '9', title: 'Previous congress' },
+    { congress: 119, type: 'HR', number: '21', title: 'Duplicate' },
+  ]);
+
+  assert.equal(bills.length, 1);
+  assert.equal(bills[0].billId, 'hr21');
+  assert.equal(bills[0].type, 'H.R.');
+  assert.equal(bills[0].latestAction, 'Referred to committee');
+  assert.equal(bills[0].url, 'https://www.congress.gov/bill/119th-congress/house-bill/21');
+
+  const { detail } = normalizeMember(
+    { bioguideId: 'B001302', name: 'Biggs, Andy', state: 'Arizona', partyName: 'Republican', terms: { item: [{ chamber: 'House' }] } },
+    null,
+    null,
+    null,
+    [{ congress: 119, type: 'HRES', number: '34', title: 'A resolution', introducedDate: '2025-01-09' }]
+  );
+  assert.equal(detail.sponsoredBills[0].billId, 'hres34');
 });

@@ -13,6 +13,13 @@ import { pathToFileURL } from 'url';
 import { fetchJSON, paginateCongressAPI, getCongressAPIBaseUrl, batchProcess } from './lib/api-client.mjs';
 import { writeJSON, readJSON } from './lib/data-writer.mjs';
 import { fetchUnitedstatesFile } from './lib/unitedstates.mjs';
+import {
+  billOriginChamber,
+  formatBillType,
+  getBillId,
+  getBillWebUrl,
+  normalizeBillType,
+} from '../shared/congress-urls.mjs';
 
 const API_KEY = process.env.CONGRESS_API_KEY;
 const CONGRESS_NUMBER = 119; // Current congress
@@ -156,7 +163,42 @@ function extractCommittees(detail) {
   return committees;
 }
 
-export function normalizeMember(congressMember, detail, legData, socialData) {
+/**
+ * Congress.gov `/member/{id}/sponsored-legislation` items for this congress.
+ * Member pages use this list so a profile is not limited to the 500 most
+ * recently *updated* bills sitting in `data/bills/`.
+ */
+export function normalizeSponsoredLegislation(items, congress = CONGRESS_NUMBER) {
+  const bills = [];
+  const seen = new Set();
+
+  for (const item of items || []) {
+    if (item?.congress != null && Number(item.congress) !== congress) continue;
+    const type = normalizeBillType(item.type);
+    const number = Number(item.number);
+    if (!type || !Number.isFinite(number) || number < 1) continue;
+    const billId = getBillId(type, number);
+    if (seen.has(billId)) continue;
+    seen.add(billId);
+    const latestAction = item.latestAction || {};
+    bills.push({
+      congress,
+      type: formatBillType(type),
+      number,
+      billId,
+      title: item.title || '',
+      introducedDate: item.introducedDate || '',
+      latestAction: latestAction.text || '',
+      latestActionDate: latestAction.actionDate || '',
+      originChamber: billOriginChamber(type),
+      url: getBillWebUrl(congress, type, number),
+    });
+  }
+
+  return bills;
+}
+
+export function normalizeMember(congressMember, detail, legData, socialData, sponsoredItems = []) {
   const bioguideId = congressMember.bioguideId;
   const currentTerm = detail?.terms?.slice(-1)[0] || {};
 
@@ -206,7 +248,7 @@ export function normalizeMember(congressMember, detail, legData, socialData) {
     } : undefined,
     officeAddress: legData?.terms?.slice(-1)?.[0]?.address || detail?.addressInformation?.officeAddress || '',
     committees: extractCommittees(detail),
-    sponsoredBills: [],
+    sponsoredBills: normalizeSponsoredLegislation(sponsoredItems),
   };
 
   return { summary, detail: memberDetail };
@@ -229,19 +271,26 @@ async function main() {
     fetchSocialMedia(),
   ]);
 
-  console.log('\nFetching individual member details (batched, 10 concurrent)...');
+  console.log('\nFetching member details and sponsored legislation (batched, 10 concurrent)...');
 
-  // Batch fetch all member details — 10 concurrent requests
-  // Congress.gov rate limit is 5,000/hr ≈ 83/min. 10 concurrent with 100ms delay is safe.
+  // One worker at a time does detail then sponsored-legislation so we stay at
+  // 10 in-flight requests. Parallelizing those two URLs would double burst
+  // load on the same Congress.gov key the Sunday job already shares with bills.
   const details = await batchProcess(
     congressMembers,
     async (cm) => {
-      const url = `${getCongressAPIBaseUrl()}/member/${cm.bioguideId}?api_key=${API_KEY}&format=json`;
+      const base = getCongressAPIBaseUrl();
+      const detailUrl = `${base}/member/${cm.bioguideId}?api_key=${API_KEY}&format=json`;
+      const sponsoredUrl = `${base}/member/${cm.bioguideId}/sponsored-legislation?api_key=${API_KEY}&format=json&limit=50&congress=${CONGRESS_NUMBER}`;
       try {
-        const data = await fetchJSON(url);
-        return data.member || null;
+        const data = await fetchJSON(detailUrl);
+        const sponsored = await fetchJSON(sponsoredUrl);
+        return {
+          member: data?.member || null,
+          sponsored: sponsored?.sponsoredLegislation || [],
+        };
       } catch {
-        return null;
+        return { member: null, sponsored: [] };
       }
     },
     { concurrency: 10, delayMs: 100, label: 'member details' }
@@ -254,11 +303,13 @@ async function main() {
     const bioguideId = cm.bioguideId;
     if (!bioguideId) continue;
 
-    const detail = details[i];
+    const bundle = details[i] || {};
+    const detail = bundle.member || null;
+    const sponsoredItems = bundle.sponsored || [];
     const legData = legIndex?.[bioguideId] || null;
     const socialData = socialIndex?.[bioguideId] || null;
 
-    const { summary, detail: memberDetail } = normalizeMember(cm, detail, legData, socialData);
+    const { summary, detail: memberDetail } = normalizeMember(cm, detail, legData, socialData, sponsoredItems);
     const previous = readJSON(`members/${bioguideId}.json`);
     summaries.push(preserveExistingValues(summary, previous));
     writeJSON(`members/${bioguideId}.json`, preserveExistingValues(memberDetail, previous));

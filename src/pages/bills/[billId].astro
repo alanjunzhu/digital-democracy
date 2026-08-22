@@ -43,13 +43,25 @@ const stageColor = STAGE_COLORS[billStage];
 const stageIndex = BILL_STAGES.indexOf(billStage);
 const progressStages = ['Introduced', 'In Committee', 'Passed One Chamber', 'Passed Both Chambers', 'Signed into Law'] as const;
 
-// Cross-link: find votes on this bill
+// Cross-link: find votes on this bill, including how the sponsor voted
 let billVotes: any[] = [];
 try {
   const votesPath = join(process.cwd(), 'data', 'votes', 'index.json');
   if (existsSync(votesPath)) {
     const votesData = JSON.parse(readFileSync(votesPath, 'utf-8'));
-    billVotes = (votesData.votes || []).filter((v: any) => v.billId === billId);
+    const sponsorId = bill.sponsor?.bioguideId;
+    billVotes = (votesData.votes || [])
+      .filter((v: any) => v.billId === billId)
+      .map((v: any) => {
+        let sponsorVote = '';
+        const votePath = join(process.cwd(), 'data', 'votes', `${v.voteId}.json`);
+        if (sponsorId && existsSync(votePath)) {
+          const detail = JSON.parse(readFileSync(votePath, 'utf-8'));
+          const mv = (detail.memberVotes || []).find((m: any) => m.bioguideId === sponsorId);
+          if (mv?.voteCast) sponsorVote = mv.voteCast;
+        }
+        return { ...v, sponsorVote };
+      });
   }
 } catch {}
 
@@ -241,6 +253,11 @@ const congressGovTextUrl = getBillTextWebUrl(bill.congress, bill.type, bill.numb
                   <div class="text-right text-xs">
                     <span class={`font-semibold ${passed ? 'text-green-600' : 'text-red-600'}`}>{v.result}</span>
                     <div class="text-gray-400 mt-0.5">{v.totalYea}Y - {v.totalNay}N</div>
+                    {v.sponsorVote && (
+                      <div class={`mt-1 font-medium ${['yea', 'aye'].includes(String(v.sponsorVote).toLowerCase()) ? 'text-green-700' : ['nay', 'no'].includes(String(v.sponsorVote).toLowerCase()) ? 'text-red-700' : 'text-gray-600'}`}>
+                        Sponsor: {v.sponsorVote}
+                      </div>
+                    )}
                   </div>
                 </a>
               );

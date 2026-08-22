@@ -1,8 +1,13 @@
 ---
 import Layout from '../components/layout/Layout.astro';
 import AnalyticsDashboard from '../components/interactive/AnalyticsDashboard';
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
+import {
+  averageAlignmentByParty,
+  rankPartyAlignment,
+  summarizePartyLineVotes,
+} from '../lib/party-alignment';
 
 function loadJSON(path: string) {
   try { return JSON.parse(readFileSync(join(process.cwd(), 'data', path), 'utf-8')); }
@@ -13,6 +18,7 @@ const membersIndex = loadJSON('members/index.json') || { members: [], total: 0 }
 const billsIndex = loadJSON('bills/index.json') || { bills: [], total: 0 };
 const votesIndex = loadJSON('votes/index.json') || { votes: [], total: 0 };
 const committeesIndex = loadJSON('committees/index.json') || { committees: [], total: 0 };
+const byMemberVotes = loadJSON('votes/by-member.json')?.members || {};
 
 // Member stats
 const members = membersIndex.members;
@@ -50,20 +56,46 @@ const billStats = {
   recentActivity: [],
 };
 
-// Vote stats
-const votes = votesIndex.votes;
-const passed = votes.filter((v: any) => v.result === 'Passed' || v.result === 'Agreed to').length;
-const failed = votes.filter((v: any) => v.result === 'Failed' || v.result === 'Rejected').length;
+// Vote stats + party alignment
+const votes = votesIndex.votes || [];
+const passed = votes.filter((v: any) => {
+  const r = String(v.result || '').toLowerCase();
+  return r.includes('pass') || r.includes('agreed') || r.includes('confirm') || r.includes('concur');
+}).length;
+const failed = votes.filter((v: any) => {
+  const r = String(v.result || '').toLowerCase();
+  return r.includes('fail') || r.includes('reject');
+}).length;
 const totalYea = votes.reduce((sum: number, v: any) => sum + (v.totalYea || 0), 0);
 const totalNay = votes.reduce((sum: number, v: any) => sum + (v.totalNay || 0), 0);
+
+const voteBreakdownById: Record<string, any> = {};
+for (const v of votes) {
+  if (v.voteId && v.partyBreakdown) voteBreakdownById[v.voteId] = v.partyBreakdown;
+}
+
+const partyLine = summarizePartyLineVotes(votes);
+const houseLoyalists = rankPartyAlignment(members, byMemberVotes, voteBreakdownById, { chamber: 'House', limit: 8 });
+const senateLoyalists = rankPartyAlignment(members, byMemberVotes, voteBreakdownById, { chamber: 'Senate', limit: 8 });
+const houseRebels = rankPartyAlignment(members, byMemberVotes, voteBreakdownById, { chamber: 'House', limit: 8, order: 'asc' });
+const senateRebels = rankPartyAlignment(members, byMemberVotes, voteBreakdownById, { chamber: 'Senate', limit: 8, order: 'asc' });
+const allRanked = rankPartyAlignment(members, byMemberVotes, voteBreakdownById, { limit: 600 });
+const avgByParty = averageAlignmentByParty(allRanked);
 
 const voteStats = {
   total: votesIndex.total || votes.length,
   passed,
   failed,
-  partyLineVotes: 0,
+  partyLineVotes: partyLine.partyLine,
+  partyLinePct: partyLine.pct,
+  partyLineByChamber: partyLine.byChamber,
   avgYea: votes.length > 0 ? Math.round(totalYea / votes.length) : 0,
   avgNay: votes.length > 0 ? Math.round(totalNay / votes.length) : 0,
+  houseLoyalists,
+  senateLoyalists,
+  houseRebels,
+  senateRebels,
+  avgByParty,
 };
 
 // Committee stats
@@ -74,14 +106,19 @@ const committeeStats = {
   senate: committees.filter((c: any) => c.chamber === 'Senate').length,
   joint: committees.filter((c: any) => c.chamber === 'Joint').length,
 };
+
+const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="Analytics" description="Data visualizations and insights about the US Congress.">
+<Layout title="Analytics" description="Data visualizations and insights about the US Congress, including party-line votes and voting alignment.">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="mb-6">
       <h1 class="text-3xl font-bold text-gray-900">Analytics</h1>
       <p class="text-gray-500 mt-1">
         Data insights for the {membersIndex.congress || 119}th Congress
+        {existsSync(join(process.cwd(), 'data', 'votes', 'by-member.json')) && (
+          <span> · party alignment from {Object.keys(byMemberVotes).length} voting records</span>
+        )}
       </p>
     </div>
 
@@ -90,6 +127,7 @@ const committeeStats = {
       billStats={billStats}
       voteStats={voteStats}
       committeeStats={committeeStats}
+      baseUrl={base}
       client:load
     />
   </div>
