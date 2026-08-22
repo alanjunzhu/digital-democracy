@@ -2,6 +2,7 @@ import {
   addDays,
   daysBetween,
   forwardReturn,
+  forwardReturnDetail,
   normalizeTickerSymbol,
 } from './stock-prices.mjs';
 
@@ -80,9 +81,21 @@ export function computeCounterfactuals(trade, prices, horizonDays = DEFAULT_HORI
     return { ok: false, reason: 'unknown_trade_type' };
   }
 
-  const actualHold = forwardReturn(prices, txDate, horizonDays);
+  const actualDetail = forwardReturnDetail(prices, txDate, horizonDays);
+  if (!actualDetail) {
+    // No close on or before the trade date — the cached series starts too late
+    // to say anything about this trade, so there is no comparison to draw.
+    return { ok: false, reason: 'no_price_at_trade_date' };
+  }
+
+  const actualHold = actualDetail.complete ? actualDetail.pct : null;
   const earlierHold = earlierDate ? forwardReturn(prices, earlierDate, horizonDays) : null;
   const laterHold = laterDate ? forwardReturn(prices, laterDate, horizonDays) : null;
+
+  // The later-30d window ends 30 days after the actual one, so a trade can have
+  // a settled actual outcome while its alternatives are still running.
+  const horizonComplete = actualDetail.complete === true;
+  const alternativesComplete = laterHold != null;
 
   let scenarios;
   if (purchase) {
@@ -129,6 +142,9 @@ export function computeCounterfactuals(trade, prices, horizonDays = DEFAULT_HORI
   return {
     ok: true,
     horizonDays,
+    horizonComplete,
+    alternativesComplete,
+    lastPriceDate: actualDetail.lastAvailable,
     isPurchase: purchase,
     isSale: sale,
     tradeDate: txDate,

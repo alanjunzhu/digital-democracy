@@ -1,74 +1,105 @@
 #!/usr/bin/env node
 /**
- * Precompute counterfactual timing for top committee-overlap trades.
- * Output: data/finances/trade-timing.json
+ * Precompute counterfactual timing for every committee-overlap trade, reading
+ * daily closes from the local price cache rather than the network.
+ *
+ * Output: data/finances/trade-timing.json — counterfactuals only. The price
+ * series stays in data/prices/, and pages slice their own sparkline window from
+ * it at build time, so a trade appearing on two pages is not stored twice.
+ *
+ * Run scripts/fetch-stock-prices.mjs first.
  */
 
 import { readJSON, writeJSON } from './lib/data-writer.mjs';
-import { fetchYahooPrices } from '../shared/stock-prices.mjs';
+import { createPriceCacheReader, decodePriceSeries } from '../shared/price-cache.mjs';
 import {
-  buildSuspiciousTradeCandidates,
   computeCounterfactuals,
+  DEFAULT_HORIZON_DAYS,
+  isPurchaseType,
+  isSaleType,
   tradeTimingKey,
 } from '../shared/trade-timing.mjs';
 
-const LIMIT = 25;
-const DELAY_MS = 800;
+/**
+ * Every trade whose sector matches a committee the member sits on — the same
+ * predicate the member page uses to decide what to chart, so every candidate it
+ * renders finds a precomputed entry here.
+ */
+export function overlapTrades(financeData) {
+  const rows = [];
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+  for (const [bioguideId, profile] of Object.entries(financeData?.members || {})) {
+    const committeeSectors = profile.committeeSectors || [];
+    if (!committeeSectors.length) continue;
+
+    for (const trade of profile.trades || []) {
+      if (!trade.ticker || trade.ticker === '--' || !trade.transactionDate) continue;
+      if (!committeeSectors.includes(trade.sector)) continue;
+      if (!isPurchaseType(trade.type) && !isSaleType(trade.type)) continue;
+      rows.push({ ...trade, bioguideId, memberName: profile.name || trade.member || '' });
+    }
+  }
+
+  return rows;
 }
 
-async function main() {
+function main() {
   const financeData = readJSON('finances/by-member.json');
   if (!financeData) {
     console.error('No finance data found');
     process.exit(1);
   }
 
-  const billsIndex = readJSON('bills/index.json')?.bills || [];
-  const billsBySponsor = {};
-  for (const bill of billsIndex) {
-    const id = bill.sponsor?.bioguideId;
-    if (!id) continue;
-    if (!billsBySponsor[id]) billsBySponsor[id] = [];
-    billsBySponsor[id].push(bill);
+  const readPriceCache = createPriceCacheReader(readJSON);
+  const seriesCache = new Map();
+
+  function pricesFor(ticker) {
+    if (!seriesCache.has(ticker)) {
+      seriesCache.set(ticker, decodePriceSeries(readPriceCache(ticker)));
+    }
+    return seriesCache.get(ticker);
   }
 
-  const candidates = buildSuspiciousTradeCandidates(financeData, {
-    limit: LIMIT,
-    billsBySponsor,
-  });
-
+  const trades = overlapTrades(financeData);
   const output = {
     lastUpdated: new Date().toISOString(),
+    horizonDays: DEFAULT_HORIZON_DAYS,
     entries: {},
   };
 
-  console.log(`Enriching timing for ${candidates.length} trades...`);
+  const missingTickers = new Set();
+  let computed = 0;
+  let pending = 0;
 
-  for (const trade of candidates) {
+  for (const trade of trades) {
     const key = tradeTimingKey(trade);
-    try {
-      const tx = trade.transactionDate;
-      const prices = await fetchYahooPrices(trade.ticker, tx, tx);
-      const counterfactuals = computeCounterfactuals(trade, prices);
-      output.entries[key] = {
-        prices: prices.filter((p) => p.date >= tx.slice(0, 4) + '-01-01'),
-        counterfactuals,
-      };
-      console.log(`  ✓ ${trade.ticker} ${tx} (${trade.memberName})`);
-    } catch (err) {
-      console.warn(`  ✗ ${trade.ticker} ${trade.transactionDate}: ${err.message}`);
+    if (output.entries[key]) continue;
+
+    const prices = pricesFor(trade.ticker);
+    if (!prices.length) {
+      missingTickers.add(trade.ticker);
+      continue;
     }
-    await sleep(DELAY_MS);
+
+    const counterfactuals = computeCounterfactuals(trade, prices, DEFAULT_HORIZON_DAYS);
+    if (!counterfactuals.ok) continue;
+
+    output.entries[key] = { counterfactuals };
+    computed++;
+    if (!counterfactuals.horizonComplete) pending++;
   }
 
   writeJSON('finances/trade-timing.json', output);
-  console.log(`Wrote ${Object.keys(output.entries).length} entries to data/finances/trade-timing.json`);
+  console.log(
+    `Wrote ${computed} timing entries (${pending} still inside their ${DEFAULT_HORIZON_DAYS}-day window)`,
+  );
+  if (missingTickers.size) {
+    console.warn(
+      `No cached prices for ${missingTickers.size} tickers: ${[...missingTickers].slice(0, 15).join(', ')}${missingTickers.size > 15 ? '…' : ''}`,
+    );
+  }
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}

@@ -183,3 +183,40 @@ export interface VotesIndex {
   total: number;
   votes: VoteSummary[];
 }
+
+export interface PricePoint {
+  date: string;
+  close: number;
+}
+
+export interface CounterfactualScenarios {
+  actual: number | null;
+  earlier30: number | null;
+  later30: number | null;
+  inaction: number | null;
+  labels: Record<string, string>;
+}
+
+/** Result of computeCounterfactuals() in shared/trade-timing.mjs. */
+export interface TradeCounterfactuals {
+  ok: boolean;
+  reason?: string;
+  horizonDays?: number;
+  /** False while the trade is still inside its forward-return window. */
+  horizonComplete?: boolean;
+  alternativesComplete?: boolean;
+  lastPriceDate?: string | null;
+  isPurchase?: boolean;
+  isSale?: boolean;
+  tradeDate?: string | null;
+  scenarios?: CounterfactualScenarios;
+  actionAdvantage?: number | null;
+  timingAdvantage?: number | null;
+  summary?: string;
+}
+
+/** Assembled at build time by shared/timing-precompute.mjs. */
+export interface PrecomputedTiming {
+  prices?: PricePoint[];
+  counterfactuals?: TradeCounterfactuals;
+}
