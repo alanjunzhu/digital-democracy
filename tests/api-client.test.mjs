@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
-import { fetchWithRetry, getCongressAPIBaseUrl, redactApiKey } from '../scripts/lib/api-client.mjs';
+import { DEFAULT_FETCH_HEADERS, fetchWithRetry, getCongressAPIBaseUrl, redactApiKey } from '../scripts/lib/api-client.mjs';
 
 test('the API key is stripped from URLs before they reach a log line', () => {
   assert.equal(
@@ -29,6 +29,39 @@ test('a failing request reports the failure without leaking the key', async () =
       assert.ok(!err.message.includes('super-secret'), `key leaked into: ${err.message}`);
       return true;
     });
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('requests identify the project instead of the default node client', async () => {
+  let headers;
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (url, options) => {
+    headers = options?.headers;
+    return new Response('{}', { status: 200, headers: { 'Content-Type': 'application/json' } });
+  };
+
+  try {
+    await fetchWithRetry('https://example.test/ok');
+    assert.equal(headers['User-Agent'], DEFAULT_FETCH_HEADERS['User-Agent']);
+    assert.match(headers['User-Agent'], /digital-democracy/);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('a forbidden URL is not retried', async () => {
+  let calls = 0;
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => {
+    calls++;
+    return new Response('', { status: 403, statusText: 'Forbidden' });
+  };
+
+  try {
+    assert.equal(await fetchWithRetry('https://example.test/closed'), null);
+    assert.equal(calls, 1);
   } finally {
     globalThis.fetch = originalFetch;
   }

@@ -13,18 +13,22 @@
  *   data/votes/by-member.json      - Lookup: bioguideId -> vote positions
  */
 
-import { writeJSON } from './lib/data-writer.mjs';
-import { batchFetchText } from './lib/api-client.mjs';
-import { readFileSync } from 'fs';
+import { pathToFileURL } from 'url';
+import { readdirSync, existsSync } from 'fs';
 import { join } from 'path';
+import { writeJSON, readJSON, getDataDir } from './lib/data-writer.mjs';
+import { batchFetchText } from './lib/api-client.mjs';
 
 const CONGRESS_NUMBER = 119;
 const SESSIONS = [
   { session: 1, year: 2025 },
   { session: 2, year: 2026 },
 ];
-// Probe up to this many roll calls per session per chamber
-const MAX_PROBE = 300;
+// House sessions regularly exceed 300 roll calls; stop after a run of misses
+// rather than fetching a fixed window that is both too short and too wasteful.
+const MAX_PROBE = 1500;
+const PROBE_BATCH = 25;
+const STOP_AFTER_MISSES = 8;
 
 // ─── XML Parsing Helpers ───
 
@@ -47,13 +51,88 @@ function extractAllTags(xml, tag) {
 
 // ─── House Votes ───
 
-function buildHouseVoteUrls(year) {
-  const urls = [];
-  for (let rc = 1; rc <= MAX_PROBE; rc++) {
-    const paddedRC = String(rc).padStart(3, '0');
-    urls.push(`https://clerk.house.gov/evs/${year}/roll${paddedRC}.xml`);
+export function houseVoteUrl(year, rollCall) {
+  const paddedRC = String(rollCall).padStart(3, '0');
+  return `https://clerk.house.gov/evs/${year}/roll${paddedRC}.xml`;
+}
+
+export function senateVoteUrl(session, voteNumber) {
+  const congress = String(CONGRESS_NUMBER);
+  const sess = String(session);
+  const paddedVote = String(voteNumber).padStart(5, '0');
+  return `https://www.senate.gov/legislative/LIS/roll_call_votes/vote${congress}${sess}/vote_${congress}_${sess}_${paddedVote}.xml`;
+}
+
+/**
+ * Fetch roll-call XML in batches and stop after a run of consecutive misses.
+ * House and Senate numbering is contiguous, so a gap means the session is done.
+ * A hard cap of 300 missed later votes in a long session and wasted requests
+ * on a short one.
+ */
+export async function probeRollCalls({
+  urlFor,
+  parse,
+  max = MAX_PROBE,
+  batchSize = PROBE_BATCH,
+  stopAfterMisses = STOP_AFTER_MISSES,
+  label = 'XML',
+}) {
+  const found = [];
+  let consecutiveMisses = 0;
+
+  for (let start = 1; start <= max; start += batchSize) {
+    const end = Math.min(start + batchSize - 1, max);
+    const urls = [];
+    for (let n = start; n <= end; n++) urls.push(urlFor(n));
+
+    const results = await batchFetchText(urls, {
+      concurrency: 10,
+      delayMs: 80,
+      label: `${label} ${start}-${end}`,
+    });
+
+    for (let i = 0; i < results.length; i++) {
+      const xml = results[i];
+      if (!xml) {
+        consecutiveMisses++;
+        if (consecutiveMisses >= stopAfterMisses) return found;
+        continue;
+      }
+      consecutiveMisses = 0;
+      try {
+        const vote = parse(xml, start + i);
+        if (vote?.rollCallNumber > 0) found.push(vote);
+      } catch (err) {
+        console.warn(`  Error parsing ${label} ${start + i}: ${err.message}`);
+      }
+    }
   }
-  return urls;
+
+  return found;
+}
+
+export function loadStoredVoteFiles(chamberLetter, session) {
+  const dir = join(getDataDir(), 'votes');
+  if (!existsSync(dir)) return [];
+  const prefix = `${chamberLetter}${session}-rc`;
+  const votes = [];
+  for (const file of readdirSync(dir)) {
+    if (!file.startsWith(prefix) || !file.endsWith('.json')) continue;
+    const vote = readJSON(`votes/${file}`);
+    if (vote?.rollCallNumber > 0) votes.push(vote);
+  }
+  return votes;
+}
+
+export function chooseSessionVotes(fetched, existing, { chamber, session } = {}) {
+  if (fetched.length > 0) return fetched;
+  if (existing.length > 0) {
+    console.warn(
+      `  ${chamber || 'Chamber'} session ${session ?? ''} returned 0 votes; keeping ${existing.length} previously stored votes.`
+    );
+    return existing;
+  }
+  return [];
 }
 
 function parseHouseVoteXML(xml, session, year) {
@@ -161,17 +240,6 @@ function parseHouseVoteXML(xml, session, year) {
 function z() { return { yea: 0, nay: 0, notVoting: 0 }; }
 
 // ─── Senate Votes ───
-
-function buildSenateVoteUrls(session) {
-  const urls = [];
-  const congress = String(CONGRESS_NUMBER);
-  const sess = String(session);
-  for (let vn = 1; vn <= MAX_PROBE; vn++) {
-    const paddedVote = String(vn).padStart(5, '0');
-    urls.push(`https://www.senate.gov/legislative/LIS/roll_call_votes/vote${congress}${sess}/vote_${congress}_${sess}_${paddedVote}.xml`);
-  }
-  return urls;
-}
 
 function parseSenateVoteXML(xml, session) {
   const voteNumber = parseInt(extractTag(xml, 'vote_number')) || 0;
@@ -337,25 +405,20 @@ async function main() {
   console.log('=== Fetching Roll Call Votes (Concurrent) ===\n');
   const startTime = Date.now();
 
-  // Load members index for Senate cross-reference
-  let membersIndex = [];
-  try {
-    const data = JSON.parse(readFileSync(join(process.cwd(), 'data', 'members', 'index.json'), 'utf-8'));
-    membersIndex = data.members || [];
+  const membersIndex = readJSON('members/index.json')?.members || [];
+  if (membersIndex.length > 0) {
     console.log(`Loaded ${membersIndex.length} members for cross-reference`);
-  } catch {
+  } else {
     console.log('No members index found for cross-reference');
   }
 
-  // Load bill topics for vote categorization
-  let billTopics = {};
-  try {
-    const data = JSON.parse(readFileSync(join(process.cwd(), 'data', 'bills', 'index.json'), 'utf-8'));
-    for (const b of data.bills) {
-      if (b.billId && b.policyArea) billTopics[b.billId] = b.policyArea;
-    }
+  const billTopics = {};
+  for (const b of readJSON('bills/index.json')?.bills || []) {
+    if (b.billId && b.policyArea) billTopics[b.billId] = b.policyArea;
+  }
+  if (Object.keys(billTopics).length > 0) {
     console.log(`Loaded ${Object.keys(billTopics).length} bill topics for categorization`);
-  } catch {
+  } else {
     console.log('No bill data found for topic categorization');
   }
 
@@ -363,55 +426,33 @@ async function main() {
   const allSenateVotes = [];
 
   for (const { session, year } of SESSIONS) {
-    // ── House Votes: batch fetch all URLs concurrently ──
     console.log(`\n--- House Votes (Session ${session}, Year ${year}) ---`);
-    const houseUrls = buildHouseVoteUrls(year);
-    const houseResults = await batchFetchText(houseUrls, {
-      concurrency: 15,
-      delayMs: 50,
-      label: `House S${session} XML`,
+    const houseFetched = await probeRollCalls({
+      urlFor: n => houseVoteUrl(year, n),
+      parse: xml => parseHouseVoteXML(xml, session, year),
+      label: `House S${session}`,
     });
+    const houseVotes = chooseSessionVotes(
+      houseFetched,
+      loadStoredVoteFiles('h', session),
+      { chamber: 'House', session }
+    );
+    allHouseVotes.push(...houseVotes);
+    console.log(`  Found ${houseFetched.length} House votes for session ${session}${houseFetched.length === 0 && houseVotes.length ? ` (kept ${houseVotes.length} stored)` : ''}`);
 
-    let houseFound = 0;
-    for (let i = 0; i < houseResults.length; i++) {
-      const xml = houseResults[i];
-      if (!xml) continue;
-      try {
-        const vote = parseHouseVoteXML(xml, session, year);
-        if (vote.rollCallNumber > 0) {
-          allHouseVotes.push(vote);
-          houseFound++;
-        }
-      } catch (err) {
-        console.warn(`  Error parsing House S${session} RC ${i + 1}: ${err.message}`);
-      }
-    }
-    console.log(`  Found ${houseFound} House votes for session ${session}`);
-
-    // ── Senate Votes: batch fetch all URLs concurrently ──
     console.log(`\n--- Senate Votes (Session ${session}) ---`);
-    const senateUrls = buildSenateVoteUrls(session);
-    const senateResults = await batchFetchText(senateUrls, {
-      concurrency: 15,
-      delayMs: 50,
-      label: `Senate S${session} XML`,
+    const senateFetched = await probeRollCalls({
+      urlFor: n => senateVoteUrl(session, n),
+      parse: xml => parseSenateVoteXML(xml, session),
+      label: `Senate S${session}`,
     });
-
-    let senateFound = 0;
-    for (let i = 0; i < senateResults.length; i++) {
-      const xml = senateResults[i];
-      if (!xml) continue;
-      try {
-        const vote = parseSenateVoteXML(xml, session);
-        if (vote.rollCallNumber > 0) {
-          allSenateVotes.push(vote);
-          senateFound++;
-        }
-      } catch (err) {
-        console.warn(`  Error parsing Senate S${session} #${i + 1}: ${err.message}`);
-      }
-    }
-    console.log(`  Found ${senateFound} Senate votes for session ${session}`);
+    const senateVotes = chooseSessionVotes(
+      senateFetched,
+      loadStoredVoteFiles('s', session),
+      { chamber: 'Senate', session }
+    );
+    allSenateVotes.push(...senateVotes);
+    console.log(`  Found ${senateFetched.length} Senate votes for session ${session}${senateFetched.length === 0 && senateVotes.length ? ` (kept ${senateVotes.length} stored)` : ''}`);
   }
 
   console.log(`\nTotal: ${allHouseVotes.length} House + ${allSenateVotes.length} Senate`);
@@ -503,7 +544,9 @@ async function main() {
   console.log(`  Votes with topics: ${allVotes.filter(v => v.topic).length}`);
 }
 
-main().catch(err => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch(err => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  });
+}

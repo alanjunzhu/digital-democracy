@@ -25,11 +25,12 @@ A free, open-source transparency tool for monitoring the **119th United States C
 | Source | Data Provided |
 |--------|---------------|
 | [Congress.gov API v3](https://api.congress.gov/) | Members, bills, committees, committee legislation |
-| [unitedstates.io](https://theunitedstates.io/) | Biographical info, service history, contact details, social media |
+| [unitedstates/congress-legislators](https://unitedstates.github.io/congress-legislators/) | Biographical info, service history, contact details, social media, committee memberships |
 | [clerk.house.gov XML](https://clerk.house.gov/legislative/legvotes.aspx) | House roll call votes (no API key required) |
 | [senate.gov XML](https://www.senate.gov/legislative/votes_new.htm) | Senate roll call votes (no API key required) |
-| [House Stock Watcher](https://housestockwatcher.com/) | House member stock trade disclosures |
-| [Senate Stock Watcher](https://senatestockwatcher.com/) | Senate member stock trade disclosures |
+| [House Stock Watcher](https://housestockwatcher.com/) | House member stock trade disclosures (when the S3 dump is reachable) |
+| [Senate Stock Watcher](https://senatestockwatcher.com/) | Senate member stock trade disclosures (when the S3 dump is reachable) |
+| [House Clerk PTR filings](https://disclosures-clerk.house.gov/) | STOCK Act periodic transaction reports when Stock Watcher is unavailable |
 
 ---
 
@@ -88,9 +89,12 @@ digital-democracy/
 │   ├── fetch-votes.mjs                  # Fetch House + Senate XML votes
 │   ├── fetch-finances.mjs               # Fetch stock trades + conflict analysis
 │   ├── fix-data-urls.mjs                # Rebuild stored congress.gov URLs (no API calls)
+│   ├── backfill-member-bio.mjs          # Refill member bio/contact fields (no API key needed)
+│   ├── commit-data.sh                   # Publish regenerated data, tolerating concurrent runs
 │   └── lib/
 │       ├── api-client.mjs               # HTTP client with retry, pagination, batch concurrency
-│       └── data-writer.mjs              # File I/O utilities
+│       ├── data-writer.mjs              # File I/O utilities
+│       └── unitedstates.mjs             # congress-legislators hosts + committee membership map
 ├── shared/
 │   └── congress-urls.mjs                # congress.gov URL builders used by scripts and pages
 ├── tests/                               # node --test unit tests
@@ -168,7 +172,7 @@ The workflow runs scripts in two parallel phases:
 **Phase 1** (parallel): `fetch-members`, `fetch-bills`, `fetch-committees`
 **Phase 2** (parallel, after Phase 1): `fetch-votes`, `fetch-finances`
 
-Updated JSON files are committed back to `main`, which triggers the deploy workflow.
+Updated JSON files are committed back to `main` by `scripts/commit-data.sh`, which triggers the deploy workflow. All data workflows share a `fetch-data` concurrency group so they queue rather than overlap; if `main` still moves during a run, the script rebases onto it and reapplies the files it regenerated instead of failing on a merge conflict.
 
 **Required secret:** `CONGRESS_API_KEY`
 **Optional secret:** `FEC_API_KEY` (for FEC campaign finance data)
