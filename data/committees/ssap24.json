@@ -3,10 +3,22 @@
   "name": "Transportation, Housing and Urban Development, and Related Agencies Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": null,
   "isSubcommittee": true,
   "parent": {
     "systemCode": "ssap00",
     "name": "Appropriations Committee"
-  }
+  },
+  "url": null,
+  "billCount": 1,
+  "bills": [
+    {
+      "billId": "s2465",
+      "congress": 119,
+      "type": "S.",
+      "number": 2465,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-05-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2465"
+    }
+  ]
 }

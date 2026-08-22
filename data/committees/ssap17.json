@@ -3,10 +3,22 @@
   "name": "Department of the Interior, Environment, and Related Agencies Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": null,
   "isSubcommittee": true,
   "parent": {
     "systemCode": "ssap00",
     "name": "Appropriations Committee"
-  }
+  },
+  "url": null,
+  "billCount": 1,
+  "bills": [
+    {
+      "billId": "s2431",
+      "congress": 119,
+      "type": "S.",
+      "number": 2431,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-06-11",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2431"
+    }
+  ]
 }

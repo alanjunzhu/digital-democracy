@@ -5,6 +5,7 @@
   "lastName": "Smith",
   "party": "Republican",
   "state": "Nebraska",
+  "district": 3,
   "chamber": "House",
   "imageUrl": "https://bioguide.congress.gov/bioguide/photo/S/S001172.jpg",
   "url": "https://www.congress.gov/member/S001172",
@@ -94,12 +95,12 @@
       "party": "Republican"
     }
   ],
-  "officeAddress": "502 Cannon House Office Building Washington DC 20515-2703",
-  "committees": [],
-  "sponsoredBills": [],
   "socialMedia": {
     "twitter": "RepAdrianSmith",
     "facebook": "repadriansmith",
     "youtube": "RepAdrianSmith"
-  }
+  },
+  "officeAddress": "502 Cannon House Office Building Washington DC 20515-2703",
+  "committees": [],
+  "sponsoredBills": []
 }

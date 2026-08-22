@@ -3,10 +3,22 @@
   "name": "Legislative Branch Subcommittee",
   "chamber": "Senate",
   "committeeType": "Standing",
-  "url": null,
   "isSubcommittee": true,
   "parent": {
     "systemCode": "ssap00",
     "name": "Appropriations Committee"
-  }
+  },
+  "url": null,
+  "billCount": 1,
+  "bills": [
+    {
+      "billId": "s2257",
+      "congress": 119,
+      "type": "S.",
+      "number": 2257,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-04-29",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2257"
+    }
+  ]
 }

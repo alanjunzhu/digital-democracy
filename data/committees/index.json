@@ -1,2131 +1,36 @@
 {
-  "lastUpdated": "2026-08-16T03:08:05.474Z",
+  "lastUpdated": "2026-08-22T04:30:02.226Z",
   "congress": 119,
   "total": 236,
   "committees": [
-    {
-      "systemCode": "hsju05",
-      "name": "Administrative State, Regulatory Reform, and Antitrust Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsju00",
-        "name": "Judiciary Committee"
-      }
-    },
-    {
-      "systemCode": "hsfa16",
-      "name": "Africa Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsfa00",
-        "name": "Foreign Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hsag00",
-      "name": "Agriculture Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-agriculture/hsag00",
-      "subcommittees": [
-        {
-          "systemCode": "hsag22",
-          "name": "Commodity Markets, Digital Assets, and Rural Development Subcommittee"
-        },
-        {
-          "systemCode": "hsag16",
-          "name": "General Farm Commodities, Risk Management, and Credit Subcommittee"
-        },
-        {
-          "systemCode": "hsag15",
-          "name": "Forestry and Horticulture Subcommittee"
-        },
-        {
-          "systemCode": "hsag03",
-          "name": "Nutrition and Foreign Agriculture Subcommittee"
-        },
-        {
-          "systemCode": "hsag14",
-          "name": "Conservation, Research, and Biotechnology Subcommittee"
-        },
-        {
-          "systemCode": "hsag29",
-          "name": "Livestock, Dairy, and Poultry Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsap01",
-      "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsap00",
-      "name": "Appropriations Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
-      "subcommittees": [
-        {
-          "systemCode": "hsap06",
-          "name": "Interior, Environment, and Related Agencies Subcommittee"
-        },
-        {
-          "systemCode": "hsap02",
-          "name": "Defense Subcommittee"
-        },
-        {
-          "systemCode": "hsap23",
-          "name": "Financial Services and General Government Subcommittee"
-        },
-        {
-          "systemCode": "hsap01",
-          "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Subcommittee"
-        },
-        {
-          "systemCode": "hsap24",
-          "name": "Legislative Branch Subcommittee"
-        },
-        {
-          "systemCode": "hsap04",
-          "name": "National Security, Department of State, and Related Programs Subcommittee"
-        },
-        {
-          "systemCode": "hsap07",
-          "name": "Departments of Labor, Health and Human Services, Education, and Related Agencies Subcommittee"
-        },
-        {
-          "systemCode": "hsap20",
-          "name": "Departments of Transportation, and Housing and Urban Development, and Related Agencies Subcommittee"
-        },
-        {
-          "systemCode": "hsap15",
-          "name": "Department of Homeland Security Subcommittee"
-        },
-        {
-          "systemCode": "hsap18",
-          "name": "Military Construction, Veterans Affairs, and Related Agencies Subcommittee"
-        },
-        {
-          "systemCode": "hsap10",
-          "name": "Energy and Water Development, and Related Agencies Subcommittee"
-        },
-        {
-          "systemCode": "hsap19",
-          "name": "Commerce, Justice, Science, and Related Agencies Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsas00",
-      "name": "Armed Services Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-armed-services/hsas00",
-      "subcommittees": [
-        {
-          "systemCode": "hsas03",
-          "name": "Readiness Subcommittee"
-        },
-        {
-          "systemCode": "hsas28",
-          "name": "Seapower and Projection Forces Subcommittee"
-        },
-        {
-          "systemCode": "hsas29",
-          "name": "Strategic Forces Subcommittee"
-        },
-        {
-          "systemCode": "hsas25",
-          "name": "Tactical Air and Land Forces Subcommittee"
-        },
-        {
-          "systemCode": "hsas26",
-          "name": "Intelligence and Special Operations Subcommittee"
-        },
-        {
-          "systemCode": "hsas35",
-          "name": "Cyber, Information Technologies, and Innovation Subcommittee"
-        },
-        {
-          "systemCode": "hsas02",
-          "name": "Military Personnel Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hspw05",
-      "name": "Aviation Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hspw00",
-        "name": "Transportation and Infrastructure Committee"
-      }
-    },
-    {
-      "systemCode": "hshm11",
-      "name": "Border Security and Enforcement Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hshm00",
-        "name": "Homeland Security Committee"
-      }
-    },
-    {
-      "systemCode": "hsbu00",
-      "name": "Budget Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-budget/hsbu00",
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsba16",
-      "name": "Capital Markets Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsba00",
-        "name": "Financial Services Committee"
-      }
-    },
-    {
-      "systemCode": "hlig01",
-      "name": "Central Intelligence Agency Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hlig00",
-        "name": "Intelligence (Permanent Select) Committee"
-      }
-    },
-    {
-      "systemCode": "hspw07",
-      "name": "Coast Guard and Maritime Transportation Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hspw00",
-        "name": "Transportation and Infrastructure Committee"
-      }
-    },
-    {
-      "systemCode": "hsap19",
-      "name": "Commerce, Justice, Science, and Related Agencies Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsif17",
-      "name": "Commerce, Manufacturing, and Trade Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsif00",
-        "name": "Energy and Commerce Committee"
-      }
-    },
-    {
-      "systemCode": "hsha00",
-      "name": "Committee on House Administration",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-administration/hsha00",
-      "subcommittees": [
-        {
-          "systemCode": "hsha08",
-          "name": "Elections Subcommittee"
-        },
-        {
-          "systemCode": "hsha06",
-          "name": "Oversight Subcommittee"
-        },
-        {
-          "systemCode": "hsha27",
-          "name": "Modernization and Innovation Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsag22",
-      "name": "Commodity Markets, Digital Assets, and Rural Development Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsag00",
-        "name": "Agriculture Committee"
-      }
-    },
-    {
-      "systemCode": "hsif16",
-      "name": "Communications and Technology Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsif00",
-        "name": "Energy and Commerce Committee"
-      }
-    },
-    {
-      "systemCode": "hsag14",
-      "name": "Conservation, Research, and Biotechnology Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsag00",
-        "name": "Agriculture Committee"
-      }
-    },
-    {
-      "systemCode": "hsju10",
-      "name": "Constitution and Limited Government Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsju00",
-        "name": "Judiciary Committee"
-      }
-    },
-    {
-      "systemCode": "hssm23",
-      "name": "Contracting and Infrastructure Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssm00",
-        "name": "Small Business Committee"
-      }
-    },
-    {
-      "systemCode": "hshm05",
-      "name": "Counterterrorism and Intelligence Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hshm00",
-        "name": "Homeland Security Committee"
-      }
-    },
-    {
-      "systemCode": "hsju03",
-      "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsju00",
-        "name": "Judiciary Committee"
-      }
-    },
-    {
-      "systemCode": "hsju08",
-      "name": "Crime and Federal Government Surveillance Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsju00",
-        "name": "Judiciary Committee"
-      }
-    },
-    {
-      "systemCode": "hsas35",
-      "name": "Cyber, Information Technologies, and Innovation Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsas00",
-        "name": "Armed Services Committee"
-      }
-    },
-    {
-      "systemCode": "hshm08",
-      "name": "Cybersecurity and Infrastructure Protection Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hshm00",
-        "name": "Homeland Security Committee"
-      }
-    },
-    {
-      "systemCode": "hsgo12",
-      "name": "Cybersecurity, Information Technology, and Government Innovation Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsgo00",
-        "name": "Oversight and Government Reform Committee"
-      }
-    },
-    {
-      "systemCode": "hsap02",
-      "name": "Defense Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsgo16",
-      "name": "Delivering on Government Efficiency Subcommittee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsgo00",
-        "name": "Oversight and Government Reform Committee"
-      }
-    },
-    {
-      "systemCode": "hsap15",
-      "name": "Department of Homeland Security Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsap07",
-      "name": "Departments of Labor, Health and Human Services, Education, and Related Agencies Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsap20",
-      "name": "Departments of Transportation, and Housing and Urban Development, and Related Agencies Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsba21",
-      "name": "Digital Assets, Financial Technology, and Artificial Intelligence Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsba00",
-        "name": "Financial Services Committee"
-      }
-    },
-    {
-      "systemCode": "hsvr09",
-      "name": "Disability Assistance and Memorial Affairs Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsvr00",
-        "name": "Veterans' Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hsed14",
-      "name": "Early Childhood, Elementary, and Secondary Education Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsed00",
-        "name": "Education and Workforce Committee"
-      }
-    },
-    {
-      "systemCode": "hsfa05",
-      "name": "East Asia and Pacific Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsfa00",
-        "name": "Foreign Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hspw13",
-      "name": "Economic Development, Public Buildings, and Emergency Management Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hspw00",
-        "name": "Transportation and Infrastructure Committee"
-      }
-    },
-    {
-      "systemCode": "hsgo05",
-      "name": "Economic Growth, Energy Policy, and Regulatory Affairs Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsgo00",
-        "name": "Oversight and Government Reform Committee"
-      }
-    },
-    {
-      "systemCode": "hssm27",
-      "name": "Economic Growth, Tax, and Capital Access Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssm00",
-        "name": "Small Business Committee"
-      }
-    },
-    {
-      "systemCode": "hsvr10",
-      "name": "Economic Opportunity Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsvr00",
-        "name": "Veterans' Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hsed00",
-      "name": "Education and Workforce Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-education-and-workforce/hsed00",
-      "subcommittees": [
-        {
-          "systemCode": "hsed02",
-          "name": "Health, Employment, Labor, and Pensions Subcommittee"
-        },
-        {
-          "systemCode": "hsed13",
-          "name": "Higher Education and Workforce Development Subcommittee"
-        },
-        {
-          "systemCode": "hsed10",
-          "name": "Workforce Protections Subcommittee"
-        },
-        {
-          "systemCode": "hsed14",
-          "name": "Early Childhood, Elementary, and Secondary Education Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsha08",
-      "name": "Elections Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsha00",
-        "name": "Committee on House Administration"
-      }
-    },
-    {
-      "systemCode": "hshm12",
-      "name": "Emergency Management and Technology Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hshm00",
-        "name": "Homeland Security Committee"
-      }
-    },
-    {
-      "systemCode": "hsif00",
-      "name": "Energy and Commerce Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-energy-and-commerce/hsif00",
-      "subcommittees": [
-        {
-          "systemCode": "hsif17",
-          "name": "Commerce, Manufacturing, and Trade Subcommittee"
-        },
-        {
-          "systemCode": "hsif02",
-          "name": "Oversight and Investigations Subcommittee"
-        },
-        {
-          "systemCode": "hsif03",
-          "name": "Energy Subcommittee"
-        },
-        {
-          "systemCode": "hsif18",
-          "name": "Environment Subcommittee"
-        },
-        {
-          "systemCode": "hsif14",
-          "name": "Health Subcommittee"
-        },
-        {
-          "systemCode": "hsif16",
-          "name": "Communications and Technology Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsii06",
-      "name": "Energy and Mineral Resources Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsii00",
-        "name": "Natural Resources Committee"
-      }
-    },
-    {
-      "systemCode": "hsap10",
-      "name": "Energy and Water Development, and Related Agencies Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hssy20",
-      "name": "Energy Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssy00",
-        "name": "Science, Space, and Technology Committee"
-      }
-    },
-    {
-      "systemCode": "hsif03",
-      "name": "Energy Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsif00",
-        "name": "Energy and Commerce Committee"
-      }
-    },
-    {
-      "systemCode": "hssy18",
-      "name": "Environment Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssy00",
-        "name": "Science, Space, and Technology Committee"
-      }
-    },
-    {
-      "systemCode": "hsif18",
-      "name": "Environment Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsif00",
-        "name": "Energy and Commerce Committee"
-      }
-    },
-    {
-      "systemCode": "hsso00",
-      "name": "Ethics Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-ethics/hsso00",
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsfa14",
-      "name": "Europe Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsfa00",
-        "name": "Foreign Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hsii10",
-      "name": "Federal Lands Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsii00",
-        "name": "Natural Resources Committee"
-      }
-    },
-    {
-      "systemCode": "hsgo33",
-      "name": "Federal Law Enforcement Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsgo00",
-        "name": "Oversight and Government Reform Committee"
-      }
-    },
-    {
-      "systemCode": "hsba20",
-      "name": "Financial Institutions and Monetary Policy Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsba00",
-        "name": "Financial Services Committee"
-      }
-    },
-    {
-      "systemCode": "hsap23",
-      "name": "Financial Services and General Government Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsba00",
-      "name": "Financial Services Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-financial-services/hsba00",
-      "subcommittees": [
-        {
-          "systemCode": "hsba09",
-          "name": "Oversight and Investigations Subcommittee"
-        },
-        {
-          "systemCode": "hsba04",
-          "name": "Housing and Insurance Subcommittee"
-        },
-        {
-          "systemCode": "hsba16",
-          "name": "Capital Markets Subcommittee"
-        },
-        {
-          "systemCode": "hsba20",
-          "name": "Financial Institutions and Monetary Policy Subcommittee"
-        },
-        {
-          "systemCode": "hsba10",
-          "name": "National Security, Illicit Finance, and International Financial Institutions Subcommittee"
-        },
-        {
-          "systemCode": "hsba21",
-          "name": "Digital Assets, Financial Technology, and Artificial Intelligence Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsfa00",
-      "name": "Foreign Affairs Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-foreign-affairs/hsfa00",
-      "subcommittees": [
-        {
-          "systemCode": "hsfa16",
-          "name": "Africa Subcommittee"
-        },
-        {
-          "systemCode": "hsfa14",
-          "name": "Europe Subcommittee"
-        },
-        {
-          "systemCode": "hsfa06",
-          "name": "Global Health, Global Human Rights, and International Organizations Subcommittee"
-        },
-        {
-          "systemCode": "hsfa05",
-          "name": "East Asia and Pacific Subcommittee"
-        },
-        {
-          "systemCode": "hsfa13",
-          "name": "Middle East and North Africa Subcommittee"
-        },
-        {
-          "systemCode": "hsfa17",
-          "name": "Oversight and Intelligence Subcommittee"
-        },
-        {
-          "systemCode": "hsfa07",
-          "name": "Western Hemisphere Subcommittee"
-        },
-        {
-          "systemCode": "hsfa19",
-          "name": "South and Central Asia  Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsag15",
-      "name": "Forestry and Horticulture Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsag00",
-        "name": "Agriculture Committee"
-      }
-    },
-    {
-      "systemCode": "hsag16",
-      "name": "General Farm Commodities, Risk Management, and Credit Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsag00",
-        "name": "Agriculture Committee"
-      }
-    },
-    {
-      "systemCode": "hsfa06",
-      "name": "Global Health, Global Human Rights, and International Organizations Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsfa00",
-        "name": "Foreign Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hsgo24",
-      "name": "Government Operations Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsgo00",
-        "name": "Oversight and Government Reform Committee"
-      }
-    },
-    {
-      "systemCode": "hsgo27",
-      "name": "Health Care and Financial Services Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsgo00",
-        "name": "Oversight and Government Reform Committee"
-      }
-    },
-    {
-      "systemCode": "hswm02",
-      "name": "Health Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hswm00",
-        "name": "Ways and Means Committee"
-      }
-    },
-    {
-      "systemCode": "hsvr03",
-      "name": "Health Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsvr00",
-        "name": "Veterans' Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hsif14",
-      "name": "Health Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsif00",
-        "name": "Energy and Commerce Committee"
-      }
-    },
-    {
-      "systemCode": "hsed02",
-      "name": "Health, Employment, Labor, and Pensions Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsed00",
-        "name": "Education and Workforce Committee"
-      }
-    },
-    {
-      "systemCode": "hsed13",
-      "name": "Higher Education and Workforce Development Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsed00",
-        "name": "Education and Workforce Committee"
-      }
-    },
-    {
-      "systemCode": "hspw12",
-      "name": "Highways and Transit Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hspw00",
-        "name": "Transportation and Infrastructure Committee"
-      }
-    },
-    {
-      "systemCode": "hshm00",
-      "name": "Homeland Security Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-homeland-security/hshm00",
-      "subcommittees": [
-        {
-          "systemCode": "hshm11",
-          "name": "Border Security and Enforcement Subcommittee"
-        },
-        {
-          "systemCode": "hshm05",
-          "name": "Counterterrorism and Intelligence Subcommittee"
-        },
-        {
-          "systemCode": "hshm12",
-          "name": "Emergency Management and Technology Subcommittee"
-        },
-        {
-          "systemCode": "hshm09",
-          "name": "Oversight, Investigations, and Accountability Subcommittee"
-        },
-        {
-          "systemCode": "hshm08",
-          "name": "Cybersecurity and Infrastructure Protection Subcommittee"
-        },
-        {
-          "systemCode": "hshm07",
-          "name": "Transportation and Maritime Security Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsba04",
-      "name": "Housing and Insurance Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsba00",
-        "name": "Financial Services Committee"
-      }
-    },
-    {
-      "systemCode": "hsju01",
-      "name": "Immigration Integrity, Security, and Enforcement Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsju00",
-        "name": "Judiciary Committee"
-      }
-    },
-    {
-      "systemCode": "hsii24",
-      "name": "Indian and Insular Affairs Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsii00",
-        "name": "Natural Resources Committee"
-      }
-    },
-    {
-      "systemCode": "hssm22",
-      "name": "Innovation, Entrepreneurship, and Workforce Development Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssm00",
-        "name": "Small Business Committee"
-      }
-    },
-    {
-      "systemCode": "hlig00",
-      "name": "Intelligence (Permanent Select) Committee",
-      "chamber": "House",
-      "committeeType": "Select",
-      "url": "https://www.congress.gov/committee/house-intelligence/hlig00",
-      "subcommittees": [
-        {
-          "systemCode": "hlig11",
-          "name": "Open Source Subcommittee"
-        },
-        {
-          "systemCode": "hlig06",
-          "name": "National Intelligence Enterprise Subcommittee"
-        },
-        {
-          "systemCode": "hlig09",
-          "name": "Oversight and Investigations Subcommittee"
-        },
-        {
-          "systemCode": "hlig02",
-          "name": "National Security Agency and Cyber Subcommittee"
-        },
-        {
-          "systemCode": "hlig01",
-          "name": "Central Intelligence Agency Subcommittee"
-        },
-        {
-          "systemCode": "hlig04",
-          "name": "Subcommittee on Defense Intelligence and Overhead Architecture"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsas26",
-      "name": "Intelligence and Special Operations Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsas00",
-        "name": "Armed Services Committee"
-      }
-    },
-    {
-      "systemCode": "hsap06",
-      "name": "Interior, Environment, and Related Agencies Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hssy21",
-      "name": "Investigations and Oversight Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssy00",
-        "name": "Science, Space, and Technology Committee"
-      }
-    },
-    {
-      "systemCode": "hsju00",
-      "name": "Judiciary Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-judiciary/hsju00",
-      "subcommittees": [
-        {
-          "systemCode": "hlqj00",
-          "name": "Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021"
-        },
-        {
-          "systemCode": "hsju03",
-          "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet Subcommittee"
-        },
-        {
-          "systemCode": "hsju08",
-          "name": "Crime and Federal Government Surveillance Subcommittee"
-        },
-        {
-          "systemCode": "hsju01",
-          "name": "Immigration Integrity, Security, and Enforcement Subcommittee"
-        },
-        {
-          "systemCode": "hsju10",
-          "name": "Constitution and Limited Government Subcommittee"
-        },
-        {
-          "systemCode": "hsju05",
-          "name": "Administrative State, Regulatory Reform, and Antitrust Subcommittee"
-        },
-        {
-          "systemCode": "hsju13",
-          "name": "Oversight Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsru02",
-      "name": "Legislative and Budget Process Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsru00",
-        "name": "Rules Committee"
-      }
-    },
-    {
-      "systemCode": "hsap24",
-      "name": "Legislative Branch Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsag29",
-      "name": "Livestock, Dairy, and Poultry Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsag00",
-        "name": "Agriculture Committee"
-      }
-    },
-    {
-      "systemCode": "hsfa13",
-      "name": "Middle East and North Africa Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsfa00",
-        "name": "Foreign Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hsgo06",
-      "name": "Military and Foreign Affairs Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsgo00",
-        "name": "Oversight and Government Reform Committee"
-      }
-    },
-    {
-      "systemCode": "hsap18",
-      "name": "Military Construction, Veterans Affairs, and Related Agencies Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsas02",
-      "name": "Military Personnel Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsas00",
-        "name": "Armed Services Committee"
-      }
-    },
-    {
-      "systemCode": "hsha27",
-      "name": "Modernization and Innovation Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsha00",
-        "name": "Committee on House Administration"
-      }
-    },
-    {
-      "systemCode": "hlig06",
-      "name": "National Intelligence Enterprise Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hlig00",
-        "name": "Intelligence (Permanent Select) Committee"
-      }
-    },
-    {
-      "systemCode": "hlig02",
-      "name": "National Security Agency and Cyber Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hlig00",
-        "name": "Intelligence (Permanent Select) Committee"
-      }
-    },
-    {
-      "systemCode": "hsap04",
-      "name": "National Security, Department of State, and Related Programs Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsap00",
-        "name": "Appropriations Committee"
-      }
-    },
-    {
-      "systemCode": "hsba10",
-      "name": "National Security, Illicit Finance, and International Financial Institutions Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsba00",
-        "name": "Financial Services Committee"
-      }
-    },
-    {
-      "systemCode": "hsii00",
-      "name": "Natural Resources Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-natural-resources/hsii00",
-      "subcommittees": [
-        {
-          "systemCode": "hsii06",
-          "name": "Energy and Mineral Resources Subcommittee"
-        },
-        {
-          "systemCode": "hsii10",
-          "name": "Federal Lands Subcommittee"
-        },
-        {
-          "systemCode": "hsii15",
-          "name": "Oversight and Investigations Subcommittee"
-        },
-        {
-          "systemCode": "hsii24",
-          "name": "Indian and Insular Affairs Subcommittee"
-        },
-        {
-          "systemCode": "hsii13",
-          "name": "Water, Wildlife and Fisheries Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsag03",
-      "name": "Nutrition and Foreign Agriculture Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsag00",
-        "name": "Agriculture Committee"
-      }
-    },
-    {
-      "systemCode": "hlig11",
-      "name": "Open Source Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hlig00",
-        "name": "Intelligence (Permanent Select) Committee"
-      }
-    },
-    {
-      "systemCode": "hsgo00",
-      "name": "Oversight and Government Reform Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-oversight-and-government-reform/hsgo00",
-      "subcommittees": [
-        {
-          "systemCode": "hzgo34",
-          "name": "Task Force on the Declassification of Federal Secrets Subcommittee"
-        },
-        {
-          "systemCode": "hsgo12",
-          "name": "Cybersecurity, Information Technology, and Government Innovation Subcommittee"
-        },
-        {
-          "systemCode": "hsgo06",
-          "name": "Military and Foreign Affairs Subcommittee"
-        },
-        {
-          "systemCode": "hsgo05",
-          "name": "Economic Growth, Energy Policy, and Regulatory Affairs Subcommittee"
-        },
-        {
-          "systemCode": "hsgo24",
-          "name": "Government Operations Subcommittee"
-        },
-        {
-          "systemCode": "hsgo27",
-          "name": "Health Care and Financial Services Subcommittee"
-        },
-        {
-          "systemCode": "hsgo16",
-          "name": "Delivering on Government Efficiency Subcommittee"
-        },
-        {
-          "systemCode": "hsgo33",
-          "name": "Federal Law Enforcement Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsfa17",
-      "name": "Oversight and Intelligence Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsfa00",
-        "name": "Foreign Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hsvr08",
-      "name": "Oversight and Investigations Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsvr00",
-        "name": "Veterans' Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hsii15",
-      "name": "Oversight and Investigations Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsii00",
-        "name": "Natural Resources Committee"
-      }
-    },
-    {
-      "systemCode": "hlig09",
-      "name": "Oversight and Investigations Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hlig00",
-        "name": "Intelligence (Permanent Select) Committee"
-      }
-    },
-    {
-      "systemCode": "hsif02",
-      "name": "Oversight and Investigations Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsif00",
-        "name": "Energy and Commerce Committee"
-      }
-    },
-    {
-      "systemCode": "hsba09",
-      "name": "Oversight and Investigations Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsba00",
-        "name": "Financial Services Committee"
-      }
-    },
-    {
-      "systemCode": "hswm06",
-      "name": "Oversight Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hswm00",
-        "name": "Ways and Means Committee"
-      }
-    },
-    {
-      "systemCode": "hsju13",
-      "name": "Oversight Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsju00",
-        "name": "Judiciary Committee"
-      }
-    },
-    {
-      "systemCode": "hsha06",
-      "name": "Oversight Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsha00",
-        "name": "Committee on House Administration"
-      }
-    },
-    {
-      "systemCode": "hshm09",
-      "name": "Oversight, Investigations, and Accountability Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hshm00",
-        "name": "Homeland Security Committee"
-      }
-    },
-    {
-      "systemCode": "hssm24",
-      "name": "Oversight, Investigations, and Regulations",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssm00",
-        "name": "Small Business Committee"
-      }
-    },
-    {
-      "systemCode": "hspw14",
-      "name": "Railroads, Pipelines, and Hazardous Materials Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hspw00",
-        "name": "Transportation and Infrastructure Committee"
-      }
-    },
-    {
-      "systemCode": "hsas03",
-      "name": "Readiness Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsas00",
-        "name": "Armed Services Committee"
-      }
-    },
-    {
-      "systemCode": "hssy15",
-      "name": "Research and Technology Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssy00",
-        "name": "Science, Space, and Technology Committee"
-      }
-    },
-    {
-      "systemCode": "hsru04",
-      "name": "Rules and Organization of the House Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsru00",
-        "name": "Rules Committee"
-      }
-    },
-    {
-      "systemCode": "hsru00",
-      "name": "Rules Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-rules/hsru00",
-      "subcommittees": [
-        {
-          "systemCode": "hsru02",
-          "name": "Legislative and Budget Process Subcommittee"
-        },
-        {
-          "systemCode": "hsru04",
-          "name": "Rules and Organization of the House Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hssm21",
-      "name": "Rural Development, Energy, and Supply Chains Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssm00",
-        "name": "Small Business Committee"
-      }
-    },
-    {
-      "systemCode": "hssy00",
-      "name": "Science, Space, and Technology Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-science-space-and-technology/hssy00",
-      "subcommittees": [
-        {
-          "systemCode": "hssy20",
-          "name": "Energy Subcommittee"
-        },
-        {
-          "systemCode": "hssy18",
-          "name": "Environment Subcommittee"
-        },
-        {
-          "systemCode": "hssy21",
-          "name": "Investigations and Oversight Subcommittee"
-        },
-        {
-          "systemCode": "hssy15",
-          "name": "Research and Technology Subcommittee"
-        },
-        {
-          "systemCode": "hssy16",
-          "name": "Space and Aeronautics Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsas28",
-      "name": "Seapower and Projection Forces Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsas00",
-        "name": "Armed Services Committee"
-      }
-    },
-    {
-      "systemCode": "hlzs00",
-      "name": "Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party",
-      "chamber": "House",
-      "committeeType": "Select",
-      "url": null,
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hlqj00",
-      "name": "Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",
-      "chamber": "House",
-      "committeeType": "Select",
-      "url": null,
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hssm00",
-      "name": "Small Business Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-small-business/hssm00",
-      "subcommittees": [
-        {
-          "systemCode": "hssm24",
-          "name": "Oversight, Investigations, and Regulations"
-        },
-        {
-          "systemCode": "hssm23",
-          "name": "Contracting and Infrastructure Subcommittee"
-        },
-        {
-          "systemCode": "hssm27",
-          "name": "Economic Growth, Tax, and Capital Access Subcommittee"
-        },
-        {
-          "systemCode": "hssm22",
-          "name": "Innovation, Entrepreneurship, and Workforce Development Subcommittee"
-        },
-        {
-          "systemCode": "hssm21",
-          "name": "Rural Development, Energy, and Supply Chains Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hswm01",
-      "name": "Social Security Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hswm00",
-        "name": "Ways and Means Committee"
-      }
-    },
-    {
-      "systemCode": "hsfa19",
-      "name": "South and Central Asia  Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsfa00",
-        "name": "Foreign Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hssy16",
-      "name": "Space and Aeronautics Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hssy00",
-        "name": "Science, Space, and Technology Committee"
-      }
-    },
-    {
-      "systemCode": "hsas29",
-      "name": "Strategic Forces Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsas00",
-        "name": "Armed Services Committee"
-      }
-    },
-    {
-      "systemCode": "hlig04",
-      "name": "Subcommittee on Defense Intelligence and Overhead Architecture",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hlig00",
-        "name": "Intelligence (Permanent Select) Committee"
-      }
-    },
-    {
-      "systemCode": "hsas25",
-      "name": "Tactical Air and Land Forces Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsas00",
-        "name": "Armed Services Committee"
-      }
-    },
-    {
-      "systemCode": "hzgo34",
-      "name": "Task Force on the Declassification of Federal Secrets Subcommittee",
-      "chamber": "House",
-      "committeeType": "Task Force",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hzgo00",
-        "name": ""
-      }
-    },
-    {
-      "systemCode": "hswm05",
-      "name": "Tax Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hswm00",
-        "name": "Ways and Means Committee"
-      }
-    },
-    {
-      "systemCode": "hsvr11",
-      "name": "Technology Modernization Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsvr00",
-        "name": "Veterans' Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hotl00",
-      "name": "Tom Lantos Human Rights Commission",
-      "chamber": "House",
-      "committeeType": "Commission or Caucus",
-      "url": null,
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hswm04",
-      "name": "Trade Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hswm00",
-        "name": "Ways and Means Committee"
-      }
-    },
-    {
-      "systemCode": "hspw00",
-      "name": "Transportation and Infrastructure Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-transportation-and-infrastructure/hspw00",
-      "subcommittees": [
-        {
-          "systemCode": "hspw13",
-          "name": "Economic Development, Public Buildings, and Emergency Management Subcommittee"
-        },
-        {
-          "systemCode": "hspw12",
-          "name": "Highways and Transit Subcommittee"
-        },
-        {
-          "systemCode": "hspw14",
-          "name": "Railroads, Pipelines, and Hazardous Materials Subcommittee"
-        },
-        {
-          "systemCode": "hspw02",
-          "name": "Water Resources and Environment Subcommittee"
-        },
-        {
-          "systemCode": "hspw05",
-          "name": "Aviation Subcommittee"
-        },
-        {
-          "systemCode": "hspw07",
-          "name": "Coast Guard and Maritime Transportation Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hshm07",
-      "name": "Transportation and Maritime Security Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hshm00",
-        "name": "Homeland Security Committee"
-      }
-    },
-    {
-      "systemCode": "hsvr00",
-      "name": "Veterans' Affairs Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-veterans-affairs/hsvr00",
-      "subcommittees": [
-        {
-          "systemCode": "hsvr08",
-          "name": "Oversight and Investigations Subcommittee"
-        },
-        {
-          "systemCode": "hsvr03",
-          "name": "Health Subcommittee"
-        },
-        {
-          "systemCode": "hsvr09",
-          "name": "Disability Assistance and Memorial Affairs Subcommittee"
-        },
-        {
-          "systemCode": "hsvr10",
-          "name": "Economic Opportunity Subcommittee"
-        },
-        {
-          "systemCode": "hsvr11",
-          "name": "Technology Modernization Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hspw02",
-      "name": "Water Resources and Environment Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hspw00",
-        "name": "Transportation and Infrastructure Committee"
-      }
-    },
-    {
-      "systemCode": "hsii13",
-      "name": "Water, Wildlife and Fisheries Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsii00",
-        "name": "Natural Resources Committee"
-      }
-    },
-    {
-      "systemCode": "hswm00",
-      "name": "Ways and Means Committee",
-      "chamber": "House",
-      "committeeType": "Standing",
-      "url": "https://www.congress.gov/committee/house-ways-and-means/hswm00",
-      "subcommittees": [
-        {
-          "systemCode": "hswm04",
-          "name": "Trade Subcommittee"
-        },
-        {
-          "systemCode": "hswm06",
-          "name": "Oversight Subcommittee"
-        },
-        {
-          "systemCode": "hswm05",
-          "name": "Tax Subcommittee"
-        },
-        {
-          "systemCode": "hswm01",
-          "name": "Social Security Subcommittee"
-        },
-        {
-          "systemCode": "hswm03",
-          "name": "Work and Welfare Subcommittee"
-        },
-        {
-          "systemCode": "hswm02",
-          "name": "Health Subcommittee"
-        }
-      ],
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "hsfa07",
-      "name": "Western Hemisphere Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsfa00",
-        "name": "Foreign Affairs Committee"
-      }
-    },
-    {
-      "systemCode": "hswm03",
-      "name": "Work and Welfare Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hswm00",
-        "name": "Ways and Means Committee"
-      }
-    },
-    {
-      "systemCode": "hsed10",
-      "name": "Workforce Protections Subcommittee",
-      "chamber": "House",
-      "committeeType": "Subcommittee",
-      "url": null,
-      "isSubcommittee": true,
-      "parent": {
-        "systemCode": "hsed00",
-        "name": "Education and Workforce Committee"
-      }
-    },
-    {
-      "systemCode": "jcse00",
-      "name": "Commission on Security and Cooperation in Europe (U.S. Helsinki Commission)",
-      "chamber": "Joint",
-      "committeeType": "Commission or Caucus",
-      "url": null,
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "jcpk00",
-      "name": "Congressional-Executive Commission on China",
-      "chamber": "Joint",
-      "committeeType": "Commission or Caucus",
-      "url": null,
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "jspr00",
-      "name": "Joint Committee on Printing",
-      "chamber": "Joint",
-      "committeeType": "Joint",
-      "url": "https://www.congress.gov/committee/joint-printing/jspr00",
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "jstx00",
-      "name": "Joint Committee on Taxation",
-      "chamber": "Joint",
-      "committeeType": "Joint",
-      "url": "https://www.congress.gov/committee/joint-taxation/jstx00",
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "jslc00",
-      "name": "Joint Committee on the Library",
-      "chamber": "Joint",
-      "committeeType": "Joint",
-      "url": "https://www.congress.gov/committee/joint-library/jslc00",
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "jjec00",
-      "name": "Joint Economic Committee",
-      "chamber": "Joint",
-      "committeeType": "Joint",
-      "url": "https://www.congress.gov/committee/joint-economic/jjec00",
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "jhje00",
-      "name": "Joint Economic Committee",
-      "chamber": "Joint",
-      "committeeType": "Joint",
-      "url": "https://www.congress.gov/committee/joint-economic/jhje00",
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "jsec00",
-      "name": "Joint Economic Committee",
-      "chamber": "Joint",
-      "committeeType": "Joint",
-      "url": "https://www.congress.gov/committee/joint-economic/jsec00",
-      "isSubcommittee": false
-    },
-    {
-      "systemCode": "jcuc00",
-      "name": "U.S.-China Economic and Security Review Commission",
-      "chamber": "Joint",
-      "committeeType": "Commission or Caucus",
-      "url": null,
-      "isSubcommittee": false
-    },
     {
       "systemCode": "ssfr09",
       "name": "Africa and Global Health Policy Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfr00",
         "name": "Foreign Relations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "spag00",
       "name": "Aging (Special) Committee",
       "chamber": "Senate",
       "committeeType": "Special",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-aging/spag00",
-      "isSubcommittee": false
+      "billCount": 0
     },
     {
       "systemCode": "ssaf00",
       "name": "Agriculture, Nutrition, and Forestry Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-agriculture-nutrition-and-forestry/ssaf00",
       "subcommittees": [
         {
@@ -2149,49 +54,53 @@
           "name": "Food and Nutrition, Specialty Crops, Organics, and Research Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 225
     },
     {
       "systemCode": "ssap01",
       "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "ssas14",
       "name": "Airland Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssas00",
         "name": "Armed Services Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssju01",
       "name": "Antitrust, Competition Policy, and Consumer Rights Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssju00",
         "name": "Judiciary Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssap00",
       "name": "Appropriations Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-appropriations/ssap00",
       "subcommittees": [
         {
@@ -2247,13 +156,14 @@
           "name": "Financial Services and General Government Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 21
     },
     {
       "systemCode": "ssas00",
       "name": "Armed Services Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-armed-services/ssas00",
       "subcommittees": [
         {
@@ -2285,25 +195,27 @@
           "name": "Cybersecurity Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 117
     },
     {
       "systemCode": "sscm33",
       "name": "Aviation, Space, and Innovation Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sscm00",
         "name": "Commerce, Science, and Transportation Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssbk00",
       "name": "Banking, Housing, and Urban Affairs Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-banking-housing-and-urban-affairs/ssbk00",
       "subcommittees": [
         {
@@ -2331,93 +243,101 @@
           "name": "Economic Policy Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 250
     },
     {
       "systemCode": "ssga22",
       "name": "Border Management, Federal Workforce, and Regulatory Affairs Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssga00",
         "name": "Homeland Security and Governmental Affairs Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssju04",
       "name": "Border Security and Immigration Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssju00",
         "name": "Judiciary Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssbu00",
       "name": "Budget Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-budget/ssbu00",
-      "isSubcommittee": false
+      "billCount": 14
     },
     {
       "systemCode": "ssev09",
       "name": "Chemical Safety, Waste Management, Environmental Justice, and Regulatory Oversight Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssev00",
         "name": "Environment and Public Works Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssev10",
       "name": "Clean Air, Climate, and Nuclear Innovation and Safety Subcommittee Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssev00",
         "name": "Environment and Public Works Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "sscm36",
       "name": "Coast Guard, Maritime, and Fisheries Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sscm00",
         "name": "Commerce, Science, and Transportation Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssap16",
       "name": "Commerce, Justice, Science, and Related Agencies Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sscm00",
       "name": "Commerce, Science, and Transportation Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-commerce-science-and-transportation/sscm00",
       "subcommittees": [
         {
@@ -2449,217 +369,235 @@
           "name": "Tourism, Trade, and Export"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 250
     },
     {
       "systemCode": "ssaf13",
       "name": "Commodities, Derivatives, Risk Management, and Trade Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssaf00",
         "name": "Agriculture, Nutrition, and Forestry Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssaf14",
       "name": "Conservation, Forestry, Natural Resources, and Biotechnology Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssaf00",
         "name": "Agriculture, Nutrition, and Forestry Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssju21",
       "name": "Constitution Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssju00",
         "name": "Judiciary Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sscm35",
       "name": "Consumer Protection, Technology, and Data Privacy Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sscm00",
         "name": "Commerce, Science, and Transportation Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssju22",
       "name": "Crime and Counterterrorism Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssju00",
         "name": "Judiciary Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssas21",
       "name": "Cybersecurity Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssas00",
         "name": "Armed Services Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "ssap02",
       "name": "Department of Defense Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssap14",
       "name": "Department of Homeland Security Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssap17",
       "name": "Department of the Interior, Environment, and Related Agencies Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "ssap18",
       "name": "Departments of Labor, Health and Human Services, and Education, and Related Agencies Subcommittee",
       "chamber": "Senate",
       "committeeType": "Standing",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssbk13",
       "name": "Digital Assets Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssbk00",
         "name": "Banking, Housing, and Urban Affairs Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssga20",
       "name": "Disaster Management, District of Columbia, and Census Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssga00",
         "name": "Homeland Security and Governmental Affairs Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssfr02",
       "name": "East Asia, the Pacific, and International Cybersecurity Policy Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfr00",
         "name": "Foreign Relations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssbk12",
       "name": "Economic Policy Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssbk00",
         "name": "Banking, Housing, and Urban Affairs Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sshr09",
       "name": "Education and the American Family Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sshr00",
         "name": "Health, Education, Labor, and Pensions Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssas20",
       "name": "Emerging Threats and Capabilities Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssas00",
         "name": "Armed Services Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "sshr11",
       "name": "Employment and Workplace Safety Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sshr00",
         "name": "Health, Education, Labor, and Pensions Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sseg00",
       "name": "Energy and Natural Resources Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-energy-and-natural-resources/sseg00",
       "subcommittees": [
         {
@@ -2679,49 +617,53 @@
           "name": "Water and Power Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 250
     },
     {
       "systemCode": "ssap22",
       "name": "Energy and Water Development Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sseg01",
       "name": "Energy Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sseg00",
         "name": "Energy and Natural Resources Committee"
-      }
+      },
+      "url": null,
+      "billCount": 6
     },
     {
       "systemCode": "ssfi12",
       "name": "Energy, Natural Resources, and Infrastructure Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfi00",
         "name": "Finance Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssev00",
       "name": "Environment and Public Works Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-environment-and-public-works/ssev00",
       "subcommittees": [
         {
@@ -2741,45 +683,49 @@
           "name": "Clean Air, Climate, and Nuclear Innovation and Safety Subcommittee Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 192
     },
     {
       "systemCode": "slet00",
       "name": "Ethics (Select) Committee",
       "chamber": "Senate",
       "committeeType": "Select",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-ethics/slet00",
-      "isSubcommittee": false
+      "billCount": 0
     },
     {
       "systemCode": "ssfr01",
       "name": "Europe and Regional Security Cooperation Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfr00",
         "name": "Foreign Relations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssju25",
       "name": "Federal Courts, Oversight, Agency Action, and Federal Rights Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssju00",
         "name": "Judiciary Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssfi00",
       "name": "Finance Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-finance/ssfi00",
       "subcommittees": [
         {
@@ -2807,73 +753,79 @@
           "name": "Health Care Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 250
     },
     {
       "systemCode": "ssbk08",
       "name": "Financial Institutions and Consumer Protection Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssbk00",
         "name": "Banking, Housing, and Urban Affairs Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssap23",
       "name": "Financial Services and General Government Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssfi14",
       "name": "Fiscal Responsibility and Economic Growth Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfi00",
         "name": "Finance Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssev15",
       "name": "Fisheries, Water, and Wildlife Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssev00",
         "name": "Environment and Public Works Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssaf16",
       "name": "Food and Nutrition, Specialty Crops, Organics, and Research Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssaf00",
         "name": "Agriculture, Nutrition, and Forestry Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssfr00",
       "name": "Foreign Relations Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-foreign-relations/ssfr00",
       "subcommittees": [
         {
@@ -2905,25 +857,27 @@
           "name": "Multilateral International Development, Multilateral Institutions, and International Economic, Energy, and Environmental Policy Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 250
     },
     {
       "systemCode": "ssfi10",
       "name": "Health Care Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfi00",
         "name": "Finance Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sshr00",
       "name": "Health, Education, Labor, and Pensions Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-health-education-labor-and-pensions/sshr00",
       "subcommittees": [
         {
@@ -2939,13 +893,14 @@
           "name": "Employment and Workplace Safety Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 250
     },
     {
       "systemCode": "ssga00",
       "name": "Homeland Security and Governmental Affairs Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-homeland-security-and-governmental-affairs/ssga00",
       "subcommittees": [
         {
@@ -2965,65 +920,71 @@
           "name": "Border Management, Federal Workforce, and Regulatory Affairs Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 250
     },
     {
       "systemCode": "ssbk09",
       "name": "Housing, Transportation, and Community Development Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssbk00",
         "name": "Banking, Housing, and Urban Affairs Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "slia00",
       "name": "Indian Affairs Committee",
       "chamber": "Senate",
       "committeeType": "Other",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-indian-affairs/slia00",
-      "isSubcommittee": false
+      "billCount": 69
     },
     {
       "systemCode": "ssju26",
       "name": "Intellectual Property Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssju00",
         "name": "Judiciary Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "slin00",
       "name": "Intelligence (Select) Committee",
       "chamber": "Senate",
       "committeeType": "Select",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-intelligence/slin00",
-      "isSubcommittee": false
+      "billCount": 17
     },
     {
       "systemCode": "ssfi13",
       "name": "International Trade, Customs, and Global Competitiveness Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfi00",
         "name": "Finance Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssju00",
       "name": "Judiciary Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-judiciary/ssju00",
       "subcommittees": [
         {
@@ -3059,375 +1020,2650 @@
           "name": "Crime and Counterterrorism Subcommittee"
         }
       ],
-      "isSubcommittee": false
+      "billCount": 250
     },
     {
       "systemCode": "ssap08",
       "name": "Legislative Branch Subcommittee",
       "chamber": "Senate",
       "committeeType": "Standing",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "ssaf17",
       "name": "Livestock, Dairy, Poultry, and Food Safety Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssaf00",
         "name": "Agriculture, Nutrition, and Forestry Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssap19",
       "name": "Military Construction, Veterans Affairs, and Related Agencies Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssfr15",
       "name": "Multilateral International Development, Multilateral Institutions, and International Economic, Energy, and Environmental Policy Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfr00",
         "name": "Foreign Relations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sseg04",
       "name": "National Parks Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sseg00",
         "name": "Energy and Natural Resources Committee"
-      }
+      },
+      "url": null,
+      "billCount": 56
     },
     {
       "systemCode": "ssbk05",
       "name": "National Security and International Trade and Finance Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssbk00",
         "name": "Banking, Housing, and Urban Affairs Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssfr07",
       "name": "Near East, South Asia, Central Asia, and Counterterrorism Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfr00",
         "name": "Foreign Relations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssga01",
       "name": "Permanent Subcommittee on Investigations",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssga00",
         "name": "Homeland Security and Governmental Affairs Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "ssas17",
       "name": "Personnel Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssas00",
         "name": "Armed Services Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "sshr12",
       "name": "Primary Health and Retirement Security Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sshr00",
         "name": "Health, Education, Labor, and Pensions Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssju28",
       "name": "Privacy, Technology, and the Law Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssju00",
         "name": "Judiciary Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sseg03",
       "name": "Public Lands, Forests, and Mining Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sseg00",
         "name": "Energy and Natural Resources Committee"
-      }
+      },
+      "url": null,
+      "billCount": 66
     },
     {
       "systemCode": "ssas15",
       "name": "Readiness and Management Support Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssas00",
         "name": "Armed Services Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "ssra00",
       "name": "Rules and Administration Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-rules-and-administration/ssra00",
-      "isSubcommittee": false
+      "billCount": 46
     },
     {
       "systemCode": "ssaf15",
       "name": "Rural Development, Energy, and Credit Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssaf00",
         "name": "Agriculture, Nutrition, and Forestry Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sscm37",
       "name": "Science, Manufacturing, and Competitiveness Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sscm00",
         "name": "Commerce, Science, and Transportation Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssas13",
       "name": "Seapower Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssas00",
         "name": "Armed Services Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssbk04",
       "name": "Securities, Insurance, and Investment Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssbk00",
         "name": "Banking, Housing, and Urban Affairs Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sssb00",
       "name": "Small Business and Entrepreneurship Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-small-business-and-entrepreneurship/sssb00",
-      "isSubcommittee": false
+      "billCount": 57
     },
     {
       "systemCode": "ssfi02",
       "name": "Social Security, Pensions, and Family Policy Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfi00",
         "name": "Finance Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssfr14",
       "name": "State Department and USAID Management, International Operations, and Bilateral International Development Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfr00",
         "name": "Foreign Relations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssap20",
       "name": "State, Foreign Operations, and Related Programs Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssas16",
       "name": "Strategic Forces Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssas00",
         "name": "Armed Services Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sscm38",
       "name": "Surface Transportation, Freight, Pipelines, and Safety Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sscm00",
         "name": "Commerce, Science, and Transportation Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssfi11",
       "name": "Taxation and IRS Oversight Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfi00",
         "name": "Finance Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "sscm34",
       "name": "Telecommunications and Media Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sscm00",
         "name": "Commerce, Science, and Transportation Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssev08",
       "name": "Transportation and Infrastructure Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssev00",
         "name": "Environment and Public Works Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
     },
     {
       "systemCode": "ssap24",
       "name": "Transportation, Housing and Urban Development, and Related Agencies Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssap00",
         "name": "Appropriations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 1
     },
     {
       "systemCode": "scnc00",
       "name": "United States Senate Caucus on International Narcotics Control",
       "chamber": "Senate",
       "committeeType": "Other",
+      "isSubcommittee": false,
       "url": null,
-      "isSubcommittee": false
+      "billCount": 0
     },
     {
       "systemCode": "ssva00",
       "name": "Veterans' Affairs Committee",
       "chamber": "Senate",
       "committeeType": "Standing",
+      "isSubcommittee": false,
       "url": "https://www.congress.gov/committee/senate-veterans-affairs/ssva00",
-      "isSubcommittee": false
+      "billCount": 201
     },
     {
       "systemCode": "sseg07",
       "name": "Water and Power Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "sseg00",
         "name": "Energy and Natural Resources Committee"
-      }
+      },
+      "url": null,
+      "billCount": 21
     },
     {
       "systemCode": "ssfr06",
       "name": "Western Hemisphere, Transnational Crime, Civilian Security, Democracy, Human Rights, and Global Women's Issues Subcommittee",
       "chamber": "Senate",
       "committeeType": "Subcommittee",
-      "url": null,
       "isSubcommittee": true,
       "parent": {
         "systemCode": "ssfr00",
         "name": "Foreign Relations Committee"
-      }
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsju05",
+      "name": "Administrative State, Regulatory Reform, and Antitrust Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsju00",
+        "name": "Judiciary Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsfa16",
+      "name": "Africa Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsfa00",
+        "name": "Foreign Affairs Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsag00",
+      "name": "Agriculture Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-agriculture/hsag00",
+      "subcommittees": [
+        {
+          "systemCode": "hsag22",
+          "name": "Commodity Markets, Digital Assets, and Rural Development Subcommittee"
+        },
+        {
+          "systemCode": "hsag16",
+          "name": "General Farm Commodities, Risk Management, and Credit Subcommittee"
+        },
+        {
+          "systemCode": "hsag15",
+          "name": "Forestry and Horticulture Subcommittee"
+        },
+        {
+          "systemCode": "hsag03",
+          "name": "Nutrition and Foreign Agriculture Subcommittee"
+        },
+        {
+          "systemCode": "hsag14",
+          "name": "Conservation, Research, and Biotechnology Subcommittee"
+        },
+        {
+          "systemCode": "hsag29",
+          "name": "Livestock, Dairy, and Poultry Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hsap01",
+      "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap00",
+      "name": "Appropriations Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
+      "subcommittees": [
+        {
+          "systemCode": "hsap06",
+          "name": "Interior, Environment, and Related Agencies Subcommittee"
+        },
+        {
+          "systemCode": "hsap02",
+          "name": "Defense Subcommittee"
+        },
+        {
+          "systemCode": "hsap23",
+          "name": "Financial Services and General Government Subcommittee"
+        },
+        {
+          "systemCode": "hsap01",
+          "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Subcommittee"
+        },
+        {
+          "systemCode": "hsap24",
+          "name": "Legislative Branch Subcommittee"
+        },
+        {
+          "systemCode": "hsap04",
+          "name": "National Security, Department of State, and Related Programs Subcommittee"
+        },
+        {
+          "systemCode": "hsap07",
+          "name": "Departments of Labor, Health and Human Services, Education, and Related Agencies Subcommittee"
+        },
+        {
+          "systemCode": "hsap20",
+          "name": "Departments of Transportation, and Housing and Urban Development, and Related Agencies Subcommittee"
+        },
+        {
+          "systemCode": "hsap15",
+          "name": "Department of Homeland Security Subcommittee"
+        },
+        {
+          "systemCode": "hsap18",
+          "name": "Military Construction, Veterans Affairs, and Related Agencies Subcommittee"
+        },
+        {
+          "systemCode": "hsap10",
+          "name": "Energy and Water Development, and Related Agencies Subcommittee"
+        },
+        {
+          "systemCode": "hsap19",
+          "name": "Commerce, Justice, Science, and Related Agencies Subcommittee"
+        }
+      ],
+      "billCount": 105
+    },
+    {
+      "systemCode": "hsas00",
+      "name": "Armed Services Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-armed-services/hsas00",
+      "subcommittees": [
+        {
+          "systemCode": "hsas03",
+          "name": "Readiness Subcommittee"
+        },
+        {
+          "systemCode": "hsas28",
+          "name": "Seapower and Projection Forces Subcommittee"
+        },
+        {
+          "systemCode": "hsas29",
+          "name": "Strategic Forces Subcommittee"
+        },
+        {
+          "systemCode": "hsas25",
+          "name": "Tactical Air and Land Forces Subcommittee"
+        },
+        {
+          "systemCode": "hsas26",
+          "name": "Intelligence and Special Operations Subcommittee"
+        },
+        {
+          "systemCode": "hsas35",
+          "name": "Cyber, Information Technologies, and Innovation Subcommittee"
+        },
+        {
+          "systemCode": "hsas02",
+          "name": "Military Personnel Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hspw05",
+      "name": "Aviation Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hspw00",
+        "name": "Transportation and Infrastructure Committee"
+      },
+      "url": null,
+      "billCount": 54
+    },
+    {
+      "systemCode": "hshm11",
+      "name": "Border Security and Enforcement Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hshm00",
+        "name": "Homeland Security Committee"
+      },
+      "url": null,
+      "billCount": 71
+    },
+    {
+      "systemCode": "hsbu00",
+      "name": "Budget Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-budget/hsbu00",
+      "billCount": 87
+    },
+    {
+      "systemCode": "hsba16",
+      "name": "Capital Markets Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsba00",
+        "name": "Financial Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hlig01",
+      "name": "Central Intelligence Agency Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hlig00",
+        "name": "Intelligence (Permanent Select) Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hspw07",
+      "name": "Coast Guard and Maritime Transportation Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hspw00",
+        "name": "Transportation and Infrastructure Committee"
+      },
+      "url": null,
+      "billCount": 26
+    },
+    {
+      "systemCode": "hsap19",
+      "name": "Commerce, Justice, Science, and Related Agencies Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsif17",
+      "name": "Commerce, Manufacturing, and Trade Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsif00",
+        "name": "Energy and Commerce Committee"
+      },
+      "url": null,
+      "billCount": 30
+    },
+    {
+      "systemCode": "hsha00",
+      "name": "Committee on House Administration",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-administration/hsha00",
+      "subcommittees": [
+        {
+          "systemCode": "hsha08",
+          "name": "Elections Subcommittee"
+        },
+        {
+          "systemCode": "hsha06",
+          "name": "Oversight Subcommittee"
+        },
+        {
+          "systemCode": "hsha27",
+          "name": "Modernization and Innovation Subcommittee"
+        }
+      ],
+      "billCount": 204
+    },
+    {
+      "systemCode": "hsag22",
+      "name": "Commodity Markets, Digital Assets, and Rural Development Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsag00",
+        "name": "Agriculture Committee"
+      },
+      "url": null,
+      "billCount": 34
+    },
+    {
+      "systemCode": "hsif16",
+      "name": "Communications and Technology Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsif00",
+        "name": "Energy and Commerce Committee"
+      },
+      "url": null,
+      "billCount": 14
+    },
+    {
+      "systemCode": "hsag14",
+      "name": "Conservation, Research, and Biotechnology Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsag00",
+        "name": "Agriculture Committee"
+      },
+      "url": null,
+      "billCount": 43
+    },
+    {
+      "systemCode": "hsju10",
+      "name": "Constitution and Limited Government Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsju00",
+        "name": "Judiciary Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hssm23",
+      "name": "Contracting and Infrastructure Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssm00",
+        "name": "Small Business Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hshm05",
+      "name": "Counterterrorism and Intelligence Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hshm00",
+        "name": "Homeland Security Committee"
+      },
+      "url": null,
+      "billCount": 24
+    },
+    {
+      "systemCode": "hsju03",
+      "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsju00",
+        "name": "Judiciary Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsju08",
+      "name": "Crime and Federal Government Surveillance Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsju00",
+        "name": "Judiciary Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsas35",
+      "name": "Cyber, Information Technologies, and Innovation Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsas00",
+        "name": "Armed Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hshm08",
+      "name": "Cybersecurity and Infrastructure Protection Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hshm00",
+        "name": "Homeland Security Committee"
+      },
+      "url": null,
+      "billCount": 18
+    },
+    {
+      "systemCode": "hsgo12",
+      "name": "Cybersecurity, Information Technology, and Government Innovation Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsgo00",
+        "name": "Oversight and Government Reform Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap02",
+      "name": "Defense Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsgo16",
+      "name": "Delivering on Government Efficiency Subcommittee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsgo00",
+        "name": "Oversight and Government Reform Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap15",
+      "name": "Department of Homeland Security Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap07",
+      "name": "Departments of Labor, Health and Human Services, Education, and Related Agencies Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap20",
+      "name": "Departments of Transportation, and Housing and Urban Development, and Related Agencies Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsba21",
+      "name": "Digital Assets, Financial Technology, and Artificial Intelligence Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsba00",
+        "name": "Financial Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsvr09",
+      "name": "Disability Assistance and Memorial Affairs Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsvr00",
+        "name": "Veterans' Affairs Committee"
+      },
+      "url": null,
+      "billCount": 48
+    },
+    {
+      "systemCode": "hsed14",
+      "name": "Early Childhood, Elementary, and Secondary Education Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsed00",
+        "name": "Education and Workforce Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsfa05",
+      "name": "East Asia and Pacific Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsfa00",
+        "name": "Foreign Affairs Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hspw13",
+      "name": "Economic Development, Public Buildings, and Emergency Management Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hspw00",
+        "name": "Transportation and Infrastructure Committee"
+      },
+      "url": null,
+      "billCount": 79
+    },
+    {
+      "systemCode": "hsgo05",
+      "name": "Economic Growth, Energy Policy, and Regulatory Affairs Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsgo00",
+        "name": "Oversight and Government Reform Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hssm27",
+      "name": "Economic Growth, Tax, and Capital Access Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssm00",
+        "name": "Small Business Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsvr10",
+      "name": "Economic Opportunity Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsvr00",
+        "name": "Veterans' Affairs Committee"
+      },
+      "url": null,
+      "billCount": 61
+    },
+    {
+      "systemCode": "hsed00",
+      "name": "Education and Workforce Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-education-and-workforce/hsed00",
+      "subcommittees": [
+        {
+          "systemCode": "hsed02",
+          "name": "Health, Employment, Labor, and Pensions Subcommittee"
+        },
+        {
+          "systemCode": "hsed13",
+          "name": "Higher Education and Workforce Development Subcommittee"
+        },
+        {
+          "systemCode": "hsed10",
+          "name": "Workforce Protections Subcommittee"
+        },
+        {
+          "systemCode": "hsed14",
+          "name": "Early Childhood, Elementary, and Secondary Education Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hsha08",
+      "name": "Elections Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsha00",
+        "name": "Committee on House Administration"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hshm12",
+      "name": "Emergency Management and Technology Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hshm00",
+        "name": "Homeland Security Committee"
+      },
+      "url": null,
+      "billCount": 15
+    },
+    {
+      "systemCode": "hsif00",
+      "name": "Energy and Commerce Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-energy-and-commerce/hsif00",
+      "subcommittees": [
+        {
+          "systemCode": "hsif17",
+          "name": "Commerce, Manufacturing, and Trade Subcommittee"
+        },
+        {
+          "systemCode": "hsif02",
+          "name": "Oversight and Investigations Subcommittee"
+        },
+        {
+          "systemCode": "hsif03",
+          "name": "Energy Subcommittee"
+        },
+        {
+          "systemCode": "hsif18",
+          "name": "Environment Subcommittee"
+        },
+        {
+          "systemCode": "hsif14",
+          "name": "Health Subcommittee"
+        },
+        {
+          "systemCode": "hsif16",
+          "name": "Communications and Technology Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hsii06",
+      "name": "Energy and Mineral Resources Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsii00",
+        "name": "Natural Resources Committee"
+      },
+      "url": null,
+      "billCount": 30
+    },
+    {
+      "systemCode": "hsap10",
+      "name": "Energy and Water Development, and Related Agencies Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hssy20",
+      "name": "Energy Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssy00",
+        "name": "Science, Space, and Technology Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsif03",
+      "name": "Energy Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsif00",
+        "name": "Energy and Commerce Committee"
+      },
+      "url": null,
+      "billCount": 27
+    },
+    {
+      "systemCode": "hssy18",
+      "name": "Environment Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssy00",
+        "name": "Science, Space, and Technology Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsif18",
+      "name": "Environment Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsif00",
+        "name": "Energy and Commerce Committee"
+      },
+      "url": null,
+      "billCount": 16
+    },
+    {
+      "systemCode": "hsso00",
+      "name": "Ethics Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-ethics/hsso00",
+      "billCount": 38
+    },
+    {
+      "systemCode": "hsfa14",
+      "name": "Europe Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsfa00",
+        "name": "Foreign Affairs Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsii10",
+      "name": "Federal Lands Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsii00",
+        "name": "Natural Resources Committee"
+      },
+      "url": null,
+      "billCount": 52
+    },
+    {
+      "systemCode": "hsgo33",
+      "name": "Federal Law Enforcement Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsgo00",
+        "name": "Oversight and Government Reform Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsba20",
+      "name": "Financial Institutions and Monetary Policy Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsba00",
+        "name": "Financial Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap23",
+      "name": "Financial Services and General Government Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsba00",
+      "name": "Financial Services Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-financial-services/hsba00",
+      "subcommittees": [
+        {
+          "systemCode": "hsba09",
+          "name": "Oversight and Investigations Subcommittee"
+        },
+        {
+          "systemCode": "hsba04",
+          "name": "Housing and Insurance Subcommittee"
+        },
+        {
+          "systemCode": "hsba16",
+          "name": "Capital Markets Subcommittee"
+        },
+        {
+          "systemCode": "hsba20",
+          "name": "Financial Institutions and Monetary Policy Subcommittee"
+        },
+        {
+          "systemCode": "hsba10",
+          "name": "National Security, Illicit Finance, and International Financial Institutions Subcommittee"
+        },
+        {
+          "systemCode": "hsba21",
+          "name": "Digital Assets, Financial Technology, and Artificial Intelligence Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hsfa00",
+      "name": "Foreign Affairs Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-foreign-affairs/hsfa00",
+      "subcommittees": [
+        {
+          "systemCode": "hsfa16",
+          "name": "Africa Subcommittee"
+        },
+        {
+          "systemCode": "hsfa14",
+          "name": "Europe Subcommittee"
+        },
+        {
+          "systemCode": "hsfa06",
+          "name": "Global Health, Global Human Rights, and International Organizations Subcommittee"
+        },
+        {
+          "systemCode": "hsfa05",
+          "name": "East Asia and Pacific Subcommittee"
+        },
+        {
+          "systemCode": "hsfa13",
+          "name": "Middle East and North Africa Subcommittee"
+        },
+        {
+          "systemCode": "hsfa17",
+          "name": "Oversight and Intelligence Subcommittee"
+        },
+        {
+          "systemCode": "hsfa07",
+          "name": "Western Hemisphere Subcommittee"
+        },
+        {
+          "systemCode": "hsfa19",
+          "name": "South and Central Asia  Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hsag15",
+      "name": "Forestry and Horticulture Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsag00",
+        "name": "Agriculture Committee"
+      },
+      "url": null,
+      "billCount": 29
+    },
+    {
+      "systemCode": "hsag16",
+      "name": "General Farm Commodities, Risk Management, and Credit Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsag00",
+        "name": "Agriculture Committee"
+      },
+      "url": null,
+      "billCount": 28
+    },
+    {
+      "systemCode": "hsfa06",
+      "name": "Global Health, Global Human Rights, and International Organizations Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsfa00",
+        "name": "Foreign Affairs Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsgo24",
+      "name": "Government Operations Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsgo00",
+        "name": "Oversight and Government Reform Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsgo27",
+      "name": "Health Care and Financial Services Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsgo00",
+        "name": "Oversight and Government Reform Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hswm02",
+      "name": "Health Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hswm00",
+        "name": "Ways and Means Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsvr03",
+      "name": "Health Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsvr00",
+        "name": "Veterans' Affairs Committee"
+      },
+      "url": null,
+      "billCount": 123
+    },
+    {
+      "systemCode": "hsif14",
+      "name": "Health Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsif00",
+        "name": "Energy and Commerce Committee"
+      },
+      "url": null,
+      "billCount": 35
+    },
+    {
+      "systemCode": "hsed02",
+      "name": "Health, Employment, Labor, and Pensions Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsed00",
+        "name": "Education and Workforce Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsed13",
+      "name": "Higher Education and Workforce Development Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsed00",
+        "name": "Education and Workforce Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hspw12",
+      "name": "Highways and Transit Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hspw00",
+        "name": "Transportation and Infrastructure Committee"
+      },
+      "url": null,
+      "billCount": 109
+    },
+    {
+      "systemCode": "hshm00",
+      "name": "Homeland Security Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-homeland-security/hshm00",
+      "subcommittees": [
+        {
+          "systemCode": "hshm11",
+          "name": "Border Security and Enforcement Subcommittee"
+        },
+        {
+          "systemCode": "hshm05",
+          "name": "Counterterrorism and Intelligence Subcommittee"
+        },
+        {
+          "systemCode": "hshm12",
+          "name": "Emergency Management and Technology Subcommittee"
+        },
+        {
+          "systemCode": "hshm09",
+          "name": "Oversight, Investigations, and Accountability Subcommittee"
+        },
+        {
+          "systemCode": "hshm08",
+          "name": "Cybersecurity and Infrastructure Protection Subcommittee"
+        },
+        {
+          "systemCode": "hshm07",
+          "name": "Transportation and Maritime Security Subcommittee"
+        }
+      ],
+      "billCount": 188
+    },
+    {
+      "systemCode": "hsba04",
+      "name": "Housing and Insurance Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsba00",
+        "name": "Financial Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsju01",
+      "name": "Immigration Integrity, Security, and Enforcement Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsju00",
+        "name": "Judiciary Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsii24",
+      "name": "Indian and Insular Affairs Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsii00",
+        "name": "Natural Resources Committee"
+      },
+      "url": null,
+      "billCount": 20
+    },
+    {
+      "systemCode": "hssm22",
+      "name": "Innovation, Entrepreneurship, and Workforce Development Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssm00",
+        "name": "Small Business Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hlig00",
+      "name": "Intelligence (Permanent Select) Committee",
+      "chamber": "House",
+      "committeeType": "Select",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-intelligence/hlig00",
+      "subcommittees": [
+        {
+          "systemCode": "hlig11",
+          "name": "Open Source Subcommittee"
+        },
+        {
+          "systemCode": "hlig06",
+          "name": "National Intelligence Enterprise Subcommittee"
+        },
+        {
+          "systemCode": "hlig09",
+          "name": "Oversight and Investigations Subcommittee"
+        },
+        {
+          "systemCode": "hlig02",
+          "name": "National Security Agency and Cyber Subcommittee"
+        },
+        {
+          "systemCode": "hlig01",
+          "name": "Central Intelligence Agency Subcommittee"
+        },
+        {
+          "systemCode": "hlig04",
+          "name": "Subcommittee on Defense Intelligence and Overhead Architecture"
+        }
+      ],
+      "billCount": 51
+    },
+    {
+      "systemCode": "hsas26",
+      "name": "Intelligence and Special Operations Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsas00",
+        "name": "Armed Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap06",
+      "name": "Interior, Environment, and Related Agencies Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hssy21",
+      "name": "Investigations and Oversight Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssy00",
+        "name": "Science, Space, and Technology Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsju00",
+      "name": "Judiciary Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-judiciary/hsju00",
+      "subcommittees": [
+        {
+          "systemCode": "hlqj00",
+          "name": "Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021"
+        },
+        {
+          "systemCode": "hsju03",
+          "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet Subcommittee"
+        },
+        {
+          "systemCode": "hsju08",
+          "name": "Crime and Federal Government Surveillance Subcommittee"
+        },
+        {
+          "systemCode": "hsju01",
+          "name": "Immigration Integrity, Security, and Enforcement Subcommittee"
+        },
+        {
+          "systemCode": "hsju10",
+          "name": "Constitution and Limited Government Subcommittee"
+        },
+        {
+          "systemCode": "hsju05",
+          "name": "Administrative State, Regulatory Reform, and Antitrust Subcommittee"
+        },
+        {
+          "systemCode": "hsju13",
+          "name": "Oversight Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hsru02",
+      "name": "Legislative and Budget Process Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsru00",
+        "name": "Rules Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap24",
+      "name": "Legislative Branch Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsag29",
+      "name": "Livestock, Dairy, and Poultry Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsag00",
+        "name": "Agriculture Committee"
+      },
+      "url": null,
+      "billCount": 17
+    },
+    {
+      "systemCode": "hsfa13",
+      "name": "Middle East and North Africa Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsfa00",
+        "name": "Foreign Affairs Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsgo06",
+      "name": "Military and Foreign Affairs Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsgo00",
+        "name": "Oversight and Government Reform Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap18",
+      "name": "Military Construction, Veterans Affairs, and Related Agencies Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsas02",
+      "name": "Military Personnel Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsas00",
+        "name": "Armed Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsha27",
+      "name": "Modernization and Innovation Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsha00",
+        "name": "Committee on House Administration"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hlig06",
+      "name": "National Intelligence Enterprise Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hlig00",
+        "name": "Intelligence (Permanent Select) Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hlig02",
+      "name": "National Security Agency and Cyber Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hlig00",
+        "name": "Intelligence (Permanent Select) Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsap04",
+      "name": "National Security, Department of State, and Related Programs Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsap00",
+        "name": "Appropriations Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsba10",
+      "name": "National Security, Illicit Finance, and International Financial Institutions Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsba00",
+        "name": "Financial Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsii00",
+      "name": "Natural Resources Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-natural-resources/hsii00",
+      "subcommittees": [
+        {
+          "systemCode": "hsii06",
+          "name": "Energy and Mineral Resources Subcommittee"
+        },
+        {
+          "systemCode": "hsii10",
+          "name": "Federal Lands Subcommittee"
+        },
+        {
+          "systemCode": "hsii15",
+          "name": "Oversight and Investigations Subcommittee"
+        },
+        {
+          "systemCode": "hsii24",
+          "name": "Indian and Insular Affairs Subcommittee"
+        },
+        {
+          "systemCode": "hsii13",
+          "name": "Water, Wildlife and Fisheries Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hsag03",
+      "name": "Nutrition and Foreign Agriculture Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsag00",
+        "name": "Agriculture Committee"
+      },
+      "url": null,
+      "billCount": 48
+    },
+    {
+      "systemCode": "hlig11",
+      "name": "Open Source Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hlig00",
+        "name": "Intelligence (Permanent Select) Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsgo00",
+      "name": "Oversight and Government Reform Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-oversight-and-government-reform/hsgo00",
+      "subcommittees": [
+        {
+          "systemCode": "hzgo34",
+          "name": "Task Force on the Declassification of Federal Secrets Subcommittee"
+        },
+        {
+          "systemCode": "hsgo12",
+          "name": "Cybersecurity, Information Technology, and Government Innovation Subcommittee"
+        },
+        {
+          "systemCode": "hsgo06",
+          "name": "Military and Foreign Affairs Subcommittee"
+        },
+        {
+          "systemCode": "hsgo05",
+          "name": "Economic Growth, Energy Policy, and Regulatory Affairs Subcommittee"
+        },
+        {
+          "systemCode": "hsgo24",
+          "name": "Government Operations Subcommittee"
+        },
+        {
+          "systemCode": "hsgo27",
+          "name": "Health Care and Financial Services Subcommittee"
+        },
+        {
+          "systemCode": "hsgo16",
+          "name": "Delivering on Government Efficiency Subcommittee"
+        },
+        {
+          "systemCode": "hsgo33",
+          "name": "Federal Law Enforcement Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hsfa17",
+      "name": "Oversight and Intelligence Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsfa00",
+        "name": "Foreign Affairs Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsvr08",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsvr00",
+        "name": "Veterans' Affairs Committee"
+      },
+      "url": null,
+      "billCount": 33
+    },
+    {
+      "systemCode": "hsii15",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsii00",
+        "name": "Natural Resources Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hlig09",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hlig00",
+        "name": "Intelligence (Permanent Select) Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsif02",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsif00",
+        "name": "Energy and Commerce Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsba09",
+      "name": "Oversight and Investigations Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsba00",
+        "name": "Financial Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hswm06",
+      "name": "Oversight Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hswm00",
+        "name": "Ways and Means Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsju13",
+      "name": "Oversight Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsju00",
+        "name": "Judiciary Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsha06",
+      "name": "Oversight Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsha00",
+        "name": "Committee on House Administration"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hshm09",
+      "name": "Oversight, Investigations, and Accountability Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hshm00",
+        "name": "Homeland Security Committee"
+      },
+      "url": null,
+      "billCount": 30
+    },
+    {
+      "systemCode": "hssm24",
+      "name": "Oversight, Investigations, and Regulations",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssm00",
+        "name": "Small Business Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hspw14",
+      "name": "Railroads, Pipelines, and Hazardous Materials Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hspw00",
+        "name": "Transportation and Infrastructure Committee"
+      },
+      "url": null,
+      "billCount": 33
+    },
+    {
+      "systemCode": "hsas03",
+      "name": "Readiness Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsas00",
+        "name": "Armed Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hssy15",
+      "name": "Research and Technology Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssy00",
+        "name": "Science, Space, and Technology Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsru04",
+      "name": "Rules and Organization of the House Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsru00",
+        "name": "Rules Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsru00",
+      "name": "Rules Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-rules/hsru00",
+      "subcommittees": [
+        {
+          "systemCode": "hsru02",
+          "name": "Legislative and Budget Process Subcommittee"
+        },
+        {
+          "systemCode": "hsru04",
+          "name": "Rules and Organization of the House Subcommittee"
+        }
+      ],
+      "billCount": 167
+    },
+    {
+      "systemCode": "hssm21",
+      "name": "Rural Development, Energy, and Supply Chains Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssm00",
+        "name": "Small Business Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hssy00",
+      "name": "Science, Space, and Technology Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-science-space-and-technology/hssy00",
+      "subcommittees": [
+        {
+          "systemCode": "hssy20",
+          "name": "Energy Subcommittee"
+        },
+        {
+          "systemCode": "hssy18",
+          "name": "Environment Subcommittee"
+        },
+        {
+          "systemCode": "hssy21",
+          "name": "Investigations and Oversight Subcommittee"
+        },
+        {
+          "systemCode": "hssy15",
+          "name": "Research and Technology Subcommittee"
+        },
+        {
+          "systemCode": "hssy16",
+          "name": "Space and Aeronautics Subcommittee"
+        }
+      ],
+      "billCount": 200
+    },
+    {
+      "systemCode": "hsas28",
+      "name": "Seapower and Projection Forces Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsas00",
+        "name": "Armed Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hlzs00",
+      "name": "Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party",
+      "chamber": "House",
+      "committeeType": "Select",
+      "isSubcommittee": false,
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hlqj00",
+      "name": "Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",
+      "chamber": "House",
+      "committeeType": "Select",
+      "isSubcommittee": false,
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hssm00",
+      "name": "Small Business Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-small-business/hssm00",
+      "subcommittees": [
+        {
+          "systemCode": "hssm24",
+          "name": "Oversight, Investigations, and Regulations"
+        },
+        {
+          "systemCode": "hssm23",
+          "name": "Contracting and Infrastructure Subcommittee"
+        },
+        {
+          "systemCode": "hssm27",
+          "name": "Economic Growth, Tax, and Capital Access Subcommittee"
+        },
+        {
+          "systemCode": "hssm22",
+          "name": "Innovation, Entrepreneurship, and Workforce Development Subcommittee"
+        },
+        {
+          "systemCode": "hssm21",
+          "name": "Rural Development, Energy, and Supply Chains Subcommittee"
+        }
+      ],
+      "billCount": 99
+    },
+    {
+      "systemCode": "hswm01",
+      "name": "Social Security Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hswm00",
+        "name": "Ways and Means Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsfa19",
+      "name": "South and Central Asia  Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsfa00",
+        "name": "Foreign Affairs Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hssy16",
+      "name": "Space and Aeronautics Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hssy00",
+        "name": "Science, Space, and Technology Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsas29",
+      "name": "Strategic Forces Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsas00",
+        "name": "Armed Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hlig04",
+      "name": "Subcommittee on Defense Intelligence and Overhead Architecture",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hlig00",
+        "name": "Intelligence (Permanent Select) Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsas25",
+      "name": "Tactical Air and Land Forces Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsas00",
+        "name": "Armed Services Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hzgo34",
+      "name": "Task Force on the Declassification of Federal Secrets Subcommittee",
+      "chamber": "House",
+      "committeeType": "Task Force",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsgo00",
+        "name": "Oversight and Government Reform Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hswm05",
+      "name": "Tax Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hswm00",
+        "name": "Ways and Means Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsvr11",
+      "name": "Technology Modernization Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsvr00",
+        "name": "Veterans' Affairs Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hotl00",
+      "name": "Tom Lantos Human Rights Commission",
+      "chamber": "House",
+      "committeeType": "Commission or Caucus",
+      "isSubcommittee": false,
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hswm04",
+      "name": "Trade Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hswm00",
+        "name": "Ways and Means Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hspw00",
+      "name": "Transportation and Infrastructure Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-transportation-and-infrastructure/hspw00",
+      "subcommittees": [
+        {
+          "systemCode": "hspw13",
+          "name": "Economic Development, Public Buildings, and Emergency Management Subcommittee"
+        },
+        {
+          "systemCode": "hspw12",
+          "name": "Highways and Transit Subcommittee"
+        },
+        {
+          "systemCode": "hspw14",
+          "name": "Railroads, Pipelines, and Hazardous Materials Subcommittee"
+        },
+        {
+          "systemCode": "hspw02",
+          "name": "Water Resources and Environment Subcommittee"
+        },
+        {
+          "systemCode": "hspw05",
+          "name": "Aviation Subcommittee"
+        },
+        {
+          "systemCode": "hspw07",
+          "name": "Coast Guard and Maritime Transportation Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hshm07",
+      "name": "Transportation and Maritime Security Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hshm00",
+        "name": "Homeland Security Committee"
+      },
+      "url": null,
+      "billCount": 36
+    },
+    {
+      "systemCode": "hsvr00",
+      "name": "Veterans' Affairs Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-veterans-affairs/hsvr00",
+      "subcommittees": [
+        {
+          "systemCode": "hsvr08",
+          "name": "Oversight and Investigations Subcommittee"
+        },
+        {
+          "systemCode": "hsvr03",
+          "name": "Health Subcommittee"
+        },
+        {
+          "systemCode": "hsvr09",
+          "name": "Disability Assistance and Memorial Affairs Subcommittee"
+        },
+        {
+          "systemCode": "hsvr10",
+          "name": "Economic Opportunity Subcommittee"
+        },
+        {
+          "systemCode": "hsvr11",
+          "name": "Technology Modernization Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hspw02",
+      "name": "Water Resources and Environment Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hspw00",
+        "name": "Transportation and Infrastructure Committee"
+      },
+      "url": null,
+      "billCount": 50
+    },
+    {
+      "systemCode": "hsii13",
+      "name": "Water, Wildlife and Fisheries Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsii00",
+        "name": "Natural Resources Committee"
+      },
+      "url": null,
+      "billCount": 39
+    },
+    {
+      "systemCode": "hswm00",
+      "name": "Ways and Means Committee",
+      "chamber": "House",
+      "committeeType": "Standing",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/house-ways-and-means/hswm00",
+      "subcommittees": [
+        {
+          "systemCode": "hswm04",
+          "name": "Trade Subcommittee"
+        },
+        {
+          "systemCode": "hswm06",
+          "name": "Oversight Subcommittee"
+        },
+        {
+          "systemCode": "hswm05",
+          "name": "Tax Subcommittee"
+        },
+        {
+          "systemCode": "hswm01",
+          "name": "Social Security Subcommittee"
+        },
+        {
+          "systemCode": "hswm03",
+          "name": "Work and Welfare Subcommittee"
+        },
+        {
+          "systemCode": "hswm02",
+          "name": "Health Subcommittee"
+        }
+      ],
+      "billCount": 250
+    },
+    {
+      "systemCode": "hsfa07",
+      "name": "Western Hemisphere Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsfa00",
+        "name": "Foreign Affairs Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hswm03",
+      "name": "Work and Welfare Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hswm00",
+        "name": "Ways and Means Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "hsed10",
+      "name": "Workforce Protections Subcommittee",
+      "chamber": "House",
+      "committeeType": "Subcommittee",
+      "isSubcommittee": true,
+      "parent": {
+        "systemCode": "hsed00",
+        "name": "Education and Workforce Committee"
+      },
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "jcse00",
+      "name": "Commission on Security and Cooperation in Europe (U.S. Helsinki Commission)",
+      "chamber": "Joint",
+      "committeeType": "Commission or Caucus",
+      "isSubcommittee": false,
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "jcpk00",
+      "name": "Congressional-Executive Commission on China",
+      "chamber": "Joint",
+      "committeeType": "Commission or Caucus",
+      "isSubcommittee": false,
+      "url": null,
+      "billCount": 0
+    },
+    {
+      "systemCode": "jspr00",
+      "name": "Joint Committee on Printing",
+      "chamber": "Joint",
+      "committeeType": "Joint",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/joint-printing/jspr00",
+      "billCount": 0
+    },
+    {
+      "systemCode": "jstx00",
+      "name": "Joint Committee on Taxation",
+      "chamber": "Joint",
+      "committeeType": "Joint",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/joint-taxation/jstx00",
+      "billCount": 0
+    },
+    {
+      "systemCode": "jslc00",
+      "name": "Joint Committee on the Library",
+      "chamber": "Joint",
+      "committeeType": "Joint",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/joint-library/jslc00",
+      "billCount": 0
+    },
+    {
+      "systemCode": "jjec00",
+      "name": "Joint Economic Committee",
+      "chamber": "Joint",
+      "committeeType": "Joint",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/joint-economic/jjec00",
+      "billCount": 0
+    },
+    {
+      "systemCode": "jhje00",
+      "name": "Joint Economic Committee",
+      "chamber": "Joint",
+      "committeeType": "Joint",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/joint-economic/jhje00",
+      "billCount": 0
+    },
+    {
+      "systemCode": "jsec00",
+      "name": "Joint Economic Committee",
+      "chamber": "Joint",
+      "committeeType": "Joint",
+      "isSubcommittee": false,
+      "url": "https://www.congress.gov/committee/joint-economic/jsec00",
+      "billCount": 0
+    },
+    {
+      "systemCode": "jcuc00",
+      "name": "U.S.-China Economic and Security Review Commission",
+      "chamber": "Joint",
+      "committeeType": "Commission or Caucus",
+      "isSubcommittee": false,
+      "url": null,
+      "billCount": 0
     }
   ]
 }

@@ -3,10 +3,12 @@
   "name": "Elections Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": null,
   "isSubcommittee": true,
   "parent": {
     "systemCode": "hsha00",
     "name": "Committee on House Administration"
-  }
+  },
+  "url": null,
+  "billCount": 0,
+  "bills": []
 }

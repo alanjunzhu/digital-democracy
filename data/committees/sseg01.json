@@ -3,10 +3,67 @@
   "name": "Energy Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": null,
   "isSubcommittee": true,
   "parent": {
     "systemCode": "sseg00",
     "name": "Energy and Natural Resources Committee"
-  }
+  },
+  "url": null,
+  "billCount": 6,
+  "bills": [
+    {
+      "billId": "s1327",
+      "congress": 119,
+      "type": "S.",
+      "number": 1327,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-04-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1327"
+    },
+    {
+      "billId": "s3034",
+      "congress": 119,
+      "type": "S.",
+      "number": 3034,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-04-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3034"
+    },
+    {
+      "billId": "s3192",
+      "congress": 119,
+      "type": "S.",
+      "number": 3192,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-04-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3192"
+    },
+    {
+      "billId": "s3269",
+      "congress": 119,
+      "type": "S.",
+      "number": 3269,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-04-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3269"
+    },
+    {
+      "billId": "s3947",
+      "congress": 119,
+      "type": "S.",
+      "number": 3947,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-04-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3947"
+    },
+    {
+      "billId": "s465",
+      "congress": 119,
+      "type": "S.",
+      "number": 465,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-04-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/465"
+    }
+  ]
 }

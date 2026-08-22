@@ -3,10 +3,22 @@
   "name": "Clean Air, Climate, and Nuclear Innovation and Safety Subcommittee Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": null,
   "isSubcommittee": true,
   "parent": {
     "systemCode": "ssev00",
     "name": "Environment and Public Works Committee"
-  }
+  },
+  "url": null,
+  "billCount": 1,
+  "bills": [
+    {
+      "billId": "s4529",
+      "congress": 119,
+      "type": "S.",
+      "number": 4529,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-05-20",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4529"
+    }
+  ]
 }

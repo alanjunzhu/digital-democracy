@@ -3,10 +3,12 @@
   "name": "Legislative Branch Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": null,
   "isSubcommittee": true,
   "parent": {
     "systemCode": "hsap00",
     "name": "Appropriations Committee"
-  }
+  },
+  "url": null,
+  "billCount": 0,
+  "bills": []
 }

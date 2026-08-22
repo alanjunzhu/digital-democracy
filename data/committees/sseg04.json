@@ -3,10 +3,517 @@
   "name": "National Parks Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": null,
   "isSubcommittee": true,
   "parent": {
     "systemCode": "sseg00",
     "name": "Energy and Natural Resources Committee"
-  }
+  },
+  "url": null,
+  "billCount": 56,
+  "bills": [
+    {
+      "billId": "hr183",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 183,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/183"
+    },
+    {
+      "billId": "hr2306",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 2306,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2306"
+    },
+    {
+      "billId": "hr5254",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 5254,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5254"
+    },
+    {
+      "billId": "hr5729",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 5729,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5729"
+    },
+    {
+      "billId": "hr6365",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 6365,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6365"
+    },
+    {
+      "billId": "hr7618",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 7618,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7618"
+    },
+    {
+      "billId": "s1674",
+      "congress": 119,
+      "type": "S.",
+      "number": 1674,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1674"
+    },
+    {
+      "billId": "s2498",
+      "congress": 119,
+      "type": "S.",
+      "number": 2498,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2498"
+    },
+    {
+      "billId": "s2767",
+      "congress": 119,
+      "type": "S.",
+      "number": 2767,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2767"
+    },
+    {
+      "billId": "s2801",
+      "congress": 119,
+      "type": "S.",
+      "number": 2801,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2801"
+    },
+    {
+      "billId": "s2887",
+      "congress": 119,
+      "type": "S.",
+      "number": 2887,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2887"
+    },
+    {
+      "billId": "s2933",
+      "congress": 119,
+      "type": "S.",
+      "number": 2933,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2933"
+    },
+    {
+      "billId": "s2969",
+      "congress": 119,
+      "type": "S.",
+      "number": 2969,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2969"
+    },
+    {
+      "billId": "s3131",
+      "congress": 119,
+      "type": "S.",
+      "number": 3131,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3131"
+    },
+    {
+      "billId": "s3194",
+      "congress": 119,
+      "type": "S.",
+      "number": 3194,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3194"
+    },
+    {
+      "billId": "s3313",
+      "congress": 119,
+      "type": "S.",
+      "number": 3313,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3313"
+    },
+    {
+      "billId": "s3371",
+      "congress": 119,
+      "type": "S.",
+      "number": 3371,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3371"
+    },
+    {
+      "billId": "s3456",
+      "congress": 119,
+      "type": "S.",
+      "number": 3456,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3456"
+    },
+    {
+      "billId": "s3501",
+      "congress": 119,
+      "type": "S.",
+      "number": 3501,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3501"
+    },
+    {
+      "billId": "s3524",
+      "congress": 119,
+      "type": "S.",
+      "number": 3524,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3524"
+    },
+    {
+      "billId": "s3542",
+      "congress": 119,
+      "type": "S.",
+      "number": 3542,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3542"
+    },
+    {
+      "billId": "s3720",
+      "congress": 119,
+      "type": "S.",
+      "number": 3720,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3720"
+    },
+    {
+      "billId": "s3785",
+      "congress": 119,
+      "type": "S.",
+      "number": 3785,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3785"
+    },
+    {
+      "billId": "s3925",
+      "congress": 119,
+      "type": "S.",
+      "number": 3925,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3925"
+    },
+    {
+      "billId": "s4238",
+      "congress": 119,
+      "type": "S.",
+      "number": 4238,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4238"
+    },
+    {
+      "billId": "s4399",
+      "congress": 119,
+      "type": "S.",
+      "number": 4399,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4399"
+    },
+    {
+      "billId": "s4538",
+      "congress": 119,
+      "type": "S.",
+      "number": 4538,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4538"
+    },
+    {
+      "billId": "s4595",
+      "congress": 119,
+      "type": "S.",
+      "number": 4595,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4595"
+    },
+    {
+      "billId": "s4767",
+      "congress": 119,
+      "type": "S.",
+      "number": 4767,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-07-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4767"
+    },
+    {
+      "billId": "hr186",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 186,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/186"
+    },
+    {
+      "billId": "hr249",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 249,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/249"
+    },
+    {
+      "billId": "s1088",
+      "congress": 119,
+      "type": "S.",
+      "number": 1088,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1088"
+    },
+    {
+      "billId": "s1131",
+      "congress": 119,
+      "type": "S.",
+      "number": 1131,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1131"
+    },
+    {
+      "billId": "s1135",
+      "congress": 119,
+      "type": "S.",
+      "number": 1135,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1135"
+    },
+    {
+      "billId": "s1280",
+      "congress": 119,
+      "type": "S.",
+      "number": 1280,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1280"
+    },
+    {
+      "billId": "s1353",
+      "congress": 119,
+      "type": "S.",
+      "number": 1353,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1353"
+    },
+    {
+      "billId": "s1377",
+      "congress": 119,
+      "type": "S.",
+      "number": 1377,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1377"
+    },
+    {
+      "billId": "s1518",
+      "congress": 119,
+      "type": "S.",
+      "number": 1518,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1518"
+    },
+    {
+      "billId": "s1777",
+      "congress": 119,
+      "type": "S.",
+      "number": 1777,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1777"
+    },
+    {
+      "billId": "s1870",
+      "congress": 119,
+      "type": "S.",
+      "number": 1870,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1870"
+    },
+    {
+      "billId": "s1926",
+      "congress": 119,
+      "type": "S.",
+      "number": 1926,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1926"
+    },
+    {
+      "billId": "s2270",
+      "congress": 119,
+      "type": "S.",
+      "number": 2270,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2270"
+    },
+    {
+      "billId": "s2308",
+      "congress": 119,
+      "type": "S.",
+      "number": 2308,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2308"
+    },
+    {
+      "billId": "s2369",
+      "congress": 119,
+      "type": "S.",
+      "number": 2369,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2369"
+    },
+    {
+      "billId": "s2385",
+      "congress": 119,
+      "type": "S.",
+      "number": 2385,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2385"
+    },
+    {
+      "billId": "s2546",
+      "congress": 119,
+      "type": "S.",
+      "number": 2546,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2546"
+    },
+    {
+      "billId": "s2708",
+      "congress": 119,
+      "type": "S.",
+      "number": 2708,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2708"
+    },
+    {
+      "billId": "s290",
+      "congress": 119,
+      "type": "S.",
+      "number": 290,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/290"
+    },
+    {
+      "billId": "s2970",
+      "congress": 119,
+      "type": "S.",
+      "number": 2970,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2970"
+    },
+    {
+      "billId": "s332",
+      "congress": 119,
+      "type": "S.",
+      "number": 332,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/332"
+    },
+    {
+      "billId": "s446",
+      "congress": 119,
+      "type": "S.",
+      "number": 446,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/446"
+    },
+    {
+      "billId": "s573",
+      "congress": 119,
+      "type": "S.",
+      "number": 573,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/573"
+    },
+    {
+      "billId": "s601",
+      "congress": 119,
+      "type": "S.",
+      "number": 601,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/601"
+    },
+    {
+      "billId": "s730",
+      "congress": 119,
+      "type": "S.",
+      "number": 730,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/730"
+    },
+    {
+      "billId": "s791",
+      "congress": 119,
+      "type": "S.",
+      "number": 791,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/791"
+    },
+    {
+      "billId": "s858",
+      "congress": 119,
+      "type": "S.",
+      "number": 858,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-12-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/858"
+    }
+  ]
 }

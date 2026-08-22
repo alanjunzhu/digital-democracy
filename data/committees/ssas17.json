@@ -3,10 +3,22 @@
   "name": "Personnel Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": null,
   "isSubcommittee": true,
   "parent": {
     "systemCode": "ssas00",
     "name": "Armed Services Committee"
-  }
+  },
+  "url": null,
+  "billCount": 1,
+  "bills": [
+    {
+      "billId": "s2296",
+      "congress": 119,
+      "type": "S.",
+      "number": 2296,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2025-04-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2296"
+    }
+  ]
 }

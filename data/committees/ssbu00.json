@@ -3,6 +3,135 @@
   "name": "Budget Committee",
   "chamber": "Senate",
   "committeeType": "Standing",
+  "isSubcommittee": false,
   "url": "https://www.congress.gov/committee/senate-budget/ssbu00",
-  "isSubcommittee": false
+  "billCount": 14,
+  "bills": [
+    {
+      "billId": "sconres38",
+      "congress": 119,
+      "type": "S.Con.Res.",
+      "number": 38,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-08-07",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/38"
+    },
+    {
+      "billId": "sconres39",
+      "congress": 119,
+      "type": "S.Con.Res.",
+      "number": 39,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-08-07",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/39"
+    },
+    {
+      "billId": "hconres113",
+      "congress": 119,
+      "type": "H.Con.Res.",
+      "number": 113,
+      "relationshipType": "Discharged From",
+      "actionDate": "2026-07-23",
+      "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/113"
+    },
+    {
+      "billId": "s2",
+      "congress": 119,
+      "type": "S.",
+      "number": 2,
+      "relationshipType": "Reported Original Measure",
+      "actionDate": "2026-05-20",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2"
+    },
+    {
+      "billId": "s4455",
+      "congress": 119,
+      "type": "S.",
+      "number": 4455,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-04-30",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4455"
+    },
+    {
+      "billId": "s4372",
+      "congress": 119,
+      "type": "S.",
+      "number": 4372,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-04-22",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4372"
+    },
+    {
+      "billId": "sconres33",
+      "congress": 119,
+      "type": "S.Con.Res.",
+      "number": 33,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-04-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/33"
+    },
+    {
+      "billId": "s4173",
+      "congress": 119,
+      "type": "S.",
+      "number": 4173,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-03-24",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4173"
+    },
+    {
+      "billId": "sres654",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 654,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-03-20",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/654"
+    },
+    {
+      "billId": "s3951",
+      "congress": 119,
+      "type": "S.",
+      "number": 3951,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-02-26",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3951"
+    },
+    {
+      "billId": "s3204",
+      "congress": 119,
+      "type": "S.",
+      "number": 3204,
+      "relationshipType": "Referred To",
+      "actionDate": "2025-11-19",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3204"
+    },
+    {
+      "billId": "sres458",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 458,
+      "relationshipType": "Referred To",
+      "actionDate": "2025-10-21",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/458"
+    },
+    {
+      "billId": "sconres22",
+      "congress": 119,
+      "type": "S.Con.Res.",
+      "number": 22,
+      "relationshipType": "Discharged From",
+      "actionDate": "2025-09-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/22"
+    },
+    {
+      "billId": "s2749",
+      "congress": 119,
+      "type": "S.",
+      "number": 2749,
+      "relationshipType": "Referred To",
+      "actionDate": "2025-09-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2749"
+    }
+  ]
 }
