@@ -5,6 +5,8 @@ import { join } from 'path';
 import type { BillSummary, CommitteeDetail, CommitteeSummary } from '../../lib/types';
 import { getCommitteeWebUrl } from '../../../shared/congress-urls.mjs';
 import { getBillsByCommittee, mergeCommitteeBills } from '../../lib/committee-bills';
+import { buildCommitteeMemberIndex, getCommitteeMembers } from '../../../shared/committee-members.mjs';
+import MemberCard from '../../components/members/MemberCard.astro';
 
 export function getStaticPaths() {
   const committeesDir = join(process.cwd(), 'data', 'committees');
@@ -64,6 +66,13 @@ const referredBills = mergeCommitteeBills(
   hasPage: billsById.has(ref.billId),
 }));
 
+const financeData = loadJSON('finances/by-member.json');
+const membersIndex = loadJSON('members/index.json')?.members || [];
+const committeeMemberIndex = financeData
+  ? buildCommitteeMemberIndex(financeData, membersIndex)
+  : {};
+const committeeMembers = getCommitteeMembers(committeeMemberIndex, committee.name);
+
 const chamberColor = (ch: string) => {
   if (ch === 'Senate') return 'bg-amber-100 text-amber-800';
   if (ch === 'House') return 'bg-emerald-100 text-emerald-800';
@@ -110,6 +119,27 @@ const chamberColor = (ch: string) => {
           </a>
         )}
       </div>
+    </div>
+
+    <!-- Committee Members -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+      <h2 class="text-lg font-semibold text-gray-900 mb-1">
+        Committee Members ({committeeMembers.length})
+      </h2>
+      <p class="text-xs text-gray-400 mb-4">
+        Current membership from official committee rosters.
+      </p>
+      {committeeMembers.length === 0 ? (
+        <p class="text-sm text-gray-500">
+          No member roster matched this committee yet.
+        </p>
+      ) : (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {committeeMembers.map((member) => (
+            <MemberCard member={member} />
+          ))}
+        </div>
+      )}
     </div>
 
     <!-- Legislation -->
