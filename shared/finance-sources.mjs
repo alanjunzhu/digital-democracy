@@ -28,6 +28,22 @@ export function normalizeMemberName(value) {
     .trim();
 }
 
+/**
+ * Filer names arrive from PTR sources with a middle name repeating the first
+ * ("Scott Scott Franklin"). Collapse adjacent repeats, preserving the original
+ * capitalisation of the token that is kept.
+ */
+export function dedupeNameTokens(value) {
+  const tokens = String(value || '').trim().split(/\s+/).filter(Boolean);
+  const kept = [];
+  for (const token of tokens) {
+    const previous = kept[kept.length - 1];
+    if (previous && previous.toLowerCase() === token.toLowerCase()) continue;
+    kept.push(token);
+  }
+  return kept.join(' ');
+}
+
 export function tradeDedupeKey(trade) {
   const member = normalizeMemberName(trade.member);
   const date = normalizeFinanceDate(trade.transactionDate || trade.disclosureDate);

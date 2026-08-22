@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TradeTimingInsight from './TradeTimingInsight';
 import type { PrecomputedTiming } from '../../lib/types';
+import { normalizeOwner } from '../../../shared/portfolio-series.mjs';
 
 interface Candidate {
   bioguideId: string;
@@ -11,6 +12,7 @@ interface Candidate {
   disclosureDate?: string;
   amount?: string;
   assetDescription?: string;
+  owner?: string;
   sector?: string;
   url?: string;
   context: Record<string, unknown>;
@@ -57,6 +59,12 @@ export default function TradeTimingExplorer({ candidates, baseUrl }: Props) {
               <span className="font-mono text-sm font-semibold text-blue-700">{c.ticker}</span>
               <span className="text-xs text-gray-600">{c.type}</span>
               <span className="text-xs text-gray-500">{c.transactionDate}</span>
+              {c.amount && <span className="text-xs text-gray-500 hidden sm:inline">{c.amount}</span>}
+              {normalizeOwner(c.owner) && (
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-600">
+                  {normalizeOwner(c.owner)}
+                </span>
+              )}
               <span className="text-xs text-gray-700 flex-1 truncate">{c.memberName}</span>
               {c.sector && (
                 <span className="text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-700 border border-red-100">{c.sector}</span>

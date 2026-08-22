@@ -1,0 +1,60 @@
+name: Fetch Stock Prices
+
+# Prices and trade timing only — the fast subset of the weekly data run, so the
+# counterfactual charts can be refreshed without refetching members and bills.
+on:
+  schedule:
+    - cron: '0 5 * * 1'  # Weekly, Monday at 5am UTC
+  workflow_dispatch:
+    inputs:
+      all_tickers:
+        description: 'Cache every traded ticker, not just committee-overlap ones'
+        type: boolean
+        default: false
+      force:
+        description: 'Refetch tickers whose cache is still fresh'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# Shares data/ with the other data runs, so queue rather than race.
+concurrency:
+  group: fetch-data
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Cache stock prices
+        run: |
+          node scripts/fetch-stock-prices.mjs \
+            ${{ inputs.all_tickers && '--all' || '' }} \
+            ${{ inputs.force && '--force' || '' }}
+
+      - name: Enrich trade timing
+        run: node scripts/enrich-trade-timing.mjs
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          scripts/commit-data.sh "chore: update stock prices [$(date -u +%Y-%m-%d)]" data/prices/ data/finances/trade-timing.json

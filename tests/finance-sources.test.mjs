@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
 import {
+  dedupeNameTokens,
   mapKadoaTrade,
   mergeFinanceTrades,
   normalizeMemberName,
@@ -88,4 +89,13 @@ test('trade and ticker link helpers prefer disclosure url and yahoo quote', asyn
   );
   assert.equal(tickerQuoteUrl('msft'), 'https://finance.yahoo.com/quote/MSFT');
   assert.equal(tickerQuoteUrl('--'), null);
+});
+
+test('adjacent repeated name tokens collapse', () => {
+  // Rep. Franklin arrives from the PTR sources as "Scott Scott Franklin".
+  assert.equal(dedupeNameTokens('Scott Scott Franklin'), 'Scott Franklin');
+  assert.equal(dedupeNameTokens('  Hon.  Carol   Devine  Miller '), 'Hon. Carol Devine Miller');
+  // Only adjacent repeats collapse — a real repeated surname survives.
+  assert.equal(dedupeNameTokens('John Smith John'), 'John Smith John');
+  assert.equal(dedupeNameTokens(''), '');
 });

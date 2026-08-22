@@ -80,6 +80,7 @@ digital-democracy/
 │   │       ├── BillFilter.tsx
 │   │       ├── VoteFilter.tsx
 │   │       ├── CommitteeFilter.tsx
+│   │       ├── MemberPortfolioChart.tsx
 │   │       └── AnalyticsDashboard.tsx
 │   ├── lib/
 │   │   ├── types.ts                     # Shared TypeScript types
@@ -109,7 +110,9 @@ digital-democracy/
 │   ├── stock-prices.mjs                 # Yahoo chart parsing and forward returns
 │   ├── price-cache.mjs                  # Compact per-ticker price files
 │   ├── trade-timing.mjs                 # Counterfactual scenarios and trade context
-│   └── timing-precompute.mjs            # Build-time pairing of chart data to trades
+│   ├── timing-precompute.mjs            # Build-time pairing of chart data to trades
+│   ├── portfolio-series.mjs             # Member portfolio vs S&P 500 vs not investing
+│   └── data-loader.mjs                  # Memoised reads of the shared data indexes
 ├── tests/                               # node --test
 │   ├── api-client.test.mjs
 │   ├── commit-data.test.mjs
@@ -132,6 +135,7 @@ digital-democracy/
 │   ├── deploy.yml                       # Test, build, deploy Pages on push to main
 │   ├── ci.yml                           # Tests, typecheck, and Astro build on pull requests
 │   ├── fetch-members.yml                # Weekly full fetch (sequential; bills, finances, prices, timing)
+│   ├── fetch-prices.yml                 # Prices + trade timing only (Mon, or on demand)
 │   ├── fetch-bills.yml                  # Bills only (Mon/Thu)
 │   └── fetch-votes.yml                  # Votes only (Tue/Fri)
 ├── public/
@@ -241,6 +245,25 @@ Ticker-level analysis prefers Stock Watcher dumps when reachable. Otherwise the 
 
 > Highlights on member pages are potential conflicts from public disclosures, not findings of wrongdoing.
 
+### Portfolio counterfactual
+
+Each member page charts what their disclosed **purchases** would be worth today against
+putting the same money into the S&P 500 (via `SPY`, a real tradeable fund priced from the
+same source) on the same days, or not investing it at all. A fourth line repeats those
+purchases on each trade's *disclosure* date — the first day anyone outside Congress could
+have acted — so the gap between it and the member line is the part of the result the
+filings never made available.
+
+Identical cash flows across all four lines are what make the comparison fair, so the
+"not invested" line doubles as the capital-deployed line. The chart plots growth per
+dollar invested rather than raw dollars, so the contribution schedule itself does not
+move the lines.
+
+Limits, all surfaced in the UI: disclosures report **ranges**, so every trade is modelled
+at its midpoint and every value is an estimate; sales of positions acquired before the
+disclosure window cannot be represented and are counted separately; members who only sold
+in the window get no chart, since there is nothing to compare.
+
 ### Trade timing counterfactuals
 
 Member and finance pages chart each committee-overlap trade against what else the
@@ -257,7 +280,9 @@ run before the build:
 | `npm run fetch:prices` | `data/prices/<TICKER>.json` | One request per ticker, not per trade. Committee-overlap tickers by default; `--all` covers every traded ticker, `--force` refetches fresh files. Existing files survive a failed fetch. |
 | `npm run enrich:trade-timing` | `data/finances/trade-timing.json` | Reads the price cache, no network. Counterfactuals only — pages slice their own sparkline window from `data/prices/`. |
 
-Both run weekly in `fetch-members.yml` after the finance fetch. A trade whose 60-day
+Both run weekly in `fetch-members.yml` after the finance fetch, and `fetch-prices.yml`
+re-runs just these two on demand (Actions → Fetch Stock Prices → Run workflow) without
+refetching members and bills. A trade whose 60-day
 window has not elapsed is labeled as still running rather than scored against a
 partial window, and a trade with no cached close near its transaction date is shown
 with context but no chart.
