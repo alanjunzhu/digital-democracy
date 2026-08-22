@@ -79,3 +79,13 @@ test('members match when source names include a trailing state abbreviation', ()
   ]);
   assert.equal(matchTradeBioguide({ member: 'Jerry Moran, KS', state: 'KS' }, lookup), 'M000934');
 });
+
+test('trade and ticker link helpers prefer disclosure url and yahoo quote', async () => {
+  const { tradeDisclosureUrl, tickerQuoteUrl } = await import('../shared/finance-sources.mjs');
+  assert.equal(
+    tradeDisclosureUrl({ url: 'https://efdsearch.senate.gov/search/view/ptr/example/' }),
+    'https://efdsearch.senate.gov/search/view/ptr/example/'
+  );
+  assert.equal(tickerQuoteUrl('msft'), 'https://finance.yahoo.com/quote/MSFT');
+  assert.equal(tickerQuoteUrl('--'), null);
+});
