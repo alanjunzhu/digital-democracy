@@ -3,10 +3,9 @@ import Layout from '../../components/layout/Layout.astro';
 import PartyBadge from '../../components/shared/PartyBadge.astro';
 import ChamberBadge from '../../components/shared/ChamberBadge.astro';
 import MemberVoteRow from '../../components/shared/MemberVoteRow.astro';
-import MemberTradeRow from '../../components/shared/MemberTradeRow.astro';
 import MemberFilingRow from '../../components/shared/MemberFilingRow.astro';
 import ExpandableTradeList from '../../components/shared/ExpandableTradeList.astro';
-import { tickerQuoteUrl } from '../../../shared/finance-sources.mjs';
+import { tickerQuoteUrl, tradeDisclosureUrl } from '../../../shared/finance-sources.mjs';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
@@ -792,7 +791,11 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
                     <details class={`rounded-lg border ${isOverlap ? 'border-red-200 bg-red-50/30' : 'border-gray-200'}`}>
                       <summary class="cursor-pointer list-none px-3 py-2 select-none">
                         <div class="flex items-center gap-2 flex-wrap">
-                          <span class="font-mono text-sm font-semibold text-blue-700">{ticker}</span>
+                          {quoteUrl ? (
+                            <a href={quoteUrl} target="_blank" rel="noopener" class="font-mono text-sm font-semibold text-blue-700 hover:underline">{ticker}</a>
+                          ) : (
+                            <span class="font-mono text-sm font-semibold text-blue-700">{ticker}</span>
+                          )}
                           <span class="text-xs text-gray-500">({trades.length} trades)</span>
                           {isOverlap && <span class="text-red-500 text-[10px] font-medium">committee overlap</span>}
                           <span class="text-[10px] text-blue-600 ml-auto">Expand trades</span>
@@ -833,7 +836,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
                   <tbody>
                     {stockTrades.map((t: any) => {
                       const quoteUrl = tickerQuoteUrl(t.ticker);
-                      const disclosureUrl = t.url || null;
+                      const disclosureUrl = tradeDisclosureUrl(t);
                       const typeColor = (t.type || '').toLowerCase().includes('purchase')
                         ? 'text-green-700 bg-green-50'
                         : (t.type || '').toLowerCase().includes('sale')
