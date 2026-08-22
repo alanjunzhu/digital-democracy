@@ -552,7 +552,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
     )}
 
     <!-- Committee Assignments (standalone, shows even without finance data) -->
-    {memberCommittees.length > 0 && stockTrades.length === 0 && (
+    {memberCommittees.length > 0 && stockTrades.length === 0 && ptrFilings.length === 0 && (
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-3">Committee Assignments</h2>
         <div class="flex flex-wrap gap-1.5">
@@ -569,6 +569,14 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
             );
           })}
         </div>
+      </div>
+    )}
+
+    {stockTrades.length === 0 && ptrFilings.length === 0 && (
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-6 text-sm text-gray-600">
+        No STOCK Act trades or disclosure filings matched this member in the last two years.
+        Many members file only annual disclosures or have no reportable stock activity.
+        Sources checked: CongressWatch, Kadoa (House/Senate PTRs), and official Clerk/eFD indexes.
       </div>
     )}
 
@@ -619,17 +627,20 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
           {ptrFilings.length > 0 && (
             <div class={stockTrades.length > 0 ? 'mb-5' : ''}>
-              <h3 class="text-sm font-semibold text-gray-700 mb-2">STOCK Act periodic transaction reports</h3>
+              <h3 class="text-sm font-semibold text-gray-700 mb-2">Official disclosure filings</h3>
               <p class="text-xs text-gray-500 mb-3">
-                House Stock Watcher is not publishing ticker-level trades right now, so these are the official Clerk PDFs. Senate filings have no bulk dump while Senate Stock Watcher is closed.
+                Periodic transaction reports (PTRs) and annual financial disclosures from the House Clerk and Senate eFD system.
               </p>
               <ul class="space-y-1.5">
                 {ptrFilings.slice(0, 20).map((f: any) => (
                   <li class="flex items-center justify-between gap-3 text-sm py-1.5 border-b border-gray-50">
-                    <span class="text-gray-600">{f.disclosureDate || f.transactionDate}</span>
+                    <div class="min-w-0">
+                      <span class="text-gray-600">{f.disclosureDate || f.transactionDate}</span>
+                      <span class="text-xs text-gray-400 ml-2">{f.type || 'Filing'}</span>
+                    </div>
                     {f.url ? (
-                      <a href={f.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline text-xs">
-                        View PTR PDF
+                      <a href={f.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline text-xs whitespace-nowrap">
+                        View PDF
                       </a>
                     ) : (
                       <span class="text-xs text-gray-400">No PDF link</span>
@@ -824,9 +835,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
           )}
 
           <p class="text-[10px] text-gray-400 mt-3 border-t border-gray-100 pt-3">
-            Sources: CongressWatch public PTR aggregate (Clerk + Senate filings)
-            {stockTrades.some((t: any) => t.source === 'congresswatch') ? '' : ''}
-            {stockTrades.length > 0 ? '; ticker trades when available' : ''}.
+            Sources: CongressWatch, Kadoa congress-trading-monitor, House Clerk, Senate eFD{stockTrades.length > 0 ? ', and Stock Watcher when available' : ''}.
             Red highlights indicate trades in sectors related to this member's committee assignments — this does not necessarily indicate wrongdoing.
           </p>
         </div>

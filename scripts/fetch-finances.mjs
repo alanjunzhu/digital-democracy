@@ -13,8 +13,18 @@
 
 import { pathToFileURL } from 'url';
 import { writeJSON, readJSON } from './lib/data-writer.mjs';
-import { fetchWithRetry } from './lib/api-client.mjs';
+import { fetchWithRetry, batchFetchJSON, mergeFetchOptions } from './lib/api-client.mjs';
 import { fetchUnitedstatesFile, mapCommitteeMemberships } from './lib/unitedstates.mjs';
+import {
+  HOUSE_FILING_TYPES,
+  mapKadoaTrade,
+  mergeFinanceTrades,
+  normalizeFinanceDate,
+  normalizeMemberName,
+} from '../shared/finance-sources.mjs';
+
+const KADOA_DATA_BASE = process.env.KADOA_TRADES_BASE
+  || 'https://raw.githubusercontent.com/kadoa-org/congress-trading-monitor/main/public/data';
 
 const STATE_NAMES = {
   AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California',
@@ -131,9 +141,7 @@ function xmlTag(xml, tag) {
 }
 
 export function parseUsDate(value) {
-  const match = String(value || '').trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-  if (!match) return '';
-  return `${match[3]}-${match[1].padStart(2, '0')}-${match[2].padStart(2, '0')}`;
+  return normalizeFinanceDate(value);
 }
 
 function twoYearCutoff() {
@@ -148,12 +156,20 @@ function twoYearCutoff() {
  * Tickers are inside those PDFs, so these records are filings rather than
  * individual trades — still better than wiping the page when S3 is closed.
  */
-export function parseHouseFdXml(xml) {
+export function parseHouseFdXml(xml, { filingTypes = ['P'] } = {}) {
+  const allowed = new Set(filingTypes.map(t => String(t).toUpperCase()));
   const filings = [];
   const blocks = String(xml).match(/<Member>[\s\S]*?<\/Member>/gi) || [];
 
   for (const block of blocks) {
-    if (xmlTag(block, 'FilingType').toUpperCase() !== 'P') continue;
+    const filingType = xmlTag(block, 'FilingType').toUpperCase();
+    if (!allowed.has(filingType)) continue;
+
+    const meta = HOUSE_FILING_TYPES[filingType] || {
+      label: `${filingType} filing`,
+      assetDescription: 'Financial Disclosure Report',
+      pdfDir: 'financial-pdfs',
+    };
 
     const last = xmlTag(block, 'Last');
     const first = xmlTag(block, 'First');
@@ -169,8 +185,8 @@ export function parseHouseFdXml(xml) {
       chamber: 'House',
       member: [prefix, first, last].filter(Boolean).join(' '),
       ticker: '',
-      assetDescription: 'Periodic Transaction Report',
-      type: 'PTR filing',
+      assetDescription: meta.assetDescription,
+      type: meta.label,
       amount: '',
       transactionDate: filingDate,
       disclosureDate: filingDate,
@@ -179,8 +195,9 @@ export function parseHouseFdXml(xml) {
       state,
       owner: '',
       url: year && docId
-        ? `https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/${year}/${docId}.pdf`
+        ? `https://disclosures-clerk.house.gov/public_disc/${meta.pdfDir}/${year}/${docId}.pdf`
         : '',
+      source: 'house-clerk',
     });
   }
 
@@ -193,7 +210,12 @@ export function partitionFinanceTrades(trades) {
   for (const trade of trades || []) {
     const type = String(trade.type || '').toLowerCase();
     const description = String(trade.assetDescription || '');
-    if (type === 'ptr filing' || description === 'Periodic Transaction Report') {
+    if (
+      type === 'ptr filing'
+      || type === 'annual disclosure'
+      || description === 'Periodic Transaction Report'
+      || description === 'Annual Financial Disclosure Report'
+    ) {
       filings.push(trade);
     } else {
       tickerTrades.push(trade);
@@ -208,28 +230,152 @@ async function fetchJsonUrl(url) {
   return response.json();
 }
 
-async function fetchHouseClerkPtrFilings() {
-  const year = new Date().getFullYear();
+async function fetchHouseClerkDisclosures({ years, filingTypes = ['P', 'A'] } = {}) {
+  const yearList = years || [new Date().getFullYear(), new Date().getFullYear() - 1, new Date().getFullYear() - 2];
   const filings = [];
 
-  for (const y of [year, year - 1]) {
+  for (const y of yearList) {
     const url = `https://disclosures-clerk.house.gov/public_disc/financial-pdfs/${y}FD.xml`;
     try {
       const response = await fetchWithRetry(url);
       if (!response) {
-        console.warn(`  Clerk PTR index for ${y} was not found`);
+        console.warn(`  Clerk disclosure index for ${y} was not found`);
         continue;
       }
-      const parsed = parseHouseFdXml(await response.text());
-      console.log(`  Clerk ${y}: ${parsed.length} PTR filings`);
+      const parsed = parseHouseFdXml(await response.text(), { filingTypes });
+      console.log(`  Clerk ${y}: ${parsed.length} disclosure filings (${filingTypes.join(', ')})`);
       filings.push(...parsed);
     } catch (err) {
-      console.warn(`  Clerk PTR index for ${y}: ${err.message}`);
+      console.warn(`  Clerk disclosure index for ${y}: ${err.message}`);
     }
   }
 
   const cutoffStr = twoYearCutoff();
   return filings.filter(t => (t.transactionDate || t.disclosureDate || '') >= cutoffStr);
+}
+
+async function fetchHouseClerkPtrFilings() {
+  return fetchHouseClerkDisclosures({ filingTypes: ['P'] });
+}
+
+async function fetchKadoaCongressTrades() {
+  console.log('Fetching Congress trades from Kadoa congress-trading-monitor...');
+  try {
+    const filers = await fetchJsonUrl(`${KADOA_DATA_BASE}/filers.json`);
+    if (!Array.isArray(filers) || filers.length === 0) {
+      console.warn('  Kadoa filers.json unavailable');
+      return [];
+    }
+
+    const congressFilers = filers.filter(f => f.branch === 'congress');
+    const urls = congressFilers.map(f => `${KADOA_DATA_BASE}/filer/${f.id}.json`);
+    const payloads = await batchFetchJSON(urls, {
+      concurrency: 12,
+      delayMs: 40,
+      label: 'Kadoa filer files',
+    });
+
+    const cutoffStr = twoYearCutoff();
+    const trades = [];
+    for (const payload of payloads) {
+      if (!payload?.filer || !Array.isArray(payload.trades)) continue;
+      for (const row of payload.trades) {
+        const mapped = mapKadoaTrade(row, payload.filer);
+        if ((mapped.transactionDate || mapped.disclosureDate || '') >= cutoffStr) {
+          trades.push(mapped);
+        }
+      }
+    }
+
+    console.log(`  ${congressFilers.length} filers, ${trades.length} trades since ${cutoffStr}`);
+    return trades;
+  } catch (err) {
+    console.warn(`  Kadoa unavailable: ${err.message}`);
+    return [];
+  }
+}
+
+async function fetchSenateEfdPtrFilings() {
+  console.log('Fetching Senate PTR filings from efdsearch.senate.gov...');
+  try {
+    const home = await fetchWithRetry('https://efdsearch.senate.gov/search/home/', {
+      headers: { Accept: 'text/html' },
+    });
+    if (!home) {
+      console.warn('  Senate eFD home page unavailable');
+      return [];
+    }
+
+    const html = await home.text();
+    const csrf = (html.match(/name="csrfmiddlewaretoken" value="([^"]+)"/) || [])[1];
+    const cookie = home.headers.getSetCookie?.().map(c => c.split(';')[0]).join('; ') || '';
+
+    const agree = await fetch('https://efdsearch.senate.gov/search/home/', {
+      method: 'POST',
+      headers: {
+        ...mergeFetchOptions().headers,
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Cookie: cookie,
+        Referer: 'https://efdsearch.senate.gov/search/home/',
+      },
+      body: new URLSearchParams({
+        csrfmiddlewaretoken: csrf || '',
+        prohibition_agreement: '1',
+      }).toString(),
+      redirect: 'manual',
+    });
+
+    const sessionCookies = [
+      cookie,
+      ...(agree.headers.getSetCookie?.().map(c => c.split(';')[0]) || []),
+    ].filter(Boolean).join('; ');
+
+    const search = await fetchWithRetry(
+      'https://efdsearch.senate.gov/search/report/data/?q=&report_type=PTR',
+      {
+        headers: {
+          Accept: 'application/json, text/javascript, */*; q=0.01',
+          Cookie: sessionCookies,
+          Referer: 'https://efdsearch.senate.gov/search/home/',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+      }
+    );
+    if (!search) {
+      console.warn('  Senate eFD PTR search unavailable');
+      return [];
+    }
+
+    const payload = await search.json();
+    const rows = Array.isArray(payload?.data) ? payload.data : [];
+    const cutoffStr = twoYearCutoff();
+    const filings = rows
+      .map(row => ({
+        chamber: 'Senate',
+        member: row.first_name && row.last_name
+          ? `${row.first_name} ${row.last_name}`.trim()
+          : (row.senator || row.name || ''),
+        ticker: '',
+        assetDescription: 'Periodic Transaction Report',
+        type: 'PTR filing',
+        amount: '',
+        transactionDate: normalizeFinanceDate(row.file_date || row.date_received || row.date),
+        disclosureDate: normalizeFinanceDate(row.file_date || row.date_received || row.date),
+        district: '',
+        party: '',
+        state: row.state || '',
+        owner: '',
+        url: row.report_url || row.ptr_url || row.url || '',
+        source: 'senate-efd',
+      }))
+      .filter(t => (t.transactionDate || t.disclosureDate || '') >= cutoffStr);
+
+    console.log(`  ${filings.length} Senate PTR filings since ${cutoffStr}`);
+    return filings;
+  } catch (err) {
+    console.warn(`  Senate eFD unavailable: ${err.message}`);
+    return [];
+  }
 }
 
 // ─── Fetch Stock Trades ───
@@ -368,6 +514,7 @@ export function buildNameLookup(membersIndex) {
     const parts = full.split(',').map(s => s.trim()).filter(Boolean);
     if (parts.length >= 2) {
       nameLookup[`${parts[1]} ${parts[0]}`] = m.bioguideId;
+      nameLookup[`${parts[1].split(/\s+/)[0]} ${parts[0]}`] = m.bioguideId;
     }
     const withoutHon = full.replace(/^hon\.\s*/i, '');
     nameLookup[withoutHon] = m.bioguideId;
@@ -379,6 +526,10 @@ export function buildNameLookup(membersIndex) {
       const abbr = STATE_ABBREV_BY_NAME[stateName];
       if (abbr) nameLookup[`${lastName}_${abbr}`] = m.bioguideId;
     }
+
+    if (m.firstName && lastName) {
+      nameLookup[`${String(m.firstName).toLowerCase()} ${lastName}`] = m.bioguideId;
+    }
   }
   return nameLookup;
 }
@@ -386,20 +537,27 @@ export function buildNameLookup(membersIndex) {
 export function matchTradeBioguide(trade, nameLookup) {
   if (trade.bioguideId) return trade.bioguideId;
 
-  const nameLower = (trade.member || '').trim().toLowerCase();
-  let bioguideId =
-    nameLookup[nameLower] ||
-    nameLookup[nameLower.replace(/^hon\.\s*/i, '')] ||
-    null;
+  const candidates = [
+    normalizeMemberName(trade.member),
+    String(trade.member || '').trim().toLowerCase().replace(/^hon\.\s*/i, ''),
+  ].filter(Boolean);
 
-  if (!bioguideId && trade.state) {
-    const lastName = nameLower.includes(',')
-      ? nameLower.split(',')[0].trim()
-      : nameLower.replace(/^hon\.\s*/i, '').split(' ').pop();
-    bioguideId = nameLookup[`${lastName}_${trade.state.toLowerCase()}`];
+  for (const nameLower of candidates) {
+    let bioguideId = nameLookup[nameLower] || null;
+    if (bioguideId) return bioguideId;
+
+    if (trade.state) {
+      const stateKey = String(trade.state).toLowerCase();
+      const lastName = nameLower.includes(',')
+        ? nameLower.split(',')[0].trim()
+        : nameLower.split(' ').pop();
+      bioguideId = nameLookup[`${lastName}_${stateKey}`]
+        || nameLookup[`${lastName}_${STATE_ABBREV_BY_NAME[stateKey] || stateKey}`];
+      if (bioguideId) return bioguideId;
+    }
   }
 
-  return bioguideId || null;
+  return null;
 }
 
 export function buildMemberProfiles(allTrades, committeeMemberships) {
@@ -562,28 +720,50 @@ async function main() {
   console.log('=== Fetching Financial Data & Conflict Analysis ===\n');
   const startTime = Date.now();
 
-  // Prefer live Stock Watcher dumps; when those S3 buckets are closed, use
-  // CongressWatch's public aggregate (parsed Clerk/Senate PTRs with tickers).
-  // House Clerk XML remains a last-resort filing list without tickers.
-  const [houseTrades, senateTrades, congressWatchTrades] = await Promise.all([
+  const [
+    houseTrades,
+    senateTrades,
+    congressWatchTrades,
+    kadoaTrades,
+    houseClerkDisclosures,
+    senateEfdFilings,
+  ] = await Promise.all([
     fetchHouseStockTrades(),
     fetchSenateStockTrades(),
     fetchCongressWatchTrades(),
+    fetchKadoaCongressTrades(),
+    fetchHouseClerkDisclosures({ filingTypes: ['P', 'A'] }),
+    fetchSenateEfdPtrFilings(),
   ]);
 
-  let allTrades = [...houseTrades, ...senateTrades];
-  const watcherTickerCount = allTrades.filter(t => t.ticker).length;
-  const watchFilingsOnly = allTrades.length > 0 && watcherTickerCount === 0;
+  const watcherTrades = [...houseTrades, ...senateTrades];
+  const watcherTickerCount = watcherTrades.filter(t => t.ticker).length;
+  const watchFilingsOnly = watcherTrades.length > 0 && watcherTickerCount === 0;
 
-  if (congressWatchTrades.length > 0 && (allTrades.length === 0 || watchFilingsOnly)) {
-    console.log(`\nUsing CongressWatch ticker trades (${congressWatchTrades.length}); Stock Watcher had ${watcherTickerCount} tickers.`);
-    // Keep Clerk PTR filings that CongressWatch may not have mirrored yet.
-    const ptrOnly = allTrades.filter(t => String(t.type || '').toLowerCase() === 'ptr filing');
-    allTrades = [...congressWatchTrades, ...ptrOnly];
+  let tickerSources = [];
+  if (watcherTickerCount > 0) {
+    tickerSources.push(watcherTrades);
+  }
+  if (congressWatchTrades.length > 0) {
+    tickerSources.push(congressWatchTrades);
+  }
+  if (kadoaTrades.length > 0) {
+    tickerSources.push(kadoaTrades);
   }
 
+  let filingSources = [];
+  if (houseClerkDisclosures.length > 0) {
+    filingSources.push(houseClerkDisclosures);
+  } else if (watchFilingsOnly) {
+    filingSources.push(watcherTrades.filter(t => String(t.type || '').toLowerCase() === 'ptr filing'));
+  }
+  if (senateEfdFilings.length > 0) {
+    filingSources.push(senateEfdFilings);
+  }
+
+  const allTrades = mergeFinanceTrades(...tickerSources, ...filingSources);
   allTrades.sort((a, b) => (b.transactionDate || '').localeCompare(a.transactionDate || ''));
-  console.log(`\nTotal trades: ${allTrades.length}`);
+  console.log(`\nTotal merged trades/filings: ${allTrades.length}`);
 
   const committeeMemberships = await fetchCommitteeMemberships();
 
@@ -599,15 +779,18 @@ async function main() {
 
   const byMember = buildMemberProfiles(trades, committeeMemberships);
 
+  const sourcesUsed = [];
+  if (watcherTickerCount > 0) sourcesUsed.push('stock-watcher');
+  if (congressWatchTrades.length > 0) sourcesUsed.push('congresswatch');
+  if (kadoaTrades.length > 0) sourcesUsed.push('kadoa');
+  if (houseClerkDisclosures.length > 0) sourcesUsed.push('house-clerk');
+  if (senateEfdFilings.length > 0) sourcesUsed.push('senate-efd');
+
   writeJSON('finances/by-member.json', {
     lastUpdated: new Date().toISOString(),
     totalMembers: Object.keys(byMember).length,
     members: byMember,
-    source: congressWatchTrades.length && (watcherTickerCount === 0)
-      ? 'congresswatch+clerk-ptr'
-      : watcherTickerCount > 0
-        ? 'stock-watcher'
-        : 'clerk-ptr',
+    source: sourcesUsed.join('+') || 'none',
   });
 
   const totalFlags = Object.values(byMember).reduce((sum, p) => sum + p.flags.length, 0);

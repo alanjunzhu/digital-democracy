@@ -32,6 +32,8 @@ The site is static. Node scripts fetch public data into `data/`, that JSON is co
 | [House Stock Watcher](https://housestockwatcher.com/) | House trades with tickers (when the S3 dump is reachable) |
 | [Senate Stock Watcher](https://senatestockwatcher.com/) | Senate trades with tickers (when the S3 dump is reachable) |
 | [CongressWatch](https://congresswatch.vercel.app/) | Public PTR aggregate with tickers + bioguide ids (fallback when Stock Watcher S3 is closed) |
+| [Kadoa congress-trading-monitor](https://github.com/kadoa-org/congress-trading-monitor) | Parsed House/Senate PTR trades from official Clerk + eFD filings (public JSON) |
+| [Senate eFD](https://efdsearch.senate.gov/) | Official Senate financial disclosure search (PTR filing index when reachable) |
 
 Votes, finances, and the unitedstates files need no Congress.gov key. Members, bills, and committees do.
 
@@ -228,7 +230,7 @@ All three data workflows check out `main`, write JSON, and publish with `scripts
 - **Committee overlap** (high) — trades in a sector the member's committee covers
 - **Bill timing** (medium) — trades within 30 days of sponsoring related legislation
 
-Ticker-level analysis needs the Stock Watcher dumps. When those S3 buckets return 403, the script pulls [CongressWatch](https://congresswatch.vercel.app/data/trades.json) (parsed House Clerk + Senate PTR filings with tickers and bioguide ids) and still keeps House Clerk PTR PDF links. A fetch that gets no trades at all keeps the file already in `data/`.
+Ticker-level analysis prefers Stock Watcher dumps when reachable. Otherwise the script merges [CongressWatch](https://congresswatch.vercel.app/data/trades.json), [Kadoa](https://github.com/kadoa-org/congress-trading-monitor) per-filer PTR JSON, and official House Clerk PTR/annual disclosure indexes (Senate eFD when reachable). Records are deduplicated across sources. A fetch that gets no trades at all keeps the file already in `data/`.
 
 > Highlights on member pages are potential conflicts from public disclosures, not findings of wrongdoing.
 
@@ -246,6 +248,7 @@ Ticker-level analysis needs the Stock Watcher dumps. When those S3 buckets retur
 - [x] Sponsored-legislation fetch for member profiles
 - [x] Party alignment scores and analytics graphs
 - [x] CongressWatch finance fallback when Stock Watcher is closed
+- [x] Kadoa + House Clerk annual disclosures as additional finance sources
 - [ ] Amendment tracking
 - [ ] Hearing schedules
 
