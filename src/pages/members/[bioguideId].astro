@@ -8,6 +8,7 @@ import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from
 import type { MemberDetail } from '../../lib/types';
 import { partitionFinanceTrades } from '../../../scripts/fetch-finances.mjs';
 import { scoreMemberPartyAlignment } from '../../lib/party-alignment';
+import { enrichMemberVotes, summariesByVoteId } from '../../../shared/vote-member-index.mjs';
 
 export function getStaticPaths() {
   const membersDir = join(process.cwd(), 'data', 'members');
@@ -76,9 +77,12 @@ let memberVotes: any[] = [];
 let voteStats = { total: 0, yea: 0, nay: 0, notVoting: 0, present: 0 };
 try {
   const byMemberPath = join(process.cwd(), 'data', 'votes', 'by-member.json');
-  if (existsSync(byMemberPath)) {
+  const votesIndexPath = join(process.cwd(), 'data', 'votes', 'index.json');
+  if (existsSync(byMemberPath) && existsSync(votesIndexPath)) {
     const byMemberData = JSON.parse(readFileSync(byMemberPath, 'utf-8'));
-    const myVotes = byMemberData.members?.[bioguideId] || [];
+    const votesIndex = JSON.parse(readFileSync(votesIndexPath, 'utf-8'));
+    const summaryById = summariesByVoteId(votesIndex.votes || []);
+    const myVotes = enrichMemberVotes(byMemberData.members?.[bioguideId] || [], summaryById);
     memberVotes = myVotes.sort((a: any, b: any) => {
       if (a.date !== b.date) return b.date.localeCompare(a.date);
       return b.rollCallNumber - a.rollCallNumber;
