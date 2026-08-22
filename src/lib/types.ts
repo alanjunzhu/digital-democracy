@@ -52,18 +52,32 @@ export interface BillSummary {
   };
   latestAction?: string;
   latestActionDate?: string;
+  updateDate?: string;
   originChamber: 'Senate' | 'House';
   policyArea?: string;
-  url: string;
+  url: string | null;
+}
+
+/**
+ * A committee referral on a bill. Committee names such as "Judiciary
+ * Committee" exist in both chambers, so `systemCode` is what identifies the
+ * committee; plain strings come from data fetched before it was recorded.
+ */
+export interface BillCommitteeRef {
+  name: string;
+  systemCode?: string;
+  chamber?: string;
+  type?: string;
+  activities?: { name: string; date: string }[];
 }
 
 export interface BillDetail extends BillSummary {
   summary?: string;
   cosponsors: number;
-  committees?: string[];
+  committees?: (string | BillCommitteeRef)[];
   subjects?: string[];
   actions: BillAction[];
-  textUrl?: string;
+  textUrl?: string | null;
 }
 
 export interface BillAction {
@@ -93,12 +107,28 @@ export interface CommitteeSummary {
   name: string;
   chamber: 'House' | 'Senate' | 'Joint';
   committeeType?: string;
-  url: string;
+  isSubcommittee?: boolean;
+  parent?: { systemCode: string; name: string };
+  /** congress.gov profile page, or null when one cannot be resolved. */
+  url: string | null;
+  billCount?: number;
   subcommittees?: { systemCode: string; name: string }[];
 }
 
+/** Legislation referred to a committee. */
+export interface CommitteeBillRef {
+  billId: string;
+  congress: number;
+  type: string;
+  number: number;
+  relationshipType?: string;
+  actionDate?: string;
+  url: string | null;
+}
+
 export interface CommitteeDetail extends CommitteeSummary {
-  bills?: string[];
+  officialWebsite?: string;
+  bills?: CommitteeBillRef[];
 }
 
 export interface CommitteesIndex {
