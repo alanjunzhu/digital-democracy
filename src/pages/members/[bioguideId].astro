@@ -7,7 +7,9 @@ import MemberFilingRow from '../../components/shared/MemberFilingRow.astro';
 import ExpandableTradeList from '../../components/shared/ExpandableTradeList.astro';
 import TradeTimingExplorer from '../../components/interactive/TradeTimingExplorer';
 import { tickerQuoteUrl, tradeDisclosureUrl } from '../../../shared/finance-sources.mjs';
-import { buildTradeContext, isPurchaseType, isSaleType, tradeTimingKey } from '../../../shared/trade-timing.mjs';
+import { buildTradeContext, isPurchaseType, isSaleType } from '../../../shared/trade-timing.mjs';
+import { createTimingAttacher } from '../../../shared/timing-precompute.mjs';
+import { loadDataJSON } from '../../../shared/data-loader.mjs';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
@@ -194,19 +196,22 @@ const topTickers = Object.entries(tradesByTicker)
   .sort(([, a], [, b]) => b.length - a.length)
   .slice(0, 15);
 
+const TIMING_TRADE_LIMIT = 8;
+
+// Trades whose sector overlaps a committee this member sits on. Newest first so
+// the panel opens on current activity rather than whatever the source happened
+// to list first; scripts/enrich-trade-timing.mjs precomputes every one of them.
 const overlapTimingTrades = financeProfile
   ? (() => {
-      let timingIndex: any = null;
-      try {
-        const p = join(process.cwd(), 'data', 'finances', 'trade-timing.json');
-        if (existsSync(p)) timingIndex = JSON.parse(readFileSync(p, 'utf-8'));
-      } catch {}
+      const attachTiming = createTimingAttacher(loadDataJSON);
       return stockTrades
         .filter((t: any) => financeProfile.committeeSectors?.includes(t.sector))
         .filter((t: any) => isPurchaseType(t.type) || isSaleType(t.type))
-        .slice(0, 8)
-        .map((t: any) => {
-          const row = {
+        .filter((t: any) => t.transactionDate)
+        .sort((a: any, b: any) => b.transactionDate.localeCompare(a.transactionDate))
+        .slice(0, TIMING_TRADE_LIMIT)
+        .map((t: any) =>
+          attachTiming({
             ...t,
             bioguideId,
             memberName: member.name,
@@ -215,10 +220,8 @@ const overlapTimingTrades = financeProfile
               memberName: member.name,
               sponsoredBills,
             }),
-          };
-          const key = tradeTimingKey(row);
-          return { ...row, precomputed: timingIndex?.entries?.[key] || null };
-        });
+          }),
+        );
     })()
   : [];
 

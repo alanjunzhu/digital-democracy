@@ -1,14 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
-import {
-  buildYahooChartUrl,
-  parseYahooChartPayload,
-  slicePriceWindow,
-  addDays,
-} from '../../../shared/stock-prices.mjs';
-import {
-  computeCounterfactuals,
-  DEFAULT_HORIZON_DAYS,
-} from '../../../shared/trade-timing.mjs';
+import { useMemo } from 'react';
+import { slicePriceWindow, addDays } from '../../../shared/stock-prices.mjs';
+import { DEFAULT_HORIZON_DAYS } from '../../../shared/trade-timing.mjs';
+import type { PrecomputedTiming, PricePoint } from '../../lib/types';
 import { tradeDisclosureUrl, tickerQuoteUrl } from '../../../shared/finance-sources.mjs';
 
 type TradeContext = {
@@ -28,11 +21,6 @@ type TradeContext = {
   nearbyBills?: { billId: string; title?: string; introducedDate?: string; type?: string; number?: number }[];
   filingUrl?: string | null;
 };
-
-interface PrecomputedTiming {
-  prices?: { date: string; close: number }[];
-  counterfactuals?: ReturnType<typeof computeCounterfactuals>;
-}
 
 interface Props {
   trade: {
@@ -70,54 +58,13 @@ export default function TradeTimingInsight({
   precomputed = null,
   compact = false,
 }: Props) {
-  const [loading, setLoading] = useState(!precomputed?.counterfactuals);
-  const [error, setError] = useState<string | null>(null);
-  const [prices, setPrices] = useState(precomputed?.prices || []);
-  const [counterfactuals, setCounterfactuals] = useState(precomputed?.counterfactuals || null);
-
-  useEffect(() => {
-    if (precomputed?.counterfactuals) {
-      setCounterfactuals(precomputed.counterfactuals);
-      setPrices(precomputed.prices || []);
-      setLoading(false);
-      return;
-    }
-
-    let cancelled = false;
-    async function load() {
-      setLoading(true);
-      setError(null);
-      try {
-        const tx = trade.transactionDate;
-        if (!tx || !trade.ticker) throw new Error('Missing trade date or ticker');
-
-        const end = addDays(tx, DEFAULT_HORIZON_DAYS + 45);
-        const url = buildYahooChartUrl(trade.ticker, addDays(tx, -60) || tx, end || tx);
-        if (!url) throw new Error('Could not build price URL');
-
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Price data unavailable (${res.status})`);
-        const payload = await res.json();
-        const series = parseYahooChartPayload(payload);
-        if (!series.length) throw new Error('No price history returned');
-
-        const result = computeCounterfactuals(trade, series, DEFAULT_HORIZON_DAYS);
-        if (!result.ok) throw new Error(result.reason || 'Could not analyze timing');
-
-        if (!cancelled) {
-          setPrices(series);
-          setCounterfactuals(result);
-        }
-      } catch (err) {
-        if (!cancelled) setError(err instanceof Error ? err.message : 'Failed to load timing data');
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    }
-
-    load();
-    return () => { cancelled = true; };
-  }, [trade, precomputed]);
+  // Everything is precomputed at build time. The site is a static build and
+  // Yahoo's chart endpoint sends no CORS headers, so fetching price history
+  // from the browser fails for every visitor — scripts/fetch-stock-prices.mjs
+  // caches the series and scripts/enrich-trade-timing.mjs derives the
+  // counterfactuals ahead of the build instead.
+  const prices = precomputed?.prices || [];
+  const counterfactuals = precomputed?.counterfactuals || null;
 
   const chartWindow = useMemo(() => {
     if (!trade.transactionDate || !prices.length) return [];
@@ -129,13 +76,7 @@ export default function TradeTimingInsight({
 
   const scenarioEntries = useMemo(() => {
     if (!counterfactuals?.ok || !counterfactuals.scenarios) return [];
-    const scenarios = counterfactuals.scenarios as {
-      actual: number | null;
-      earlier30: number | null;
-      later30: number | null;
-      inaction: number | null;
-      labels: Record<string, string>;
-    };
+    const scenarios = counterfactuals.scenarios;
     const labels = scenarios.labels;
     return [
       { key: 'actual', label: labels.actual, value: scenarios.actual, kind: 'actual' as const },
@@ -234,10 +175,18 @@ export default function TradeTimingInsight({
         </p>
       </div>
 
-      {loading && <p className="text-xs text-gray-500">Loading price history and counterfactuals…</p>}
-      {error && (
+      {!counterfactuals?.ok && (
         <p className="text-xs text-amber-700">
-          Chart unavailable: {error}. Context above still applies.
+          No cached price history for {trade.ticker || 'this ticker'} yet, so the timing
+          comparison is unavailable. The context above still applies.
+        </p>
+      )}
+
+      {counterfactuals?.ok && counterfactuals.horizonComplete === false && (
+        <p className="mb-3 text-[11px] text-amber-700">
+          This trade is still inside its {DEFAULT_HORIZON_DAYS}-day window
+          {counterfactuals.lastPriceDate ? ` (prices through ${counterfactuals.lastPriceDate})` : ''},
+          so the outcome comparison is incomplete.
         </p>
       )}
 
@@ -249,16 +198,16 @@ export default function TradeTimingInsight({
               <div className="text-[10px] text-gray-500 mb-1">Stock price around trade ({DEFAULT_HORIZON_DAYS}d window)</div>
               <svg viewBox="0 0 320 80" className="w-full h-20 bg-gray-50 rounded border border-gray-100">
                 {(() => {
-                  const closes = chartWindow.map((p: { close: number }) => p.close);
+                  const closes = chartWindow.map((p: PricePoint) => p.close);
                   const min = Math.min(...closes);
                   const max = Math.max(...closes);
                   const span = max - min || 1;
-                  const points = chartWindow.map((p: { close: number }, i: number) => {
+                  const points = chartWindow.map((p: PricePoint, i: number) => {
                     const x = (i / (chartWindow.length - 1)) * 300 + 10;
                     const y = 70 - ((p.close - min) / span) * 60;
                     return `${x},${y}`;
                   }).join(' ');
-                  const tradeIdx = chartWindow.findIndex((p: { date: string }) => p.date >= (trade.transactionDate || ''));
+                  const tradeIdx = chartWindow.findIndex((p: PricePoint) => p.date >= (trade.transactionDate || ''));
                   const txX = tradeIdx >= 0 ? (tradeIdx / (chartWindow.length - 1)) * 300 + 10 : 160;
                   return (
                     <>

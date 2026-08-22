@@ -134,6 +134,54 @@ Senate has no PTR bulk dump. `FEC_API_KEY` was passed in YAML but never read.
    Senate efdsearch is a form POST, not a bulk file — leave a direct client
    until there is a stable dump.
 
+### Trade timing charts on the member page
+
+**Problem.** The counterfactual chart existed but almost never drew. Five things
+stacked up:
+
+1. `data/finances/trade-timing.json` held 24 precomputed entries covering 7
+   members, because `enrich-trade-timing.mjs` took the global top 25 trades by
+   `priorityScore` while the member page took the *first 8* overlap trades in
+   raw source order. Across those 7 members only 4 had a single key in common,
+   so 537 of 541 profiles had nothing precomputed.
+2. With nothing precomputed the component fell back to fetching
+   `query1.finance.yahoo.com` from the browser. The site is a static build and
+   that endpoint sends no CORS headers, so the fetch fails for every visitor and
+   the panel renders "Chart unavailable" instead of a chart.
+3. `enrich-trade-timing.mjs` was never wired into any workflow, so the file was
+   a one-off snapshot that went stale as new trades arrived.
+4. Even when data existed the explorer opened collapsed — a chart behind a click
+   reads as no chart.
+5. One Yahoo request per trade does not scale: 1,927 committee-overlap trades
+   span only 225 distinct tickers.
+
+**Plan.**
+
+1. `scripts/fetch-stock-prices.mjs` caches daily closes once per *ticker* into
+   `data/prices/<TICKER>.json`, dates and closes as parallel arrays. Overlap
+   tickers by default, `--all` for all 1,690, plus SPY for the coming benchmark.
+   A failed symbol keeps whatever is already cached.
+2. `enrich-trade-timing.mjs` reads that cache instead of the network and covers
+   every overlap trade — the same predicate the member page renders, so keys
+   cannot drift again. It stores counterfactuals only; pages slice their own
+   sparkline window from `data/prices/` via `shared/timing-precompute.mjs`.
+3. Drop the browser fetch. Everything the panel draws is precomputed.
+4. Sort member-page candidates newest first and open the first chartable one.
+5. Run both scripts in `fetch-members.yml` after the finance fetch.
+
+**Correctness fixes found on the way.** `forwardReturn` used
+`priceOnOrBefore(endDate)`, which silently returns the last close when the
+series stops short — a trade three weeks old reported a full 60-day return, and
+a 2026 trade against a series ending in 2025 was priced off a year-old close.
+Now a start date more than `MAX_PRICE_STALENESS_DAYS` past its nearest close is
+refused outright, and a horizon the series never reaches returns null with
+`horizonComplete: false` so the UI can say the window is still running.
+
+**Next.** A member-level chart: portfolio mirroring their disclosed trades
+against both a cash baseline and SPY, with committee-overlap trades marked. That
+needs a midpoint parser for the disclosed amount ranges (`$1,001 - $15,000`),
+and must be labeled an estimate — disclosures give ranges, not positions.
+
 ### Party alignment scores
 
 **Goal.** Show how often each member votes with their party majority, and how

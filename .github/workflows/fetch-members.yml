@@ -56,6 +56,16 @@ jobs:
       - name: Fetch finances
         run: node scripts/fetch-finances.mjs
 
+      # Charts are precomputed: the site is a static build and Yahoo sends no
+      # CORS headers, so the browser cannot fetch price history itself.
+      - name: Cache stock prices
+        run: node scripts/fetch-stock-prices.mjs
+        continue-on-error: true
+
+      - name: Enrich trade timing
+        run: node scripts/enrich-trade-timing.mjs
+        continue-on-error: true
+
       - name: Commit data changes
         run: |
           git config user.name "github-actions[bot]"

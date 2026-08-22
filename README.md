@@ -94,6 +94,8 @@ digital-democracy/
 │   ├── fetch-committees.mjs             # Committees + referred legislation
 │   ├── fetch-votes.mjs                  # House + Senate XML (both sessions)
 │   ├── fetch-finances.mjs               # Trades / PTR filings + conflict flags
+│   ├── fetch-stock-prices.mjs           # Daily closes per traded ticker -> data/prices/
+│   ├── enrich-trade-timing.mjs          # Counterfactuals from the price cache (no network)
 │   ├── fix-data-urls.mjs                # Rebuild stored congress.gov URLs (no API)
 │   ├── backfill-member-bio.mjs          # Refill names/websites/socials (no API key)
 │   ├── commit-data.sh                   # Publish regenerated data without rebase races
@@ -103,7 +105,11 @@ digital-democracy/
 │       ├── data-writer.mjs              # Read/write under data/ (or CONGRESS_DATA_DIR)
 │       └── unitedstates.mjs             # Legislator hosts + committee-membership map
 ├── shared/
-│   └── congress-urls.mjs                # Bill and committee URL builders (scripts + pages)
+│   ├── congress-urls.mjs                # Bill and committee URL builders (scripts + pages)
+│   ├── stock-prices.mjs                 # Yahoo chart parsing and forward returns
+│   ├── price-cache.mjs                  # Compact per-ticker price files
+│   ├── trade-timing.mjs                 # Counterfactual scenarios and trade context
+│   └── timing-precompute.mjs            # Build-time pairing of chart data to trades
 ├── tests/                               # node --test
 │   ├── api-client.test.mjs
 │   ├── commit-data.test.mjs
@@ -119,12 +125,13 @@ digital-democracy/
 │   ├── bills/                           # index.json + {billId}.json
 │   ├── votes/                           # index.json + {voteId}.json + by-member.json
 │   ├── committees/                      # index.json + {systemCode}.json
-│   ├── finances/                        # by-member.json
+│   ├── finances/                        # by-member.json + trade-timing.json
+│   ├── prices/                          # {TICKER}.json daily closes
 │   └── meta/                            # last-updated.json
 ├── .github/workflows/
 │   ├── deploy.yml                       # Test, build, deploy Pages on push to main
 │   ├── ci.yml                           # Tests, typecheck, and Astro build on pull requests
-│   ├── fetch-members.yml                # Weekly full fetch (sequential; includes sponsored bills + finances)
+│   ├── fetch-members.yml                # Weekly full fetch (sequential; bills, finances, prices, timing)
 │   ├── fetch-bills.yml                  # Bills only (Mon/Thu)
 │   └── fetch-votes.yml                  # Votes only (Tue/Fri)
 ├── public/
@@ -234,6 +241,27 @@ Ticker-level analysis prefers Stock Watcher dumps when reachable. Otherwise the 
 
 > Highlights on member pages are potential conflicts from public disclosures, not findings of wrongdoing.
 
+### Trade timing counterfactuals
+
+Member and finance pages chart each committee-overlap trade against what else the
+member could have done: buying or selling 30 days earlier, 30 days later, or doing
+nothing at all (staying in cash instead of buying, keeping the position instead of
+selling). Outcomes are 60-day forward returns from daily closing prices.
+
+The site is a static build and Yahoo's chart endpoint sends no CORS headers, so the
+browser cannot fetch price history — everything is precomputed by two scripts that
+run before the build:
+
+| Script | Output | Notes |
+| --- | --- | --- |
+| `npm run fetch:prices` | `data/prices/<TICKER>.json` | One request per ticker, not per trade. Committee-overlap tickers by default; `--all` covers every traded ticker, `--force` refetches fresh files. Existing files survive a failed fetch. |
+| `npm run enrich:trade-timing` | `data/finances/trade-timing.json` | Reads the price cache, no network. Counterfactuals only — pages slice their own sparkline window from `data/prices/`. |
+
+Both run weekly in `fetch-members.yml` after the finance fetch. A trade whose 60-day
+window has not elapsed is labeled as still running rather than scored against a
+partial window, and a trade with no cached close near its transaction date is shown
+with context but no chart.
+
 ---
 
 ## Roadmap
@@ -249,6 +277,8 @@ Ticker-level analysis prefers Stock Watcher dumps when reachable. Otherwise the 
 - [x] Party alignment scores and analytics graphs
 - [x] CongressWatch finance fallback when Stock Watcher is closed
 - [x] Kadoa + House Clerk annual disclosures as additional finance sources
+- [x] Build-time price cache and counterfactual timing charts
+- [ ] Member-level portfolio vs cash and S&P 500 baseline chart
 - [ ] Amendment tracking
 - [ ] Hearing schedules
 

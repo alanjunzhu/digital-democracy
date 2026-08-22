@@ -11,7 +11,9 @@ import {
   buildTickerAggregates,
   flattenTickerTrades,
 } from '../../../shared/finance-aggregate.mjs';
-import { buildSuspiciousTradeCandidates, tradeTimingKey } from '../../../shared/trade-timing.mjs';
+import { buildSuspiciousTradeCandidates } from '../../../shared/trade-timing.mjs';
+import { createTimingAttacher } from '../../../shared/timing-precompute.mjs';
+import { loadDataJSON } from '../../../shared/data-loader.mjs';
 
 function loadJSON(path: string) {
   const fullPath = join(process.cwd(), 'data', path);
@@ -54,13 +56,9 @@ for (const bill of billsIndex) {
   billsBySponsor[id].push(bill);
 }
 
+const attachTiming = createTimingAttacher(loadDataJSON);
 const timingCandidates = financeData
-  ? buildSuspiciousTradeCandidates(financeData, { limit: 15, billsBySponsor }).map((c) => {
-      const timingIndex = loadJSON('finances/trade-timing.json');
-      const key = tradeTimingKey(c);
-      const precomputed = timingIndex?.entries?.[key] || null;
-      return { ...c, precomputed };
-    })
+  ? buildSuspiciousTradeCandidates(financeData, { limit: 15, billsBySponsor }).map(attachTiming)
   : [];
 ---
 

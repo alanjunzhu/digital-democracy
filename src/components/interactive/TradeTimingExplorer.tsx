@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TradeTimingInsight from './TradeTimingInsight';
+import type { PrecomputedTiming } from '../../lib/types';
 
 interface Candidate {
   bioguideId: string;
@@ -14,7 +15,7 @@ interface Candidate {
   url?: string;
   context: Record<string, unknown>;
   priorityScore?: number;
-  precomputed?: { prices?: { date: string; close: number }[]; counterfactuals?: unknown } | null;
+  precomputed?: PrecomputedTiming | null;
 }
 
 interface Props {
@@ -22,8 +23,17 @@ interface Props {
   baseUrl: string;
 }
 
+function candidateKey(c: Candidate) {
+  return `${c.bioguideId}|${c.ticker}|${c.transactionDate}|${c.type}`;
+}
+
 export default function TradeTimingExplorer({ candidates, baseUrl }: Props) {
-  const [openKey, setOpenKey] = useState<string | null>(null);
+  // Open the first chartable trade so the analysis is visible without a click —
+  // a collapsed accordion reads as "there is no chart here".
+  const [openKey, setOpenKey] = useState<string | null>(() => {
+    const first = candidates.find((c) => c.precomputed?.counterfactuals);
+    return first ? candidateKey(first) : null;
+  });
 
   if (!candidates.length) {
     return (
@@ -34,8 +44,9 @@ export default function TradeTimingExplorer({ candidates, baseUrl }: Props) {
   return (
     <div className="space-y-3">
       {candidates.map((c) => {
-        const key = `${c.bioguideId}|${c.ticker}|${c.transactionDate}|${c.type}`;
+        const key = candidateKey(c);
         const isOpen = openKey === key;
+        const chartable = Boolean(c.precomputed?.counterfactuals);
         return (
           <div key={key} className="border border-gray-200 rounded-lg overflow-hidden">
             <button
@@ -50,7 +61,9 @@ export default function TradeTimingExplorer({ candidates, baseUrl }: Props) {
               {c.sector && (
                 <span className="text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-700 border border-red-100">{c.sector}</span>
               )}
-              <span className="text-[10px] text-blue-600">{isOpen ? 'Hide' : 'Analyze timing'}</span>
+              <span className="text-[10px] text-blue-600">
+                {isOpen ? 'Hide' : chartable ? 'Analyze timing' : 'Details'}
+              </span>
             </button>
             {isOpen && (
               <div className="p-3 border-t border-gray-200">

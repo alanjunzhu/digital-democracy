@@ -4,6 +4,12 @@
 
 const DAY_SEC = 86400;
 
+/**
+ * How far back a close may sit from a requested date and still stand in for it.
+ * Covers a long holiday weekend; beyond that the series does not cover the date.
+ */
+export const MAX_PRICE_STALENESS_DAYS = 10;
+
 export function normalizeTickerSymbol(ticker) {
   const raw = String(ticker || '').trim().toUpperCase();
   if (!raw || raw === '--') return null;
@@ -57,14 +63,19 @@ export async function fetchYahooPrices(ticker, startDate, endDate, fetchImpl = f
   return parseYahooChartPayload(payload);
 }
 
-export function priceOnOrBefore(prices, targetDate) {
+/** Most recent row at or before targetDate, or null. */
+export function rowOnOrBefore(prices, targetDate) {
   const target = String(targetDate || '');
   let best = null;
   for (const row of prices || []) {
     if (row.date <= target) best = row;
     else break;
   }
-  return best?.close ?? null;
+  return best;
+}
+
+export function priceOnOrBefore(prices, targetDate) {
+  return rowOnOrBefore(prices, targetDate)?.close ?? null;
 }
 
 export function priceOnOrAfter(prices, targetDate) {
@@ -90,14 +101,43 @@ export function daysBetween(a, b) {
 
 /**
  * Forward return from startDate over horizonDays using daily close prices.
+ *
+ * Returns null when the series does not actually reach the horizon — a trade
+ * made three weeks ago has no 60-day outcome yet, and reporting the latest
+ * close as if it were one would overstate a short window as a full horizon.
  */
-export function forwardReturn(prices, startDate, horizonDays) {
-  const startPrice = priceOnOrBefore(prices, startDate);
+export function forwardReturnDetail(prices, startDate, horizonDays) {
+  const startRow = rowOnOrBefore(prices, startDate);
   const endDate = addDays(startDate, horizonDays);
-  if (startPrice == null || !endDate) return null;
+  if (!startRow || !endDate) return null;
+
+  // Markets close for weekends and holidays, so the nearest earlier close is
+  // normally a day or two back. A larger gap means the series simply does not
+  // cover this date, and reusing the last close would price the trade at a
+  // quote from months or years earlier.
+  const staleness = daysBetween(startRow.date, startDate);
+  if (staleness == null || staleness > MAX_PRICE_STALENESS_DAYS) return null;
+
+  const startPrice = startRow.close;
   const endPrice = priceOnOrBefore(prices, endDate);
   if (endPrice == null) return null;
-  return ((endPrice - startPrice) / startPrice) * 100;
+
+  const lastAvailable = prices?.[prices.length - 1]?.date || null;
+  const complete = lastAvailable != null && lastAvailable >= endDate;
+
+  return {
+    pct: ((endPrice - startPrice) / startPrice) * 100,
+    startDate,
+    endDate,
+    lastAvailable,
+    complete,
+  };
+}
+
+export function forwardReturn(prices, startDate, horizonDays) {
+  const detail = forwardReturnDetail(prices, startDate, horizonDays);
+  if (!detail || !detail.complete) return null;
+  return detail.pct;
 }
 
 export function slicePriceWindow(prices, startDate, endDate) {
