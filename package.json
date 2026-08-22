@@ -13,6 +13,7 @@
     "fetch:committees": "node scripts/fetch-committees.mjs",
     "fetch:votes": "node scripts/fetch-votes.mjs",
     "fetch:finances": "node scripts/fetch-finances.mjs",
+    "enrich:trade-timing": "node scripts/enrich-trade-timing.mjs",
     "repair:votes": "node scripts/repair-vote-records.mjs",
     "test": "node --test \"tests/**/*.test.mjs\"",
     "typecheck": "tsc --noEmit --pretty false -p tsconfig.check.json"

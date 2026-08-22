@@ -1,6 +1,7 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
 import FinanceDashboard from '../../components/interactive/FinanceDashboard';
+import TradeTimingExplorer from '../../components/interactive/TradeTimingExplorer';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import {
@@ -10,6 +11,7 @@ import {
   buildTickerAggregates,
   flattenTickerTrades,
 } from '../../../shared/finance-aggregate.mjs';
+import { buildSuspiciousTradeCandidates, tradeTimingKey } from '../../../shared/trade-timing.mjs';
 
 function loadJSON(path: string) {
   const fullPath = join(process.cwd(), 'data', path);
@@ -42,6 +44,24 @@ const flaggedMembers = financeData ? buildFlaggedMemberRows(financeData, members
 const sectors = financeData ? buildSectorAggregates(financeData) : [];
 const tickers = financeData ? buildTickerAggregates(financeData) : [];
 const trades = financeData ? flattenTickerTrades(financeData) : [];
+
+const billsIndex = loadJSON('bills/index.json')?.bills || [];
+const billsBySponsor: Record<string, any[]> = {};
+for (const bill of billsIndex) {
+  const id = bill.sponsor?.bioguideId;
+  if (!id) continue;
+  if (!billsBySponsor[id]) billsBySponsor[id] = [];
+  billsBySponsor[id].push(bill);
+}
+
+const timingCandidates = financeData
+  ? buildSuspiciousTradeCandidates(financeData, { limit: 15, billsBySponsor }).map((c) => {
+      const timingIndex = loadJSON('finances/trade-timing.json');
+      const key = tradeTimingKey(c);
+      const precomputed = timingIndex?.entries?.[key] || null;
+      return { ...c, precomputed };
+    })
+  : [];
 ---
 
 <Layout
@@ -64,15 +84,27 @@ const trades = financeData ? flattenTickerTrades(financeData) : [];
         <p class="mt-2 text-sm">Run <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">npm run fetch:finances</code> to populate trading data.</p>
       </div>
     ) : (
-      <FinanceDashboard
-        overview={overview}
-        flaggedMembers={flaggedMembers}
-        sectors={sectors}
-        tickers={tickers}
-        trades={trades}
-        baseUrl={base}
-        client:load
-      />
+      <>
+        <section class="mb-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">Trade timing insights</h2>
+          <p class="text-xs text-gray-500 mb-4 max-w-3xl">
+            Compare each flagged trade to alternative timing (30 days earlier/later) and a
+            <strong> do nothing </strong> baseline — stay in cash if they didn&apos;t buy, or keep holding if they didn&apos;t sell.
+            Each panel includes committee, disclosure, and legislative context.
+          </p>
+          <TradeTimingExplorer candidates={timingCandidates} baseUrl={base} client:load />
+        </section>
+
+        <FinanceDashboard
+          overview={overview}
+          flaggedMembers={flaggedMembers}
+          sectors={sectors}
+          tickers={tickers}
+          trades={trades}
+          baseUrl={base}
+          client:load
+        />
+      </>
     )}
   </div>
 </Layout>
