@@ -14,34 +14,22 @@
 import { readdirSync } from 'fs';
 import { pathToFileURL } from 'url';
 import { join } from 'path';
-import { fetchJSON } from './lib/api-client.mjs';
+import { fetchUnitedstatesFile } from './lib/unitedstates.mjs';
 import { getDataDir, readJSON, writeJSON } from './lib/data-writer.mjs';
 import { compareMembers, preserveExistingValues, splitMemberName } from './fetch-members.mjs';
-
-const HOSTS = [
-  'https://unitedstates.github.io/congress-legislators',
-  'https://theunitedstates.io/congress-legislators',
-];
 
 const checkOnly = process.argv.includes('--check');
 
 async function loadIndexed(fileName, label) {
-  for (const host of HOSTS) {
-    try {
-      const data = await fetchJSON(`${host}/${fileName}`);
-      if (Array.isArray(data) && data.length > 0) {
-        console.log(`Loaded ${data.length} ${label} records from ${host}`);
-        const index = {};
-        for (const entry of data) {
-          if (entry?.id?.bioguide) index[entry.id.bioguide] = entry;
-        }
-        return index;
-      }
-    } catch (err) {
-      console.warn(`  ${host} unavailable for ${label}: ${err.message}`);
-    }
+  const data = await fetchUnitedstatesFile(fileName, label);
+  if (!Array.isArray(data) || data.length === 0) {
+    throw new Error(`Could not load ${label} from any host`);
   }
-  throw new Error(`Could not load ${label} from any host`);
+  const index = {};
+  for (const entry of data) {
+    if (entry?.id?.bioguide) index[entry.id.bioguide] = entry;
+  }
+  return index;
 }
 
 /** Fields the supplementary source owns, built from a legislator record. */

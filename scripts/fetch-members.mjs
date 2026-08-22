@@ -12,36 +12,15 @@
 import { pathToFileURL } from 'url';
 import { fetchJSON, paginateCongressAPI, getCongressAPIBaseUrl, batchProcess } from './lib/api-client.mjs';
 import { writeJSON, readJSON } from './lib/data-writer.mjs';
+import { fetchUnitedstatesFile } from './lib/unitedstates.mjs';
 
 const API_KEY = process.env.CONGRESS_API_KEY;
 const CONGRESS_NUMBER = 119; // Current congress
 
 
-/**
- * theunitedstates.io stopped resolving, which silently emptied every member's
- * name, website and social links. The same files are published by the project's
- * GitHub Pages site, so try that first and keep the old host as a fallback.
- */
-const LEGISLATOR_HOSTS = [
-  'https://unitedstates.github.io/congress-legislators',
-  'https://theunitedstates.io/congress-legislators',
-];
-
 export async function fetchLegislatorFile(fileName, label) {
-  for (const host of LEGISLATOR_HOSTS) {
-    try {
-      const data = await fetchJSON(`${host}/${fileName}`);
-      if (Array.isArray(data) && data.length > 0) {
-        console.log(`  Got ${data.length} ${label} records from ${host}`);
-        return data;
-      }
-      console.warn(`  ${host} returned no ${label} records`);
-    } catch (err) {
-      console.warn(`  ${host} unavailable for ${label}: ${err.message}`);
-    }
-  }
-  console.warn(`  Warning: no source returned ${label}; existing values will be kept.`);
-  return null;
+  const data = await fetchUnitedstatesFile(fileName, label);
+  return Array.isArray(data) && data.length > 0 ? data : null;
 }
 
 async function fetchLegislatorsYaml() {

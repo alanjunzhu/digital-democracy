@@ -7,6 +7,15 @@ import { API_BASE_URL } from '../../shared/congress-urls.mjs';
 const MAX_RETRIES = 3;
 
 /**
+ * Identify this project. Some official endpoints treat the default Node
+ * client poorly (empty session results, 403s), and a short UA is enough.
+ */
+export const DEFAULT_FETCH_HEADERS = {
+  'User-Agent': 'digital-democracy/1.0 (+https://github.com/alanjunzhu/digital-democracy)',
+  Accept: '*/*',
+};
+
+/**
  * The API takes its key as a query parameter, so any URL in a log line or an
  * error message carries the credential. GitHub Actions masks registered
  * secrets, but local runs and other log sinks do not.
@@ -18,12 +27,20 @@ export function redactApiKey(url) {
   return String(url).replace(/([?&]api_key=)[^&]*/gi, '$1REDACTED');
 }
 
+export function mergeFetchOptions(options = {}) {
+  return {
+    ...options,
+    headers: { ...DEFAULT_FETCH_HEADERS, ...(options.headers || {}) },
+  };
+}
+
 export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
   let lastStatus = 0;
+  const request = mergeFetchOptions(options);
 
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const response = await fetch(url, options);
+      const response = await fetch(url, request);
       if (response.status === 429) {
         lastStatus = response.status;
         const wait = Math.pow(2, attempt) * 1000;
@@ -38,8 +55,8 @@ export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
         await sleep(wait);
         continue;
       }
-      if (response.status === 404) {
-        return null; // Don't retry 404s — resource doesn't exist
+      if (response.status === 404 || response.status === 403) {
+        return null; // Don't retry missing or forbidden resources
       }
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText} for ${redactApiKey(url)}`);
@@ -159,8 +176,8 @@ export async function batchFetchJSON(urls, { concurrency = 10, delayMs = 100, la
 export async function batchFetchText(urls, { concurrency = 15, delayMs = 50, label = 'requests' } = {}) {
   return batchProcess(urls, async (url) => {
     try {
-      const response = await fetch(url);
-      if (!response.ok) return null;
+      const response = await fetchWithRetry(url);
+      if (!response) return null;
       return await response.text();
     } catch {
       return null;
