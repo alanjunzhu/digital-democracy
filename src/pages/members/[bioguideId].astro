@@ -2,6 +2,7 @@
 import Layout from '../../components/layout/Layout.astro';
 import PartyBadge from '../../components/shared/PartyBadge.astro';
 import ChamberBadge from '../../components/shared/ChamberBadge.astro';
+import MemberVoteRow from '../../components/shared/MemberVoteRow.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
@@ -38,6 +39,14 @@ const districtLabel = member.chamber === 'House' && member.district
 
 function localBillExists(id: string) {
   return existsSync(join(process.cwd(), 'data', 'bills', `${id}.json`));
+}
+
+function billLink(billId: string) {
+  const local = localBillExists(billId);
+  return {
+    local,
+    href: `${base}bills/${billId}/`,
+  };
 }
 
 function withStage(bills: any[]) {
@@ -511,46 +520,20 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
                   )}
                 </div>
                 <div class="space-y-0.5 pl-3 border-l-2 border-gray-100">
-                  {votes.slice(0, 10).map((v: any) => {
-                    const castLower = (v.voteCast || '').toLowerCase();
-                    const castColor = (castLower === 'yea' || castLower === 'aye')
-                      ? 'bg-green-100 text-green-800'
-                      : (castLower === 'nay' || castLower === 'no')
-                      ? 'bg-red-100 text-red-800'
-                      : 'bg-yellow-100 text-yellow-800';
-                    return (
-                      <a href={`${base}votes/${v.voteId}/`} class="flex items-start gap-2 py-2 hover:bg-gray-50 -mx-2 px-2 rounded">
-                        <div class="flex flex-col items-center min-w-[2.5rem]">
-                          <span class="font-mono text-[10px] text-gray-500">#{v.rollCallNumber}</span>
-                          <span class="text-[9px] text-gray-400">{v.date}</span>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                          <p class="text-xs text-gray-900 line-clamp-1">{v.question}</p>
-                          <div class="flex items-center gap-2 mt-0.5">
-                            {v.billId && (
-                              localBillExists(v.billId) ? (
-                                <a href={`${base}bills/${v.billId}/`} class="text-[10px] text-blue-600 font-mono">{v.billId}</a>
-                              ) : (
-                                <span class="text-[10px] text-blue-600 font-mono">{v.billId}</span>
-                              )
-                            )}
-                            {v.result && (
-                              <span class={`text-[10px] ${v.result === 'Passed' || v.result === 'Agreed to' ? 'text-green-600' : 'text-red-600'}`}>
-                                {v.result}
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                        {v.voteCast && (
-                          <span class={`inline-flex items-center rounded-full text-[10px] px-2 py-0.5 font-semibold whitespace-nowrap ${castColor}`}>
-                            {v.voteCast}
-                          </span>
-                        )}
-                      </a>
-                    );
-                  })}
+                  {votes.slice(0, 10).map((v: any) => (
+                    <MemberVoteRow vote={v} base={base} billLink={billLink} />
+                  ))}
                   {votes.length > 10 && (
-                    <p class="text-[10px] text-gray-400 pl-2 py-1">...and {votes.length - 10} more votes on this topic</p>
+                    <details class="group">
+                      <summary class="cursor-pointer text-[10px] text-blue-600 hover:text-blue-800 pl-2 py-1 select-none">
+                        Show {votes.length - 10} more votes on this topic
+                      </summary>
+                      <div class="space-y-0.5 pt-1">
+                        {votes.slice(10).map((v: any) => (
+                          <MemberVoteRow vote={v} base={base} billLink={billLink} />
+                        ))}
+                      </div>
+                    </details>
                   )}
                 </div>
               </div>
