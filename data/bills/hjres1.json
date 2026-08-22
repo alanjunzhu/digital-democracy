@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.J.Res.",
-  "number": "1",
+  "number": 1,
   "billId": "hjres1",
   "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,33 @@
   },
   "latestAction": "Placed on the House Calendar, Calendar No. 84.",
   "latestActionDate": "2026-07-06",
+  "updateDate": "2026-08-20T22:41:40Z",
   "originChamber": "House",
   "policyArea": "Law",
   "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
   "summary": "<p>This joint resolution proposes a constitutional amendment requiring the Supreme Court to be composed&nbsp;of nine Justices—one Chief Justice and eight Associate Justices.</p>",
   "cosponsors": 2,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Reported By",
+          "date": "2026-07-06T14:51:46Z"
+        },
+        {
+          "name": "Markup By",
+          "date": "2026-06-03T21:16:50Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:06:35Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

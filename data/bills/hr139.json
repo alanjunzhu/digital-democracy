@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "139",
+  "number": 139,
   "billId": "hr139",
   "title": "Sunshine Protection Act of 2025",
   "introducedDate": "2025-01-03",
@@ -13,14 +13,37 @@
   },
   "latestAction": "Received in the Senate and Read twice and referred to the Committee on Commerce, Science, and Transportation.",
   "latestActionDate": "2026-07-15",
+  "updateDate": "2026-08-20T22:41:39Z",
   "originChamber": "House",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/139",
   "summary": "<p><strong>Sunshine Protection Act of 2025</strong></p><p>This bill makes daylight saving time the new, permanent standard time.</p><p>States with areas exempt from daylight saving time may choose the standard time for those areas.</p>",
   "cosponsors": 34,
   "committees": [
-    "Commerce, Science, and Transportation Committee",
-    "Energy and Commerce Committee"
+    {
+      "name": "Commerce, Science, and Transportation Committee",
+      "systemCode": "sscm00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-07-15T19:14:05Z"
+        }
+      ]
+    },
+    {
+      "name": "Energy and Commerce Committee",
+      "systemCode": "hsif00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:26:25Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

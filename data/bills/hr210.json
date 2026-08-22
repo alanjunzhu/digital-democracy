@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "210",
+  "number": 210,
   "billId": "hr210",
   "title": "Dental Care for Veterans Act",
   "introducedDate": "2025-01-06",
@@ -13,13 +13,33 @@
   },
   "latestAction": "Committee Hearings Held",
   "latestActionDate": "2026-05-20",
+  "updateDate": "2026-08-21T08:05:58Z",
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/210",
   "summary": "<p><b>Dental Care for Veterans Act</b></p> <p>This bill expands eligibility for veterans for dental care provided by the Department of Veterans Affairs (VA). Specifically, the bill makes all veterans who are enrolled in the VA health care system eligible for VA-provided dental services. Currently, only veterans who have a service-connected dental issue or meet other narrow criteria are eligible for certain dental services.</p> <p>The bill phases in eligibility over four years based upon existing eligibility, degree of service-connected disability or other disability, prisoner of war status, award of a Purple Heart, financial need, or VA health care eligibility.</p>",
-  "cosponsors": 109,
+  "cosponsors": 110,
   "committees": [
-    "Veterans' Affairs Committee"
+    {
+      "name": "Veterans' Affairs Committee",
+      "systemCode": "hsvr00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Hearings By (full committee)",
+          "date": "2026-05-20T13:27:05Z"
+        },
+        {
+          "name": "Hearings By (full committee)",
+          "date": "2026-03-18T16:55:11Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-06T17:00:35Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
