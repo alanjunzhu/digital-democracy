@@ -220,8 +220,9 @@ async function main() {
   }
 
   allSummaries.sort((a, b) => {
+    // `?? 3`, not `|| 3`: Senate's order is 0, which `||` would treat as unset.
     const chamberOrder = { Senate: 0, House: 1, Joint: 2 };
-    if (a.chamber !== b.chamber) return (chamberOrder[a.chamber] || 3) - (chamberOrder[b.chamber] || 3);
+    if (a.chamber !== b.chamber) return (chamberOrder[a.chamber] ?? 3) - (chamberOrder[b.chamber] ?? 3);
     return a.name.localeCompare(b.name);
   });
 
