@@ -1,36 +1,38 @@
 # Congress Tracker
 
-A free, open-source transparency tool for monitoring the **119th United States Congress**. Browse members, track legislation, view roll call votes, analyze committee assignments, and expose potential conflicts of interest via stock trade disclosures.
+A free, open-source transparency tool for the **119th United States Congress**. Browse members, track recently active legislation, view roll call votes, inspect committee referrals, and see STOCK Act filings next to committee assignments.
 
 **Live site:** [alanjunzhu.github.io/digital-democracy](https://alanjunzhu.github.io/digital-democracy)
+
+The site is static. Node scripts fetch public data into `data/`, that JSON is committed, and Astro builds pages from it for GitHub Pages.
 
 ---
 
 ## Features
 
-- **Member Directory** — All 535+ members with photos, party, state, chamber, and contact info
-- **Member Profiles** — Biography, service history, sponsored bills grouped by legislative stage, voting record categorized by policy topic, and a financial transparency section
-- **Financial Conflict Detection** — Cross-references member stock trades (via STOCK Act disclosures) with their committee assignments to flag potential conflicts of interest
-- **Bill Tracking** — The most recently active bills, filterable by stage (Introduced / In Committee / Passed / Signed into Law) with grouping and summaries
-- **Roll Call Votes** — House and Senate votes for both sessions of the 119th Congress, filterable by chamber and topic
-- **Committee Directory** — All standing committees in both chambers, each listing the legislation referred to it
-- **Analytics Dashboard** — Party breakdown, bill stage distribution, and voting patterns
-- **Automated Weekly Updates** — GitHub Actions fetches fresh data from official sources every Sunday
-- **Fully Static** — Built with Astro, fast to load, and free to host on GitHub Pages
+- **Members** — Directory of current members with photos, party, state, and chamber; profiles with contact info, service history, sponsored bills by stage, votes by topic, committee assignments, and financial filings
+- **Bills** — The most recently *updated* measures (not the oldest introductions), filterable by stage, with committee referrals that distinguish House from Senate committees of the same name
+- **Votes** — House and Senate roll calls for both sessions of the 119th Congress, filterable by chamber and topic
+- **Committees** — Standing committees and subcommittees, each listing legislation referred to it in this congress
+- **Finances** — STOCK Act periodic transaction reports (and ticker-level trades when the Stock Watcher dumps are reachable), with committee-overlap and bill-timing flags
+- **Analytics** — Party breakdown, bill stages, and voting patterns
+- **Automated refresh** — GitHub Actions fetch and commit data on a schedule; a push to `main` rebuilds the site
 
 ---
 
 ## Data Sources
 
-| Source | Data Provided |
-|--------|---------------|
-| [Congress.gov API v3](https://api.congress.gov/) | Members, bills, committees, committee legislation |
-| [unitedstates/congress-legislators](https://unitedstates.github.io/congress-legislators/) | Biographical info, service history, contact details, social media, committee memberships |
-| [clerk.house.gov XML](https://clerk.house.gov/legislative/legvotes.aspx) | House roll call votes (no API key required) |
-| [senate.gov XML](https://www.senate.gov/legislative/votes_new.htm) | Senate roll call votes (no API key required) |
-| [House Stock Watcher](https://housestockwatcher.com/) | House member stock trade disclosures (when the S3 dump is reachable) |
-| [Senate Stock Watcher](https://senatestockwatcher.com/) | Senate member stock trade disclosures (when the S3 dump is reachable) |
-| [House Clerk PTR filings](https://disclosures-clerk.house.gov/) | STOCK Act periodic transaction reports when Stock Watcher is unavailable |
+| Source | Used for |
+|--------|----------|
+| [Congress.gov API v3](https://api.congress.gov/) | Members, bills (sorted `updateDate+desc`), committees, committee legislation |
+| [unitedstates/congress-legislators](https://unitedstates.github.io/congress-legislators/) | Names, websites, social links, committee memberships (`github.io` first; `theunitedstates.io` as fallback) |
+| [clerk.house.gov](https://clerk.house.gov/legislative/legvotes.aspx) | House roll call XML |
+| [senate.gov](https://www.senate.gov/legislative/votes_new.htm) | Senate roll call XML |
+| [House Clerk disclosures](https://disclosures-clerk.house.gov/) | STOCK Act periodic transaction reports when House Stock Watcher S3 is closed |
+| [House Stock Watcher](https://housestockwatcher.com/) | House trades with tickers (when the S3 dump is reachable) |
+| [Senate Stock Watcher](https://senatestockwatcher.com/) | Senate trades with tickers (when the S3 dump is reachable) |
+
+Votes, finances, and the unitedstates files need no Congress.gov key. Members, bills, and committees do.
 
 ---
 
@@ -38,12 +40,11 @@ A free, open-source transparency tool for monitoring the **119th United States C
 
 | Layer | Technology |
 |-------|------------|
-| Framework | [Astro 5](https://astro.build/) (static site generation) |
-| Interactive UI | [React 19](https://react.dev/) |
-| Styling | [Tailwind CSS 3](https://tailwindcss.com/) |
-| Search | [Fuse.js](https://www.fusejs.io/) |
-| Hosting | [GitHub Pages](https://pages.github.com/) |
-| CI/CD | [GitHub Actions](https://github.com/features/actions) |
+| Pages | [Astro 5](https://astro.build/) (static) |
+| Filters / search | [React 19](https://react.dev/) + [Fuse.js](https://www.fusejs.io/) |
+| Styles | [Tailwind CSS 3](https://tailwindcss.com/) |
+| Hosting | [GitHub Pages](https://pages.github.com/) at `/digital-democracy/` |
+| CI | [GitHub Actions](https://github.com/features/actions) |
 
 ---
 
@@ -53,64 +54,81 @@ A free, open-source transparency tool for monitoring the **119th United States C
 digital-democracy/
 ├── src/
 │   ├── pages/
-│   │   ├── index.astro                  # Home page with stats
-│   │   ├── analytics.astro              # Analytics dashboard
+│   │   ├── index.astro                  # Home
+│   │   ├── analytics.astro              # Dashboard
 │   │   ├── members/
-│   │   │   ├── index.astro              # Member directory with filtering
-│   │   │   └── [bioguideId].astro       # Member profile (bills, votes, finances)
+│   │   │   ├── index.astro              # Directory
+│   │   │   └── [bioguideId].astro       # Profile (bills, votes, committees, finances)
 │   │   ├── bills/
-│   │   │   ├── index.astro              # Bill tracker with stage filtering
-│   │   │   └── [billId].astro           # Individual bill detail
+│   │   │   ├── index.astro              # Tracker
+│   │   │   └── [billId].astro           # Detail
 │   │   ├── votes/
-│   │   │   ├── index.astro              # Roll call vote list
-│   │   │   └── [voteId].astro           # Vote detail with member positions
+│   │   │   ├── index.astro              # Roll call list
+│   │   │   └── [voteId].astro           # Member positions
 │   │   └── committees/
-│   │       ├── index.astro              # Committee directory
-│   │       └── [systemCode].astro       # Individual committee detail
+│   │       ├── index.astro              # Directory
+│   │       └── [committeeId].astro      # Referrals + subcommittees
 │   ├── components/
 │   │   ├── layout/                      # Layout, Header, Footer
-│   │   ├── shared/                      # PartyBadge, ChamberBadge, etc.
+│   │   ├── shared/                      # PartyBadge, ChamberBadge
 │   │   ├── members/                     # MemberCard
-│   │   └── interactive/                 # React components
-│   │       ├── MemberFilter.tsx         # Member search & filter
-│   │       ├── BillFilter.tsx           # Bill filter with stage grouping
-│   │       ├── VoteFilter.tsx           # Vote filter by chamber & topic
-│   │       ├── CommitteeFilter.tsx      # Committee filter
-│   │       └── AnalyticsDashboard.tsx   # Charts & stats
+│   │   └── interactive/                 # React filters and analytics
+│   │       ├── MemberFilter.tsx
+│   │       ├── BillFilter.tsx
+│   │       ├── VoteFilter.tsx
+│   │       ├── CommitteeFilter.tsx
+│   │       └── AnalyticsDashboard.tsx
 │   ├── lib/
-│   │   ├── types.ts                     # TypeScript interfaces
-│   │   └── utils.ts                     # Bill stage logic, formatting helpers
+│   │   ├── types.ts                     # Shared TypeScript types
+│   │   ├── utils.ts                     # Bill stages, state names, formatting
+│   │   ├── committees.ts                # Resolve referrals by systemCode
+│   │   └── committee-bills.ts           # Group stored bills onto committee pages
 │   └── styles/
-│       └── global.css                   # Tailwind directives
+│       └── global.css
 ├── scripts/
-│   ├── fetch-members.mjs                # Fetch all members (Congress.gov + unitedstates.io)
-│   ├── fetch-bills.mjs                  # Fetch recently active bills with sub-resources
-│   ├── fetch-committees.mjs             # Fetch committees + the legislation referred to each
-│   ├── fetch-votes.mjs                  # Fetch House + Senate XML votes
-│   ├── fetch-finances.mjs               # Fetch stock trades + conflict analysis
-│   ├── fix-data-urls.mjs                # Rebuild stored congress.gov URLs (no API calls)
-│   ├── backfill-member-bio.mjs          # Refill member bio/contact fields (no API key needed)
-│   ├── commit-data.sh                   # Publish regenerated data, tolerating concurrent runs
+│   ├── fetch-members.mjs                # Congress.gov members + legislator bios
+│   ├── fetch-bills.mjs                  # Recently updated bills + sub-resources
+│   ├── fetch-committees.mjs             # Committees + referred legislation
+│   ├── fetch-votes.mjs                  # House + Senate XML (both sessions)
+│   ├── fetch-finances.mjs               # Trades / PTR filings + conflict flags
+│   ├── fix-data-urls.mjs                # Rebuild stored congress.gov URLs (no API)
+│   ├── backfill-member-bio.mjs          # Refill names/websites/socials (no API key)
+│   ├── commit-data.sh                   # Publish regenerated data without rebase races
 │   └── lib/
-│       ├── api-client.mjs               # HTTP client with retry, pagination, batch concurrency
-│       ├── data-writer.mjs              # File I/O utilities
-│       └── unitedstates.mjs             # congress-legislators hosts + committee membership map
+│       ├── api-client.mjs               # Retry, pagination, batch fetch, User-Agent
+│       ├── data-writer.mjs              # Read/write under data/ (or CONGRESS_DATA_DIR)
+│       └── unitedstates.mjs             # Legislator hosts + committee-membership map
 ├── shared/
-│   └── congress-urls.mjs                # congress.gov URL builders used by scripts and pages
-├── tests/                               # node --test unit tests
-├── data/                                # Generated JSON (committed to repo)
+│   └── congress-urls.mjs                # Bill and committee URL builders (scripts + pages)
+├── tests/                               # node --test
+│   ├── api-client.test.mjs
+│   ├── commit-data.test.mjs
+│   ├── congress-urls.test.mjs
+│   ├── fetch-normalize.test.mjs
+│   ├── fetch-pipeline.test.mjs
+│   ├── finances.test.mjs
+│   ├── members.test.mjs
+│   ├── unitedstates.test.mjs
+│   └── votes.test.mjs
+├── data/                                # Generated JSON, committed
 │   ├── members/                         # index.json + {bioguideId}.json
 │   ├── bills/                           # index.json + {billId}.json
 │   ├── votes/                           # index.json + {voteId}.json + by-member.json
 │   ├── committees/                      # index.json + {systemCode}.json
-│   ├── finances/                        # by-member.json (trades + conflict flags)
+│   ├── finances/                        # by-member.json
 │   └── meta/                            # last-updated.json
 ├── .github/workflows/
-│   ├── deploy.yml                       # GitHub Pages deployment on push to main
-│   └── fetch-members.yml                # Weekly data fetch (parallel scripts)
-└── public/
-    └── favicon.svg
+│   ├── deploy.yml                       # Test, build, deploy Pages on push to main
+│   ├── fetch-members.yml                # Weekly full fetch (members, bills, committees, votes, finances)
+│   ├── fetch-bills.yml                  # Bills only (Mon/Thu)
+│   └── fetch-votes.yml                  # Votes only (Tue/Fri)
+├── public/
+│   └── favicon.svg
+├── astro.config.mjs
+└── package.json
 ```
+
+`shared/congress-urls.mjs` is the single place bill and committee links are built, so resolutions go to `/house-resolution/n` rather than `/house-bill/n`, and committees go to `/committee/{chamber}-{slug}/{systemCode}`.
 
 ---
 
@@ -119,30 +137,46 @@ digital-democracy/
 ### Prerequisites
 
 - [Node.js 22+](https://nodejs.org/)
-- A [Congress.gov API key](https://api.congress.gov/sign-up/) (free)
+- A free [Congress.gov API key](https://api.congress.gov/sign-up/) for members, bills, and committees
 
 ### Local Development
 
 ```bash
-# Clone the repo
 git clone https://github.com/alanjunzhu/digital-democracy.git
 cd digital-democracy
-
-# Install dependencies
 npm install
+```
 
-# Fetch all data (requires API key; votes and finances need no key)
+Committed JSON in `data/` is enough to run the site:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:4321/digital-democracy/](http://localhost:4321/digital-democracy/).
+
+To refresh data:
+
+```bash
 CONGRESS_API_KEY=your_key_here npm run fetch:members
 CONGRESS_API_KEY=your_key_here npm run fetch:bills
 CONGRESS_API_KEY=your_key_here npm run fetch:committees
 npm run fetch:votes
 node scripts/fetch-finances.mjs
-
-# Start the dev server
-npm run dev
 ```
 
-The site will be available at `http://localhost:4321/digital-democracy/`.
+| Variable | Used by |
+|----------|---------|
+| `CONGRESS_API_KEY` | `fetch-members`, `fetch-bills`, `fetch-committees` |
+| `CONGRESS_API_BASE_URL` | Tests / pointing the API client at a stand-in |
+| `CONGRESS_DATA_DIR` | Tests / writing JSON somewhere other than `data/` |
+
+Repair scripts that do not call Congress.gov:
+
+```bash
+node scripts/backfill-member-bio.mjs    # names, websites, socials from congress-legislators
+node scripts/fix-data-urls.mjs          # rewrite stored congress.gov URLs
+```
 
 ### Tests
 
@@ -150,9 +184,9 @@ The site will be available at `http://localhost:4321/digital-democracy/`.
 npm test
 ```
 
-Covers the congress.gov URL builders and the normalization the fetch scripts apply to API responses.
+Covers URL builders, fetch normalization, an end-to-end fetch against a stand-in API, member name preservation, committee-membership mapping, Clerk PTR parsing, vote probing, HTTP client behavior, and `commit-data.sh` races.
 
-### Build for Production
+### Production Build
 
 ```bash
 npm run build
@@ -161,59 +195,50 @@ npm run preview
 
 ---
 
-## CI/CD Workflows
+## CI/CD
 
-### Data Fetch (`fetch-members.yml`)
+All three data workflows check out `main`, write JSON, and publish with `scripts/commit-data.sh`. They share the `fetch-data` concurrency group (`cancel-in-progress: false`) so they queue instead of overlapping. If `main` still moves during a run, the script resets to the latest `main` and reapplies only the paths that job owns, instead of rebasing and failing on aggregate files like `data/bills/index.json`.
 
-Runs **weekly on Sunday at 2:00 AM UTC** (or manually via the Actions tab).
+| Workflow | Schedule | What it writes |
+|----------|----------|----------------|
+| **Fetch Congress Data** (`fetch-members.yml`) | Sunday 02:00 UTC | All of `data/` — phase 1 members/bills/committees in parallel, then votes + finances |
+| **Fetch Bills Data** (`fetch-bills.yml`) | Monday and Thursday 11:00 UTC | `data/bills/`, `data/meta/` |
+| **Fetch Votes Data** (`fetch-votes.yml`) | Tuesday and Friday 11:00 UTC | `data/votes/`, `data/meta/` |
+| **Deploy to GitHub Pages** (`deploy.yml`) | Push to `main` | `npm test`, `astro build`, Pages deploy |
 
-The workflow runs scripts in two parallel phases:
+**Required Actions secret:** `CONGRESS_API_KEY`
 
-**Phase 1** (parallel): `fetch-members`, `fetch-bills`, `fetch-committees`
-**Phase 2** (parallel, after Phase 1): `fetch-votes`, `fetch-finances`
+### First-time GitHub setup
 
-Updated JSON files are committed back to `main` by `scripts/commit-data.sh`, which triggers the deploy workflow. All data workflows share a `fetch-data` concurrency group so they queue rather than overlap; if `main` still moves during a run, the script rebases onto it and reapplies the files it regenerated instead of failing on a merge conflict.
-
-**Required secret:** `CONGRESS_API_KEY`
-**Optional secret:** `FEC_API_KEY` (for FEC campaign finance data)
-
-### Site Deploy (`deploy.yml`)
-
-Triggers on every push to `main`. Builds the Astro site and deploys to GitHub Pages.
-
-### First-Time Setup
-
-1. Add the API key: **Settings → Secrets → Actions → `CONGRESS_API_KEY`**
-2. Enable GitHub Pages: **Settings → Pages → Source: GitHub Actions**
-3. Trigger the data fetch: **Actions → "Fetch Congress Data" → Run workflow**
-4. The deploy runs automatically once data is committed
+1. **Settings → Secrets and variables → Actions → `CONGRESS_API_KEY`**
+2. **Settings → Pages → Source: GitHub Actions**
+3. **Actions → Fetch Congress Data → Run workflow**
+4. Deploy runs when that workflow commits to `main`
 
 ---
 
 ## Financial Conflict Detection
 
-The `fetch-finances.mjs` script implements a conflict-of-interest analysis by cross-referencing member stock trades (from STOCK Act disclosures) with their committee assignments:
+`scripts/fetch-finances.mjs` matches filings to members and committee assignments:
 
-- **Committee overlap** (high severity) — trades in sectors directly regulated by a member's committee (e.g., defense stocks while on the Armed Services Committee)
-- **Bill timing** (medium severity) — trades within 30 days of sponsoring related legislation
+- **Committee overlap** (high) — trades in a sector the member's committee covers
+- **Bill timing** (medium) — trades within 30 days of sponsoring related legislation
 
-Sector mapping covers 100+ tickers and keyword-based asset description matching across Defense, Technology, Finance, Energy, Healthcare, Transportation, and Agriculture.
+Ticker-level analysis needs the Stock Watcher dumps. When those S3 buckets return 403, the script stores House Clerk PTR filings (PDF links, no tickers) and still attaches committee memberships so profiles are not blank. A fetch that gets no trades at all keeps the file already in `data/`.
 
-> **Note:** All data is sourced from public disclosures. Red highlights on member profiles indicate potential conflicts, not confirmed wrongdoing.
+> Highlights on member pages are potential conflicts from public disclosures, not findings of wrongdoing.
 
 ---
 
 ## Roadmap
 
-- [x] Member directory with search and filtering
-- [x] Individual member profile pages
+- [x] Member directory and profiles
 - [x] Bill tracking with stage categorization
 - [x] Roll call votes (House + Senate, both sessions)
-- [x] Voting record grouped by policy topic on member pages
-- [x] Committee directory
-- [x] Stock trade disclosures with conflict-of-interest detection
-- [x] Parallel data fetching (~3-5 min vs ~30 min previously)
-- [ ] Voting alignment scores (member vs party, member vs member)
+- [x] Committee directory with referred legislation
+- [x] STOCK Act filings and conflict flags
+- [x] Data publishing that survives concurrent workflow runs
+- [ ] Voting alignment scores
 - [ ] Amendment tracking
 - [ ] Hearing schedules
 
@@ -221,4 +246,4 @@ Sector mapping covers 100+ tickers and keyword-based asset description matching 
 
 ## License
 
-This project is open source. All Congressional data is sourced from public government APIs and official disclosures.
+Open source. Congressional data comes from public government APIs and official disclosures.
