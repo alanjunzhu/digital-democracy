@@ -6,6 +6,18 @@ import { API_BASE_URL } from '../../shared/congress-urls.mjs';
 
 const MAX_RETRIES = 3;
 
+/**
+ * The API takes its key as a query parameter, so any URL in a log line or an
+ * error message carries the credential. GitHub Actions masks registered
+ * secrets, but local runs and other log sinks do not.
+ *
+ * @param {string} url
+ * @returns {string}
+ */
+export function redactApiKey(url) {
+  return String(url).replace(/([?&]api_key=)[^&]*/gi, '$1REDACTED');
+}
+
 export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
   let lastStatus = 0;
 
@@ -30,7 +42,7 @@ export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
         return null; // Don't retry 404s — resource doesn't exist
       }
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText} for ${url}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText} for ${redactApiKey(url)}`);
       }
       return response;
     } catch (err) {
@@ -41,7 +53,7 @@ export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
     }
   }
 
-  throw new Error(`Gave up after ${retries + 1} attempts (last status ${lastStatus}) for ${url}`);
+  throw new Error(`Gave up after ${retries + 1} attempts (last status ${lastStatus}) for ${redactApiKey(url)}`);
 }
 
 export async function fetchJSON(url, options = {}) {
