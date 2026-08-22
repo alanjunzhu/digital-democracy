@@ -1,13 +1,30 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
 import MemberFilter from '../../components/interactive/MemberFilter';
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
+import { buildMemberFinanceIndex } from '../../../shared/member-finance-index.mjs';
 
 let membersData = { total: 0, members: [], lastUpdated: '', congress: 119 };
 try {
   const dataPath = join(process.cwd(), 'data', 'members', 'index.json');
   membersData = JSON.parse(readFileSync(dataPath, 'utf-8'));
+} catch {}
+
+// Which members have a trading record, resolved once here rather than per card.
+let financeIndex: Record<string, any> = {};
+try {
+  const financePath = join(process.cwd(), 'data', 'finances', 'by-member.json');
+  if (existsSync(financePath)) {
+    const pricesDir = join(process.cwd(), 'data', 'prices');
+    const cachedTickers = existsSync(pricesDir)
+      ? new Set(readdirSync(pricesDir).map((f) => f.replace(/\.json$/, '')))
+      : null;
+    financeIndex = buildMemberFinanceIndex(
+      JSON.parse(readFileSync(financePath, 'utf-8')),
+      cachedTickers,
+    );
+  }
 } catch {}
 
 const base = import.meta.env.BASE_URL;
@@ -23,7 +40,12 @@ const base = import.meta.env.BASE_URL;
     </div>
 
     {membersData.members.length > 0 ? (
-      <MemberFilter members={membersData.members} baseUrl={base} client:load />
+      <MemberFilter
+        members={membersData.members}
+        financeIndex={financeIndex}
+        baseUrl={base}
+        client:load
+      />
     ) : (
       <div class="text-center py-16 text-gray-500">
         <p class="text-lg">No member data available yet.</p>
