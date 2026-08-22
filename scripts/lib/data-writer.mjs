@@ -1,7 +1,9 @@
 import { writeFileSync, mkdirSync, existsSync, readFileSync } from 'fs';
-import { dirname, join } from 'path';
+import { dirname, join, resolve } from 'path';
 
-const DATA_DIR = new URL('../../data', import.meta.url).pathname;
+const DATA_DIR = process.env.CONGRESS_DATA_DIR
+  ? resolve(process.env.CONGRESS_DATA_DIR)
+  : new URL('../../data', import.meta.url).pathname;
 
 export function ensureDir(dirPath) {
   if (!existsSync(dirPath)) {

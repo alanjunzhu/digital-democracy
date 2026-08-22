@@ -2,6 +2,8 @@
  * Shared API client with rate limiting, pagination, retry, and batch concurrency.
  */
 
+import { API_BASE_URL } from '../../shared/congress-urls.mjs';
+
 const MAX_RETRIES = 3;
 
 export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
@@ -159,5 +161,5 @@ export function sleep(ms) {
 }
 
 export function getCongressAPIBaseUrl() {
-  return 'https://api.congress.gov/v3';
+  return process.env.CONGRESS_API_BASE_URL || API_BASE_URL;
 }
