@@ -3,5 +3,10 @@
   "name": "Capital Markets Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsba16"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsba00",
+    "name": "Financial Services Committee"
+  }
 }

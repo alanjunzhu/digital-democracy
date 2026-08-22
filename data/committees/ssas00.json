@@ -3,7 +3,7 @@
   "name": "Armed Services Committee",
   "chamber": "Senate",
   "committeeType": "Standing",
-  "url": "https://www.congress.gov/committee/senate/ssas00",
+  "url": "https://www.congress.gov/committee/senate-armed-services/ssas00",
   "subcommittees": [
     {
       "systemCode": "ssas13",
@@ -33,5 +33,6 @@
       "systemCode": "ssas21",
       "name": "Cybersecurity Subcommittee"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

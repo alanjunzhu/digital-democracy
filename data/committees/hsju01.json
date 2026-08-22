@@ -3,5 +3,10 @@
   "name": "Immigration Integrity, Security, and Enforcement Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsju01"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsju00",
+    "name": "Judiciary Committee"
+  }
 }

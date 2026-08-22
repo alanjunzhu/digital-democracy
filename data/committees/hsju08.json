@@ -3,5 +3,10 @@
   "name": "Crime and Federal Government Surveillance Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsju08"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsju00",
+    "name": "Judiciary Committee"
+  }
 }

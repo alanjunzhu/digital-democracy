@@ -3,5 +3,10 @@
   "name": "Railroads, Pipelines, and Hazardous Materials Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hspw14"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hspw00",
+    "name": "Transportation and Infrastructure Committee"
+  }
 }

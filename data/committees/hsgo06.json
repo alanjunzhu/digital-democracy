@@ -3,5 +3,10 @@
   "name": "Military and Foreign Affairs Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsgo06"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsgo00",
+    "name": "Oversight and Government Reform Committee"
+  }
 }

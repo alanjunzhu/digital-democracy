@@ -48,10 +48,14 @@ The Congress.gov API allows **5,000 requests/hour**. Our weekly fetch is designe
 | Data Type   | API Calls per Fetch | Strategy                           |
 |-------------|--------------------|------------------------------------|
 | Members     | ~550               | 1 paginated list + 548 detail      |
-| Bills       | ~1,000             | 2 paginated pages + 500 detail+actions |
-| Committees  | ~3                 | 1 call per chamber (House/Senate/Joint) |
+| Bills       | ~2,500             | 2 paginated pages + 500 × 5 sub-resources |
+| Committees  | ~700               | 1 call per chamber + detail and bills per committee |
 | Votes       | ~110               | 1 list page + ~100 vote details    |
-| **Total**   | **~1,663**         | Well under 5,000/hr limit          |
+| **Total**   | **~3,860**         | Under the 5,000/hr limit           |
+
+Bill lists are requested with `sort=updateDate+desc`. Without it the endpoint
+returns a congress's oldest measures first, so a capped fetch only ever sees
+bills introduced the week the congress convened.
 
 ---
 
@@ -118,14 +122,16 @@ The Congress.gov API allows **5,000 requests/hour**. Our weekly fetch is designe
 - Committee list organized by chamber (House, Senate, Joint)
 - Committee detail pages with:
   - Committee type and jurisdiction
-  - Subcommittee listing
-  - Associated bills
-  - Links to official committee pages
+  - Subcommittee listing, linked to the parent committee
+  - Legislation referred to the committee, linked to bill pages
+  - Links to the congress.gov profile and the committee's own website
 - Filter by chamber
 
 **Data Sources:**
-- Congress.gov API `/committee/119/house` (3 calls total: House, Senate, Joint)
-- Minimal API calls — committee list endpoints return full data
+- Congress.gov API `/committee/119/{chamber}` (3 calls: House, Senate, Joint)
+- Congress.gov API `/committee/{chamber}/{code}` (official website)
+- Congress.gov API `/committee/{chamber}/{code}/bills` (referred legislation,
+  narrowed by `fromDateTime` and filtered to the current congress)
 
 **Files:**
 - `scripts/fetch-committees.mjs` — Data fetching script

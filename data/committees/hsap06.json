@@ -3,5 +3,10 @@
   "name": "Interior, Environment, and Related Agencies Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsap06"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsap00",
+    "name": "Appropriations Committee"
+  }
 }

@@ -3,5 +3,10 @@
   "name": "Elections Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsha08"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsha00",
+    "name": "Committee on House Administration"
+  }
 }

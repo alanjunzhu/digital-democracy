@@ -3,5 +3,10 @@
   "name": "Energy and Mineral Resources Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsii06"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsii00",
+    "name": "Natural Resources Committee"
+  }
 }

@@ -3,5 +3,10 @@
   "name": "National Security, Department of State, and Related Programs Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsap04"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsap00",
+    "name": "Appropriations Committee"
+  }
 }

@@ -3,5 +3,10 @@
   "name": "Higher Education and Workforce Development Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsed13"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsed00",
+    "name": "Education and Workforce Committee"
+  }
 }

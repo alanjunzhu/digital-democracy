@@ -3,5 +3,10 @@
   "name": "Economic Opportunity Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsvr10"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsvr00",
+    "name": "Veterans' Affairs Committee"
+  }
 }

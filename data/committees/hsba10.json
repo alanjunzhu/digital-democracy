@@ -3,5 +3,10 @@
   "name": "National Security, Illicit Finance, and International Financial Institutions Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsba10"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsba00",
+    "name": "Financial Services Committee"
+  }
 }

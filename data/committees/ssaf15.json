@@ -3,5 +3,10 @@
   "name": "Rural Development, Energy, and Credit Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssaf15"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssaf00",
+    "name": "Agriculture, Nutrition, and Forestry Committee"
+  }
 }

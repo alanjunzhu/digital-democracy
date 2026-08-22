@@ -3,5 +3,10 @@
   "name": "Tactical Air and Land Forces Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsas25"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsas00",
+    "name": "Armed Services Committee"
+  }
 }

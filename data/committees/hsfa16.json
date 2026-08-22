@@ -3,5 +3,10 @@
   "name": "Africa Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsfa16"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsfa00",
+    "name": "Foreign Affairs Committee"
+  }
 }

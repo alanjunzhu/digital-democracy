@@ -3,5 +3,10 @@
   "name": "Subcommittee on Defense Intelligence and Overhead Architecture",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hlig04"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hlig00",
+    "name": "Intelligence (Permanent Select) Committee"
+  }
 }

@@ -3,5 +3,10 @@
   "name": "Aviation Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hspw05"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hspw00",
+    "name": "Transportation and Infrastructure Committee"
+  }
 }

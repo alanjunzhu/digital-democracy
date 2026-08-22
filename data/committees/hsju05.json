@@ -3,5 +3,10 @@
   "name": "Administrative State, Regulatory Reform, and Antitrust Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsju05"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsju00",
+    "name": "Judiciary Committee"
+  }
 }

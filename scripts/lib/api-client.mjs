@@ -2,19 +2,37 @@
  * Shared API client with rate limiting, pagination, retry, and batch concurrency.
  */
 
+import { API_BASE_URL } from '../../shared/congress-urls.mjs';
+
 const MAX_RETRIES = 3;
 
+/**
+ * The API takes its key as a query parameter, so any URL in a log line or an
+ * error message carries the credential. GitHub Actions masks registered
+ * secrets, but local runs and other log sinks do not.
+ *
+ * @param {string} url
+ * @returns {string}
+ */
+export function redactApiKey(url) {
+  return String(url).replace(/([?&]api_key=)[^&]*/gi, '$1REDACTED');
+}
+
 export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
+  let lastStatus = 0;
+
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const response = await fetch(url, options);
       if (response.status === 429) {
+        lastStatus = response.status;
         const wait = Math.pow(2, attempt) * 1000;
         console.warn(`Rate limited. Waiting ${wait}ms before retry...`);
         await sleep(wait);
         continue;
       }
       if (response.status >= 500) {
+        lastStatus = response.status;
         const wait = Math.pow(2, attempt) * 1000;
         console.warn(`Server error ${response.status}. Waiting ${wait}ms before retry...`);
         await sleep(wait);
@@ -24,7 +42,7 @@ export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
         return null; // Don't retry 404s — resource doesn't exist
       }
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText} for ${url}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText} for ${redactApiKey(url)}`);
       }
       return response;
     } catch (err) {
@@ -34,6 +52,8 @@ export async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
       await sleep(wait);
     }
   }
+
+  throw new Error(`Gave up after ${retries + 1} attempts (last status ${lastStatus}) for ${redactApiKey(url)}`);
 }
 
 export async function fetchJSON(url, options = {}) {
@@ -45,25 +65,33 @@ export async function fetchJSON(url, options = {}) {
 /**
  * Paginate through Congress.gov API results.
  * Yields each page of results.
+ *
+ * @param {string} baseUrl
+ * @param {string} apiKey
+ * @param {Object} [options]
+ * @param {number} [options.limit] Records per page (API maximum is 250)
+ * @param {number} [options.maxPages]
+ * @param {Record<string, string>} [options.params] Extra query params, e.g.
+ *   `{ sort: 'updateDate+desc' }`. Values are passed through unencoded because
+ *   the API expects the literal `+` in its sort values.
  */
-export async function* paginateCongressAPI(baseUrl, apiKey, { limit = 250, maxPages = 100 } = {}) {
+export async function* paginateCongressAPI(baseUrl, apiKey, { limit = 250, maxPages = 100, params = {} } = {}) {
+  const extra = Object.entries(params)
+    .map(([key, value]) => `&${key}=${value}`)
+    .join('');
   let offset = 0;
-  let page = 0;
 
-  while (page < maxPages) {
+  for (let page = 0; page < maxPages; page++) {
     const separator = baseUrl.includes('?') ? '&' : '?';
-    const url = `${baseUrl}${separator}api_key=${apiKey}&limit=${limit}&offset=${offset}&format=json`;
+    const url = `${baseUrl}${separator}api_key=${apiKey}&limit=${limit}&offset=${offset}&format=json${extra}`;
 
     const data = await fetchJSON(url);
+    if (!data) return; // 404 — nothing more to read
     yield data;
 
-    // Check if there are more results
-    const pagination = data.pagination;
-    if (!pagination || offset + limit >= pagination.count) {
-      break;
-    }
+    const count = data.pagination?.count;
+    if (typeof count !== 'number' || offset + limit >= count) return;
     offset += limit;
-    page++;
   }
 }
 
@@ -145,5 +173,5 @@ export function sleep(ms) {
 }
 
 export function getCongressAPIBaseUrl() {
-  return 'https://api.congress.gov/v3';
+  return process.env.CONGRESS_API_BASE_URL || API_BASE_URL;
 }

@@ -3,5 +3,10 @@
   "name": "Emergency Management and Technology Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hshm12"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hshm00",
+    "name": "Homeland Security Committee"
+  }
 }

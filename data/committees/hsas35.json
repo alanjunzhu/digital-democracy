@@ -3,5 +3,10 @@
   "name": "Cyber, Information Technologies, and Innovation Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsas35"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsas00",
+    "name": "Armed Services Committee"
+  }
 }

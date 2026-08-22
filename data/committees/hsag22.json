@@ -3,5 +3,10 @@
   "name": "Commodity Markets, Digital Assets, and Rural Development Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsag22"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsag00",
+    "name": "Agriculture Committee"
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Appropriations Committee",
   "chamber": "Senate",
   "committeeType": "Standing",
-  "url": "https://www.congress.gov/committee/senate/ssap00",
+  "url": "https://www.congress.gov/committee/senate-appropriations/ssap00",
   "subcommittees": [
     {
       "systemCode": "ssap01",
@@ -57,5 +57,6 @@
       "systemCode": "ssap23",
       "name": "Financial Services and General Government Subcommittee"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

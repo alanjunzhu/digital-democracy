@@ -3,7 +3,7 @@
   "name": "Appropriations Committee",
   "chamber": "House",
   "committeeType": "Standing",
-  "url": "https://www.congress.gov/committee/house/hsap00",
+  "url": "https://www.congress.gov/committee/house-appropriations/hsap00",
   "subcommittees": [
     {
       "systemCode": "hsap06",
@@ -53,5 +53,6 @@
       "systemCode": "hsap19",
       "name": "Commerce, Justice, Science, and Related Agencies Subcommittee"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

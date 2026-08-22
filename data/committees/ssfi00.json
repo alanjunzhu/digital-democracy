@@ -3,7 +3,7 @@
   "name": "Finance Committee",
   "chamber": "Senate",
   "committeeType": "Standing",
-  "url": "https://www.congress.gov/committee/senate/ssfi00",
+  "url": "https://www.congress.gov/committee/senate-finance/ssfi00",
   "subcommittees": [
     {
       "systemCode": "ssfi02",
@@ -29,5 +29,6 @@
       "systemCode": "ssfi10",
       "name": "Health Care Subcommittee"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

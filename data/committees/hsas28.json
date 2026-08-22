@@ -3,5 +3,10 @@
   "name": "Seapower and Projection Forces Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsas28"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsas00",
+    "name": "Armed Services Committee"
+  }
 }

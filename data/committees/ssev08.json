@@ -3,5 +3,10 @@
   "name": "Transportation and Infrastructure Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssev08"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssev00",
+    "name": "Environment and Public Works Committee"
+  }
 }

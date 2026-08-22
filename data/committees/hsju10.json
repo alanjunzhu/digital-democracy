@@ -3,5 +3,10 @@
   "name": "Constitution and Limited Government Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsju10"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsju00",
+    "name": "Judiciary Committee"
+  }
 }

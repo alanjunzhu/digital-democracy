@@ -3,5 +3,10 @@
   "name": "Contracting and Infrastructure Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hssm23"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hssm00",
+    "name": "Small Business Committee"
+  }
 }

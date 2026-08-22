@@ -3,7 +3,7 @@
   "name": "Intelligence (Permanent Select) Committee",
   "chamber": "House",
   "committeeType": "Select",
-  "url": "https://www.congress.gov/committee/house/hlig00",
+  "url": "https://www.congress.gov/committee/house-intelligence/hlig00",
   "subcommittees": [
     {
       "systemCode": "hlig11",
@@ -29,5 +29,6 @@
       "systemCode": "hlig04",
       "name": "Subcommittee on Defense Intelligence and Overhead Architecture"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

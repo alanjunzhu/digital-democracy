@@ -3,5 +3,10 @@
   "name": "Europe Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsfa14"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsfa00",
+    "name": "Foreign Affairs Committee"
+  }
 }

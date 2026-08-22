@@ -3,5 +3,10 @@
   "name": "Communications and Technology Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hsif16"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hsif00",
+    "name": "Energy and Commerce Committee"
+  }
 }

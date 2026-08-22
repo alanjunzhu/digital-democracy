@@ -1,9 +1,10 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
-import ChamberBadge from '../../components/shared/ChamberBadge.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
-import type { CommitteeDetail } from '../../lib/types';
+import type { BillSummary, CommitteeDetail, CommitteeSummary } from '../../lib/types';
+import { getCommitteeWebUrl } from '../../../shared/congress-urls.mjs';
+import { getBillsByCommittee, mergeCommitteeBills } from '../../lib/committee-bills';
 
 export function getStaticPaths() {
   const committeesDir = join(process.cwd(), 'data', 'committees');
@@ -26,6 +27,42 @@ const { committeeId } = Astro.params;
 const dataPath = join(process.cwd(), 'data', 'committees', `${committeeId}.json`);
 const committee: CommitteeDetail = JSON.parse(readFileSync(dataPath, 'utf-8'));
 const base = import.meta.env.BASE_URL;
+
+const loadJSON = (relativePath: string) => {
+  const fullPath = join(process.cwd(), 'data', relativePath);
+  if (!existsSync(fullPath)) return null;
+  try {
+    return JSON.parse(readFileSync(fullPath, 'utf-8'));
+  } catch {
+    return null;
+  }
+};
+
+const committeesData = loadJSON('committees/index.json') || {};
+const committeeIndex: CommitteeSummary[] = committeesData.committees || [];
+const knownCommitteeCodes = new Set(committeeIndex.map(c => c.systemCode));
+
+// Subcommittees have no congress.gov profile of their own; their legislation is
+// listed under the parent committee there.
+const parentCode = committee.parent?.systemCode;
+const parent = parentCode ? committeeIndex.find(c => c.systemCode === parentCode) || null : null;
+// Derived rather than read from the record, so committee data written before
+// the URL format was corrected still links to a real page.
+const congressGovUrl =
+  getCommitteeWebUrl(committee.chamber, committee.systemCode, committee.name) ||
+  (parent ? getCommitteeWebUrl(parent.chamber, parent.systemCode, parent.name) : null);
+
+// Bill titles live in the bills index; committee records only store refs.
+const billsIndex: BillSummary[] = loadJSON('bills/index.json')?.bills || [];
+const billsById = new Map(billsIndex.map(b => [b.billId, b]));
+const referredBills = mergeCommitteeBills(
+  committee.bills,
+  getBillsByCommittee().get(committee.systemCode)
+).map(ref => ({
+  ...ref,
+  title: billsById.get(ref.billId)?.title || '',
+  hasPage: billsById.has(ref.billId),
+}));
 
 const chamberColor = (ch: string) => {
   if (ch === 'Senate') return 'bg-amber-100 text-amber-800';
@@ -52,11 +89,69 @@ const chamberColor = (ch: string) => {
         )}
         <span class="font-mono text-xs text-gray-400">{committee.systemCode}</span>
       </div>
-      <h1 class="text-2xl font-bold text-gray-900 mb-4">{committee.name}</h1>
+      <h1 class="text-2xl font-bold text-gray-900 mb-2">{committee.name}</h1>
 
-      <a href={committee.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline text-sm">
-        View on Congress.gov
-      </a>
+      {parent && (
+        <p class="text-sm text-gray-500 mb-3">
+          Subcommittee of{' '}
+          <a href={`${base}committees/${parent.systemCode}/`} class="text-blue-600 hover:underline">{parent.name}</a>
+        </p>
+      )}
+
+      <div class="flex flex-wrap gap-4 text-sm">
+        {congressGovUrl && (
+          <a href={congressGovUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+            {committee.isSubcommittee && parent ? 'Parent committee on Congress.gov' : 'View on Congress.gov'}
+          </a>
+        )}
+        {committee.officialWebsite && (
+          <a href={committee.officialWebsite} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+            Official website
+          </a>
+        )}
+      </div>
+    </div>
+
+    <!-- Legislation -->
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+      <h2 class="text-lg font-semibold text-gray-900 mb-1">
+        Legislation ({referredBills.length})
+      </h2>
+      <p class="text-xs text-gray-400 mb-3">
+        Measures referred to this committee in the {committeesData.congress ?? 119}th Congress, most recent activity first.
+      </p>
+      {referredBills.length === 0 ? (
+        <p class="text-sm text-gray-500">
+          No legislation from this Congress has been recorded for this committee yet.
+        </p>
+      ) : (
+        <div class="divide-y divide-gray-100">
+          {referredBills.map(bill => (
+            <div class="flex items-start gap-3 py-2">
+              {bill.hasPage ? (
+                <a href={`${base}bills/${bill.billId}/`} class="font-mono text-sm font-semibold text-blue-700 hover:underline whitespace-nowrap">
+                  {bill.type} {bill.number}
+                </a>
+              ) : bill.url ? (
+                <a href={bill.url} target="_blank" rel="noopener" class="font-mono text-sm font-semibold text-blue-700 hover:underline whitespace-nowrap">
+                  {bill.type} {bill.number}
+                </a>
+              ) : (
+                <span class="font-mono text-sm font-semibold text-gray-700 whitespace-nowrap">
+                  {bill.type} {bill.number}
+                </span>
+              )}
+              <div class="flex-1 min-w-0">
+                {bill.title && <p class="text-sm text-gray-900 line-clamp-2">{bill.title}</p>}
+                <div class="flex flex-wrap items-center gap-2 mt-0.5 text-xs text-gray-500">
+                  {bill.relationshipType && <span>{bill.relationshipType}</span>}
+                  {bill.actionDate && <span class="text-gray-400">{bill.actionDate}</span>}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
 
     <!-- Subcommittees -->
@@ -66,7 +161,16 @@ const chamberColor = (ch: string) => {
           Subcommittees ({committee.subcommittees.length})
         </h2>
         <div class="space-y-2">
-          {committee.subcommittees.map(sc => (
+          {committee.subcommittees.map(sc => knownCommitteeCodes.has(sc.systemCode) ? (
+            <a
+              href={`${base}committees/${sc.systemCode}/`}
+              class="flex items-center gap-3 py-2 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+              <span class="text-sm text-blue-700 hover:underline">{sc.name}</span>
+              <span class="font-mono text-xs text-gray-400">{sc.systemCode}</span>
+            </a>
+          ) : (
             <div class="flex items-center gap-3 py-2 border-b border-gray-100 last:border-0">
               <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
               <span class="text-sm text-gray-700">{sc.name}</span>

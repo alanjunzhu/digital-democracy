@@ -3,7 +3,7 @@
   "name": "Armed Services Committee",
   "chamber": "House",
   "committeeType": "Standing",
-  "url": "https://www.congress.gov/committee/house/hsas00",
+  "url": "https://www.congress.gov/committee/house-armed-services/hsas00",
   "subcommittees": [
     {
       "systemCode": "hsas03",
@@ -33,5 +33,6 @@
       "systemCode": "hsas02",
       "name": "Military Personnel Subcommittee"
     }
-  ]
+  ],
+  "isSubcommittee": false
 }

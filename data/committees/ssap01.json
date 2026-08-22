@@ -3,5 +3,10 @@
   "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Subcommittee",
   "chamber": "Senate",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/senate/ssap01"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "ssap00",
+    "name": "Appropriations Committee"
+  }
 }

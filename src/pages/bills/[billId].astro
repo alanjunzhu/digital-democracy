@@ -3,8 +3,10 @@ import Layout from '../../components/layout/Layout.astro';
 import ChamberBadge from '../../components/shared/ChamberBadge.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
-import type { BillDetail } from '../../lib/types';
+import type { BillDetail, CommitteeSummary } from '../../lib/types';
 import { getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
+import { buildCommitteeLookup, normalizeBillCommittees, resolveCommittee } from '../../lib/committees';
+import { getBillTextWebUrl, getBillWebUrl } from '../../../shared/congress-urls.mjs';
 
 export function getStaticPaths() {
   const billsDir = join(process.cwd(), 'data', 'bills');
@@ -51,19 +53,25 @@ try {
   }
 } catch {}
 
-// Cross-link: map committee names to system codes for linking
-let committeeLinks: Record<string, string> = {};
+// Cross-link committee referrals to committee pages. Resolved by systemCode
+// so a Senate referral cannot land on the same-named House committee.
+let committees: { name: string; committee: CommitteeSummary | null }[] = [];
 try {
   const committeesPath = join(process.cwd(), 'data', 'committees', 'index.json');
-  if (existsSync(committeesPath)) {
-    const committeesData = JSON.parse(readFileSync(committeesPath, 'utf-8'));
-    for (const c of committeesData.committees || []) {
-      if (c.name && c.systemCode) {
-        committeeLinks[c.name] = c.systemCode;
-      }
-    }
-  }
+  const committeeList: CommitteeSummary[] = existsSync(committeesPath)
+    ? JSON.parse(readFileSync(committeesPath, 'utf-8')).committees || []
+    : [];
+  const lookup = buildCommitteeLookup(committeeList);
+  committees = normalizeBillCommittees(bill.committees).map(ref => ({
+    name: ref.name,
+    committee: resolveCommittee(ref, lookup, bill.originChamber),
+  }));
 } catch {}
+
+// Built from congress/type/number rather than read from the stored record:
+// resolutions live under their own congress.gov path, not /house-bill/.
+const congressGovUrl = getBillWebUrl(bill.congress, bill.type, bill.number);
+const congressGovTextUrl = getBillTextWebUrl(bill.congress, bill.type, bill.number);
 ---
 
 <Layout title={`${bill.type} ${bill.number}`} description={bill.title}>
@@ -144,11 +152,13 @@ try {
       </div>
 
       <div class="flex gap-4 mt-4 text-sm">
-        <a href={bill.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
-          Congress.gov
-        </a>
-        {bill.textUrl && (
-          <a href={bill.textUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+        {congressGovUrl && (
+          <a href={congressGovUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+            Congress.gov
+          </a>
+        )}
+        {congressGovTextUrl && (
+          <a href={congressGovTextUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
             Full Text
           </a>
         )}
@@ -176,21 +186,21 @@ try {
       )}
 
       <!-- Committees -->
-      {bill.committees && bill.committees.length > 0 && (
+      {committees.length > 0 && (
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Committees</h2>
           <ul class="space-y-1 text-sm text-gray-700">
-            {bill.committees.map(c => {
-              const code = committeeLinks[c];
-              return (
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                  {code ? (
-                    <a href={`${base}committees/${code}/`} class="text-blue-600 hover:underline">{c}</a>
-                  ) : c}
-                </li>
-              );
-            })}
+            {committees.map(({ name, committee }) => (
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                {committee ? (
+                  <a href={`${base}committees/${committee.systemCode}/`} class="text-blue-600 hover:underline">{name}</a>
+                ) : name}
+                {committee?.chamber && (
+                  <span class="text-xs text-gray-400">{committee.chamber}</span>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
       )}

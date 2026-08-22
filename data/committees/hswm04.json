@@ -3,5 +3,10 @@
   "name": "Trade Subcommittee",
   "chamber": "House",
   "committeeType": "Subcommittee",
-  "url": "https://www.congress.gov/committee/house/hswm04"
+  "url": null,
+  "isSubcommittee": true,
+  "parent": {
+    "systemCode": "hswm00",
+    "name": "Ways and Means Committee"
+  }
 }
