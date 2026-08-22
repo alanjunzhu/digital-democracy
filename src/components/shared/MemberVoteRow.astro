@@ -1,0 +1,53 @@
+---
+interface Props {
+  vote: {
+    voteId: string;
+    rollCallNumber?: number;
+    date?: string;
+    question?: string;
+    billId?: string | null;
+    result?: string;
+    voteCast?: string;
+  };
+  base: string;
+  billLink: (billId: string) => { href: string; local: boolean };
+}
+
+const { vote: v, base, billLink } = Astro.props;
+const castLower = (v.voteCast || '').toLowerCase();
+const castColor = (castLower === 'yea' || castLower === 'aye')
+  ? 'bg-green-100 text-green-800'
+  : (castLower === 'nay' || castLower === 'no')
+  ? 'bg-red-100 text-red-800'
+  : 'bg-yellow-100 text-yellow-800';
+const bill = v.billId ? billLink(v.billId) : null;
+---
+
+<a href={`${base}votes/${v.voteId}/`} class="flex items-start gap-2 py-2 hover:bg-gray-50 -mx-2 px-2 rounded">
+  <div class="flex flex-col items-center min-w-[2.5rem]">
+    <span class="font-mono text-[10px] text-gray-500">#{v.rollCallNumber}</span>
+    <span class="text-[9px] text-gray-400">{v.date}</span>
+  </div>
+  <div class="flex-1 min-w-0">
+    <p class="text-xs text-gray-900 line-clamp-1">{v.question}</p>
+    <div class="flex items-center gap-2 mt-0.5">
+      {bill && (
+        bill.local ? (
+          <a href={bill.href} class="text-[10px] text-blue-600 font-mono">{v.billId}</a>
+        ) : (
+          <span class="text-[10px] text-blue-600 font-mono">{v.billId}</span>
+        )
+      )}
+      {v.result && (
+        <span class={`text-[10px] ${v.result === 'Passed' || v.result === 'Agreed to' ? 'text-green-600' : 'text-red-600'}`}>
+          {v.result}
+        </span>
+      )}
+    </div>
+  </div>
+  {v.voteCast && (
+    <span class={`inline-flex items-center rounded-full text-[10px] px-2 py-0.5 font-semibold whitespace-nowrap ${castColor}`}>
+      {v.voteCast}
+    </span>
+  )}
+</a>
