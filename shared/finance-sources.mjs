@@ -44,6 +44,37 @@ export function dedupeNameTokens(value) {
   return kept.join(' ');
 }
 
+/** Owner codes arrive in long and short forms from different sources. */
+const OWNER_LABELS = {
+  SP: 'Spouse',
+  SPOUSE: 'Spouse',
+  JT: 'Joint',
+  JOINT: 'Joint',
+  DC: 'Dependent child',
+  'DEPENDENT CHILD': 'Dependent child',
+  CHILD: 'Dependent child',
+  SELF: 'Self',
+};
+
+export function normalizeOwner(owner) {
+  const key = String(owner || '').trim().toUpperCase();
+  if (!key) return null;
+  return OWNER_LABELS[key] || null;
+}
+
+/**
+ * Sources word the same transaction differently: "Sale" against "Sale (Full)",
+ * "Purchase" against "Purchase (Partial)". Collapse to the family so one filing
+ * does not land twice.
+ */
+export function transactionFamily(type) {
+  const value = String(type || '').toLowerCase();
+  if (value.includes('purchase')) return 'purchase';
+  if (value.includes('sale')) return 'sale';
+  if (value.includes('exchange')) return 'exchange';
+  return value.trim();
+}
+
 export function tradeDedupeKey(trade) {
   const member = normalizeMemberName(trade.member);
   const date = normalizeFinanceDate(trade.transactionDate || trade.disclosureDate);
@@ -54,6 +85,15 @@ export function tradeDedupeKey(trade) {
 
   if (type === 'ptr filing' || type === 'annual disclosure') {
     return `${member}|${type}|${date}|${url}`;
+  }
+
+  // Two sources parsing the same filing describe one line item in their own
+  // words — CongressWatch says "Sale"/"Spouse" where Kadoa says
+  // "Sale (Full)"/"SP". When both cite the same document, the document plus the
+  // trade's own facts identify it; the wording must not split it in two.
+  if (url) {
+    const owner = normalizeOwner(trade.owner) || String(trade.owner || '').trim().toLowerCase();
+    return `${url}|${date}|${ticker}|${transactionFamily(trade.type)}|${amount}|${owner}`;
   }
 
   return `${member}|${date}|${ticker}|${type}|${amount}|${trade.chamber || ''}`;

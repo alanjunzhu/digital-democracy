@@ -2,6 +2,11 @@ name: Fetch Stock Prices
 
 # Prices and trade timing only — the fast subset of the weekly data run, so the
 # counterfactual charts can be refreshed without refetching members and bills.
+#
+# The push trigger exists because prices cannot be fetched from every
+# environment: agent sandboxes block outbound market-data hosts, and dispatching
+# a workflow needs a permission an integration token may not carry. Pushing the
+# price scripts is enough to make a runner do it.
 on:
   schedule:
     - cron: '0 5 * * 1'  # Weekly, Monday at 5am UTC
@@ -10,11 +15,20 @@ on:
       all_tickers:
         description: 'Cache every traded ticker, not just committee-overlap ones'
         type: boolean
-        default: false
+        default: true
       force:
         description: 'Refetch tickers whose cache is still fresh'
         type: boolean
         default: false
+  push:
+    paths:
+      - '.github/workflows/fetch-prices.yml'
+      - 'scripts/fetch-stock-prices.mjs'
+      - 'scripts/enrich-trade-timing.mjs'
+      - 'scripts/fetch-finances.mjs'
+      - 'shared/finance-sources.mjs'
+      - 'shared/price-cache.mjs'
+      - 'shared/stock-prices.mjs'
 
 permissions:
   contents: write
@@ -30,11 +44,14 @@ env:
 jobs:
   fetch-and-commit:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # ~1,700 tickers at the throttle the script uses, plus retries.
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v5
         with:
-          ref: main
+          # Commit back to whichever branch triggered this, so a feature branch
+          # can populate its own cache without touching main.
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - uses: actions/setup-node@v5
@@ -42,19 +59,27 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
+      # Trade parsing changes (dedupe rules, name normalisation) only reach the
+      # site through a refetch, and the price cache should be built from the
+      # cleaned trades rather than ahead of them. Needs no API key.
+      - name: Refresh finance records
+        run: node scripts/fetch-finances.mjs
 
+      # Scheduled and push runs take everything; only an explicit dispatch can
+      # narrow it, since a partial cache is what leaves charts blank.
       - name: Cache stock prices
         run: |
           node scripts/fetch-stock-prices.mjs \
-            ${{ inputs.all_tickers && '--all' || '' }} \
+            ${{ (github.event_name != 'workflow_dispatch' || inputs.all_tickers) && '--all' || '' }} \
             ${{ inputs.force && '--force' || '' }}
 
       - name: Enrich trade timing
         run: node scripts/enrich-trade-timing.mjs
 
       - name: Commit data changes
+        env:
+          DATA_BRANCH: ${{ github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          scripts/commit-data.sh "chore: update stock prices [$(date -u +%Y-%m-%d)]" data/prices/ data/finances/trade-timing.json
+          scripts/commit-data.sh "chore: update finances and stock prices [$(date -u +%Y-%m-%d)]" data/prices/ data/finances/

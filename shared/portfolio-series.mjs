@@ -28,26 +28,11 @@
  */
 
 import { rowOnOrBefore } from './stock-prices.mjs';
+import { normalizeOwner } from './finance-sources.mjs';
+
+export { normalizeOwner };
 
 export const BENCHMARK_LABEL = 'S&P 500';
-
-/** Owner codes arrive in long and short forms from different sources. */
-const OWNER_LABELS = {
-  SP: 'Spouse',
-  SPOUSE: 'Spouse',
-  JT: 'Joint',
-  JOINT: 'Joint',
-  DC: 'Dependent child',
-  'DEPENDENT CHILD': 'Dependent child',
-  CHILD: 'Dependent child',
-  SELF: 'Self',
-};
-
-export function normalizeOwner(owner) {
-  const key = String(owner || '').trim().toUpperCase();
-  if (!key) return null;
-  return OWNER_LABELS[key] || null;
-}
 
 /**
  * "$1,001 - $15,000" -> { min: 1001, max: 15000, mid: 8000.5 }
