@@ -138,7 +138,7 @@ export interface CommitteesIndex {
   committees: CommitteeSummary[];
 }
 
-// Vote types (House only — Senate not available in API v3)
+// Vote types (House Clerk XML + Senate LIS XML; both sessions)
 
 export interface VoteSummary {
   voteId: string;

@@ -14,6 +14,7 @@ import {
   normalizeBillType,
   ordinal,
   parentCommitteeCode,
+  parseLegislativeCitation,
 } from '../shared/congress-urls.mjs';
 
 test('bill types are normalized from every spelling the API and data use', () => {
@@ -76,6 +77,14 @@ test('bill ids and origin chambers follow the type', () => {
   assert.equal(getBillId('S', '24'), 's24');
   assert.equal(billOriginChamber('sjres'), 'Senate');
   assert.equal(billOriginChamber('hconres'), 'House');
+});
+
+test('legislative citations keep resolution types distinct from bills', () => {
+  assert.deepEqual(parseLegislativeCitation('S. Res. 817'), { billType: 'sres', billNumber: 817, billId: 'sres817' });
+  assert.deepEqual(parseLegislativeCitation('S. 900'), { billType: 's', billNumber: 900, billId: 's900' });
+  assert.deepEqual(parseLegislativeCitation('H.R. 1'), { billType: 'hr', billNumber: 1, billId: 'hr1' });
+  assert.deepEqual(parseLegislativeCitation('H. Res. 34'), { billType: 'hres', billNumber: 34, billId: 'hres34' });
+  assert.equal(parseLegislativeCitation('On the nomination'), null);
 });
 
 test('committee slugs match the congress.gov profile URLs', () => {

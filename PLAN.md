@@ -47,15 +47,105 @@ The Congress.gov API allows **5,000 requests/hour**. Our weekly fetch is designe
 
 | Data Type   | API Calls per Fetch | Strategy                           |
 |-------------|--------------------|------------------------------------|
-| Members     | ~550               | 1 paginated list + 548 detail      |
+| Members     | ~1,100             | 1 list + 548 detail + 548 sponsored-legislation |
 | Bills       | ~2,500             | 2 paginated pages + 500 × 5 sub-resources |
 | Committees  | ~700               | 1 call per chamber + detail and bills per committee |
-| Votes       | ~110               | 1 list page + ~100 vote details    |
-| **Total**   | **~3,860**         | Under the 5,000/hr limit           |
+| Votes       | 0 (Congress.gov)   | Clerk + Senate XML probes, no API key |
+| **Total**   | **~4,300**         | Under the 5,000/hr limit; sequential steps on Sunday |
 
 Bill lists are requested with `sort=updateDate+desc`. Without it the endpoint
 returns a congress's oldest measures first, so a capped fetch only ever sees
 bills introduced the week the congress convened.
+
+Member detail fetches also pull `/member/{id}/sponsored-legislation` (limit 50)
+so profiles are not limited to the 500 recently updated bills. That adds ~550
+calls; the Sunday job runs members, bills, and committees **sequentially** on
+one API key so they do not burst the same host.
+
+Votes do **not** use Congress.gov. House Clerk XML and Senate LIS XML are
+probed; finances use Stock Watcher S3 with House Clerk PTR XML as fallback.
+
+---
+
+## Member pages: votes, sponsored bills, finances
+
+These three joins were designed in Phase 5 but were incomplete in the stored
+data. This is the plan that closes them.
+
+### Voting record on the member page
+
+**Problem.** House pages worked. Senate pages showed "no voting record" even
+though `data/votes/` had hundreds of Senate roll calls. Senate XML stores LIS
+ids (`S428`). The matcher skipped any id longer than 3 characters and keyed on
+full state names (`alabama`) while the XML uses abbreviations (`AL`), so
+**zero** senators were written into `votes/by-member.json`. Vote detail pages
+linked to `/members/S428/`, which 404s. A House-only fallback also painted
+unrelated votes onto a member who was merely missing a by-member entry.
+
+**Plan.**
+
+1. Treat a bioguide id as `/^[A-Z]\d{6}$/`. Map LIS ids by last name + state
+   abbreviation (and the last two name tokens for "Van Hollen").
+2. Repair committed JSON with `scripts/repair-vote-records.mjs` (no API key)
+   and keep the same mapper in `fetch-votes.mjs` for the next scheduled run.
+3. Rebuild `votes/by-member.json` from the repaired files, skipping leftover
+   LIS ids.
+4. On the member page, read only that member's positions. Do not fall back to
+   the global vote list.
+5. Parse citations with `parseLegislativeCitation` so "S. Res. 817" is
+   `sres817`, not `s817`, and bill pages can join roll calls.
+
+### Sponsored legislation on the member page (and the bill/sponsor join)
+
+**Problem.** Member pages filtered `data/bills/index.json` (500 recently
+*updated* measures). About half the chamber never appeared as a sponsor.
+`sponsoredBills` on each member file was always `[]`. Bill pages linked the
+sponsor but did not show how that sponsor voted on the bill's roll calls.
+
+**Plan.**
+
+1. `fetch-members.mjs` requests `/member/{bioguideId}/sponsored-legislation`
+   (this congress, 50 most recent) and stores summaries on the member file.
+2. The member page prefers that list, overlaying richer fields from the 500
+   bill index when a `billId` is also a local page. Measures not in `data/bills/`
+   link out to congress.gov rather than a 404.
+3. The bill page, for each joined roll call, reads the vote file and shows
+   **Sponsor: Yea/Nay**.
+
+Until the next Sunday members fetch, profiles still use the 500-bill index.
+
+### Financial data on the member page
+
+**Problem.** House/Senate Stock Watcher S3 currently returns nothing useful
+(403). The fetch already falls back to House Clerk PTR XML, so 138 members have
+PDF filings with empty tickers. The profile UI treated those as stock trades
+(0 purchases, 0 unique stocks) and hid the section when `trades` was empty.
+Senate has no PTR bulk dump. `FEC_API_KEY` was passed in YAML but never read.
+
+**Plan.**
+
+1. Split PTR filings from ticker trades (`partitionFinanceTrades`). Show Clerk
+   PDF links on the member page even when there are no tickers.
+2. Keep conflict flags for ticker-level trades only (they need a sector).
+3. Drop `FEC_API_KEY` from the Sunday workflow. Do not invent an FEC client.
+4. When Stock Watcher S3 is reachable again, ticker trades light up without a
+   UI change. While it is closed, `fetch-finances.mjs` uses CongressWatch's
+   public `trades.json` (Clerk + Senate PTRs with tickers and bioguide ids).
+   Senate efdsearch is a form POST, not a bulk file — leave a direct client
+   until there is a stable dump.
+
+### Party alignment scores
+
+**Goal.** Show how often each member votes with their party majority, and how
+often roll calls split on party lines.
+
+**Plan.**
+
+1. `shared/party-alignment.mjs` scores a member against each vote's
+   `partyBreakdown` (Independents vs Democratic majority).
+2. Analytics page shows party-line rate, average alignment by party, and
+   House/Senate loyalist and least-aligned lists.
+3. Member pages show a party-alignment percentage next to the voting record.
 
 ---
 
@@ -211,12 +301,13 @@ bills introduced the week the congress convened.
 ```
 Weekly Cron (Sunday 2am UTC)
   │
-  ├── fetch-members.mjs ──→ data/members/*.json     (~550 API calls)
-  ├── fetch-bills.mjs ────→ data/bills/*.json        (~1,000 API calls)
-  ├── fetch-committees.mjs → data/committees/*.json   (~3 API calls)
-  └── fetch-votes.mjs ────→ data/votes/*.json         (~110 API calls)
+  ├── fetch-members.mjs ──→ data/members/*.json     (detail + sponsored legislation)
+  ├── fetch-bills.mjs ────→ data/bills/*.json        (sequential after members)
+  ├── fetch-committees.mjs → data/committees/*.json
+  ├── fetch-votes.mjs ────→ data/votes/*.json         (Clerk + Senate XML)
+  └── fetch-finances.mjs ─→ data/finances/by-member.json
   │
-  ├── git commit + push
+  ├── git commit + push (commit-data.sh, fetch-data concurrency group)
   │
   └── Triggers deploy.yml ──→ Astro build ──→ GitHub Pages
 ```

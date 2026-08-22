@@ -24,7 +24,7 @@ test('a failing request reports the failure without leaking the key', async () =
   globalThis.fetch = async () => new Response('nope', { status: 400, statusText: 'Bad Request' });
 
   try {
-    await assert.rejects(fetchWithRetry(url), err => {
+    await assert.rejects(fetchWithRetry(url, {}, 0), err => {
       assert.match(err.message, /HTTP 400/);
       assert.ok(!err.message.includes('super-secret'), `key leaked into: ${err.message}`);
       return true;

@@ -13,9 +13,13 @@ concurrency:
   group: fetch-data
   cancel-in-progress: false
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   fetch-and-commit:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v5
         with:
@@ -29,40 +33,28 @@ jobs:
 
       - run: npm ci
 
-      # Phase 1: Independent data sources run in parallel (background processes)
-      - name: "Fetch members, bills, committees (parallel)"
-        run: |
-          node scripts/fetch-members.mjs &
-          PID_MEMBERS=$!
-          node scripts/fetch-bills.mjs &
-          PID_BILLS=$!
-          node scripts/fetch-committees.mjs &
-          PID_COMMITTEES=$!
-
-          # Wait for all to finish, fail if any fail
-          FAILED=0
-          wait $PID_MEMBERS || { echo "::error::fetch-members failed"; FAILED=1; }
-          wait $PID_BILLS || { echo "::error::fetch-bills failed"; FAILED=1; }
-          wait $PID_COMMITTEES || { echo "::error::fetch-committees failed"; FAILED=1; }
-          exit $FAILED
+      # Sequential on one Congress.gov key so members/bills/committees do not
+      # burst ~50 concurrent sockets. Votes and finances use other hosts.
+      - name: Fetch members
+        run: node scripts/fetch-members.mjs
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
 
-      # Phase 2: Votes + finances depend on members/bills/committees data
-      - name: "Fetch votes and finances (parallel)"
-        run: |
-          node scripts/fetch-votes.mjs &
-          PID_VOTES=$!
-          node scripts/fetch-finances.mjs &
-          PID_FINANCES=$!
-
-          FAILED=0
-          wait $PID_VOTES || { echo "::error::fetch-votes failed"; FAILED=1; }
-          wait $PID_FINANCES || { echo "::error::fetch-finances failed"; FAILED=1; }
-          exit $FAILED
+      - name: Fetch bills
+        run: node scripts/fetch-bills.mjs
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
-          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+
+      - name: Fetch committees
+        run: node scripts/fetch-committees.mjs
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+
+      - name: Fetch votes
+        run: node scripts/fetch-votes.mjs
+
+      - name: Fetch finances
+        run: node scripts/fetch-finances.mjs
 
       - name: Commit data changes
         run: |

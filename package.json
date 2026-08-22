@@ -12,7 +12,10 @@
     "fetch:bills": "node scripts/fetch-bills.mjs",
     "fetch:committees": "node scripts/fetch-committees.mjs",
     "fetch:votes": "node scripts/fetch-votes.mjs",
-    "test": "node --test \"tests/**/*.test.mjs\""
+    "fetch:finances": "node scripts/fetch-finances.mjs",
+    "repair:votes": "node scripts/repair-vote-records.mjs",
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "typecheck": "tsc --noEmit --pretty false -p tsconfig.check.json"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",

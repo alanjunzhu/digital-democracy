@@ -18,6 +18,8 @@ import { readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { writeJSON, readJSON, getDataDir } from './lib/data-writer.mjs';
 import { batchFetchText } from './lib/api-client.mjs';
+import { parseLegislativeCitation } from '../shared/congress-urls.mjs';
+import { rebuildByMemberIndex } from '../shared/vote-member-index.mjs';
 
 const CONGRESS_NUMBER = 119;
 const SESSIONS = [
@@ -49,7 +51,75 @@ function extractAllTags(xml, tag) {
   return xml.match(regex) || [];
 }
 
-// ─── House Votes ───
+const STATE_ABBREV_BY_NAME = {
+  alabama: 'al', alaska: 'ak', arizona: 'az', arkansas: 'ar', california: 'ca',
+  colorado: 'co', connecticut: 'ct', delaware: 'de', florida: 'fl', georgia: 'ga',
+  hawaii: 'hi', idaho: 'id', illinois: 'il', indiana: 'in', iowa: 'ia',
+  kansas: 'ks', kentucky: 'ky', louisiana: 'la', maine: 'me', maryland: 'md',
+  massachusetts: 'ma', michigan: 'mi', minnesota: 'mn', mississippi: 'ms', missouri: 'mo',
+  montana: 'mt', nebraska: 'ne', nevada: 'nv', 'new hampshire': 'nh', 'new jersey': 'nj',
+  'new mexico': 'nm', 'new york': 'ny', 'north carolina': 'nc', 'north dakota': 'nd', ohio: 'oh',
+  oklahoma: 'ok', oregon: 'or', pennsylvania: 'pa', 'rhode island': 'ri', 'south carolina': 'sc',
+  'south dakota': 'sd', tennessee: 'tn', texas: 'tx', utah: 'ut', vermont: 'vt',
+  virginia: 'va', washington: 'wa', 'west virginia': 'wv', wisconsin: 'wi', wyoming: 'wy',
+};
+
+function foldName(value) {
+  return String(value || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .trim();
+}
+export function isBioguideId(id) {
+  return /^[A-Z]\d{6}$/i.test(String(id || ''));
+}
+
+/**
+ * Map "Last, State" keys so Senate LIS roll calls can be matched to members.
+ * Congress.gov stores full state names; Senate XML uses two-letter abbreviations.
+ */
+export function buildSenateNameLookup(membersIndex) {
+  const lookup = {};
+  for (const m of membersIndex || []) {
+    if (m.chamber !== 'Senate') continue;
+    const last = foldName(m.lastName);
+    if (!last || !m.bioguideId) continue;
+    const stateName = foldName(m.state);
+    const abbr = STATE_ABBREV_BY_NAME[stateName] || (stateName.length === 2 ? stateName : '');
+    const keys = new Set();
+    if (abbr) {
+      keys.add(`${last}_${abbr}`);
+      const lastWord = last.split(/\s+/).pop();
+      if (lastWord) keys.add(`${lastWord}_${abbr}`);
+    }
+    if (stateName) keys.add(`${last}_${stateName}`);
+    for (const key of keys) lookup[key] = m.bioguideId;
+  }
+  return lookup;
+}
+
+export function resolveSenateBioguide(memberVote, lookup) {
+  if (isBioguideId(memberVote?.bioguideId)) return memberVote.bioguideId;
+  const name = foldName(memberVote?.name);
+  const stateRaw = foldName(memberVote?.state);
+  const abbr = STATE_ABBREV_BY_NAME[stateRaw] || (stateRaw.length === 2 ? stateRaw : '');
+  const parts = name.split(/\s+/).filter(Boolean);
+  for (let n = 1; n <= Math.min(3, parts.length); n++) {
+    const last = parts.slice(-n).join(' ');
+    const id = (abbr && lookup[`${last}_${abbr}`]) || lookup[`${last}_${stateRaw}`];
+    if (id) return id;
+  }
+  return memberVote?.bioguideId || '';
+}
+
+function citationFromVoteText(...texts) {
+  for (const text of texts) {
+    const parsed = parseLegislativeCitation(text);
+    if (parsed) return parsed;
+  }
+  return null;
+}
 
 export function houseVoteUrl(year, rollCall) {
   const paddedRC = String(rollCall).padStart(3, '0');
@@ -153,18 +223,12 @@ function parseHouseVoteXML(xml, session, year) {
     }
   }
 
-  // Parse bill reference
-  let billType, billNumber, billId;
-  if (legNum) {
-    const billMatch = legNum.match(/(H\.\s*R\.|H\.?\s*Res\.|H\.\s*J\.\s*Res\.|H\.\s*Con\.\s*Res\.|S\.|S\.\s*Res\.|S\.\s*J\.\s*Res\.|S\.\s*Con\.\s*Res\.)\s*(\d+)/i);
-    if (billMatch) {
-      const rawType = billMatch[1].replace(/\s+/g, '').replace(/\./g, '').toLowerCase();
-      billNumber = parseInt(billMatch[2]);
-      const typeMap = { 'hr': 'hr', 'hres': 'hres', 'hjres': 'hjres', 'hconres': 'hconres', 's': 's', 'sres': 'sres', 'sjres': 'sjres', 'sconres': 'sconres' };
-      billType = typeMap[rawType] || rawType;
-      billId = `${billType}${billNumber}`;
-    }
-  }
+  // Parse bill reference. Try legis-num first, then the question, so
+  // "S. Res. 817" is stored as sres817 rather than s817.
+  const citation = citationFromVoteText(legNum, question);
+  const billType = citation?.billType;
+  const billNumber = citation?.billNumber;
+  const billId = citation?.billId;
 
   // Parse party totals
   const totalsXML = extractTag(xml, 'vote-totals') || '';
@@ -247,6 +311,7 @@ function parseSenateVoteXML(xml, session) {
   const result = extractTag(xml, 'vote_result_text') || extractTag(xml, 'vote_result') || '';
   const voteDate = extractTag(xml, 'vote_date') || '';
   const title = extractTag(xml, 'vote_title') || '';
+  const docName = extractTag(xml, 'document_name') || '';
 
   let date = '';
   if (voteDate) {
@@ -258,19 +323,10 @@ function parseSenateVoteXML(xml, session) {
     }
   }
 
-  // Bill reference
-  const docName = extractTag(xml, 'document_name') || '';
-  let billType, billNumber, billId;
-  if (docName) {
-    const billMatch = docName.match(/(H\.\s*R\.|S\.|H\.J\.Res\.|S\.J\.Res\.|H\.Con\.Res\.|S\.Con\.Res\.)\s*(\d+)/i);
-    if (billMatch) {
-      const rawType = billMatch[1].replace(/\s+/g, '').replace(/\./g, '').toLowerCase();
-      billNumber = parseInt(billMatch[2]);
-      const typeMap = { 'hr': 'hr', 's': 's', 'hjres': 'hjres', 'sjres': 'sjres', 'hconres': 'hconres', 'sconres': 'sconres' };
-      billType = typeMap[rawType] || rawType;
-      billId = `${billType}${billNumber}`;
-    }
-  }
+  const citation = citationFromVoteText(docName, title, question);
+  const billType = citation?.billType;
+  const billNumber = citation?.billNumber;
+  const billId = citation?.billId;
 
   // Parse counts
   const countXml = extractTag(xml, 'count') || xml;
@@ -331,27 +387,41 @@ function parseSenateVoteXML(xml, session) {
 // ─── Cross-reference Senate members with bioguide IDs ───
 
 function crossRefSenateMembers(votes, membersIndex) {
-  const lookup = {};
-  for (const m of membersIndex) {
-    if (m.chamber !== 'Senate') continue;
-    const key = `${m.lastName?.toLowerCase()}_${m.state?.toLowerCase()}`;
-    lookup[key] = m.bioguideId;
-  }
-
+  const lookup = buildSenateNameLookup(membersIndex);
   let matched = 0;
   for (const vote of votes) {
-    for (const mv of vote.memberVotes) {
-      if (mv.bioguideId && mv.bioguideId.length > 3) continue;
-      const lastName = mv.name.split(' ').pop()?.toLowerCase() || '';
-      const state = mv.state?.toLowerCase() || '';
-      const key = `${lastName}_${state}`;
-      if (lookup[key]) {
-        mv.bioguideId = lookup[key];
+    for (const mv of vote.memberVotes || []) {
+      const resolved = resolveSenateBioguide(mv, lookup);
+      if (resolved && resolved !== mv.bioguideId) {
+        mv.bioguideId = resolved;
         matched++;
+      } else if (isBioguideId(resolved)) {
+        mv.bioguideId = resolved;
       }
     }
   }
   return matched;
+}
+
+export function applyVoteRecordRepairs(vote, lookup) {
+  const next = { ...vote, memberVotes: (vote.memberVotes || []).map(mv => ({ ...mv })) };
+  if (vote.chamber === 'Senate') {
+    for (const mv of next.memberVotes) {
+      const resolved = resolveSenateBioguide(mv, lookup);
+      if (resolved) mv.bioguideId = resolved;
+    }
+  }
+  const citation = citationFromVoteText(vote.question);
+  if (citation) {
+    const currentType = String(vote.billType || '').toLowerCase();
+    const underTyped = Boolean(currentType) && citation.billType !== currentType && citation.billType.startsWith(currentType);
+    if (!vote.billId || vote.billId === citation.billId || underTyped) {
+      next.billType = citation.billType;
+      next.billNumber = citation.billNumber;
+      next.billId = citation.billId;
+    }
+  }
+  return next;
 }
 
 // ─── Topic inference ───
@@ -493,30 +563,14 @@ async function main() {
   });
 
   const summaries = [];
-  const byMember = {};
 
   for (const vote of allVotes) {
     const { memberVotes, ...summary } = vote;
     summaries.push(summary);
     writeJSON(`votes/${vote.voteId}.json`, vote);
-
-    for (const mv of memberVotes) {
-      const id = mv.bioguideId;
-      if (!id) continue;
-      if (!byMember[id]) byMember[id] = [];
-      byMember[id].push({
-        voteId: vote.voteId,
-        rollCallNumber: vote.rollCallNumber,
-        chamber: vote.chamber,
-        date: vote.date,
-        question: vote.question,
-        result: vote.result,
-        billId: vote.billId || null,
-        topic: vote.topic || null,
-        voteCast: mv.voteCast,
-      });
-    }
   }
+
+  const byMember = rebuildByMemberIndex(allVotes, { isBioguideId });
 
   writeJSON('votes/index.json', {
     lastUpdated: new Date().toISOString(),

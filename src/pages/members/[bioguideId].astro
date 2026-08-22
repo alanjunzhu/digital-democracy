@@ -6,6 +6,8 @@ import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
 import type { MemberDetail } from '../../lib/types';
+import { partitionFinanceTrades } from '../../../scripts/fetch-finances.mjs';
+import { scoreMemberPartyAlignment } from '../../lib/party-alignment';
 
 export function getStaticPaths() {
   const membersDir = join(process.cwd(), 'data', 'members');
@@ -33,16 +35,36 @@ const districtLabel = member.chamber === 'House' && member.district
   ? `, District ${member.district}`
   : '';
 
-// Cross-link: find bills sponsored by this member, with stage info
+function localBillExists(id: string) {
+  return existsSync(join(process.cwd(), 'data', 'bills', `${id}.json`));
+}
+
+function withStage(bills: any[]) {
+  return bills.map((b: any) => ({ ...b, stage: getBillStage(b.latestAction) }));
+}
+
+// Prefer the member's own sponsored-legislation list (filled by fetch-members).
+// Overlay the 500 recently-updated bills when we have a richer local record.
 let sponsoredBills: any[] = [];
 let billsByStage: Record<string, any[]> = {};
 try {
-  const billsIndex = JSON.parse(readFileSync(join(process.cwd(), 'data', 'bills', 'index.json'), 'utf-8'));
-  sponsoredBills = billsIndex.bills
-    .filter((b: any) => b.sponsor?.bioguideId === bioguideId)
-    .map((b: any) => ({ ...b, stage: getBillStage(b.latestAction) }));
+  const stored = Array.isArray(member.sponsoredBills) ? member.sponsoredBills : [];
+  let indexById: Record<string, any> = {};
+  const billsIndexPath = join(process.cwd(), 'data', 'bills', 'index.json');
+  if (existsSync(billsIndexPath)) {
+    const billsIndex = JSON.parse(readFileSync(billsIndexPath, 'utf-8'));
+    for (const b of billsIndex.bills || []) {
+      if (b.billId) indexById[b.billId] = b;
+    }
+  }
+  if (stored.length > 0) {
+    sponsoredBills = withStage(stored.map((b: any) => indexById[b.billId] ? { ...b, ...indexById[b.billId] } : b));
+  } else {
+    sponsoredBills = withStage(
+      Object.values(indexById).filter((b: any) => b.sponsor?.bioguideId === bioguideId)
+    );
+  }
 
-  // Group by stage
   for (const b of sponsoredBills) {
     if (!billsByStage[b.stage]) billsByStage[b.stage] = [];
     billsByStage[b.stage].push(b);
@@ -69,11 +91,25 @@ try {
       else if (cast === 'not voting') voteStats.notVoting++;
       else if (cast === 'present') voteStats.present++;
     }
-  } else if (member.chamber === 'House') {
-    // Fallback to general votes index if by-member doesn't exist yet
-    const votesIndex = JSON.parse(readFileSync(join(process.cwd(), 'data', 'votes', 'index.json'), 'utf-8'));
-    memberVotes = votesIndex.votes.slice(0, 20);
-    voteStats.total = memberVotes.length;
+  }
+} catch {}
+
+// Party alignment: join this member's votes to each roll call's party breakdown
+let partyAlignment: { comparable: number; withParty: number; againstParty: number; pct: number | null } = {
+  comparable: 0,
+  withParty: 0,
+  againstParty: 0,
+  pct: null,
+};
+try {
+  const votesIndexPath = join(process.cwd(), 'data', 'votes', 'index.json');
+  if (existsSync(votesIndexPath) && memberVotes.length > 0) {
+    const votesIndex = JSON.parse(readFileSync(votesIndexPath, 'utf-8'));
+    const breakdownById: Record<string, any> = {};
+    for (const v of votesIndex.votes || []) {
+      if (v.voteId && v.partyBreakdown) breakdownById[v.voteId] = v.partyBreakdown;
+    }
+    partyAlignment = scoreMemberPartyAlignment(memberVotes, breakdownById, member.party);
   }
 } catch {}
 
@@ -98,6 +134,7 @@ try {
 // Cross-link: financial data (stock trades + conflict analysis)
 let financeProfile: any = null;
 let stockTrades: any[] = [];
+let ptrFilings: any[] = [];
 let conflictFlags: any[] = [];
 let sectorBreakdown: any[] = [];
 try {
@@ -106,7 +143,9 @@ try {
     const financeData = JSON.parse(readFileSync(financePath, 'utf-8'));
     financeProfile = financeData.members?.[bioguideId];
     if (financeProfile) {
-      stockTrades = financeProfile.trades || [];
+      const partitioned = partitionFinanceTrades(financeProfile.trades || []);
+      stockTrades = partitioned.tickerTrades;
+      ptrFilings = partitioned.filings;
       conflictFlags = financeProfile.flags || [];
       sectorBreakdown = financeProfile.summary?.topSectors || [];
       // Override committees with finance-provided ones if available (more accurate)
@@ -233,6 +272,12 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
           <div class="text-xs text-gray-500 mt-1">Votes Cast</div>
         </div>
       )}
+      {partyAlignment.pct != null && (
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
+          <div class="text-2xl font-bold text-indigo-600">{partyAlignment.pct}%</div>
+          <div class="text-xs text-gray-500 mt-1">Party Alignment</div>
+        </div>
+      )}
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
         <div class="text-2xl font-bold text-green-600">{billsByStage['Signed into Law']?.length || 0}</div>
         <div class="text-xs text-gray-500 mt-1">Signed into Law</div>
@@ -322,15 +367,19 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
                   <span class="text-xs text-gray-400">({bills.length})</span>
                 </div>
                 <div class="space-y-1 pl-4 border-l-2 border-gray-100">
-                  {bills.slice(0, 10).map((b: any) => (
-                    <a href={`${base}bills/${b.billId}/`} class="flex items-start gap-3 py-2 hover:bg-gray-50 -mx-2 px-2 rounded">
+                  {bills.slice(0, 10).map((b: any) => {
+                    const local = localBillExists(b.billId);
+                    const href = local ? `${base}bills/${b.billId}/` : (b.url || `${base}bills/`);
+                    return (
+                    <a href={href} class="flex items-start gap-3 py-2 hover:bg-gray-50 -mx-2 px-2 rounded" target={local ? undefined : '_blank'} rel={local ? undefined : 'noopener'}>
                       <span class="font-mono text-sm font-semibold text-blue-700 whitespace-nowrap">{b.type} {b.number}</span>
                       <div class="flex-1 min-w-0">
                         <p class="text-sm text-gray-900 line-clamp-1">{b.title}</p>
-                        <p class="text-xs text-gray-400">{b.introducedDate}{b.latestActionDate ? ` · Last action: ${b.latestActionDate}` : ''}</p>
+                        <p class="text-xs text-gray-400">{b.introducedDate}{b.latestActionDate ? ` · Last action: ${b.latestActionDate}` : ''}{local ? '' : ' · Congress.gov'}</p>
                       </div>
                     </a>
-                  ))}
+                    );
+                  })}
                   {bills.length > 10 && (
                     <p class="text-xs text-gray-400 pl-2">...and {bills.length - 10} more</p>
                   )}
@@ -362,11 +411,35 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
             <div class="text-xl font-bold text-red-600">{voteStats.nay}</div>
             <div class="text-xs text-gray-500">Voted Nay</div>
           </div>
-          <div class="text-center p-3 bg-yellow-50 rounded-lg">
-            <div class="text-xl font-bold text-yellow-600">{voteStats.notVoting + voteStats.present}</div>
-            <div class="text-xs text-gray-500">Not Voting / Present</div>
-          </div>
+          {partyAlignment.pct != null ? (
+            <div class="text-center p-3 bg-indigo-50 rounded-lg">
+              <div class="text-xl font-bold text-indigo-600">{partyAlignment.pct}%</div>
+              <div class="text-xs text-gray-500">With Party ({partyAlignment.withParty}/{partyAlignment.comparable})</div>
+            </div>
+          ) : (
+            <div class="text-center p-3 bg-yellow-50 rounded-lg">
+              <div class="text-xl font-bold text-yellow-600">{voteStats.notVoting + voteStats.present}</div>
+              <div class="text-xs text-gray-500">Not Voting / Present</div>
+            </div>
+          )}
         </div>
+
+        {partyAlignment.pct != null && (
+          <div class="mb-6 p-3 bg-indigo-50/60 border border-indigo-100 rounded-lg">
+            <div class="flex items-center justify-between gap-3 mb-2">
+              <span class="text-sm font-medium text-indigo-900">Votes with party majority</span>
+              <span class="text-sm font-semibold text-indigo-800">{partyAlignment.pct}%</span>
+            </div>
+            <div class="h-2.5 bg-white rounded-full overflow-hidden flex">
+              <div class="bg-indigo-500 h-full" style={`width: ${partyAlignment.pct}%`}></div>
+              <div class="bg-amber-400 h-full" style={`width: ${100 - (partyAlignment.pct || 0)}%`}></div>
+            </div>
+            <div class="flex justify-between text-[10px] text-indigo-700/70 mt-1">
+              <span>{partyAlignment.withParty} with party</span>
+              <span>{partyAlignment.againstParty} against</span>
+            </div>
+          </div>
+        )}
 
         {/* Yea/Nay ratio bar */}
         {(voteStats.yea + voteStats.nay) > 0 && (
@@ -451,7 +524,11 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
                           <p class="text-xs text-gray-900 line-clamp-1">{v.question}</p>
                           <div class="flex items-center gap-2 mt-0.5">
                             {v.billId && (
-                              <span class="text-[10px] text-blue-600 font-mono">{v.billId}</span>
+                              localBillExists(v.billId) ? (
+                                <a href={`${base}bills/${v.billId}/`} class="text-[10px] text-blue-600 font-mono">{v.billId}</a>
+                              ) : (
+                                <span class="text-[10px] text-blue-600 font-mono">{v.billId}</span>
+                              )
                             )}
                             {v.result && (
                               <span class={`text-[10px] ${v.result === 'Passed' || v.result === 'Agreed to' ? 'text-green-600' : 'text-red-600'}`}>
@@ -509,7 +586,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
     )}
 
     <!-- Financial Transparency & Potential Conflicts -->
-    {stockTrades.length > 0 && (
+    {(stockTrades.length > 0 || ptrFilings.length > 0) && (
       <div class="space-y-6 mt-6">
         {/* Conflict Alert Banner */}
         {conflictFlags.length > 0 && (
@@ -553,8 +630,34 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-4">Financial Disclosures & Trading</h2>
 
+          {ptrFilings.length > 0 && (
+            <div class={stockTrades.length > 0 ? 'mb-5' : ''}>
+              <h3 class="text-sm font-semibold text-gray-700 mb-2">STOCK Act periodic transaction reports</h3>
+              <p class="text-xs text-gray-500 mb-3">
+                House Stock Watcher is not publishing ticker-level trades right now, so these are the official Clerk PDFs. Senate filings have no bulk dump while Senate Stock Watcher is closed.
+              </p>
+              <ul class="space-y-1.5">
+                {ptrFilings.slice(0, 20).map((f: any) => (
+                  <li class="flex items-center justify-between gap-3 text-sm py-1.5 border-b border-gray-50">
+                    <span class="text-gray-600">{f.disclosureDate || f.transactionDate}</span>
+                    {f.url ? (
+                      <a href={f.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline text-xs">
+                        View PTR PDF
+                      </a>
+                    ) : (
+                      <span class="text-xs text-gray-400">No PDF link</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+              {ptrFilings.length > 20 && (
+                <p class="text-xs text-gray-400 mt-2">Showing 20 of {ptrFilings.length} filings</p>
+              )}
+            </div>
+          )}
+
           {/* Stats Row */}
-          {(() => {
+          {stockTrades.length > 0 && (() => {
             const purchases = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('purchase')).length;
             const sales = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('sale')).length;
             const tickers = [...new Set(stockTrades.map((t: any) => t.ticker).filter(Boolean))];
@@ -678,6 +781,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
           })()}
 
           {/* Transaction Table */}
+          {stockTrades.length > 0 && (
           <details class="group">
             <summary class="cursor-pointer text-sm font-medium text-blue-600 hover:text-blue-800 mb-3 select-none">
               View all {stockTrades.length} transactions
@@ -730,9 +834,12 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
               )}
             </div>
           </details>
+          )}
 
           <p class="text-[10px] text-gray-400 mt-3 border-t border-gray-100 pt-3">
-            Source: House/Senate Stock Watcher. Data from financial disclosure reports required by the STOCK Act.
+            Sources: CongressWatch public PTR aggregate (Clerk + Senate filings)
+            {stockTrades.some((t: any) => t.source === 'congresswatch') ? '' : ''}
+            {stockTrades.length > 0 ? '; ticker trades when available' : ''}.
             Red highlights indicate trades in sectors related to this member's committee assignments — this does not necessarily indicate wrongdoing.
           </p>
         </div>
