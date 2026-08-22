@@ -7,24 +7,35 @@
  *   data/bills/{billId}.json       - Individual bill details
  */
 
+import { pathToFileURL } from 'url';
 import { fetchJSON, paginateCongressAPI, getCongressAPIBaseUrl, batchProcess } from './lib/api-client.mjs';
-import { writeJSON } from './lib/data-writer.mjs';
+import { readJSON, writeJSON } from './lib/data-writer.mjs';
+import {
+  billOriginChamber,
+  formatBillType,
+  getBillId,
+  getBillTextWebUrl,
+  getBillWebUrl,
+  normalizeBillType,
+} from '../shared/congress-urls.mjs';
 
 const API_KEY = process.env.CONGRESS_API_KEY;
 const CONGRESS_NUMBER = 119;
 const MAX_BILLS = 500;
-
-if (!API_KEY) {
-  console.error('Error: CONGRESS_API_KEY environment variable is required.');
-  process.exit(1);
-}
 
 async function fetchRecentBills() {
   console.log(`Fetching bills from Congress.gov API (Congress ${CONGRESS_NUMBER})...`);
   const baseUrl = `${getCongressAPIBaseUrl()}/bill/${CONGRESS_NUMBER}`;
   const allBills = [];
 
-  for await (const page of paginateCongressAPI(baseUrl, API_KEY, { limit: 250, maxPages: 2 })) {
+  // Without an explicit sort the endpoint returns the congress's oldest bills
+  // first, which fills the site with measures introduced the week the congress
+  // convened. Sort by update date so we get bills with current activity.
+  for await (const page of paginateCongressAPI(baseUrl, API_KEY, {
+    limit: 250,
+    maxPages: Math.ceil(MAX_BILLS / 250),
+    params: { sort: 'updateDate+desc' },
+  })) {
     const bills = page.bills || [];
     allBills.push(...bills);
     console.log(`  Fetched ${allBills.length} bills so far...`);
@@ -34,24 +45,11 @@ async function fetchRecentBills() {
   return allBills.slice(0, MAX_BILLS);
 }
 
-function normalizeBillType(type) {
-  const map = { hr: 'hr', s: 's', hjres: 'hjres', sjres: 'sjres', hconres: 'hconres', sconres: 'sconres', hres: 'hres', sres: 'sres' };
-  return map[type.toLowerCase()] || type.toLowerCase();
-}
-
-function formatBillType(type) {
-  const map = {
-    hr: 'H.R.', s: 'S.', hjres: 'H.J.Res.', sjres: 'S.J.Res.',
-    hconres: 'H.Con.Res.', sconres: 'S.Con.Res.', hres: 'H.Res.', sres: 'S.Res.'
-  };
-  return map[type.toLowerCase()] || type.toUpperCase();
-}
-
-function normalizeBill(bill, detail, actions, extraData) {
+export function normalizeBill(bill, detail, actions, extraData) {
   const type = normalizeBillType(bill.type);
   const num = bill.number;
-  const billId = `${type}${num}`;
-  const originChamber = type.startsWith('s') ? 'Senate' : 'House';
+  const billId = getBillId(type, num);
+  const originChamber = billOriginChamber(type);
 
   const sponsor = detail?.sponsors?.[0];
   const latestAction = bill.latestAction || detail?.latestAction;
@@ -59,7 +57,7 @@ function normalizeBill(bill, detail, actions, extraData) {
   const summary = {
     congress: CONGRESS_NUMBER,
     type: formatBillType(type),
-    number: num,
+    number: Number(num),
     billId,
     title: detail?.title || bill.title || '',
     introducedDate: detail?.introducedDate || bill.introducedDate || '',
@@ -71,9 +69,10 @@ function normalizeBill(bill, detail, actions, extraData) {
     } : undefined,
     latestAction: latestAction?.text || '',
     latestActionDate: latestAction?.actionDate || '',
+    updateDate: detail?.updateDate || bill.updateDate || '',
     originChamber,
     policyArea: detail?.policyArea?.name || '',
-    url: `https://www.congress.gov/bill/${CONGRESS_NUMBER}th-congress/${originChamber.toLowerCase()}-bill/${num}`,
+    url: getBillWebUrl(CONGRESS_NUMBER, type, num),
   };
 
   // Extract summaries
@@ -89,11 +88,7 @@ function normalizeBill(bill, detail, actions, extraData) {
     ? legislativeSubjects.map(s => s.name || s).filter(Boolean)
     : [];
 
-  // Extract committees
-  const committeesData = extraData?.committees?.committees || detail?.committees || [];
-  const committeeNames = Array.isArray(committeesData)
-    ? committeesData.map(c => c.name || c.committee?.name).filter(Boolean)
-    : [];
+  const committees = normalizeBillCommittees(extraData?.committees?.committees || detail?.committees);
 
   const cosponsorsCount = typeof detail?.cosponsors === 'number'
     ? detail.cosponsors
@@ -103,17 +98,51 @@ function normalizeBill(bill, detail, actions, extraData) {
     ...summary,
     summary: summaryText,
     cosponsors: cosponsorsCount,
-    committees: committeeNames,
+    committees,
     subjects: subjectNames,
     actions: (actions || []).map(a => ({
       date: a.actionDate || '',
       text: a.text || '',
       chamber: a.actionCode?.startsWith('H') ? 'House' : a.actionCode?.startsWith('S') ? 'Senate' : undefined,
     })).slice(0, 20),
-    textUrl: `https://www.congress.gov/bill/${CONGRESS_NUMBER}th-congress/${originChamber.toLowerCase()}-bill/${num}/text`,
+    textUrl: getBillTextWebUrl(CONGRESS_NUMBER, type, num),
   };
 
   return { summary, detail: billDetail };
+}
+
+/**
+ * Keep each referral's systemCode and chamber, not just its name. Names like
+ * "Judiciary Committee" exist in both chambers, so a name on its own cannot be
+ * linked to the right committee.
+ */
+export function normalizeBillCommittees(committeesData) {
+  if (!Array.isArray(committeesData)) return [];
+
+  const seen = new Set();
+  const committees = [];
+
+  for (const entry of committeesData) {
+    const committee = entry?.committee || entry;
+    const name = committee?.name || '';
+    const systemCode = committee?.systemCode || '';
+    if (!name || seen.has(systemCode || name)) continue;
+    seen.add(systemCode || name);
+
+    const activities = Array.isArray(committee.activities)
+      ? committee.activities.map(a => ({ name: a.name || '', date: a.date || '' })).filter(a => a.name)
+      : [];
+
+    committees.push({
+      name,
+      systemCode,
+      chamber: committee.chamber || '',
+      type: committee.type || '',
+      activities: activities.length > 0 ? activities : undefined,
+    });
+  }
+
+  return committees;
 }
 
 /**
@@ -146,6 +175,11 @@ async function fetchBillAllData(congress, type, num) {
 async function main() {
   console.log('=== Fetching Congress Bills ===\n');
   const startTime = Date.now();
+
+  if (!API_KEY) {
+    console.error('Error: CONGRESS_API_KEY environment variable is required.');
+    process.exit(1);
+  }
 
   const bills = await fetchRecentBills();
   console.log(`\nFetching details for ${bills.length} bills (batched, 5 concurrent)...`);
@@ -190,15 +224,30 @@ async function main() {
   writeJSON('bills/index.json', index);
 
   writeJSON('meta/last-updated.json', {
-    members: undefined,
+    ...(readJSON('meta/last-updated.json') || {}),
     bills: new Date().toISOString(),
   });
 
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
   console.log(`\nDone! Wrote ${summaries.length} bill files + index in ${elapsed}s.`);
+  logActivityRange(summaries);
 }
 
-main().catch(err => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+/**
+ * Print the span of activity covered by the fetch. A run that only covers the
+ * first weeks of the congress means the list endpoint came back in the wrong
+ * order, which is easy to miss without this line in the job log.
+ */
+function logActivityRange(summaries) {
+  const dates = summaries.map(s => s.latestActionDate).filter(Boolean).sort();
+  if (dates.length === 0) return;
+  const months = new Set(dates.map(d => d.slice(0, 7)));
+  console.log(`Latest action dates: ${dates[0]} to ${dates[dates.length - 1]} (${months.size} distinct months).`);
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch(err => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  });
+}
