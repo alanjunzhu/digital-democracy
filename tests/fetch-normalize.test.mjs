@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
 import { normalizeBill, normalizeBillCommittees } from '../scripts/fetch-bills.mjs';
-import { extractOfficialWebsite, normalizeCommitteeBills } from '../scripts/fetch-committees.mjs';
+import { billsWindowStart, extractOfficialWebsite, normalizeCommitteeBills } from '../scripts/fetch-committees.mjs';
 
 test('a resolution is normalized with its own congress.gov URLs', () => {
   const { summary, detail } = normalizeBill(
@@ -101,6 +101,12 @@ test('committee legislation reads the alternate response shapes', () => {
   assert.deepEqual(camel.map(b => b.billId), ['s6']);
 
   assert.deepEqual(normalizeCommitteeBills([null, {}, { 'committee-bills': {} }], 119), []);
+});
+
+test('the committee bills window stays recent but never predates the congress', () => {
+  // A year into the congress the window rolls; earlier than that it is pinned.
+  assert.equal(billsWindowStart(Date.parse('2026-08-22T00:00:00Z')), '2025-08-22T00:00:00Z');
+  assert.equal(billsWindowStart(Date.parse('2025-06-01T00:00:00Z')), '2025-01-03T00:00:00Z');
 });
 
 test('only a real website is treated as the committee website', () => {

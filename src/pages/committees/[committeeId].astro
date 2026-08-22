@@ -38,7 +38,8 @@ const loadJSON = (relativePath: string) => {
   }
 };
 
-const committeeIndex: CommitteeSummary[] = loadJSON('committees/index.json')?.committees || [];
+const committeesData = loadJSON('committees/index.json') || {};
+const committeeIndex: CommitteeSummary[] = committeesData.committees || [];
 const knownCommitteeCodes = new Set(committeeIndex.map(c => c.systemCode));
 
 // Subcommittees have no congress.gov profile of their own; their legislation is
@@ -113,9 +114,12 @@ const chamberColor = (ch: string) => {
 
     <!-- Legislation -->
     <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-      <h2 class="text-lg font-semibold text-gray-900 mb-3">
+      <h2 class="text-lg font-semibold text-gray-900 mb-1">
         Legislation ({referredBills.length})
       </h2>
+      <p class="text-xs text-gray-400 mb-3">
+        Measures referred to this committee in the {committeesData.congress ?? 119}th Congress, most recent activity first.
+      </p>
       {referredBills.length === 0 ? (
         <p class="text-sm text-gray-500">
           No legislation from this Congress has been recorded for this committee yet.

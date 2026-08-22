@@ -24,10 +24,19 @@ import {
 const API_KEY = process.env.CONGRESS_API_KEY;
 const CONGRESS_NUMBER = 119;
 
-// The bills endpoint spans every congress a committee has ever existed for, so
-// results are filtered by update date and then by congress.
-const CONGRESS_START = '2025-01-03T00:00:00Z';
+// The bills endpoint spans every congress a committee has ever existed for and
+// takes no sort parameter, so results are narrowed to a recent window of update
+// dates, filtered to the current congress, and ordered locally. A window keeps
+// the response recent whichever way the API happens to order it.
+const CONGRESS_START = Date.parse('2025-01-03T00:00:00Z');
+const WINDOW_DAYS = 365;
 const MAX_BILLS_PER_COMMITTEE = 250;
+const MAX_BILL_PAGES = 4;
+
+export function billsWindowStart(now = Date.now()) {
+  const windowStart = now - WINDOW_DAYS * 24 * 60 * 60 * 1000;
+  return new Date(Math.max(windowStart, CONGRESS_START)).toISOString().replace(/\.\d{3}Z$/, 'Z');
+}
 
 async function fetchCommitteesByChamber(chamber) {
   console.log(`Fetching ${chamber} committees...`);
@@ -88,12 +97,10 @@ async function fetchCommitteeBills(chamber, systemCode) {
   const pages = [];
 
   try {
-    // This endpoint takes no sort parameter, so it is narrowed by update date
-    // and ordered locally.
     for await (const page of paginateCongressAPI(baseUrl, API_KEY, {
       limit: 250,
-      maxPages: 2,
-      params: { fromDateTime: CONGRESS_START },
+      maxPages: MAX_BILL_PAGES,
+      params: { fromDateTime: billsWindowStart() },
     })) {
       pages.push(page);
     }
