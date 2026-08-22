@@ -60,6 +60,16 @@ export function mergeFinanceTrades(...lists) {
   return merged;
 }
 
+export function tradeDisclosureUrl(trade) {
+  return trade?.url || trade?.ptr_link || trade?.doc_url || null;
+}
+
+export function tickerQuoteUrl(ticker) {
+  const symbol = String(ticker || '').trim().toUpperCase();
+  if (!symbol || symbol === '--') return null;
+  return `https://finance.yahoo.com/quote/${encodeURIComponent(symbol)}`;
+}
+
 export function mapKadoaTrade(row, filer) {
   const chamber = filer?.chamber === 'senate' ? 'Senate' : 'House';
   return {

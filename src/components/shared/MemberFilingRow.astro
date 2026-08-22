@@ -1,0 +1,30 @@
+---
+interface Props {
+  filing: {
+    disclosureDate?: string;
+    transactionDate?: string;
+    type?: string;
+    url?: string;
+    source?: string;
+  };
+}
+
+const { filing: f } = Astro.props;
+---
+
+<div class="flex items-center justify-between gap-3 py-2 border-b border-gray-50 last:border-0">
+  <div class="min-w-0">
+    <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+      <span class="text-sm text-gray-700">{f.disclosureDate || f.transactionDate || '—'}</span>
+      <span class="text-xs text-gray-500">{f.type || 'Filing'}</span>
+      {f.source && <span class="text-[10px] text-gray-400">({f.source})</span>}
+    </div>
+  </div>
+  {f.url ? (
+    <a href={f.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline text-xs whitespace-nowrap">
+      View PDF
+    </a>
+  ) : (
+    <span class="text-xs text-gray-400 whitespace-nowrap">No PDF link</span>
+  )}
+</div>

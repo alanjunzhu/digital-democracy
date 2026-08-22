@@ -3,6 +3,10 @@ import Layout from '../../components/layout/Layout.astro';
 import PartyBadge from '../../components/shared/PartyBadge.astro';
 import ChamberBadge from '../../components/shared/ChamberBadge.astro';
 import MemberVoteRow from '../../components/shared/MemberVoteRow.astro';
+import MemberTradeRow from '../../components/shared/MemberTradeRow.astro';
+import MemberFilingRow from '../../components/shared/MemberFilingRow.astro';
+import ExpandableTradeList from '../../components/shared/ExpandableTradeList.astro';
+import { tickerQuoteUrl } from '../../../shared/finance-sources.mjs';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
@@ -168,6 +172,26 @@ try {
     }
   }
 } catch {}
+
+const tradesBySector: Record<string, any[]> = {};
+for (const t of stockTrades) {
+  const sector = t.sector || 'Other';
+  if (!tradesBySector[sector]) tradesBySector[sector] = [];
+  tradesBySector[sector].push(t);
+}
+const sectorTradeOrder = Object.keys(tradesBySector).sort(
+  (a, b) => (tradesBySector[b]?.length || 0) - (tradesBySector[a]?.length || 0)
+);
+
+const tradesByTicker: Record<string, any[]> = {};
+for (const t of stockTrades) {
+  if (!t.ticker || t.ticker === '--') continue;
+  if (!tradesByTicker[t.ticker]) tradesByTicker[t.ticker] = [];
+  tradesByTicker[t.ticker].push(t);
+}
+const topTickers = Object.entries(tradesByTicker)
+  .sort(([, a], [, b]) => b.length - a.length)
+  .slice(0, 15);
 
 // Group votes by topic for categorized display
 let votesByTopic: Record<string, any[]> = {};
@@ -631,26 +655,30 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
               <p class="text-xs text-gray-500 mb-3">
                 Periodic transaction reports (PTRs) and annual financial disclosures from the House Clerk and Senate eFD system.
               </p>
-              <ul class="space-y-1.5">
-                {ptrFilings.slice(0, 20).map((f: any) => (
-                  <li class="flex items-center justify-between gap-3 text-sm py-1.5 border-b border-gray-50">
-                    <div class="min-w-0">
-                      <span class="text-gray-600">{f.disclosureDate || f.transactionDate}</span>
-                      <span class="text-xs text-gray-400 ml-2">{f.type || 'Filing'}</span>
-                    </div>
-                    {f.url ? (
-                      <a href={f.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline text-xs whitespace-nowrap">
-                        View PDF
-                      </a>
-                    ) : (
-                      <span class="text-xs text-gray-400">No PDF link</span>
-                    )}
-                  </li>
+              <div class="space-y-0.5">
+                {ptrFilings.slice(0, 10).map((f: any) => (
+                  <MemberFilingRow filing={f} />
                 ))}
-              </ul>
-              {ptrFilings.length > 20 && (
-                <p class="text-xs text-gray-400 mt-2">Showing 20 of {ptrFilings.length} filings</p>
-              )}
+                {ptrFilings.length > 10 && (
+                  <details class="group">
+                    <summary class="cursor-pointer text-[10px] text-blue-600 hover:text-blue-800 pl-1 py-1 select-none">
+                      Show {ptrFilings.length - 10} more filings
+                    </summary>
+                    <div class="space-y-0.5 pt-1 border-l-2 border-gray-100 pl-2">
+                      {ptrFilings.slice(10).map((f: any) => (
+                        <MemberFilingRow filing={f} />
+                      ))}
+                    </div>
+                  </details>
+                )}
+              </div>
+            </div>
+          )}
+
+          {stockTrades.length > 0 && (
+            <div class="mb-5">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2">Recent stock trades</h3>
+              <ExpandableTradeList trades={stockTrades} previewCount={10} moreLabel="trades" />
             </div>
           )}
 
@@ -681,36 +709,42 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
             );
           })()}
 
-          {/* Sector Breakdown with Committee Overlap Highlighting */}
-          {sectorBreakdown.length > 0 && (
+          {/* Sector Breakdown with expandable trade lists */}
+          {sectorTradeOrder.length > 0 && (
             <div class="mb-5">
               <h3 class="text-sm font-semibold text-gray-700 mb-2">Trading by Sector</h3>
               <div class="space-y-2">
-                {sectorBreakdown.map((s: any) => {
-                  const isOverlap = financeProfile?.committeeSectors?.includes(s.sector);
+                {sectorTradeOrder.map((sector) => {
+                  const trades = tradesBySector[sector] || [];
+                  const purchases = trades.filter((t: any) => (t.type || '').toLowerCase().includes('purchase')).length;
+                  const sales = trades.filter((t: any) => (t.type || '').toLowerCase().includes('sale')).length;
+                  const isOverlap = financeProfile?.committeeSectors?.includes(sector);
                   return (
-                    <div class={`flex items-center gap-3 p-2.5 rounded-lg ${isOverlap ? 'bg-red-50 border border-red-200' : 'bg-gray-50'}`}>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center gap-2">
-                          <span class={`text-sm font-medium ${isOverlap ? 'text-red-800' : 'text-gray-800'}`}>{s.sector}</span>
-                          {isOverlap && (
-                            <span class="inline-flex items-center text-[9px] px-1.5 py-0.5 rounded bg-red-200 text-red-800 font-semibold uppercase">
-                              Committee Overlap
-                            </span>
-                          )}
+                    <details class={`rounded-lg border ${isOverlap ? 'border-red-200 bg-red-50/40' : 'border-gray-200 bg-gray-50/50'}`}>
+                      <summary class="cursor-pointer list-none px-3 py-2.5 select-none">
+                        <div class="flex items-center gap-3">
+                          <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 flex-wrap">
+                              <span class={`text-sm font-medium ${isOverlap ? 'text-red-800' : 'text-gray-800'}`}>{sector}</span>
+                              <span class="text-xs text-gray-500">({trades.length} trades)</span>
+                              {isOverlap && (
+                                <span class="inline-flex items-center text-[9px] px-1.5 py-0.5 rounded bg-red-200 text-red-800 font-semibold uppercase">
+                                  Committee Overlap
+                                </span>
+                              )}
+                            </div>
+                            <div class="flex gap-3 mt-1 text-xs text-gray-500">
+                              <span class="text-green-600">{purchases} buy</span>
+                              <span class="text-red-600">{sales} sell</span>
+                            </div>
+                          </div>
+                          <span class="text-[10px] text-blue-600 shrink-0">Expand trades</span>
                         </div>
-                        <div class="flex gap-3 mt-1 text-xs text-gray-500">
-                          <span>{s.total} trades</span>
-                          <span class="text-green-600">{s.purchases} buy</span>
-                          <span class="text-red-600">{s.sales} sell</span>
-                        </div>
+                      </summary>
+                      <div class="px-3 pb-3 border-t border-gray-200/80">
+                        <ExpandableTradeList trades={trades} previewCount={8} moreLabel={`${sector} trades`} highlightSector={isOverlap} />
                       </div>
-                      {/* Mini bar */}
-                      <div class="w-24 h-3 bg-gray-200 rounded-full overflow-hidden flex">
-                        <div class="bg-green-500 h-full" style={`width: ${s.total > 0 ? (s.purchases / s.total * 100).toFixed(0) : 0}%`}></div>
-                        <div class="bg-red-500 h-full" style={`width: ${s.total > 0 ? (s.sales / s.total * 100).toFixed(0) : 0}%`}></div>
-                      </div>
-                    </div>
+                    </details>
                   );
                 })}
               </div>
@@ -745,93 +779,95 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
             </div>
           )}
 
-          {/* Top Tickers */}
-          {(() => {
-            const tickerCount = {} as any;
-            const tickerSector = {} as any;
-            for (const t of stockTrades) {
-              if (t.ticker && t.ticker !== '--') {
-                tickerCount[t.ticker] = (tickerCount[t.ticker] || 0) + 1;
-                if (t.sector) tickerSector[t.ticker] = t.sector;
-              }
-            }
-            const topTickers = Object.entries(tickerCount)
-              .sort(([, a], [, b]) => (b as number) - (a as number))
-              .slice(0, 15);
-            return topTickers.length > 0 && (
-              <div class="mb-5">
-                <h3 class="text-sm font-semibold text-gray-700 mb-2">Most Traded Stocks</h3>
-                <div class="flex flex-wrap gap-1.5">
-                  {topTickers.map(([ticker, count]) => {
-                    const sector = tickerSector[ticker];
-                    const isOverlap = sector && financeProfile?.committeeSectors?.includes(sector);
-                    return (
-                      <span class={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full font-mono ${isOverlap ? 'bg-red-100 text-red-800 ring-1 ring-red-300' : 'bg-blue-50 text-blue-700'}`}>
-                        {ticker}
-                        <span class="opacity-60">({count})</span>
-                        {isOverlap && <span class="text-red-400 text-[9px]">!</span>}
-                      </span>
-                    );
-                  })}
-                </div>
+          {/* Top Tickers — expandable trade lists with quote links */}
+          {topTickers.length > 0 && (
+            <div class="mb-5">
+              <h3 class="text-sm font-semibold text-gray-700 mb-2">Most Traded Stocks</h3>
+              <div class="space-y-2">
+                {topTickers.map(([ticker, trades]) => {
+                  const sector = trades[0]?.sector;
+                  const isOverlap = sector && financeProfile?.committeeSectors?.includes(sector);
+                  const quoteUrl = tickerQuoteUrl(ticker);
+                  return (
+                    <details class={`rounded-lg border ${isOverlap ? 'border-red-200 bg-red-50/30' : 'border-gray-200'}`}>
+                      <summary class="cursor-pointer list-none px-3 py-2 select-none">
+                        <div class="flex items-center gap-2 flex-wrap">
+                          <span class="font-mono text-sm font-semibold text-blue-700">{ticker}</span>
+                          <span class="text-xs text-gray-500">({trades.length} trades)</span>
+                          {isOverlap && <span class="text-red-500 text-[10px] font-medium">committee overlap</span>}
+                          <span class="text-[10px] text-blue-600 ml-auto">Expand trades</span>
+                        </div>
+                      </summary>
+                      <div class="px-3 pb-3 border-t border-gray-100">
+                        {quoteUrl && (
+                          <a href={quoteUrl} target="_blank" rel="noopener" class="inline-block text-[10px] text-blue-600 hover:underline mb-2">
+                            View {ticker} quote
+                          </a>
+                        )}
+                        <ExpandableTradeList trades={trades} previewCount={5} moreLabel={`${ticker} trades`} highlightSector={!!isOverlap} />
+                      </div>
+                    </details>
+                  );
+                })}
               </div>
-            );
-          })()}
-
-          {/* Transaction Table */}
-          {stockTrades.length > 0 && (
-          <details class="group">
-            <summary class="cursor-pointer text-sm font-medium text-blue-600 hover:text-blue-800 mb-3 select-none">
-              View all {stockTrades.length} transactions
-            </summary>
-            <div class="overflow-x-auto">
-              <table class="w-full text-xs">
-                <thead>
-                  <tr class="border-b border-gray-200 text-gray-500">
-                    <th class="text-left py-2 font-medium">Date</th>
-                    <th class="text-left py-2 font-medium">Ticker</th>
-                    <th class="text-left py-2 font-medium">Asset</th>
-                    <th class="text-left py-2 font-medium">Sector</th>
-                    <th class="text-left py-2 font-medium">Type</th>
-                    <th class="text-right py-2 font-medium">Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {stockTrades.slice(0, 50).map((t: any) => {
-                    const typeColor = (t.type || '').toLowerCase().includes('purchase')
-                      ? 'text-green-700 bg-green-50'
-                      : (t.type || '').toLowerCase().includes('sale')
-                      ? 'text-red-700 bg-red-50'
-                      : 'text-gray-700 bg-gray-50';
-                    const isOverlap = t.sector && financeProfile?.committeeSectors?.includes(t.sector);
-                    return (
-                      <tr class={`border-b border-gray-50 ${isOverlap ? 'bg-red-50/50' : 'hover:bg-gray-50'}`}>
-                        <td class="py-1.5 text-gray-500 whitespace-nowrap">{t.transactionDate}</td>
-                        <td class="py-1.5 font-mono font-semibold text-blue-700">{t.ticker || '—'}</td>
-                        <td class="py-1.5 text-gray-700 max-w-[180px] truncate">{t.assetDescription}</td>
-                        <td class="py-1.5">
-                          {t.sector ? (
-                            <span class={`inline-flex text-[10px] px-1.5 py-0.5 rounded ${isOverlap ? 'bg-red-100 text-red-700 font-medium' : 'bg-gray-100 text-gray-600'}`}>
-                              {t.sector}{isOverlap ? ' !' : ''}
-                            </span>
-                          ) : (
-                            <span class="text-gray-300">—</span>
-                          )}
-                        </td>
-                        <td class="py-1.5">
-                          <span class={`inline-flex rounded text-[10px] px-1.5 py-0.5 font-medium ${typeColor}`}>{t.type}</span>
-                        </td>
-                        <td class="py-1.5 text-right text-gray-600 whitespace-nowrap">{t.amount}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-              {stockTrades.length > 50 && (
-                <p class="text-xs text-gray-400 mt-2">Showing 50 of {stockTrades.length} transactions</p>
-              )}
             </div>
-          </details>
+          )}
+
+          {stockTrades.length > 0 && (
+            <details class="group mb-2">
+              <summary class="cursor-pointer text-sm font-medium text-blue-600 hover:text-blue-800 select-none">
+                View full transaction table ({stockTrades.length})
+              </summary>
+              <div class="overflow-x-auto mt-3">
+                <table class="w-full text-xs">
+                  <thead>
+                    <tr class="border-b border-gray-200 text-gray-500">
+                      <th class="text-left py-2 font-medium">Date</th>
+                      <th class="text-left py-2 font-medium">Ticker</th>
+                      <th class="text-left py-2 font-medium">Asset</th>
+                      <th class="text-left py-2 font-medium">Type</th>
+                      <th class="text-right py-2 font-medium">Amount</th>
+                      <th class="text-right py-2 font-medium">Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {stockTrades.map((t: any) => {
+                      const quoteUrl = tickerQuoteUrl(t.ticker);
+                      const disclosureUrl = t.url || null;
+                      const typeColor = (t.type || '').toLowerCase().includes('purchase')
+                        ? 'text-green-700 bg-green-50'
+                        : (t.type || '').toLowerCase().includes('sale')
+                        ? 'text-red-700 bg-red-50'
+                        : 'text-gray-700 bg-gray-50';
+                      return (
+                        <tr class="border-b border-gray-50 hover:bg-gray-50">
+                          <td class="py-1.5 text-gray-500 whitespace-nowrap">{t.transactionDate}</td>
+                          <td class="py-1.5 font-mono font-semibold">
+                            {quoteUrl ? (
+                              <a href={quoteUrl} target="_blank" rel="noopener" class="text-blue-700 hover:underline">{t.ticker || '—'}</a>
+                            ) : (
+                              <span class="text-blue-700">{t.ticker || '—'}</span>
+                            )}
+                          </td>
+                          <td class="py-1.5 text-gray-700 max-w-[180px] truncate">{t.assetDescription}</td>
+                          <td class="py-1.5">
+                            <span class={`inline-flex rounded text-[10px] px-1.5 py-0.5 font-medium ${typeColor}`}>{t.type}</span>
+                          </td>
+                          <td class="py-1.5 text-right text-gray-600 whitespace-nowrap">{t.amount}</td>
+                          <td class="py-1.5 text-right whitespace-nowrap">
+                            {disclosureUrl ? (
+                              <a href={disclosureUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">Filing</a>
+                            ) : (
+                              <span class="text-gray-300">—</span>
+                            )}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </details>
           )}
 
           <p class="text-[10px] text-gray-400 mt-3 border-t border-gray-100 pt-3">
