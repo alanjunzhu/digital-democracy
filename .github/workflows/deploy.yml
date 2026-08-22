@@ -27,6 +27,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Run tests
+        run: npm test
       - name: List data files
         run: ls data/members/ | head -10 && ls data/members/ | wc -l
       - name: Build Astro site
