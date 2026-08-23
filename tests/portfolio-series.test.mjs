@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   buildPortfolioSeries,
   buildCongressPortfolioSeries,
+  defaultHighlightIds,
   flagExceptionalMembers,
   normalizeOwner,
   parseAmountRange,
@@ -255,9 +256,9 @@ test('one member selling cannot close another member\'s shares of the same ticke
 test('the Congress chart compares cash, all trades, the index, and committee trades', () => {
   const result = buildCongressPortfolioSeries(
     [
-      { bioguideId: 'A', ticker: 'WIN', type: 'Purchase', transactionDate: '2025-01-02', amount: '$1,001 - $15,000', committeeOverlap: false },
-      { bioguideId: 'B', ticker: 'WIN', type: 'Purchase', transactionDate: '2025-01-02', amount: '$1,001 - $15,000', committeeOverlap: true },
-      { bioguideId: 'A', ticker: 'WIN', type: 'Sale (Full)', transactionDate: '2025-02-03', amount: '$15,001 - $50,000', committeeOverlap: false },
+      { bioguideId: 'A', ticker: 'WIN', type: 'Purchase', transactionDate: '2025-01-02', amount: '$1,001 - $15,000', committeeOverlap: false, chamber: 'House', party: 'Democratic' },
+      { bioguideId: 'B', ticker: 'WIN', type: 'Purchase', transactionDate: '2025-01-02', amount: '$1,001 - $15,000', committeeOverlap: true, chamber: 'Senate', party: 'Republican' },
+      { bioguideId: 'A', ticker: 'WIN', type: 'Sale (Full)', transactionDate: '2025-02-03', amount: '$15,001 - $50,000', committeeOverlap: false, chamber: 'House', party: 'Democratic' },
     ],
     lookup({ SPY, WIN: WINNER }),
     { names: { A: 'Alpha, Alice', B: 'Beta, Bob' } },
@@ -284,6 +285,8 @@ test('the Congress chart compares cash, all trades, the index, and committee tra
   const byId = Object.fromEntries(result.members.map((m) => [m.bioguideId, m]));
   assert.equal(byId.A.name, 'Alice Alpha');
   assert.equal(byId.B.name, 'Bob Beta');
+  assert.equal(byId.A.chamber, 'House');
+  assert.equal(byId.B.chamber, 'Senate');
   assert.equal(byId.A.plot.length, result.dates.length);
   assert.ok(Math.abs(byId.A.returnPct) < 0.01);
   assert.ok(Math.abs(byId.B.returnPct - 200) < 0.01);
@@ -311,6 +314,34 @@ test('a losing pack is not highlighted just for being the least bad', () => {
     { benchmarkReturnPct: 20 },
   );
   assert.equal(flagged.some((m) => m.exceptional), false);
+});
+
+test('default highlights are the top returns that beat the market', () => {
+  const members = [5, 8, 10, 12, 15, 22, 28, 40, 50, 81, 88, 103, 306].map((returnPct, i) => ({
+    bioguideId: `M${i}`,
+    returnPct,
+  }));
+  const ids = defaultHighlightIds(members, { benchmarkReturnPct: 20, limit: 10 });
+  // Eight beat 20%; the cap only bites when more than `limit` beat the market.
+  assert.deepEqual(ids, ['M12', 'M11', 'M10', 'M9', 'M8', 'M7', 'M6', 'M5']);
+  const capped = defaultHighlightIds(
+    Array.from({ length: 20 }, (_, i) => ({ bioguideId: `T${i}`, returnPct: i * 3 })),
+    { benchmarkReturnPct: 20, limit: 10 },
+  );
+  assert.equal(capped.length, 10);
+  assert.deepEqual(capped, ['T19', 'T18', 'T17', 'T16', 'T15', 'T14', 'T13', 'T12', 'T11', 'T10']);
+  const tukey = flagExceptionalMembers(members, { benchmarkReturnPct: 20 }).filter((m) => m.exceptional);
+  assert.equal(tukey.length, 1);
+  assert.ok(ids.includes(tukey[0].bioguideId));
+});
+
+test('default highlights fall back to top overall when nobody beats the market', () => {
+  const members = [-40, -30, -20, -10, 2, 5].map((returnPct, i) => ({
+    bioguideId: `L${i}`,
+    returnPct,
+  }));
+  const ids = defaultHighlightIds(members, { benchmarkReturnPct: 20, limit: 3 });
+  assert.deepEqual(ids, ['L5', 'L4', 'L3']);
 });
 
 test('skipping the follower omits disclosure-date purchases', () => {

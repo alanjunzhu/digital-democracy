@@ -323,6 +323,8 @@ export interface CongressPortfolio {
 export interface CongressMemberLine {
   bioguideId: string;
   name: string;
+  chamber?: string;
+  party?: string;
   /** Growth per dollar invested, aligned to the chart dates. */
   plot: number[];
   returnPct: number | null;
