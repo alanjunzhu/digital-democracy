@@ -2,6 +2,7 @@
 import Layout from '../../components/layout/Layout.astro';
 import FinanceDashboard from '../../components/interactive/FinanceDashboard';
 import TradeTimingExplorer from '../../components/interactive/TradeTimingExplorer';
+import CongressPortfolioChart from '../../components/interactive/CongressPortfolioChart';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import {
@@ -14,6 +15,8 @@ import {
 import { buildSuspiciousTradeCandidates } from '../../../shared/trade-timing.mjs';
 import { createTimingAttacher } from '../../../shared/timing-precompute.mjs';
 import { loadDataJSON } from '../../../shared/data-loader.mjs';
+import { buildCongressPortfolioSeries, BENCHMARK_LABEL } from '../../../shared/portfolio-series.mjs';
+import { createPriceCacheReader, decodePriceSeries, BENCHMARK_TICKER } from '../../../shared/price-cache.mjs';
 
 function loadJSON(path: string) {
   const fullPath = join(process.cwd(), 'data', path);
@@ -60,6 +63,23 @@ const attachTiming = createTimingAttacher(loadDataJSON);
 const timingCandidates = financeData
   ? buildSuspiciousTradeCandidates(financeData, { limit: 15, billsBySponsor }).map(attachTiming)
   : [];
+
+// Aggregate counterfactual: all disclosed purchases vs S&P 500 vs cash vs
+// committee-overlap trades. Prices come from the build-time cache.
+let congressPortfolio: any = null;
+if (financeData && trades.length > 0) {
+  const readPriceCache = createPriceCacheReader(loadDataJSON);
+  const decoded = new Map<string, any>();
+  const getSeries = (ticker: string) => {
+    if (!decoded.has(ticker)) decoded.set(ticker, decodePriceSeries(readPriceCache(ticker)));
+    const rows = decoded.get(ticker);
+    return rows?.length ? rows : null;
+  };
+  const built = buildCongressPortfolioSeries(trades, getSeries, {
+    benchmarkTicker: BENCHMARK_TICKER,
+  });
+  if (built.ok) congressPortfolio = built;
+}
 ---
 
 <Layout
@@ -71,7 +91,9 @@ const timingCandidates = financeData
       <h1 class="text-3xl font-bold text-gray-900">Congressional Stock Trading</h1>
       <p class="text-gray-500 mt-1 max-w-3xl">
         Aggregate trading activity and individual disclosures across Congress.
-        Trades highlighted in red overlap with sectors related to a member&apos;s committee assignments —
+        The chart below compares holding cash, trading every disclosed purchase, putting
+        the same money in the S&amp;P 500, and trading only in sectors a member&apos;s
+        committee oversees. Trades highlighted in red are that committee overlap —
         a signal worth scrutiny, not proof of wrongdoing.
       </p>
     </div>
@@ -83,6 +105,16 @@ const timingCandidates = financeData
       </div>
     ) : (
       <>
+        {congressPortfolio && (
+          <section class="mb-8">
+            <CongressPortfolioChart
+              portfolio={congressPortfolio}
+              benchmarkLabel={BENCHMARK_LABEL}
+              client:load
+            />
+          </section>
+        )}
+
         <section class="mb-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">Trade timing insights</h2>
           <p class="text-xs text-gray-500 mb-4 max-w-3xl">

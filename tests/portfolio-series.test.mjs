@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   buildPortfolioSeries,
+  buildCongressPortfolioSeries,
   normalizeOwner,
   parseAmountRange,
 } from '../shared/portfolio-series.mjs';
@@ -230,4 +231,77 @@ test('the chart starts at the first purchase, not an earlier sale', () => {
   // The earlier sale is unrepresentable, not un-pricable.
   assert.equal(result.skipped.unmatchedSales, 1);
   assert.equal(result.skipped.outsideBenchmark, 0);
+});
+
+test('one member selling cannot close another member\'s shares of the same ticker', () => {
+  const result = buildPortfolioSeries(
+    [
+      { bioguideId: 'A', ticker: 'WIN', type: 'Purchase', transactionDate: '2025-01-02', amount: '$1,001 - $15,000' },
+      { bioguideId: 'B', ticker: 'WIN', type: 'Purchase', transactionDate: '2025-01-02', amount: '$1,001 - $15,000' },
+      // A sale several times larger than A's lot — pooled, this would wipe B too.
+      { bioguideId: 'A', ticker: 'WIN', type: 'Sale (Full)', transactionDate: '2025-02-03', amount: '$15,001 - $50,000' },
+    ],
+    lookup({ SPY, WIN: WINNER }),
+  );
+
+  const mid = 8000.5;
+  // A sold at cost and sits in cash; B still holds WIN through the triple.
+  assert.ok(Math.abs(result.summary.endMember - (mid + mid * 3)) < 0.01);
+  // The benchmark is untouched by the sale.
+  assert.ok(Math.abs(result.summary.endBenchmark - mid * 2 * 1.1) < 0.01);
+});
+
+test('the Congress chart compares cash, all trades, the index, and committee trades', () => {
+  const result = buildCongressPortfolioSeries(
+    [
+      { bioguideId: 'A', ticker: 'WIN', type: 'Purchase', transactionDate: '2025-01-02', amount: '$1,001 - $15,000', committeeOverlap: false },
+      { bioguideId: 'B', ticker: 'WIN', type: 'Purchase', transactionDate: '2025-01-02', amount: '$1,001 - $15,000', committeeOverlap: true },
+      { bioguideId: 'A', ticker: 'WIN', type: 'Sale (Full)', transactionDate: '2025-02-03', amount: '$15,001 - $50,000', committeeOverlap: false },
+    ],
+    lookup({ SPY, WIN: WINNER }),
+  );
+
+  assert.equal(result.ok, true);
+  const mid = 8000.5;
+  // All-trades book: A's cash + B's tripled WIN.
+  assert.ok(Math.abs(result.summary.endAll - (mid + mid * 3)) < 0.01);
+  // Committee book is only B, who never sold.
+  assert.ok(Math.abs(result.summary.endCommittee - mid * 3) < 0.01);
+  assert.ok(Math.abs(result.summary.committeeReturnPct - 200) < 0.01);
+  // S&P is matched to all-trades cash flows: both bought on Jan 2, SPY +10%.
+  assert.ok(Math.abs(result.summary.endBenchmark - mid * 2 * 1.1) < 0.01);
+  assert.equal(result.summary.cashReturnPct, 0);
+  assert.equal(result.counts.purchases, 2);
+  assert.equal(result.counts.overlapPurchases, 1);
+  assert.equal(result.counts.members, 2);
+  assert.equal(result.counts.overlapMembers, 1);
+  // No 13k trade dots on this chart — markers stay off the payload.
+  assert.equal(result.markers, undefined);
+});
+
+test('skipping the follower omits disclosure-date purchases', () => {
+  const withFollower = buildPortfolioSeries(
+    [{
+      ticker: 'WIN',
+      type: 'Purchase',
+      transactionDate: '2025-01-02',
+      disclosureDate: '2025-03-03',
+      amount: '$1,001 - $15,000',
+    }],
+    lookup({ SPY, WIN: WINNER }),
+  );
+  const without = buildPortfolioSeries(
+    [{
+      ticker: 'WIN',
+      type: 'Purchase',
+      transactionDate: '2025-01-02',
+      disclosureDate: '2025-03-03',
+      amount: '$1,001 - $15,000',
+    }],
+    lookup({ SPY, WIN: WINNER }),
+    { includeFollower: false },
+  );
+
+  assert.ok(withFollower.summary.endFollower > 0);
+  assert.equal(without.summary.endFollower, 0);
 });

@@ -1,9 +1,14 @@
 /**
- * Member-level portfolio counterfactual.
+ * Portfolio counterfactuals — one member, or Congress as a whole.
  *
- * Answers: if you had mirrored this member's disclosed stock purchases, how
+ * Member-level: if you had mirrored this member's disclosed stock purchases, how
  * would you have done against buying the S&P 500 with the same money on the same
  * days, or against not investing it at all?
+ *
+ * Congress-level: the same question, pooled across every disclosed purchase,
+ * with a second line that keeps only the trades in a sector the member's
+ * committee oversees. Holdings are isolated per member, so one person's sale
+ * cannot close someone else's shares of the same ticker.
  *
  * The model, and why:
  *
@@ -86,9 +91,10 @@ function priceAt(series, date) {
  * @param getSeries   ticker -> [{ date, close }] ascending, or null
  * @param options.benchmarkTicker  symbol backing the index line
  * @param options.maxPoints        downsample the output to at most this many dates
+ * @param options.includeFollower  repeat purchases on disclosure dates (member charts)
  */
 export function buildPortfolioSeries(trades, getSeries, options = {}) {
-  const { benchmarkTicker = 'SPY', maxPoints = 260 } = options;
+  const { benchmarkTicker = 'SPY', maxPoints = 260, includeFollower = true } = options;
 
   const benchmarkSeries = getSeries(benchmarkTicker) || [];
   if (!benchmarkSeries.length) {
@@ -173,12 +179,14 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
       if (pricedByBenchmark && entry.sale) skipped.unmatchedSales++;
       else skipped.outsideBenchmark++;
     }
-    // A filing dated before the trade it reports is bad upstream data; fall back
-    // to the transaction date rather than letting the follower act early.
-    const disclosed = entry.trade.disclosureDate && entry.trade.disclosureDate >= entry.trade.transactionDate
-      ? entry.trade.disclosureDate
-      : entry.trade.transactionDate;
-    if (!addEvent(disclosed, { kind: 'follower', entry })) followerSkipped++;
+    if (includeFollower) {
+      // A filing dated before the trade it reports is bad upstream data; fall back
+      // to the transaction date rather than letting the follower act early.
+      const disclosed = entry.trade.disclosureDate && entry.trade.disclosureDate >= entry.trade.transactionDate
+        ? entry.trade.disclosureDate
+        : entry.trade.transactionDate;
+      if (!addEvent(disclosed, { kind: 'follower', entry })) followerSkipped++;
+    }
   }
 
   // Valuing holdings by scanning each price series per day is quadratic, and a
@@ -225,12 +233,14 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
     const price = priceAt(entry.series, date);
     if (price == null || price <= 0) return 0;
     const qty = entry.amount.mid / price;
-    book.holdings.set(entry.trade.ticker, (book.holdings.get(entry.trade.ticker) || 0) + qty);
+    const lots = lotMap(book, entry.trade);
+    lots.set(entry.trade.ticker, (lots.get(entry.trade.ticker) || 0) + qty);
     return entry.amount.mid;
   }
 
   function applySale(book, entry, date, countUnmatched) {
-    const held = book.holdings.get(entry.trade.ticker) || 0;
+    const lots = lotMap(book, entry.trade);
+    const held = lots.get(entry.trade.ticker) || 0;
     if (held <= 0) {
       if (countUnmatched) skipped.unmatchedSales++;
       return;
@@ -238,16 +248,20 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
     const price = priceAt(entry.series, date);
     if (price == null || price <= 0) return;
     const qty = Math.min(held, entry.amount.mid / price);
-    book.holdings.set(entry.trade.ticker, held - qty);
+    const remaining = held - qty;
+    if (remaining <= 0) lots.delete(entry.trade.ticker);
+    else lots.set(entry.trade.ticker, remaining);
     book.cash += qty * price;
   }
 
   function bookValue(book, i) {
     let total = book.cash;
-    for (const [ticker, qty] of book.holdings) {
-      if (qty <= 0) continue;
-      const price = alignedPrices.get(ticker)?.[i];
-      if (Number.isFinite(price)) total += qty * price;
+    for (const lots of book.holdings.values()) {
+      for (const [ticker, qty] of lots) {
+        if (qty <= 0) continue;
+        const price = alignedPrices.get(ticker)?.[i];
+        if (Number.isFinite(price)) total += qty * price;
+      }
     }
     return total;
   }
@@ -290,6 +304,7 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
           amountMid: entry.amount.mid,
           amountLabel: entry.trade.amount || '',
           owner: normalizeOwner(entry.trade.owner),
+          bioguideId: entry.trade.bioguideId || null,
           sector: entry.trade.sector || null,
           committeeOverlap: entry.trade.committeeOverlap === true,
           disclosureDate: entry.trade.disclosureDate || null,
@@ -337,12 +352,28 @@ export function buildPortfolioSeries(trades, getSeries, options = {}) {
 }
 
 /**
+ * Holdings are a map of owner → ticker → quantity. The owner key is the
+ * bioguide id when present, so pooling every member's trades into one book
+ * cannot let one sale close another member's shares of the same ticker. A
+ * single-member chart has one owner (or a blank key) and behaves as before.
+ */
+function lotMap(book, trade) {
+  const owner = trade.bioguideId || '';
+  let lots = book.holdings.get(owner);
+  if (!lots) {
+    lots = new Map();
+    book.holdings.set(owner, lots);
+  }
+  return lots;
+}
+
+/**
  * Keep every event date plus an even sample of the rest — a plain stride would
  * drop the days the trade markers sit on.
  */
 function downsample(series, maxPoints) {
   const total = series.dates.length;
-  if (total <= maxPoints) return series;
+  if (!Number.isFinite(maxPoints) || total <= maxPoints) return series;
 
   const stride = Math.ceil(total / maxPoints);
   const keep = new Set([0, total - 1]);
@@ -350,15 +381,25 @@ function downsample(series, maxPoints) {
 
   const indices = [...keep].sort((a, b) => a - b);
   const pick = (arr) => indices.map((i) => arr[i]);
+  const out = {};
+  for (const [key, value] of Object.entries(series)) {
+    out[key] = Array.isArray(value) ? pick(value) : value;
+  }
+  return out;
+}
 
-  return {
-    dates: pick(series.dates),
-    member: pick(series.member),
-    benchmark: pick(series.benchmark),
-    cash: pick(series.cash),
-    follower: pick(series.follower),
-    followerCash: pick(series.followerCash),
-  };
+/** Paint a shorter series onto a longer calendar, holding the last value. */
+function overlaySeries(dates, source, key) {
+  const values = new Array(dates.length).fill(0);
+  if (!source?.ok || !source.dates?.length) return values;
+  const idx = new Map(source.dates.map((d, i) => [d, i]));
+  let last = 0;
+  for (let i = 0; i < dates.length; i++) {
+    const j = idx.get(dates[i]);
+    if (j != null) last = source[key][j];
+    values[i] = last;
+  }
+  return values;
 }
 
 function pctDiff(value, reference) {
@@ -396,4 +437,91 @@ export function summarize(series) {
         ? pctDiff(endMember, endCash) - pctDiff(endFollower, endFollowerCash)
         : null,
   };
+}
+
+function countOwners(markers) {
+  return new Set(markers.map((m) => m.bioguideId).filter(Boolean)).size;
+}
+
+export function summarizeCongress(series) {
+  const last = (arr) => (arr?.length ? arr[arr.length - 1] : null);
+  const endAll = last(series.all);
+  const endBenchmark = last(series.benchmark);
+  const endCash = last(series.cash);
+  const endCommittee = last(series.committee);
+  const endCommitteeCash = last(series.committeeCash);
+  const endCommitteeBenchmark = last(series.committeeBenchmark);
+
+  return {
+    asOf: last(series.dates),
+    endAll,
+    endBenchmark,
+    endCash,
+    endCommittee,
+    endCommitteeCash,
+    endCommitteeBenchmark,
+    contributed: series.contributed,
+    committeeContributed: series.committeeContributed,
+    allReturnPct: pctDiff(endAll, endCash),
+    benchmarkReturnPct: pctDiff(endBenchmark, endCash),
+    cashReturnPct: 0,
+    committeeReturnPct: pctDiff(endCommittee, endCommitteeCash),
+    committeeBenchmarkReturnPct: pctDiff(endCommitteeBenchmark, endCommitteeCash),
+    allVsBenchmarkPct: pctDiff(endAll, endBenchmark),
+    committeeVsOwnBenchmarkPct: pctDiff(endCommittee, endCommitteeBenchmark),
+  };
+}
+
+/**
+ * Congress as one portfolio: every disclosed purchase vs the S&P 500 vs cash,
+ * plus a committee-overlap book that only takes trades in a sector that
+ * member's committee oversees.
+ *
+ * The two trading books deploy different amounts on different days, so the
+ * chart compares growth per dollar, not dollars. The S&P line is matched to
+ * Trading (all); committee-vs-its-own-index lives in the summary.
+ */
+export function buildCongressPortfolioSeries(trades, getSeries, options = {}) {
+  const { benchmarkTicker = 'SPY', maxPoints = 260 } = options;
+  const shared = { benchmarkTicker, maxPoints: Infinity, includeFollower: false };
+
+  const all = buildPortfolioSeries(trades, getSeries, shared);
+  if (!all.ok) return all;
+
+  const overlapTrades = (trades || []).filter((t) => t.committeeOverlap);
+  const committee = overlapTrades.length
+    ? buildPortfolioSeries(overlapTrades, getSeries, shared)
+    : { ok: false };
+
+  const sampled = downsample(
+    {
+      dates: all.dates,
+      all: all.member,
+      benchmark: all.benchmark,
+      cash: all.cash,
+      committee: overlaySeries(all.dates, committee, 'member'),
+      committeeCash: overlaySeries(all.dates, committee, 'cash'),
+      committeeBenchmark: overlaySeries(all.dates, committee, 'benchmark'),
+    },
+    maxPoints,
+  );
+
+  const committeeMarkers = committee.ok ? committee.markers : [];
+  const result = {
+    ok: true,
+    estimated: true,
+    benchmarkTicker,
+    contributed: all.contributed,
+    committeeContributed: committee.ok ? committee.contributed : 0,
+    skipped: all.skipped,
+    counts: {
+      purchases: all.markers.filter((m) => m.isPurchase).length,
+      overlapPurchases: committeeMarkers.filter((m) => m.isPurchase).length,
+      members: countOwners(all.markers),
+      overlapMembers: countOwners(committeeMarkers),
+    },
+    ...sampled,
+  };
+  result.summary = summarizeCongress(result);
+  return result;
 }
