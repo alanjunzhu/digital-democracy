@@ -16,7 +16,9 @@ stock purchases actually performed**, next to what would have happened if the sa
 had gone into an ordinary S&P 500 index fund instead, or had not been invested at all.
 There is also a line showing how someone copying their trades from the public filings
 would have done — the filings appear weeks after the trades, so that line shows how much
-of the result depended on acting before anyone else could.
+of the result depended on acting before anyone else could. The finances page asks the
+same question of Congress as a whole, and adds a line for trades in a sector that
+member's committee oversees.
 
 Some honest limits, which the site states on the page too:
 
@@ -48,7 +50,7 @@ The site is static. Node scripts fetch public data into `data/`, that JSON is co
 - **Bills** — The most recently *updated* measures (not the oldest introductions), filterable by stage, with committee referrals that distinguish House from Senate committees of the same name
 - **Votes** — House and Senate roll calls for both sessions of the 119th Congress, filterable by chamber and topic
 - **Committees** — Standing committees and subcommittees, each listing legislation referred to it in this congress
-- **Finances** — STOCK Act periodic transaction reports (and ticker-level trades when the Stock Watcher dumps are reachable), with committee-overlap and bill-timing flags
+- **Finances** — STOCK Act periodic transaction reports (and ticker-level trades when the Stock Watcher dumps are reachable), with a Congress-wide chart of cash vs all trading vs the S&P 500 vs committee-overlap trades, plus committee-overlap and bill-timing flags
 - **Analytics** — Party breakdown, bill stages, and voting patterns
 - **Automated refresh** — GitHub Actions fetch and commit data on a schedule; a push to `main` rebuilds the site
 
@@ -115,6 +117,7 @@ digital-democracy/
 │   │       ├── VoteFilter.tsx
 │   │       ├── CommitteeFilter.tsx
 │   │       ├── MemberPortfolioChart.tsx
+│   │       ├── CongressPortfolioChart.tsx
 │   │       └── AnalyticsDashboard.tsx
 │   ├── lib/
 │   │   ├── types.ts                     # Shared TypeScript types
@@ -145,7 +148,7 @@ digital-democracy/
 │   ├── price-cache.mjs                  # Compact per-ticker price files
 │   ├── trade-timing.mjs                 # Counterfactual scenarios and trade context
 │   ├── timing-precompute.mjs            # Build-time pairing of chart data to trades
-│   ├── portfolio-series.mjs             # Member portfolio vs S&P 500 vs not investing
+│   ├── portfolio-series.mjs             # Member and Congress portfolios vs S&P 500 vs cash
 │   ├── member-finance-index.mjs         # Per-member trading record for the directory filter
 │   └── data-loader.mjs                  # Memoised reads of the shared data indexes
 ├── tests/                               # node --test
@@ -329,6 +332,25 @@ What the chart cannot do, all of it stated on the page as well:
 - Charts built on a handful of trades carry a visible warning, because one trade can drive
   the entire line.
 
+### The Congress-wide comparison
+
+The finances page asks the same question of Congress as a whole, with four lines:
+
+| Line | What it is |
+| --- | --- |
+| Holding cash | Money never invested. A flat line at 0%. |
+| Trading (all) | Every disclosed purchase, pooled as one portfolio. Holdings are kept per member, so one person's sale cannot close someone else's shares of the same ticker. |
+| S&P 500 | The same money as Trading (all), on the same days, in an index fund instead. |
+| Trading (committee) | Only purchases in a sector that member's committee oversees. A smaller pot of money, on different days. |
+
+Because committee trades are not the same dollars, the chart (and the bars above it) compare
+**growth per dollar invested**, not dollars. The S&P line is matched to all trades; how
+committee trades did against the index on *their* dates is stated in the notes, not drawn
+as a fifth line.
+
+The same range-midpoint and unmatched-sale limits apply. Individual trade dots are left
+off — there are thousands of them, and they would bury the comparison.
+
 ### The per-trade timing panels
 
 Where a trade falls in a sector the member's committee oversees, the page also compares
@@ -370,7 +392,8 @@ shown with its context but no chart.
 - [x] CongressWatch finance fallback when Stock Watcher is closed
 - [x] Kadoa + House Clerk annual disclosures as additional finance sources
 - [x] Build-time price cache and counterfactual timing charts
-- [ ] Member-level portfolio vs cash and S&P 500 baseline chart
+- [x] Member-level portfolio vs cash and S&P 500 baseline chart
+- [x] Congress-wide cash vs trading vs S&P 500 vs committee-overlap chart
 - [ ] Amendment tracking
 - [ ] Hearing schedules
 

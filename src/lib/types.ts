@@ -229,6 +229,7 @@ export interface PortfolioMarker {
   amountMid: number;
   amountLabel: string;
   owner: string | null;
+  bioguideId?: string | null;
   sector: string | null;
   committeeOverlap: boolean;
   disclosureDate: string | null;
@@ -272,4 +273,47 @@ export interface MemberPortfolio {
     outsideBenchmark: number;
   };
   summary: PortfolioSummary;
+}
+
+export interface CongressPortfolioSummary {
+  asOf: string | null;
+  endAll: number | null;
+  endBenchmark: number | null;
+  endCash: number | null;
+  endCommittee: number | null;
+  endCommitteeCash: number | null;
+  endCommitteeBenchmark: number | null;
+  contributed: number;
+  committeeContributed: number;
+  allReturnPct: number | null;
+  benchmarkReturnPct: number | null;
+  cashReturnPct: number;
+  committeeReturnPct: number | null;
+  committeeBenchmarkReturnPct: number | null;
+  allVsBenchmarkPct: number | null;
+  committeeVsOwnBenchmarkPct: number | null;
+}
+
+/** Output of buildCongressPortfolioSeries() in shared/portfolio-series.mjs. */
+export interface CongressPortfolio {
+  ok: true;
+  estimated: boolean;
+  benchmarkTicker: string;
+  contributed: number;
+  committeeContributed: number;
+  dates: string[];
+  all: number[];
+  benchmark: number[];
+  cash: number[];
+  committee: number[];
+  committeeCash: number[];
+  committeeBenchmark: number[];
+  skipped: MemberPortfolio['skipped'];
+  counts: {
+    purchases: number;
+    overlapPurchases: number;
+    members: number;
+    overlapMembers: number;
+  };
+  summary: CongressPortfolioSummary;
 }
