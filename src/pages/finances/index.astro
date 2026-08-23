@@ -80,6 +80,12 @@ if (financeData && trades.length > 0) {
     names: Object.fromEntries(
       (membersIndex as { bioguideId: string; name: string }[]).map((m) => [m.bioguideId, m.name]),
     ),
+    profiles: Object.fromEntries(
+      (membersIndex as { bioguideId: string; chamber?: string; party?: string }[]).map((m) => [
+        m.bioguideId,
+        { chamber: m.chamber || '', party: m.party || '' },
+      ]),
+    ),
   });
   if (built.ok) congressPortfolio = built;
 }
