@@ -4,13 +4,47 @@ A free, open-source transparency tool for the **119th United States Congress**. 
 
 **Live site:** [alanjunzhu.github.io/digital-democracy](https://alanjunzhu.github.io/digital-democracy)
 
+## What this is, in plain terms
+
+Members of Congress have to publicly report their stock trades, and they sit on committees
+that oversee particular industries. Both facts are public, but they live in separate places
+and neither is easy to read. This site puts them on one page, per member, alongside their
+votes and the bills they sponsor.
+
+The part people usually come for: on each member's page you can see **how their disclosed
+stock purchases actually performed**, next to what would have happened if the same money
+had gone into an ordinary S&P 500 index fund instead, or had not been invested at all.
+There is also a line showing how someone copying their trades from the public filings
+would have done — the filings appear weeks after the trades, so that line shows how much
+of the result depended on acting before anyone else could.
+
+Some honest limits, which the site states on the page too:
+
+- **The dollar figures are estimates.** Disclosures report amounts as ranges, like
+  "$1,001 – $15,000", not exact numbers. Every trade is modelled at the middle of its range,
+  so real positions could be several times bigger or smaller. The percentages are more
+  reliable than the dollars.
+- **Beating or trailing the market proves nothing.** Members file these reports because the
+  law requires it, and most trades are ordinary investing, often made by a financial adviser
+  rather than the member. A flagged overlap between a trade and a committee is a reason to
+  look closer, not a finding of wrongdoing.
+- **Some trades cannot be shown.** Selling something bought before the reporting period
+  began leaves nothing to chart, and a few obscure tickers have no price history anywhere.
+  Those are counted and named rather than quietly dropped.
+
+Everything below is for people who want to run or modify the site.
+
+---
+
+## How it works
+
 The site is static. Node scripts fetch public data into `data/`, that JSON is committed, and Astro builds pages from it for GitHub Pages.
 
 ---
 
 ## Features
 
-- **Members** — Directory of current members with photos, party, state, and chamber; profiles with contact info, service history, sponsored bills by stage, votes by topic, committee assignments, and financial filings
+- **Members** — Directory of current members with photos, party, state, and chamber, filterable by whether they have a trading record; profiles with contact info, service history, sponsored bills by stage, votes by topic, committee assignments, and financial filings
 - **Bills** — The most recently *updated* measures (not the oldest introductions), filterable by stage, with committee referrals that distinguish House from Senate committees of the same name
 - **Votes** — House and Senate roll calls for both sessions of the 119th Congress, filterable by chamber and topic
 - **Committees** — Standing committees and subcommittees, each listing legislation referred to it in this congress
@@ -112,6 +146,7 @@ digital-democracy/
 │   ├── trade-timing.mjs                 # Counterfactual scenarios and trade context
 │   ├── timing-precompute.mjs            # Build-time pairing of chart data to trades
 │   ├── portfolio-series.mjs             # Member portfolio vs S&P 500 vs not investing
+│   ├── member-finance-index.mjs         # Per-member trading record for the directory filter
 │   └── data-loader.mjs                  # Memoised reads of the shared data indexes
 ├── tests/                               # node --test
 │   ├── api-client.test.mjs
@@ -245,31 +280,61 @@ Ticker-level analysis prefers Stock Watcher dumps when reachable. Otherwise the 
 
 > Highlights on member pages are potential conflicts from public disclosures, not findings of wrongdoing.
 
-### Portfolio counterfactual
+### Finding members with a trading record
 
-Each member page charts what their disclosed **purchases** would be worth today against
-putting the same money into the S&P 500 (via `SPY`, a real tradeable fund priced from the
-same source) on the same days, or not investing it at all. A fourth line repeats those
-purchases on each trade's *disclosure* date — the first day anyone outside Congress could
-have acted — so the gap between it and the member line is the part of the result the
-filings never made available.
+The members directory filters on financial history, with the count of matches shown against
+each option so you can see what you are about to narrow to. On the current data:
 
-Identical cash flows across all four lines are what make the comparison fair, so the
-"not invested" line doubles as the capital-deployed line. The chart plots growth per
-dollar invested rather than raw dollars, so the contribution schedule itself does not
-move the lines.
+| Filter | Members |
+| --- | --- |
+| Everyone | 553 |
+| Has financial disclosures | 233 |
+| Has stock trades | 143 |
+| Traded in a sector their committee oversees | 91 |
+| Has a performance chart | 93 |
+| No financial records | 320 |
 
-Limits, all surfaced in the UI: disclosures report **ranges**, so every trade is modelled
-at its midpoint and every value is an estimate; sales of positions acquired before the
-disclosure window cannot be represented and are counted separately; members who only sold
-in the window get no chart, since there is nothing to compare.
+Cards carry a trade count and a committee-overlap badge, so a filtered result explains itself
+without opening each profile. "Has a performance chart" is the narrowest useful one: it needs
+at least one purchase in a stock whose price history is cached.
 
-### Trade timing counterfactuals
+### The portfolio chart
 
-Member and finance pages chart each committee-overlap trade against what else the
-member could have done: buying or selling 30 days earlier, 30 days later, or doing
-nothing at all (staying in cash instead of buying, keeping the position instead of
-selling). Outcomes are 60-day forward returns from daily closing prices.
+Every member page with disclosed purchases carries one chart with four lines. Reading it:
+
+| Line | What it is |
+| --- | --- |
+| The member | What their disclosed purchases actually did |
+| S&P 500 | The same money, on the same days, in an index fund instead (priced from `SPY`, a real fund, so the comparison is to something a person could genuinely have bought) |
+| Filing reader | Someone copying each trade on the day its filing became public — typically weeks later |
+| Not invested | Money left in cash. A flat line at 0%, and the baseline everything is measured against |
+
+All four receive exactly the same money on the same days, which is what makes the
+comparison fair; that also means the "not invested" line doubles as a record of how much
+capital was in play. The vertical axis is percent gained per dollar invested, not dollars —
+otherwise every line would jump each time more money was added, and you would be watching
+how *much* was invested rather than how well it did.
+
+A sale sells the position and parks the proceeds in cash. The index line is deliberately
+left alone by it, so the gap that opens up afterwards is exactly what the decision to sell
+cost or saved.
+
+What the chart cannot do, all of it stated on the page as well:
+
+- Disclosures report amounts as **ranges**, so every trade is modelled at its midpoint and
+  every dollar figure is an estimate. Percentages are the more reliable half.
+- Selling a position bought before the reporting period leaves nothing to model. Those
+  sales are counted and reported, not dropped.
+- A member who only sold in the period gets no chart at all rather than a flat line at zero.
+- Charts built on a handful of trades carry a visible warning, because one trade can drive
+  the entire line.
+
+### The per-trade timing panels
+
+Where a trade falls in a sector the member's committee oversees, the page also compares
+that single trade against the alternatives: making the same move 30 days earlier, 30 days
+later, or not making it at all. Outcomes are measured 60 days forward from daily closing
+prices.
 
 The site is a static build and Yahoo's chart endpoint sends no CORS headers, so the
 browser cannot fetch price history — everything is precomputed by two scripts that
@@ -280,12 +345,14 @@ run before the build:
 | `npm run fetch:prices` | `data/prices/<TICKER>.json` | One request per ticker, not per trade. Committee-overlap tickers by default; `--all` covers every traded ticker, `--force` refetches fresh files. Existing files survive a failed fetch. |
 | `npm run enrich:trade-timing` | `data/finances/trade-timing.json` | Reads the price cache, no network. Counterfactuals only — pages slice their own sparkline window from `data/prices/`. |
 
-Both run weekly in `fetch-members.yml` after the finance fetch, and `fetch-prices.yml`
-re-runs just these two on demand (Actions → Fetch Stock Prices → Run workflow) without
-refetching members and bills. A trade whose 60-day
-window has not elapsed is labeled as still running rather than scored against a
-partial window, and a trade with no cached close near its transaction date is shown
-with context but no chart.
+Both run weekly in `fetch-members.yml` after the finance fetch. `fetch-prices.yml` re-runs
+just this part — on a Monday schedule, on demand (Actions → Fetch Stock Prices → Run
+workflow), and automatically on any push that touches the price or trade-parsing scripts,
+which is how the cache gets rebuilt from environments that cannot reach a market-data host.
+
+A trade whose 60-day window has not elapsed is labeled as still running rather than scored
+against a partial window, and a trade with no cached close near its transaction date is
+shown with its context but no chart.
 
 ---
 

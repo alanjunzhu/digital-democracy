@@ -19,6 +19,9 @@ const SERIES = {
   cash: '#9ca3af',
 } as const;
 
+/** Below this many purchases, one trade dominates the line and the reader should know. */
+const SMALL_SAMPLE = 5;
+
 const PAD = { top: 16, right: 96, bottom: 28, left: 60 };
 const W = 720;
 const H = 300;
@@ -71,6 +74,7 @@ export default function MemberPortfolioChart({
 }: Props) {
   const [hover, setHover] = useState<number | null>(null);
   const [showTable, setShowTable] = useState(false);
+  const [showGuide, setShowGuide] = useState(false);
 
   const { dates, member, benchmark, cash, follower, followerCash, summary, skipped, markers } = portfolio;
 
@@ -141,16 +145,24 @@ export default function MemberPortfolioChart({
     setHover(Math.round(frac * (dates.length - 1)));
   }
 
+  const purchaseCount = markers.filter((m: PortfolioMarker) => m.isPurchase).length;
   const beatIndex = summary.vsBenchmarkPct != null && summary.vsBenchmarkPct > 0;
+  const readerDidBetter = summary.disclosureGapPct != null && summary.disclosureGapPct < 0;
+
+  const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+  const exclusions = [
+    skipped.noPrice > 0 && `${plural(skipped.noPrice, 'trade', 'trades')} with no price history available`,
+    skipped.noAmount > 0 && `${plural(skipped.noAmount, 'trade', 'trades')} with no reported amount`,
+    skipped.outsideBenchmark > 0 && `${plural(skipped.outsideBenchmark, 'trade', 'trades')} dated outside the period charted`,
+  ].filter(Boolean) as string[];
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
       <h2 className="text-lg font-semibold text-gray-900">Disclosed trades vs the market</h2>
       <p className="text-xs text-gray-500 mt-1 max-w-2xl">
-        What {money(summary.contributed)} of disclosed purchases would be worth today, against
-        putting the same money into the {benchmarkLabel} on the same days, or not investing it.
-        The chart shows growth per dollar invested, so the contribution schedule itself does not
-        move the lines.
+        {memberName} disclosed buying {money(summary.contributed)} of stock. This shows what that
+        would be worth today, next to two things they could have done instead: put the same money
+        into the {benchmarkLabel} on the same days, or not invest it at all.
       </p>
 
       {/* Headline numbers */}
@@ -174,6 +186,14 @@ export default function MemberPortfolioChart({
           <div className="text-[10px] text-gray-500">Edge lost to filing delay</div>
         </div>
       </div>
+
+      {purchaseCount < SMALL_SAMPLE && (
+        <p className="mb-3 text-[11px] text-amber-800 bg-amber-50 border border-amber-100 rounded-md p-2">
+          <strong>Read with caution.</strong> This is based on {purchaseCount} purchase
+          {purchaseCount === 1 ? '' : 's'}. With so few trades a single one drives the whole line,
+          so the percentages swing far more than they would over a longer record.
+        </p>
+      )}
 
       {/* Legend — identity is never carried by color alone */}
       <div className="flex flex-wrap gap-x-4 gap-y-1 mb-2">
@@ -320,29 +340,101 @@ export default function MemberPortfolioChart({
             modelled.
           </p>
         )}
-        {(skipped.noPrice > 0 || skipped.noAmount > 0 || skipped.outsideBenchmark > 0) && (
-          <p>
-            Excluded: {skipped.noPrice} trade{skipped.noPrice === 1 ? '' : 's'} with no cached price
-            history, {skipped.noAmount} with no reported amount
-            {skipped.outsideBenchmark > 0
-              ? `, ${skipped.outsideBenchmark} dated before the benchmark series begins`
-              : ''}
-            .
-          </p>
-        )}
+        {exclusions.length > 0 && <p>Also excluded: {exclusions.join('; ')}.</p>}
         <p className="text-gray-400 pt-1 border-t border-gray-200">
           Past performance describes disclosed trades only. It is not evidence of insider trading or
           wrongdoing.
         </p>
       </div>
 
-      <button
-        type="button"
-        onClick={() => setShowTable((v) => !v)}
-        className="mt-3 text-[11px] text-blue-600 hover:text-blue-800"
-      >
-        {showTable ? 'Hide data table' : 'View as data table'}
-      </button>
+      <div className="mt-3 flex flex-wrap gap-4">
+        <button
+          type="button"
+          onClick={() => setShowGuide((v) => !v)}
+          className="text-[11px] text-blue-600 hover:text-blue-800"
+          aria-expanded={showGuide}
+        >
+          {showGuide ? 'Hide guide' : 'How to read this chart'}
+        </button>
+        <button
+          type="button"
+          onClick={() => setShowTable((v) => !v)}
+          className="text-[11px] text-blue-600 hover:text-blue-800"
+          aria-expanded={showTable}
+        >
+          {showTable ? 'Hide data table' : 'View as data table'}
+        </button>
+      </div>
+
+      {showGuide && (
+        <div className="mt-3 rounded-md border border-gray-200 p-4 text-xs text-gray-700 space-y-4">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-1">The flat line at 0% is the starting point</h3>
+            <p>
+              It represents leaving the money in cash. Everything is measured against it: above the
+              line made money, below it lost money.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-1">What each line is</h3>
+            <ul className="space-y-1.5">
+              {lines.map((l) => (
+                <li key={l.key} className="flex items-start gap-2">
+                  <svg width="14" height="10" className="mt-1 shrink-0" aria-hidden="true">
+                    <line x1="0" y1="5" x2="14" y2="5" stroke={l.color} strokeWidth="2" strokeDasharray={l.dash} />
+                  </svg>
+                  <span>
+                    <strong className="text-gray-900">{l.label}</strong>
+                    {l.key === 'member' && ' — what their disclosed purchases actually did.'}
+                    {l.key === 'benchmark' && ` — the same money, on the same days, in an ${benchmarkLabel} index fund instead.`}
+                    {l.key === 'follower' && ' — you, copying each trade on the day its filing became public, which is typically weeks after the member made it.'}
+                    {l.key === 'cash' && ' — money never invested. Always flat.'}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-1">Height is percent gained, not dollars</h3>
+            <p>
+              Showing dollars would make every line jump whenever more money was added, so you would
+              be watching <em>how much</em> was invested rather than how well it did. Dots on the
+              line mark individual trades; filled dots are purchases, hollow ones are sales, and a
+              red ring means the trade was in a sector their committee oversees.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-1">Reading the four numbers above</h3>
+            <ul className="space-y-1">
+              <li><strong className="text-gray-900">Estimated value today</strong> — what the disclosed purchases are now worth.</li>
+              <li>
+                <strong className="text-gray-900">vs {benchmarkLabel}</strong> — how they did against a plain index fund.
+                {' '}{beatIndex ? 'Positive means they beat it.' : 'Negative means the index fund did better.'}
+              </li>
+              <li><strong className="text-gray-900">vs not investing</strong> — the plain gain or loss on the money.</li>
+              <li>
+                <strong className="text-gray-900">Edge lost to filing delay</strong> — how much of the result came
+                from acting before the public could. {readerDidBetter
+                  ? 'A negative number, as here, means someone following the filings would have done better — the delay hid no advantage.'
+                  : 'A positive number means the trades did better than a follower could have managed by waiting for the filings.'}
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-1">What this does not show</h3>
+            <p>
+              Beating or trailing the market is not evidence of wrongdoing. Members file these
+              disclosures because the law requires it, and most trades are ordinary investing —
+              often made by a financial adviser rather than the member. This chart describes
+              returns, nothing more.
+            </p>
+          </div>
+        </div>
+      )}
 
       {showTable && (
         <div className="mt-2 overflow-x-auto">
