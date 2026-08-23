@@ -371,19 +371,22 @@ function lotMap(book, trade) {
  * Keep every event date plus an even sample of the rest — a plain stride would
  * drop the days the trade markers sit on.
  */
-function downsample(series, maxPoints) {
-  const total = series.dates.length;
-  if (!Number.isFinite(maxPoints) || total <= maxPoints) return series;
-
+function sampleIndices(total, maxPoints) {
+  if (!Number.isFinite(maxPoints) || total <= maxPoints) {
+    return Array.from({ length: total }, (_, i) => i);
+  }
   const stride = Math.ceil(total / maxPoints);
   const keep = new Set([0, total - 1]);
   for (let i = 0; i < total; i += stride) keep.add(i);
+  return [...keep].sort((a, b) => a - b);
+}
 
-  const indices = [...keep].sort((a, b) => a - b);
-  const pick = (arr) => indices.map((i) => arr[i]);
+function downsample(series, maxPoints) {
+  const indices = sampleIndices(series.dates.length, maxPoints);
+  if (indices.length === series.dates.length) return series;
   const out = {};
   for (const [key, value] of Object.entries(series)) {
-    out[key] = Array.isArray(value) ? pick(value) : value;
+    out[key] = Array.isArray(value) ? indices.map((i) => value[i]) : value;
   }
   return out;
 }
@@ -472,6 +475,77 @@ export function summarizeCongress(series) {
   };
 }
 
+/** Below this many purchases, one trade can drive the whole line. */
+export const THIN_PURCHASES = 5;
+
+function displayName(name) {
+  const raw = String(name || '').trim();
+  const comma = raw.indexOf(',');
+  if (comma <= 0) return raw;
+  return `${raw.slice(comma + 1).trim()} ${raw.slice(0, comma).trim()}`;
+}
+
+function groupTradesByMember(trades, names = {}) {
+  const map = new Map();
+  for (const trade of trades || []) {
+    const id = trade.bioguideId;
+    if (!id) continue;
+    let row = map.get(id);
+    if (!row) {
+      row = {
+        bioguideId: id,
+        name: displayName(names[id] || trade.memberName || id),
+        trades: [],
+      };
+      map.set(id, row);
+    }
+    if (names[id]) row.name = displayName(names[id]);
+    else if (trade.memberName) row.name = displayName(trade.memberName);
+    row.trades.push(trade);
+  }
+  return [...map.values()];
+}
+
+function indexGrowth(values, cash) {
+  return values.map((v, i) => (cash[i] > 0 ? (v / cash[i] - 1) * 100 : 0));
+}
+
+function roundPlot(values) {
+  return values.map((v) => Math.round(v * 10) / 10);
+}
+
+export function percentile(sorted, p) {
+  if (!sorted.length) return null;
+  const i = (sorted.length - 1) * p;
+  const lo = Math.floor(i);
+  const hi = Math.ceil(i);
+  if (lo === hi) return sorted[lo];
+  return sorted[lo] + (sorted[hi] - sorted[lo]) * (i - lo);
+}
+
+/**
+ * Upper Tukey outliers that also beat the market — the lines that leave the
+ * pack behind, not merely the least-bad of a losing group.
+ */
+export function flagExceptionalMembers(members, { benchmarkReturnPct = null } = {}) {
+  const returns = members
+    .map((m) => m.returnPct)
+    .filter((v) => v != null && Number.isFinite(v))
+    .sort((a, b) => a - b);
+  const q1 = percentile(returns, 0.25);
+  const q3 = percentile(returns, 0.75);
+  const fence = q1 != null && q3 != null ? q3 + 1.5 * (q3 - q1) : Infinity;
+
+  return members.map((m) => {
+    const r = m.returnPct;
+    const beatsMarket = benchmarkReturnPct == null || (r != null && r > benchmarkReturnPct);
+    return {
+      ...m,
+      exceptional: Boolean(r != null && Number.isFinite(r) && r > fence && beatsMarket),
+    };
+  });
+}
+
 /**
  * Congress as one portfolio: every disclosed purchase vs the S&P 500 vs cash,
  * plus a committee-overlap book that only takes trades in a sector that
@@ -482,7 +556,7 @@ export function summarizeCongress(series) {
  * Trading (all); committee-vs-its-own-index lives in the summary.
  */
 export function buildCongressPortfolioSeries(trades, getSeries, options = {}) {
-  const { benchmarkTicker = 'SPY', maxPoints = 260 } = options;
+  const { benchmarkTicker = 'SPY', maxPoints = 260, names = {} } = options;
   const shared = { benchmarkTicker, maxPoints: Infinity, includeFollower: false };
 
   const all = buildPortfolioSeries(trades, getSeries, shared);
@@ -493,18 +567,41 @@ export function buildCongressPortfolioSeries(trades, getSeries, options = {}) {
     ? buildPortfolioSeries(overlapTrades, getSeries, shared)
     : { ok: false };
 
-  const sampled = downsample(
-    {
-      dates: all.dates,
-      all: all.member,
-      benchmark: all.benchmark,
-      cash: all.cash,
-      committee: overlaySeries(all.dates, committee, 'member'),
-      committeeCash: overlaySeries(all.dates, committee, 'cash'),
-      committeeBenchmark: overlaySeries(all.dates, committee, 'benchmark'),
-    },
-    maxPoints,
-  );
+  const memberRows = [];
+  for (const group of groupTradesByMember(trades, names)) {
+    const built = buildPortfolioSeries(group.trades, getSeries, shared);
+    if (!built.ok) continue;
+    const values = overlaySeries(all.dates, built, 'member');
+    const cash = overlaySeries(all.dates, built, 'cash');
+    const purchases = built.markers.filter((m) => m.isPurchase).length;
+    memberRows.push({
+      bioguideId: group.bioguideId,
+      name: group.name,
+      plot: indexGrowth(values, cash),
+      returnPct: built.summary.returnPct,
+      vsBenchmarkPct: built.summary.vsBenchmarkPct,
+      vsAllPct:
+        built.summary.returnPct != null && all.summary.returnPct != null
+          ? built.summary.returnPct - all.summary.returnPct
+          : null,
+      purchases,
+      contributed: built.contributed,
+      thin: purchases < THIN_PURCHASES,
+    });
+  }
+
+  const indices = sampleIndices(all.dates.length, maxPoints);
+  const pick = (arr) => indices.map((i) => arr[i]);
+
+  const sampled = {
+    dates: pick(all.dates),
+    all: pick(all.member),
+    benchmark: pick(all.benchmark),
+    cash: pick(all.cash),
+    committee: pick(overlaySeries(all.dates, committee, 'member')),
+    committeeCash: pick(overlaySeries(all.dates, committee, 'cash')),
+    committeeBenchmark: pick(overlaySeries(all.dates, committee, 'benchmark')),
+  };
 
   const committeeMarkers = committee.ok ? committee.markers : [];
   const result = {
@@ -519,9 +616,15 @@ export function buildCongressPortfolioSeries(trades, getSeries, options = {}) {
       overlapPurchases: committeeMarkers.filter((m) => m.isPurchase).length,
       members: countOwners(all.markers),
       overlapMembers: countOwners(committeeMarkers),
+      exceptional: 0,
     },
     ...sampled,
   };
   result.summary = summarizeCongress(result);
+  result.members = flagExceptionalMembers(
+    memberRows.map((m) => ({ ...m, plot: roundPlot(pick(m.plot)) })),
+    { benchmarkReturnPct: result.summary.benchmarkReturnPct },
+  );
+  result.counts.exceptional = result.members.filter((m) => m.exceptional).length;
   return result;
 }

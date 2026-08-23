@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   buildPortfolioSeries,
   buildCongressPortfolioSeries,
+  flagExceptionalMembers,
   normalizeOwner,
   parseAmountRange,
 } from '../shared/portfolio-series.mjs';
@@ -259,6 +260,7 @@ test('the Congress chart compares cash, all trades, the index, and committee tra
       { bioguideId: 'A', ticker: 'WIN', type: 'Sale (Full)', transactionDate: '2025-02-03', amount: '$15,001 - $50,000', committeeOverlap: false },
     ],
     lookup({ SPY, WIN: WINNER }),
+    { names: { A: 'Alpha, Alice', B: 'Beta, Bob' } },
   );
 
   assert.equal(result.ok, true);
@@ -277,6 +279,38 @@ test('the Congress chart compares cash, all trades, the index, and committee tra
   assert.equal(result.counts.overlapMembers, 1);
   // No 13k trade dots on this chart — markers stay off the payload.
   assert.equal(result.markers, undefined);
+  // Each member is a line on the same percent scale.
+  assert.equal(result.members.length, 2);
+  const byId = Object.fromEntries(result.members.map((m) => [m.bioguideId, m]));
+  assert.equal(byId.A.name, 'Alice Alpha');
+  assert.equal(byId.B.name, 'Bob Beta');
+  assert.equal(byId.A.plot.length, result.dates.length);
+  assert.ok(Math.abs(byId.A.returnPct) < 0.01);
+  assert.ok(Math.abs(byId.B.returnPct - 200) < 0.01);
+  assert.equal(byId.B.thin, true);
+});
+
+test('upper outliers that beat the market are marked exceptional', () => {
+  const flagged = flagExceptionalMembers(
+    [5, 8, 10, 12, 15, 28, 200].map((returnPct, i) => ({
+      bioguideId: `M${i}`,
+      returnPct,
+    })),
+    { benchmarkReturnPct: 20 },
+  );
+  const stars = flagged.filter((m) => m.exceptional);
+  assert.equal(stars.length, 1);
+  assert.equal(stars[0].returnPct, 200);
+  // A high-but-not-outlier return that still beats the S&P is not highlighted.
+  assert.equal(flagged.find((m) => m.returnPct === 28).exceptional, false);
+});
+
+test('a losing pack is not highlighted just for being the least bad', () => {
+  const flagged = flagExceptionalMembers(
+    [-40, -30, -20, -15, -10, 2].map((returnPct) => ({ returnPct })),
+    { benchmarkReturnPct: 20 },
+  );
+  assert.equal(flagged.some((m) => m.exceptional), false);
 });
 
 test('skipping the follower omits disclosure-date purchases', () => {

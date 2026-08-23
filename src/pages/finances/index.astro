@@ -77,6 +77,9 @@ if (financeData && trades.length > 0) {
   };
   const built = buildCongressPortfolioSeries(trades, getSeries, {
     benchmarkTicker: BENCHMARK_TICKER,
+    names: Object.fromEntries(
+      (membersIndex as { bioguideId: string; name: string }[]).map((m) => [m.bioguideId, m.name]),
+    ),
   });
   if (built.ok) congressPortfolio = built;
 }
@@ -110,6 +113,7 @@ if (financeData && trades.length > 0) {
             <CongressPortfolioChart
               portfolio={congressPortfolio}
               benchmarkLabel={BENCHMARK_LABEL}
+              baseUrl={base}
               client:load
             />
           </section>

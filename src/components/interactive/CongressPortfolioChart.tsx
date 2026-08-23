@@ -1,9 +1,10 @@
-import { useMemo, useState } from 'react';
-import type { CongressPortfolio } from '../../lib/types';
+import { useId, useMemo, useState } from 'react';
+import type { CongressMemberLine, CongressPortfolio } from '../../lib/types';
 
 interface Props {
   portfolio: CongressPortfolio;
   benchmarkLabel?: string;
+  baseUrl?: string;
 }
 
 /**
@@ -16,11 +17,13 @@ const SERIES = {
   all: '#0d9488',
   benchmark: '#d97706',
   committee: '#b91c1c',
+  member: '#94a3b8',
+  exceptional: '#6d28d9',
 } as const;
 
-const PAD = { top: 16, right: 118, bottom: 28, left: 60 };
+const PAD = { top: 16, right: 132, bottom: 28, left: 60 };
 const W = 720;
-const H = 320;
+const H = 340;
 
 type SeriesKey = 'cash' | 'all' | 'benchmark' | 'committee';
 
@@ -69,15 +72,20 @@ function plural(n: number, one: string, many: string) {
 export default function CongressPortfolioChart({
   portfolio,
   benchmarkLabel = 'S&P 500',
+  baseUrl = '/',
 }: Props) {
+  const clipId = useId().replace(/:/g, '');
   const [hover, setHover] = useState<number | null>(null);
+  const [hoverY, setHoverY] = useState<number | null>(null);
   const [showTable, setShowTable] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
+  const [showMembers, setShowMembers] = useState(true);
   const [hidden, setHidden] = useState<Set<SeriesKey>>(() => new Set());
 
   const {
     dates, all, benchmark, cash, committee, committeeCash,
     summary, skipped, counts, contributed, committeeContributed,
+    members = [],
   } = portfolio;
 
   const hasCommittee = committeeContributed > 0;
@@ -143,11 +151,23 @@ export default function CongressPortfolioChart({
   }, [all, benchmark, benchmarkLabel, cash, committee, growth, hasCommittee, summary]);
 
   const visible = lines.filter((l) => !hidden.has(l.key));
+  const exceptional = useMemo(
+    () => members.filter((m) => m.exceptional).sort((a, b) => (b.returnPct ?? 0) - (a.returnPct ?? 0)),
+    [members],
+  );
+  const swarm = useMemo(() => members.filter((m) => !m.exceptional), [members]);
 
   const geom = useMemo(() => {
     const plotted = visible.length ? visible.flatMap((l) => l.plot) : [0];
+    const excReturns = exceptional
+      .map((m) => m.returnPct)
+      .filter((v): v is number => v != null && Number.isFinite(v))
+      .sort((a, b) => a - b);
+    // Keep the pack and the next-highest outliers in frame; a singleton spike
+    // (hundreds of percent on a handful of trades) is clipped and labelled.
+    const inFrameReturn = excReturns.length >= 2 ? excReturns[excReturns.length - 2] : excReturns[0];
     const lo = Math.min(...plotted, 0);
-    const hi = Math.max(...plotted, 0);
+    const hi = Math.max(...plotted, inFrameReturn ?? 0, 0);
     const padding = Math.max((hi - lo) * 0.12, 1);
     const ticks = niceTicks(lo - padding, hi + padding);
     const bottom = ticks[0];
@@ -158,21 +178,44 @@ export default function CongressPortfolioChart({
     const y = (v: number) => PAD.top + plotH - ((v - bottom) / (top - bottom || 1)) * plotH;
     const path = (values: number[]) =>
       values.map((v, i) => `${i === 0 ? 'M' : 'L'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
-    return { x, y, path, ticks, plotW, plotH };
-  }, [dates, visible]);
+    return { x, y, path, ticks, plotW, plotH, top };
+  }, [dates, exceptional, visible]);
 
-  const labelY = spreadLabels(
-    visible.map((l) => ({ key: l.key, y: geom.y(l.plot[l.plot.length - 1]) + 3 })),
-  );
+  const labelY = spreadLabels([
+    ...visible.map((l) => ({ key: l.key, y: geom.y(l.plot[l.plot.length - 1]) + 3 })),
+    ...(showMembers
+      ? exceptional.map((m) => ({
+          key: m.bioguideId,
+          y: Math.max(PAD.top + 8, Math.min(geom.y(m.plot[m.plot.length - 1]) + 3, H - PAD.bottom)),
+        }))
+      : []),
+  ]);
 
   const hoverIdx = hover != null ? Math.min(Math.max(hover, 0), dates.length - 1) : null;
 
   function onMove(e: React.MouseEvent<SVGSVGElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
-    const rel = ((e.clientX - rect.left) / rect.width) * W;
-    const frac = (rel - PAD.left) / geom.plotW;
+    const relX = ((e.clientX - rect.left) / rect.width) * W;
+    const relY = ((e.clientY - rect.top) / rect.height) * H;
+    const frac = (relX - PAD.left) / geom.plotW;
     setHover(Math.round(frac * (dates.length - 1)));
+    setHoverY(relY);
   }
+
+  const nearestMember = useMemo(() => {
+    if (hoverIdx == null || hoverY == null || !showMembers || !members.length) return null;
+    let best: CongressMemberLine | null = null;
+    let bestDist = 14;
+    for (const m of members) {
+      const y = geom.y(m.plot[hoverIdx] ?? 0);
+      const dist = Math.abs(y - hoverY);
+      if (dist < bestDist) {
+        bestDist = dist;
+        best = m;
+      }
+    }
+    return best;
+  }, [geom, hoverIdx, hoverY, members, showMembers]);
 
   function toggle(key: SeriesKey) {
     setHidden((prev) => {
@@ -215,9 +258,11 @@ export default function CongressPortfolioChart({
         {hasCommittee && (
           <>
             A fourth line keeps only the trades in a sector that member&apos;s committee
-            oversees.
+            oversees.{' '}
           </>
         )}
+        Faint lines are each member; highlighted lines pulled away from the pack with
+        unusually high returns.
       </p>
       <p className="text-[11px] text-gray-400 mt-1">
         Pooled from {plural(counts.purchases, 'purchase', 'purchases')} by{' '}
@@ -284,16 +329,44 @@ export default function CongressPortfolioChart({
         Click a strategy to show or hide it on the chart. Height is percent gained per dollar
         invested, not dollars — committee trades are a smaller pot of money on different days.
       </p>
+      {members.length > 0 && (
+        <label className="mt-2 flex items-center gap-2 text-[11px] text-gray-600">
+          <input
+            type="checkbox"
+            checked={showMembers}
+            onChange={(e) => setShowMembers(e.target.checked)}
+          />
+          <span className="flex items-center gap-1.5">
+            <svg width="16" height="8" aria-hidden="true">
+              <line x1="0" y1="4" x2="16" y2="4" stroke={SERIES.member} strokeWidth="1.5" />
+            </svg>
+            Individual members ({members.length})
+            {exceptional.length > 0 && (
+              <>
+                <svg width="16" height="8" aria-hidden="true" className="ml-2">
+                  <line x1="0" y1="4" x2="16" y2="4" stroke={SERIES.exceptional} strokeWidth="2.5" />
+                </svg>
+                exceptional return ({exceptional.length})
+              </>
+            )}
+          </span>
+        </label>
+      )}
 
       <svg
         viewBox={`0 0 ${W} ${H}`}
         className="w-full mt-4"
         style={{ height: 'auto' }}
         role="img"
-        aria-label={`Growth per dollar invested: holding cash, trading all disclosed purchases, the ${benchmarkLabel}${hasCommittee ? ', and trades in a sector the member\'s committee oversees' : ''}`}
+        aria-label={`Growth per dollar invested: holding cash, trading all disclosed purchases, the ${benchmarkLabel}${hasCommittee ? ', committee-overlap trades' : ''}, and each member`}
         onMouseMove={onMove}
-        onMouseLeave={() => setHover(null)}
+        onMouseLeave={() => { setHover(null); setHoverY(null); }}
       >
+        <defs>
+          <clipPath id={`plot-${clipId}`}>
+            <rect x={PAD.left} y={PAD.top} width={geom.plotW} height={geom.plotH} />
+          </clipPath>
+        </defs>
         {geom.ticks.map((t) => (
           <g key={t}>
             <line
@@ -311,21 +384,55 @@ export default function CongressPortfolioChart({
           {dates[dates.length - 1]}
         </text>
 
-        {visible.map((l) => (
-          <path
-            key={l.key}
-            d={geom.path(l.plot)}
-            fill="none"
-            stroke={l.color}
-            strokeWidth={l.key === 'cash' ? 1.5 : 2.25}
-            strokeDasharray={l.dash}
-            strokeLinejoin="round"
-          />
-        ))}
+        <g clipPath={`url(#plot-${clipId})`}>
+          {showMembers && swarm.map((m) => (
+            <path
+              key={m.bioguideId}
+              d={geom.path(m.plot)}
+              fill="none"
+              stroke={SERIES.member}
+              strokeWidth="1"
+              strokeOpacity="0.28"
+              strokeLinejoin="round"
+            />
+          ))}
+          {showMembers && exceptional.map((m) => (
+            <path
+              key={m.bioguideId}
+              d={geom.path(m.plot)}
+              fill="none"
+              stroke={SERIES.exceptional}
+              strokeWidth="2.25"
+              strokeLinejoin="round"
+            />
+          ))}
+          {visible.map((l) => (
+            <path
+              key={l.key}
+              d={geom.path(l.plot)}
+              fill="none"
+              stroke={l.color}
+              strokeWidth={l.key === 'cash' ? 1.5 : 2.25}
+              strokeDasharray={l.dash}
+              strokeLinejoin="round"
+            />
+          ))}
+        </g>
 
         {visible.map((l) => (
           <text key={l.key} x={W - PAD.right + 6} y={labelY[l.key]} fontSize="10" fill="#64748b">
             {l.label}
+          </text>
+        ))}
+        {showMembers && exceptional.map((m) => (
+          <text
+            key={m.bioguideId}
+            x={W - PAD.right + 6}
+            y={labelY[m.bioguideId]}
+            fontSize="10"
+            fill={SERIES.exceptional}
+          >
+            {m.name.length > 18 ? `${m.name.slice(0, 17)}…` : m.name}
           </text>
         ))}
 
@@ -346,6 +453,16 @@ export default function CongressPortfolioChart({
             strokeWidth="2"
           />
         ))}
+        {hoverIdx != null && showMembers && nearestMember && (
+          <circle
+            cx={geom.x(hoverIdx)}
+            cy={geom.y(nearestMember.plot[hoverIdx] ?? 0)}
+            r="3.5"
+            fill={nearestMember.exceptional ? SERIES.exceptional : SERIES.member}
+            stroke="#ffffff"
+            strokeWidth="1.5"
+          />
+        )}
       </svg>
 
       <div className="min-h-[2.5rem] mt-1">
@@ -360,11 +477,53 @@ export default function CongressPortfolioChart({
                 {pct(l.plot[hoverIdx])} <span className="text-gray-400">({money(l.values[hoverIdx], true)})</span>
               </span>
             ))}
+            {nearestMember && (
+              <span className="flex items-center gap-1.5">
+                <svg width="10" height="8" aria-hidden="true">
+                  <line
+                    x1="0" y1="4" x2="10" y2="4"
+                    stroke={nearestMember.exceptional ? SERIES.exceptional : SERIES.member}
+                    strokeWidth="2"
+                  />
+                </svg>
+                {nearestMember.name} {pct(nearestMember.plot[hoverIdx])}
+              </span>
+            )}
           </div>
         ) : (
           <p className="text-[11px] text-gray-400">Hover the chart for values on a given day.</p>
         )}
       </div>
+
+      {showMembers && exceptional.length > 0 && (
+        <div className="mt-4 rounded-md border border-violet-100 bg-violet-50/60 p-3">
+          <h3 className="text-xs font-semibold text-violet-950">Exceptional returns</h3>
+          <p className="text-[11px] text-violet-900/70 mt-0.5 mb-2">
+            Upper outliers that also beat the {benchmarkLabel} — lines that left the pack,
+            not merely the top of a tight cluster. A high return is not evidence of wrongdoing.
+          </p>
+          <ul className="space-y-1.5">
+            {exceptional.map((m) => (
+              <li key={m.bioguideId} className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-[12px]">
+                <a
+                  href={`${baseUrl}members/${m.bioguideId}/`}
+                  className="font-medium text-violet-900 hover:underline"
+                >
+                  {m.name}
+                </a>
+                <span className="tabular-nums font-semibold text-gray-900">{pct(m.returnPct)}</span>
+                <span className="text-gray-500">
+                  {pct(m.vsBenchmarkPct)} vs {benchmarkLabel}
+                </span>
+                <span className="text-gray-400">
+                  {plural(m.purchases, 'purchase', 'purchases')}
+                  {m.thin ? ' · thin record' : ''}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="mt-4 rounded-md bg-gray-50 border border-gray-100 p-3 text-[11px] text-gray-600 space-y-1.5">
         <p>
@@ -438,6 +597,26 @@ export default function CongressPortfolioChart({
                   </span>
                 </li>
               ))}
+              <li className="flex items-start gap-2">
+                <svg width="14" height="10" className="mt-1 shrink-0" aria-hidden="true">
+                  <line x1="0" y1="5" x2="14" y2="5" stroke={SERIES.member} strokeWidth="1.5" />
+                </svg>
+                <span>
+                  <strong className="text-gray-900">Each member</strong>
+                  {' — the faint lines. Same percent-return scale, each on their own disclosed purchases.'}
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg width="14" height="10" className="mt-1 shrink-0" aria-hidden="true">
+                  <line x1="0" y1="5" x2="14" y2="5" stroke={SERIES.exceptional} strokeWidth="2" />
+                </svg>
+                <span>
+                  <strong className="text-gray-900">Exceptional return</strong>
+                  {' — a statistical upper outlier (above the Tukey fence) that also beat the '}
+                  {benchmarkLabel}
+                  {'. A line that shoots off the top of the chart is clipped so the pack stays readable, and named in the list.'}
+                </span>
+              </li>
             </ul>
           </div>
 
