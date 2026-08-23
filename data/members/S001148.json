@@ -134,5 +134,66 @@
   },
   "officeAddress": "2084 Rayburn House Office Building Washington DC 20515-1202",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9171,
+      "billId": "hr9171",
+      "title": "Department of the Interior, Environment, and Related Agencies Appropriations Act, 2027",
+      "introducedDate": "2026-06-05",
+      "latestAction": "Placed on the Union Calendar, Calendar No. 599.",
+      "latestActionDate": "2026-06-05",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9171"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 6279,
+      "billId": "hr6279",
+      "title": "Urban Canal Modernization Act",
+      "introducedDate": "2025-11-21",
+      "latestAction": "Referred to the House Committee on Natural Resources.",
+      "latestActionDate": "2025-11-21",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6279"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 4754,
+      "billId": "hr4754",
+      "title": "Department of the Interior, Environment, and Related Agencies Appropriations Act, 2026",
+      "introducedDate": "2025-07-24",
+      "latestAction": "Placed on the Union Calendar, Calendar No. 175.",
+      "latestActionDate": "2025-07-24",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4754"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 634,
+      "billId": "hr634",
+      "title": "Ninth Circuit Court of Appeals Judgeship and Reorganization Act of 2025",
+      "introducedDate": "2025-01-22",
+      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestActionDate": "2025-01-22",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/634"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 319,
+      "billId": "hr319",
+      "title": "To authorize an additional district judgeship for the district of Idaho.",
+      "introducedDate": "2025-01-09",
+      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestActionDate": "2025-01-09",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/319"
+    }
+  ]
 }

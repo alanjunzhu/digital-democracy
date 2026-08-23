@@ -206,5 +206,54 @@
   },
   "officeAddress": "2406 Rayburn House Office Building Washington DC 20515-1705",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8845,
+      "billId": "hr8845",
+      "title": "Commerce, Justice, Science, and Related Agencies Appropriations Act, 2027",
+      "introducedDate": "2026-05-15",
+      "latestAction": "Placed on the Union Calendar, Calendar No. 567.",
+      "latestActionDate": "2026-05-15",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8845"
+    },
+    {
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 874,
+      "billId": "hres874",
+      "title": "Expressing the profound sorrow of the House of Representatives on the death of the Honorable Richard B. Cheney.",
+      "introducedDate": "2025-11-12",
+      "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
+      "latestActionDate": "2025-11-12",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/874"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 5342,
+      "billId": "hr5342",
+      "title": "Commerce, Justice, Science, and Related Agencies Appropriations Act, 2026",
+      "introducedDate": "2025-09-12",
+      "latestAction": "Placed on the Union Calendar, Calendar No. 228.",
+      "latestActionDate": "2025-09-12",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5342"
+    },
+    {
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 4,
+      "billId": "hres4",
+      "title": "Authorizing the Clerk to inform the President of the election of the Speaker and the Clerk.",
+      "introducedDate": "2025-01-03",
+      "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
+      "latestActionDate": "2025-01-03",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/4"
+    }
+  ]
 }

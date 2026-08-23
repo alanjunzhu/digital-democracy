@@ -28,5 +28,66 @@
   },
   "officeAddress": "1039 Longworth House Office Building Washington DC 20515-0908",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9907,
+      "billId": "hr9907",
+      "title": "LEARN AI Act",
+      "introducedDate": "2026-07-23",
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2026-07-23",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9907"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8851,
+      "billId": "hr8851",
+      "title": "One Giant LEAP Act",
+      "introducedDate": "2026-05-15",
+      "latestAction": "Referred to the House Committee on Science, Space, and Technology.",
+      "latestActionDate": "2026-05-15",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8851"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9651,
+      "billId": "hr9651",
+      "title": "Space Ready 2.0 Act",
+      "introducedDate": "2026-07-13",
+      "latestAction": "Referred to the House Committee on Science, Space, and Technology.",
+      "latestActionDate": "2026-07-13",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9651"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 4091,
+      "billId": "hr4091",
+      "title": "LEDGER Act",
+      "introducedDate": "2025-06-24",
+      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
+      "latestActionDate": "2025-06-24",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4091"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 3343,
+      "billId": "hr3343",
+      "title": "Greenlighting Growth Act",
+      "introducedDate": "2025-05-13",
+      "latestAction": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
+      "latestActionDate": "2025-07-22",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3343"
+    }
+  ]
 }

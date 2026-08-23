@@ -110,5 +110,42 @@
   },
   "officeAddress": "2308 Rayburn House Office Building Washington DC 20515-4328",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1413,
+      "billId": "hres1413",
+      "title": "Recognizing the 271st anniversary of Laredo, Texas.",
+      "introducedDate": "2026-07-02",
+      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
+      "latestActionDate": "2026-07-02",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1413"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 7865,
+      "billId": "hr7865",
+      "title": "American Consumer Tariff Rebate Act of 2026",
+      "introducedDate": "2026-03-09",
+      "latestAction": "Referred to the House Committee on Ways and Means.",
+      "latestActionDate": "2026-03-09",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7865"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 1297,
+      "billId": "hr1297",
+      "title": "LPOE Modernization Trust Fund Act",
+      "introducedDate": "2025-02-13",
+      "latestAction": "Referred to the Subcommittee on Border Security and Enforcement.",
+      "latestActionDate": "2025-02-13",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1297"
+    }
+  ]
 }

@@ -37,5 +37,30 @@
   },
   "officeAddress": "1610 Longworth House Office Building Washington DC 20515-2004",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 5361,
+      "billId": "hr5361",
+      "title": "George Floyd Justice in Policing Act of 2025",
+      "introducedDate": "2025-09-15",
+      "latestAction": "Referred to the Committee on the Judiciary, and in addition to the Committees on Armed Services, and Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2025-09-15",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5361"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 2368,
+      "billId": "hr2368",
+      "title": "Raise the Age Act of 2025",
+      "introducedDate": "2025-03-26",
+      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestActionDate": "2025-03-26",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2368"
+    }
+  ]
 }

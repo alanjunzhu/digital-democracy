@@ -24,5 +24,30 @@
   ],
   "officeAddress": "",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 1510,
+      "billId": "hr1510",
+      "title": "Due Process Continuity of Care Act",
+      "introducedDate": "2025-02-21",
+      "latestAction": "ASSUMING FIRST SPONSORSHIP - Ms. Dexter asked unanimous consent that she may hereafter be considered as the first sponsor of H.R. 1510, a bill originally introduced by Representative Turner (TX), for the purpose of adding cosponsors and requesting reprintings pursuant to clause 7 of rule XII. Agreed to without objection.",
+      "latestActionDate": "2025-09-08",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1510"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 1034,
+      "billId": "hr1034",
+      "title": "DHS Cybersecurity On-the-Job Training Program Act",
+      "introducedDate": "2025-02-05",
+      "latestAction": "ASSUMING FIRST SPONSORSHIP - Mr. Magaziner asked unanimous consent that he may hereafter be considered as the first sponsor of H.R. 1034, a bill originally introduced by Representative Turner (TX), for the purpose of adding cosponsors and requesting reprintings pursuant to clause 7 of rule XII. Agreed to without objection.",
+      "latestActionDate": "2025-11-20",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1034"
+    }
+  ]
 }

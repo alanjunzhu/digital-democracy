@@ -118,5 +118,54 @@
   },
   "officeAddress": "2208 Rayburn House Office Building Washington DC 20515-4331",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8469,
+      "billId": "hr8469",
+      "title": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+      "introducedDate": "2026-04-23",
+      "latestAction": "Received in the Senate.",
+      "latestActionDate": "2026-05-20",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8469"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 7489,
+      "billId": "hr7489",
+      "title": "Georgetown VA Community-Based Outpatient Clinic Authorization Act of 2026",
+      "introducedDate": "2026-02-11",
+      "latestAction": "Referred to the Subcommittee on Health.",
+      "latestActionDate": "2026-03-02",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7489"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 3944,
+      "billId": "hr3944",
+      "title": "Military Construction and Veterans Affairs, Agriculture, and Legislative Branch Appropriations Act, 2026",
+      "introducedDate": "2025-06-12",
+      "latestAction": "Message on House action received in Senate and at desk: House requests a conference.",
+      "latestActionDate": "2025-09-18",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3944"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 2360,
+      "billId": "hr2360",
+      "title": "To permanently extend the exemption from the engine compartment portion of the pre-trip vehicle inspection skills testing requirement for school bus drivers, and for other purposes.",
+      "introducedDate": "2025-03-26",
+      "latestAction": "Referred to the Subcommittee on Highways and Transit.",
+      "latestActionDate": "2025-03-26",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2360"
+    }
+  ]
 }

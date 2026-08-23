@@ -78,5 +78,42 @@
   },
   "officeAddress": "2368 Rayburn House Office Building Washington DC 20515-2105",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 5458,
+      "billId": "hr5458",
+      "title": "CCAMPIS Reauthorization Act",
+      "introducedDate": "2025-09-18",
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2025-09-18",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5458"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 3273,
+      "billId": "hr3273",
+      "title": "Child Care Workforce Development Act",
+      "introducedDate": "2025-05-08",
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2025-05-08",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3273"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 3274,
+      "billId": "hr3274",
+      "title": "Child Care Infrastructure Act",
+      "introducedDate": "2025-05-08",
+      "latestAction": "Referred to the House Committee on Ways and Means.",
+      "latestActionDate": "2025-05-08",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3274"
+    }
+  ]
 }

@@ -25,5 +25,54 @@
   ],
   "officeAddress": "408 Cannon House Office Building Washington DC 20515-0501",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10089,
+      "billId": "hr10089",
+      "title": "Representation Act",
+      "introducedDate": "2026-08-13",
+      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestActionDate": "2026-08-13",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10089"
+    },
+    {
+      "congress": 119,
+      "type": "H.J.Res.",
+      "number": 213,
+      "billId": "hjres213",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule issued by the Environmental Protection Agency relating to the \"California State Nonroad Engine Pollution Control Standards; Commercial Harbor Craft Regulations; Notice of Decision\".",
+      "introducedDate": "2026-08-10",
+      "latestAction": "Referred to the House Committee on Energy and Commerce.",
+      "latestActionDate": "2026-08-10",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/213"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10022,
+      "billId": "hr10022",
+      "title": "CLUSTER Act",
+      "introducedDate": "2026-08-03",
+      "latestAction": "Referred to the House Committee on Transportation and Infrastructure.",
+      "latestActionDate": "2026-08-03",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10022"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9512,
+      "billId": "hr9512",
+      "title": "Doug LaMalfa Sacramento River Basin Water Security and Reliability Act of 2026",
+      "introducedDate": "2026-06-29",
+      "latestAction": "Referred to the House Committee on Natural Resources.",
+      "latestActionDate": "2026-06-29",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9512"
+    }
+  ]
 }
