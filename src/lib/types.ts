@@ -314,6 +314,22 @@ export interface CongressPortfolio {
     overlapPurchases: number;
     members: number;
     overlapMembers: number;
+    exceptional: number;
   };
+  members: CongressMemberLine[];
   summary: CongressPortfolioSummary;
+}
+
+export interface CongressMemberLine {
+  bioguideId: string;
+  name: string;
+  /** Growth per dollar invested, aligned to the chart dates. */
+  plot: number[];
+  returnPct: number | null;
+  vsBenchmarkPct: number | null;
+  vsAllPct: number | null;
+  purchases: number;
+  contributed: number;
+  thin: boolean;
+  exceptional: boolean;
 }

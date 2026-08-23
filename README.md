@@ -351,6 +351,13 @@ as a fifth line.
 The same range-midpoint and unmatched-sale limits apply. Individual trade dots are left
 off — there are thousands of them, and they would bury the comparison.
 
+Each member is also drawn as a faint line on the same percent scale. Members whose return
+is a statistical **upper outlier** (above the Tukey fence of the others) *and* who beat the
+S&P 500 are highlighted, named on the chart, and listed. A line that would stretch the
+axis into the hundreds of percent is clipped so the pack stays readable; the name and
+figure are still in the list. Charts built on fewer than five purchases are marked as a
+thin record, because one trade can drive the whole line.
+
 ### The per-trade timing panels
 
 Where a trade falls in a sector the member's committee oversees, the page also compares
