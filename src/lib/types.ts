@@ -273,3 +273,34 @@ export interface MemberPortfolio {
   };
   summary: PortfolioSummary;
 }
+
+export interface CongressStrategy {
+  key: string;
+  label: string;
+  value: number[];
+  deployed: number[];
+  purchases: number;
+  sales: number;
+  contributed: number;
+  returnPct: number;
+  benchmarkReturnPct: number;
+  vsBenchmarkPct: number;
+}
+
+/** Output of buildStrategyComparison() in shared/congress-portfolio.mjs. */
+export interface CongressComparison {
+  ok: true;
+  estimated: boolean;
+  benchmarkTicker: string;
+  dates: string[];
+  benchmark: number[];
+  benchmarkDeployed: number[];
+  strategies: CongressStrategy[];
+  skipped: {
+    noPrice: number;
+    noAmount: number;
+    unmatchedSales: number;
+    outsideWindow: number;
+  };
+  asOf: string;
+}

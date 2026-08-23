@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { MemberPortfolio, PortfolioMarker } from '../../lib/types';
+import { SERIES_COLORS, axisPct, money, niceTicks, pct, spreadLabels } from '../../lib/chart-utils';
 
 interface Props {
   portfolio: MemberPortfolio;
@@ -7,16 +8,11 @@ interface Props {
   benchmarkLabel?: string;
 }
 
-/**
- * Party colors already mean something on this site (blue D, red R, violet I), so
- * the series use a party-neutral set. Validated for CVD separation and contrast
- * against a light surface; the cash line is a neutral reference, not a category.
- */
 const SERIES = {
-  member: '#0d9488',
-  benchmark: '#d97706',
-  follower: '#c026d3',
-  cash: '#9ca3af',
+  member: SERIES_COLORS.primary,
+  benchmark: SERIES_COLORS.benchmark,
+  follower: SERIES_COLORS.variant,
+  cash: SERIES_COLORS.neutral,
 } as const;
 
 /** Below this many purchases, one trade dominates the line and the reader should know. */
@@ -25,47 +21,6 @@ const SMALL_SAMPLE = 5;
 const PAD = { top: 16, right: 96, bottom: 28, left: 60 };
 const W = 720;
 const H = 300;
-
-function money(value: number | null | undefined, compact = false) {
-  if (value == null || !Number.isFinite(value)) return '—';
-  return value.toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-    notation: compact ? 'compact' : 'standard',
-  });
-}
-
-function pct(value: number | null | undefined) {
-  if (value == null || !Number.isFinite(value)) return '—';
-  return `${value > 0 ? '+' : ''}${value.toFixed(1)}%`;
-}
-
-/** Rounded ticks bracketing a signed range, always including zero. */
-function niceTicks(min: number, max: number, count = 4) {
-  const span = Math.max(max - min, 1);
-  const rough = span / count;
-  const mag = 10 ** Math.floor(Math.log10(rough));
-  const step = [1, 2, 2.5, 5, 10].map((m) => m * mag).find((s) => s >= rough) ?? mag * 10;
-  // Round the top tick up, not down, or any series above it clips out of frame.
-  const lo = Math.floor(min / step) * step;
-  const hi = Math.ceil(max / step) * step;
-  const ticks = [];
-  for (let v = lo; v <= hi + step * 0.001; v += step) {
-    ticks.push(Math.abs(v) < step * 0.001 ? 0 : v);
-  }
-  return ticks;
-}
-
-/** Nudge overlapping end labels apart so none is unreadable. */
-function spreadLabels(entries: { key: string; y: number }[], minGap = 12) {
-  const sorted = [...entries].sort((a, b) => a.y - b.y);
-  for (let i = 1; i < sorted.length; i++) {
-    const gap = sorted[i].y - sorted[i - 1].y;
-    if (gap < minGap) sorted[i].y = sorted[i - 1].y + minGap;
-  }
-  return Object.fromEntries(sorted.map((e) => [e.key, e.y]));
-}
 
 export default function MemberPortfolioChart({
   portfolio,
@@ -227,7 +182,7 @@ export default function MemberPortfolioChart({
               stroke={t === 0 ? '#e2e8f0' : '#f1f5f9'} strokeWidth="1"
             />
             <text x={PAD.left - 8} y={geom.y(t) + 3} fontSize="10" fill="#94a3b8" textAnchor="end">
-              {`${t > 0 ? '+' : ''}${t.toFixed(t % 1 === 0 ? 0 : 1)}%`}
+              {axisPct(t)}
             </text>
           </g>
         ))}

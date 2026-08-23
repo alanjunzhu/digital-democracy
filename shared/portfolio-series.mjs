@@ -67,11 +67,11 @@ export function parseAmountRange(label) {
   return null;
 }
 
-function isPurchase(type) {
+export function isPurchase(type) {
   return String(type || '').toLowerCase().includes('purchase');
 }
 
-function isSale(type) {
+export function isSale(type) {
   return String(type || '').toLowerCase().includes('sale');
 }
 

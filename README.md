@@ -115,10 +115,12 @@ digital-democracy/
 │   │       ├── VoteFilter.tsx
 │   │       ├── CommitteeFilter.tsx
 │   │       ├── MemberPortfolioChart.tsx
+│   │       ├── CongressStrategyChart.tsx
 │   │       └── AnalyticsDashboard.tsx
 │   ├── lib/
 │   │   ├── types.ts                     # Shared TypeScript types
 │   │   ├── utils.ts                     # Bill stages, state names, formatting
+│   │   ├── chart-utils.ts               # Shared axis, label and format helpers
 │   │   ├── committees.ts                # Resolve referrals by systemCode
 │   │   └── committee-bills.ts           # Group stored bills onto committee pages
 │   └── styles/
@@ -146,6 +148,7 @@ digital-democracy/
 │   ├── trade-timing.mjs                 # Counterfactual scenarios and trade context
 │   ├── timing-precompute.mjs            # Build-time pairing of chart data to trades
 │   ├── portfolio-series.mjs             # Member portfolio vs S&P 500 vs not investing
+│   ├── congress-portfolio.mjs           # Congress-wide strategy comparison
 │   ├── member-finance-index.mjs         # Per-member trading record for the directory filter
 │   └── data-loader.mjs                  # Memoised reads of the shared data indexes
 ├── tests/                               # node --test
@@ -279,6 +282,32 @@ All three data workflows check out `main`, write JSON, and publish with `scripts
 Ticker-level analysis prefers Stock Watcher dumps when reachable. Otherwise the script merges [CongressWatch](https://congresswatch.vercel.app/data/trades.json), [Kadoa](https://github.com/kadoa-org/congress-trading-monitor) per-filer PTR JSON, and official House Clerk PTR/annual disclosure indexes (Senate eFD when reachable). Records are deduplicated across sources. A fetch that gets no trades at all keeps the file already in `data/`.
 
 > Highlights on member pages are potential conflicts from public disclosures, not findings of wrongdoing.
+
+### The Congress-wide comparison
+
+The finances page opens with one chart answering the aggregate question: mirroring
+**every** disclosed purchase, versus mirroring only the **committee-overlap** ones,
+versus buying the index on the same days, versus holding cash. On the current data:
+
+| Strategy | Return | Capital deployed |
+| --- | --- | --- |
+| All disclosed trades | +13.0% | ~$165M |
+| Committee-overlap trades | +16.3% | ~$27M |
+| S&P 500 (same days) | +20.6% | — |
+| Held cash | 0.0% | — |
+
+Two modelling points make the aggregate honest rather than merely impressive:
+
+- **Holdings are keyed per member and ticker.** Pooling by ticker alone would let one
+  member's sale close another member's position — a trade nobody made.
+- **Each strategy is measured against its own deployed capital**, so the committee
+  subset is not penalised for being a fifth the size. The consequence is that a line
+  can sit *higher* than another while trailing the market by *more*, because the two
+  subsets buy on different days and so face different index returns over their own
+  holding periods. That is exactly what the current data shows.
+
+Most disclosed sales — 4,079 of 7,253 — are of positions bought before the window
+opened, so there is nothing to sell and they are not modelled. The chart says so.
 
 ### Finding members with a trading record
 

@@ -2,6 +2,7 @@
 import Layout from '../../components/layout/Layout.astro';
 import FinanceDashboard from '../../components/interactive/FinanceDashboard';
 import TradeTimingExplorer from '../../components/interactive/TradeTimingExplorer';
+import CongressStrategyChart from '../../components/interactive/CongressStrategyChart';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import {
@@ -14,6 +15,8 @@ import {
 import { buildSuspiciousTradeCandidates } from '../../../shared/trade-timing.mjs';
 import { createTimingAttacher } from '../../../shared/timing-precompute.mjs';
 import { loadDataJSON } from '../../../shared/data-loader.mjs';
+import { buildStrategyComparison, collectCongressTrades } from '../../../shared/congress-portfolio.mjs';
+import { createPriceCacheReader, decodePriceSeries, BENCHMARK_TICKER } from '../../../shared/price-cache.mjs';
 
 function loadJSON(path: string) {
   const fullPath = join(process.cwd(), 'data', path);
@@ -56,6 +59,30 @@ for (const bill of billsIndex) {
   billsBySponsor[id].push(bill);
 }
 
+// Congress-wide strategy comparison: mirroring every disclosed purchase, only
+// the committee-overlap ones, the index, or nothing at all.
+let strategyComparison: any = null;
+if (financeData) {
+  const readPriceCache = createPriceCacheReader(loadDataJSON);
+  const decoded = new Map<string, any>();
+  const getSeries = (ticker: string) => {
+    if (!decoded.has(ticker)) decoded.set(ticker, decodePriceSeries(readPriceCache(ticker)));
+    const rows = decoded.get(ticker);
+    return rows?.length ? rows : null;
+  };
+
+  const congressTrades = collectCongressTrades(financeData);
+  const built = buildStrategyComparison(
+    [
+      { key: 'all', label: 'All trades', trades: congressTrades },
+      { key: 'committee', label: 'Committee trades', trades: congressTrades.filter((t: any) => t.committeeOverlap) },
+    ],
+    getSeries,
+    { benchmarkTicker: BENCHMARK_TICKER },
+  );
+  if (built.ok) strategyComparison = built;
+}
+
 const attachTiming = createTimingAttacher(loadDataJSON);
 const timingCandidates = financeData
   ? buildSuspiciousTradeCandidates(financeData, { limit: 15, billsBySponsor }).map(attachTiming)
@@ -83,6 +110,12 @@ const timingCandidates = financeData
       </div>
     ) : (
       <>
+        {strategyComparison && (
+          <div class="mb-8">
+            <CongressStrategyChart comparison={strategyComparison} client:load />
+          </div>
+        )}
+
         <section class="mb-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">Trade timing insights</h2>
           <p class="text-xs text-gray-500 mb-4 max-w-3xl">
