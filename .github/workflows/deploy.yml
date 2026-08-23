@@ -33,8 +33,10 @@ jobs:
         run: ls data/members/ | head -10 && ls data/members/ | wc -l
       - name: Build Astro site
         run: npx astro build
+      # v5 is the first release whose bundled upload-artifact runs on Node 24;
+      # v4 still pins upload-artifact v4.6.2 and keeps the deprecation warning.
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist/
 
@@ -46,4 +48,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
