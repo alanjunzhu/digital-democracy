@@ -485,22 +485,31 @@ function displayName(name) {
   return `${raw.slice(comma + 1).trim()} ${raw.slice(0, comma).trim()}`;
 }
 
-function groupTradesByMember(trades, names = {}) {
+function groupTradesByMember(trades, names = {}, profiles = {}) {
   const map = new Map();
   for (const trade of trades || []) {
     const id = trade.bioguideId;
     if (!id) continue;
+    const profile = profiles[id] || {};
     let row = map.get(id);
     if (!row) {
       row = {
         bioguideId: id,
-        name: displayName(names[id] || trade.memberName || id),
+        name: displayName(names[id] || profile.name || trade.memberName || id),
+        chamber: profile.chamber || trade.chamber || '',
+        party: profile.party || trade.party || '',
         trades: [],
       };
       map.set(id, row);
     }
     if (names[id]) row.name = displayName(names[id]);
     else if (trade.memberName) row.name = displayName(trade.memberName);
+    if (!row.chamber && (profile.chamber || trade.chamber)) {
+      row.chamber = profile.chamber || trade.chamber;
+    }
+    if (!row.party && (profile.party || trade.party)) {
+      row.party = profile.party || trade.party;
+    }
     row.trades.push(trade);
   }
   return [...map.values()];
@@ -521,6 +530,29 @@ export function percentile(sorted, p) {
   const hi = Math.ceil(i);
   if (lo === hi) return sorted[lo];
   return sorted[lo] + (sorted[hi] - sorted[lo]) * (i - lo);
+}
+
+/** How many top performers the Congress chart highlights by default. */
+export const DEFAULT_HIGHLIGHT_LIMIT = 10;
+
+/**
+ * Members to highlight on first load: the highest returns among those who beat
+ * the S&P 500. Falls back to the highest returns overall if too few beat it.
+ */
+/**
+ * @param {Array<{ bioguideId?: string, returnPct?: number | null }>} members
+ * @param {{ benchmarkReturnPct?: number | null, limit?: number }} [options]
+ * @returns {string[]}
+ */
+export function defaultHighlightIds(members, { benchmarkReturnPct = null, limit = DEFAULT_HIGHLIGHT_LIMIT } = {}) {
+  const ranked = [...(members || [])]
+    .filter((m) => m?.bioguideId && m.returnPct != null && Number.isFinite(m.returnPct))
+    .sort((a, b) => b.returnPct - a.returnPct);
+  const beatMarket = benchmarkReturnPct == null
+    ? ranked
+    : ranked.filter((m) => m.returnPct > benchmarkReturnPct);
+  const pool = beatMarket.length ? beatMarket : ranked;
+  return pool.slice(0, Math.max(0, limit)).map((m) => m.bioguideId);
 }
 
 /**
@@ -556,7 +588,7 @@ export function flagExceptionalMembers(members, { benchmarkReturnPct = null } = 
  * Trading (all); committee-vs-its-own-index lives in the summary.
  */
 export function buildCongressPortfolioSeries(trades, getSeries, options = {}) {
-  const { benchmarkTicker = 'SPY', maxPoints = 260, names = {} } = options;
+  const { benchmarkTicker = 'SPY', maxPoints = 260, names = {}, profiles = {} } = options;
   const shared = { benchmarkTicker, maxPoints: Infinity, includeFollower: false };
 
   const all = buildPortfolioSeries(trades, getSeries, shared);
@@ -568,7 +600,7 @@ export function buildCongressPortfolioSeries(trades, getSeries, options = {}) {
     : { ok: false };
 
   const memberRows = [];
-  for (const group of groupTradesByMember(trades, names)) {
+  for (const group of groupTradesByMember(trades, names, profiles)) {
     const built = buildPortfolioSeries(group.trades, getSeries, shared);
     if (!built.ok) continue;
     const values = overlaySeries(all.dates, built, 'member');
@@ -577,6 +609,8 @@ export function buildCongressPortfolioSeries(trades, getSeries, options = {}) {
     memberRows.push({
       bioguideId: group.bioguideId,
       name: group.name,
+      chamber: group.chamber || '',
+      party: group.party || '',
       plot: indexGrowth(values, cash),
       returnPct: built.summary.returnPct,
       vsBenchmarkPct: built.summary.vsBenchmarkPct,
