@@ -31,7 +31,7 @@ const SERIES = {
   highlight: '#6d28d9',
 } as const;
 
-const PAD = { top: 16, right: 132, bottom: 28, left: 60 };
+const PAD = { top: 22, right: 168, bottom: 34, left: 62 };
 const W = 720;
 const H = 340;
 
@@ -211,20 +211,76 @@ export default function CongressPortfolioChart({
     const plotH = H - PAD.top - PAD.bottom;
     const x = (i: number) => PAD.left + (dates.length < 2 ? 0 : (i / (dates.length - 1)) * plotW);
     const y = (v: number) => PAD.top + plotH - ((v - bottom) / (top - bottom || 1)) * plotH;
-    const path = (values: number[]) =>
-      values.map((v, i) => `${i === 0 ? 'M' : 'L'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
-    return { x, y, path, ticks, plotW, plotH, top, domain };
+    /**
+     * A line that leaves the frame touches the edge and stops there, picking up
+     * again where it comes back. Tracing along the edge instead would draw a
+     * plateau the member never had — the reason the old chart looked as though
+     * four people flattened out at the top tick.
+     */
+    const path = (values: number[]) => {
+      let d = '';
+      let open = false;
+      for (let i = 0; i < values.length; i++) {
+        const v = values[i];
+        const inside = v >= bottom && v <= top;
+        const cy = y(Math.max(bottom, Math.min(top, v)));
+        if (inside) {
+          d += `${open ? 'L' : 'M'}${x(i).toFixed(1)},${cy.toFixed(1)} `;
+          open = true;
+        } else if (open) {
+          // Meet the edge, then break until the line comes back in frame.
+          d += `L${x(i).toFixed(1)},${cy.toFixed(1)} `;
+          open = false;
+        }
+      }
+      return d.trim();
+    };
+    // Off-scale is judged against the drawn frame — the axis is rounded out to
+    // nice ticks, so a value between the domain and the top tick is still visible.
+    const frame = { min: bottom, max: top };
+    return { x, y, path, ticks, plotW, plotH, top, domain, frame };
   }, [dates, highlighted, members, visible, zoom]);
 
-  const clippedHighlights = highlighted.filter((m) => isReturnClipped(m.returnPct, geom.domain));
+  const clippedHighlights = highlighted.filter((m) => isReturnClipped(m.returnPct, geom.frame));
 
-  const labelY = spreadLabels([
-    ...visible.map((l) => ({ key: l.key, y: geom.y(l.plot[l.plot.length - 1]) + 3 })),
-    ...highlighted.map((m) => ({
-      key: m.bioguideId,
-      y: Math.max(PAD.top + 8, Math.min(geom.y(m.plot[m.plot.length - 1]) + 3, H - PAD.bottom)),
-    })),
-  ]);
+  /**
+   * Every line ends in the right gutter as "name +value", on a leader from the
+   * point it actually ends at. A line whose end sits outside the axis is drawn
+   * to the frame edge, so it is marked with an arrow and still carries its real
+   * return — otherwise a clipped line reads as one that flattened out.
+   */
+  const endPoints = useMemo(() => {
+    const clampY = (v: number) => Math.max(PAD.top, Math.min(geom.y(v), H - PAD.bottom));
+    const rows = [
+      ...visible.map((l) => {
+        const end = l.plot[l.plot.length - 1];
+        return {
+          key: l.key,
+          label: l.label,
+          value: l.returnPct,
+          color: l.color,
+          muted: l.key === 'cash',
+          y: clampY(end),
+          off: isReturnClipped(end, geom.frame) ? (end > geom.frame.max ? 1 : -1) : 0,
+        };
+      }),
+      ...highlighted.map((m) => {
+        const end = m.plot[m.plot.length - 1];
+        return {
+          key: m.bioguideId,
+          label: shortName(m.name, 13),
+          value: m.returnPct,
+          color: SERIES.highlight,
+          muted: false,
+          y: clampY(end),
+          off: isReturnClipped(m.returnPct, geom.frame) ? ((m.returnPct ?? 0) > geom.frame.max ? 1 : -1) : 0,
+        };
+      }),
+    ];
+    return rows.sort((a, b) => a.y - b.y);
+  }, [geom, highlighted, visible]);
+
+  const labelY = spreadLabels(endPoints.map((r) => ({ key: r.key, y: r.y + 3 })), 13);
 
   const hoverIdx = hover != null ? Math.min(Math.max(hover, 0), dates.length - 1) : null;
 
@@ -433,9 +489,13 @@ export default function CongressPortfolioChart({
         </div>
       </div>
       <p className="text-[10px] text-gray-400 mt-1">
-        + tightens around the strategy lines. − widens the axis.
+        The axis fits the strategies and nine members in ten. + tightens it around the
+        strategy lines, − widens it until every member fits.
         {clippedHighlights.length > 0
-          ? ` Use − if a highlighted line is clipped (${clippedHighlights.map((m) => m.name).join(', ')}).`
+          ? ` Off the top edge, marked ↑: ${clippedHighlights
+              .slice(0, 3)
+              .map((m) => `${m.name} ${pct(m.returnPct)}`)
+              .join(', ')}${clippedHighlights.length > 3 ? ` and ${clippedHighlights.length - 3} more` : ''}.`
           : ''}
       </p>
 
@@ -452,6 +512,10 @@ export default function CongressPortfolioChart({
           <clipPath id={`plot-${clipId}`}>
             <rect x={PAD.left} y={PAD.top} width={geom.plotW} height={geom.plotH} />
           </clipPath>
+          <linearGradient id={`fade-${clipId}`} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.92" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+          </linearGradient>
         </defs>
         {geom.ticks.map((t) => (
           <g key={t}>
@@ -465,6 +529,16 @@ export default function CongressPortfolioChart({
           </g>
         ))}
 
+        <text
+          x={-(PAD.top + geom.plotH / 2)}
+          y={13}
+          fontSize="10"
+          fill="#94a3b8"
+          textAnchor="middle"
+          transform="rotate(-90)"
+        >
+          Return per dollar invested
+        </text>
         <text x={PAD.left} y={H - 8} fontSize="10" fill="#94a3b8">{dates[0]}</text>
         <text x={W - PAD.right} y={H - 8} fontSize="10" fill="#94a3b8" textAnchor="end">
           {dates[dates.length - 1]}
@@ -478,7 +552,7 @@ export default function CongressPortfolioChart({
               fill="none"
               stroke={SERIES.member}
               strokeWidth="1"
-              strokeOpacity="0.28"
+              strokeOpacity="0.22"
               strokeLinejoin="round"
             />
           ))}
@@ -505,22 +579,48 @@ export default function CongressPortfolioChart({
           ))}
         </g>
 
-        {visible.map((l) => (
-          <text key={l.key} x={W - PAD.right + 6} y={labelY[l.key]} fontSize="10" fill="#64748b">
-            {l.label}
-          </text>
-        ))}
-        {highlighted.map((m) => (
-          <text
-            key={m.bioguideId}
-            x={W - PAD.right + 6}
-            y={labelY[m.bioguideId]}
-            fontSize="10"
-            fill={SERIES.highlight}
-          >
-            {shortName(m.name)}
-          </text>
-        ))}
+        {clippedHighlights.length > 0 && (
+          <rect
+            x={PAD.left}
+            y={PAD.top}
+            width={geom.plotW}
+            height={14}
+            fill={`url(#fade-${clipId})`}
+            pointerEvents="none"
+          />
+        )}
+
+        {endPoints.map((row) => {
+          const labelTop = labelY[row.key];
+          const gutter = W - PAD.right;
+          return (
+            <g key={row.key}>
+              {/* Leader from where the line ends to where its name sits. */}
+              <path
+                d={`M${gutter - 2},${row.y} L${gutter + 6},${row.y} L${gutter + 10},${labelTop - 3}`}
+                fill="none"
+                stroke={row.color}
+                strokeWidth="1"
+                strokeOpacity={row.muted ? 0.35 : 0.5}
+              />
+              {row.off !== 0 && (
+                <path
+                  d={row.off > 0
+                    ? `M${gutter - 8},${PAD.top + 7} l4,-6 l4,6 z`
+                    : `M${gutter - 8},${H - PAD.bottom - 7} l4,6 l4,-6 z`}
+                  fill={row.color}
+                />
+              )}
+              <text x={gutter + 13} y={labelTop} fontSize="10" fill={row.muted ? '#94a3b8' : '#475569'}>
+                {row.label}
+                <tspan fontWeight="600" fill={row.off !== 0 ? row.color : '#0f172a'}>
+                  {` ${pct(row.value)}`}
+                </tspan>
+                {row.off !== 0 && <tspan fill={row.color}>{row.off > 0 ? ' ↑' : ' ↓'}</tspan>}
+              </text>
+            </g>
+          );
+        })}
 
         {hoverIdx != null && (
           <line

@@ -5,7 +5,8 @@
  * − zooms out (wider band, eventually the full outlier range).
  *
  * 0 Strategies  — cash / all / S&P / committee only
- * 1 Pack        — typical member returns; a singleton spike is clipped
+ * 1 Pack        — the strategies plus nine members in ten; the rest run off the
+ *                 top edge, marked with the return they actually reached
  * 2 Highlighted — fit the currently highlighted members
  * 3 Full range  — every member's return
  */
@@ -41,30 +42,20 @@ function padRange(lo, hi) {
 }
 
 /**
- * In-frame ceiling for the default pack view. A singleton spike (hundreds of
- * percent on a handful of trades) is dropped so the rest of the chart stays
- * readable; press − to bring it back.
+ * In-frame ceiling for the default pack view: where the ninth member out of ten
+ * ends up.
+ *
+ * The highlighted set used to set this ceiling, and since the default
+ * highlights are the ten members who beat the market by the most, the axis was
+ * always stretched to the top of the distribution — the four strategy lines,
+ * which is what the chart is about, ended up sharing a tenth of the plot
+ * height. The pack view now means the pack; members above it are drawn to the
+ * frame edge and labelled with their real return, and − fits them properly.
  */
-export function packCeiling(memberReturns, highlightedReturns = []) {
+export function packCeiling(memberReturns) {
   const members = finite(memberReturns).sort((a, b) => a - b);
-  const highlighted = finite(highlightedReturns).sort((a, b) => a - b);
-  const typical = (sorted) => {
-    if (!sorted.length) return 0;
-    return sorted[Math.min(sorted.length - 1, Math.round((sorted.length - 1) * 0.9))];
-  };
-  const dropSpike = (top, next) => top > next * 1.8 && top - next > 40;
-
-  if (highlighted.length >= 2) {
-    const top = highlighted[highlighted.length - 1];
-    const next = highlighted[highlighted.length - 2];
-    return dropSpike(top, next) ? next : top;
-  }
-  if (highlighted.length === 1) {
-    const spike = highlighted[0];
-    const next = typical(members);
-    return dropSpike(spike, next) ? next : spike;
-  }
-  return typical(members);
+  if (!members.length) return 0;
+  return members[Math.min(members.length - 1, Math.round((members.length - 1) * 0.9))];
 }
 
 /**
@@ -113,7 +104,7 @@ export function yDomainForZoom({
     : 0;
   return padRange(
     Math.min(strategyLo, packLo, 0),
-    Math.max(strategyHi, packCeiling(members, highlighted), 0),
+    Math.max(strategyHi, packCeiling(members), 0),
   );
 }
 

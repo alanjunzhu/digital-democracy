@@ -19,12 +19,12 @@ test('clampZoom stays on the discrete 0–3 ladder', () => {
   assert.equal(clampZoom(1.4), ZOOM_PACK);
 });
 
-test('packCeiling drops a singleton spike so the rest stay in frame', () => {
+test('packCeiling follows the pack, not whoever is highlighted', () => {
   const members = [5, 8, 10, 12, 15, 28, 50, 51, 52, 81, 88, 103, 306];
-  const highlighted = [50, 51, 52, 54, 56, 81, 88, 103, 306];
-  assert.equal(packCeiling(members, highlighted), 103);
-  assert.equal(packCeiling([5, 10, 20], [200]), 20);
-  assert.equal(packCeiling([10, 12, 14], [14, 15]), 15);
+  // Nine members in ten end at or below 103; the 306% outlier does not set the axis.
+  assert.equal(packCeiling(members), 103);
+  assert.equal(packCeiling([5, 10, 20]), 20);
+  assert.equal(packCeiling([]), 0);
 });
 
 test('+ tightens the axis; − widens it through highlighted then full range', () => {
@@ -44,7 +44,9 @@ test('+ tightens the axis; − widens it through highlighted then full range', (
   assert.ok(span(highlighted) <= span(full) + 1e-9);
 
   assert.ok(strategies.max < 40);
-  assert.ok(pack.max < 150);
+  // The pack ends at 103, and the strategies top out at 21 — neither the 306%
+  // outlier nor the highlighted set stretches the default axis to reach them.
+  assert.ok(pack.max < 130);
   assert.ok(pack.max > 90);
   assert.ok(highlighted.max > 300);
   assert.ok(full.max > 300);
