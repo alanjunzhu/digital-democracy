@@ -83,6 +83,19 @@ test('floor mechanics are reported as procedural rather than forced into an area
   assert.deepEqual(classifyVote({ question: 'On Passage' }), { areaId: null, source: 'unclassified' });
 });
 
+test('a motion aimed at a bill stays procedural even when the vote carries that bill\'s subject', () => {
+  // fetch-votes.mjs copies the bill's policy area onto every vote that names it,
+  // cloture and tabling motions included.
+  assert.deepEqual(
+    classifyVote({ topic: 'Immigration', billId: 'hr100', question: 'Motion to Invoke Cloture: H.R. 100' }, { billsById: { hr100: { policyArea: 'Immigration' } } }),
+    { areaId: null, source: 'procedural' }
+  );
+  assert.deepEqual(
+    classifyVote({ billId: 'hr100', question: 'On Motion to Recommit' }, { billsById: { hr100: { policyArea: 'Health', title: 'A Medicare bill' } } }),
+    { areaId: null, source: 'procedural' }
+  );
+});
+
 test('party tallies are recounted from member casts, not the stored breakdown', () => {
   const tally = tallyPartyVotes([
     { party: 'D', voteCast: 'Nay' },

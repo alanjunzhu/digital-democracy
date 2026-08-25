@@ -128,6 +128,19 @@ function areaFromTopic(topic) {
 export function classifyVote(vote, { billsById = {} } = {}) {
   if (!vote) return { areaId: null, source: 'unclassified' };
 
+  const question = lower(vote.question);
+
+  /**
+   * Floor mechanics are settled from the question alone, before any subject is
+   * considered. A cloture motion or a motion to table names the measure it is
+   * aimed at, and the fetch script copies that bill's policy area onto the vote,
+   * so a later check would let those votes through as if they were votes on the
+   * measure itself.
+   */
+  if (PROCEDURAL_PATTERNS.some(p => question.includes(p))) {
+    return { areaId: null, source: 'procedural' };
+  }
+
   const fromTopic = areaFromTopic(vote.topic);
   if (fromTopic) return { areaId: fromTopic, source: 'topic' };
 
@@ -135,13 +148,11 @@ export function classifyVote(vote, { billsById = {} } = {}) {
   const fromBill = areaFromTopic(bill?.policyArea);
   if (fromBill) return { areaId: fromBill, source: 'bill' };
 
-  const text = `${lower(vote.question)} ${lower(bill?.title)}`.trim();
+  const text = `${question} ${lower(bill?.title)}`.trim();
   const fromText = matchKeywords(text);
   if (fromText) return { areaId: fromText, source: 'question' };
 
-  if (PROCEDURAL_PATTERNS.some(p => text.includes(p)) || lower(vote.topic) === 'procedural') {
-    return { areaId: null, source: 'procedural' };
-  }
+  if (lower(vote.topic) === 'procedural') return { areaId: null, source: 'procedural' };
   return { areaId: null, source: 'unclassified' };
 }
 
