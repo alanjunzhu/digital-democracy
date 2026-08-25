@@ -1,0 +1,120 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import PolicyStanceChart from '../../components/interactive/PolicyStanceChart';
+import { buildPolicyIndex } from '../../lib/policy-areas';
+import type { PolicyIndex } from '../../lib/policy-areas';
+import { loadDataJSON } from '../../../shared/data-loader.mjs';
+import { readFileSync, existsSync, readdirSync } from 'fs';
+import { join } from 'path';
+
+const votesIndex = loadDataJSON('votes/index.json') || { votes: [], congress: 119 };
+const membersIndex = loadDataJSON('members/index.json') || { members: [] };
+
+/**
+ * Scores need every member's cast, which only the per-roll-call files carry,
+ * and the party split has to be recounted from those casts: the stored
+ * partyBreakdown on House votes files everyone under `democratic`.
+ */
+const votesDir = join(process.cwd(), 'data', 'votes');
+const fullVotes: any[] = [];
+for (const summary of votesIndex.votes || []) {
+  const path = join(votesDir, `${summary.voteId}.json`);
+  if (!existsSync(path)) continue;
+  try { fullVotes.push(JSON.parse(readFileSync(path, 'utf-8'))); } catch {}
+}
+
+const billsById: Record<string, any> = {};
+const billsDir = join(process.cwd(), 'data', 'bills');
+if (existsSync(billsDir)) {
+  for (const file of readdirSync(billsDir)) {
+    if (!file.endsWith('.json') || file === 'index.json') continue;
+    try {
+      const bill = JSON.parse(readFileSync(join(billsDir, file), 'utf-8'));
+      if (bill?.billId) billsById[bill.billId] = bill;
+    } catch {}
+  }
+}
+
+const index: PolicyIndex = buildPolicyIndex(fullVotes, membersIndex.members, { billsById });
+const { coverage } = index;
+const widestGap = [...index.areas]
+  .map(area => ({
+    area,
+    gap: area.partyStand.democratic != null && area.partyStand.republican != null
+      ? Math.abs(area.partyStand.republican - area.partyStand.democratic)
+      : -1,
+  }))
+  .sort((a, b) => b.gap - a.gap)[0];
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Policy Areas"
+  description="Where every senator and representative stands across policy areas, and how the two parties line up, in one chart."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="mb-6">
+      <h1 class="text-3xl font-bold text-gray-900">Policy Areas</h1>
+      <p class="text-gray-500 mt-1">
+        Where members stand across {index.areas.length} policy areas of the {votesIndex.congress || 119}th Congress,
+        scored on {coverage.contested} roll calls that split the two parties.
+      </p>
+    </div>
+
+    {index.areas.length > 0 ? (
+      <>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div class="bg-white border border-gray-200 rounded-xl p-4">
+            <div class="text-xs text-gray-500">Roll calls classified</div>
+            <div class="text-2xl font-bold text-gray-900">{coverage.classified}</div>
+            <div class="text-xs text-gray-500 mt-1">of {coverage.total} in this Congress</div>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-4">
+            <div class="text-xs text-gray-500">Splitting the parties</div>
+            <div class="text-2xl font-bold text-gray-900">{coverage.contested}</div>
+            <div class="text-xs text-gray-500 mt-1">party majorities on opposite sides</div>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-4">
+            <div class="text-xs text-gray-500">Members scored</div>
+            <div class="text-2xl font-bold text-gray-900">{index.members.length}</div>
+            <div class="text-xs text-gray-500 mt-1">at least {index.minMemberVotes} votes in an area</div>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-4">
+            <div class="text-xs text-gray-500">Widest party gap</div>
+            <div class="text-2xl font-bold text-gray-900">{widestGap && widestGap.gap >= 0 ? `${Math.round(widestGap.gap)} pts` : '—'}</div>
+            <div class="text-xs text-gray-500 mt-1">{widestGap?.area.label}</div>
+          </div>
+        </div>
+
+        <PolicyStanceChart index={index} baseUrl={base} client:load />
+
+        <div class="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm text-gray-600 space-y-2">
+          <h2 class="font-semibold text-gray-900">How these scores are built</h2>
+          <p>
+            Every roll call is sorted into a policy area from the vote's own topic, the policy area of the
+            bill it names, or the wording of the question. {coverage.procedural} votes are floor mechanics
+            (cloture, the previous question, motions to table) and {coverage.unclassified} carry no subject
+            wording at all — House questions are usually just "On Passage" — so neither group is scored.
+          </p>
+          <p>
+            Only <strong>contested</strong> roll calls count: those where a majority of Democrats voted one way and a
+            majority of Republicans the other. Lopsided votes say nothing about where a member stands.
+            <strong> Support</strong> is the share of an area's contested measures a member voted for.
+            <strong> Party-line lean</strong> runs from −100 (always with the Democratic majority) to +100 (always with
+            the Republican one). The two chambers vote on different measures, so compare within a chamber.
+          </p>
+          <p>
+            An area appears once it has at least {index.minAreaVotes} contested roll calls; a member is plotted in an
+            area once they cast at least {index.minMemberVotes} votes in it.
+          </p>
+        </div>
+      </>
+    ) : (
+      <div class="text-center py-16 text-gray-500">
+        <p class="text-lg">No vote data available yet.</p>
+        <p class="mt-2 text-sm">Run the vote fetch script to populate roll calls.</p>
+      </div>
+    )}
+  </div>
+</Layout>
