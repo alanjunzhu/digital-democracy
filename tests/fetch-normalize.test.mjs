@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
-import { normalizeBill, normalizeBillCommittees } from '../scripts/fetch-bills.mjs';
+import { citedBillRefs, normalizeBill, normalizeBillCommittees } from '../scripts/fetch-bills.mjs';
 import { billsWindowStart, extractOfficialWebsite, normalizeCommitteeBills } from '../scripts/fetch-committees.mjs';
 
 test('a resolution is normalized with its own congress.gov URLs', () => {
@@ -113,4 +113,28 @@ test('only a real website is treated as the committee website', () => {
   assert.equal(extractOfficialWebsite({ url: 'https://waysandmeans.house.gov/' }), 'https://waysandmeans.house.gov/');
   assert.equal(extractOfficialWebsite({ url: 'https://api.congress.gov/v3/committee/house/hswm00?format=json' }), '');
   assert.equal(extractOfficialWebsite(null), '');
+});
+
+test('bills cited by roll calls are fetched on top of the recent list', () => {
+  const votesIndex = {
+    votes: [
+      { voteId: 'h-rc1', billId: 'hr1', billType: 'hr', billNumber: 1 },
+      // The same measure across several roll calls is fetched once.
+      { voteId: 'h-rc2', billId: 'hr1', billType: 'hr', billNumber: 1 },
+      { voteId: 's2-rc1', billId: 'sjres181', billType: 'sjres', billNumber: 181 },
+      // Already in the recent list.
+      { voteId: 's2-rc2', billId: 'hr7147', billType: 'hr', billNumber: 7147 },
+      // Procedural votes name no measure.
+      { voteId: 'h-rc3' },
+    ],
+  };
+
+  assert.deepEqual(
+    citedBillRefs([{ type: 'H.R.', number: 7147 }], votesIndex),
+    [{ type: 'hr', number: 1 }, { type: 'sjres', number: 181 }]
+  );
+});
+
+test('a missing votes index leaves the bill fetch as it was', () => {
+  assert.deepEqual(citedBillRefs([{ type: 'H.R.', number: 1 }], null), []);
 });

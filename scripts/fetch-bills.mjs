@@ -23,6 +23,17 @@ const API_KEY = process.env.CONGRESS_API_KEY;
 const CONGRESS_NUMBER = 119;
 const MAX_BILLS = 500;
 
+/**
+ * Bills the chambers actually voted on, on top of the recent list.
+ *
+ * The recent list is sorted by update date and misses most measures that
+ * reached a floor vote, so roll calls had no bill record to take a policy area
+ * from: 64 of the 409 votes citing a bill could be matched. These are the
+ * records that give a vote its subject, and the cap keeps the job inside the
+ * workflow's 20 minutes if a future congress cites far more.
+ */
+const MAX_CITED_BILLS = 400;
+
 async function fetchRecentBills() {
   console.log(`Fetching bills from Congress.gov API (Congress ${CONGRESS_NUMBER})...`);
   const baseUrl = `${getCongressAPIBaseUrl()}/bill/${CONGRESS_NUMBER}`;
@@ -146,6 +157,23 @@ export function normalizeBillCommittees(committeesData) {
 }
 
 /**
+ * Measures cited by stored roll calls that the recent list did not already
+ * bring in. Votes carry the bill's type and number, so nothing needs parsing.
+ */
+export function citedBillRefs(recentBills, votesIndex = readJSON('votes/index.json')) {
+  const have = new Set((recentBills || []).map(b => getBillId(normalizeBillType(b.type), b.number)));
+  const refs = new Map();
+
+  for (const vote of votesIndex?.votes || []) {
+    if (!vote.billId || !vote.billType || !vote.billNumber) continue;
+    if (have.has(vote.billId) || refs.has(vote.billId)) continue;
+    refs.set(vote.billId, { type: normalizeBillType(vote.billType), number: vote.billNumber });
+  }
+
+  return [...refs.values()].slice(0, MAX_CITED_BILLS);
+}
+
+/**
  * Fetch all data for a single bill (detail + actions + sub-resources) in one go.
  * Uses Promise.all to parallelize the 5 API calls per bill.
  */
@@ -181,7 +209,10 @@ async function main() {
     process.exit(1);
   }
 
-  const bills = await fetchRecentBills();
+  const recent = await fetchRecentBills();
+  const cited = citedBillRefs(recent);
+  const bills = [...recent, ...cited];
+  console.log(`\n${cited.length} more bills cited by stored roll calls`);
   console.log(`\nFetching details for ${bills.length} bills (batched, 5 concurrent)...`);
   console.log('  Each bill fetches 5 sub-resources in parallel.\n');
 

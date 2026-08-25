@@ -146,6 +146,16 @@ export function parseUsDate(value) {
   return normalizeFinanceDate(value);
 }
 
+/**
+ * How far back trade records are kept.
+ *
+ * Kadoa publishes disclosures back to 2012 — 53,780 congress transactions
+ * against the ~14,000 kept here — and taking all of it would quadruple the
+ * stored rows and the tickers the price fetch has to cover. Two years spans the
+ * congress this site reports on plus the run-up to it, which is the window the
+ * pages actually chart; older filings belong to members and committees that no
+ * longer sit.
+ */
 function twoYearCutoff() {
   const cutoff = new Date();
   cutoff.setFullYear(cutoff.getFullYear() - 2);
