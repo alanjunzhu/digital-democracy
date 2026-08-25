@@ -763,11 +763,14 @@ async function main() {
     filingSources.push(senateEfdFilings);
   }
 
-  const merged = mergeFinanceTrades(...tickerSources, ...filingSources);
-
   // Sources overlap on documents, not on wording: one parse of each filing wins,
-  // dates are checked against the date that filing reached the clerk.
-  const { trades: allTrades, stats: reconciliation } = reconcileFinanceTrades(merged);
+  // dates are checked against the date that filing reached the clerk. This runs
+  // before the merge, which would otherwise drop the losing source's lines and
+  // leave the election counting a partial parse.
+  const { trades: reconciled, stats: reconciliation } = reconcileFinanceTrades(
+    [...tickerSources.flat(), ...filingSources.flat()]
+  );
+  const allTrades = mergeFinanceTrades(reconciled);
   allTrades.sort((a, b) => (b.transactionDate || '').localeCompare(a.transactionDate || ''));
   console.log(`\nTotal merged trades/filings: ${allTrades.length}`);
   console.log(

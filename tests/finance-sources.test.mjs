@@ -214,18 +214,18 @@ test('the year is repaired against the date the filing reached the clerk', () =>
 });
 
 test('one parse of a filing wins, so a shared line item is not counted twice', () => {
-  // CongressWatch transcribes three lines of this report; Kadoa reaches one.
-  const congressWatch = [
-    line('congresswatch', { disclosureDate: '2025-12-26' }),
-    line('congresswatch', { ticker: 'JPM', transactionDate: '2025-12-27', disclosureDate: '2025-12-27' }),
-    line('congresswatch', { ticker: 'AAPL', transactionDate: '2025-12-28', disclosureDate: '2025-12-28' }),
+  // Both read the same report; Kadoa reaches three lines, CongressWatch one.
+  const kadoa = [
+    line('kadoa', { owner: 'SP' }),
+    line('kadoa', { ticker: 'JPM', transactionDate: '2025-12-27', owner: 'SP' }),
+    line('kadoa', { ticker: 'AAPL', transactionDate: '2025-12-28', owner: 'SP' }),
   ];
-  const kadoa = [line('kadoa', { type: 'Purchase (Partial)', owner: 'SP' })];
+  const congressWatch = [line('congresswatch', { type: 'Purchase (Partial)', owner: 'Spouse' })];
 
-  const { trades, stats } = reconcileFinanceTrades([...congressWatch, ...kadoa, FILING], { today: '2026-08-25' });
+  const { trades, stats } = reconcileFinanceTrades([...kadoa, ...congressWatch, FILING], { today: '2026-08-25' });
 
-  assert.equal(trades.filter(t => t.source === 'kadoa').length, 0);
-  assert.equal(trades.filter(t => t.source === 'congresswatch').length, 3);
+  assert.equal(trades.filter(t => t.source === 'congresswatch').length, 0);
+  assert.equal(trades.filter(t => t.source === 'kadoa').length, 3);
   assert.equal(stats.duplicateDropped, 1);
   // The filing record itself survives alongside the line items.
   assert.equal(trades.filter(t => t.type === 'PTR filing').length, 1);
@@ -234,14 +234,22 @@ test('one parse of a filing wins, so a shared line item is not counted twice', (
 test('the fuller parse wins even when a lower-priority source made it', () => {
   const { trades } = reconcileFinanceTrades(
     [
-      line('congresswatch'),
       line('kadoa'),
-      line('kadoa', { ticker: 'JPM', transactionDate: '2025-12-27' }),
+      line('congresswatch'),
+      line('congresswatch', { ticker: 'JPM', transactionDate: '2025-12-27' }),
       FILING,
     ],
     { today: '2026-08-25' }
   );
-  assert.deepEqual(trades.filter(t => t.ticker).map(t => t.source), ['kadoa', 'kadoa']);
+  assert.deepEqual(trades.filter(t => t.ticker).map(t => t.source), ['congresswatch', 'congresswatch']);
+});
+
+test('an equal parse goes to the source that carries the filing dates', () => {
+  const { trades } = reconcileFinanceTrades(
+    [line('congresswatch', { disclosureDate: '2025-12-26' }), line('kadoa'), FILING],
+    { today: '2026-08-25' }
+  );
+  assert.deepEqual(trades.filter(t => t.ticker).map(t => t.source), ['kadoa']);
 });
 
 test('a disclosure date that only repeats the transaction date is refilled', () => {

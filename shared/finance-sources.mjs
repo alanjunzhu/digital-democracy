@@ -119,12 +119,13 @@ export function mergeFinanceTrades(...lists) {
 /**
  * Which parse of a filing to keep when two sources read the same PDF.
  *
- * CongressWatch transcribes every line of a report; Kadoa's parse of the same
- * document is often truncated to the first line or two and occasionally staples
- * an equity ticker onto a municipal bond. Completeness decides first, and this
- * order breaks the tie.
+ * Measured against the sources' own feeds over the filings both had read:
+ * Kadoa transcribed more lines on 41 reports, CongressWatch on 5, and they
+ * matched on 269. Kadoa also carries the notification and filing dates, so it
+ * leads here. Completeness still decides first — this order only breaks ties,
+ * and it must not override a source that simply read more of the report.
  */
-export const TRADE_SOURCE_PRIORITY = ['congresswatch', 'kadoa', 'stock-watcher', 'house-clerk', 'senate-efd'];
+export const TRADE_SOURCE_PRIORITY = ['kadoa', 'congresswatch', 'stock-watcher', 'house-clerk', 'senate-efd'];
 
 const FILING_TYPES = new Set(['ptr filing', 'annual disclosure']);
 
@@ -190,6 +191,10 @@ function filingDatesByUrl(trades) {
  * merging them item by item leaves the same trade in the data twice. Instead one
  * parse of each document wins, its dates are checked against the filing date,
  * and anything still dated in the future is dropped rather than shown.
+ *
+ * Run this before any cross-source dedupe: electing a winner counts the lines
+ * each source read, and a dedupe pass ahead of it deletes some of them,
+ * handing the filing to whichever source happened to be merged first.
  */
 export function reconcileFinanceTrades(trades, { today = new Date().toISOString().slice(0, 10) } = {}) {
   const rows = (trades || []).filter(Boolean);
