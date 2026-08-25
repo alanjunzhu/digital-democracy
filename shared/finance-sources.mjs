@@ -116,6 +116,146 @@ export function mergeFinanceTrades(...lists) {
   return merged;
 }
 
+/**
+ * Which parse of a filing to keep when two sources read the same PDF.
+ *
+ * CongressWatch transcribes every line of a report; Kadoa's parse of the same
+ * document is often truncated to the first line or two and occasionally staples
+ * an equity ticker onto a municipal bond. Completeness decides first, and this
+ * order breaks the tie.
+ */
+export const TRADE_SOURCE_PRIORITY = ['congresswatch', 'kadoa', 'stock-watcher', 'house-clerk', 'senate-efd'];
+
+const FILING_TYPES = new Set(['ptr filing', 'annual disclosure']);
+
+export function isFilingRecord(trade) {
+  return FILING_TYPES.has(String(trade?.type || '').toLowerCase().trim());
+}
+
+function shiftYear(date, years) {
+  const [y, m, d] = date.split('-').map(Number);
+  const shifted = new Date(Date.UTC(y + years, m - 1, d));
+  if (shifted.getUTCMonth() !== m - 1 || shifted.getUTCDate() !== d) return null;
+  return shifted.toISOString().slice(0, 10);
+}
+
+/**
+ * A transaction cannot postdate the report that discloses it, so one that does
+ * carries a filer's typo — a PTR filed 2026-02-09 listing 12/26/2026 means
+ * 12/26/2025. Roll the year back until the date lands before the filing, and
+ * leave it alone when no year within three does.
+ */
+export function reconcileTransactionDate(transactionDate, filingDate) {
+  const date = normalizeFinanceDate(transactionDate);
+  const filed = normalizeFinanceDate(filingDate);
+  if (!date || !filed || date <= filed) return { date, repaired: false };
+
+  for (let back = 1; back <= 3; back++) {
+    const shifted = shiftYear(date, -back);
+    if (shifted && shifted <= filed) return { date: shifted, repaired: true };
+  }
+  return { date, repaired: false };
+}
+
+/** The date a filing reached the clerk, per document, best source first. */
+function filingDatesByUrl(trades) {
+  const dates = new Map();
+
+  // The clerk's own filing record is authoritative and wins outright.
+  for (const trade of trades) {
+    const url = String(trade?.url || '').trim();
+    if (!url || !isFilingRecord(trade)) continue;
+    const date = normalizeFinanceDate(trade.transactionDate || trade.disclosureDate);
+    if (date) dates.set(url, date);
+  }
+
+  // Otherwise take a disclosure date a source reported separately from the
+  // transaction date. CongressWatch repeats the transaction date instead of
+  // supplying one, so those tell us nothing.
+  for (const trade of trades) {
+    const url = String(trade?.url || '').trim();
+    if (!url || dates.has(url) || isFilingRecord(trade)) continue;
+    const disclosed = normalizeFinanceDate(trade.disclosureDate);
+    const transacted = normalizeFinanceDate(trade.transactionDate);
+    if (disclosed && disclosed !== transacted) dates.set(url, disclosed);
+  }
+
+  return dates;
+}
+
+/**
+ * Reconcile line items that several sources parsed out of the same filings.
+ *
+ * Sources overlap on documents but describe line items in their own words, so
+ * merging them item by item leaves the same trade in the data twice. Instead one
+ * parse of each document wins, its dates are checked against the filing date,
+ * and anything still dated in the future is dropped rather than shown.
+ */
+export function reconcileFinanceTrades(trades, { today = new Date().toISOString().slice(0, 10) } = {}) {
+  const rows = (trades || []).filter(Boolean);
+  const filingDates = filingDatesByUrl(rows);
+
+  // Elect the parse to keep for each document.
+  const counts = new Map();
+  for (const trade of rows) {
+    const url = String(trade?.url || '').trim();
+    if (!url || isFilingRecord(trade)) continue;
+    if (!counts.has(url)) counts.set(url, new Map());
+    const bySource = counts.get(url);
+    const source = trade.source || '';
+    bySource.set(source, (bySource.get(source) || 0) + 1);
+  }
+
+  const winner = new Map();
+  for (const [url, bySource] of counts) {
+    let best = null;
+    for (const [source, count] of bySource) {
+      const rank = TRADE_SOURCE_PRIORITY.indexOf(source);
+      const order = rank === -1 ? TRADE_SOURCE_PRIORITY.length : rank;
+      if (!best || count > best.count || (count === best.count && order < best.order)) {
+        best = { source, count, order };
+      }
+    }
+    if (best) winner.set(url, best.source);
+  }
+
+  const stats = { dateRepaired: 0, futureDropped: 0, duplicateDropped: 0, disclosureFilled: 0 };
+  const kept = [];
+
+  for (const trade of rows) {
+    const url = String(trade?.url || '').trim();
+
+    if (url && !isFilingRecord(trade) && winner.get(url) !== (trade.source || '')) {
+      stats.duplicateDropped++;
+      continue;
+    }
+
+    const filed = url ? filingDates.get(url) : null;
+    const { date, repaired } = reconcileTransactionDate(trade.transactionDate, filed);
+    if (repaired) stats.dateRepaired++;
+
+    if (date && date > today) {
+      stats.futureDropped++;
+      continue;
+    }
+
+    let disclosureDate = normalizeFinanceDate(trade.disclosureDate);
+    if (filed && !isFilingRecord(trade) && (!disclosureDate || disclosureDate === normalizeFinanceDate(trade.transactionDate))) {
+      disclosureDate = filed;
+      stats.disclosureFilled++;
+    }
+
+    kept.push({
+      ...trade,
+      transactionDate: date || trade.transactionDate || '',
+      disclosureDate: disclosureDate || date || '',
+      ...(repaired ? { dateRepaired: true } : {}),
+    });
+  }
+
+  return { trades: kept, stats };
+}
+
 export function tradeDisclosureUrl(trade) {
   return trade?.url || trade?.ptr_link || trade?.doc_url || null;
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-24T05:37:47.697Z",
+  "lastUpdated": "2026-08-25T16:06:28.149Z",
   "horizonDays": 60,
   "entries": {
     "C001068|NOC|2025-12-29|Sale (Partial)": {
@@ -30,33 +30,6 @@
       }
     },
     "M001236|T|2026-08-14|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": false,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-08-14",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": null,
-          "labels": {
-            "actual": "Sell on 2026-08-14 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": null,
-        "timingAdvantage": 0,
-        "summary": "Alternative timing would have been better by 0.0%"
-      }
-    },
-    "M001236|T|2026-08-14|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -137,33 +110,6 @@
         "summary": "Selling beat holding by 13.4% · Alternative timing would have been better by 7.1%"
       }
     },
-    "M001236|T|2026-05-21|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-05-21",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 14.129940935938206,
-          "inaction": -13.378058405682717,
-          "labels": {
-            "actual": "Sell on 2026-05-21 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 13.378058405682717,
-        "timingAdvantage": -7.064970467969103,
-        "summary": "Selling beat holding by 13.4% · Alternative timing would have been better by 7.1%"
-      }
-    },
     "M001236|T|2026-05-18|Purchase": {
       "counterfactuals": {
         "ok": true,
@@ -218,33 +164,6 @@
         "summary": "Holding would have beat selling by 22.9% · Alternative timing would have been better by 2.3%"
       }
     },
-    "M001236|NVDA|2026-03-24|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-03-24",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 4.513123622520547,
-          "inaction": 22.905251141552526,
-          "labels": {
-            "actual": "Sell on 2026-03-24 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -22.905251141552526,
-        "timingAdvantage": -2.2565618112602737,
-        "summary": "Holding would have beat selling by 22.9% · Alternative timing would have been better by 2.3%"
-      }
-    },
     "M001236|T|2026-01-30|Sale": {
       "counterfactuals": {
         "ok": true,
@@ -273,60 +192,6 @@
       }
     },
     "M001236|VZ|2026-01-30|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-01-30",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -4.208216992421219,
-          "inaction": 12.758310871518416,
-          "labels": {
-            "actual": "Sell on 2026-01-30 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -12.758310871518416,
-        "timingAdvantage": 2.1041084962106096,
-        "summary": "Holding would have beat selling by 12.8% · Timing beat alternatives by 2.1%"
-      }
-    },
-    "M001236|T|2026-01-30|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-01-30",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -6.711888611210291,
-          "inaction": 10.606638687523837,
-          "labels": {
-            "actual": "Sell on 2026-01-30 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -10.606638687523837,
-        "timingAdvantage": 3.3559443056051457,
-        "summary": "Holding would have beat selling by 10.6% · Timing beat alternatives by 3.4%"
-      }
-    },
-    "M001236|VZ|2026-01-30|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -408,33 +273,6 @@
       }
     },
     "M001236|VZ|2025-11-19|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-11-19",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 22.877950778503266,
-          "inaction": -5.535324107793157,
-          "labels": {
-            "actual": "Sell on 2025-11-19 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 5.535324107793157,
-        "timingAdvantage": -11.438975389251633,
-        "summary": "Selling beat holding by 5.5% · Alternative timing would have been better by 11.4%"
-      }
-    },
-    "M001236|VZ|2025-11-19|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -920,33 +758,6 @@
         "summary": "Alternative timing would have been better by 0.0%"
       }
     },
-    "T000490|MSFT|2026-08-11|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": false,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-08-11",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": null,
-          "labels": {
-            "actual": "Sell on 2026-08-11 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": null,
-        "timingAdvantage": 0,
-        "summary": "Alternative timing would have been better by 0.0%"
-      }
-    },
     "T000490|AVGO|2026-07-24|Purchase": {
       "counterfactuals": {
         "ok": true,
@@ -1109,33 +920,6 @@
         "summary": "Buying beat staying in cash by 2.8% · Timing beat alternatives by 22.3%"
       }
     },
-    "T000490|AMZN|2026-06-05|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-06-05",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": 12.758606673982854,
-          "labels": {
-            "actual": "Sell on 2026-06-05 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -12.758606673982854,
-        "timingAdvantage": 0,
-        "summary": "Holding would have beat selling by 12.8% · Alternative timing would have been better by 0.0%"
-      }
-    },
     "T000490|GOOGL|2026-05-15|Sale": {
       "counterfactuals": {
         "ok": true,
@@ -1217,88 +1001,7 @@
         "summary": "Staying in cash would have beat buying by 11.4% · Alternative timing would have been better by 9.9%"
       }
     },
-    "T000490|GOOGL|2026-05-15|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-05-15",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -3.7032918149466174,
-          "inaction": -9.393114572307068,
-          "labels": {
-            "actual": "Sell on 2026-05-15 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 9.393114572307068,
-        "timingAdvantage": 1.8516459074733087,
-        "summary": "Selling beat holding by 9.4% · Timing beat alternatives by 1.9%"
-      }
-    },
-    "T000490|AAPL|2026-05-15|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-05-15",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 4.853501872015936,
-          "inaction": 4.872930753089296,
-          "labels": {
-            "actual": "Sell on 2026-05-15 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -4.872930753089296,
-        "timingAdvantage": -2.426750936007968,
-        "summary": "Holding would have beat selling by 4.9% · Alternative timing would have been better by 2.4%"
-      }
-    },
     "T000490|AVGO|2026-04-27|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-04-27",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -9.467595884890722,
-          "inaction": -12.716403634624584,
-          "labels": {
-            "actual": "Sell on 2026-04-27 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 12.716403634624584,
-        "timingAdvantage": 4.733797942445361,
-        "summary": "Selling beat holding by 12.7% · Timing beat alternatives by 4.7%"
-      }
-    },
-    "T000490|AVGO|2026-04-27|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -1488,87 +1191,6 @@
       }
     },
     "T000490|CRM|2026-02-26|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-02-26",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -1.0038480843232453,
-          "inaction": -9.67062716197924,
-          "labels": {
-            "actual": "Sell on 2026-02-26 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 9.67062716197924,
-        "timingAdvantage": 0.5019240421616227,
-        "summary": "Selling beat holding by 9.7% · Timing beat alternatives by 0.5%"
-      }
-    },
-    "T000490|AAPL|2026-02-26|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-02-26",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 24.93971061093248,
-          "inaction": -1.9564022714782838,
-          "labels": {
-            "actual": "Sell on 2026-02-26 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 1.9564022714782838,
-        "timingAdvantage": -12.46985530546624,
-        "summary": "Selling beat holding by 2.0% · Alternative timing would have been better by 12.5%"
-      }
-    },
-    "T000490|T|2026-02-26|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-02-26",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -14.467353951890036,
-          "inaction": -7.06482155863074,
-          "labels": {
-            "actual": "Sell on 2026-02-26 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 7.06482155863074,
-        "timingAdvantage": 7.233676975945018,
-        "summary": "Selling beat holding by 7.1% · Timing beat alternatives by 7.2%"
-      }
-    },
-    "T000490|CRM|2026-02-26|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -1919,60 +1541,6 @@
         "summary": "Staying in cash would have beat buying by 13.1% · Alternative timing would have been better by 7.6%"
       }
     },
-    "T000490|GOOGL|2026-01-16|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-01-16",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 9.911029700379416,
-          "inaction": -5.781818181818177,
-          "labels": {
-            "actual": "Sell on 2026-01-16 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 5.781818181818177,
-        "timingAdvantage": -4.955514850189708,
-        "summary": "Selling beat holding by 5.8% · Alternative timing would have been better by 5.0%"
-      }
-    },
-    "T000490|AVGO|2026-01-16|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-01-16",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 22.542054925116094,
-          "inaction": -8.643484689090437,
-          "labels": {
-            "actual": "Sell on 2026-01-16 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 8.643484689090437,
-        "timingAdvantage": -11.271027462558047,
-        "summary": "Selling beat holding by 8.6% · Alternative timing would have been better by 11.3%"
-      }
-    },
     "T000490|AVGO|2026-01-08|Sale": {
       "counterfactuals": {
         "ok": true,
@@ -2027,61 +1595,7 @@
         "summary": "Staying in cash would have beat buying by 14.4% · Alternative timing would have been better by 1.8%"
       }
     },
-    "T000490|AVGO|2026-01-08|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-01-08",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 5.3195962994112636,
-          "inaction": 3.9912175168431125,
-          "labels": {
-            "actual": "Sell on 2026-01-08 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -3.9912175168431125,
-        "timingAdvantage": -2.6597981497056318,
-        "summary": "Holding would have beat selling by 4.0% · Alternative timing would have been better by 2.7%"
-      }
-    },
     "T000490|GOOGL|2025-11-03|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-11-03",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 5.747270281262711,
-          "inaction": 11.077823205977706,
-          "labels": {
-            "actual": "Sell on 2025-11-03 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -11.077823205977706,
-        "timingAdvantage": -2.8736351406313556,
-        "summary": "Holding would have beat selling by 11.1% · Alternative timing would have been better by 2.9%"
-      }
-    },
-    "T000490|GOOGL|2025-11-03|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -3431,60 +2945,6 @@
         "summary": "Selling beat holding by 1.2% · Timing beat alternatives by 4.0%"
       }
     },
-    "P000608|CSCO|2026-04-22|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-04-22",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -6.83498048334855,
-          "inaction": 33.11804008908687,
-          "labels": {
-            "actual": "Sell on 2026-04-22 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -33.11804008908687,
-        "timingAdvantage": 3.417490241674275,
-        "summary": "Holding would have beat selling by 33.1% · Timing beat alternatives by 3.4%"
-      }
-    },
-    "P000608|CSCO|2025-10-01|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-10-01",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 5.8815483517986555,
-          "inaction": 11.912727272727269,
-          "labels": {
-            "actual": "Sell on 2025-10-01 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -11.912727272727269,
-        "timingAdvantage": -2.9407741758993278,
-        "summary": "Holding would have beat selling by 11.9% · Alternative timing would have been better by 2.9%"
-      }
-    },
     "P000608|CSCO|2025-09-09|Purchase": {
       "counterfactuals": {
         "ok": true,
@@ -3702,141 +3162,6 @@
       }
     },
     "M001218|MSFT|2026-07-30|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": false,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-07-30",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": null,
-          "labels": {
-            "actual": "Sell on 2026-07-30 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": null,
-        "timingAdvantage": 0,
-        "summary": "Alternative timing would have been better by 0.0%"
-      }
-    },
-    "M001218|AAPL|2026-07-30|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": false,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-07-30",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": null,
-          "labels": {
-            "actual": "Sell on 2026-07-30 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": null,
-        "timingAdvantage": 0,
-        "summary": "Alternative timing would have been better by 0.0%"
-      }
-    },
-    "M001218|ADP|2026-07-30|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": false,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-07-30",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": null,
-          "labels": {
-            "actual": "Sell on 2026-07-30 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": null,
-        "timingAdvantage": 0,
-        "summary": "Alternative timing would have been better by 0.0%"
-      }
-    },
-    "M001218|CSCO|2026-07-30|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": false,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-07-30",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": null,
-          "labels": {
-            "actual": "Sell on 2026-07-30 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": null,
-        "timingAdvantage": 0,
-        "summary": "Alternative timing would have been better by 0.0%"
-      }
-    },
-    "M001218|LHX|2026-07-30|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": false,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-07-30",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": null,
-          "labels": {
-            "actual": "Sell on 2026-07-30 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": null,
-        "timingAdvantage": 0,
-        "summary": "Alternative timing would have been better by 0.0%"
-      }
-    },
-    "M001218|MSFT|2026-07-30|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -4781,7 +4106,7 @@
         "summary": "Holding would have beat selling by 0.6% · Timing beat alternatives by 3.2%"
       }
     },
-    "D000032|CMG|2026-04-02|Sale": {
+    "D000032|CMG|2026-04-02|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -4833,33 +4158,6 @@
         "actionAdvantage": 104.86415834189151,
         "timingAdvantage": 15.99415011484875,
         "summary": "Buying beat staying in cash by 104.9% · Timing beat alternatives by 16.0%"
-      }
-    },
-    "D000032|CMG|2026-04-02|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-04-02",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 6.124924196482727,
-          "inaction": -7.87092882991555,
-          "labels": {
-            "actual": "Sell on 2026-04-02 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 7.87092882991555,
-        "timingAdvantage": -3.0624620982413635,
-        "summary": "Selling beat holding by 7.9% · Alternative timing would have been better by 3.1%"
       }
     },
     "D000032|NFLX|2026-03-20|Purchase": {
@@ -4914,33 +4212,6 @@
         "actionAdvantage": -21.007523093038746,
         "timingAdvantage": -6.013622512995162,
         "summary": "Holding would have beat selling by 21.0% · Alternative timing would have been better by 6.0%"
-      }
-    },
-    "D000032|V|2025-10-24|Purchase": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": true,
-        "isSale": false,
-        "tradeDate": "2025-10-24",
-        "scenarios": {
-          "actual": 1.7272151534342794,
-          "earlier30": -3.159324436045822,
-          "later30": -0.4939325568632248,
-          "inaction": 0,
-          "labels": {
-            "actual": "Buy on 2025-10-24",
-            "earlier30": "Buy 30d earlier",
-            "later30": "Buy 30d later",
-            "inaction": "Do nothing (cash)"
-          }
-        },
-        "actionAdvantage": 1.7272151534342794,
-        "timingAdvantage": 3.553843649888803,
-        "summary": "Buying beat staying in cash by 1.7% · Timing beat alternatives by 3.6%"
       }
     },
     "D000032|HWM|2025-10-23|Sale (Partial)": {
@@ -5753,60 +5024,6 @@
         "summary": "Staying in cash would have beat buying by 6.4% · Alternative timing would have been better by 12.7%"
       }
     },
-    "L000595|ABT|2025-12-08|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-12-08",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -13.759445843828718,
-          "inaction": -9.22270456220821,
-          "labels": {
-            "actual": "Sell on 2025-12-08 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 9.22270456220821,
-        "timingAdvantage": 6.879722921914359,
-        "summary": "Selling beat holding by 9.2% · Timing beat alternatives by 6.9%"
-      }
-    },
-    "L000595|ABBV|2025-12-08|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-12-08",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -1.4180447262445266,
-          "inaction": 0.13893868770168621,
-          "labels": {
-            "actual": "Sell on 2025-12-08 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -0.13893868770168621,
-        "timingAdvantage": 0.7090223631222633,
-        "summary": "Holding would have beat selling by 0.1% · Timing beat alternatives by 0.7%"
-      }
-    },
     "L000595|ABT|2025-12-08|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
@@ -5915,33 +5132,6 @@
         "summary": "Buying beat staying in cash by 8.6% · Timing beat alternatives by 5.2%"
       }
     },
-    "L000595|JCI|2025-10-02|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-10-02",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 4.685724276597604,
-          "inaction": 5.779495674581264,
-          "labels": {
-            "actual": "Sell on 2025-10-02 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -5.779495674581264,
-        "timingAdvantage": -2.342862138298802,
-        "summary": "Holding would have beat selling by 5.8% · Alternative timing would have been better by 2.3%"
-      }
-    },
     "L000595|JCI|2025-10-02|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
@@ -5969,33 +5159,6 @@
         "summary": "Holding would have beat selling by 5.8% · Alternative timing would have been better by 2.3%"
       }
     },
-    "L000595|DE|2025-09-22|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-09-22",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 1.7756726360411756,
-          "inaction": 3.882480864763456,
-          "labels": {
-            "actual": "Sell on 2025-09-22 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -3.882480864763456,
-        "timingAdvantage": -0.8878363180205878,
-        "summary": "Holding would have beat selling by 3.9% · Alternative timing would have been better by 0.9%"
-      }
-    },
     "L000595|DE|2025-09-22|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
@@ -6021,33 +5184,6 @@
         "actionAdvantage": -3.882480864763456,
         "timingAdvantage": -0.8878363180205878,
         "summary": "Holding would have beat selling by 3.9% · Alternative timing would have been better by 0.9%"
-      }
-    },
-    "L000595|CF|2025-08-08|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-08-08",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -3.5866477272727284,
-          "inaction": 13.669509331355831,
-          "labels": {
-            "actual": "Sell on 2025-08-08 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -13.669509331355831,
-        "timingAdvantage": 1.7933238636363642,
-        "summary": "Holding would have beat selling by 13.7% · Timing beat alternatives by 1.8%"
       }
     },
     "L000595|CF|2025-08-08|Sale (Full)": {
@@ -6158,33 +5294,6 @@
         "summary": "Buying beat staying in cash by 4.8% · Timing beat alternatives by 2.2%"
       }
     },
-    "L000595|UNH|2025-05-27|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-05-27",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 0.7402022338246015,
-          "inaction": -4.725423728813558,
-          "labels": {
-            "actual": "Sell on 2025-05-27 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 4.725423728813558,
-        "timingAdvantage": -0.37010111691230074,
-        "summary": "Selling beat holding by 4.7% · Alternative timing would have been better by 0.4%"
-      }
-    },
     "L000595|UNH|2025-05-27|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
@@ -6239,7 +5348,7 @@
         "summary": "Staying in cash would have beat buying by 5.2% · Alternative timing would have been better by 1.8%"
       }
     },
-    "L000595|BMY|2025-04-28|Sale": {
+    "L000595|BMY|2025-04-28|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -6293,60 +5402,6 @@
         "summary": "Buying beat staying in cash by 1.5% · Timing beat alternatives by 1.2%"
       }
     },
-    "L000595|TMO|2025-04-28|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-04-28",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 18.946609305448487,
-          "inaction": -3.0996344994541234,
-          "labels": {
-            "actual": "Sell on 2025-04-28 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 3.0996344994541234,
-        "timingAdvantage": -9.473304652724243,
-        "summary": "Selling beat holding by 3.1% · Alternative timing would have been better by 9.5%"
-      }
-    },
-    "L000595|BMY|2025-04-28|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-04-28",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 3.108367042793274,
-          "inaction": -4.3541064795707785,
-          "labels": {
-            "actual": "Sell on 2025-04-28 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 4.3541064795707785,
-        "timingAdvantage": -1.554183521396637,
-        "summary": "Selling beat holding by 4.4% · Alternative timing would have been better by 1.6%"
-      }
-    },
     "L000595|TMO|2025-04-28|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
@@ -6374,7 +5429,7 @@
         "summary": "Selling beat holding by 3.1% · Alternative timing would have been better by 9.5%"
       }
     },
-    "L000595|CI|2025-04-22|Sale": {
+    "L000595|CI|2025-04-22|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -6426,33 +5481,6 @@
         "actionAdvantage": -29.301465424411262,
         "timingAdvantage": -5.55243272932659,
         "summary": "Staying in cash would have beat buying by 29.3% · Alternative timing would have been better by 5.6%"
-      }
-    },
-    "L000595|CI|2025-04-22|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-04-22",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -5.718306255596774,
-          "inaction": -6.740439671284888,
-          "labels": {
-            "actual": "Sell on 2025-04-22 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 6.740439671284888,
-        "timingAdvantage": 2.859153127798387,
-        "summary": "Selling beat holding by 6.7% · Timing beat alternatives by 2.9%"
       }
     },
     "L000595|JCI|2025-03-19|Purchase": {
@@ -6509,33 +5537,6 @@
         "summary": "Buying beat staying in cash by 0.4% · Alternative timing would have been better by 6.3%"
       }
     },
-    "L000595|ABBV|2025-01-24|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-01-24",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -10.743269992082347,
-          "inaction": 18.226658837345855,
-          "labels": {
-            "actual": "Sell on 2025-01-24 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -18.226658837345855,
-        "timingAdvantage": 5.371634996041173,
-        "summary": "Holding would have beat selling by 18.2% · Timing beat alternatives by 5.4%"
-      }
-    },
     "L000595|ABBV|2025-01-24|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
@@ -6561,33 +5562,6 @@
         "actionAdvantage": -18.226658837345855,
         "timingAdvantage": 5.371634996041173,
         "summary": "Holding would have beat selling by 18.2% · Timing beat alternatives by 5.4%"
-      }
-    },
-    "L000595|AMGN|2024-11-19|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2024-11-19",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 11.474405605115061,
-          "inaction": -2.800500089301652,
-          "labels": {
-            "actual": "Sell on 2024-11-19 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 2.800500089301652,
-        "timingAdvantage": -5.737202802557531,
-        "summary": "Selling beat holding by 2.8% · Alternative timing would have been better by 5.7%"
       }
     },
     "L000595|AMGN|2024-11-19|Sale (Full)": {
@@ -16202,33 +15176,6 @@
         "summary": "Alternative timing would have been better by 0.0%"
       }
     },
-    "R000619|LLY|2026-07-01|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": false,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-07-01",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": null,
-          "labels": {
-            "actual": "Sell on 2026-07-01 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": null,
-        "timingAdvantage": 0,
-        "summary": "Alternative timing would have been better by 0.0%"
-      }
-    },
     "R000619|LLY|2026-01-02|Purchase": {
       "counterfactuals": {
         "ok": true,
@@ -16283,33 +15230,6 @@
         "summary": "Selling beat holding by 0.9% · Timing beat alternatives by 2.6%"
       }
     },
-    "R000619|LLY|2025-12-02|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-12-02",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -5.276928455267759,
-          "inaction": -0.8574542117538907,
-          "labels": {
-            "actual": "Sell on 2025-12-02 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 0.8574542117538907,
-        "timingAdvantage": 2.6384642276338797,
-        "summary": "Selling beat holding by 0.9% · Timing beat alternatives by 2.6%"
-      }
-    },
     "R000619|TMO|2024-12-12|Sale": {
       "counterfactuals": {
         "ok": true,
@@ -16337,61 +15257,7 @@
         "summary": "Holding would have beat selling by 5.3% · Timing beat alternatives by 2.7%"
       }
     },
-    "R000619|TMO|2024-12-12|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2024-12-12",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -5.469196584979065,
-          "inaction": 5.306666666666669,
-          "labels": {
-            "actual": "Sell on 2024-12-12 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -5.306666666666669,
-        "timingAdvantage": 2.7345982924895327,
-        "summary": "Holding would have beat selling by 5.3% · Timing beat alternatives by 2.7%"
-      }
-    },
     "R000619|PFE|2024-11-26|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2024-11-26",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 0.3388554216867465,
-          "inaction": 1.2417539774932103,
-          "labels": {
-            "actual": "Sell on 2024-11-26 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -1.2417539774932103,
-        "timingAdvantage": -0.16942771084337324,
-        "summary": "Holding would have beat selling by 1.2% · Alternative timing would have been better by 0.2%"
-      }
-    },
-    "R000619|PFE|2024-11-26|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -33860,33 +32726,6 @@
         "summary": "Holding would have beat selling by 27.7% · Alternative timing would have been better by 5.6%"
       }
     },
-    "J000309|AMZN|2026-03-09|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-03-09",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 11.200000000000001,
-          "inaction": 27.724951988383527,
-          "labels": {
-            "actual": "Sell on 2026-03-09 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -27.724951988383527,
-        "timingAdvantage": -5.6000000000000005,
-        "summary": "Holding would have beat selling by 27.7% · Alternative timing would have been better by 5.6%"
-      }
-    },
     "J000309|AMZN|2026-02-11|Sale": {
       "counterfactuals": {
         "ok": true,
@@ -36209,33 +35048,6 @@
         "summary": "Selling beat holding by 6.6% · Timing beat alternatives by 1.6%"
       }
     },
-    "C001123|GD|2026-02-10|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-02-10",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -3.1528868620330615,
-          "inaction": -6.599225259872366,
-          "labels": {
-            "actual": "Sell on 2026-02-10 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 6.599225259872366,
-        "timingAdvantage": 1.5764434310165307,
-        "summary": "Selling beat holding by 6.6% · Timing beat alternatives by 1.6%"
-      }
-    },
     "C001123|TDG|2026-01-30|Purchase": {
       "counterfactuals": {
         "ok": true,
@@ -37073,141 +35885,6 @@
         "summary": "Staying in cash would have beat buying by 7.1% · Alternative timing would have been better by 8.8%"
       }
     },
-    "A000383|TAK|2026-03-30|Purchase": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": true,
-        "isSale": false,
-        "tradeDate": "2026-03-30",
-        "scenarios": {
-          "actual": -12.643678160919533,
-          "earlier30": -13.066666666666663,
-          "later30": -2.3926380368098195,
-          "inaction": 0,
-          "labels": {
-            "actual": "Buy on 2026-03-30",
-            "earlier30": "Buy 30d earlier",
-            "later30": "Buy 30d later",
-            "inaction": "Do nothing (cash)"
-          }
-        },
-        "actionAdvantage": -12.643678160919533,
-        "timingAdvantage": -4.914025809181292,
-        "summary": "Staying in cash would have beat buying by 12.6% · Alternative timing would have been better by 4.9%"
-      }
-    },
-    "A000383|SKHHY|2026-03-30|Purchase": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": true,
-        "isSale": false,
-        "tradeDate": "2026-03-30",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": -17.888563049853374,
-          "later30": 0,
-          "inaction": 0,
-          "labels": {
-            "actual": "Buy on 2026-03-30",
-            "earlier30": "Buy 30d earlier",
-            "later30": "Buy 30d later",
-            "inaction": "Do nothing (cash)"
-          }
-        },
-        "actionAdvantage": 0,
-        "timingAdvantage": 8.944281524926687,
-        "summary": "Staying in cash would have beat buying by 0.0% · Timing beat alternatives by 8.9%"
-      }
-    },
-    "A000383|FMS|2026-03-30|Purchase": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": true,
-        "isSale": false,
-        "tradeDate": "2026-03-30",
-        "scenarios": {
-          "actual": -2.881584871679426,
-          "earlier30": -5.54134697357204,
-          "later30": 4.873646209386274,
-          "inaction": 0,
-          "labels": {
-            "actual": "Buy on 2026-03-30",
-            "earlier30": "Buy 30d earlier",
-            "later30": "Buy 30d later",
-            "inaction": "Do nothing (cash)"
-          }
-        },
-        "actionAdvantage": -2.881584871679426,
-        "timingAdvantage": -2.547734489586543,
-        "summary": "Staying in cash would have beat buying by 2.9% · Alternative timing would have been better by 2.5%"
-      }
-    },
-    "A000383|CHGCY|2026-03-30|Purchase": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": true,
-        "isSale": false,
-        "tradeDate": "2026-03-30",
-        "scenarios": {
-          "actual": -6.938159879336349,
-          "earlier30": -25.885153228205887,
-          "later30": -6.824568446407063,
-          "inaction": 0,
-          "labels": {
-            "actual": "Buy on 2026-03-30",
-            "earlier30": "Buy 30d earlier",
-            "later30": "Buy 30d later",
-            "inaction": "Do nothing (cash)"
-          }
-        },
-        "actionAdvantage": -6.938159879336349,
-        "timingAdvantage": 9.416700957970125,
-        "summary": "Staying in cash would have beat buying by 6.9% · Timing beat alternatives by 9.4%"
-      }
-    },
-    "A000383|ALPMY|2026-03-30|Purchase": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": true,
-        "isSale": false,
-        "tradeDate": "2026-03-30",
-        "scenarios": {
-          "actual": -12.143742255266424,
-          "earlier30": -13.9915202907329,
-          "later30": -6.0563380281690105,
-          "inaction": 0,
-          "labels": {
-            "actual": "Buy on 2026-03-30",
-            "earlier30": "Buy 30d earlier",
-            "later30": "Buy 30d later",
-            "inaction": "Do nothing (cash)"
-          }
-        },
-        "actionAdvantage": -12.143742255266424,
-        "timingAdvantage": -2.11981309581547,
-        "summary": "Staying in cash would have beat buying by 12.1% · Alternative timing would have been better by 2.1%"
-      }
-    },
     "A000383|UHS|2026-03-27|Purchase": {
       "counterfactuals": {
         "ok": true,
@@ -37856,33 +36533,6 @@
         "summary": "Selling beat holding by 3.9% · Timing beat alternatives by 3.0%"
       }
     },
-    "M001242|BAC|2026-06-24|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": false,
-        "alternativesComplete": false,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2026-06-24",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": null,
-          "inaction": null,
-          "labels": {
-            "actual": "Sell on 2026-06-24 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": null,
-        "timingAdvantage": 0,
-        "summary": "Alternative timing would have been better by 0.0%"
-      }
-    },
     "M001242|BAC|2025-12-19|Purchase": {
       "counterfactuals": {
         "ok": true,
@@ -37965,33 +36615,6 @@
       }
     },
     "E000296|CVS|2025-11-21|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-11-21",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -0.5146680391147783,
-          "inaction": 2.6400102524670026,
-          "labels": {
-            "actual": "Sell on 2025-11-21 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -2.6400102524670026,
-        "timingAdvantage": 0.25733401955738916,
-        "summary": "Holding would have beat selling by 2.6% · Timing beat alternatives by 0.3%"
-      }
-    },
-    "E000296|CVS|2025-11-21|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,
@@ -44067,33 +42690,6 @@
       }
     },
     "D000616|PEP|2025-10-28|Sale": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-08-21",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2025-10-28",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": -1.4258683605892588,
-          "inaction": -4.223288036237679,
-          "labels": {
-            "actual": "Sell on 2025-10-28 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 4.223288036237679,
-        "timingAdvantage": 0.7129341802946294,
-        "summary": "Selling beat holding by 4.2% · Timing beat alternatives by 0.7%"
-      }
-    },
-    "D000616|PEP|2025-10-28|Sale (Full)": {
       "counterfactuals": {
         "ok": true,
         "horizonDays": 60,

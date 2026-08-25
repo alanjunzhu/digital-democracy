@@ -7,6 +7,8 @@ import {
   mapKadoaTrade,
   mergeFinanceTrades,
   normalizeMemberName,
+  reconcileFinanceTrades,
+  reconcileTransactionDate,
   tradeDedupeKey,
 } from '../shared/finance-sources.mjs';
 import {
@@ -145,4 +147,128 @@ test('transaction wording collapses to a family', () => {
   assert.equal(transactionFamily('Sale (Partial)'), 'sale');
   assert.equal(transactionFamily('Purchase'), 'purchase');
   assert.equal(transactionFamily('Exchange'), 'exchange');
+});
+
+const PTR = 'https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20033889.pdf';
+
+function line(source, extra = {}) {
+  return {
+    chamber: 'House',
+    member: 'Steve Cohen',
+    ticker: 'SONY',
+    assetDescription: 'Sony Group Corporation American Depositary Shares (SONY)',
+    type: 'Purchase',
+    amount: '$1,001 - $15,000',
+    transactionDate: '2025-12-26',
+    disclosureDate: '2026-02-09',
+    url: PTR,
+    source,
+    ...extra,
+  };
+}
+
+const FILING = {
+  chamber: 'House',
+  member: 'Hon. Steve Cohen',
+  ticker: '',
+  type: 'PTR filing',
+  amount: '',
+  transactionDate: '2026-02-09',
+  disclosureDate: '2026-02-09',
+  url: PTR,
+  source: 'house-clerk',
+};
+
+test('a transaction dated after its own filing is a filer typo in the year', () => {
+  // The PTR Steve Cohen filed on 2026-02-09 lists the purchase as 12/26/2026.
+  assert.deepEqual(
+    reconcileTransactionDate('2026-12-26', '2026-02-09'),
+    { date: '2025-12-26', repaired: true }
+  );
+  // A date already before the filing is left alone.
+  assert.deepEqual(
+    reconcileTransactionDate('2025-12-26', '2026-02-09'),
+    { date: '2025-12-26', repaired: false }
+  );
+  // Nothing to check a date against.
+  assert.deepEqual(reconcileTransactionDate('2026-12-26', ''), { date: '2026-12-26', repaired: false });
+  // No year within three lands before the filing, so the date stands as filed.
+  assert.deepEqual(
+    reconcileTransactionDate('2026-12-26', '2019-01-01'),
+    { date: '2026-12-26', repaired: false }
+  );
+});
+
+test('the year is repaired against the date the filing reached the clerk', () => {
+  const { trades, stats } = reconcileFinanceTrades(
+    [line('congresswatch', { transactionDate: '2026-12-26', disclosureDate: '2026-12-26' }), FILING],
+    { today: '2026-08-25' }
+  );
+
+  const trade = trades.find(t => t.ticker === 'SONY');
+  assert.equal(trade.transactionDate, '2025-12-26');
+  assert.equal(trade.disclosureDate, '2026-02-09');
+  assert.equal(trade.dateRepaired, true);
+  assert.equal(stats.dateRepaired, 1);
+  assert.equal(stats.futureDropped, 0);
+});
+
+test('one parse of a filing wins, so a shared line item is not counted twice', () => {
+  // CongressWatch transcribes three lines of this report; Kadoa reaches one.
+  const congressWatch = [
+    line('congresswatch', { disclosureDate: '2025-12-26' }),
+    line('congresswatch', { ticker: 'JPM', transactionDate: '2025-12-27', disclosureDate: '2025-12-27' }),
+    line('congresswatch', { ticker: 'AAPL', transactionDate: '2025-12-28', disclosureDate: '2025-12-28' }),
+  ];
+  const kadoa = [line('kadoa', { type: 'Purchase (Partial)', owner: 'SP' })];
+
+  const { trades, stats } = reconcileFinanceTrades([...congressWatch, ...kadoa, FILING], { today: '2026-08-25' });
+
+  assert.equal(trades.filter(t => t.source === 'kadoa').length, 0);
+  assert.equal(trades.filter(t => t.source === 'congresswatch').length, 3);
+  assert.equal(stats.duplicateDropped, 1);
+  // The filing record itself survives alongside the line items.
+  assert.equal(trades.filter(t => t.type === 'PTR filing').length, 1);
+});
+
+test('the fuller parse wins even when a lower-priority source made it', () => {
+  const { trades } = reconcileFinanceTrades(
+    [
+      line('congresswatch'),
+      line('kadoa'),
+      line('kadoa', { ticker: 'JPM', transactionDate: '2025-12-27' }),
+      FILING,
+    ],
+    { today: '2026-08-25' }
+  );
+  assert.deepEqual(trades.filter(t => t.ticker).map(t => t.source), ['kadoa', 'kadoa']);
+});
+
+test('a disclosure date that only repeats the transaction date is refilled', () => {
+  const { trades, stats } = reconcileFinanceTrades(
+    [line('congresswatch', { disclosureDate: '2025-12-26' }), FILING],
+    { today: '2026-08-25' }
+  );
+  assert.equal(trades.find(t => t.ticker === 'SONY').disclosureDate, '2026-02-09');
+  assert.equal(stats.disclosureFilled, 1);
+});
+
+test('a trade still dated in the future after reconciling is dropped', () => {
+  const { trades, stats } = reconcileFinanceTrades(
+    [line('congresswatch', { transactionDate: '2027-03-01', disclosureDate: '2027-03-01', url: '' })],
+    { today: '2026-08-25' }
+  );
+  assert.deepEqual(trades, []);
+  assert.equal(stats.futureDropped, 1);
+});
+
+test('line items without a filing link keep their own dates', () => {
+  const { trades, stats } = reconcileFinanceTrades(
+    [line('congresswatch', { url: '', disclosureDate: '' })],
+    { today: '2026-08-25' }
+  );
+  assert.equal(trades.length, 1);
+  assert.equal(trades[0].transactionDate, '2025-12-26');
+  assert.equal(trades[0].disclosureDate, '2025-12-26');
+  assert.equal(stats.disclosureFilled, 0);
 });
