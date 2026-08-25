@@ -1,48 +1,13 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
 import PolicyStanceChart from '../../components/interactive/PolicyStanceChart';
-import { buildPolicyIndex } from '../../lib/policy-areas';
 import type { PolicyIndex } from '../../lib/policy-areas';
+import { loadPolicyIndex } from '../../../shared/policy-data.mjs';
 import { loadDataJSON } from '../../../shared/data-loader.mjs';
-import { readFileSync, existsSync } from 'fs';
-import { join } from 'path';
 
-const votesIndex = loadDataJSON('votes/index.json') || { votes: [], congress: 119 };
-const membersIndex = loadDataJSON('members/index.json') || { members: [] };
+const votesIndex = loadDataJSON('votes/index.json') || { congress: 119 };
 
-/**
- * Scores need every member's cast, which only the per-roll-call files carry,
- * and the party split has to be recounted from those casts: the stored
- * partyBreakdown on House votes files everyone under `democratic`.
- */
-const votesDir = join(process.cwd(), 'data', 'votes');
-const fullVotes: any[] = [];
-for (const summary of votesIndex.votes || []) {
-  const path = join(votesDir, `${summary.voteId}.json`);
-  if (!existsSync(path)) continue;
-  try { fullVotes.push(JSON.parse(readFileSync(path, 'utf-8'))); } catch {}
-}
-
-/**
- * Classification needs a bill's policy area and title, both of which the bills
- * index already carries. It covers only the bills fetched most recently, so the
- * few measures a roll call names but the index misses are read one file at a
- * time rather than by scanning the whole directory.
- */
-const billsById: Record<string, any> = {};
-for (const bill of loadDataJSON('bills/index.json')?.bills || []) {
-  if (bill?.billId) billsById[bill.billId] = bill;
-}
-const billsDir = join(process.cwd(), 'data', 'bills');
-for (const vote of fullVotes) {
-  const billId = vote.billId;
-  if (!billId || billsById[billId]) continue;
-  const path = join(billsDir, `${billId}.json`);
-  if (!existsSync(path)) continue;
-  try { billsById[billId] = JSON.parse(readFileSync(path, 'utf-8')); } catch {}
-}
-
-const index: PolicyIndex = buildPolicyIndex(fullVotes, membersIndex.members, { billsById });
+const index: PolicyIndex = loadPolicyIndex();
 const { coverage } = index;
 const widestGap = [...index.areas]
   .map(area => ({

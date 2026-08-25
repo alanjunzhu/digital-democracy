@@ -376,3 +376,98 @@ export function partyAverage(area, membersById, { party, chamber = 'all', metric
   }
   return n > 0 ? { avg: round(sum / n), members: n } : { avg: null, members: 0 };
 }
+
+/** The party a member is measured against: independents caucus with the Democrats. */
+function homeParty(party) {
+  return party === 'independent' ? 'democratic' : party;
+}
+
+function opposingParty(party) {
+  return homeParty(party) === 'democratic' ? 'republican' : 'democratic';
+}
+
+/**
+ * One member's stance in every area they have a record in, next to their own
+ * party and the other one.
+ *
+ * Averages are taken within the member's own chamber: the House and the Senate
+ * vote on different measures, so a senator's 40% and a representative's 40% are
+ * not the same number.
+ */
+export function memberPolicyProfile(index, bioguideId, { metric = 'support' } = {}) {
+  const membersById = {};
+  for (const m of index?.members || []) membersById[m.id] = m;
+
+  const member = membersById[bioguideId];
+  if (!member) return null;
+
+  const own = homeParty(member.party);
+  const other = opposingParty(member.party);
+  const chamber = member.chamber;
+
+  const areas = [];
+  for (const area of index.areas || []) {
+    const score = area.scores.find(s => s.id === bioguideId);
+    if (!score) continue;
+
+    /**
+     * The reference group is the caucus, not the party label: an independent is
+     * measured against the Democrats they sit with, and counts as one of them
+     * for a Democrat's average. The member is part of their own party's average,
+     * the same way they are part of the party.
+     */
+    let sum = 0;
+    let members = 0;
+    let below = 0;
+    let tied = 0;
+    let peers = 0;
+    for (const peer of area.scores) {
+      const person = membersById[peer.id];
+      if (!person || person.chamber !== chamber || homeParty(person.party) !== own) continue;
+      sum += peer[metric];
+      members++;
+      if (peer.id === bioguideId) continue;
+      peers++;
+      if (peer[metric] < score[metric]) below++;
+      else if (peer[metric] === score[metric]) tied++;
+    }
+    const ownAvg = members > 0 ? { avg: round(sum / members), members } : { avg: null, members: 0 };
+    const otherAvg = partyAverage(area, membersById, { party: other, chamber, metric });
+
+    areas.push({
+      id: area.id,
+      label: area.label,
+      description: area.description,
+      votes: chamber === 'Senate' ? area.votes.senate : area.votes.house,
+      n: score.n,
+      score: score[metric],
+      support: score.support,
+      lean: score.lean,
+      party: own,
+      ownParty: { party: own, ...ownAvg, peers },
+      otherParty: { party: other, ...otherAvg },
+      gap: ownAvg.avg == null ? null : round(score[metric] - ownAvg.avg),
+      /**
+       * Share of the caucus this member outranks, counting a tie as half. On
+       * lopsided areas most of a caucus votes identically, and a strict count
+       * would file every one of them at the bottom.
+       */
+      percentile: peers > 0 ? Math.round(((below + tied / 2) / peers) * 100) : null,
+    });
+  }
+
+  areas.sort((a, b) => Math.abs(b.gap ?? 0) - Math.abs(a.gap ?? 0) || a.label.localeCompare(b.label));
+
+  const withGap = areas.filter(a => a.gap != null);
+  const summary = {
+    areas: areas.length,
+    votes: areas.reduce((sum, a) => sum + a.n, 0),
+    avgGap: withGap.length > 0
+      ? round(withGap.reduce((sum, a) => sum + Math.abs(a.gap), 0) / withGap.length)
+      : null,
+    mostIndependent: withGap[0] || null,
+    mostAligned: withGap.length > 0 ? withGap[withGap.length - 1] : null,
+  };
+
+  return { member, chamber, party: own, metric, areas, summary };
+}
