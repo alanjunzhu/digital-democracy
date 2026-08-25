@@ -1,41 +1,13 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
 import PolicyStanceChart from '../../components/interactive/PolicyStanceChart';
-import { buildPolicyIndex } from '../../lib/policy-areas';
 import type { PolicyIndex } from '../../lib/policy-areas';
+import { loadPolicyIndex } from '../../../shared/policy-data.mjs';
 import { loadDataJSON } from '../../../shared/data-loader.mjs';
-import { readFileSync, existsSync, readdirSync } from 'fs';
-import { join } from 'path';
 
-const votesIndex = loadDataJSON('votes/index.json') || { votes: [], congress: 119 };
-const membersIndex = loadDataJSON('members/index.json') || { members: [] };
+const votesIndex = loadDataJSON('votes/index.json') || { congress: 119 };
 
-/**
- * Scores need every member's cast, which only the per-roll-call files carry,
- * and the party split has to be recounted from those casts: the stored
- * partyBreakdown on House votes files everyone under `democratic`.
- */
-const votesDir = join(process.cwd(), 'data', 'votes');
-const fullVotes: any[] = [];
-for (const summary of votesIndex.votes || []) {
-  const path = join(votesDir, `${summary.voteId}.json`);
-  if (!existsSync(path)) continue;
-  try { fullVotes.push(JSON.parse(readFileSync(path, 'utf-8'))); } catch {}
-}
-
-const billsById: Record<string, any> = {};
-const billsDir = join(process.cwd(), 'data', 'bills');
-if (existsSync(billsDir)) {
-  for (const file of readdirSync(billsDir)) {
-    if (!file.endsWith('.json') || file === 'index.json') continue;
-    try {
-      const bill = JSON.parse(readFileSync(join(billsDir, file), 'utf-8'));
-      if (bill?.billId) billsById[bill.billId] = bill;
-    } catch {}
-  }
-}
-
-const index: PolicyIndex = buildPolicyIndex(fullVotes, membersIndex.members, { billsById });
+const index: PolicyIndex = loadPolicyIndex();
 const { coverage } = index;
 const widestGap = [...index.areas]
   .map(area => ({

@@ -3,6 +3,7 @@ import { test } from 'node:test';
 
 import {
   buildPolicyIndex,
+  memberPolicyProfile,
   classifyVote,
   isContestedVote,
   majoritySide,
@@ -81,6 +82,19 @@ test('floor mechanics are reported as procedural rather than forced into an area
     { areaId: null, source: 'procedural' }
   );
   assert.deepEqual(classifyVote({ question: 'On Passage' }), { areaId: null, source: 'unclassified' });
+});
+
+test('a motion aimed at a bill stays procedural even when the vote carries that bill\'s subject', () => {
+  // fetch-votes.mjs copies the bill's policy area onto every vote that names it,
+  // cloture and tabling motions included.
+  assert.deepEqual(
+    classifyVote({ topic: 'Immigration', billId: 'hr100', question: 'Motion to Invoke Cloture: H.R. 100' }, { billsById: { hr100: { policyArea: 'Immigration' } } }),
+    { areaId: null, source: 'procedural' }
+  );
+  assert.deepEqual(
+    classifyVote({ billId: 'hr100', question: 'On Motion to Recommit' }, { billsById: { hr100: { policyArea: 'Health', title: 'A Medicare bill' } } }),
+    { areaId: null, source: 'procedural' }
+  );
 });
 
 test('party tallies are recounted from member casts, not the stored breakdown', () => {
@@ -186,4 +200,66 @@ test('party averages can be narrowed to one chamber', () => {
     partyAverage(index.areas[0], membersById, { party: 'republican', chamber: 'all' }),
     { avg: 66.7, members: 3 }
   );
+});
+
+test('a member profile places them against their own party and the other one', () => {
+  const votes = immigrationVotes(4, { crossover: 1 });
+  const index = buildPolicyIndex(votes, ROSTER, { minAreaVotes: 4 });
+  const profile = memberPolicyProfile(index, 'D000002');
+
+  assert.equal(profile.chamber, 'Senate');
+  assert.equal(profile.party, 'democratic');
+  assert.equal(profile.areas.length, 1);
+
+  const area = profile.areas[0];
+  assert.equal(area.score, 25);
+  // The other two Democrats voted against every measure; the party average
+  // counts all three, this member included.
+  assert.deepEqual(area.ownParty, { party: 'democratic', avg: 8.3, members: 3, peers: 2 });
+  assert.deepEqual(area.otherParty, { party: 'republican', avg: 100, members: 2 });
+  assert.equal(area.gap, 16.7);
+  // Ahead of both same-party colleagues.
+  assert.equal(area.percentile, 100);
+  // The two who voted the same way as each other sit level, at half a rank each.
+  assert.equal(profile.areas[0].ownParty.members, 3);
+  assert.equal(memberPolicyProfile(index, 'D000001').areas[0].percentile, 25);
+  assert.equal(profile.summary.mostIndependent.id, 'immigration');
+});
+
+test('an independent is measured against the Democrats they caucus with', () => {
+  const roster = [...ROSTER, { bioguideId: 'I000001', name: 'Ind, One', party: 'Independent', chamber: 'Senate', state: 'VT' }];
+  const votes = immigrationVotes(4).map(v => ({
+    ...v,
+    memberVotes: [...v.memberVotes, { bioguideId: 'I000001', party: 'I', voteCast: 'Nay' }],
+  }));
+  const profile = memberPolicyProfile(buildPolicyIndex(votes, roster, { minAreaVotes: 4 }), 'I000001');
+
+  assert.equal(profile.party, 'democratic');
+  assert.equal(profile.areas[0].ownParty.party, 'democratic');
+  assert.equal(profile.areas[0].ownParty.members, 4);
+  assert.equal(profile.areas[0].otherParty.party, 'republican');
+  assert.equal(profile.areas[0].gap, 0);
+});
+
+test('averages on a profile stay inside the member\'s own chamber', () => {
+  const roster = [...ROSTER, { bioguideId: 'R000004', name: 'House, Member', party: 'Republican', chamber: 'House', state: 'FL' }];
+  const votes = immigrationVotes(4).map(v => ({
+    ...v,
+    memberVotes: [...v.memberVotes, { bioguideId: 'R000004', party: 'R', voteCast: 'Nay' }],
+  }));
+  const index = buildPolicyIndex(votes, roster, { minAreaVotes: 4 });
+
+  const senator = memberPolicyProfile(index, 'R000001');
+  assert.deepEqual(senator.areas[0].ownParty, { party: 'republican', avg: 100, members: 2, peers: 1 });
+
+  // The lone House Republican is compared with the House, so they are their own average.
+  const representative = memberPolicyProfile(index, 'R000004');
+  assert.equal(representative.areas[0].votes, 0);
+  assert.deepEqual(representative.areas[0].ownParty, { party: 'republican', avg: 0, members: 1, peers: 0 });
+  assert.equal(representative.areas[0].percentile, null);
+});
+
+test('a member with no scored area has no profile rows', () => {
+  const index = buildPolicyIndex(immigrationVotes(4), ROSTER, { minAreaVotes: 4 });
+  assert.equal(memberPolicyProfile(index, 'X000999'), null);
 });

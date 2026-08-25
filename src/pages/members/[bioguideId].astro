@@ -19,6 +19,10 @@ import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from
 import type { MemberDetail } from '../../lib/types';
 import { partitionFinanceTrades } from '../../../scripts/fetch-finances.mjs';
 import { scoreMemberPartyAlignment } from '../../lib/party-alignment';
+import MemberPolicyStance from '../../components/interactive/MemberPolicyStance';
+import { memberPolicyProfile } from '../../lib/policy-areas';
+import type { MemberPolicyProfile, StanceMetric } from '../../lib/policy-areas';
+import { loadPolicyIndex, loadRecountedBreakdowns } from '../../../shared/policy-data.mjs';
 import { enrichMemberVotes, summariesByVoteId } from '../../../shared/vote-member-index.mjs';
 
 export function getStaticPaths() {
@@ -125,16 +129,25 @@ let partyAlignment: { comparable: number; withParty: number; againstParty: numbe
   pct: null,
 };
 try {
-  const votesIndexPath = join(process.cwd(), 'data', 'votes', 'index.json');
-  if (existsSync(votesIndexPath) && memberVotes.length > 0) {
-    const votesIndex = JSON.parse(readFileSync(votesIndexPath, 'utf-8'));
-    const breakdownById: Record<string, any> = {};
-    for (const v of votesIndex.votes || []) {
-      if (v.voteId && v.partyBreakdown) breakdownById[v.voteId] = v.partyBreakdown;
-    }
-    partyAlignment = scoreMemberPartyAlignment(memberVotes, breakdownById, member.party);
+  // Recounted from the individual casts: the stored partyBreakdown files every
+  // House member under `democratic`, which leaves House members unscored.
+  if (memberVotes.length > 0) {
+    partyAlignment = scoreMemberPartyAlignment(memberVotes, loadRecountedBreakdowns(), member.party);
   }
 } catch {}
+
+// Where this member stands by policy area, next to their own party and the other one.
+const policyProfiles: Record<StanceMetric, MemberPolicyProfile> | null = (() => {
+  try {
+    const index = loadPolicyIndex();
+    const support = memberPolicyProfile(index, bioguideId, { metric: 'support' });
+    const lean = memberPolicyProfile(index, bioguideId, { metric: 'lean' });
+    return support && lean && support.areas.length > 0 ? { support, lean } : null;
+  } catch {
+    return null;
+  }
+})();
+const policySummary = policyProfiles?.support.summary ?? null;
 
 // Cross-link: committee assignments (from member data or committees index)
 let memberCommittees: string[] = [];
@@ -485,6 +498,53 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
           })}
         </div>
         <a href={`${base}bills/`} class="text-blue-600 hover:underline text-sm mt-4 inline-block">View all bills &rarr;</a>
+      </div>
+    )}
+
+    <!-- Policy stances against the member's party -->
+    {policyProfiles && policySummary && (
+      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+        <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-gray-900">Where They Stand by Policy Area</h2>
+            <p class="text-sm text-gray-500 mt-0.5">
+              {policySummary.votes} votes across {policySummary.areas} {policySummary.areas === 1 ? 'area' : 'areas'} that split the two parties
+            </p>
+          </div>
+          {policySummary.avgGap != null && (
+            <div class="text-right">
+              <div class="text-2xl font-bold text-gray-900">{policySummary.avgGap} pts</div>
+              <div class="text-xs text-gray-500">average distance from their party</div>
+            </div>
+          )}
+        </div>
+
+        {(policySummary.mostIndependent || policySummary.mostAligned) && (
+          <div class="grid sm:grid-cols-2 gap-3 mb-5">
+            {policySummary.mostIndependent && (
+              <div class="p-3 bg-amber-50 border border-amber-100 rounded-lg">
+                <div class="text-xs font-medium text-amber-800">Furthest from their party</div>
+                <div class="text-sm text-gray-900 mt-0.5">
+                  <span class="font-semibold">{policySummary.mostIndependent.label}</span>
+                  {' '}— {Math.round(policySummary.mostIndependent.score)}% against a party average of
+                  {' '}{Math.round(policySummary.mostIndependent.ownParty.avg ?? 0)}%
+                </div>
+              </div>
+            )}
+            {policySummary.mostAligned && (
+              <div class="p-3 bg-indigo-50 border border-indigo-100 rounded-lg">
+                <div class="text-xs font-medium text-indigo-800">Closest to their party</div>
+                <div class="text-sm text-gray-900 mt-0.5">
+                  <span class="font-semibold">{policySummary.mostAligned.label}</span>
+                  {' '}— {Math.round(policySummary.mostAligned.score)}% against a party average of
+                  {' '}{Math.round(policySummary.mostAligned.ownParty.avg ?? 0)}%
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        <MemberPolicyStance profiles={policyProfiles} baseUrl={base} client:visible />
       </div>
     )}
 

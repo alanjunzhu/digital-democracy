@@ -72,12 +72,33 @@ function displayName(name: string) {
   return rest ? `${rest.trim()} ${last.trim()}` : String(name);
 }
 
+interface Row {
+  area: PolicyArea;
+  points: { score: PolicyScore; member: PolicyMember }[];
+  averages: Record<string, { avg: number; members: number }>;
+  contested: number;
+}
+
+/** What a screen reader hears in place of the row's dots. */
+function rowSummary(row: Row, metric: StanceMetric) {
+  const parts = [
+    `${row.area.label}: ${plural(row.contested, 'contested vote', 'contested votes')}, ${plural(row.points.length, 'member', 'members')} scored.`,
+  ];
+  for (const party of ['democratic', 'republican'] as const) {
+    const avg = row.averages[party];
+    if (avg) parts.push(`${PARTY_LABEL[party]} average ${fmt(avg.avg, metric)}.`);
+  }
+  parts.push('Activate to list the roll calls behind this area.');
+  return parts.join(' ');
+}
+
 export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
   const [metric, setMetric] = useState<StanceMetric>('support');
   const [chamber, setChamber] = useState<ChamberScope>('all');
   const [search, setSearch] = useState('');
   const [hover, setHover] = useState<{ x: number; y: number; lines: string[] } | null>(null);
   const [openArea, setOpenArea] = useState<string | null>(null);
+  const [focusArea, setFocusArea] = useState<string | null>(null);
 
   const membersById = useMemo(() => {
     const map: Record<string, PolicyMember> = {};
@@ -92,7 +113,7 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
   const query = search.trim().toLowerCase();
 
   /** Rows keep an area only while the chamber scope actually voted on it. */
-  const rows = useMemo(() => {
+  const rows: Row[] = useMemo(() => {
     return index.areas
       .map((area) => {
         const points: { score: PolicyScore; member: PolicyMember }[] = [];
@@ -202,8 +223,32 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
                   height={ROW_H}
                   fill={active ? '#eff6ff' : i % 2 === 0 ? '#fafafa' : '#ffffff'}
                   className="cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  aria-expanded={active}
+                  aria-label={rowSummary(row, metric)}
                   onClick={() => setOpenArea(active ? null : row.area.id)}
+                  onFocus={() => setFocusArea(row.area.id)}
+                  onBlur={() => setFocusArea((current) => (current === row.area.id ? null : current))}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                      e.preventDefault();
+                      setOpenArea(active ? null : row.area.id);
+                    }
+                  }}
                 />
+                {focusArea === row.area.id && (
+                  <rect
+                    x={1}
+                    y={y - ROW_H / 2 + 1}
+                    width={W - 2}
+                    height={ROW_H - 2}
+                    fill="none"
+                    stroke="#1d4ed8"
+                    strokeWidth={2}
+                    pointerEvents="none"
+                  />
+                )}
                 <text x={PAD.left - 14} y={y - 2} textAnchor="end" fontSize="12" className="fill-gray-900 font-medium">
                   {row.area.label}
                 </text>
