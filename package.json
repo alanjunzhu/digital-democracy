@@ -16,6 +16,7 @@
     "fetch:prices": "node scripts/fetch-stock-prices.mjs",
     "enrich:trade-timing": "node scripts/enrich-trade-timing.mjs",
     "repair:votes": "node scripts/repair-vote-records.mjs",
+    "repair:finances": "node scripts/repair-finance-records.mjs",
     "test": "node --test \"tests/**/*.test.mjs\"",
     "typecheck": "tsc --noEmit --pretty false -p tsconfig.check.json"
   },

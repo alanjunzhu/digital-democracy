@@ -22,6 +22,7 @@ import {
   mergeFinanceTrades,
   normalizeFinanceDate,
   normalizeMemberName,
+  reconcileFinanceTrades,
 } from '../shared/finance-sources.mjs';
 
 const KADOA_DATA_BASE = process.env.KADOA_TRADES_BASE
@@ -762,9 +763,19 @@ async function main() {
     filingSources.push(senateEfdFilings);
   }
 
-  const allTrades = mergeFinanceTrades(...tickerSources, ...filingSources);
+  const merged = mergeFinanceTrades(...tickerSources, ...filingSources);
+
+  // Sources overlap on documents, not on wording: one parse of each filing wins,
+  // dates are checked against the date that filing reached the clerk.
+  const { trades: allTrades, stats: reconciliation } = reconcileFinanceTrades(merged);
   allTrades.sort((a, b) => (b.transactionDate || '').localeCompare(a.transactionDate || ''));
   console.log(`\nTotal merged trades/filings: ${allTrades.length}`);
+  console.log(
+    `  reconciled: ${reconciliation.duplicateDropped} duplicate line items dropped, ` +
+    `${reconciliation.dateRepaired} transaction dates repaired, ` +
+    `${reconciliation.futureDropped} still-future rows dropped, ` +
+    `${reconciliation.disclosureFilled} disclosure dates filled from the filing`
+  );
 
   const committeeMemberships = await fetchCommitteeMemberships();
 
