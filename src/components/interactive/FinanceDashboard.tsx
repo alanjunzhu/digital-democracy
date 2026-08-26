@@ -128,7 +128,7 @@ export default function FinanceDashboard({
   return (
     <div className="space-y-8">
       {/* Overview */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div id="trading-overview" data-page-section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard label="Members trading" value={overview.membersWithTrades} sub={`of ${overview.totalMembers}`} />
         <StatCard label="Total trades" value={overview.totalTrades} />
         <StatCard label="Committee overlap flags" value={overview.highSeverityFlags} accent="red" />
@@ -142,7 +142,7 @@ export default function FinanceDashboard({
       </p>
 
       {/* Flagged members */}
-      <section className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <section id="flagged-members" data-page-section className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-1">Potential insider-information conflicts</h2>
         <p className="text-xs text-gray-500 mb-4">
           Members with stock trades in sectors tied to their committee work ({flaggedMembers.length} flagged).
@@ -189,7 +189,7 @@ export default function FinanceDashboard({
       </section>
 
       {/* Aggregate sectors */}
-      <section className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <section id="trading-by-sector" data-page-section className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">Aggregate trading by sector</h2>
         <div className="space-y-2">
           {sectors.slice(0, 15).map(row => (
@@ -212,7 +212,7 @@ export default function FinanceDashboard({
       </section>
 
       {/* Aggregate tickers */}
-      <section className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <section id="most-traded-stocks" data-page-section className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">Most traded stocks (aggregate)</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-xs">
@@ -256,7 +256,7 @@ export default function FinanceDashboard({
       </section>
 
       {/* Individual trades */}
-      <section className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <section id="individual-trades" data-page-section className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-1">Individual stock trades</h2>
         <p className="text-xs text-gray-500 mb-4">{filteredTrades.length.toLocaleString()} trades matching filters</p>
 

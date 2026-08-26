@@ -1,5 +1,6 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
+import PageIndex from '../../components/layout/PageIndex.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import type { VoteDetail } from '../../lib/types';
@@ -53,17 +54,28 @@ const partyColor = (p: string) => {
   if (p === 'R' || p === 'Republican') return 'text-red-700';
   return 'text-purple-700';
 };
+
+const pageSections = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'vote-tally', label: 'Vote Tally' },
+  { id: 'individual-votes', label: 'Individual Votes', when: memberVotes.length, count: memberVotes.length },
+  { id: 'yea-votes', label: 'Yea', when: yeaVotes.length, count: yeaVotes.length, depth: 1 },
+  { id: 'nay-votes', label: 'Nay', when: nayVotes.length, count: nayVotes.length, depth: 1 },
+  { id: 'other-votes', label: 'Not Voting / Present', when: otherVotes.length, count: otherVotes.length, depth: 1 },
+];
 ---
 
 <Layout title={`Roll Call #${vote.rollCallNumber}`} description={vote.question}>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <PageIndex sections={pageSections} />
+
     <!-- Back link -->
     <a href={`${base}votes/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
       &larr; All Votes
     </a>
 
     <!-- Vote Header -->
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+    <div id="overview" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
       <div class="flex items-center gap-3 mb-3">
         <span class="font-mono text-lg font-bold text-gray-700">Roll Call #{vote.rollCallNumber}</span>
         <span class={`inline-flex items-center font-semibold rounded-full text-sm px-2.5 py-0.5 ${resultColor(vote.result)}`}>
@@ -105,7 +117,7 @@ const partyColor = (p: string) => {
     </div>
 
     <!-- Vote Tally -->
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+    <div id="vote-tally" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
       <h2 class="text-lg font-semibold text-gray-900 mb-4">Vote Tally</h2>
 
       <!-- Overall bar -->
@@ -159,12 +171,12 @@ const partyColor = (p: string) => {
 
     <!-- Individual Member Votes -->
     {memberVotes.length > 0 && (
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+      <div id="individual-votes" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-4">Individual Votes ({memberVotes.length} members)</h2>
 
         {/* Yea votes */}
         {yeaVotes.length > 0 && (
-          <div class="mb-6">
+          <div id="yea-votes" data-page-section class="mb-6">
             <h3 class="text-sm font-semibold text-green-700 mb-2 flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
               Yea ({yeaVotes.length})
@@ -184,7 +196,7 @@ const partyColor = (p: string) => {
 
         {/* Nay votes */}
         {nayVotes.length > 0 && (
-          <div class="mb-6">
+          <div id="nay-votes" data-page-section class="mb-6">
             <h3 class="text-sm font-semibold text-red-700 mb-2 flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
               Nay ({nayVotes.length})
@@ -204,7 +216,7 @@ const partyColor = (p: string) => {
 
         {/* Not Voting / Present */}
         {otherVotes.length > 0 && (
-          <div>
+          <div id="other-votes" data-page-section>
             <h3 class="text-sm font-semibold text-gray-500 mb-2 flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-gray-400"></span>
               Not Voting / Present ({otherVotes.length})

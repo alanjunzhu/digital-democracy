@@ -1,5 +1,6 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
+import PageIndex from '../../components/layout/PageIndex.astro';
 import PartyBadge from '../../components/shared/PartyBadge.astro';
 import ChamberBadge from '../../components/shared/ChamberBadge.astro';
 import MemberVoteRow from '../../components/shared/MemberVoteRow.astro';
@@ -303,17 +304,38 @@ const TOPIC_COLORS: Record<string, string> = {
 
 // Stage display order
 const stageOrder = [...BILL_STAGES, 'Other'] as const;
+
+const hasFinanceCard = stockTrades.length > 0 || ptrFilings.length > 0;
+const pageSections = [
+  { id: 'profile', label: 'Profile' },
+  { id: 'details', label: 'Details & Service History' },
+  { id: 'sponsored-legislation', label: 'Sponsored Legislation', when: sponsoredBills.length, count: sponsoredBills.length },
+  { id: 'policy-stances', label: 'Policy Stances', when: policyProfiles && policySummary },
+  { id: 'voting-record', label: 'Voting Record', when: memberVotes.length, count: voteStats.total },
+  { id: 'committee-assignments', label: 'Committee Assignments', when: !hasFinanceCard && memberCommittees.length, count: memberCommittees.length },
+  { id: 'conflict-flags', label: 'Conflict Flags', when: conflictFlags.length, count: conflictFlags.length },
+  { id: 'portfolio', label: 'Portfolio vs. the Market', when: memberPortfolio },
+  { id: 'trade-timing', label: 'Trade Timing', when: overlapTimingTrades.length, count: overlapTimingTrades.length },
+  { id: 'financial-disclosures', label: 'Financial Disclosures', when: hasFinanceCard },
+  { id: 'disclosure-filings', label: 'Disclosure filings', when: ptrFilings.length, count: ptrFilings.length, depth: 1 },
+  { id: 'recent-trades', label: 'Recent stock trades', when: stockTrades.length, count: stockTrades.length, depth: 1 },
+  { id: 'trading-by-sector', label: 'Trading by sector', when: sectorTradeOrder.length, count: sectorTradeOrder.length, depth: 1 },
+  { id: 'finance-committees', label: 'Committee assignments', when: hasFinanceCard && memberCommittees.length, count: memberCommittees.length, depth: 1 },
+  { id: 'most-traded-stocks', label: 'Most traded stocks', when: topTickers.length, count: topTickers.length, depth: 1 },
+];
 ---
 
 <Layout title={member.name} description={`${member.name} - ${member.party} ${member.chamber === 'Senate' ? 'Senator' : 'Representative'} from ${formatState(member.state)}`}>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <PageIndex sections={pageSections} />
+
     <!-- Back link -->
     <a href={`${base}members/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
       &larr; All Members
     </a>
 
     <!-- Profile Header -->
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+    <div id="profile" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <img
           src={member.imageUrl}
@@ -398,7 +420,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
     </div>
 
     <!-- Details Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div id="details" data-page-section class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Bio -->
       <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-3">Details</h2>
@@ -444,7 +466,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
     <!-- Sponsored Bills by Stage -->
     {sponsoredBills.length > 0 && (
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+      <div id="sponsored-legislation" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-4">Sponsored Legislation</h2>
 
         {/* Stage pipeline visualization */}
@@ -503,7 +525,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
     <!-- Policy stances against the member's party -->
     {policyProfiles && policySummary && (
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+      <div id="policy-stances" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
         <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
           <div>
             <h2 class="text-lg font-semibold text-gray-900">Where They Stand by Policy Area</h2>
@@ -550,7 +572,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
     <!-- Voting Record -->
     {memberVotes.length > 0 && (
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+      <div id="voting-record" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-4">Voting Record</h2>
 
         {/* Vote stats summary */}
@@ -696,7 +718,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
     <!-- Committee Assignments (standalone, shows even without finance data) -->
     {memberCommittees.length > 0 && stockTrades.length === 0 && ptrFilings.length === 0 && (
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+      <div id="committee-assignments" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-3">Committee Assignments</h2>
         <div class="flex flex-wrap gap-1.5">
           {memberCommittees.map((c: string) => {
@@ -728,7 +750,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
       <div class="space-y-6 mt-6">
         {/* Conflict Alert Banner */}
         {conflictFlags.length > 0 && (
-          <div class={`rounded-lg border-2 p-5 ${conflictFlags.some((f: any) => f.severity === 'high') ? 'border-red-300 bg-red-50' : 'border-amber-300 bg-amber-50'}`}>
+          <div id="conflict-flags" data-page-section class={`rounded-lg border-2 p-5 ${conflictFlags.some((f: any) => f.severity === 'high') ? 'border-red-300 bg-red-50' : 'border-amber-300 bg-amber-50'}`}>
             <div class="flex items-start gap-3">
               <div class={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold ${conflictFlags.some((f: any) => f.severity === 'high') ? 'bg-red-200 text-red-700' : 'bg-amber-200 text-amber-700'}`}>
                 !
@@ -765,16 +787,18 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
         )}
 
         {memberPortfolio && (
-          <MemberPortfolioChart
-            portfolio={memberPortfolio}
-            memberName={member.name}
-            benchmarkLabel={BENCHMARK_LABEL}
-            client:load
-          />
+          <div id="portfolio" data-page-section>
+            <MemberPortfolioChart
+              portfolio={memberPortfolio}
+              memberName={member.name}
+              benchmarkLabel={BENCHMARK_LABEL}
+              client:load
+            />
+          </div>
         )}
 
         {overlapTimingTrades.length > 0 && (
-          <div class="mb-5">
+          <div id="trade-timing" data-page-section class="mb-5">
             <h3 class="text-sm font-semibold text-gray-700 mb-1">Trade timing analysis</h3>
             <p class="text-xs text-gray-500 mb-3">
               Compare flagged trades to alternative timing and a do-nothing baseline (cash if no buy, hold if no sell).
@@ -784,11 +808,11 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
         )}
 
         {/* Financial Overview Card */}
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div id="financial-disclosures" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-4">Financial Disclosures & Trading</h2>
 
           {ptrFilings.length > 0 && (
-            <div class={stockTrades.length > 0 ? 'mb-5' : ''}>
+            <div id="disclosure-filings" data-page-section class={stockTrades.length > 0 ? 'mb-5' : ''}>
               <h3 class="text-sm font-semibold text-gray-700 mb-2">Official disclosure filings</h3>
               <p class="text-xs text-gray-500 mb-3">
                 Periodic transaction reports (PTRs) and annual financial disclosures from the House Clerk and Senate eFD system.
@@ -814,7 +838,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
           )}
 
           {stockTrades.length > 0 && (
-            <div class="mb-5">
+            <div id="recent-trades" data-page-section class="mb-5">
               <h3 class="text-sm font-semibold text-gray-700 mb-2">Recent stock trades</h3>
               <ExpandableTradeList trades={stockTrades} previewCount={10} moreLabel="trades" />
             </div>
@@ -849,7 +873,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
           {/* Sector Breakdown with expandable trade lists */}
           {sectorTradeOrder.length > 0 && (
-            <div class="mb-5">
+            <div id="trading-by-sector" data-page-section class="mb-5">
               <h3 class="text-sm font-semibold text-gray-700 mb-2">Trading by Sector</h3>
               <div class="space-y-2">
                 {sectorTradeOrder.map((sector) => {
@@ -891,7 +915,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
           {/* Committee Assignments (for context) */}
           {memberCommittees.length > 0 && (
-            <div class="mb-5">
+            <div id="finance-committees" data-page-section class="mb-5">
               <h3 class="text-sm font-semibold text-gray-700 mb-2">Committee Assignments</h3>
               <div class="flex flex-wrap gap-1.5">
                 {memberCommittees.map((c: string) => {
@@ -919,7 +943,7 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
           {/* Top Tickers — expandable trade lists with quote links */}
           {topTickers.length > 0 && (
-            <div class="mb-5">
+            <div id="most-traded-stocks" data-page-section class="mb-5">
               <h3 class="text-sm font-semibold text-gray-700 mb-2">Most Traded Stocks</h3>
               <div class="space-y-2">
                 {topTickers.map(([ticker, trades]) => {

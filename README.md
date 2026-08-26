@@ -52,6 +52,7 @@ The site is static. Node scripts fetch public data into `data/`, that JSON is co
 - **Committees** — Standing committees and subcommittees, each listing legislation referred to it in this congress
 - **Finances** — STOCK Act periodic transaction reports (and ticker-level trades when the Stock Watcher dumps are reachable), with a Congress-wide chart of cash vs all trading vs the S&P 500 vs committee-overlap trades, plus committee-overlap and bill-timing flags
 - **Analytics** — Party breakdown, bill stages, and voting patterns
+- **Section index** — The long pages (member, bill, vote and committee profiles, and the trading dashboard) carry an "On this page" rail on the left, opened and closed by the gearwheel button, that jumps to a section and marks the one being read
 - **Automated refresh** — GitHub Actions fetch and commit data on a schedule; a push to `main` rebuilds the site
 
 ---
@@ -108,7 +109,7 @@ digital-democracy/
 │   │       ├── index.astro              # Directory
 │   │       └── [committeeId].astro      # Referrals + subcommittees
 │   ├── components/
-│   │   ├── layout/                      # Layout, Header, Footer
+│   │   ├── layout/                      # Layout, Header, Footer, PageIndex
 │   │   ├── shared/                      # PartyBadge, ChamberBadge
 │   │   ├── members/                     # MemberCard
 │   │   └── interactive/                 # React filters and analytics
@@ -150,6 +151,7 @@ digital-democracy/
 │   ├── timing-precompute.mjs            # Build-time pairing of chart data to trades
 │   ├── portfolio-series.mjs             # Member and Congress portfolios vs S&P 500 vs cash
 │   ├── member-finance-index.mjs         # Per-member trading record for the directory filter
+│   ├── page-index.mjs                   # Section lists for the on-page index rail
 │   └── data-loader.mjs                  # Memoised reads of the shared data indexes
 ├── tests/                               # node --test
 │   ├── api-client.test.mjs
