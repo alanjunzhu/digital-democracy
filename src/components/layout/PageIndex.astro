@@ -1,0 +1,221 @@
+---
+import { buildPageIndex } from '../../../shared/page-index.mjs';
+
+interface Props {
+  /**
+   * Every section the page can render, in the order it renders them. `when`
+   * carries the same condition that puts the section on the page, so a member
+   * with no trades gets no trading links.
+   */
+  sections: Array<{
+    id?: string;
+    label: string;
+    when?: unknown;
+    count?: number | null;
+    depth?: number;
+  }>;
+  title?: string;
+}
+
+const { sections, title = 'On this page' } = Astro.props;
+const entries = buildPageIndex(sections);
+---
+
+{entries.length > 0 && (
+  <div
+    data-page-index
+    class="fixed left-3 bottom-6 sm:top-24 sm:bottom-auto z-40 flex flex-col-reverse sm:flex-col items-start gap-2 print:hidden"
+  >
+    <button
+      type="button"
+      data-page-index-toggle
+      aria-expanded="false"
+      aria-controls="page-index-panel"
+      title={`${title} (${entries.length} sections)`}
+      class="grid h-10 w-10 place-items-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-md transition-colors hover:border-blue-200 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+    >
+      <span class="sr-only">{title}</span>
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.34 3.94c.09-.54.56-.94 1.11-.94h1.1c.55 0 1.02.4 1.11.94l.17 1.02c.5.17.97.4 1.4.7l.96-.4c.5-.2 1.08-.03 1.36.44l.55.95c.28.47.16 1.07-.27 1.4l-.81.63c.05.27.08.55.08.83s-.03.56-.08.83l.81.63c.43.33.55.93.27 1.4l-.55.95c-.28.47-.86.65-1.36.44l-.96-.4c-.43.3-.9.53-1.4.7l-.17 1.02c-.09.54-.56.94-1.11.94h-1.1c-.55 0-1.02-.4-1.11-.94l-.17-1.02c-.5-.17-.97-.4-1.4-.7l-.96.4c-.5.2-1.08.03-1.36-.44l-.55-.95c-.28-.47-.16-1.07.27-1.4l.81-.63A5.1 5.1 0 0 1 6.5 12c0-.28.03-.56.08-.83l-.81-.63c-.43-.33-.55-.93-.27-1.4l.55-.95c.28-.47.86-.65 1.36-.44l.96.4c.43-.3.9-.53 1.4-.7l.17-1.02Z"
+        />
+        <circle cx="12" cy="12" r="2.4" stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <nav
+      id="page-index-panel"
+      data-page-index-panel
+      aria-label={title}
+      class="hidden w-64 max-w-[calc(100vw-1.5rem)] max-h-[min(70vh,34rem)] overflow-y-auto rounded-xl border border-gray-200 bg-white/95 px-2.5 py-2.5 shadow-xl backdrop-blur"
+    >
+      <p class="px-2 pb-2 text-[10px] font-semibold uppercase tracking-wider text-gray-400">{title}</p>
+      <ol class="space-y-0.5">
+        {entries.map(entry => (
+          <li>
+            <a
+              href={`#${entry.id}`}
+              data-page-index-link={entry.id}
+              class:list={[
+                'flex items-baseline gap-2 rounded-md px-2 py-1.5 text-gray-600 transition-colors hover:bg-gray-50 hover:text-blue-700',
+                entry.depth === 1 ? 'ml-3 text-[11px]' : 'text-xs font-medium',
+              ]}
+            >
+              <span class="flex-1 leading-snug">{entry.label}</span>
+              {entry.count != null && (
+                <span class="shrink-0 text-[10px] text-gray-400">{entry.count}</span>
+              )}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  </div>
+)}
+
+<style>
+  [data-page-index-toggle] svg {
+    transition: transform 0.45s ease;
+  }
+  [data-page-index-toggle]:hover svg {
+    transform: rotate(60deg);
+  }
+  [data-page-index-toggle][aria-expanded='true'] svg {
+    transform: rotate(30deg);
+  }
+  [data-page-index-toggle][aria-expanded='true'] {
+    border-color: rgb(191 219 254);
+    color: rgb(37 99 235);
+  }
+  [data-page-index-link][aria-current='true'] {
+    background-color: rgb(239 246 255);
+    color: rgb(29 78 216);
+    font-weight: 600;
+    box-shadow: inset 2px 0 0 rgb(37 99 235);
+  }
+</style>
+
+<script>
+  const root = document.querySelector('[data-page-index]');
+  const toggle = root?.querySelector('[data-page-index-toggle]');
+  const panel = root?.querySelector('[data-page-index-panel]');
+
+  if (root && toggle instanceof HTMLElement && panel instanceof HTMLElement) {
+    const STORAGE_KEY = 'page-index:open';
+    // left-3 offset + the panel's own w-64 + room to breathe.
+    const PANEL_CLEARANCE = 280;
+    const links = Array.from(panel.querySelectorAll('[data-page-index-link]')) as HTMLAnchorElement[];
+    const targets = links
+      .map(link => {
+        const id = link.getAttribute('data-page-index-link') || '';
+        return { link, section: document.getElementById(id) };
+      })
+      .filter((entry): entry is { link: HTMLAnchorElement; section: HTMLElement } => entry.section !== null);
+
+    function readPreference() {
+      try {
+        return window.localStorage.getItem(STORAGE_KEY);
+      } catch {
+        return null;
+      }
+    }
+
+    function writePreference(open: boolean) {
+      try {
+        window.localStorage.setItem(STORAGE_KEY, open ? 'open' : 'closed');
+      } catch {
+        /* private browsing: the panel just forgets between pages */
+      }
+    }
+
+    // Docked only when the page's gutter can hold the panel beside the text;
+    // on anything narrower it opens over the content, so it stays shut until
+    // someone asks for it.
+    function fitsBesideContent() {
+      const content = document.querySelector('main')?.firstElementChild;
+      if (!(content instanceof HTMLElement)) return false;
+      const gutter =
+        content.getBoundingClientRect().left +
+        parseFloat(window.getComputedStyle(content).paddingLeft || '0');
+      return gutter >= PANEL_CLEARANCE;
+    }
+
+    function isOpen() {
+      return toggle.getAttribute('aria-expanded') === 'true';
+    }
+
+    function setOpen(open: boolean) {
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      panel.classList.toggle('hidden', !open);
+    }
+
+    let docked = fitsBesideContent();
+    setOpen(docked && readPreference() !== 'closed');
+
+    toggle.addEventListener('click', () => {
+      const open = !isOpen();
+      setOpen(open);
+      if (docked) writePreference(open);
+    });
+
+    for (const { link } of targets) {
+      link.addEventListener('click', () => {
+        if (!docked) setOpen(false);
+      });
+    }
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && isOpen() && !docked) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener('click', event => {
+      if (!isOpen() || docked) return;
+      const target = event.target;
+      if (target instanceof Node && !root.contains(target)) setOpen(false);
+    });
+
+    // The section under the sticky header is the one being read.
+    function markCurrent() {
+      let current = targets[0];
+      for (const entry of targets) {
+        if (entry.section.getBoundingClientRect().top <= 96) current = entry;
+      }
+      const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 2;
+      if (atBottom) current = targets[targets.length - 1];
+
+      for (const { link } of targets) {
+        if (link === current?.link) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      }
+    }
+
+    let queued = false;
+    function scheduleMark() {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(() => {
+        queued = false;
+        markCurrent();
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      const nowDocked = fitsBesideContent();
+      if (nowDocked !== docked) {
+        docked = nowDocked;
+        setOpen(docked && readPreference() !== 'closed');
+      }
+      scheduleMark();
+    });
+
+    if (targets.length > 0) {
+      markCurrent();
+      window.addEventListener('scroll', scheduleMark, { passive: true });
+    }
+  }
+</script>
