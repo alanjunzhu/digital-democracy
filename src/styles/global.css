@@ -6,4 +6,15 @@
   body {
     @apply bg-gray-50 text-gray-900 antialiased;
   }
+
+  /* Anchored sections have to clear the sticky header when jumped to. */
+  [data-page-section] {
+    scroll-margin-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
 }

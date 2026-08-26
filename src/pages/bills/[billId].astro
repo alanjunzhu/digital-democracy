@@ -1,5 +1,6 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
+import PageIndex from '../../components/layout/PageIndex.astro';
 import ChamberBadge from '../../components/shared/ChamberBadge.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
@@ -84,17 +85,29 @@ try {
 // resolutions live under their own congress.gov path, not /house-bill/.
 const congressGovUrl = getBillWebUrl(bill.congress, bill.type, bill.number);
 const congressGovTextUrl = getBillTextWebUrl(bill.congress, bill.type, bill.number);
+
+const pageSections = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'summary', label: 'Summary', when: bill.summary },
+  { id: 'latest-action', label: 'Latest Action', when: bill.latestAction },
+  { id: 'committees', label: 'Committees', when: committees.length, count: committees.length },
+  { id: 'subjects', label: 'Subjects', when: bill.subjects?.length, count: bill.subjects?.length },
+  { id: 'roll-call-votes', label: 'Roll Call Votes', when: billVotes.length, count: billVotes.length },
+  { id: 'action-history', label: 'Action History', when: bill.actions?.length, count: bill.actions?.length },
+];
 ---
 
 <Layout title={`${bill.type} ${bill.number}`} description={bill.title}>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <PageIndex sections={pageSections} />
+
     <!-- Back link -->
     <a href={`${base}bills/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
       &larr; All Bills
     </a>
 
     <!-- Bill Header -->
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+    <div id="overview" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
       <div class="flex items-center gap-3 mb-3">
         <span class="font-mono text-lg font-bold text-blue-700">{bill.type} {bill.number}</span>
         <ChamberBadge chamber={bill.originChamber} />
@@ -180,7 +193,7 @@ const congressGovTextUrl = getBillTextWebUrl(bill.congress, bill.type, bill.numb
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Summary -->
       {bill.summary && (
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
+        <div id="summary" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Summary</h2>
           <div class="text-sm text-gray-700 prose prose-sm max-w-none" set:html={bill.summary} />
         </div>
@@ -188,7 +201,7 @@ const congressGovTextUrl = getBillTextWebUrl(bill.congress, bill.type, bill.numb
 
       <!-- Latest Action -->
       {bill.latestAction && (
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div id="latest-action" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Latest Action</h2>
           <p class="text-sm text-gray-700">{bill.latestAction}</p>
           {bill.latestActionDate && (
@@ -199,7 +212,7 @@ const congressGovTextUrl = getBillTextWebUrl(bill.congress, bill.type, bill.numb
 
       <!-- Committees -->
       {committees.length > 0 && (
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div id="committees" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Committees</h2>
           <ul class="space-y-1 text-sm text-gray-700">
             {committees.map(({ name, committee }) => (
@@ -219,7 +232,7 @@ const congressGovTextUrl = getBillTextWebUrl(bill.congress, bill.type, bill.numb
 
       <!-- Subjects -->
       {bill.subjects && bill.subjects.length > 0 && (
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div id="subjects" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Subjects</h2>
           <div class="flex flex-wrap gap-2">
             {bill.subjects.map(s => (
@@ -233,7 +246,7 @@ const congressGovTextUrl = getBillTextWebUrl(bill.congress, bill.type, bill.numb
 
       <!-- Votes on This Bill -->
       {billVotes.length > 0 && (
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
+        <div id="roll-call-votes" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Roll Call Votes ({billVotes.length})</h2>
           <div class="space-y-2">
             {billVotes.map((v: any) => {
@@ -268,7 +281,7 @@ const congressGovTextUrl = getBillTextWebUrl(bill.congress, bill.type, bill.numb
 
       <!-- Action History -->
       {bill.actions && bill.actions.length > 0 && (
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
+        <div id="action-history" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Action History</h2>
           <div class="space-y-2 text-sm">
             {bill.actions.map(a => (

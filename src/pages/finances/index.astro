@@ -1,5 +1,6 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
+import PageIndex from '../../components/layout/PageIndex.astro';
 import FinanceDashboard from '../../components/interactive/FinanceDashboard';
 import TradeTimingExplorer from '../../components/interactive/TradeTimingExplorer';
 import CongressPortfolioChart from '../../components/interactive/CongressPortfolioChart';
@@ -89,6 +90,17 @@ if (financeData && trades.length > 0) {
   });
   if (built.ok) congressPortfolio = built;
 }
+
+// The dashboard's own sections carry these ids; see FinanceDashboard.
+const pageSections = [
+  { id: 'congress-portfolio', label: 'Congress vs. the Market', when: congressPortfolio },
+  { id: 'trade-timing', label: 'Trade Timing Insights', when: financeData, count: timingCandidates.length },
+  { id: 'trading-overview', label: 'Trading Overview', when: financeData },
+  { id: 'flagged-members', label: 'Committee Overlap Flags', when: financeData, count: flaggedMembers.length },
+  { id: 'trading-by-sector', label: 'Trading by Sector', when: financeData, count: sectors.length },
+  { id: 'most-traded-stocks', label: 'Most Traded Stocks', when: financeData, count: tickers.length },
+  { id: 'individual-trades', label: 'Individual Trades', when: financeData, count: trades.length },
+];
 ---
 
 <Layout
@@ -96,6 +108,8 @@ if (financeData && trades.length > 0) {
   description="Aggregate and individual congressional stock trades with committee overlap analysis — potential insider-information conflicts."
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <PageIndex sections={pageSections} />
+
     <div class="mb-6">
       <h1 class="text-3xl font-bold text-gray-900">Congressional Stock Trading</h1>
       <p class="text-gray-500 mt-1 max-w-3xl">
@@ -115,7 +129,7 @@ if (financeData && trades.length > 0) {
     ) : (
       <>
         {congressPortfolio && (
-          <section class="mb-8">
+          <section id="congress-portfolio" data-page-section class="mb-8">
             <CongressPortfolioChart
               portfolio={congressPortfolio}
               benchmarkLabel={BENCHMARK_LABEL}
@@ -125,7 +139,7 @@ if (financeData && trades.length > 0) {
           </section>
         )}
 
-        <section class="mb-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <section id="trade-timing" data-page-section class="mb-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">Trade timing insights</h2>
           <p class="text-xs text-gray-500 mb-4 max-w-3xl">
             Compare each flagged trade to alternative timing (30 days earlier/later) and a
