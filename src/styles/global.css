@@ -3,8 +3,67 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --paper: #f7f6f3;
+    --card: #fffefb;
+    --ink: #1a1a18;
+    --ink-2: #4a473f;
+    --ink-3: #7d786d;
+    --rule: #e2dfd7;
+    --rule-2: #ece9e2;
+    --red: #8a1c1c;
+    --navy: #1f3d5c;
+    --dem: #2563eb;
+    --rep: #dc2626;
+    --ind: #7c3aed;
+    --dem-soft: #eaf0fe;
+    --rep-soft: #fdeceb;
+    --ind-soft: #f4ecfd;
+    --footer-bg: #1a1a18;
+    --footer-fg: #f7f6f3;
+    --field: #fffefb;
+  }
+
+  :root[data-cd-theme='dark'] {
+    --paper: #14140f;
+    --card: #1b1a16;
+    --ink: #f2f0e9;
+    --ink-2: #c2bdb1;
+    --ink-3: #8e887b;
+    --rule: #2f2d26;
+    --rule-2: #262420;
+    --red: #d2635a;
+    --navy: #8fb4d6;
+    --dem: #6c9bfb;
+    --rep: #ef7c72;
+    --ind: #b394f5;
+    --dem-soft: #1d2740;
+    --rep-soft: #33211f;
+    --ind-soft: #2a2140;
+    --footer-bg: #0e0e0b;
+    --footer-fg: #f2f0e9;
+    --field: #201f1a;
+  }
+
   body {
-    @apply bg-gray-50 text-gray-900 antialiased;
+    @apply bg-paper text-ink antialiased font-sans;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--red);
+  }
+
+  input,
+  select,
+  button,
+  textarea {
+    font-family: inherit;
+    color: var(--ink);
   }
 
   /* Anchored sections have to clear the sticky header when jumped to. */
@@ -16,5 +75,63 @@
     html {
       scroll-behavior: smooth;
     }
+  }
+}
+
+@layer components {
+  /* Section header: label column beside content */
+  .section {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 56px;
+    border-top: 1px solid var(--ink);
+    padding-top: 14px;
+  }
+
+  /* Hairline grid: 1px gaps read as rules */
+  .tile-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .tile-grid > * {
+    background: var(--card);
+    padding: 14px 16px;
+  }
+
+  /* Record row */
+  .row {
+    display: grid;
+    align-items: start;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .row:hover {
+    border-color: var(--ink-3);
+  }
+
+  /* Mono eyebrow / field label */
+  .eyebrow {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+
+  .field-label {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
   }
 }
