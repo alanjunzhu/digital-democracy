@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "45",
+  "number": 45,
   "billId": "hr45",
   "title": "FIND Act",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-08-25T08:05:49Z",
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/45",
   "summary": "<p><strong>Firearm Industry Non-Discrimination Act or the FIND Act</strong></p> <p>This bill prohibits the federal government from entering into contracts with an entity that discriminates against firearm trade associations or businesses that deal in firearms, ammunition, or related products.</p> <p> Specifically, the bill requires a federal agency to include in each contract for the procurement of goods or services awarded by the agency a clause requiring the prime contractor to certify that it (1) has no policy, practice, guidance, or directive that discriminates against a firearm entity or firearm trade association; and (2) will not adopt a policy, practice, guidance, or directive that discriminates against a firearm entity or firearm trade association during the term of the contract.</p> <p>The bill establishes (1) a similar requirement with respect to subcontracts, and (2) penalties for violations.</p> <p>The bill makes such prohibition inapplicable to a contract for the procurement of goods or services that is a sole-source contract. </p>",
-  "cosponsors": 120,
+  "cosponsors": 128,
   "committees": [
-    "Oversight and Government Reform Committee"
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:21:50Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

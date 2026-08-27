@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "234",
+  "number": 234,
   "billId": "hr234",
   "title": "HOV Lanes for Heroes Act",
   "introducedDate": "2025-01-07",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the Subcommittee on Highways and Transit.",
   "latestActionDate": "2025-01-08",
+  "updateDate": "2026-08-25T08:05:48Z",
   "originChamber": "House",
   "policyArea": "Transportation and Public Works",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/234",
   "summary": "<p><b>HOV Lanes for Heroes Act</b></p> <p>This bill provides authority for a public authority to allow a disabled veteran to use a high occupancy vehicle (HOV) facility if such veteran has a license plate that clearly identifies the vehicle, a registered transponder, or other method of qualifying identification.</p> <p>The public authority may not charge a toll to the veteran for use of the HOV facility.</p>",
-  "cosponsors": 3,
+  "cosponsors": 4,
   "committees": [
-    "Transportation and Infrastructure Committee"
+    {
+      "name": "Transportation and Infrastructure Committee",
+      "systemCode": "hspw00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-07T16:00:50Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
