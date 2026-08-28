@@ -11,23 +11,41 @@ try {
 } catch {}
 
 const base = import.meta.env.BASE_URL;
+const houseCount = billsData.bills.filter((b: any) => b.originChamber === 'House').length;
+const senateCount = billsData.bills.filter((b: any) => b.originChamber === 'Senate').length;
 ---
 
 <Layout title="Bills" description="Browse recent bills introduced in the US Congress. Filter by chamber, policy area, and search by title or sponsor.">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="mb-6">
-      <h1 class="text-3xl font-bold text-gray-900">Bills</h1>
-      <p class="text-gray-500 mt-1">
-        {billsData.congress}th Congress &middot; {billsData.total} bills
-      </p>
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-6 lg:gap-10 items-end pb-[18px] border-b border-ink">
+      <div>
+        <p class="eyebrow mb-3">Legislation</p>
+        <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">
+          Bills
+        </h1>
+      </div>
+      <div class="flex flex-wrap gap-8 pb-1">
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{billsData.total}</div>
+          <div class="field-label mt-[2px]">Introduced</div>
+        </div>
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{houseCount}</div>
+          <div class="field-label mt-[2px]">House</div>
+        </div>
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{senateCount}</div>
+          <div class="field-label mt-[2px]">Senate</div>
+        </div>
+      </div>
     </div>
 
     {billsData.bills.length > 0 ? (
       <BillFilter bills={billsData.bills} baseUrl={base} client:load />
     ) : (
-      <div class="text-center py-16 text-gray-500">
-        <p class="text-lg">No bill data available yet.</p>
-        <p class="mt-2 text-sm">Run the data fetch script to populate bill data.</p>
+      <div class="text-center py-16">
+        <p class="font-serif text-2xl font-medium">No bill data available yet.</p>
+        <p class="mt-2 text-[13.5px] text-ink-3">Run the data fetch script to populate bill data.</p>
       </div>
     )}
   </div>

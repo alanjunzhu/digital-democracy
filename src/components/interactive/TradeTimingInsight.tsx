@@ -44,11 +44,12 @@ function fmtPct(n: number | null | undefined) {
   return `${sign}${n.toFixed(1)}%`;
 }
 
-function barColor(value: number | null, kind: 'actual' | 'inaction' | 'alt') {
-  if (value == null) return 'bg-gray-300';
-  if (kind === 'actual') return value >= 0 ? 'bg-blue-600' : 'bg-blue-400';
-  if (kind === 'inaction') return value >= 0 ? 'bg-gray-500' : 'bg-gray-400';
-  return value >= 0 ? 'bg-amber-500' : 'bg-amber-400';
+// Gains never turn green, losses never turn red: kind marks the series
+// (what actually happened vs. an alternative vs. doing nothing), not the sign.
+function barColor(kind: 'actual' | 'inaction' | 'alt') {
+  if (kind === 'actual') return 'var(--ink)';
+  if (kind === 'inaction') return 'var(--ink-3)';
+  return 'var(--navy)';
 }
 
 export default function TradeTimingInsight({
@@ -56,7 +57,6 @@ export default function TradeTimingInsight({
   context,
   baseUrl = '/',
   precomputed = null,
-  compact = false,
 }: Props) {
   // Everything is precomputed at build time. The site is a static build and
   // Yahoo's chart endpoint sends no CORS headers, so fetching price history
@@ -94,66 +94,82 @@ export default function TradeTimingInsight({
   const quoteUrl = tickerQuoteUrl(trade.ticker);
   const filingUrl = tradeDisclosureUrl(trade);
 
+  const sparkline = useMemo(() => {
+    if (chartWindow.length < 2) return null;
+    const closes = chartWindow.map((p: PricePoint) => p.close);
+    const min = Math.min(...closes);
+    const max = Math.max(...closes);
+    const span = max - min || 1;
+    const points = chartWindow.map((p: PricePoint, i: number) => {
+      const x = (i / (chartWindow.length - 1)) * 300 + 10;
+      const y = 70 - ((p.close - min) / span) * 60;
+      return `${x},${y}`;
+    }).join(' ');
+    const tradeIdx = chartWindow.findIndex((p: PricePoint) => p.date >= (trade.transactionDate || ''));
+    const txX = tradeIdx >= 0 ? (tradeIdx / (chartWindow.length - 1)) * 300 + 10 : 160;
+    return { points, txX };
+  }, [chartWindow, trade.transactionDate]);
+
   return (
-    <div className={`rounded-lg border border-gray-200 bg-white ${compact ? 'p-3' : 'p-4'}`}>
-      <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
+    <div>
+      <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
         <div>
           <div className="flex flex-wrap items-center gap-2">
             {quoteUrl ? (
-              <a href={quoteUrl} target="_blank" rel="noopener" className="font-mono text-sm font-semibold text-blue-700 hover:underline">
+              <a href={quoteUrl} target="_blank" rel="noopener" className="font-mono text-[13px] font-medium text-accent hover:underline">
                 {trade.ticker}
               </a>
             ) : (
-              <span className="font-mono text-sm font-semibold">{trade.ticker}</span>
+              <span className="font-mono text-[13px] font-medium">{trade.ticker}</span>
             )}
-            <span className="text-xs text-gray-500">{trade.type} · {trade.transactionDate}</span>
-            {trade.amount && <span className="text-xs text-gray-600">{trade.amount}</span>}
+            <span className="font-mono text-[11px] text-ink-3">{trade.type} &middot; {trade.transactionDate}</span>
+            {trade.amount && <span className="font-mono text-[11px] text-ink-2 tabular">{trade.amount}</span>}
           </div>
           {context.memberName && context.bioguideId && (
-            <a href={`${baseUrl}members/${context.bioguideId}/`} className="text-xs text-blue-600 hover:underline">
+            <a href={`${baseUrl}members/${context.bioguideId}/`} className="text-[12px] text-accent hover:underline">
               {context.memberName}
             </a>
           )}
         </div>
         {counterfactuals?.summary && (
-          <p className="text-[11px] text-gray-600 max-w-md">{counterfactuals.summary}</p>
+          <p className="text-[11.5px] text-ink-2 max-w-md">{counterfactuals.summary}</p>
         )}
       </div>
 
       {/* Context panel */}
-      <div className="mb-4 rounded-md bg-gray-50 border border-gray-100 p-3 text-[11px] text-gray-700 space-y-2">
-        <div className="font-semibold text-gray-800">Context</div>
+      <div className="border-l-2 border-rule pl-3 mb-4 text-[12px] leading-[1.6] text-ink-2 space-y-[6px]">
+        <div className="field-label">Context</div>
         {context.sector && (
           <div>
-            <span className="text-gray-500">Sector:</span> {context.sector}
+            <span className="text-ink-3">Sector:</span> {context.sector}
             {context.committeeOverlap && (
-              <span className="ml-2 text-red-700 font-medium">Committee overlap</span>
+              <span className="ml-2 text-accent font-medium">Committee overlap</span>
             )}
           </div>
         )}
         {context.relatedCommittees && context.relatedCommittees.length > 0 && (
           <div>
-            <span className="text-gray-500">Related committees:</span>{' '}
+            <span className="text-ink-3">Related committees:</span>{' '}
             {context.relatedCommittees.join(', ')}
           </div>
         )}
         {context.disclosureLagDays != null && (
           <div>
-            <span className="text-gray-500">Disclosure lag:</span>{' '}
+            <span className="text-ink-3">Disclosure lag:</span>{' '}
             {context.disclosureLagDays} days
             {context.disclosureLagDays > 30 && (
-              <span className="ml-1 text-amber-700">(public learned late)</span>
+              <span className="ml-1 text-ink-3">(public learned late)</span>
             )}
           </div>
         )}
         {context.nearbyBills && context.nearbyBills.length > 0 && (
           <div>
-            <span className="text-gray-500">Legislation within 30 days:</span>
+            <span className="text-ink-3">Legislation within 30 days:</span>
             <ul className="mt-1 list-disc list-inside">
               {context.nearbyBills.slice(0, 3).map((b) => (
                 <li key={b.billId}>
                   {baseUrl ? (
-                    <a href={`${baseUrl}bills/${b.billId}/`} className="text-blue-600 hover:underline">
+                    <a href={`${baseUrl}bills/${b.billId}/`} className="text-accent hover:underline">
                       {b.type} {b.number}
                     </a>
                   ) : (
@@ -167,23 +183,23 @@ export default function TradeTimingInsight({
         )}
         {filingUrl && (
           <div>
-            <a href={filingUrl} target="_blank" rel="noopener" className="text-blue-600 hover:underline">View official filing</a>
+            <a href={filingUrl} target="_blank" rel="noopener" className="text-accent hover:underline">View official filing</a>
           </div>
         )}
-        <p className="text-[10px] text-gray-400 pt-1 border-t border-gray-200">
+        <p className="font-mono text-[10.5px] text-ink-3 pt-1">
           Unusual timing or committee overlap raises questions — it is not proof of insider trading or wrongdoing.
         </p>
       </div>
 
       {!counterfactuals?.ok && (
-        <p className="text-xs text-amber-700">
+        <p className="font-mono text-[11px] text-ink-3 border-l-2 border-rule pl-3">
           No cached price history for {trade.ticker || 'this ticker'} yet, so the timing
           comparison is unavailable. The context above still applies.
         </p>
       )}
 
       {counterfactuals?.ok && counterfactuals.horizonComplete === false && (
-        <p className="mb-3 text-[11px] text-amber-700">
+        <p className="font-mono text-[10.5px] text-ink-3 border-l-2 border-rule pl-3 mb-3">
           This trade is still inside its {DEFAULT_HORIZON_DAYS}-day window
           {counterfactuals.lastPriceDate ? ` (prices through ${counterfactuals.lastPriceDate})` : ''},
           so the outcome comparison is incomplete.
@@ -193,65 +209,51 @@ export default function TradeTimingInsight({
       {counterfactuals?.ok && (
         <>
           {/* Price sparkline */}
-          {chartWindow.length > 1 && (
+          {sparkline && (
             <div className="mb-4">
-              <div className="text-[10px] text-gray-500 mb-1">Stock price around trade ({DEFAULT_HORIZON_DAYS}d window)</div>
-              <svg viewBox="0 0 320 80" className="w-full h-20 bg-gray-50 rounded border border-gray-100">
-                {(() => {
-                  const closes = chartWindow.map((p: PricePoint) => p.close);
-                  const min = Math.min(...closes);
-                  const max = Math.max(...closes);
-                  const span = max - min || 1;
-                  const points = chartWindow.map((p: PricePoint, i: number) => {
-                    const x = (i / (chartWindow.length - 1)) * 300 + 10;
-                    const y = 70 - ((p.close - min) / span) * 60;
-                    return `${x},${y}`;
-                  }).join(' ');
-                  const tradeIdx = chartWindow.findIndex((p: PricePoint) => p.date >= (trade.transactionDate || ''));
-                  const txX = tradeIdx >= 0 ? (tradeIdx / (chartWindow.length - 1)) * 300 + 10 : 160;
-                  return (
-                    <>
-                      <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points} />
-                      <line x1={txX} y1="5" x2={txX} y2="75" stroke="#ef4444" strokeDasharray="4 2" strokeWidth="1.5" />
-                      <text x={txX + 4} y="12" fontSize="8" fill="#ef4444">trade</text>
-                    </>
-                  );
-                })()}
-              </svg>
+              <div className="field-label mb-1">Stock price around trade ({DEFAULT_HORIZON_DAYS}d window)</div>
+              <div className="relative">
+                <svg viewBox="0 0 320 80" preserveAspectRatio="none" className="w-full h-20 bg-rule-2">
+                  <polyline fill="none" stroke="var(--ink)" strokeWidth="2" points={sparkline.points} vectorEffect="non-scaling-stroke" />
+                  <line x1={sparkline.txX} y1="5" x2={sparkline.txX} y2="75" stroke="var(--accent)" strokeDasharray="4 2" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+                </svg>
+                <span
+                  className="absolute top-[2px] font-mono text-[9px] text-accent -translate-x-1/2"
+                  style={{ left: `${(sparkline.txX / 320) * 100}%` }}
+                >
+                  trade
+                </span>
+              </div>
             </div>
           )}
 
           {/* Counterfactual bars */}
-          <div className="space-y-2">
-            <div className="text-[10px] text-gray-500">
+          <div>
+            <div className="field-label mb-2">
               {DEFAULT_HORIZON_DAYS}-day outcome comparison (actual vs alternative timing vs do nothing)
             </div>
             {scenarioEntries.map((s) => (
-              <div key={s.key} className="flex items-center gap-2">
-                <span className="text-[10px] text-gray-600 w-28 shrink-0 truncate" title={s.label}>{s.label}</span>
-                <div className="flex-1 h-4 bg-gray-100 rounded overflow-hidden relative">
+              <div key={s.key} className="flex items-center gap-3 py-[3px]">
+                <span className="font-mono text-[10.5px] text-ink-3 w-28 shrink-0 truncate" title={s.label}>{s.label}</span>
+                <div className="flex-1 h-1 bg-rule relative">
                   <div
-                    className={`h-full ${barColor(s.value, s.kind)}`}
-                    style={{ width: `${Math.min(100, (Math.abs(s.value ?? 0) / maxAbs) * 100)}%` }}
+                    className="h-full"
+                    style={{ width: `${Math.min(100, (Math.abs(s.value ?? 0) / maxAbs) * 100)}%`, background: barColor(s.kind) }}
                   />
                 </div>
-                <span className={`text-[10px] font-semibold w-12 text-right ${ (s.value ?? 0) >= 0 ? 'text-green-700' : 'text-red-700'}`}>
+                <span className="font-mono text-[11px] font-semibold text-ink w-12 text-right tabular">
                   {fmtPct(s.value)}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="mt-3 flex flex-wrap gap-3 text-[10px]">
+          <div className="mt-3 flex flex-wrap gap-4 font-mono text-[10.5px] text-ink-2">
             {counterfactuals.actionAdvantage != null && (
-              <span className={`px-2 py-1 rounded ${counterfactuals.actionAdvantage > 0 ? 'bg-blue-50 text-blue-800' : 'bg-gray-100 text-gray-700'}`}>
-                Action vs inaction: {fmtPct(counterfactuals.actionAdvantage)}
-              </span>
+              <span>Action vs inaction: <span className="tabular font-medium text-ink">{fmtPct(counterfactuals.actionAdvantage)}</span></span>
             )}
             {counterfactuals.timingAdvantage != null && (
-              <span className={`px-2 py-1 rounded ${counterfactuals.timingAdvantage > 0 ? 'bg-amber-50 text-amber-800' : 'bg-gray-100 text-gray-700'}`}>
-                Timing vs alternatives: {fmtPct(counterfactuals.timingAdvantage)}
-              </span>
+              <span>Timing vs alternatives: <span className="tabular font-medium text-ink">{fmtPct(counterfactuals.timingAdvantage)}</span></span>
             )}
           </div>
         </>

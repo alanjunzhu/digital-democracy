@@ -284,28 +284,11 @@ topicOrder.sort((a, b) => {
   return (votesByTopic[b]?.length || 0) - (votesByTopic[a]?.length || 0);
 });
 
-// Topic color mapping
-const TOPIC_COLORS: Record<string, string> = {
-  'Immigration': 'bg-orange-100 text-orange-800',
-  'Armed Forces and National Security': 'bg-slate-100 text-slate-800',
-  'Health': 'bg-pink-100 text-pink-800',
-  'Taxation': 'bg-emerald-100 text-emerald-800',
-  'Economics and Public Finance': 'bg-green-100 text-green-800',
-  'Education': 'bg-violet-100 text-violet-800',
-  'Energy': 'bg-amber-100 text-amber-800',
-  'Environmental Protection': 'bg-teal-100 text-teal-800',
-  'Crime and Law Enforcement': 'bg-red-100 text-red-800',
-  'International Affairs': 'bg-sky-100 text-sky-800',
-  'Transportation and Public Works': 'bg-cyan-100 text-cyan-800',
-  'Nominations': 'bg-indigo-100 text-indigo-800',
-  'Procedural': 'bg-gray-100 text-gray-600',
-  'Other': 'bg-gray-100 text-gray-600',
-};
-
 // Stage display order
 const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
 const hasFinanceCard = stockTrades.length > 0 || ptrFilings.length > 0;
+const highSeverityFlags = conflictFlags.filter((f: any) => f.severity === 'high').length;
 const pageSections = [
   { id: 'profile', label: 'Profile' },
   { id: 'details', label: 'Details & Service History' },
@@ -326,137 +309,131 @@ const pageSections = [
 ---
 
 <Layout title={member.name} description={`${member.name} - ${member.party} ${member.chamber === 'Senate' ? 'Senator' : 'Representative'} from ${formatState(member.state)}`}>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="max-w-measure mx-auto px-10 pt-8 pb-16">
     <PageIndex sections={pageSections} />
 
-    <!-- Back link -->
-    <a href={`${base}members/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
-      &larr; All Members
+    <a href={`${base}members/`} class="font-mono text-[11px] tracking-[0.06em] uppercase text-ink-3 hover:text-accent">
+      &larr; All members
     </a>
 
-    <!-- Profile Header -->
-    <div id="profile" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-      <div class="flex flex-col sm:flex-row items-start gap-6">
-        <img
-          src={member.imageUrl}
-          alt={member.name}
-          class="w-32 h-40 object-cover rounded-lg bg-gray-200 shadow-sm"
-          onerror="this.style.display='none'"
-        />
-        <div class="flex-1">
-          <h1 class="text-3xl font-bold text-gray-900">{member.name}</h1>
-          <div class="flex items-center gap-3 mt-2">
-            <PartyBadge party={member.party} />
-            <ChamberBadge chamber={member.chamber} />
-          </div>
-          <p class="text-lg text-gray-600 mt-2">
-            {formatState(member.state)}{districtLabel}
-          </p>
-
-          {/* Contact & Links */}
-          <div class="flex flex-wrap gap-4 mt-4 text-sm">
-            {member.website && (
-              <a href={member.website} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
-                Official Website
-              </a>
-            )}
-            {member.phone && (
-              <span class="text-gray-600">
-                Phone: {member.phone}
-              </span>
-            )}
-            {member.url && (
-              <a href={member.url} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
-                Congress.gov
-              </a>
-            )}
-          </div>
-
-          {/* Social Media */}
-          {member.socialMedia && (
-            <div class="flex gap-4 mt-3 text-sm">
-              {member.socialMedia.twitter && (
-                <a href={`https://twitter.com/${member.socialMedia.twitter}`} target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-500">
-                  @{member.socialMedia.twitter}
-                </a>
-              )}
-              {member.socialMedia.facebook && (
-                <a href={`https://facebook.com/${member.socialMedia.facebook}`} target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600">
-                  Facebook
-                </a>
-              )}
-            </div>
+    <!-- Profile Header: identity + ledger rail -->
+    <div id="profile" data-page-section class="mt-5 grid grid-cols-1 lg:grid-cols-[112px_minmax(0,1fr)_260px] gap-8 items-start pb-6 border-b border-ink">
+      <img
+        src={member.imageUrl}
+        alt=""
+        class="w-[112px] h-36 object-cover rounded-[1px] bg-rule grayscale contrast-[1.05]"
+        onerror="this.style.display='none'"
+      />
+      <div>
+        <p class="eyebrow mb-[10px]">
+          {member.chamber === 'Senate' ? 'Senator' : 'Representative'} &middot; {formatState(member.state)}{districtLabel}
+        </p>
+        <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.02] font-normal tracking-[-0.02em] mb-[14px]">{member.name}</h1>
+        <div class="flex flex-wrap items-center gap-[10px] mb-4">
+          <PartyBadge party={member.party} />
+          <ChamberBadge chamber={member.chamber} />
+        </div>
+        <div class="flex flex-wrap gap-5 text-[13.5px]">
+          {member.website && (
+            <a href={member.website} target="_blank" rel="noopener" class="text-ink border-b border-rule hover:text-accent">
+              Official website
+            </a>
+          )}
+          {member.url && (
+            <a href={member.url} target="_blank" rel="noopener" class="text-ink border-b border-rule hover:text-accent">
+              Congress.gov
+            </a>
+          )}
+          {member.phone && (
+            <span class="font-mono text-[12.5px] text-ink-2">{member.phone}</span>
+          )}
+          {member.socialMedia?.twitter && (
+            <a href={`https://twitter.com/${member.socialMedia.twitter}`} target="_blank" rel="noopener" class="text-ink-2 hover:text-accent">
+              @{member.socialMedia.twitter}
+            </a>
+          )}
+          {member.socialMedia?.facebook && (
+            <a href={`https://facebook.com/${member.socialMedia.facebook}`} target="_blank" rel="noopener" class="text-ink-2 hover:text-accent">
+              Facebook
+            </a>
           )}
         </div>
       </div>
+      <div class="lg:border-l border-rule lg:pl-6">
+        <div class="flex items-baseline justify-between gap-4 py-2 border-b border-rule">
+          <span class="field-label">Bills sponsored</span>
+          <span class="font-serif text-[22px] leading-none font-medium tabular">{sponsoredBills.length}</span>
+        </div>
+        {voteStats.total > 0 && (
+          <div class="flex items-baseline justify-between gap-4 py-2 border-b border-rule">
+            <span class="field-label">Votes cast</span>
+            <span class="font-serif text-[22px] leading-none font-medium tabular">{voteStats.total}</span>
+          </div>
+        )}
+        {partyAlignment.pct != null && (
+          <div class="flex items-baseline justify-between gap-4 py-2 border-b border-rule">
+            <span class="field-label">Party alignment</span>
+            <span class="font-serif text-[22px] leading-none font-medium tabular">{partyAlignment.pct}%</span>
+          </div>
+        )}
+        <div class="flex items-baseline justify-between gap-4 py-2 border-b border-rule">
+          <span class="field-label">Signed into law</span>
+          <span class="font-serif text-[22px] leading-none font-medium tabular">{billsByStage['Signed into Law']?.length || 0}</span>
+        </div>
+        <div class="flex items-baseline justify-between gap-4 py-2 border-b border-rule">
+          <span class="field-label">In committee</span>
+          <span class="font-serif text-[22px] leading-none font-medium tabular">{billsByStage['In Committee']?.length || 0}</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Quick Stats -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
-        <div class="text-2xl font-bold text-blue-600">{sponsoredBills.length}</div>
-        <div class="text-xs text-gray-500 mt-1">Bills Sponsored</div>
+    {conflictFlags.length > 0 && (
+      <div class="flex items-start gap-3 pt-4">
+        <span class="shrink-0 mt-[2px] font-mono text-[10px] tracking-[0.08em] uppercase text-accent border border-accent rounded px-[7px] py-[3px] whitespace-nowrap">
+          {conflictFlags.length} {conflictFlags.length === 1 ? 'flag' : 'flags'}
+        </span>
+        <p class="text-[13.5px] leading-[1.6] text-ink-2 max-w-[78ch] text-pretty">
+          {highSeverityFlags > 0
+            ? `${highSeverityFlags} potential conflict${highSeverityFlags === 1 ? '' : 's'} of interest flagged below.`
+            : 'Financial activity flagged for review below.'} Overlap between a trade and a committee assignment is a reason to look closer, not a finding of wrongdoing.
+        </p>
       </div>
-      {voteStats.total > 0 && (
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
-          <div class="text-2xl font-bold text-emerald-600">{voteStats.total}</div>
-          <div class="text-xs text-gray-500 mt-1">Votes Cast</div>
-        </div>
-      )}
-      {partyAlignment.pct != null && (
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
-          <div class="text-2xl font-bold text-indigo-600">{partyAlignment.pct}%</div>
-          <div class="text-xs text-gray-500 mt-1">Party Alignment</div>
-        </div>
-      )}
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
-        <div class="text-2xl font-bold text-green-600">{billsByStage['Signed into Law']?.length || 0}</div>
-        <div class="text-xs text-gray-500 mt-1">Signed into Law</div>
-      </div>
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 text-center">
-        <div class="text-2xl font-bold text-yellow-600">{billsByStage['In Committee']?.length || 0}</div>
-        <div class="text-xs text-gray-500 mt-1">In Committee</div>
-      </div>
-    </div>
+    )}
 
-    <!-- Details Grid -->
-    <div id="details" data-page-section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Bio -->
-      <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-3">Details</h2>
-        <dl class="space-y-2 text-sm">
+    <!-- Details & Service History -->
+    <div id="details" data-page-section class="grid grid-cols-1 md:grid-cols-2 gap-x-12 pt-8">
+      <div>
+        <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">Details</h2>
+        <dl>
           {member.birthDate && (
-            <div class="flex justify-between">
-              <dt class="text-gray-500">Born</dt>
-              <dd class="text-gray-900">{member.birthDate}</dd>
+            <div class="flex justify-between py-[10px] border-b border-rule">
+              <dt class="text-[13px] text-ink-3">Born</dt>
+              <dd class="text-[13px] font-mono tabular">{member.birthDate}</dd>
             </div>
           )}
           {member.gender && (
-            <div class="flex justify-between">
-              <dt class="text-gray-500">Gender</dt>
-              <dd class="text-gray-900">{member.gender === 'M' ? 'Male' : member.gender === 'F' ? 'Female' : member.gender}</dd>
+            <div class="flex justify-between py-[10px] border-b border-rule">
+              <dt class="text-[13px] text-ink-3">Gender</dt>
+              <dd class="text-[13px]">{member.gender === 'M' ? 'Male' : member.gender === 'F' ? 'Female' : member.gender}</dd>
             </div>
           )}
           {member.officeAddress && (
-            <div>
-              <dt class="text-gray-500">Office</dt>
-              <dd class="text-gray-900 mt-0.5">{member.officeAddress}</dd>
+            <div class="py-[10px] border-b border-rule">
+              <dt class="text-[13px] text-ink-3">Office</dt>
+              <dd class="text-[13px] mt-[3px]">{member.officeAddress}</dd>
             </div>
           )}
         </dl>
       </div>
 
-      <!-- Service History -->
       {member.terms && member.terms.length > 0 && (
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-3">Service History</h2>
-          <div class="space-y-2 text-sm">
+        <div>
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">Service history</h2>
+          <div>
             {member.terms.slice().reverse().map((term) => (
-              <div class="flex items-center gap-2 py-1 border-b border-gray-100 last:border-0">
-                <span class={`inline-block w-2 h-2 rounded-full ${term.chamber === 'Senate' ? 'bg-amber-500' : 'bg-emerald-500'}`}></span>
-                <span class="text-gray-900">{term.chamber}</span>
-                <span class="text-gray-400 flex-1"></span>
-                <span class="text-gray-500">{term.startDate}{term.endDate ? ` - ${term.endDate}` : ' - Present'}</span>
+              <div class="flex items-center gap-3 py-[10px] border-b border-rule last:border-0">
+                <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3 w-[52px] shrink-0">{term.chamber}</span>
+                <span class="font-mono text-[12px] text-ink-2 tabular">{term.startDate}{term.endDate ? ` – ${term.endDate}` : ' – Present'}</span>
               </div>
             ))}
           </div>
@@ -464,102 +441,102 @@ const pageSections = [
       )}
     </div>
 
-    <!-- Sponsored Bills by Stage -->
+    <!-- Sponsored Legislation -->
     {sponsoredBills.length > 0 && (
-      <div id="sponsored-legislation" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-4">Sponsored Legislation</h2>
+      <div id="sponsored-legislation" data-page-section class="pt-8">
+        <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">
+          Sponsored legislation <span class="font-mono text-[11px] text-ink-3 tabular">{sponsoredBills.length}</span>
+        </h2>
 
-        {/* Stage pipeline visualization */}
-        <div class="flex flex-wrap gap-2 mb-4">
+        <div class="flex flex-wrap items-stretch border border-rule bg-card mb-6">
           {stageOrder.map(s => {
             const count = billsByStage[s]?.length || 0;
             if (count === 0) return null;
             const sc = STAGE_COLORS[s as keyof typeof STAGE_COLORS] || STAGE_COLORS['Other'];
             return (
-              <span class={`inline-flex items-center gap-1.5 rounded-full text-xs px-3 py-1.5 font-medium ${sc.bg} ${sc.text}`}>
-                <span class={`w-2 h-2 rounded-full ${sc.dot}`}></span>
-                {s}: {count}
-              </span>
-            );
-          })}
-        </div>
-
-        {/* Bills grouped by stage */}
-        <div class="space-y-6">
-          {stageOrder.map(s => {
-            const bills = billsByStage[s];
-            if (!bills || bills.length === 0) return null;
-            const sc = STAGE_COLORS[s as keyof typeof STAGE_COLORS] || STAGE_COLORS['Other'];
-            return (
-              <div>
-                <div class="flex items-center gap-2 mb-2">
-                  <span class={`w-2.5 h-2.5 rounded-full ${sc.dot}`}></span>
-                  <h3 class="text-sm font-semibold text-gray-700">{s}</h3>
-                  <span class="text-xs text-gray-400">({bills.length})</span>
+              <div class="flex-1 min-w-[120px] px-4 py-[14px] border-r border-rule last:border-r-0">
+                <div class="flex items-center gap-[7px]">
+                  <span class={`w-[6px] h-[6px] rounded-full shrink-0 ${sc.dot}`}></span>
+                  <span class="font-serif text-2xl leading-none font-medium tabular">{count}</span>
                 </div>
-                <div class="space-y-1 pl-4 border-l-2 border-gray-100">
-                  {bills.slice(0, 10).map((b: any) => {
-                    const local = localBillExists(b.billId);
-                    const href = local ? `${base}bills/${b.billId}/` : (b.url || `${base}bills/`);
-                    return (
-                    <a href={href} class="flex items-start gap-3 py-2 hover:bg-gray-50 -mx-2 px-2 rounded" target={local ? undefined : '_blank'} rel={local ? undefined : 'noopener'}>
-                      <span class="font-mono text-sm font-semibold text-blue-700 whitespace-nowrap">{b.type} {b.number}</span>
-                      <div class="flex-1 min-w-0">
-                        <p class="text-sm text-gray-900 line-clamp-1">{b.title}</p>
-                        <p class="text-xs text-gray-400">{b.introducedDate}{b.latestActionDate ? ` · Last action: ${b.latestActionDate}` : ''}{local ? '' : ' · Congress.gov'}</p>
-                      </div>
-                    </a>
-                    );
-                  })}
-                  {bills.length > 10 && (
-                    <p class="text-xs text-gray-400 pl-2">...and {bills.length - 10} more</p>
-                  )}
-                </div>
+                <div class="font-mono text-[10px] tracking-[0.07em] uppercase text-ink-3 mt-2 leading-[1.4]">{s}</div>
               </div>
             );
           })}
         </div>
-        <a href={`${base}bills/`} class="text-blue-600 hover:underline text-sm mt-4 inline-block">View all bills &rarr;</a>
+
+        <div>
+          {stageOrder.map(s => {
+            const bills = billsByStage[s];
+            if (!bills || bills.length === 0) return null;
+            return bills.slice(0, 10).map((b: any) => {
+              const local = localBillExists(b.billId);
+              const href = local ? `${base}bills/${b.billId}/` : (b.url || `${base}bills/`);
+              return (
+                <a
+                  href={href}
+                  class="grid grid-cols-[88px_minmax(0,1fr)_150px] gap-5 items-start py-4 border-b border-rule hover:border-ink-3"
+                  target={local ? undefined : '_blank'}
+                  rel={local ? undefined : 'noopener'}
+                >
+                  <span class="font-mono text-[12.5px] font-medium text-accent">{b.type} {b.number}</span>
+                  <div class="min-w-0">
+                    <h3 class="font-serif text-[18px] leading-[1.3] font-medium line-clamp-1">{b.title}</h3>
+                    <p class="font-mono text-[11px] text-ink-3 mt-[6px]">
+                      Introduced {b.introducedDate}{b.latestActionDate ? ` · Last action: ${b.latestActionDate}` : ''}{local ? '' : ' · Congress.gov'}
+                    </p>
+                  </div>
+                  <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-2 text-right">{s}</span>
+                </a>
+              );
+            });
+          })}
+          {sponsoredBills.length > Object.values(billsByStage).reduce((n, arr) => n + Math.min(arr.length, 10), 0) && (
+            <p class="font-mono text-[11px] text-ink-3 pt-3">
+              {sponsoredBills.length - Object.values(billsByStage).reduce((n, arr) => n + Math.min(arr.length, 10), 0)} more not shown.
+            </p>
+          )}
+        </div>
+        <a href={`${base}bills/`} class="font-mono text-[11px] tracking-[0.06em] uppercase text-accent hover:underline mt-4 inline-block">View all bills &rarr;</a>
       </div>
     )}
 
     <!-- Policy stances against the member's party -->
     {policyProfiles && policySummary && (
-      <div id="policy-stances" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-        <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
+      <div id="policy-stances" data-page-section class="pt-8">
+        <div class="flex flex-wrap items-baseline justify-between gap-4 border-t border-ink pt-3 mb-5">
           <div>
-            <h2 class="text-lg font-semibold text-gray-900">Where They Stand by Policy Area</h2>
-            <p class="text-sm text-gray-500 mt-0.5">
+            <h2 class="font-serif text-2xl font-medium tracking-[-0.01em]">Where they stand by policy area</h2>
+            <p class="text-[13px] text-ink-3 mt-[2px]">
               {policySummary.votes} votes across {policySummary.areas} {policySummary.areas === 1 ? 'area' : 'areas'} that split the two parties
             </p>
           </div>
           {policySummary.avgGap != null && (
-            <div class="text-right">
-              <div class="text-2xl font-bold text-gray-900">{policySummary.avgGap} pts</div>
-              <div class="text-xs text-gray-500">average distance from their party</div>
-            </div>
+            <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3 whitespace-nowrap">
+              Average distance from own party &middot; {policySummary.avgGap} pts
+            </span>
           )}
         </div>
 
         {(policySummary.mostIndependent || policySummary.mostAligned) && (
-          <div class="grid sm:grid-cols-2 gap-3 mb-5">
+          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-6">
             {policySummary.mostIndependent && (
-              <div class="p-3 bg-amber-50 border border-amber-100 rounded-lg">
-                <div class="text-xs font-medium text-amber-800">Furthest from their party</div>
-                <div class="text-sm text-gray-900 mt-0.5">
-                  <span class="font-semibold">{policySummary.mostIndependent.label}</span>
-                  {' '}— {Math.round(policySummary.mostIndependent.score)}% against a party average of
-                  {' '}{Math.round(policySummary.mostIndependent.ownParty.avg ?? 0)}%
+              <div class="border-l-2 border-accent pl-3">
+                <div class="font-mono text-[10px] tracking-[0.08em] uppercase text-accent">Furthest from their party</div>
+                <div class="text-[13px] text-ink-2 mt-[3px]">
+                  <span class="font-semibold text-ink">{policySummary.mostIndependent.label}</span>
+                  {' '}&mdash; {Math.round(policySummary.mostIndependent.score)}% against a party average of{' '}
+                  {Math.round(policySummary.mostIndependent.ownParty.avg ?? 0)}%
                 </div>
               </div>
             )}
             {policySummary.mostAligned && (
-              <div class="p-3 bg-indigo-50 border border-indigo-100 rounded-lg">
-                <div class="text-xs font-medium text-indigo-800">Closest to their party</div>
-                <div class="text-sm text-gray-900 mt-0.5">
-                  <span class="font-semibold">{policySummary.mostAligned.label}</span>
-                  {' '}— {Math.round(policySummary.mostAligned.score)}% against a party average of
-                  {' '}{Math.round(policySummary.mostAligned.ownParty.avg ?? 0)}%
+              <div class="border-l-2 border-rule pl-3">
+                <div class="font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3">Closest to their party</div>
+                <div class="text-[13px] text-ink-2 mt-[3px]">
+                  <span class="font-semibold text-ink">{policySummary.mostAligned.label}</span>
+                  {' '}&mdash; {Math.round(policySummary.mostAligned.score)}% against a party average of{' '}
+                  {Math.round(policySummary.mostAligned.ownParty.avg ?? 0)}%
                 </div>
               </div>
             )}
@@ -572,85 +549,88 @@ const pageSections = [
 
     <!-- Voting Record -->
     {memberVotes.length > 0 && (
-      <div id="voting-record" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-4">Voting Record</h2>
+      <div id="voting-record" data-page-section class="pt-8">
+        <div class="flex items-baseline justify-between gap-4 border-t border-ink pt-3 mb-5">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em]">Voting record</h2>
+          <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3 whitespace-nowrap">{voteStats.total} roll calls</span>
+        </div>
 
-        {/* Vote stats summary */}
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
-          <div class="text-center p-3 bg-gray-50 rounded-lg">
-            <div class="text-xl font-bold text-gray-900">{voteStats.total}</div>
-            <div class="text-xs text-gray-500">Total Votes</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-11 mb-7">
+          <div>
+            <p class="field-label mb-3">How they voted</p>
+            <div class="flex h-2 bg-rule">
+              <div class="h-full bg-yea" style={`width: ${(voteStats.yea / voteStats.total * 100).toFixed(1)}%`}></div>
+              <div class="h-full bg-accent" style={`width: ${(voteStats.nay / voteStats.total * 100).toFixed(1)}%`}></div>
+              <div class="h-full bg-ink-3" style={`width: ${((voteStats.notVoting + voteStats.present) / voteStats.total * 100).toFixed(1)}%`}></div>
+            </div>
+            <div class="grid grid-cols-[14px_minmax(0,1fr)_56px_56px] gap-3 items-baseline py-[10px] border-b border-rule">
+              <span class="w-[9px] h-[9px] bg-yea block"></span>
+              <span class="text-[13.5px]">Yea</span>
+              <span class="font-mono text-[12px] text-right tabular">{voteStats.yea}</span>
+              <span class="font-mono text-[12px] text-right text-ink-3 tabular">{((voteStats.yea / voteStats.total) * 100).toFixed(0)}%</span>
+            </div>
+            <div class="grid grid-cols-[14px_minmax(0,1fr)_56px_56px] gap-3 items-baseline py-[10px] border-b border-rule">
+              <span class="w-[9px] h-[9px] bg-accent block"></span>
+              <span class="text-[13.5px]">Nay</span>
+              <span class="font-mono text-[12px] text-right tabular">{voteStats.nay}</span>
+              <span class="font-mono text-[12px] text-right text-ink-3 tabular">{((voteStats.nay / voteStats.total) * 100).toFixed(0)}%</span>
+            </div>
+            {(voteStats.notVoting + voteStats.present) > 0 && (
+              <div class="grid grid-cols-[14px_minmax(0,1fr)_56px_56px] gap-3 items-baseline py-[10px] border-b border-rule">
+                <span class="w-[9px] h-[9px] bg-ink-3 block"></span>
+                <span class="text-[13.5px]">Not voting / present</span>
+                <span class="font-mono text-[12px] text-right tabular">{voteStats.notVoting + voteStats.present}</span>
+                <span class="font-mono text-[12px] text-right text-ink-3 tabular">
+                  {(((voteStats.notVoting + voteStats.present) / voteStats.total) * 100).toFixed(0)}%
+                </span>
+              </div>
+            )}
           </div>
-          <div class="text-center p-3 bg-green-50 rounded-lg">
-            <div class="text-xl font-bold text-green-600">{voteStats.yea}</div>
-            <div class="text-xs text-gray-500">Voted Yea</div>
-          </div>
-          <div class="text-center p-3 bg-red-50 rounded-lg">
-            <div class="text-xl font-bold text-red-600">{voteStats.nay}</div>
-            <div class="text-xs text-gray-500">Voted Nay</div>
-          </div>
+
           {partyAlignment.pct != null ? (
-            <div class="text-center p-3 bg-indigo-50 rounded-lg">
-              <div class="text-xl font-bold text-indigo-600">{partyAlignment.pct}%</div>
-              <div class="text-xs text-gray-500">With Party ({partyAlignment.withParty}/{partyAlignment.comparable})</div>
+            <div>
+              <p class="field-label mb-3">With their party majority</p>
+              <div class="flex items-baseline gap-[14px] mb-3">
+                <span class="font-serif text-[40px] leading-none font-medium tabular">{partyAlignment.pct}%</span>
+                <span class="font-mono text-[11.5px] leading-[1.5] text-ink-3">
+                  {partyAlignment.withParty} of {partyAlignment.comparable} comparable votes<br />
+                  {partyAlignment.againstParty} against the party majority
+                </span>
+              </div>
+              <div class="flex h-2 bg-rule">
+                <div class="h-full bg-ink" style={`width: ${partyAlignment.pct}%`}></div>
+                <div class="h-full bg-ink-3" style={`width: ${100 - (partyAlignment.pct || 0)}%`}></div>
+              </div>
+              <p class="text-[13px] leading-[1.6] text-ink-2 mt-4">
+                Comparable votes exclude unanimous roll calls and any vote where their party's majority could not be determined.
+              </p>
             </div>
           ) : (
-            <div class="text-center p-3 bg-yellow-50 rounded-lg">
-              <div class="text-xl font-bold text-yellow-600">{voteStats.notVoting + voteStats.present}</div>
-              <div class="text-xs text-gray-500">Not Voting / Present</div>
+            <div>
+              <p class="field-label mb-3">Not voting / present</p>
+              <span class="font-serif text-[40px] leading-none font-medium tabular">{voteStats.notVoting + voteStats.present}</span>
             </div>
           )}
         </div>
 
-        {partyAlignment.pct != null && (
-          <div class="mb-6 p-3 bg-indigo-50/60 border border-indigo-100 rounded-lg">
-            <div class="flex items-center justify-between gap-3 mb-2">
-              <span class="text-sm font-medium text-indigo-900">Votes with party majority</span>
-              <span class="text-sm font-semibold text-indigo-800">{partyAlignment.pct}%</span>
-            </div>
-            <div class="h-2.5 bg-white rounded-full overflow-hidden flex">
-              <div class="bg-indigo-500 h-full" style={`width: ${partyAlignment.pct}%`}></div>
-              <div class="bg-amber-400 h-full" style={`width: ${100 - (partyAlignment.pct || 0)}%`}></div>
-            </div>
-            <div class="flex justify-between text-[10px] text-indigo-700/70 mt-1">
-              <span>{partyAlignment.withParty} with party</span>
-              <span>{partyAlignment.againstParty} against</span>
-            </div>
-          </div>
-        )}
-
-        {/* Yea/Nay ratio bar */}
-        {(voteStats.yea + voteStats.nay) > 0 && (
-          <div class="mb-6">
-            <div class="flex rounded-full overflow-hidden h-3">
-              <div class="bg-green-500" style={`width: ${(voteStats.yea / (voteStats.yea + voteStats.nay + voteStats.notVoting + voteStats.present) * 100).toFixed(1)}%`}></div>
-              <div class="bg-red-500" style={`width: ${(voteStats.nay / (voteStats.yea + voteStats.nay + voteStats.notVoting + voteStats.present) * 100).toFixed(1)}%`}></div>
-              <div class="bg-yellow-400" style={`width: ${((voteStats.notVoting + voteStats.present) / (voteStats.yea + voteStats.nay + voteStats.notVoting + voteStats.present) * 100).toFixed(1)}%`}></div>
-            </div>
-            <div class="flex justify-between text-[10px] text-gray-400 mt-1">
-              <span>Yea {((voteStats.yea / voteStats.total) * 100).toFixed(0)}%</span>
-              <span>Nay {((voteStats.nay / voteStats.total) * 100).toFixed(0)}%</span>
-            </div>
-          </div>
-        )}
-
-        {/* Topic breakdown chips */}
         {topicOrder.length > 1 && (
-          <div class="mb-6">
-            <h3 class="text-sm font-semibold text-gray-700 mb-2">Votes by Policy Area</h3>
-            <div class="flex flex-wrap gap-2">
+          <div class="mb-2">
+            <p class="field-label mb-3">Votes by topic</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
               {topicOrder.map(topic => {
                 const votes = votesByTopic[topic] || [];
                 const topicYea = votes.filter((v: any) => ['yea', 'aye'].includes((v.voteCast || '').toLowerCase())).length;
                 const topicNay = votes.filter((v: any) => ['nay', 'no'].includes((v.voteCast || '').toLowerCase())).length;
-                const colorClass = TOPIC_COLORS[topic] || 'bg-gray-100 text-gray-700';
+                const total = topicYea + topicNay;
+                const yeaPct = total > 0 ? (topicYea / total) * 100 : 0;
                 return (
-                  <div class={`inline-flex items-center gap-1 rounded-lg text-xs px-3 py-2 font-medium ${colorClass}`}>
-                    <span>{topic}</span>
-                    <span class="opacity-60">({votes.length})</span>
-                    <span class="ml-1 text-[10px] opacity-70">
-                      {topicYea}Y/{topicNay}N
+                  <div class="grid grid-cols-[minmax(0,1fr)_96px_74px] gap-4 items-center py-[9px] border-b border-rule">
+                    <span class="text-[13px] truncate">{topic}</span>
+                    <span class="flex h-1 bg-rule">
+                      <span class="h-full bg-yea" style={`width: ${yeaPct}%`}></span>
+                      <span class="h-full bg-accent" style={`width: ${100 - yeaPct}%`}></span>
                     </span>
+                    <span class="font-mono text-[11px] text-ink-3 text-right tabular">{topicYea}&ndash;{topicNay}</span>
                   </div>
                 );
               })}
@@ -658,42 +638,25 @@ const pageSections = [
           </div>
         )}
 
-        {/* Votes grouped by topic */}
-        <div class="space-y-6">
+        <div>
           {topicOrder.map(topic => {
             const votes = votesByTopic[topic] || [];
             if (votes.length === 0) return null;
-            const colorClass = TOPIC_COLORS[topic] || 'bg-gray-100 text-gray-700';
-            const topicYea = votes.filter((v: any) => ['yea', 'aye'].includes((v.voteCast || '').toLowerCase())).length;
-            const topicNay = votes.filter((v: any) => ['nay', 'no'].includes((v.voteCast || '').toLowerCase())).length;
-
             return (
-              <div>
-                <div class="flex items-center gap-2 mb-2">
-                  <span class={`inline-flex items-center rounded-full text-xs px-2 py-0.5 font-medium ${colorClass}`}>
-                    {topic}
-                  </span>
-                  <span class="text-xs text-gray-400">{votes.length} votes</span>
-                  <span class="text-xs text-green-600">{topicYea} Yea</span>
-                  <span class="text-xs text-red-600">{topicNay} Nay</span>
-                  {/* Mini ratio bar */}
-                  {(topicYea + topicNay) > 0 && (
-                    <div class="flex-1 max-w-[100px] h-1.5 bg-gray-100 rounded-full overflow-hidden flex">
-                      <div class="bg-green-500 h-full" style={`width: ${(topicYea / (topicYea + topicNay) * 100).toFixed(0)}%`}></div>
-                      <div class="bg-red-500 h-full" style={`width: ${(topicNay / (topicYea + topicNay) * 100).toFixed(0)}%`}></div>
-                    </div>
-                  )}
-                </div>
-                <div class="space-y-0.5 pl-3 border-l-2 border-gray-100">
+              <details class="group mt-6">
+                <summary class="cursor-pointer select-none font-mono text-[11px] tracking-[0.06em] uppercase text-ink-2 hover:text-accent">
+                  {topic} &middot; {votes.length} {votes.length === 1 ? 'vote' : 'votes'}
+                </summary>
+                <div class="pt-1">
                   {votes.slice(0, 10).map((v: any) => (
                     <MemberVoteRow vote={v} base={base} billLink={billLink} />
                   ))}
                   {votes.length > 10 && (
                     <details class="group">
-                      <summary class="cursor-pointer text-[10px] text-blue-600 hover:text-blue-800 pl-2 py-1 select-none">
+                      <summary class="cursor-pointer font-mono text-[10px] tracking-[0.06em] uppercase text-accent hover:underline pl-1 py-2 select-none">
                         Show {votes.length - 10} more votes on this topic
                       </summary>
-                      <div class="space-y-0.5 pt-1">
+                      <div>
                         {votes.slice(10).map((v: any) => (
                           <MemberVoteRow vote={v} base={base} billLink={billLink} />
                         ))}
@@ -701,36 +664,35 @@ const pageSections = [
                     </details>
                   )}
                 </div>
-              </div>
+              </details>
             );
           })}
         </div>
-        <a href={`${base}votes/`} class="text-blue-600 hover:underline text-sm mt-4 inline-block">View all votes &rarr;</a>
+        <a href={`${base}votes/`} class="font-mono text-[11px] tracking-[0.06em] uppercase text-accent hover:underline mt-4 inline-block">View all votes &rarr;</a>
       </div>
     )}
 
-    {/* Message when no votes found */}
     {memberVotes.length === 0 && (
-      <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-6 text-sm text-gray-600">
+      <p class="font-mono text-[11px] leading-[1.6] text-ink-3 border-l-2 border-rule pl-3 mt-8">
         No voting record data available yet. Run the data fetch workflow to populate vote data.
-      </div>
+      </p>
     )}
 
     <!-- Committee Assignments (standalone, shows even without finance data) -->
     {memberCommittees.length > 0 && stockTrades.length === 0 && ptrFilings.length === 0 && (
-      <div id="committee-assignments" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-3">Committee Assignments</h2>
-        <div class="flex flex-wrap gap-1.5">
+      <div id="committee-assignments" data-page-section class="pt-8">
+        <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Committee assignments</h2>
+        <div class="tile-grid grid-cols-1 sm:grid-cols-2 [&>*]:p-0">
           {memberCommittees.map((c: string) => {
             const code = committeeLinks[c];
             return code ? (
-              <a href={`${base}committees/${code}/`} class="inline-flex items-center text-xs px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors">
-                {c}
+              <a href={`${base}committees/${code}/`} class="flex items-baseline justify-between gap-4 bg-card px-[18px] py-[14px] hover:bg-rule-2">
+                <span class="font-serif text-[17px] font-medium">{c}</span>
               </a>
             ) : (
-              <span class="inline-flex items-center text-xs px-2.5 py-1 rounded-lg bg-gray-100 text-gray-700">
-                {c}
-              </span>
+              <div class="flex items-baseline justify-between gap-4 bg-card px-[18px] py-[14px]">
+                <span class="font-serif text-[17px] font-medium text-ink-2">{c}</span>
+              </div>
             );
           })}
         </div>
@@ -738,56 +700,48 @@ const pageSections = [
     )}
 
     {stockTrades.length === 0 && ptrFilings.length === 0 && (
-      <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-6 text-sm text-gray-600">
+      <p class="font-mono text-[11px] leading-[1.6] text-ink-3 border-l-2 border-rule pl-3 mt-8">
         No STOCK Act trades or disclosure filings matched this member in the last two years.
         Many members file only annual disclosures or have no reportable stock activity.
         Sources checked: CongressWatch, Kadoa (House/Senate PTRs), and official Clerk/eFD indexes.
-      </div>
+      </p>
     )}
 
     <!-- Financial Transparency & Potential Conflicts -->
     {(stockTrades.length > 0 || ptrFilings.length > 0) && (
-      <div class="space-y-6 mt-6">
-        {/* Conflict Alert Banner */}
+      <div>
         {conflictFlags.length > 0 && (
-          <div id="conflict-flags" data-page-section class={`rounded-lg border-2 p-5 ${conflictFlags.some((f: any) => f.severity === 'high') ? 'border-red-300 bg-red-50' : 'border-amber-300 bg-amber-50'}`}>
-            <div class="flex items-start gap-3">
-              <div class={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold ${conflictFlags.some((f: any) => f.severity === 'high') ? 'bg-red-200 text-red-700' : 'bg-amber-200 text-amber-700'}`}>
-                !
-              </div>
-              <div class="flex-1">
-                <h3 class="font-semibold text-gray-900 text-sm">
-                  {conflictFlags.filter((f: any) => f.severity === 'high').length > 0
-                    ? `${conflictFlags.filter((f: any) => f.severity === 'high').length} Potential Conflict(s) of Interest Detected`
-                    : `${conflictFlags.length} Financial Activity Flag(s)`}
-                </h3>
-                <div class="mt-2 space-y-2">
-                  {conflictFlags.map((flag: any, i: number) => (
-                    <div class={`text-xs p-2.5 rounded ${flag.severity === 'high' ? 'bg-red-100 text-red-800' : 'bg-amber-100 text-amber-800'}`}>
-                      <div class="flex items-center gap-2">
-                        <span class={`inline-flex items-center rounded text-[10px] px-1.5 py-0.5 font-semibold uppercase ${flag.severity === 'high' ? 'bg-red-200 text-red-900' : 'bg-amber-200 text-amber-900'}`}>
-                          {flag.type === 'committee_overlap' ? 'Committee Overlap' : 'Trade Timing'}
-                        </span>
-                        <span class="font-medium">{flag.sector}</span>
-                      </div>
-                      <p class="mt-1">{flag.description}</p>
-                      {flag.relatedCommittees && (
-                        <div class="mt-1 flex flex-wrap gap-1">
-                          {flag.relatedCommittees.map((c: string) => (
-                            <span class="inline-flex text-[10px] px-1.5 py-0.5 rounded bg-white/50">{c}</span>
-                          ))}
-                        </div>
-                      )}
+          <div id="conflict-flags" data-page-section class="pt-8">
+            <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">
+              {highSeverityFlags > 0
+                ? `${highSeverityFlags} potential conflict${highSeverityFlags === 1 ? '' : 's'} of interest`
+                : `${conflictFlags.length} financial activity flag${conflictFlags.length === 1 ? '' : 's'}`}
+            </h2>
+            <div>
+              {conflictFlags.map((flag: any) => (
+                <div class={`py-4 border-b border-rule last:border-0 border-l-2 pl-4 ${flag.severity === 'high' ? 'border-l-accent' : 'border-l-rule'}`}>
+                  <div class="flex items-center gap-3">
+                    <span class="font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3">
+                      {flag.type === 'committee_overlap' ? 'Committee overlap' : 'Trade timing'}
+                    </span>
+                    <span class="text-[13px] font-medium">{flag.sector}</span>
+                  </div>
+                  <p class="text-[13px] leading-[1.55] text-ink-2 mt-[6px]">{flag.description}</p>
+                  {flag.relatedCommittees && (
+                    <div class="flex flex-wrap gap-2 mt-2">
+                      {flag.relatedCommittees.map((c: string) => (
+                        <span class="text-[11px] text-ink-3 border border-rule rounded px-[6px] py-[2px]">{c}</span>
+                      ))}
                     </div>
-                  ))}
+                  )}
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         )}
 
         {memberPortfolio && (
-          <div id="portfolio" data-page-section>
+          <div id="portfolio" data-page-section class="pt-8">
             <MemberPortfolioChart
               portfolio={memberPortfolio}
               memberName={member.name}
@@ -798,35 +752,37 @@ const pageSections = [
         )}
 
         {overlapTimingTrades.length > 0 && (
-          <div id="trade-timing" data-page-section class="mb-5">
-            <h3 class="text-sm font-semibold text-gray-700 mb-1">Trade timing analysis</h3>
-            <p class="text-xs text-gray-500 mb-3">
+          <div id="trade-timing" data-page-section class="pt-8">
+            <h3 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-1">Trade timing analysis</h3>
+            <p class="text-[13px] text-ink-3 mb-4">
               Compare flagged trades to alternative timing and a do-nothing baseline (cash if no buy, hold if no sell).
             </p>
             <TradeTimingExplorer candidates={overlapTimingTrades} baseUrl={base} client:load />
           </div>
         )}
 
-        {/* Financial Overview Card */}
-        <div id="financial-disclosures" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-4">Financial Disclosures & Trading</h2>
+        <!-- Financial Disclosures & Trading -->
+        <div id="financial-disclosures" data-page-section class="pt-8">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">
+            Financial disclosures <span class="font-mono text-[11px] text-ink-3 tabular">{stockTrades.length} trades &middot; {ptrFilings.length} filings</span>
+          </h2>
 
           {ptrFilings.length > 0 && (
-            <div id="disclosure-filings" data-page-section class={stockTrades.length > 0 ? 'mb-5' : ''}>
-              <h3 class="text-sm font-semibold text-gray-700 mb-2">Official disclosure filings</h3>
-              <p class="text-xs text-gray-500 mb-3">
+            <div id="disclosure-filings" data-page-section class="mb-7">
+              <h3 class="field-label mb-1">Official disclosure filings</h3>
+              <p class="text-[12.5px] text-ink-3 mb-3">
                 Periodic transaction reports (PTRs) and annual financial disclosures from the House Clerk and Senate eFD system.
               </p>
-              <div class="space-y-0.5">
+              <div>
                 {ptrFilings.slice(0, 10).map((f: any) => (
                   <MemberFilingRow filing={f} />
                 ))}
                 {ptrFilings.length > 10 && (
                   <details class="group">
-                    <summary class="cursor-pointer text-[10px] text-blue-600 hover:text-blue-800 pl-1 py-1 select-none">
+                    <summary class="cursor-pointer font-mono text-[10px] tracking-[0.06em] uppercase text-accent hover:underline pl-1 py-2 select-none">
                       Show {ptrFilings.length - 10} more filings
                     </summary>
-                    <div class="space-y-0.5 pt-1 border-l-2 border-gray-100 pl-2">
+                    <div class="border-l-2 border-rule pl-3">
                       {ptrFilings.slice(10).map((f: any) => (
                         <MemberFilingRow filing={f} />
                       ))}
@@ -838,72 +794,70 @@ const pageSections = [
           )}
 
           {stockTrades.length > 0 && (
-            <div id="recent-trades" data-page-section class="mb-5">
-              <h3 class="text-sm font-semibold text-gray-700 mb-2">Recent stock trades</h3>
+            <div id="recent-trades" data-page-section class="mb-7">
+              <h3 class="field-label mb-2">Recent stock trades</h3>
               <ExpandableTradeList trades={stockTrades} previewCount={10} moreLabel="trades" />
             </div>
           )}
 
-          {/* Stats Row */}
           {stockTrades.length > 0 && (() => {
             const purchases = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('purchase')).length;
             const sales = stockTrades.filter((t: any) => (t.type || '').toLowerCase().includes('sale')).length;
             const tickers = [...new Set(stockTrades.map((t: any) => t.ticker).filter(Boolean))];
             return (
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-                <div class="text-center p-3 bg-gray-50 rounded-lg">
-                  <div class="text-xl font-bold text-gray-900">{stockTrades.length}</div>
-                  <div class="text-[10px] text-gray-500">Total Trades</div>
+              <div class="flex flex-wrap items-stretch border border-rule bg-card mb-7">
+                <div class="flex-1 min-w-[110px] px-4 py-3 border-r border-rule">
+                  <div class="font-serif text-xl leading-none font-medium tabular">{stockTrades.length}</div>
+                  <div class="font-mono text-[10px] text-ink-3 mt-2">Total trades</div>
                 </div>
-                <div class="text-center p-3 bg-green-50 rounded-lg">
-                  <div class="text-xl font-bold text-green-600">{purchases}</div>
-                  <div class="text-[10px] text-gray-500">Purchases</div>
+                <div class="flex-1 min-w-[110px] px-4 py-3 border-r border-rule">
+                  <div class="font-serif text-xl leading-none font-medium tabular">{purchases}</div>
+                  <div class="font-mono text-[10px] text-ink-3 mt-2">Purchases</div>
                 </div>
-                <div class="text-center p-3 bg-red-50 rounded-lg">
-                  <div class="text-xl font-bold text-red-600">{sales}</div>
-                  <div class="text-[10px] text-gray-500">Sales</div>
+                <div class="flex-1 min-w-[110px] px-4 py-3 border-r border-rule">
+                  <div class="font-serif text-xl leading-none font-medium tabular">{sales}</div>
+                  <div class="font-mono text-[10px] text-ink-3 mt-2">Sales</div>
                 </div>
-                <div class="text-center p-3 bg-blue-50 rounded-lg">
-                  <div class="text-xl font-bold text-blue-600">{tickers.length}</div>
-                  <div class="text-[10px] text-gray-500">Unique Stocks</div>
+                <div class="flex-1 min-w-[110px] px-4 py-3">
+                  <div class="font-serif text-xl leading-none font-medium tabular">{tickers.length}</div>
+                  <div class="font-mono text-[10px] text-ink-3 mt-2">Unique stocks</div>
                 </div>
               </div>
             );
           })()}
 
-          {/* Sector Breakdown with expandable trade lists */}
           {sectorTradeOrder.length > 0 && (
-            <div id="trading-by-sector" data-page-section class="mb-5">
-              <h3 class="text-sm font-semibold text-gray-700 mb-2">Trading by Sector</h3>
-              <div class="space-y-2">
+            <div id="trading-by-sector" data-page-section class="mb-7">
+              <h3 class="field-label mb-2">Trading by sector</h3>
+              <div>
                 {sectorTradeOrder.map((sector) => {
                   const trades = tradesBySector[sector] || [];
                   const purchases = trades.filter((t: any) => (t.type || '').toLowerCase().includes('purchase')).length;
                   const sales = trades.filter((t: any) => (t.type || '').toLowerCase().includes('sale')).length;
                   const isOverlap = financeProfile?.committeeSectors?.includes(sector);
                   return (
-                    <details class={`rounded-lg border ${isOverlap ? 'border-red-200 bg-red-50/40' : 'border-gray-200 bg-gray-50/50'}`}>
-                      <summary class="cursor-pointer list-none px-3 py-2.5 select-none">
-                        <div class="flex items-center gap-3">
+                    <details class={`border-b border-rule ${isOverlap ? 'border-l-2 border-l-accent pl-3' : ''}`}>
+                      <summary class="cursor-pointer list-none py-[10px] select-none">
+                        <div class="flex items-center gap-4">
                           <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 flex-wrap">
-                              <span class={`text-sm font-medium ${isOverlap ? 'text-red-800' : 'text-gray-800'}`}>{sector}</span>
-                              <span class="text-xs text-gray-500">({trades.length} trades)</span>
+                              <span class="text-[13.5px] font-medium">{sector}</span>
+                              <span class="font-mono text-[11px] text-ink-3">({trades.length} trades)</span>
                               {isOverlap && (
-                                <span class="inline-flex items-center text-[9px] px-1.5 py-0.5 rounded bg-red-200 text-red-800 font-semibold uppercase">
-                                  Committee Overlap
+                                <span class="font-mono text-[9.5px] tracking-[0.06em] uppercase text-accent border border-accent rounded px-[6px] py-[1px]">
+                                  Committee overlap
                                 </span>
                               )}
                             </div>
-                            <div class="flex gap-3 mt-1 text-xs text-gray-500">
-                              <span class="text-green-600">{purchases} buy</span>
-                              <span class="text-red-600">{sales} sell</span>
+                            <div class="flex gap-3 mt-1 font-mono text-[11px] text-ink-3">
+                              <span>{purchases} buy</span>
+                              <span>{sales} sell</span>
                             </div>
                           </div>
-                          <span class="text-[10px] text-blue-600 shrink-0">Expand trades</span>
+                          <span class="font-mono text-[10px] tracking-[0.06em] uppercase text-accent shrink-0">Expand</span>
                         </div>
                       </summary>
-                      <div class="px-3 pb-3 border-t border-gray-200/80">
+                      <div class="pb-3">
                         <ExpandableTradeList trades={trades} previewCount={8} moreLabel={`${sector} trades`} highlightSector={isOverlap} />
                       </div>
                     </details>
@@ -913,11 +867,10 @@ const pageSections = [
             </div>
           )}
 
-          {/* Committee Assignments (for context) */}
           {memberCommittees.length > 0 && (
-            <div id="finance-committees" data-page-section class="mb-5">
-              <h3 class="text-sm font-semibold text-gray-700 mb-2">Committee Assignments</h3>
-              <div class="flex flex-wrap gap-1.5">
+            <div id="finance-committees" data-page-section class="mb-7">
+              <h3 class="field-label mb-2">Committee assignments</h3>
+              <div class="flex flex-wrap gap-x-4 gap-y-2">
                 {memberCommittees.map((c: string) => {
                   const sectors = [] as string[];
                   const cLower = c.toLowerCase();
@@ -928,45 +881,45 @@ const pageSections = [
                   if (cLower.includes('technology') || cLower.includes('science') || cLower.includes('cyber')) sectors.push('Technology');
                   const hasTrades = sectors.some(s => sectorBreakdown.some((sb: any) => sb.sector === s));
                   const code = committeeLinks[c];
-                  const Tag = code ? 'a' : 'span';
                   return (
-                    <a href={code ? `${base}committees/${code}/` : '#'} class={`inline-flex items-center text-xs px-2.5 py-1 rounded-lg ${hasTrades ? 'bg-red-50 text-red-700 border border-red-200 font-medium' : 'bg-gray-100 text-gray-600'} ${code ? 'hover:opacity-80' : ''}`}>
-                      {c}
-                      {hasTrades && <span class="ml-1 text-red-400">*</span>}
+                    <a
+                      href={code ? `${base}committees/${code}/` : undefined}
+                      class={`text-[12.5px] ${hasTrades ? 'text-accent font-medium' : 'text-ink-2'} ${code ? 'hover:underline' : ''}`}
+                    >
+                      {c}{hasTrades && <span class="text-accent">*</span>}
                     </a>
                   );
                 })}
               </div>
-              <p class="text-[10px] text-gray-400 mt-1">* has stock trades in related sector</p>
+              <p class="font-mono text-[10px] text-ink-3 mt-2">* has stock trades in related sector</p>
             </div>
           )}
 
-          {/* Top Tickers — expandable trade lists with quote links */}
           {topTickers.length > 0 && (
-            <div id="most-traded-stocks" data-page-section class="mb-5">
-              <h3 class="text-sm font-semibold text-gray-700 mb-2">Most Traded Stocks</h3>
-              <div class="space-y-2">
+            <div id="most-traded-stocks" data-page-section class="mb-7">
+              <h3 class="field-label mb-2">Most traded stocks</h3>
+              <div>
                 {topTickers.map(([ticker, trades]) => {
                   const sector = trades[0]?.sector;
                   const isOverlap = sector && financeProfile?.committeeSectors?.includes(sector);
                   const quoteUrl = tickerQuoteUrl(ticker);
                   return (
-                    <details class={`rounded-lg border ${isOverlap ? 'border-red-200 bg-red-50/30' : 'border-gray-200'}`}>
-                      <summary class="cursor-pointer list-none px-3 py-2 select-none">
+                    <details class={`border-b border-rule ${isOverlap ? 'border-l-2 border-l-accent pl-3' : ''}`}>
+                      <summary class="cursor-pointer list-none py-[10px] select-none">
                         <div class="flex items-center gap-2 flex-wrap">
                           {quoteUrl ? (
-                            <a href={quoteUrl} target="_blank" rel="noopener" class="font-mono text-sm font-semibold text-blue-700 hover:underline">{ticker}</a>
+                            <a href={quoteUrl} target="_blank" rel="noopener" class="font-mono text-[13px] font-medium text-accent hover:underline">{ticker}</a>
                           ) : (
-                            <span class="font-mono text-sm font-semibold text-blue-700">{ticker}</span>
+                            <span class="font-mono text-[13px] font-medium text-accent">{ticker}</span>
                           )}
-                          <span class="text-xs text-gray-500">({trades.length} trades)</span>
-                          {isOverlap && <span class="text-red-500 text-[10px] font-medium">committee overlap</span>}
-                          <span class="text-[10px] text-blue-600 ml-auto">Expand trades</span>
+                          <span class="font-mono text-[11px] text-ink-3">({trades.length} trades)</span>
+                          {isOverlap && <span class="font-mono text-[10px] uppercase tracking-[0.06em] text-accent">committee overlap</span>}
+                          <span class="font-mono text-[10px] tracking-[0.06em] uppercase text-accent ml-auto">Expand</span>
                         </div>
                       </summary>
-                      <div class="px-3 pb-3 border-t border-gray-100">
+                      <div class="pb-3">
                         {quoteUrl && (
-                          <a href={quoteUrl} target="_blank" rel="noopener" class="inline-block text-[10px] text-blue-600 hover:underline mb-2">
+                          <a href={quoteUrl} target="_blank" rel="noopener" class="inline-block font-mono text-[10.5px] text-accent hover:underline mb-2">
                             View {ticker} quote
                           </a>
                         )}
@@ -981,50 +934,43 @@ const pageSections = [
 
           {stockTrades.length > 0 && (
             <details class="group mb-2">
-              <summary class="cursor-pointer text-sm font-medium text-blue-600 hover:text-blue-800 select-none">
+              <summary class="cursor-pointer font-mono text-[11px] tracking-[0.06em] uppercase text-accent hover:underline select-none">
                 View full transaction table ({stockTrades.length})
               </summary>
               <div class="overflow-x-auto mt-3">
-                <table class="w-full text-xs">
+                <table class="w-full text-[12px]">
                   <thead>
-                    <tr class="border-b border-gray-200 text-gray-500">
-                      <th class="text-left py-2 font-medium">Date</th>
-                      <th class="text-left py-2 font-medium">Ticker</th>
-                      <th class="text-left py-2 font-medium">Asset</th>
-                      <th class="text-left py-2 font-medium">Type</th>
-                      <th class="text-right py-2 font-medium">Amount</th>
-                      <th class="text-right py-2 font-medium">Link</th>
+                    <tr class="border-b border-ink">
+                      <th class="text-left py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Date</th>
+                      <th class="text-left py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Ticker</th>
+                      <th class="text-left py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Asset</th>
+                      <th class="text-left py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Type</th>
+                      <th class="text-right py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Amount</th>
+                      <th class="text-right py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Link</th>
                     </tr>
                   </thead>
                   <tbody>
                     {stockTrades.map((t: any) => {
                       const quoteUrl = tickerQuoteUrl(t.ticker);
                       const disclosureUrl = tradeDisclosureUrl(t);
-                      const typeColor = (t.type || '').toLowerCase().includes('purchase')
-                        ? 'text-green-700 bg-green-50'
-                        : (t.type || '').toLowerCase().includes('sale')
-                        ? 'text-red-700 bg-red-50'
-                        : 'text-gray-700 bg-gray-50';
                       return (
-                        <tr class="border-b border-gray-50 hover:bg-gray-50">
-                          <td class="py-1.5 text-gray-500 whitespace-nowrap">{t.transactionDate}</td>
-                          <td class="py-1.5 font-mono font-semibold">
+                        <tr class="border-b border-rule">
+                          <td class="py-[7px] font-mono text-ink-3 whitespace-nowrap tabular">{t.transactionDate}</td>
+                          <td class="py-[7px] font-mono font-medium">
                             {quoteUrl ? (
-                              <a href={quoteUrl} target="_blank" rel="noopener" class="text-blue-700 hover:underline">{t.ticker || '—'}</a>
+                              <a href={quoteUrl} target="_blank" rel="noopener" class="text-accent hover:underline">{t.ticker || '—'}</a>
                             ) : (
-                              <span class="text-blue-700">{t.ticker || '—'}</span>
+                              <span class="text-accent">{t.ticker || '—'}</span>
                             )}
                           </td>
-                          <td class="py-1.5 text-gray-700 max-w-[180px] truncate">{t.assetDescription}</td>
-                          <td class="py-1.5">
-                            <span class={`inline-flex rounded text-[10px] px-1.5 py-0.5 font-medium ${typeColor}`}>{t.type}</span>
-                          </td>
-                          <td class="py-1.5 text-right text-gray-600 whitespace-nowrap">{t.amount}</td>
-                          <td class="py-1.5 text-right whitespace-nowrap">
+                          <td class="py-[7px] text-ink-2 max-w-[180px] truncate">{t.assetDescription}</td>
+                          <td class="py-[7px] font-mono text-[10.5px] tracking-[0.04em] uppercase text-ink-2">{t.type}</td>
+                          <td class="py-[7px] text-right text-ink-2 whitespace-nowrap font-mono tabular">{t.amount}</td>
+                          <td class="py-[7px] text-right whitespace-nowrap">
                             {disclosureUrl ? (
-                              <a href={disclosureUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">Filing</a>
+                              <a href={disclosureUrl} target="_blank" rel="noopener" class="font-mono text-[10.5px] uppercase tracking-[0.06em] text-accent hover:underline">Filing</a>
                             ) : (
-                              <span class="text-gray-300">—</span>
+                              <span class="text-ink-3">—</span>
                             )}
                           </td>
                         </tr>
@@ -1036,7 +982,7 @@ const pageSections = [
             </details>
           )}
 
-          <p class="text-[10px] text-gray-400 mt-3 border-t border-gray-100 pt-3">
+          <p class="font-mono text-[10.5px] leading-[1.6] text-ink-3 border-l-2 border-rule pl-3 mt-6">
             Sources: CongressWatch, Kadoa congress-trading-monitor, House Clerk, Senate eFD{stockTrades.length > 0 ? ', and Stock Watcher when available' : ''}.
             Red highlights indicate trades in sectors related to this member's committee assignments — this does not necessarily indicate wrongdoing.
           </p>

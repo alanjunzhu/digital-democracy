@@ -111,13 +111,14 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Analytics" description="Data visualizations and insights about the US Congress, including party-line votes and voting alignment.">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="mb-6">
-      <h1 class="text-3xl font-bold text-gray-900">Analytics</h1>
-      <p class="text-gray-500 mt-1">
-        Data insights for the {membersIndex.congress || 119}th Congress
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
+    <div class="pb-5 border-b border-ink">
+      <p class="eyebrow mb-3">Analysis</p>
+      <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">Analytics</h1>
+      <p class="font-mono text-[11px] tracking-[0.06em] uppercase text-ink-3 mt-3">
+        {membersIndex.congress || 119}th Congress
         {existsSync(join(process.cwd(), 'data', 'votes', 'by-member.json')) && (
-          <span> · party alignment from {Object.keys(byMemberVotes).length} voting records</span>
+          <span> &middot; party alignment from {Object.keys(byMemberVotes).length} voting records</span>
         )}
       </p>
     </div>

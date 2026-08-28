@@ -25,10 +25,11 @@ const base = import.meta.env.BASE_URL;
   title="Policy Areas"
   description="Where every senator and representative stands across policy areas, and how the two parties line up, in one chart."
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="mb-6">
-      <h1 class="text-3xl font-bold text-gray-900">Policy Areas</h1>
-      <p class="text-gray-500 mt-1">
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
+    <div class="pb-5 border-b border-ink">
+      <p class="eyebrow mb-3">Analysis</p>
+      <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">Policy areas</h1>
+      <p class="text-[14px] leading-[1.6] text-ink-2 max-w-prose mt-3">
         Where members stand across {index.areas.length} policy areas of the {votesIndex.congress || 119}th Congress,
         scored on {coverage.contested} roll calls that split the two parties.
       </p>
@@ -36,56 +37,58 @@ const base = import.meta.env.BASE_URL;
 
     {index.areas.length > 0 ? (
       <>
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div class="bg-white border border-gray-200 rounded-xl p-4">
-            <div class="text-xs text-gray-500">Roll calls classified</div>
-            <div class="text-2xl font-bold text-gray-900">{coverage.classified}</div>
-            <div class="text-xs text-gray-500 mt-1">of {coverage.total} in this Congress</div>
+        <div class="flex flex-wrap items-stretch border border-rule bg-card mt-6 mb-8">
+          <div class="flex-1 min-w-[150px] px-5 py-4 border-r border-rule">
+            <div class="field-label">Roll calls classified</div>
+            <div class="font-serif text-2xl font-medium tabular mt-2">{coverage.classified}</div>
+            <div class="text-[11.5px] text-ink-3 mt-1">of {coverage.total} in this Congress</div>
           </div>
-          <div class="bg-white border border-gray-200 rounded-xl p-4">
-            <div class="text-xs text-gray-500">Splitting the parties</div>
-            <div class="text-2xl font-bold text-gray-900">{coverage.contested}</div>
-            <div class="text-xs text-gray-500 mt-1">party majorities on opposite sides</div>
+          <div class="flex-1 min-w-[150px] px-5 py-4 border-r border-rule">
+            <div class="field-label">Splitting the parties</div>
+            <div class="font-serif text-2xl font-medium tabular mt-2">{coverage.contested}</div>
+            <div class="text-[11.5px] text-ink-3 mt-1">party majorities on opposite sides</div>
           </div>
-          <div class="bg-white border border-gray-200 rounded-xl p-4">
-            <div class="text-xs text-gray-500">Members scored</div>
-            <div class="text-2xl font-bold text-gray-900">{index.members.length}</div>
-            <div class="text-xs text-gray-500 mt-1">at least {index.minMemberVotes} votes in an area</div>
+          <div class="flex-1 min-w-[150px] px-5 py-4 border-r border-rule">
+            <div class="field-label">Members scored</div>
+            <div class="font-serif text-2xl font-medium tabular mt-2">{index.members.length}</div>
+            <div class="text-[11.5px] text-ink-3 mt-1">at least {index.minMemberVotes} votes in an area</div>
           </div>
-          <div class="bg-white border border-gray-200 rounded-xl p-4">
-            <div class="text-xs text-gray-500">Widest party gap</div>
-            <div class="text-2xl font-bold text-gray-900">{widestGap && widestGap.gap >= 0 ? `${Math.round(widestGap.gap)} pts` : '—'}</div>
-            <div class="text-xs text-gray-500 mt-1">{widestGap?.area.label}</div>
+          <div class="flex-1 min-w-[150px] px-5 py-4">
+            <div class="field-label">Widest party gap</div>
+            <div class="font-serif text-2xl font-medium tabular mt-2">{widestGap && widestGap.gap >= 0 ? `${Math.round(widestGap.gap)} pts` : '—'}</div>
+            <div class="text-[11.5px] text-ink-3 mt-1">{widestGap?.area.label}</div>
           </div>
         </div>
 
         <PolicyStanceChart index={index} baseUrl={base} client:load />
 
-        <div class="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm text-gray-600 space-y-2">
-          <h2 class="font-semibold text-gray-900">How these scores are built</h2>
-          <p>
-            Every roll call is sorted into a policy area from the vote's own topic, the policy area of the
-            bill it names, or the wording of the question. {coverage.procedural} votes are floor mechanics
-            (cloture, the previous question, motions to table) and {coverage.unclassified} carry no subject
-            wording at all — House questions are usually just "On Passage" — so neither group is scored.
-          </p>
-          <p>
-            Only <strong>contested</strong> roll calls count: those where a majority of Democrats voted one way and a
-            majority of Republicans the other. Lopsided votes say nothing about where a member stands.
-            <strong> Support</strong> is the share of an area's contested measures a member voted for.
-            <strong> Party-line lean</strong> runs from −100 (always with the Democratic majority) to +100 (always with
-            the Republican one). The two chambers vote on different measures, so compare within a chamber.
-          </p>
-          <p>
-            An area appears once it has at least {index.minAreaVotes} contested roll calls; a member is plotted in an
-            area once they cast at least {index.minMemberVotes} votes in it.
-          </p>
+        <div class="mt-10 pt-3 border-t border-ink">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] mb-4">How these scores are built</h2>
+          <div class="space-y-3 text-[14px] leading-[1.65] text-ink-2 max-w-prose">
+            <p>
+              Every roll call is sorted into a policy area from the vote's own topic, the policy area of the
+              bill it names, or the wording of the question. {coverage.procedural} votes are floor mechanics
+              (cloture, the previous question, motions to table) and {coverage.unclassified} carry no subject
+              wording at all — House questions are usually just "On Passage" — so neither group is scored.
+            </p>
+            <p>
+              Only <strong class="text-ink font-semibold">contested</strong> roll calls count: those where a majority of Democrats voted one way and a
+              majority of Republicans the other. Lopsided votes say nothing about where a member stands.
+              <strong class="text-ink font-semibold"> Support</strong> is the share of an area's contested measures a member voted for.
+              <strong class="text-ink font-semibold"> Party-line lean</strong> runs from &minus;100 (always with the Democratic majority) to +100 (always with
+              the Republican one). The two chambers vote on different measures, so compare within a chamber.
+            </p>
+            <p>
+              An area appears once it has at least {index.minAreaVotes} contested roll calls; a member is plotted in an
+              area once they cast at least {index.minMemberVotes} votes in it.
+            </p>
+          </div>
         </div>
       </>
     ) : (
-      <div class="text-center py-16 text-gray-500">
-        <p class="text-lg">No vote data available yet.</p>
-        <p class="mt-2 text-sm">Run the vote fetch script to populate roll calls.</p>
+      <div class="text-center py-16">
+        <p class="font-serif text-2xl font-medium">No vote data available yet.</p>
+        <p class="mt-2 text-[13.5px] text-ink-3">Run the vote fetch script to populate roll calls.</p>
       </div>
     )}
   </div>

@@ -14,10 +14,13 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Committees" description="Browse all committees of the US Congress. Filter by chamber.">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="mb-6">
-      <h1 class="text-3xl font-bold text-gray-900">Committees</h1>
-      <p class="text-gray-500 mt-1">
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
+    <div class="pb-[18px] border-b border-ink">
+      <p class="eyebrow mb-3">Structure</p>
+      <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">
+        Committees
+      </h1>
+      <p class="font-mono text-[11px] tracking-[0.06em] uppercase text-ink-3 mt-3">
         {committeesData.congress}th Congress &middot; {committeesData.total} committees
       </p>
     </div>
@@ -25,9 +28,9 @@ const base = import.meta.env.BASE_URL;
     {committeesData.committees.length > 0 ? (
       <CommitteeFilter committees={committeesData.committees} baseUrl={base} client:load />
     ) : (
-      <div class="text-center py-16 text-gray-500">
-        <p class="text-lg">No committee data available yet.</p>
-        <p class="mt-2 text-sm">Run the data fetch script to populate committee data.</p>
+      <div class="text-center py-16">
+        <p class="font-serif text-2xl font-medium">No committee data available yet.</p>
+        <p class="mt-2 text-[13.5px] text-ink-3">Run the data fetch script to populate committee data.</p>
       </div>
     )}
   </div>

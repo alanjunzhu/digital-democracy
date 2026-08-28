@@ -32,7 +32,7 @@ const entries = buildPageIndex(sections);
       aria-expanded="false"
       aria-controls="page-index-panel"
       title={`${title} (${entries.length} sections)`}
-      class="grid h-10 w-10 place-items-center rounded-full border border-gray-200 bg-white text-gray-500 shadow-md transition-colors hover:border-blue-200 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+      class="grid h-10 w-10 place-items-center rounded-full border border-rule bg-card text-ink-3 transition-colors hover:border-ink-3 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]"
     >
       <span class="sr-only">{title}</span>
       <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
@@ -49,9 +49,9 @@ const entries = buildPageIndex(sections);
       id="page-index-panel"
       data-page-index-panel
       aria-label={title}
-      class="hidden w-64 max-w-[calc(100vw-1.5rem)] max-h-[min(70vh,34rem)] overflow-y-auto rounded-xl border border-gray-200 bg-white/95 px-2.5 py-2.5 shadow-xl backdrop-blur"
+      class="hidden w-64 max-w-[calc(100vw-1.5rem)] max-h-[min(70vh,34rem)] overflow-y-auto rounded border border-rule bg-card px-2.5 py-2.5"
     >
-      <p class="px-2 pb-2 text-[10px] font-semibold uppercase tracking-wider text-gray-400">{title}</p>
+      <p class="px-2 pb-2 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-3">{title}</p>
       <ol class="space-y-0.5">
         {entries.map(entry => (
           <li>
@@ -59,13 +59,13 @@ const entries = buildPageIndex(sections);
               href={`#${entry.id}`}
               data-page-index-link={entry.id}
               class:list={[
-                'flex items-baseline gap-2 rounded-md px-2 py-1.5 text-gray-600 transition-colors hover:bg-gray-50 hover:text-blue-700',
+                'flex items-baseline gap-2 rounded px-2 py-1.5 text-ink-2 transition-colors hover:bg-rule-2 hover:text-accent',
                 entry.depth === 1 ? 'ml-3 text-[11px]' : 'text-xs font-medium',
               ]}
             >
               <span class="flex-1 leading-snug">{entry.label}</span>
               {entry.count != null && (
-                <span class="shrink-0 text-[10px] text-gray-400">{entry.count}</span>
+                <span class="shrink-0 font-mono text-[10px] text-ink-3 tabular">{entry.count}</span>
               )}
             </a>
           </li>
@@ -86,14 +86,14 @@ const entries = buildPageIndex(sections);
     transform: rotate(30deg);
   }
   [data-page-index-toggle][aria-expanded='true'] {
-    border-color: rgb(191 219 254);
-    color: rgb(37 99 235);
+    border-color: var(--ink-3);
+    color: var(--ink);
   }
   [data-page-index-link][aria-current='true'] {
-    background-color: rgb(239 246 255);
-    color: rgb(29 78 216);
+    background-color: var(--rule-2);
+    color: var(--ink);
     font-weight: 600;
-    box-shadow: inset 2px 0 0 rgb(37 99 235);
+    box-shadow: inset 2px 0 0 var(--red);
   }
 </style>
 

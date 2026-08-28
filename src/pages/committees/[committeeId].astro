@@ -74,12 +74,6 @@ const committeeMemberIndex = financeData
   : {};
 const committeeMembers = getCommitteeMembers(committeeMemberIndex, committee.name);
 
-const chamberColor = (ch: string) => {
-  if (ch === 'Senate') return 'bg-amber-100 text-amber-800';
-  if (ch === 'House') return 'bg-emerald-100 text-emerald-800';
-  return 'bg-blue-100 text-blue-800';
-};
-
 const pageSections = [
   { id: 'overview', label: 'Overview' },
   { id: 'committee-members', label: 'Committee Members', count: committeeMembers.length },
@@ -94,42 +88,39 @@ const pageSections = [
 ---
 
 <Layout title={committee.name} description={`${committee.name} — ${committee.chamber} Committee`}>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
     <PageIndex sections={pageSections} />
 
-    <!-- Back link -->
-    <a href={`${base}committees/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
-      &larr; All Committees
+    <a href={`${base}committees/`} class="font-mono text-[11px] tracking-[0.06em] uppercase text-ink-3 hover:text-accent">
+      &larr; All committees
     </a>
 
-    <!-- Committee Header -->
-    <div id="overview" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-      <div class="flex items-center gap-3 mb-3">
-        <span class={`inline-flex items-center font-medium rounded-full text-xs px-2 py-0.5 ${chamberColor(committee.chamber)}`}>
-          {committee.chamber}
-        </span>
+    <!-- Header -->
+    <div id="overview" data-page-section class="mt-4 pb-5 border-b border-ink">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3">{committee.chamber}</span>
         {committee.committeeType && (
-          <span class="text-sm text-gray-400">{committee.committeeType}</span>
+          <span class="text-[11.5px] text-ink-2 border border-rule rounded px-[7px] py-[2px]">{committee.committeeType}</span>
         )}
-        <span class="font-mono text-xs text-gray-400">{committee.systemCode}</span>
+        <span class="font-mono text-[10.5px] text-ink-3">{committee.systemCode}</span>
       </div>
-      <h1 class="text-2xl font-bold text-gray-900 mb-2">{committee.name}</h1>
+      <h1 class="font-serif text-[32px] leading-[1.15] font-medium text-pretty mb-2">{committee.name}</h1>
 
       {parent && (
-        <p class="text-sm text-gray-500 mb-3">
+        <p class="text-[13.5px] text-ink-2 mb-3">
           Subcommittee of{' '}
-          <a href={`${base}committees/${parent.systemCode}/`} class="text-blue-600 hover:underline">{parent.name}</a>
+          <a href={`${base}committees/${parent.systemCode}/`} class="text-ink hover:text-accent">{parent.name}</a>
         </p>
       )}
 
-      <div class="flex flex-wrap gap-4 text-sm">
+      <div class="flex flex-wrap gap-5">
         {congressGovUrl && (
-          <a href={congressGovUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+          <a href={congressGovUrl} target="_blank" rel="noopener" class="font-mono text-[11px] tracking-[0.06em] uppercase text-accent hover:underline">
             {committee.isSubcommittee && parent ? 'Parent committee on Congress.gov' : 'View on Congress.gov'}
           </a>
         )}
         {committee.officialWebsite && (
-          <a href={committee.officialWebsite} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+          <a href={committee.officialWebsite} target="_blank" rel="noopener" class="font-mono text-[11px] tracking-[0.06em] uppercase text-accent hover:underline">
             Official website
           </a>
         )}
@@ -137,19 +128,19 @@ const pageSections = [
     </div>
 
     <!-- Committee Members -->
-    <div id="committee-members" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-      <h2 class="text-lg font-semibold text-gray-900 mb-1">
-        Committee Members ({committeeMembers.length})
+    <div id="committee-members" data-page-section class="pt-8">
+      <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-1">
+        Committee members <span class="font-mono text-[11px] text-ink-3 tabular">{committeeMembers.length}</span>
       </h2>
-      <p class="text-xs text-gray-400 mb-4">
+      <p class="font-mono text-[10.5px] text-ink-3 mb-4">
         Current membership from official committee rosters.
       </p>
       {committeeMembers.length === 0 ? (
-        <p class="text-sm text-gray-500">
+        <p class="text-[13.5px] text-ink-3">
           No member roster matched this committee yet.
         </p>
       ) : (
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 [&>*]:p-0">
           {committeeMembers.map((member) => (
             <MemberCard member={member} />
           ))}
@@ -158,39 +149,39 @@ const pageSections = [
     </div>
 
     <!-- Legislation -->
-    <div id="legislation" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-      <h2 class="text-lg font-semibold text-gray-900 mb-1">
-        Legislation ({referredBills.length})
+    <div id="legislation" data-page-section class="pt-8">
+      <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-1">
+        Legislation <span class="font-mono text-[11px] text-ink-3 tabular">{referredBills.length}</span>
       </h2>
-      <p class="text-xs text-gray-400 mb-3">
+      <p class="font-mono text-[10.5px] text-ink-3 mb-4">
         Measures referred to this committee in the {committeesData.congress ?? 119}th Congress, most recent activity first.
       </p>
       {referredBills.length === 0 ? (
-        <p class="text-sm text-gray-500">
+        <p class="text-[13.5px] text-ink-3">
           No legislation from this Congress has been recorded for this committee yet.
         </p>
       ) : (
-        <div class="divide-y divide-gray-100">
+        <div>
           {referredBills.map(bill => (
-            <div class="flex items-start gap-3 py-2">
+            <div class="grid grid-cols-[96px_minmax(0,1fr)] gap-4 items-start py-[10px] border-b border-rule last:border-0">
               {bill.hasPage ? (
-                <a href={`${base}bills/${bill.billId}/`} class="font-mono text-sm font-semibold text-blue-700 hover:underline whitespace-nowrap">
+                <a href={`${base}bills/${bill.billId}/`} class="font-mono text-[12.5px] font-medium text-accent hover:underline whitespace-nowrap">
                   {bill.type} {bill.number}
                 </a>
               ) : bill.url ? (
-                <a href={bill.url} target="_blank" rel="noopener" class="font-mono text-sm font-semibold text-blue-700 hover:underline whitespace-nowrap">
+                <a href={bill.url} target="_blank" rel="noopener" class="font-mono text-[12.5px] font-medium text-accent hover:underline whitespace-nowrap">
                   {bill.type} {bill.number}
                 </a>
               ) : (
-                <span class="font-mono text-sm font-semibold text-gray-700 whitespace-nowrap">
+                <span class="font-mono text-[12.5px] font-medium text-ink-2 whitespace-nowrap">
                   {bill.type} {bill.number}
                 </span>
               )}
-              <div class="flex-1 min-w-0">
-                {bill.title && <p class="text-sm text-gray-900 line-clamp-2">{bill.title}</p>}
-                <div class="flex flex-wrap items-center gap-2 mt-0.5 text-xs text-gray-500">
+              <div class="min-w-0">
+                {bill.title && <p class="text-[13px] leading-[1.4] text-ink line-clamp-2">{bill.title}</p>}
+                <div class="flex flex-wrap items-center gap-3 mt-[4px] font-mono text-[10.5px] text-ink-3">
                   {bill.relationshipType && <span>{bill.relationshipType}</span>}
-                  {bill.actionDate && <span class="text-gray-400">{bill.actionDate}</span>}
+                  {bill.actionDate && <span>{bill.actionDate}</span>}
                 </div>
               </div>
             </div>
@@ -201,25 +192,23 @@ const pageSections = [
 
     <!-- Subcommittees -->
     {committee.subcommittees && committee.subcommittees.length > 0 && (
-      <div id="subcommittees" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-3">
-          Subcommittees ({committee.subcommittees.length})
+      <div id="subcommittees" data-page-section class="pt-8">
+        <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">
+          Subcommittees <span class="font-mono text-[11px] text-ink-3 tabular">{committee.subcommittees.length}</span>
         </h2>
-        <div class="space-y-2">
+        <div>
           {committee.subcommittees.map(sc => knownCommitteeCodes.has(sc.systemCode) ? (
             <a
               href={`${base}committees/${sc.systemCode}/`}
-              class="flex items-center gap-3 py-2 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded"
+              class="flex items-center gap-3 py-[10px] border-b border-rule last:border-0 hover:border-ink-3"
             >
-              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-              <span class="text-sm text-blue-700 hover:underline">{sc.name}</span>
-              <span class="font-mono text-xs text-gray-400">{sc.systemCode}</span>
+              <span class="text-[13.5px] text-ink hover:text-accent">{sc.name}</span>
+              <span class="font-mono text-[10.5px] text-ink-3 ml-auto">{sc.systemCode}</span>
             </a>
           ) : (
-            <div class="flex items-center gap-3 py-2 border-b border-gray-100 last:border-0">
-              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-              <span class="text-sm text-gray-700">{sc.name}</span>
-              <span class="font-mono text-xs text-gray-400">{sc.systemCode}</span>
+            <div class="flex items-center gap-3 py-[10px] border-b border-rule last:border-0">
+              <span class="text-[13.5px] text-ink-2">{sc.name}</span>
+              <span class="font-mono text-[10.5px] text-ink-3 ml-auto">{sc.systemCode}</span>
             </div>
           ))}
         </div>

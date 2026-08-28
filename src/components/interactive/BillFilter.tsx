@@ -68,56 +68,69 @@ export default function BillFilter({ bills, baseUrl }: Props) {
   }, [filtered, groupByStage]);
 
   const partyColor = (p: string) => {
-    if (p === 'D') return 'text-blue-700';
-    if (p === 'R') return 'text-red-700';
-    return 'text-purple-700';
+    if (p === 'D') return 'text-dem';
+    if (p === 'R') return 'text-rep';
+    return 'text-ind';
   };
 
+  const clearFilters = () => {
+    setSearch('');
+    setChamber('all');
+    setPolicyArea('all');
+    setStage('all');
+  };
+
+  // Record row: identifier column, title and provenance, status right-aligned.
   const BillCard = ({ b }: { b: (typeof billsWithStage)[0] }) => {
     const sc = STAGE_COLORS[b.stage];
     return (
       <a
         href={`${baseUrl}bills/${b.billId}/`}
-        className="block bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all p-4 group"
+        className="grid grid-cols-1 md:grid-cols-[96px_minmax(0,1fr)_150px] gap-5 items-start py-4 border-b border-rule hover:border-ink-3"
       >
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1 flex-wrap">
-              <span className="font-mono text-sm font-semibold text-blue-700 group-hover:text-blue-900">
-                {b.type} {b.number}
-              </span>
-              <span className={`inline-flex items-center font-medium rounded-full text-xs px-1.5 py-0.5 ${b.originChamber === 'Senate' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'}`}>
-                {b.originChamber}
-              </span>
-              <span className={`inline-flex items-center rounded-full text-xs px-1.5 py-0.5 font-medium ${sc.bg} ${sc.text}`}>
-                {b.stage}
-              </span>
-              {b.policyArea && (
-                <span className="inline-flex items-center rounded-full text-xs px-1.5 py-0.5 bg-gray-100 text-gray-600">
-                  {b.policyArea}
+        <div>
+          <div className="font-mono text-[12.5px] font-medium text-accent">
+            {b.type} {b.number}
+          </div>
+          <div className="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3 mt-[5px]">
+            {b.originChamber}
+          </div>
+        </div>
+        <div className="min-w-0">
+          <h3 className="font-serif text-[19px] leading-[1.3] font-medium line-clamp-2">
+            {b.title}
+          </h3>
+          <div className="flex flex-wrap items-center gap-x-[14px] gap-y-2 mt-2">
+            {b.sponsor && (
+              <span className="text-[12.5px] text-ink-2">
+                Sponsor{' '}
+                <span className={`font-semibold ${partyColor(b.sponsor.party)}`}>
+                  {b.sponsor.name}
                 </span>
-              )}
-            </div>
-            <h3 className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
-              {b.title}
-            </h3>
-            <div className="flex items-center gap-4 mt-2 text-xs text-gray-500">
-              {b.sponsor && (
-                <span>
-                  Sponsor: <span className={`font-medium ${partyColor(b.sponsor.party)}`}>{b.sponsor.name}</span>
-                  {b.sponsor.party && ` (${b.sponsor.party})`}
-                </span>
-              )}
-              {b.introducedDate && (
-                <span>Introduced: {b.introducedDate}</span>
-              )}
-            </div>
-            {b.latestAction && (
-              <p className="text-xs text-gray-400 mt-1 truncate">
-                Latest: {b.latestAction}
-              </p>
+              </span>
+            )}
+            {b.introducedDate && (
+              <span className="font-mono text-[11.5px] text-ink-3">
+                Introduced {b.introducedDate}
+              </span>
+            )}
+            {b.policyArea && (
+              <span className="text-[11.5px] text-ink-2 border border-rule rounded px-[7px] py-[2px]">
+                {b.policyArea}
+              </span>
             )}
           </div>
+          {b.latestAction && (
+            <p className="text-[12.5px] leading-[1.5] text-ink-3 mt-2 truncate">
+              Latest: {b.latestAction}
+            </p>
+          )}
+        </div>
+        <div className="md:text-right">
+          <span className="inline-flex items-center gap-[7px] font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink border border-ink-3 rounded px-2 py-1">
+            <span className={`w-[5px] h-[5px] rounded-full shrink-0 ${sc.dot}`} />
+            {b.stage}
+          </span>
         </div>
       </a>
     );
@@ -125,115 +138,125 @@ export default function BillFilter({ bills, baseUrl }: Props) {
 
   return (
     <div>
-      {/* Stage Summary Bar */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-4">
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-sm font-semibold text-gray-700">Bills by Stage</h3>
-          <button
-            onClick={() => setGroupByStage(!groupByStage)}
-            className={`text-xs px-2 py-1 rounded ${groupByStage ? 'bg-blue-100 text-blue-700 font-medium' : 'text-gray-500 hover:text-gray-700'}`}
-          >
-            {groupByStage ? 'Grouped by Stage' : 'Group by Stage'}
-          </button>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {BILL_STAGES.map(s => {
-            const count = stageCounts[s] || 0;
-            if (count === 0) return null;
-            const sc = STAGE_COLORS[s];
-            const isActive = stage === s;
-            return (
-              <button
-                key={s}
-                onClick={() => setStage(isActive ? 'all' : s)}
-                className={`inline-flex items-center gap-1.5 rounded-full text-xs px-3 py-1.5 font-medium transition-all ${
-                  isActive ? `${sc.bg} ${sc.text} ring-2 ring-offset-1 ring-current` : `${sc.bg} ${sc.text} opacity-80 hover:opacity-100`
-                }`}
-              >
-                <span className={`w-2 h-2 rounded-full ${sc.dot}`} />
-                {s}: {count}
-              </button>
-            );
-          })}
-        </div>
+      {/* Facet chips: stage */}
+      <div className="flex flex-wrap items-center gap-[10px] py-[14px] border-b border-rule">
+        {BILL_STAGES.map(s => {
+          const count = stageCounts[s] || 0;
+          if (count === 0) return null;
+          const sc = STAGE_COLORS[s];
+          const isActive = stage === s;
+          return (
+            <button
+              key={s}
+              onClick={() => setStage(isActive ? 'all' : s)}
+              className={`inline-flex items-center gap-2 rounded px-3 py-[6px] text-[12.5px] font-medium border ${
+                isActive ? 'border-ink bg-rule-2 text-ink' : 'border-rule text-ink-2 hover:border-ink-3'
+              }`}
+            >
+              <span className={`w-[6px] h-[6px] rounded-full shrink-0 ${sc.dot}`} />
+              {s}
+              <span className="font-mono text-[11.5px] opacity-70 tabular">{count}</span>
+            </button>
+          );
+        })}
+        <button
+          onClick={() => setGroupByStage(!groupByStage)}
+          className={`ml-auto font-mono text-[11px] tracking-[0.06em] uppercase ${
+            groupByStage ? 'text-ink underline underline-offset-[3px]' : 'text-ink-3 hover:text-ink'
+          }`}
+        >
+          {groupByStage ? 'Grouped by stage' : 'Group by stage'}
+        </button>
       </div>
 
-      {/* Filters */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Search</label>
-            <input
-              type="text"
-              placeholder="Title, bill number, or sponsor..."
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Chamber</label>
-            <select
-              value={chamber}
-              onChange={e => setChamber(e.target.value)}
-              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
-            >
-              <option value="all">All Chambers</option>
-              <option value="Senate">Senate</option>
-              <option value="House">House</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Policy Area</label>
-            <select
-              value={policyArea}
-              onChange={e => setPolicyArea(e.target.value)}
-              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
-            >
-              <option value="all">All Policy Areas</option>
-              {policyAreas.map(a => (
-                <option key={a} value={a}>{a}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-        <div className="mt-3 text-sm text-gray-500">
-          Showing {filtered.length} of {bills.length} bills
-          {stage !== 'all' && <span className="ml-1"> in stage "{stage}"</span>}
-        </div>
+      {/* Filter bar: borderless cells split by vertical rules */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 border-b border-rule">
+        <label className="block py-[14px] pr-5 sm:border-r border-rule">
+          <span className="field-label block mb-[6px]">Search</span>
+          <input
+            type="text"
+            placeholder="Title, bill number, or sponsor…"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            className="w-full box-border appearance-none bg-transparent border-none p-0 text-[15px] focus:outline-none placeholder:text-ink-3"
+          />
+        </label>
+        <label className="block py-[14px] px-5 sm:border-r border-rule">
+          <span className="field-label block mb-[6px]">Chamber</span>
+          <select
+            value={chamber}
+            onChange={e => setChamber(e.target.value)}
+            className="w-full appearance-none bg-transparent border-none p-0 text-[15px] cursor-pointer focus:outline-none"
+          >
+            <option value="all">All chambers</option>
+            <option value="Senate">Senate</option>
+            <option value="House">House</option>
+          </select>
+        </label>
+        <label className="block py-[14px] pl-5">
+          <span className="field-label block mb-[6px]">Policy area</span>
+          <select
+            value={policyArea}
+            onChange={e => setPolicyArea(e.target.value)}
+            className="w-full appearance-none bg-transparent border-none p-0 text-[15px] cursor-pointer focus:outline-none"
+          >
+            <option value="all">All policy areas</option>
+            {policyAreas.map(a => (
+              <option key={a} value={a}>{a}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      {/* Count line + Clear */}
+      <div className="flex items-center justify-between gap-6 py-3 border-b border-rule">
+        <span className="font-mono text-[12px] text-ink-2 tabular">
+          Showing {filtered.length} of {bills.length}
+          {stage !== 'all' && ` · ${stage}`}
+        </span>
+        <button
+          type="button"
+          onClick={clearFilters}
+          className="appearance-none bg-transparent border-none p-0 font-mono text-[11px] tracking-[0.06em] uppercase text-accent cursor-pointer underline underline-offset-[3px]"
+        >
+          Clear
+        </button>
       </div>
 
       {/* Results */}
       {filtered.length === 0 ? (
-        <div className="text-center py-12 text-gray-500">
-          <p className="text-lg">No bills match your filters.</p>
+        <div className="py-[72px] text-center border-b border-rule">
+          <p className="font-serif text-2xl font-medium mb-[6px]">No bills match these filters.</p>
+          <p className="text-[14px] text-ink-3 mb-[18px]">
+            Try a broader policy area, or clear the stage facet.
+          </p>
           <button
-            onClick={() => { setSearch(''); setChamber('all'); setPolicyArea('all'); setStage('all'); }}
-            className="mt-2 text-blue-600 hover:text-blue-800"
+            onClick={clearFilters}
+            className="appearance-none bg-ink text-paper border-none rounded px-[18px] py-[9px] text-[13px] font-semibold cursor-pointer"
           >
             Clear filters
           </button>
         </div>
       ) : groupedBills ? (
-        <div className="space-y-8">
+        <div className="flex flex-col gap-9">
           {Object.entries(groupedBills).map(([stageName, stageBills]) => {
             const sc = STAGE_COLORS[stageName as BillStage] || STAGE_COLORS['Other'];
             return (
               <div key={stageName}>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className={`w-3 h-3 rounded-full ${sc.dot}`} />
-                  <h2 className="text-lg font-semibold text-gray-900">{stageName}</h2>
-                  <span className="text-sm text-gray-500">({stageBills.length})</span>
+                <div className="flex items-baseline gap-3 border-t border-ink pt-3 mb-1">
+                  <span className={`w-[6px] h-[6px] rounded-full shrink-0 ${sc.dot}`} />
+                  <h2 className="font-serif text-2xl font-medium tracking-[-0.01em]">{stageName}</h2>
+                  <span className="font-mono text-[11px] text-ink-3 tabular">
+                    {stageBills.length}
+                  </span>
                 </div>
-                <div className="space-y-3">
-                  {stageBills.map(b => <BillCard key={b.billId} b={b} />)}
-                </div>
+                {stageBills.map(b => <BillCard key={b.billId} b={b} />)}
               </div>
             );
           })}
         </div>
       ) : (
-        <div className="space-y-3">
+        <div>
           {filtered.map(b => <BillCard key={b.billId} b={b} />)}
         </div>
       )}

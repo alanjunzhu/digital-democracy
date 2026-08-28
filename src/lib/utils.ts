@@ -97,12 +97,14 @@ export function getBillStage(latestAction: string | undefined): BillStage {
   return 'Introduced';
 }
 
+// Stage is carried by the dot alone; the badge stays neutral so no stage reads
+// as good or bad news.
 export const STAGE_COLORS: Record<BillStage, { bg: string; text: string; dot: string }> = {
-  'Introduced': { bg: 'bg-gray-100', text: 'text-gray-700', dot: 'bg-gray-400' },
-  'In Committee': { bg: 'bg-yellow-100', text: 'text-yellow-800', dot: 'bg-yellow-500' },
-  'Passed One Chamber': { bg: 'bg-blue-100', text: 'text-blue-800', dot: 'bg-blue-500' },
-  'Passed Both Chambers': { bg: 'bg-indigo-100', text: 'text-indigo-800', dot: 'bg-indigo-500' },
-  'Signed into Law': { bg: 'bg-green-100', text: 'text-green-800', dot: 'bg-green-500' },
-  'Vetoed': { bg: 'bg-red-100', text: 'text-red-800', dot: 'bg-red-500' },
-  'Other': { bg: 'bg-gray-100', text: 'text-gray-600', dot: 'bg-gray-400' },
+  'Introduced': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-ink-3' },
+  'In Committee': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-[#b8860b]' },
+  'Passed One Chamber': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-yea' },
+  'Passed Both Chambers': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-yea' },
+  'Signed into Law': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-ink' },
+  'Vetoed': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-accent' },
+  'Other': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-ink-3' },
 };

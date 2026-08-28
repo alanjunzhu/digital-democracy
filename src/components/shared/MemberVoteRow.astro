@@ -15,38 +15,47 @@ interface Props {
 
 const { vote: v, base, billLink } = Astro.props;
 const castLower = (v.voteCast || '').toLowerCase();
-const castColor = (castLower === 'yea' || castLower === 'aye')
-  ? 'bg-green-100 text-green-800'
-  : (castLower === 'nay' || castLower === 'no')
-  ? 'bg-red-100 text-red-800'
-  : 'bg-yellow-100 text-yellow-800';
+const castTone =
+  castLower === 'yea' || castLower === 'aye'
+    ? 'text-yea border-yea'
+    : castLower === 'nay' || castLower === 'no'
+      ? 'text-accent border-accent'
+      : 'text-ink-3 border-rule';
 const bill = v.billId ? billLink(v.billId) : null;
 ---
 
-<a href={`${base}votes/${v.voteId}/`} class="flex items-start gap-2 py-2 hover:bg-gray-50 -mx-2 px-2 rounded">
-  <div class="flex flex-col items-center min-w-[2.5rem]">
-    <span class="font-mono text-[10px] text-gray-500">#{v.rollCallNumber}</span>
-    <span class="text-[9px] text-gray-400">{v.date}</span>
+<a
+  href={`${base}votes/${v.voteId}/`}
+  class="flex items-start gap-3 py-3 border-b border-rule hover:border-ink-3"
+>
+  <div class="flex flex-col min-w-[4.5rem] shrink-0">
+    <span class="font-mono text-[11.5px] font-medium text-accent tabular">#{v.rollCallNumber}</span>
+    <span class="font-mono text-[10px] text-ink-3 mt-[3px] tabular">{v.date}</span>
   </div>
   <div class="flex-1 min-w-0">
-    <p class="text-xs text-gray-900 line-clamp-1">{v.question}</p>
-    <div class="flex items-center gap-2 mt-0.5">
+    <p class="text-[13px] leading-[1.4] text-ink line-clamp-2">{v.question}</p>
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-[5px]">
       {bill && (
         bill.local ? (
-          <a href={bill.href} class="text-[10px] text-blue-600 font-mono">{v.billId}</a>
+          <a href={bill.href} class="font-mono text-[10.5px] text-accent">{v.billId}</a>
         ) : (
-          <span class="text-[10px] text-blue-600 font-mono">{v.billId}</span>
+          <span class="font-mono text-[10.5px] text-ink-3">{v.billId}</span>
         )
       )}
       {v.result && (
-        <span class={`text-[10px] ${v.result === 'Passed' || v.result === 'Agreed to' ? 'text-green-600' : 'text-red-600'}`}>
+        <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3">
           {v.result}
         </span>
       )}
     </div>
   </div>
   {v.voteCast && (
-    <span class={`inline-flex items-center rounded-full text-[10px] px-2 py-0.5 font-semibold whitespace-nowrap ${castColor}`}>
+    <span
+      class:list={[
+        'shrink-0 inline-flex items-center rounded border px-2 py-[3px] font-mono text-[10px] tracking-[0.06em] uppercase whitespace-nowrap',
+        castTone,
+      ]}
+    >
       {v.voteCast}
     </span>
   )}

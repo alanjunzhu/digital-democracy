@@ -39,42 +39,42 @@ export default function TradeTimingExplorer({ candidates, baseUrl }: Props) {
 
   if (!candidates.length) {
     return (
-      <p className="text-sm text-gray-500">No committee-overlap trades available for timing analysis.</p>
+      <p className="text-[13px] text-ink-3">No committee-overlap trades available for timing analysis.</p>
     );
   }
 
   return (
-    <div className="space-y-3">
+    <div>
       {candidates.map((c) => {
         const key = candidateKey(c);
         const isOpen = openKey === key;
         const chartable = Boolean(c.precomputed?.counterfactuals);
         return (
-          <div key={key} className="border border-gray-200 rounded-lg overflow-hidden">
+          <div key={key} className="border-b border-rule last:border-0">
             <button
               type="button"
               onClick={() => setOpenKey(isOpen ? null : key)}
-              className="w-full text-left px-4 py-3 bg-gray-50 hover:bg-gray-100 flex items-center gap-3"
+              className="w-full appearance-none bg-transparent border-none text-left px-0 py-3 flex flex-wrap items-center gap-3 cursor-pointer"
             >
-              <span className="font-mono text-sm font-semibold text-blue-700">{c.ticker}</span>
-              <span className="text-xs text-gray-600">{c.type}</span>
-              <span className="text-xs text-gray-500">{c.transactionDate}</span>
-              {c.amount && <span className="text-xs text-gray-500 hidden sm:inline">{c.amount}</span>}
+              <span className="font-mono text-[13px] font-medium text-accent">{c.ticker}</span>
+              <span className="font-mono text-[11px] tracking-[0.06em] uppercase text-ink-2">{c.type}</span>
+              <span className="font-mono text-[11px] text-ink-3 tabular">{c.transactionDate}</span>
+              {c.amount && <span className="font-mono text-[11px] text-ink-3 tabular hidden sm:inline">{c.amount}</span>}
               {normalizeOwner(c.owner) && (
-                <span className="text-[10px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-600">
+                <span className="font-mono text-[10px] text-ink-3 border border-rule rounded px-[6px] py-[1px]">
                   {normalizeOwner(c.owner)}
                 </span>
               )}
-              <span className="text-xs text-gray-700 flex-1 truncate">{c.memberName}</span>
+              <span className="text-[12.5px] text-ink-2 flex-1 truncate">{c.memberName}</span>
               {c.sector && (
-                <span className="text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-700 border border-red-100">{c.sector}</span>
+                <span className="font-mono text-[10px] tracking-[0.06em] uppercase text-accent border border-accent rounded px-[6px] py-[1px]">{c.sector}</span>
               )}
-              <span className="text-[10px] text-blue-600">
+              <span className="font-mono text-[10.5px] tracking-[0.06em] uppercase text-accent">
                 {isOpen ? 'Hide' : chartable ? 'Analyze timing' : 'Details'}
               </span>
             </button>
             {isOpen && (
-              <div className="p-3 border-t border-gray-200">
+              <div className="pb-4">
                 <TradeTimingInsight
                   trade={c}
                   context={c.context as any}
