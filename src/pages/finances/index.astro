@@ -107,29 +107,30 @@ const pageSections = [
   title="Congressional Stock Trading"
   description="Aggregate and individual congressional stock trades with committee overlap analysis — potential insider-information conflicts."
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
     <PageIndex sections={pageSections} />
 
-    <div class="mb-6">
-      <h1 class="text-3xl font-bold text-gray-900">Congressional Stock Trading</h1>
-      <p class="text-gray-500 mt-1 max-w-3xl">
+    <div class="pb-5 border-b border-ink">
+      <p class="eyebrow mb-3">Financial records</p>
+      <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">Congressional stock trading</h1>
+      <p class="text-[14px] leading-[1.6] text-ink-2 max-w-prose mt-3">
         Aggregate trading activity and individual disclosures across Congress.
         The chart below compares holding cash, trading every disclosed purchase, putting
         the same money in the S&amp;P 500, and trading only in sectors a member&apos;s
-        committee oversees. Trades highlighted in red are that committee overlap —
+        committee oversees. Trades highlighted are that committee overlap —
         a signal worth scrutiny, not proof of wrongdoing.
       </p>
     </div>
 
     {!financeData ? (
-      <div class="text-center py-16 text-gray-500">
-        <p class="text-lg">No finance data available yet.</p>
-        <p class="mt-2 text-sm">Run <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">npm run fetch:finances</code> to populate trading data.</p>
+      <div class="text-center py-16">
+        <p class="font-serif text-2xl font-medium">No finance data available yet.</p>
+        <p class="mt-2 text-[13.5px] text-ink-3">Run <code class="font-mono text-[12px] bg-rule-2 px-[5px] py-[2px] rounded">npm run fetch:finances</code> to populate trading data.</p>
       </div>
     ) : (
       <>
         {congressPortfolio && (
-          <section id="congress-portfolio" data-page-section class="mb-8">
+          <section id="congress-portfolio" data-page-section class="pt-8">
             <CongressPortfolioChart
               portfolio={congressPortfolio}
               benchmarkLabel={BENCHMARK_LABEL}
@@ -139,11 +140,11 @@ const pageSections = [
           </section>
         )}
 
-        <section id="trade-timing" data-page-section class="mb-8 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-1">Trade timing insights</h2>
-          <p class="text-xs text-gray-500 mb-4 max-w-3xl">
+        <section id="trade-timing" data-page-section class="pt-8">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-1">Trade timing insights</h2>
+          <p class="text-[12.5px] text-ink-3 mb-4 max-w-prose">
             Compare each flagged trade to alternative timing (30 days earlier/later) and a
-            <strong> do nothing </strong> baseline — stay in cash if they didn&apos;t buy, or keep holding if they didn&apos;t sell.
+            <strong class="text-ink font-semibold"> do nothing </strong> baseline — stay in cash if they didn&apos;t buy, or keep holding if they didn&apos;t sell.
             Each panel includes committee, disclosure, and legislative context.
           </p>
           <TradeTimingExplorer candidates={timingCandidates} baseUrl={base} client:load />

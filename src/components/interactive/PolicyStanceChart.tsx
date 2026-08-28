@@ -14,10 +14,10 @@ interface Props {
 }
 
 const PARTY_COLOR: Record<string, string> = {
-  democratic: '#2563eb',
-  republican: '#dc2626',
-  independent: '#7c3aed',
-  other: '#6b7280',
+  democratic: 'var(--dem)',
+  republican: 'var(--rep)',
+  independent: 'var(--ind)',
+  other: 'var(--ink-3)',
 };
 
 const PARTY_LABEL: Record<string, string> = {
@@ -27,10 +27,7 @@ const PARTY_LABEL: Record<string, string> = {
   other: 'Other',
 };
 
-const W = 900;
-const PAD = { top: 54, right: 28, bottom: 44, left: 212 };
-const ROW_H = 48;
-const BAND = 30;
+const BAND = 44;
 
 const METRIC_AXIS: Record<StanceMetric, { min: number; max: number; ticks: number[]; left: string; right: string; title: string }> = {
   support: {
@@ -96,9 +93,8 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
   const [metric, setMetric] = useState<StanceMetric>('support');
   const [chamber, setChamber] = useState<ChamberScope>('all');
   const [search, setSearch] = useState('');
-  const [hover, setHover] = useState<{ x: number; y: number; lines: string[] } | null>(null);
+  const [hover, setHover] = useState<{ left: string; top: string; lines: string[] } | null>(null);
   const [openArea, setOpenArea] = useState<string | null>(null);
-  const [focusArea, setFocusArea] = useState<string | null>(null);
 
   const membersById = useMemo(() => {
     const map: Record<string, PolicyMember> = {};
@@ -107,8 +103,7 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
   }, [index.members]);
 
   const axis = METRIC_AXIS[metric];
-  const plotW = W - PAD.left - PAD.right;
-  const scale = (value: number) => PAD.left + ((value - axis.min) / (axis.max - axis.min)) * plotW;
+  const pct = (value: number) => `${((value - axis.min) / (axis.max - axis.min)) * 100}%`;
 
   const query = search.trim().toLowerCase();
 
@@ -139,7 +134,6 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
       .filter((row) => row.contested > 0 && row.points.length > 0);
   }, [index.areas, membersById, chamber, metric]);
 
-  const H = PAD.top + rows.length * ROW_H + PAD.bottom;
   const matches = useMemo(() => {
     if (!query) return new Set<string>();
     const hits = new Set<string>();
@@ -152,16 +146,18 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
   const detail = openArea ? index.areas.find((a) => a.id === openArea) : null;
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap items-end gap-3">
+    <div>
+      <div className="flex flex-wrap items-end gap-6 pb-4 border-b border-rule">
         <div>
-          <label className="block text-xs font-medium text-gray-500 mb-1">Measure</label>
-          <div className="inline-flex rounded-lg border border-gray-300 overflow-hidden">
+          <span className="field-label block mb-2">Measure</span>
+          <div className="flex gap-2">
             {(['support', 'lean'] as StanceMetric[]).map((m) => (
               <button
                 key={m}
                 onClick={() => setMetric(m)}
-                className={`px-3 py-1.5 text-sm font-medium ${metric === m ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                className={`appearance-none cursor-pointer rounded px-3 py-[6px] text-[12.5px] font-medium border ${
+                  metric === m ? 'border-ink bg-rule-2 text-ink' : 'border-rule text-ink-2 hover:border-ink-3'
+                }`}
               >
                 {m === 'support' ? 'Support for measures' : 'Party-line lean'}
               </button>
@@ -169,13 +165,15 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
           </div>
         </div>
         <div>
-          <label className="block text-xs font-medium text-gray-500 mb-1">Chamber</label>
-          <div className="inline-flex rounded-lg border border-gray-300 overflow-hidden">
+          <span className="field-label block mb-2">Chamber</span>
+          <div className="flex gap-2">
             {(['all', 'House', 'Senate'] as ChamberScope[]).map((c) => (
               <button
                 key={c}
                 onClick={() => setChamber(c)}
-                className={`px-3 py-1.5 text-sm font-medium ${chamber === c ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                className={`appearance-none cursor-pointer rounded px-3 py-[6px] text-[12.5px] font-medium border ${
+                  chamber === c ? 'border-ink bg-rule-2 text-ink' : 'border-rule text-ink-2 hover:border-ink-3'
+                }`}
               >
                 {c === 'all' ? 'Both' : c}
               </button>
@@ -183,101 +181,111 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
           </div>
         </div>
         <div className="flex-1 min-w-[200px]">
-          <label className="block text-xs font-medium text-gray-500 mb-1">Find a member</label>
+          <span className="field-label block mb-2">Find a member</span>
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Name or state…"
-            className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full box-border appearance-none bg-transparent border-b border-rule pb-[6px] text-[14px] focus:outline-none focus:border-ink placeholder:text-ink-3"
           />
+        </div>
+        <div className="flex flex-wrap gap-5 font-mono text-[10.5px] tracking-[0.05em] uppercase text-ink-3 ml-auto">
+          {(['democratic', 'republican'] as const).map((party) => (
+            <span key={party} className="inline-flex items-center gap-[7px]">
+              <span className="w-[9px] h-[9px] inline-block" style={{ background: PARTY_COLOR[party] }} />
+              {PARTY_LABEL[party]} average
+            </span>
+          ))}
+          <span className="inline-flex items-center gap-[7px]">
+            <span className="w-4 h-px border-t border-dashed border-ink-3 inline-block" />
+            Party gap
+          </span>
+          <span className="inline-flex items-center gap-[7px]">
+            <span className="w-[9px] h-[9px] rounded-full border border-ink-3 inline-block" />
+            Individual member
+          </span>
         </div>
       </div>
 
-      <p className="text-sm text-gray-500">{axis.title}. Each dot is one member; the diamonds are the party averages.</p>
+      <p className="text-[13px] text-ink-3 my-3">{axis.title}. Each dot is one member; the squares are the party averages.</p>
 
-      <div className="relative border border-gray-200 rounded-xl bg-white p-2 overflow-x-auto">
-        <svg viewBox={`0 0 ${W} ${H}`} className="w-full min-w-[720px]" role="img" aria-label="Member stances by policy area">
-          <text x={PAD.left} y={18} className="fill-gray-500" fontSize="11" textAnchor="start">← {axis.left}</text>
-          <text x={W - PAD.right} y={18} className="fill-gray-500" fontSize="11" textAnchor="end">{axis.right} →</text>
-
-          {axis.ticks.map((t) => (
-            <g key={t}>
-              <line x1={scale(t)} y1={PAD.top - 20} x2={scale(t)} y2={H - PAD.bottom} stroke={t === 0 && metric === 'lean' ? '#9ca3af' : '#e5e7eb'} strokeWidth={1} />
-              <text x={scale(t)} y={PAD.top - 26} textAnchor="middle" fontSize="11" className="fill-gray-500">
+      <div className="relative border border-rule bg-card px-[22px] pt-[18px] pb-3 overflow-x-auto">
+        <div className="grid grid-cols-[minmax(140px,250px)_minmax(0,1fr)_62px] gap-[14px] mb-2 min-w-[600px]">
+          <span />
+          <span className="relative h-3">
+            {axis.ticks.map((t) => (
+              <span key={t} className="absolute -translate-x-1/2 font-mono text-[10px] text-ink-3" style={{ left: pct(t) }}>
                 {fmt(t, metric)}
-              </text>
-            </g>
-          ))}
+              </span>
+            ))}
+          </span>
+          <span />
+        </div>
 
-          {rows.map((row, i) => {
-            const y = PAD.top + i * ROW_H + ROW_H / 2;
-            const dem = row.averages.democratic;
-            const rep = row.averages.republican;
-            const active = openArea === row.area.id;
-            return (
-              <g key={row.area.id}>
-                <rect
-                  x={0}
-                  y={y - ROW_H / 2}
-                  width={W}
-                  height={ROW_H}
-                  fill={active ? '#eff6ff' : i % 2 === 0 ? '#fafafa' : '#ffffff'}
-                  className="cursor-pointer"
-                  role="button"
-                  tabIndex={0}
-                  aria-expanded={active}
-                  aria-label={rowSummary(row, metric)}
-                  onClick={() => setOpenArea(active ? null : row.area.id)}
-                  onFocus={() => setFocusArea(row.area.id)}
-                  onBlur={() => setFocusArea((current) => (current === row.area.id ? null : current))}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-                      e.preventDefault();
-                      setOpenArea(active ? null : row.area.id);
-                    }
-                  }}
-                />
-                {focusArea === row.area.id && (
-                  <rect
-                    x={1}
-                    y={y - ROW_H / 2 + 1}
-                    width={W - 2}
-                    height={ROW_H - 2}
-                    fill="none"
-                    stroke="#1d4ed8"
-                    strokeWidth={2}
-                    pointerEvents="none"
+        {rows.map((row) => {
+          const dem = row.averages.democratic;
+          const rep = row.averages.republican;
+          const active = openArea === row.area.id;
+          const demX = dem ? pct(dem.avg) : null;
+          const repX = rep ? pct(rep.avg) : null;
+          return (
+            <div
+              key={row.area.id}
+              className={`grid grid-cols-[minmax(140px,250px)_minmax(0,1fr)_62px] gap-[14px] items-center min-w-[600px] cursor-pointer border-b border-rule ${active ? 'bg-rule-2' : ''}`}
+              style={{ height: BAND + 10 }}
+              role="button"
+              tabIndex={0}
+              aria-expanded={active}
+              aria-label={rowSummary(row, metric)}
+              onClick={() => setOpenArea(active ? null : row.area.id)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                  e.preventDefault();
+                  setOpenArea(active ? null : row.area.id);
+                }
+              }}
+            >
+              <div className="min-w-0">
+                <div className="text-[12.5px] leading-[1.25] text-ink text-pretty truncate">{row.area.label}</div>
+                <div className="font-mono text-[10px] text-ink-3 mt-[2px]">
+                  {plural(row.contested, 'contested vote', 'contested votes')} &middot; {plural(row.points.length, 'member', 'members')}
+                </div>
+              </div>
+              <span className="relative" style={{ height: BAND + 10 }}>
+                {axis.ticks.map((t) => (
+                  <span
+                    key={t}
+                    className="absolute top-0 bottom-0 w-px"
+                    style={{ left: pct(t), background: t === 0 && metric === 'lean' ? 'var(--ink-3)' : 'var(--rule)' }}
+                  />
+                ))}
+                {demX != null && repX != null && (
+                  <span
+                    className="absolute top-1/2 h-0 border-t border-dashed border-ink-3"
+                    style={{ left: `min(${demX}, ${repX})`, width: `calc(max(${demX}, ${repX}) - min(${demX}, ${repX}))` }}
                   />
                 )}
-                <text x={PAD.left - 14} y={y - 2} textAnchor="end" fontSize="12" className="fill-gray-900 font-medium">
-                  {row.area.label}
-                </text>
-                <text x={PAD.left - 14} y={y + 13} textAnchor="end" fontSize="10" className="fill-gray-500">
-                  {plural(row.contested, 'contested vote', 'contested votes')} · {plural(row.points.length, 'member', 'members')}
-                </text>
-
-                {dem && rep && (
-                  <line x1={scale(dem.avg)} y1={y} x2={scale(rep.avg)} y2={y} stroke="#94a3b8" strokeWidth={1.5} strokeDasharray="3 3" />
-                )}
-
                 {row.points.map(({ score, member }) => {
-                  const cx = scale(score[metric]);
-                  const cy = y + jitter(member.id);
+                  const left = pct(score[metric]);
+                  const top = `calc(50% + ${jitter(member.id)}px)`;
                   const hit = matches.has(member.id);
                   return (
-                    <circle
+                    <span
                       key={member.id}
-                      cx={cx}
-                      cy={cy}
-                      r={hit ? 5 : 3.2}
-                      fill={PARTY_COLOR[member.party] || PARTY_COLOR.other}
-                      fillOpacity={query && !hit ? 0.15 : 0.55}
-                      stroke={hit ? '#111827' : 'none'}
-                      strokeWidth={hit ? 1.5 : 0}
+                      className="absolute rounded-full -translate-x-1/2 -translate-y-1/2"
+                      style={{
+                        left,
+                        top,
+                        width: hit ? 10 : 6.5,
+                        height: hit ? 10 : 6.5,
+                        border: `1px solid ${PARTY_COLOR[member.party] || PARTY_COLOR.other}`,
+                        opacity: query && !hit ? 0.2 : 0.85,
+                        boxShadow: hit ? '0 0 0 1.5px var(--ink)' : 'none',
+                      }}
                       onMouseEnter={() =>
                         setHover({
-                          x: cx,
-                          y: cy,
+                          left,
+                          top,
                           lines: [
                             `${displayName(member.name)} (${member.party[0].toUpperCase()}-${member.state}, ${member.chamber})`,
                             `${row.area.label}: ${fmt(score[metric], metric)}`,
@@ -289,19 +297,19 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
                     />
                   );
                 })}
-
                 {(['democratic', 'republican'] as const).map((party) => {
                   const avg = row.averages[party];
                   if (!avg) return null;
-                  const x = scale(avg.avg);
+                  const left = pct(avg.avg);
                   return (
-                    <g
+                    <span
                       key={party}
-                      transform={`translate(${x} ${y})`}
+                      className="absolute w-[9px] h-[9px] -translate-x-1/2 -translate-y-1/2 top-1/2"
+                      style={{ left, background: PARTY_COLOR[party] }}
                       onMouseEnter={() =>
                         setHover({
-                          x,
-                          y,
+                          left,
+                          top: '50%',
                           lines: [
                             `${PARTY_LABEL[party]} · ${row.area.label}`,
                             `Average: ${fmt(avg.avg, metric)}`,
@@ -310,85 +318,79 @@ export default function PolicyStanceChart({ index, baseUrl = '/' }: Props) {
                         })
                       }
                       onMouseLeave={() => setHover(null)}
-                    >
-                      <rect x={-6} y={-6} width={12} height={12} transform="rotate(45)" fill={PARTY_COLOR[party]} stroke="#ffffff" strokeWidth={1.5} />
-                    </g>
+                    />
                   );
                 })}
-              </g>
-            );
-          })}
+              </span>
+              <span />
+            </div>
+          );
+        })}
 
-          <text x={PAD.left + plotW / 2} y={H - 12} textAnchor="middle" fontSize="11" className="fill-gray-500">
-            {metric === 'support' ? 'Share of the area’s contested measures voted for' : 'Democratic majority ← party-line lean → Republican majority'}
-          </text>
-        </svg>
+        <p className="font-mono text-[10.5px] text-ink-3 text-center mt-3">
+          {metric === 'support' ? 'Share of the area’s contested measures voted for' : 'Democratic majority ← party-line lean → Republican majority'}
+        </p>
 
         {hover && (
           <div
-            className="pointer-events-none absolute z-10 rounded-lg bg-gray-900 text-white text-xs px-2 py-1.5 shadow-lg"
-            style={{ left: `${(hover.x / W) * 100}%`, top: `${(hover.y / H) * 100}%`, transform: 'translate(-50%, -115%)' }}
+            className="pointer-events-none absolute z-10 rounded bg-ink text-paper text-[11px] px-2 py-[6px]"
+            style={{ left: hover.left, top: hover.top, transform: 'translate(-50%, -130%)' }}
           >
             {hover.lines.map((line, i) => (
-              <div key={i} className={i === 0 ? 'font-semibold' : 'text-gray-300'}>{line}</div>
+              <div key={i} className={i === 0 ? 'font-semibold' : 'opacity-70'}>{line}</div>
             ))}
           </div>
         )}
       </div>
 
-      <div className="flex flex-wrap items-center gap-4 text-xs text-gray-600">
-        {(['democratic', 'republican', 'independent'] as const).map((party) => (
-          <span key={party} className="inline-flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full" style={{ background: PARTY_COLOR[party] }} />
-            {PARTY_LABEL[party]}
-          </span>
-        ))}
-        <span className="inline-flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rotate-45 bg-gray-700" />
-          Party average
-        </span>
-        <span>Click an area to see the roll calls behind it.</span>
-      </div>
+      <p className="font-mono text-[10.5px] leading-[1.6] text-ink-3 border-l-2 border-rule pl-3 mt-3">
+        Only votes where the two party majorities split are counted, so areas with broad agreement do not appear.
+      </p>
 
       {detail && (
-        <div className="border border-gray-200 rounded-xl bg-white p-4">
+        <div className="border-t border-ink pt-4 mt-6">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h3 className="font-semibold text-gray-900">{detail.label}</h3>
-              <p className="text-sm text-gray-500">{detail.description}</p>
+              <h3 className="font-serif text-xl font-medium">{detail.label}</h3>
+              <p className="text-[13px] text-ink-3 mt-1">{detail.description}</p>
             </div>
-            <button onClick={() => setOpenArea(null)} className="text-sm text-gray-400 hover:text-gray-600">Close</button>
+            <button
+              onClick={() => setOpenArea(null)}
+              className="appearance-none bg-transparent border-none p-0 font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3 hover:text-accent cursor-pointer"
+            >
+              Close
+            </button>
           </div>
-          <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
             <div>
-              <div className="text-xs text-gray-500">Contested votes</div>
-              <div className="font-semibold text-gray-900">{detail.votes.contested}</div>
+              <div className="field-label">Contested votes</div>
+              <div className="font-serif text-xl font-medium tabular mt-1">{detail.votes.contested}</div>
             </div>
             <div>
-              <div className="text-xs text-gray-500">House / Senate</div>
-              <div className="font-semibold text-gray-900">{detail.votes.house} / {detail.votes.senate}</div>
+              <div className="field-label">House / Senate</div>
+              <div className="font-serif text-xl font-medium tabular mt-1">{detail.votes.house} / {detail.votes.senate}</div>
             </div>
             <div>
-              <div className="text-xs text-gray-500">Democratic majority backed</div>
-              <div className="font-semibold text-blue-700">{fmt(detail.partyStand.democratic, 'support')}</div>
+              <div className="field-label">Democratic majority backed</div>
+              <div className="font-serif text-xl font-medium tabular mt-1 text-dem">{fmt(detail.partyStand.democratic, 'support')}</div>
             </div>
             <div>
-              <div className="text-xs text-gray-500">Republican majority backed</div>
-              <div className="font-semibold text-red-700">{fmt(detail.partyStand.republican, 'support')}</div>
+              <div className="field-label">Republican majority backed</div>
+              <div className="font-serif text-xl font-medium tabular mt-1 text-rep">{fmt(detail.partyStand.republican, 'support')}</div>
             </div>
           </div>
-          <ul className="mt-4 space-y-2">
+          <div className="mt-4">
             {detail.examples.map((ex) => (
-              <li key={ex.voteId} className="text-sm">
-                <a href={`${baseUrl}votes/${ex.voteId}/`} className="text-blue-600 hover:underline font-medium">
+              <div key={ex.voteId} className="text-[13px] py-[10px] border-b border-rule last:border-0">
+                <a href={`${baseUrl}votes/${ex.voteId}/`} className="text-ink hover:text-accent font-medium">
                   {ex.question}
                 </a>
-                <span className="text-gray-500">
-                  {' '}· {ex.chamber} · {ex.date} · D {ex.democratic === 'yea' ? 'for' : 'against'}, R {ex.republican === 'yea' ? 'for' : 'against'} · {ex.result}
+                <span className="text-ink-3">
+                  {' '}&middot; {ex.chamber} &middot; {ex.date} &middot; D {ex.democratic === 'yea' ? 'for' : 'against'}, R {ex.republican === 'yea' ? 'for' : 'against'} &middot; {ex.result}
                 </span>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>
