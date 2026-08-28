@@ -1,7 +1,6 @@
 ---
 import Layout from '../../components/layout/Layout.astro';
 import PageIndex from '../../components/layout/PageIndex.astro';
-import ChamberBadge from '../../components/shared/ChamberBadge.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import type { BillDetail, CommitteeSummary } from '../../lib/types';
@@ -32,17 +31,16 @@ const bill: BillDetail = JSON.parse(readFileSync(dataPath, 'utf-8'));
 const base = import.meta.env.BASE_URL;
 
 const partyColor = (p: string) => {
-  if (p === 'D') return 'text-blue-700';
-  if (p === 'R') return 'text-red-700';
-  return 'text-purple-700';
+  if (p === 'D') return 'text-dem';
+  if (p === 'R') return 'text-rep';
+  return 'text-ind';
 };
 
 const billStage = getBillStage(bill.latestAction);
-const stageColor = STAGE_COLORS[billStage];
 
 // Build progress pipeline
-const stageIndex = BILL_STAGES.indexOf(billStage);
 const progressStages = ['Introduced', 'In Committee', 'Passed One Chamber', 'Passed Both Chambers', 'Signed into Law'] as const;
+const currentIndex = progressStages.indexOf(billStage as (typeof progressStages)[number]);
 
 // Cross-link: find votes on this bill, including how the sponsor voted
 let billVotes: any[] = [];
@@ -98,145 +96,135 @@ const pageSections = [
 ---
 
 <Layout title={`${bill.type} ${bill.number}`} description={bill.title}>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
     <PageIndex sections={pageSections} />
 
-    <!-- Back link -->
-    <a href={`${base}bills/`} class="text-blue-600 hover:text-blue-800 text-sm mb-4 inline-block">
-      &larr; All Bills
+    <a href={`${base}bills/`} class="font-mono text-[11px] tracking-[0.06em] uppercase text-ink-3 hover:text-accent">
+      &larr; All bills
     </a>
 
-    <!-- Bill Header -->
-    <div id="overview" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-      <div class="flex items-center gap-3 mb-3">
-        <span class="font-mono text-lg font-bold text-blue-700">{bill.type} {bill.number}</span>
-        <ChamberBadge chamber={bill.originChamber} />
-        <span class={`inline-flex items-center rounded-full text-xs px-2.5 py-1 font-semibold ${stageColor.bg} ${stageColor.text}`}>
+    <!-- Header -->
+    <div id="overview" data-page-section class="mt-4 pb-5 border-b border-ink">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <span class="font-mono text-[18px] font-medium text-accent">{bill.type} {bill.number}</span>
+        <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3">{bill.originChamber}</span>
+        <span class="inline-flex items-center gap-[7px] font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink border border-ink-3 rounded px-2 py-1">
+          <span class={`w-[5px] h-[5px] rounded-full shrink-0 ${STAGE_COLORS[billStage].dot}`} />
           {billStage}
         </span>
         {bill.policyArea && (
-          <span class="inline-flex items-center rounded-full text-xs px-2 py-0.5 bg-gray-100 text-gray-600">
+          <span class="text-[11.5px] text-ink-2 border border-rule rounded px-[7px] py-[2px]">
             {bill.policyArea}
           </span>
         )}
       </div>
-      <h1 class="text-2xl font-bold text-gray-900 mb-4">{bill.title}</h1>
+      <h1 class="font-serif text-[32px] leading-[1.15] font-medium text-pretty mb-5">{bill.title}</h1>
 
-      {/* Legislative Progress Pipeline */}
-      <div class="flex items-center gap-1 mb-4 overflow-x-auto pb-1">
-        {progressStages.map((s, i) => {
-          const isActive = BILL_STAGES.indexOf(billStage) >= BILL_STAGES.indexOf(s);
-          const isCurrent = billStage === s;
-          const sc = STAGE_COLORS[s];
-          return (
-            <div class="flex items-center">
-              {i > 0 && (
-                <div class={`w-4 sm:w-8 h-0.5 ${isActive ? sc.dot : 'bg-gray-200'}`} />
-              )}
-              <div class={`flex items-center gap-1 px-2 py-1 rounded-full text-[10px] sm:text-xs font-medium whitespace-nowrap ${
-                isCurrent ? `${sc.bg} ${sc.text} ring-2 ring-offset-1 ring-current` :
-                isActive ? `${sc.bg} ${sc.text}` : 'bg-gray-100 text-gray-400'
-              }`}>
-                <span class={`w-1.5 h-1.5 rounded-full ${isActive ? sc.dot : 'bg-gray-300'}`}></span>
-                {s}
-              </div>
-            </div>
-          );
-        })}
-        {billStage === 'Vetoed' && (
-          <div class="flex items-center">
-            <div class="w-4 sm:w-8 h-0.5 bg-red-400" />
-            <div class="flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 ring-2 ring-offset-1 ring-current whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-              Vetoed
-            </div>
-          </div>
-        )}
-      </div>
-
-      <div class="flex flex-wrap gap-6 text-sm text-gray-600">
+      <!-- Facts rail -->
+      <div class="flex flex-wrap gap-x-8 gap-y-2 text-[13px] text-ink-2 mb-4">
         {bill.sponsor && (
           <div>
-            <span class="text-gray-400">Sponsor:</span>{' '}
-            <a href={`${base}members/${bill.sponsor.bioguideId}/`} class="text-blue-600 hover:underline font-medium">
+            <span class="text-ink-3">Sponsor</span>{' '}
+            <a href={`${base}members/${bill.sponsor.bioguideId}/`} class="font-semibold text-ink hover:text-accent">
               {bill.sponsor.name}
             </a>
             {bill.sponsor.party && (
-              <span class={`ml-1 ${partyColor(bill.sponsor.party)}`}>({bill.sponsor.party})</span>
+              <span class={`ml-1 font-semibold ${partyColor(bill.sponsor.party)}`}>({bill.sponsor.party})</span>
             )}
           </div>
         )}
         {bill.introducedDate && (
-          <div>
-            <span class="text-gray-400">Introduced:</span> {bill.introducedDate}
-          </div>
+          <div><span class="text-ink-3">Introduced</span> <span class="font-mono tabular">{bill.introducedDate}</span></div>
         )}
-        <div>
-          <span class="text-gray-400">Cosponsors:</span> {bill.cosponsors}
-        </div>
+        <div><span class="text-ink-3">Cosponsors</span> <span class="font-mono tabular">{bill.cosponsors}</span></div>
       </div>
 
-      <div class="flex gap-4 mt-4 text-sm">
+      <div class="flex gap-5">
         {congressGovUrl && (
-          <a href={congressGovUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
+          <a href={congressGovUrl} target="_blank" rel="noopener" class="font-mono text-[11px] tracking-[0.06em] uppercase text-accent hover:underline">
             Congress.gov
           </a>
         )}
         {congressGovTextUrl && (
-          <a href={congressGovTextUrl} target="_blank" rel="noopener" class="text-blue-600 hover:underline">
-            Full Text
+          <a href={congressGovTextUrl} target="_blank" rel="noopener" class="font-mono text-[11px] tracking-[0.06em] uppercase text-accent hover:underline">
+            Full text
           </a>
         )}
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Stage tracker -->
+    <div class="flex items-center gap-1 py-5 border-b border-rule overflow-x-auto">
+      {progressStages.map((s, i) => {
+        const isPast = i < currentIndex || (i === currentIndex && billStage !== 'Vetoed');
+        const isCurrent = billStage === s;
+        return (
+          <div class="flex items-center shrink-0">
+            {i > 0 && <div class={`w-6 sm:w-10 h-px ${isPast ? 'bg-ink' : 'bg-rule'}`} />}
+            <div class={`flex items-center gap-[6px] font-mono text-[10.5px] tracking-[0.04em] uppercase whitespace-nowrap ${isCurrent ? 'text-ink font-semibold' : isPast ? 'text-ink-2' : 'text-ink-3'}`}>
+              <span class={`w-[6px] h-[6px] rounded-full shrink-0 ${isPast ? 'bg-ink' : 'bg-rule'}`} />
+              {s}
+            </div>
+          </div>
+        );
+      })}
+      {billStage === 'Vetoed' && (
+        <div class="flex items-center shrink-0">
+          <div class="w-6 sm:w-10 h-px bg-accent" />
+          <div class="flex items-center gap-[6px] font-mono text-[10.5px] tracking-[0.04em] uppercase text-accent font-semibold whitespace-nowrap">
+            <span class="w-[6px] h-[6px] rounded-full bg-accent shrink-0" />
+            Vetoed
+          </div>
+        </div>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
       <!-- Summary -->
       {bill.summary && (
-        <div id="summary" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
-          <h2 class="text-lg font-semibold text-gray-900 mb-3">Summary</h2>
-          <div class="text-sm text-gray-700 prose prose-sm max-w-none" set:html={bill.summary} />
+        <div id="summary" data-page-section class="md:col-span-2 pt-8">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">Summary</h2>
+          <div class="text-[14.5px] leading-[1.65] text-ink-2 prose-sm max-w-prose" set:html={bill.summary} />
         </div>
       )}
 
       <!-- Latest Action -->
       {bill.latestAction && (
-        <div id="latest-action" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-3">Latest Action</h2>
-          <p class="text-sm text-gray-700">{bill.latestAction}</p>
+        <div id="latest-action" data-page-section class="pt-8">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">Latest action</h2>
+          <p class="text-[14px] leading-[1.6] text-ink-2">{bill.latestAction}</p>
           {bill.latestActionDate && (
-            <p class="text-xs text-gray-400 mt-1">{bill.latestActionDate}</p>
+            <p class="font-mono text-[11px] text-ink-3 mt-2">{bill.latestActionDate}</p>
           )}
         </div>
       )}
 
       <!-- Committees -->
       {committees.length > 0 && (
-        <div id="committees" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-3">Committees</h2>
-          <ul class="space-y-1 text-sm text-gray-700">
+        <div id="committees" data-page-section class="pt-8">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">Committee referrals</h2>
+          <div>
             {committees.map(({ name, committee }) => (
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+              <div class="flex items-center gap-3 py-[10px] border-b border-rule last:border-0">
                 {committee ? (
-                  <a href={`${base}committees/${committee.systemCode}/`} class="text-blue-600 hover:underline">{name}</a>
-                ) : name}
+                  <a href={`${base}committees/${committee.systemCode}/`} class="text-[13.5px] text-ink hover:text-accent">{name}</a>
+                ) : <span class="text-[13.5px] text-ink">{name}</span>}
                 {committee?.chamber && (
-                  <span class="text-xs text-gray-400">{committee.chamber}</span>
+                  <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3 ml-auto">{committee.chamber}</span>
                 )}
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
 
       <!-- Subjects -->
       {bill.subjects && bill.subjects.length > 0 && (
-        <div id="subjects" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-3">Subjects</h2>
+        <div id="subjects" data-page-section class="pt-8">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">Subjects</h2>
           <div class="flex flex-wrap gap-2">
             {bill.subjects.map(s => (
-              <span class="inline-flex items-center rounded-full text-xs px-2 py-1 bg-blue-50 text-blue-700">
+              <span class="text-[11.5px] text-ink-2 border border-rule rounded px-[7px] py-[2px]">
                 {s}
               </span>
             ))}
@@ -246,28 +234,39 @@ const pageSections = [
 
       <!-- Votes on This Bill -->
       {billVotes.length > 0 && (
-        <div id="roll-call-votes" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
-          <h2 class="text-lg font-semibold text-gray-900 mb-3">Roll Call Votes ({billVotes.length})</h2>
-          <div class="space-y-2">
+        <div id="roll-call-votes" data-page-section class="md:col-span-2 pt-8">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">
+            Roll call votes <span class="font-mono text-[11px] text-ink-3 tabular">{billVotes.length}</span>
+          </h2>
+          <div>
             {billVotes.map((v: any) => {
-              const passed = v.result === 'Passed' || v.result === 'Agreed to';
+              const agreed = v.result === 'Passed' || v.result === 'Agreed to';
+              const total = v.totalYea + v.totalNay;
+              const yeaPct = total > 0 ? Math.round((v.totalYea / total) * 100) : 50;
+              const castLower = String(v.sponsorVote || '').toLowerCase();
+              const sponsorTone = ['yea', 'aye'].includes(castLower) ? 'text-yea' : ['nay', 'no'].includes(castLower) ? 'text-accent' : 'text-ink-2';
               return (
-                <a href={`${base}votes/${v.voteId}/`} class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 border border-gray-100">
-                  <div class={`w-2 h-2 rounded-full ${passed ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                  <div class="flex-1 min-w-0">
-                    <p class="text-sm text-gray-900 line-clamp-1">{v.question}</p>
-                    <div class="flex items-center gap-3 mt-0.5 text-xs text-gray-500">
-                      <span>{v.date}</span>
-                      <span class={`inline-flex items-center rounded-full px-1.5 py-0.5 text-[10px] font-medium ${v.chamber === 'Senate' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}`}>
-                        {v.chamber}
-                      </span>
+                <a href={`${base}votes/${v.voteId}/`} class="grid grid-cols-[minmax(0,1fr)_150px] gap-6 items-start py-4 border-b border-rule hover:border-ink-3">
+                  <div class="min-w-0">
+                    <p class="text-[14px] leading-[1.4] text-ink line-clamp-1">{v.question}</p>
+                    <div class="flex items-center gap-3 mt-[6px]">
+                      <span class="font-mono text-[11px] text-ink-3">{v.date}</span>
+                      <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3">{v.chamber}</span>
                     </div>
                   </div>
-                  <div class="text-right text-xs">
-                    <span class={`font-semibold ${passed ? 'text-green-600' : 'text-red-600'}`}>{v.result}</span>
-                    <div class="text-gray-400 mt-0.5">{v.totalYea}Y - {v.totalNay}N</div>
+                  <div class="text-right">
+                    <div class="flex items-baseline justify-between gap-2">
+                      <span class={`font-mono text-[10.5px] font-semibold tracking-[0.05em] uppercase ${agreed ? 'text-yea' : 'text-accent'}`}>
+                        {agreed ? 'Agreed' : 'Rejected'}
+                      </span>
+                      <span class="font-mono text-[12px] text-ink-2 tabular">{v.totalYea}&ndash;{v.totalNay}</span>
+                    </div>
+                    <div class="flex h-1 bg-rule mt-[6px]">
+                      <div class="h-full bg-yea" style={`width: ${yeaPct}%`}></div>
+                      <div class="h-full bg-accent" style={`width: ${100 - yeaPct}%`}></div>
+                    </div>
                     {v.sponsorVote && (
-                      <div class={`mt-1 font-medium ${['yea', 'aye'].includes(String(v.sponsorVote).toLowerCase()) ? 'text-green-700' : ['nay', 'no'].includes(String(v.sponsorVote).toLowerCase()) ? 'text-red-700' : 'text-gray-600'}`}>
+                      <div class={`font-mono text-[10.5px] mt-[6px] ${sponsorTone}`}>
                         Sponsor: {v.sponsorVote}
                       </div>
                     )}
@@ -281,13 +280,13 @@ const pageSections = [
 
       <!-- Action History -->
       {bill.actions && bill.actions.length > 0 && (
-        <div id="action-history" data-page-section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:col-span-2">
-          <h2 class="text-lg font-semibold text-gray-900 mb-3">Action History</h2>
-          <div class="space-y-2 text-sm">
+        <div id="action-history" data-page-section class="md:col-span-2 pt-8">
+          <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">Action history</h2>
+          <div>
             {bill.actions.map(a => (
-              <div class="flex items-start gap-3 py-1.5 border-b border-gray-100 last:border-0">
-                <span class="text-gray-400 whitespace-nowrap min-w-[90px]">{a.date}</span>
-                <span class="text-gray-700">{a.text}</span>
+              <div class="flex items-start gap-4 py-[10px] border-b border-rule last:border-0">
+                <span class="font-mono text-[11px] text-ink-3 whitespace-nowrap min-w-[86px] tabular">{a.date}</span>
+                <span class="text-[13px] leading-[1.5] text-ink-2">{a.text}</span>
               </div>
             ))}
           </div>
