@@ -47,66 +47,66 @@ interface Props {
   baseUrl?: string;
 }
 
-function Bar({ label, value, max, color }: { label: string; value: number; max: number; color: string }) {
+function Bar({ label, value, max }: { label: string; value: number; max: number }) {
   const pct = max > 0 ? Math.round((value / max) * 100) : 0;
   return (
-    <div className="flex items-center gap-2 py-1">
-      <span className="text-xs text-gray-600 w-32 truncate">{label}</span>
-      <div className="flex-1 h-4 bg-gray-100 rounded-full overflow-hidden">
-        <div className={`h-full rounded-full ${color}`} style={{ width: `${pct}%` }} />
+    <div className="flex items-center gap-3 py-[5px]">
+      <span className="text-[12.5px] text-ink-2 w-32 truncate">{label}</span>
+      <div className="flex-1 h-1 bg-rule">
+        <div className="h-full bg-ink" style={{ width: `${pct}%` }} />
       </div>
-      <span className="text-xs font-semibold text-gray-700 w-8 text-right">{value}</span>
+      <span className="font-mono text-[11.5px] font-semibold text-ink w-8 text-right tabular">{value}</span>
     </div>
   );
 }
 
-function partyColor(party: string) {
+function partyTextColor(party: string) {
   const p = party.toLowerCase();
-  if (p.startsWith('d')) return 'text-blue-700';
-  if (p.startsWith('r')) return 'text-red-700';
-  return 'text-purple-700';
+  if (p.startsWith('d')) return 'text-dem';
+  if (p.startsWith('r')) return 'text-rep';
+  return 'text-ind';
 }
 
 function partyBarColor(party: string) {
   const p = party.toLowerCase();
-  if (p.startsWith('d') || p === 'democratic') return 'bg-blue-500';
-  if (p.startsWith('r') || p === 'republican') return 'bg-red-500';
-  return 'bg-purple-500';
+  if (p.startsWith('d') || p === 'democratic') return 'var(--dem)';
+  if (p.startsWith('r') || p === 'republican') return 'var(--rep)';
+  return 'var(--ind)';
 }
 
 function AlignmentList({ title, rows, baseUrl }: { title: string; rows: AlignmentRow[]; baseUrl: string }) {
   if (!rows?.length) {
     return (
       <div>
-        <h4 className="text-sm font-semibold text-gray-700 mb-2">{title}</h4>
-        <p className="text-xs text-gray-400">Not enough comparable votes yet.</p>
+        <h4 className="field-label mb-2">{title}</h4>
+        <p className="text-[12.5px] text-ink-3">Not enough comparable votes yet.</p>
       </div>
     );
   }
   return (
     <div>
-      <h4 className="text-sm font-semibold text-gray-700 mb-2">{title}</h4>
-      <ul className="space-y-1.5">
+      <h4 className="field-label mb-2">{title}</h4>
+      <div>
         {rows.map(row => (
-          <li key={row.bioguideId} className="flex items-center gap-2 text-sm">
+          <div key={row.bioguideId} className="flex items-center gap-3 py-[6px] border-b border-rule last:border-0">
             <div className="flex-1 min-w-0">
-              <a href={`${baseUrl}members/${row.bioguideId}/`} className={`font-medium hover:underline truncate block ${partyColor(row.party)}`}>
+              <a href={`${baseUrl}members/${row.bioguideId}/`} className={`font-medium hover:underline truncate block text-[13px] ${partyTextColor(row.party)}`}>
                 {row.name}
               </a>
-              <div className="text-[10px] text-gray-400">{row.state} · {row.alignment.comparable} votes</div>
+              <div className="font-mono text-[10px] text-ink-3 mt-[2px]">{row.state} &middot; {row.alignment.comparable} votes</div>
             </div>
             <div className="w-24">
-              <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+              <div className="h-1 bg-rule">
                 <div
-                  className={`h-full ${partyBarColor(row.party)}`}
-                  style={{ width: `${row.alignment.pct ?? 0}%` }}
+                  className="h-full"
+                  style={{ width: `${row.alignment.pct ?? 0}%`, background: partyBarColor(row.party) }}
                 />
               </div>
             </div>
-            <span className="text-xs font-semibold text-gray-800 w-12 text-right">{row.alignment.pct}%</span>
-          </li>
+            <span className="font-mono text-[11.5px] font-semibold text-ink w-12 text-right tabular">{row.alignment.pct}%</span>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
@@ -118,76 +118,76 @@ export default function AnalyticsDashboard({ memberStats, billStats, voteStats, 
   const avgByParty = voteStats.avgByParty || [];
 
   return (
-    <div className="space-y-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 text-center">
-          <div className="text-3xl font-bold text-gray-900">{memberStats.total}</div>
-          <div className="text-sm text-gray-500 mt-1">Members</div>
+    <div>
+      <div className="flex flex-wrap items-stretch border border-rule bg-card mt-6 mb-8">
+        <div className="flex-1 min-w-[140px] px-5 py-4 border-r border-rule">
+          <div className="field-label">Members</div>
+          <div className="font-serif text-2xl font-medium tabular mt-2">{memberStats.total}</div>
         </div>
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 text-center">
-          <div className="text-3xl font-bold text-blue-600">{billStats.total}</div>
-          <div className="text-sm text-gray-500 mt-1">Bills Tracked</div>
+        <div className="flex-1 min-w-[140px] px-5 py-4 border-r border-rule">
+          <div className="field-label">Bills tracked</div>
+          <div className="font-serif text-2xl font-medium tabular mt-2">{billStats.total}</div>
         </div>
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 text-center">
-          <div className="text-3xl font-bold text-emerald-600">{voteStats.total}</div>
-          <div className="text-sm text-gray-500 mt-1">Roll Call Votes</div>
+        <div className="flex-1 min-w-[140px] px-5 py-4 border-r border-rule">
+          <div className="field-label">Roll call votes</div>
+          <div className="font-serif text-2xl font-medium tabular mt-2">{voteStats.total}</div>
         </div>
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 text-center">
-          <div className="text-3xl font-bold text-indigo-600">{partyLinePct}%</div>
-          <div className="text-sm text-gray-500 mt-1">Party-Line Votes</div>
+        <div className="flex-1 min-w-[140px] px-5 py-4">
+          <div className="field-label">Party-line votes</div>
+          <div className="font-serif text-2xl font-medium tabular mt-2">{partyLinePct}%</div>
         </div>
       </div>
 
       {/* Party alignment */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-1">Party Alignment</h3>
-        <p className="text-sm text-gray-500 mb-5">
+      <div className="pt-8">
+        <h3 className="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-1">Party alignment</h3>
+        <p className="text-[13.5px] leading-[1.6] text-ink-2 max-w-prose mb-6">
           Share of Yea/Nay votes that match the member&apos;s party majority on that roll call.
           Party-line votes are those where Democratic and Republican majorities disagree.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          <div className="p-4 bg-gray-50 rounded-lg">
-            <div className="text-xs text-gray-500 mb-1">Party-line roll calls</div>
-            <div className="text-2xl font-bold text-gray-900">{voteStats.partyLineVotes}</div>
-            <div className="text-xs text-gray-500 mt-1">{partyLinePct}% of {voteStats.total} votes</div>
-            <div className="h-2 bg-gray-200 rounded-full overflow-hidden mt-3">
-              <div className="h-full bg-indigo-500" style={{ width: `${partyLinePct}%` }} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div className="field-label mb-1">Party-line roll calls</div>
+            <div className="font-serif text-2xl font-medium tabular">{voteStats.partyLineVotes}</div>
+            <div className="text-[11.5px] text-ink-3 mt-1">{partyLinePct}% of {voteStats.total} votes</div>
+            <div className="h-1 bg-rule mt-3">
+              <div className="h-full bg-ink" style={{ width: `${partyLinePct}%` }} />
             </div>
             {(voteStats.partyLineByChamber || []).length > 0 && (
-              <div className="mt-3 space-y-1">
+              <div className="mt-3">
                 {voteStats.partyLineByChamber!.map(c => (
-                  <div key={c.chamber} className="flex justify-between text-xs text-gray-600">
+                  <div key={c.chamber} className="flex justify-between font-mono text-[11px] text-ink-2 py-[2px]">
                     <span>{c.chamber}</span>
-                    <span>{c.pct}% ({c.partyLine}/{c.total})</span>
+                    <span className="tabular">{c.pct}% ({c.partyLine}/{c.total})</span>
                   </div>
                 ))}
               </div>
             )}
           </div>
 
-          <div className="md:col-span-2 p-4 bg-gray-50 rounded-lg">
-            <div className="text-xs text-gray-500 mb-3">Average alignment with party</div>
+          <div className="md:col-span-2">
+            <div className="field-label mb-3">Average alignment with party</div>
             {avgByParty.length > 0 ? (
               <div className="space-y-3">
                 {avgByParty.map(row => (
                   <div key={row.party} className="flex items-center gap-3">
-                    <span className={`text-sm font-medium w-28 capitalize ${partyColor(row.party)}`}>{row.party}</span>
-                    <div className="flex-1 h-4 bg-white rounded-full overflow-hidden border border-gray-100">
-                      <div className={`h-full ${partyBarColor(row.party)}`} style={{ width: `${row.avg}%` }} />
+                    <span className={`text-[13px] font-medium w-28 capitalize ${partyTextColor(row.party)}`}>{row.party}</span>
+                    <div className="flex-1 h-1 bg-rule">
+                      <div className="h-full" style={{ width: `${row.avg}%`, background: partyBarColor(row.party) }} />
                     </div>
-                    <span className="text-sm font-semibold text-gray-800 w-16 text-right">{row.avg}%</span>
-                    <span className="text-[10px] text-gray-400 w-16 text-right">{row.members} members</span>
+                    <span className="font-mono text-[13px] font-semibold text-ink w-16 text-right tabular">{row.avg}%</span>
+                    <span className="font-mono text-[10px] text-ink-3 w-20 text-right">{row.members} members</span>
                   </div>
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-gray-400">Alignment scores will appear after vote data is joined to members.</p>
+              <p className="text-[13px] text-ink-3">Alignment scores will appear after vote data is joined to members.</p>
             )}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
           <AlignmentList title="House — most aligned with party" rows={voteStats.houseLoyalists || []} baseUrl={baseUrl} />
           <AlignmentList title="Senate — most aligned with party" rows={voteStats.senateLoyalists || []} baseUrl={baseUrl} />
           <AlignmentList title="House — least aligned with party" rows={voteStats.houseRebels || []} baseUrl={baseUrl} />
@@ -195,147 +195,126 @@ export default function AnalyticsDashboard({ memberStats, billStats, voteStats, 
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Party Composition</h3>
-          <div className="space-y-3">
-            <div className="h-8 rounded-full overflow-hidden flex">
-              <div className="bg-blue-500 h-full flex items-center justify-center text-xs text-white font-bold"
-                style={{ width: `${Math.round((memberStats.democratic / memberStats.total) * 100)}%` }}>
-                {memberStats.democratic}
-              </div>
-              {memberStats.independent > 0 && (
-                <div className="bg-purple-500 h-full flex items-center justify-center text-xs text-white font-bold"
-                  style={{ width: `${Math.round((memberStats.independent / memberStats.total) * 100)}%` }}>
-                  {memberStats.independent}
-                </div>
-              )}
-              <div className="bg-red-500 h-full flex items-center justify-center text-xs text-white font-bold"
-                style={{ width: `${Math.round((memberStats.republican / memberStats.total) * 100)}%` }}>
-                {memberStats.republican}
-              </div>
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-blue-700 font-semibold">Democratic: {memberStats.democratic}</span>
-              {memberStats.independent > 0 && (
-                <span className="text-purple-700 font-semibold">Ind: {memberStats.independent}</span>
-              )}
-              <span className="text-red-700 font-semibold">Republican: {memberStats.republican}</span>
-            </div>
-            <div className="border-t border-gray-100 pt-3 mt-3">
-              <div className="flex justify-between text-sm text-gray-600">
-                <span>Senate: {memberStats.senate}</span>
-                <span>House: {memberStats.house}</span>
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 pt-8">
+        <div className="pb-8">
+          <h3 className="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Party composition</h3>
+          <div className="flex h-1 bg-rule">
+            <div className="h-full bg-dem" style={{ width: `${Math.round((memberStats.democratic / memberStats.total) * 100)}%` }} />
+            {memberStats.independent > 0 && (
+              <div className="h-full bg-ind" style={{ width: `${Math.round((memberStats.independent / memberStats.total) * 100)}%` }} />
+            )}
+            <div className="h-full bg-rep" style={{ width: `${Math.round((memberStats.republican / memberStats.total) * 100)}%` }} />
+          </div>
+          <div className="flex justify-between text-[13px] mt-3">
+            <span className="text-dem font-semibold">Democratic: {memberStats.democratic}</span>
+            {memberStats.independent > 0 && (
+              <span className="text-ind font-semibold">Ind: {memberStats.independent}</span>
+            )}
+            <span className="text-rep font-semibold">Republican: {memberStats.republican}</span>
+          </div>
+          <div className="border-t border-rule pt-3 mt-4">
+            <div className="flex justify-between font-mono text-[11px] text-ink-2">
+              <span>Senate: {memberStats.senate}</span>
+              <span>House: {memberStats.house}</span>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Vote Outcomes</h3>
+        <div className="pb-8">
+          <h3 className="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Vote outcomes</h3>
           {voteStats.total > 0 ? (
-            <div className="space-y-4">
-              <div className="h-8 rounded-full overflow-hidden flex">
-                <div className="bg-green-500 h-full flex items-center justify-center text-xs text-white font-bold"
-                  style={{ width: `${Math.round((voteStats.passed / voteStats.total) * 100)}%` }}>
-                  {voteStats.passed} Passed
-                </div>
-                <div className="bg-red-500 h-full flex items-center justify-center text-xs text-white font-bold"
-                  style={{ width: `${Math.round((voteStats.failed / voteStats.total) * 100)}%` }}>
-                  {voteStats.failed} Failed
-                </div>
+            <>
+              <div className="flex h-1 bg-rule">
+                <div className="h-full bg-yea" style={{ width: `${Math.round((voteStats.passed / voteStats.total) * 100)}%` }} />
+                <div className="h-full bg-accent" style={{ width: `${Math.round((voteStats.failed / voteStats.total) * 100)}%` }} />
               </div>
-              <div className="grid grid-cols-2 gap-4 text-center">
+              <div className="flex justify-between text-[11.5px] font-mono text-ink-3 mt-2">
+                <span><span className="text-yea">Agreed</span> {voteStats.passed}</span>
+                <span><span className="text-accent">Rejected</span> {voteStats.failed}</span>
+              </div>
+              <div className="grid grid-cols-2 gap-4 mt-5">
                 <div>
-                  <div className="text-2xl font-bold text-green-600">{Math.round((voteStats.passed / voteStats.total) * 100)}%</div>
-                  <div className="text-xs text-gray-500">Pass Rate</div>
+                  <div className="font-serif text-2xl font-medium tabular">{Math.round((voteStats.passed / voteStats.total) * 100)}%</div>
+                  <div className="field-label mt-1">Pass rate</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-gray-700">{voteStats.avgYea}–{voteStats.avgNay}</div>
-                  <div className="text-xs text-gray-500">Avg Yea–Nay</div>
+                  <div className="font-serif text-2xl font-medium tabular">{voteStats.avgYea}&ndash;{voteStats.avgNay}</div>
+                  <div className="field-label mt-1">Avg Yea&ndash;Nay</div>
                 </div>
               </div>
-            </div>
+            </>
           ) : (
-            <p className="text-gray-400 text-sm">No vote data available yet.</p>
+            <p className="text-[13px] text-ink-3">No vote data available yet.</p>
           )}
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Bills by Policy Area</h3>
+        <div className="pb-8">
+          <h3 className="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Bills by policy area</h3>
           {billStats.byPolicyArea.length > 0 ? (
-            <div className="space-y-1">
+            <div>
               {billStats.byPolicyArea.slice(0, 12).map(p => (
-                <Bar key={p.area} label={p.area} value={p.count} max={maxPolicy} color="bg-blue-500" />
+                <Bar key={p.area} label={p.area} value={p.count} max={maxPolicy} />
               ))}
             </div>
           ) : (
-            <p className="text-gray-400 text-sm">No bill data available yet.</p>
+            <p className="text-[13px] text-ink-3">No bill data available yet.</p>
           )}
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Largest Delegations</h3>
+        <div className="pb-8">
+          <h3 className="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Largest delegations</h3>
           {memberStats.stateBreakdown.length > 0 ? (
-            <div className="space-y-1">
+            <div>
               {memberStats.stateBreakdown.slice(0, 15).map(s => (
-                <Bar key={s.state} label={s.state} value={s.count} max={maxState} color="bg-indigo-500" />
+                <Bar key={s.state} label={s.state} value={s.count} max={maxState} />
               ))}
             </div>
           ) : (
-            <p className="text-gray-400 text-sm">No member data available yet.</p>
+            <p className="text-[13px] text-ink-3">No member data available yet.</p>
           )}
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Committees by Chamber</h3>
-          <div className="space-y-3">
-            <div className="h-8 rounded-full overflow-hidden flex">
-              {committeeStats.senate > 0 && (
-                <div className="bg-amber-500 h-full flex items-center justify-center text-xs text-white font-bold"
-                  style={{ width: `${Math.round((committeeStats.senate / committeeStats.total) * 100)}%` }}>
-                  {committeeStats.senate}
-                </div>
-              )}
-              {committeeStats.house > 0 && (
-                <div className="bg-emerald-500 h-full flex items-center justify-center text-xs text-white font-bold"
-                  style={{ width: `${Math.round((committeeStats.house / committeeStats.total) * 100)}%` }}>
-                  {committeeStats.house}
-                </div>
-              )}
-              {committeeStats.joint > 0 && (
-                <div className="bg-blue-500 h-full flex items-center justify-center text-xs text-white font-bold"
-                  style={{ width: `${Math.round((committeeStats.joint / committeeStats.total) * 100)}%` }}>
-                  {committeeStats.joint}
-                </div>
-              )}
-            </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-amber-700 font-semibold">Senate: {committeeStats.senate}</span>
-              <span className="text-emerald-700 font-semibold">House: {committeeStats.house}</span>
-              <span className="text-blue-700 font-semibold">Joint: {committeeStats.joint}</span>
-            </div>
+        <div className="pb-8">
+          <h3 className="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Committees by chamber</h3>
+          <div className="flex h-1 bg-rule">
+            {committeeStats.senate > 0 && (
+              <div className="h-full bg-ink" style={{ width: `${Math.round((committeeStats.senate / committeeStats.total) * 100)}%` }} />
+            )}
+            {committeeStats.house > 0 && (
+              <div className="h-full bg-ink-3" style={{ width: `${Math.round((committeeStats.house / committeeStats.total) * 100)}%` }} />
+            )}
+            {committeeStats.joint > 0 && (
+              <div className="h-full bg-rule" style={{ width: `${Math.round((committeeStats.joint / committeeStats.total) * 100)}%` }} />
+            )}
+          </div>
+          <div className="flex justify-between text-[13px] mt-3">
+            <span className="text-ink font-semibold">Senate: {committeeStats.senate}</span>
+            <span className="text-ink-2 font-semibold">House: {committeeStats.house}</span>
+            <span className="text-ink-3 font-semibold">Joint: {committeeStats.joint}</span>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Bills by Origin Chamber</h3>
+        <div className="pb-8">
+          <h3 className="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Bills by origin chamber</h3>
           {billStats.byChamber.length > 0 ? (
-            <div className="space-y-3">
-              <div className="h-8 rounded-full overflow-hidden flex">
+            <>
+              <div className="flex h-1 bg-rule">
                 {billStats.byChamber.map(c => (
                   <div
                     key={c.chamber}
-                    className={`h-full flex items-center justify-center text-xs text-white font-bold ${c.chamber === 'Senate' ? 'bg-amber-500' : 'bg-emerald-500'}`}
+                    className={c.chamber === 'Senate' ? 'h-full bg-ink' : 'h-full bg-ink-3'}
                     style={{ width: `${Math.round((c.count / billStats.total) * 100)}%` }}
-                  >
-                    {c.chamber}: {c.count}
-                  </div>
+                  />
                 ))}
               </div>
-            </div>
+              <div className="flex justify-between font-mono text-[11px] text-ink-2 mt-2">
+                {billStats.byChamber.map(c => (
+                  <span key={c.chamber}>{c.chamber}: {c.count}</span>
+                ))}
+              </div>
+            </>
           ) : (
-            <p className="text-gray-400 text-sm">No bill data available yet.</p>
+            <p className="text-[13px] text-ink-3">No bill data available yet.</p>
           )}
         </div>
       </div>
