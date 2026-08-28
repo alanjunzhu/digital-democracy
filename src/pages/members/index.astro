@@ -28,15 +28,48 @@ try {
 } catch {}
 
 const base = import.meta.env.BASE_URL;
+
+const members: any[] = membersData.members;
+const senateCount = members.filter((m: any) => m.chamber === 'Senate').length;
+const houseCount = members.filter((m: any) => m.chamber === 'House').length;
+const demCount = members.filter((m: any) => m.party === 'Democratic').length;
+const repCount = members.filter((m: any) => m.party === 'Republican').length;
+const indCount = members.filter((m: any) => m.party === 'Independent').length;
 ---
 
 <Layout title="Members of Congress" description="Browse all current members of the US Congress. Filter by chamber, party, and state.">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="mb-6">
-      <h1 class="text-3xl font-bold text-gray-900">Members of Congress</h1>
-      <p class="text-gray-500 mt-1">
-        {membersData.congress}th Congress &middot; {membersData.total} members
-      </p>
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-6 lg:gap-10 items-end pb-[18px] border-b border-ink">
+      <div>
+        <p class="eyebrow mb-3">Directory</p>
+        <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">
+          Members of Congress
+        </h1>
+      </div>
+      <div class="flex flex-wrap gap-8 pb-1">
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{membersData.total}</div>
+          <div class="field-label mt-[2px]">Serving</div>
+        </div>
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{senateCount}</div>
+          <div class="field-label mt-[2px]">Senate</div>
+        </div>
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{houseCount}</div>
+          <div class="field-label mt-[2px]">House</div>
+        </div>
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">
+            {demCount}<span class="text-ink-3 text-[18px]"> / </span>{repCount}<span
+              class="text-ink-3 text-[18px]"
+            >
+              /
+            </span>{indCount}
+          </div>
+          <div class="field-label mt-[2px]">D / R / I</div>
+        </div>
+      </div>
     </div>
 
     {membersData.members.length > 0 ? (
@@ -47,9 +80,9 @@ const base = import.meta.env.BASE_URL;
         client:load
       />
     ) : (
-      <div class="text-center py-16 text-gray-500">
-        <p class="text-lg">No member data available yet.</p>
-        <p class="mt-2 text-sm">Run the data fetch script to populate member data.</p>
+      <div class="text-center py-16">
+        <p class="font-serif text-2xl font-medium">No member data available yet.</p>
+        <p class="mt-2 text-[13.5px] text-ink-3">Run the data fetch script to populate member data.</p>
       </div>
     )}
   </div>

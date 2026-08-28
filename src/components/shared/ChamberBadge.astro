@@ -5,10 +5,9 @@ interface Props {
 }
 
 const { chamber, size = 'md' } = Astro.props;
-const colorClass = chamber === 'Senate' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800';
-const sizeClass = size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-sm px-2 py-0.5';
+const sizeClass = size === 'sm' ? 'text-[10px]' : 'text-[10.5px]';
 ---
 
-<span class={`inline-flex items-center font-medium rounded-full ${colorClass} ${sizeClass}`}>
+<span class:list={['font-mono tracking-[0.06em] uppercase text-ink-3', sizeClass]}>
   {chamber}
 </span>

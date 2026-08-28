@@ -6,17 +6,24 @@ interface Props {
 
 const { party, size = 'md' } = Astro.props;
 
-const colors: Record<string, string> = {
-  Democratic: 'bg-blue-100 text-blue-800',
-  Republican: 'bg-red-100 text-red-800',
-  Independent: 'bg-purple-100 text-purple-800',
+const tone: Record<string, string> = {
+  Democratic: 'bg-dem-soft text-dem',
+  Republican: 'bg-rep-soft text-rep',
+  Independent: 'bg-ind-soft text-ind',
 };
 
 const label = party === 'Democratic' ? 'D' : party === 'Republican' ? 'R' : 'I';
-const colorClass = colors[party] || 'bg-gray-100 text-gray-800';
-const sizeClass = size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-sm px-2 py-0.5';
+const toneClass = tone[party] || 'bg-rule-2 text-ink-2';
+const sizeClass = size === 'sm' ? 'w-[15px] h-[15px] text-[9px]' : 'w-[17px] h-[17px] text-[10px]';
 ---
 
-<span class={`inline-flex items-center font-semibold rounded-full ${colorClass} ${sizeClass}`}>
+<span
+  class:list={[
+    'inline-flex items-center justify-center rounded font-mono font-semibold shrink-0',
+    toneClass,
+    sizeClass,
+  ]}
+  title={party}
+>
   {label}
 </span>

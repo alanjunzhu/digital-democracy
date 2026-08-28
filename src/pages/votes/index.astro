@@ -14,23 +14,36 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Votes" description="Browse roll call votes from both House and Senate with party breakdowns.">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="mb-6">
-      <h1 class="text-3xl font-bold text-gray-900">Roll Call Votes</h1>
-      <p class="text-gray-500 mt-1">
-        {votesData.congress}th Congress &middot; {votesData.total} votes
-        {(votesData.houseTotal > 0 || votesData.senateTotal > 0) && (
-          <span> (House: {votesData.houseTotal || 0}, Senate: {votesData.senateTotal || 0})</span>
-        )}
-      </p>
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-6 lg:gap-10 items-end pb-[18px] border-b border-ink">
+      <div>
+        <p class="eyebrow mb-3">The record</p>
+        <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">
+          Roll call votes
+        </h1>
+      </div>
+      <div class="flex flex-wrap gap-8 pb-1">
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{votesData.total}</div>
+          <div class="field-label mt-[2px]">Recorded</div>
+        </div>
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{votesData.houseTotal || 0}</div>
+          <div class="field-label mt-[2px]">House</div>
+        </div>
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{votesData.senateTotal || 0}</div>
+          <div class="field-label mt-[2px]">Senate</div>
+        </div>
+      </div>
     </div>
 
     {votesData.votes.length > 0 ? (
       <VoteFilter votes={votesData.votes} baseUrl={base} client:load />
     ) : (
-      <div class="text-center py-16 text-gray-500">
-        <p class="text-lg">No vote data available yet.</p>
-        <p class="mt-2 text-sm">Run the data fetch script to populate vote data.</p>
+      <div class="text-center py-16">
+        <p class="font-serif text-2xl font-medium">No vote data available yet.</p>
+        <p class="mt-2 text-[13.5px] text-ink-3">Run the data fetch script to populate vote data.</p>
       </div>
     )}
   </div>

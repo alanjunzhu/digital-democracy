@@ -21,35 +21,46 @@ const { trade: t, highlightSector = false } = Astro.props;
 const disclosureUrl = tradeDisclosureUrl(t);
 const quoteUrl = tickerQuoteUrl(t.ticker);
 const typeLower = (t.type || '').toLowerCase();
-const typeColor = typeLower.includes('purchase')
-  ? 'text-green-700 bg-green-50'
+// Marks rule: filled square = purchase, hollow = sale.
+const markClass = typeLower.includes('purchase')
+  ? 'bg-ink border-ink'
   : typeLower.includes('sale')
-  ? 'text-red-700 bg-red-50'
-  : 'text-gray-700 bg-gray-50';
+    ? 'bg-transparent border-ink'
+    : 'bg-transparent border-ink-3';
 ---
 
-<div class={`flex items-start gap-3 py-2.5 border-b border-gray-50 last:border-0 ${highlightSector ? 'bg-red-50/40 -mx-2 px-2 rounded' : ''}`}>
+<div
+  class:list={[
+    'flex items-start gap-3 py-[10px] border-b border-rule last:border-0',
+    highlightSector && 'border-l-2 border-l-accent pl-3',
+  ]}
+>
   <div class="flex-1 min-w-0 space-y-1">
-    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-      <span class="text-xs text-gray-500 whitespace-nowrap">{t.transactionDate || t.disclosureDate || '—'}</span>
+    <div class="flex flex-wrap items-center gap-x-[10px] gap-y-1">
+      <span class="font-mono text-[11px] text-ink-3 whitespace-nowrap tabular">
+        {t.transactionDate || t.disclosureDate || '—'}
+      </span>
       {t.ticker && t.ticker !== '--' ? (
         quoteUrl ? (
-          <a href={quoteUrl} target="_blank" rel="noopener" class="font-mono text-xs font-semibold text-blue-700 hover:underline">
+          <a href={quoteUrl} target="_blank" rel="noopener" class="font-mono text-[12px] font-medium text-accent hover:underline">
             {t.ticker}
           </a>
         ) : (
-          <span class="font-mono text-xs font-semibold text-blue-700">{t.ticker}</span>
+          <span class="font-mono text-[12px] font-medium text-accent">{t.ticker}</span>
         )
       ) : null}
       {t.type && (
-        <span class={`inline-flex rounded text-[10px] px-1.5 py-0.5 font-medium ${typeColor}`}>{t.type}</span>
+        <span class="inline-flex items-center gap-[6px] font-mono text-[10px] tracking-[0.06em] uppercase text-ink-2">
+          <span class:list={['w-[8px] h-[8px] border shrink-0', markClass]} />
+          {t.type}
+        </span>
       )}
-      {t.amount && <span class="text-xs text-gray-600">{t.amount}</span>}
+      {t.amount && <span class="font-mono text-[11px] text-ink-2 tabular">{t.amount}</span>}
     </div>
     {t.assetDescription && (
-      <p class="text-xs text-gray-800 line-clamp-2">{t.assetDescription}</p>
+      <p class="text-[12.5px] leading-[1.5] text-ink-2 line-clamp-2">{t.assetDescription}</p>
     )}
-    <div class="flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[10px] text-gray-400">
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-[2px] font-mono text-[10px] text-ink-3">
       {t.owner && <span>Owner: {t.owner}</span>}
       {t.disclosureDate && t.disclosureDate !== t.transactionDate && (
         <span>Filed: {t.disclosureDate}</span>
@@ -63,11 +74,13 @@ const typeColor = typeLower.includes('purchase')
       href={disclosureUrl}
       target="_blank"
       rel="noopener"
-      class="shrink-0 text-[10px] text-blue-600 hover:underline whitespace-nowrap"
+      class="shrink-0 font-mono text-[10px] tracking-[0.06em] uppercase text-accent hover:underline whitespace-nowrap"
     >
       View filing
     </a>
   ) : (
-    <span class="shrink-0 text-[10px] text-gray-300 whitespace-nowrap">No link</span>
+    <span class="shrink-0 font-mono text-[10px] tracking-[0.06em] uppercase text-ink-3 whitespace-nowrap">
+      No link
+    </span>
   )}
 </div>

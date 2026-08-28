@@ -28,196 +28,222 @@ const democrats = membersData.members.filter((m: any) => m.party === 'Democratic
 const republicans = membersData.members.filter((m: any) => m.party === 'Republican');
 const independents = membersData.members.filter((m: any) => m.party === 'Independent');
 const base = import.meta.env.BASE_URL;
+
+const stats = [
+  { label: 'Members serving', value: membersData.total },
+  { label: 'Senators', value: senators.length },
+  { label: 'Representatives', value: representatives.length },
+  { label: 'Roll call votes', value: votesData.total },
+];
+
+const nf = new Intl.NumberFormat('en-US');
 ---
 
 <Layout title="Home">
-  <!-- Hero -->
-  <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-          Track the US Congress
+  <!-- Lede + stat ledger -->
+  <section class="max-w-measure mx-auto px-10 pt-14 pb-10">
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] gap-12 lg:gap-[72px] items-end">
+      <div>
+        <p class="eyebrow mb-[18px]">Transparency record</p>
+        <h1
+          class="font-serif text-[44px] md:text-[60px] leading-[1.02] font-normal tracking-[-0.022em] mb-5 text-balance"
+        >
+          Everything Congress does in public, on one page.
         </h1>
-        <p class="text-xl text-blue-200 mb-8">
-          An open-source transparency tool for the {membersData.congress}th Congress.
-          Browse members, bills, votes, and committees — all powered by public data.
+        <p class="text-[17px] leading-[1.6] text-ink-2 max-w-[56ch] mb-[26px] text-pretty">
+          Members, bills, roll calls, committee referrals and STOCK Act filings — assembled from
+          official sources for the {membersData.congress}th Congress, updated automatically, free to
+          read and to fork.
         </p>
-        <div class="flex flex-wrap gap-4">
+        <div class="flex flex-wrap items-center gap-3">
           <a
             href={`${base}members/`}
-            class="inline-flex items-center px-6 py-3 bg-white text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+            class="inline-flex items-center px-5 py-[11px] bg-ink text-paper text-[14px] font-semibold rounded hover:bg-accent hover:text-white"
           >
-            Browse Members
+            Browse members
           </a>
           <a
             href={`${base}bills/`}
-            class="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+            class="inline-flex items-center px-[19px] py-[10px] border border-ink text-[14px] font-semibold rounded hover:bg-ink hover:text-paper"
           >
-            Browse Bills
+            Browse bills
+          </a>
+          <a
+            href={`${base}finances/`}
+            class="inline-flex items-center gap-[6px] px-1 py-[10px] text-[14px] font-medium text-ink-2 hover:text-accent"
+          >
+            Trading dashboard &rarr;
           </a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Stats -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="bg-white rounded-lg shadow-md p-6 text-center">
-        <div class="text-3xl font-bold text-gray-900">{membersData.total}</div>
-        <div class="text-sm text-gray-500 mt-1">Total Members</div>
-      </div>
-      <div class="bg-white rounded-lg shadow-md p-6 text-center">
-        <div class="text-3xl font-bold text-amber-600">{senators.length}</div>
-        <div class="text-sm text-gray-500 mt-1">Senators</div>
-      </div>
-      <div class="bg-white rounded-lg shadow-md p-6 text-center">
-        <div class="text-3xl font-bold text-emerald-600">{representatives.length}</div>
-        <div class="text-sm text-gray-500 mt-1">Representatives</div>
-      </div>
-      <div class="bg-white rounded-lg shadow-md p-6 text-center">
-        <div class="text-3xl font-bold text-indigo-600">{votesData.total}</div>
-        <div class="text-sm text-gray-500 mt-1">Roll Call Votes</div>
+      <div class="border-t border-ink pt-[14px]">
+        {stats.map(s => (
+          <div class="flex items-baseline justify-between gap-4 py-[11px] border-b border-rule">
+            <span class="text-[13px] font-medium text-ink-2">{s.label}</span>
+            <span class="font-serif text-[30px] leading-none font-medium tracking-[-0.01em] tabular">
+              {nf.format(s.value)}
+            </span>
+          </div>
+        ))}
+        <p class="font-mono text-[11px] leading-[1.5] text-ink-3 mt-3">
+          {democrats.length} D &middot; {republicans.length} R &middot; {independents.length} I
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Recent Members Preview -->
+  <!-- Members strip -->
   {membersData.members.length > 0 && (
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-gray-900">Members of Congress</h2>
-        <a href={`${base}members/`} class="text-blue-600 hover:text-blue-800 font-medium text-sm">
-          View all &rarr;
+    <section class="max-w-measure mx-auto px-10 pb-2">
+      <div class="flex items-baseline justify-between gap-6 border-t border-ink pt-3 mb-5">
+        <h2 class="font-serif text-2xl font-medium tracking-[-0.01em]">Members of Congress</h2>
+        <a
+          href={`${base}members/`}
+          class="font-mono text-[11px] tracking-[0.08em] uppercase text-ink-3 hover:text-accent whitespace-nowrap"
+        >
+          All {nf.format(membersData.total)} &rarr;
         </a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 [&>*]:p-0">
         {membersData.members.slice(0, 8).map((m: any) => (
           <a
             href={`${base}members/${m.bioguideId}/`}
-            class="block bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all p-4 group"
+            class="group flex items-start gap-3 bg-card px-4 py-[14px] hover:bg-rule-2"
           >
-            <div class="flex items-start gap-3">
-              <img
-                src={m.imageUrl}
-                alt={m.name}
-                class="w-14 h-18 object-cover rounded bg-gray-200"
-                loading="lazy"
-              />
-              <div class="flex-1 min-w-0">
-                <h3 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate text-sm">
-                  {m.name}
-                </h3>
-                <div class="flex items-center gap-1 mt-1">
-                  <PartyBadge party={m.party} size="sm" />
-                </div>
-                <p class="text-xs text-gray-500 mt-1">{m.state} &middot; {m.chamber}</p>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </section>
-  )}
-
-  <!-- Recent Bills Preview -->
-  {billsData.bills.length > 0 && (
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-gray-900">Recent Bills</h2>
-        <a href={`${base}bills/`} class="text-blue-600 hover:text-blue-800 font-medium text-sm">
-          View all &rarr;
-        </a>
-      </div>
-      <div class="space-y-3">
-        {billsData.bills.slice(0, 5).map((b: any) => (
-          <a
-            href={`${base}bills/${b.billId}/`}
-            class="block bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all p-4 group"
-          >
-            <div class="flex items-start gap-3">
-              <span class="font-mono text-sm font-semibold text-blue-700 whitespace-nowrap">{b.type} {b.number}</span>
-              <div class="flex-1 min-w-0">
-                <h3 class="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
-                  {b.title}
-                </h3>
-                <p class="text-xs text-gray-500 mt-1">
-                  {b.sponsor?.name && `Sponsor: ${b.sponsor.name}`}
-                  {b.introducedDate && ` · ${b.introducedDate}`}
-                </p>
-              </div>
-              <span class={`inline-flex items-center font-medium rounded-full text-xs px-1.5 py-0.5 ${b.originChamber === 'Senate' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'}`}>
-                {b.originChamber}
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
-    </section>
-  )}
-
-  <!-- Recent Votes Preview -->
-  {votesData.votes.length > 0 && (
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-gray-900">Recent Votes</h2>
-        <a href={`${base}votes/`} class="text-blue-600 hover:text-blue-800 font-medium text-sm">
-          View all &rarr;
-        </a>
-      </div>
-      <div class="space-y-3">
-        {votesData.votes.slice(0, 5).map((v: any) => {
-          const passed = v.result === 'Passed' || v.result === 'Agreed to';
-          const total = v.totalYea + v.totalNay;
-          const yeaPct = total > 0 ? Math.round((v.totalYea / total) * 100) : 50;
-          return (
-            <a
-              href={`${base}votes/${v.voteId}/`}
-              class="block bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all p-4 group"
-            >
-              <div class="flex items-start gap-3">
-                <div class={`mt-1 w-2.5 h-2.5 rounded-full flex-shrink-0 ${passed ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                <div class="flex-1 min-w-0">
-                  <h3 class="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
-                    {v.question}
-                  </h3>
-                  <div class="flex items-center gap-2 mt-1.5">
-                    <div class="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden flex max-w-[200px]">
-                      <div class="bg-green-500 h-full" style={`width: ${yeaPct}%`}></div>
-                      <div class="bg-red-500 h-full" style={`width: ${100 - yeaPct}%`}></div>
-                    </div>
-                    <span class="text-xs text-gray-500">{v.totalYea}–{v.totalNay}</span>
-                    <span class={`inline-flex items-center rounded-full text-[10px] px-1.5 py-0.5 font-medium ${v.chamber === 'Senate' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}`}>
-                      {v.chamber}
-                    </span>
-                    {v.date && <span class="text-xs text-gray-400">{v.date}</span>}
-                  </div>
-                </div>
-                <span class={`text-xs font-semibold ${passed ? 'text-green-600' : 'text-red-600'}`}>
-                  {v.result}
+            <img
+              src={m.imageUrl}
+              alt=""
+              class="w-10 h-[52px] object-cover rounded-[1px] bg-rule grayscale contrast-[1.05] shrink-0"
+              loading="lazy"
+            />
+            <div class="flex-1 min-w-0">
+              <h3 class="font-serif text-[17px] leading-[1.2] font-medium group-hover:text-accent text-pretty">
+                {m.name}
+              </h3>
+              <p class="font-mono text-[11px] text-ink-3 mt-[5px] truncate">{m.state}</p>
+              <div class="flex items-center gap-[6px] mt-[7px]">
+                <PartyBadge party={m.party} size="sm" />
+                <span class="font-mono text-[10px] tracking-[0.06em] uppercase text-ink-3">
+                  {m.chamber}
                 </span>
               </div>
-            </a>
-          );
-        })}
+            </div>
+          </a>
+        ))}
       </div>
     </section>
   )}
 
-  <!-- Coming Soon / About -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">About Congress Tracker</h2>
-      <p class="text-gray-600 mb-4">
-        Congress Tracker is a free, open-source tool that makes it easy to follow what's happening
-        in the US Congress. All data comes from official public sources including the
-        <a href="https://api.congress.gov" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Congress.gov API</a>
-        and the
-        <a href="https://github.com/unitedstates/congress-legislators" class="text-blue-600 hover:underline" target="_blank" rel="noopener">unitedstates project</a>.
-      </p>
-      <p class="text-gray-600">
-        The site updates automatically via GitHub Actions and is hosted on GitHub Pages — no servers to maintain.
-      </p>
+  <!-- Recent bills · recent roll calls -->
+  <section class="max-w-measure mx-auto px-10 pt-11">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
+      {billsData.bills.length > 0 && (
+        <div>
+          <div class="flex items-baseline justify-between gap-6 border-t border-ink pt-3 mb-[6px]">
+            <h2 class="font-serif text-2xl font-medium tracking-[-0.01em]">Recent bills</h2>
+            <a
+              href={`${base}bills/`}
+              class="font-mono text-[11px] tracking-[0.08em] uppercase text-ink-3 hover:text-accent whitespace-nowrap"
+            >
+              All {nf.format(billsData.total)} &rarr;
+            </a>
+          </div>
+          {billsData.bills.slice(0, 5).map((b: any) => (
+            <a
+              href={`${base}bills/${b.billId}/`}
+              class="grid grid-cols-[78px_minmax(0,1fr)] gap-4 py-[15px] border-b border-rule hover:border-ink-3"
+            >
+              <span class="font-mono text-[12px] font-medium text-accent pt-[2px]">
+                {b.type} {b.number}
+              </span>
+              <div>
+                <h3 class="font-serif text-[18px] leading-[1.28] font-medium line-clamp-2">
+                  {b.title}
+                </h3>
+                <p class="text-[12.5px] leading-[1.45] text-ink-3 mt-[6px]">
+                  {b.sponsor?.name && `Sponsor: ${b.sponsor.name}`}
+                  {b.introducedDate && ` · Introduced ${b.introducedDate}`}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+
+      {votesData.votes.length > 0 && (
+        <div>
+          <div class="flex items-baseline justify-between gap-6 border-t border-ink pt-3 mb-[6px]">
+            <h2 class="font-serif text-2xl font-medium tracking-[-0.01em]">Recent roll calls</h2>
+            <a
+              href={`${base}votes/`}
+              class="font-mono text-[11px] tracking-[0.08em] uppercase text-ink-3 hover:text-accent whitespace-nowrap"
+            >
+              All {nf.format(votesData.total)} &rarr;
+            </a>
+          </div>
+          {votesData.votes.slice(0, 5).map((v: any) => {
+            const agreed = v.result === 'Passed' || v.result === 'Agreed to';
+            const total = v.totalYea + v.totalNay;
+            const yeaPct = total > 0 ? Math.round((v.totalYea / total) * 100) : 50;
+            return (
+              <a href={`${base}votes/${v.voteId}/`} class="block py-[15px] border-b border-rule hover:border-ink-3">
+                <div class="flex items-baseline justify-between gap-4">
+                  <h3 class="font-serif text-[18px] leading-[1.28] font-medium line-clamp-2">
+                    {v.question}
+                  </h3>
+                  <span
+                    class:list={[
+                      'font-mono text-[11px] font-semibold tracking-[0.04em] uppercase whitespace-nowrap',
+                      agreed ? 'text-yea' : 'text-accent',
+                    ]}
+                  >
+                    {agreed ? 'Agreed' : 'Rejected'}
+                  </span>
+                </div>
+                <div class="flex items-center gap-3 mt-[10px]">
+                  <div class="flex w-[150px] h-1 bg-rule shrink-0">
+                    <div class="h-full bg-yea" style={`width: ${yeaPct}%`}></div>
+                    <div class="h-full bg-accent" style={`width: ${100 - yeaPct}%`}></div>
+                  </div>
+                  <span class="font-mono text-[11.5px] text-ink-2 tabular">
+                    {v.totalYea}&ndash;{v.totalNay}
+                  </span>
+                  <span class="font-mono text-[11px] tracking-[0.06em] uppercase text-ink-3">
+                    {v.chamber}
+                  </span>
+                  {v.date && <span class="font-mono text-[11px] text-ink-3 ml-auto">{v.date}</span>}
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- About + caveat -->
+  <section class="max-w-measure mx-auto px-10 pt-14 pb-16">
+    <div class="border-t border-ink pt-3 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] gap-8 lg:gap-14">
+      <h2 class="font-serif text-2xl font-medium tracking-[-0.01em]">About this project</h2>
+      <div>
+        <p class="text-[15px] leading-[1.65] text-ink-2 max-w-prose mb-[14px] text-pretty">
+          Congress Tracker is a free, open-source tool for following what happens in the US Congress.
+          Everything on it comes from official public sources — the
+          <a href="https://api.congress.gov" class="text-ink border-b border-rule" target="_blank" rel="noopener">Congress.gov API</a>,
+          the
+          <a href="https://github.com/unitedstates/congress-legislators" class="text-ink border-b border-rule" target="_blank" rel="noopener">unitedstates project</a>,
+          House and Senate clerk records, and STOCK Act disclosures.
+        </p>
+        <p class="text-[15px] leading-[1.65] text-ink-2 max-w-prose mb-[14px] text-pretty">
+          The site is a static build: scheduled jobs fetch and commit the data, and a push rebuilds
+          the pages. No servers to maintain.
+        </p>
+        <p class="font-mono text-[11.5px] leading-[1.6] text-ink-3 max-w-[70ch] border-l-2 border-accent pl-3">
+          Dollar figures in the financial sections are estimates — disclosures report amounts as
+          ranges, and every trade is modelled at the midpoint. A flagged overlap between a trade and
+          a committee is a reason to look closer, not a finding of wrongdoing.
+        </p>
+      </div>
     </div>
   </section>
 </Layout>

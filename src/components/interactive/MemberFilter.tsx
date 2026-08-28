@@ -72,77 +72,85 @@ export default function MemberFilter({ members, financeIndex = {}, baseUrl }: Pr
     });
   }, [members, search, chamber, party, state, finance, financeIndex]);
 
-  const partyColor = (p: string) => {
-    if (p === 'Democratic') return 'bg-blue-100 text-blue-800';
-    if (p === 'Republican') return 'bg-red-100 text-red-800';
-    return 'bg-purple-100 text-purple-800';
+  const partyTone = (p: string) => {
+    if (p === 'Democratic') return 'bg-dem-soft text-dem';
+    if (p === 'Republican') return 'bg-rep-soft text-rep';
+    return 'bg-ind-soft text-ind';
   };
 
   const partyLabel = (p: string) => p === 'Democratic' ? 'D' : p === 'Republican' ? 'R' : 'I';
 
+  const clearFilters = () => {
+    setSearch('');
+    setChamber('all');
+    setParty('all');
+    setState('all');
+    setFinance('all');
+  };
+
   return (
     <div>
-      {/* Filters */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Search</label>
-            <input
-              type="text"
-              placeholder="Name or state..."
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Chamber</label>
-            <select
-              value={chamber}
-              onChange={e => setChamber(e.target.value)}
-              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
-            >
-              <option value="all">All Chambers</option>
-              <option value="Senate">Senate</option>
-              <option value="House">House</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Party</label>
-            <select
-              value={party}
-              onChange={e => setParty(e.target.value)}
-              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
-            >
-              <option value="all">All Parties</option>
-              <option value="Democratic">Democratic</option>
-              <option value="Republican">Republican</option>
-              <option value="Independent">Independent</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">State</label>
-            <select
-              value={state}
-              onChange={e => setState(e.target.value)}
-              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
-            >
-              <option value="all">All States</option>
-              {states.map(s => (
-                <option key={s} value={s}>{s}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-        <div className="mt-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="finance-filter">
-            Financial records
-          </label>
+      {/* Filter bar: borderless cells split by vertical rules */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.6fr)_repeat(3,minmax(0,1fr))] border-b border-rule">
+        <label className="block py-[14px] pr-5 lg:border-r border-rule">
+          <span className="field-label block mb-[6px]">Search</span>
+          <input
+            type="text"
+            placeholder="Name or state…"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            className="w-full box-border appearance-none bg-transparent border-none p-0 text-[15px] focus:outline-none placeholder:text-ink-3"
+          />
+        </label>
+        <label className="block py-[14px] px-5 lg:border-r border-rule">
+          <span className="field-label block mb-[6px]">Chamber</span>
+          <select
+            value={chamber}
+            onChange={e => setChamber(e.target.value)}
+            className="w-full appearance-none bg-transparent border-none p-0 text-[15px] cursor-pointer focus:outline-none"
+          >
+            <option value="all">All chambers</option>
+            <option value="Senate">Senate</option>
+            <option value="House">House</option>
+          </select>
+        </label>
+        <label className="block py-[14px] px-5 lg:border-r border-rule">
+          <span className="field-label block mb-[6px]">Party</span>
+          <select
+            value={party}
+            onChange={e => setParty(e.target.value)}
+            className="w-full appearance-none bg-transparent border-none p-0 text-[15px] cursor-pointer focus:outline-none"
+          >
+            <option value="all">All parties</option>
+            <option value="Democratic">Democratic</option>
+            <option value="Republican">Republican</option>
+            <option value="Independent">Independent</option>
+          </select>
+        </label>
+        <label className="block py-[14px] pl-5">
+          <span className="field-label block mb-[6px]">State</span>
+          <select
+            value={state}
+            onChange={e => setState(e.target.value)}
+            className="w-full appearance-none bg-transparent border-none p-0 text-[15px] cursor-pointer focus:outline-none"
+          >
+            <option value="all">All states</option>
+            {states.map(s => (
+              <option key={s} value={s}>{s}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      {/* Count line + Clear */}
+      <div className="flex flex-wrap items-center justify-between gap-6 py-3 pb-[22px] border-b border-rule">
+        <label className="flex items-center gap-[10px]">
+          <span className="field-label">Financial records</span>
           <select
             id="finance-filter"
             value={finance}
             onChange={e => setFinance(e.target.value)}
-            className="w-full sm:max-w-md rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 border"
+            className="appearance-none bg-field border border-rule rounded px-[10px] py-[5px] text-[13px] cursor-pointer"
           >
             {Object.entries(FINANCE_FILTERS).map(([key, def]) => (
               <option key={key} value={key}>
@@ -150,86 +158,98 @@ export default function MemberFilter({ members, financeIndex = {}, baseUrl }: Pr
               </option>
             ))}
           </select>
-        </div>
-        <div className="mt-3 text-sm text-gray-500">
-          Showing {filtered.length} of {members.length} members
+        </label>
+        <div className="flex items-center gap-4">
+          <span className="font-mono text-[12px] text-ink-2 tabular">
+            Showing {filtered.length} of {members.length}
+          </span>
+          <button
+            type="button"
+            onClick={clearFilters}
+            className="appearance-none bg-transparent border-none p-0 font-mono text-[11px] tracking-[0.06em] uppercase text-accent cursor-pointer underline underline-offset-[3px]"
+          >
+            Clear
+          </button>
         </div>
       </div>
 
-      {/* Results Grid */}
+      {/* Results: record-row roster */}
       {filtered.length === 0 ? (
-        <div className="text-center py-12 text-gray-500">
-          <p className="text-lg">No members match your filters.</p>
+        <div className="py-[72px] text-center border-b border-rule">
+          <p className="font-serif text-2xl font-medium mb-[6px]">No members match these filters.</p>
+          <p className="text-[14px] text-ink-3 mb-[18px]">
+            Try widening the chamber, party or state, or clearing the financial-records cut.
+          </p>
           <button
-            onClick={() => { setSearch(''); setChamber('all'); setParty('all'); setState('all'); setFinance('all'); }}
-            className="mt-2 text-blue-600 hover:text-blue-800"
+            onClick={clearFilters}
+            className="appearance-none bg-ink text-paper border-none rounded px-[18px] py-[9px] text-[13px] font-semibold cursor-pointer"
           >
             Clear filters
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {filtered.map(m => (
-            <a
-              key={m.bioguideId}
-              href={`${baseUrl}members/${m.bioguideId}/`}
-              className="block bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all p-4 group"
-            >
-              <div className="flex items-start gap-3">
+        <>
+          <div className="hidden md:grid grid-cols-[44px_minmax(0,1.5fr)_minmax(0,1fr)_96px_110px] gap-[18px] py-[11px] border-b border-ink">
+            <span />
+            <span className="field-label">Member</span>
+            <span className="field-label">State</span>
+            <span className="field-label">Chamber</span>
+            <span className="field-label text-right">Disclosures</span>
+          </div>
+          {filtered.map(m => {
+            const f = financeIndex[m.bioguideId];
+            const disclosure = !f
+              ? '—'
+              : f.trades > 0
+                ? `${f.trades} trade${f.trades === 1 ? '' : 's'}`
+                : f.filings > 0
+                  ? `${f.filings} filing${f.filings === 1 ? '' : 's'}`
+                  : '—';
+            return (
+              <a
+                key={m.bioguideId}
+                href={`${baseUrl}members/${m.bioguideId}/`}
+                className="grid grid-cols-[44px_minmax(0,1fr)] md:grid-cols-[44px_minmax(0,1.5fr)_minmax(0,1fr)_96px_110px] gap-[18px] items-center py-[10px] border-b border-rule hover:border-ink-3"
+              >
                 <img
                   src={m.imageUrl}
-                  alt={m.name}
-                  className="w-16 h-20 object-cover rounded bg-gray-200"
+                  alt=""
+                  className="w-[34px] h-[44px] object-cover rounded-[1px] bg-rule grayscale contrast-[1.05]"
                   loading="lazy"
-                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  onError={(e) => { (e.target as HTMLImageElement).style.visibility = 'hidden'; }}
                 />
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate">
-                    {m.name}
-                  </h3>
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className={`inline-flex items-center font-semibold rounded-full text-xs px-1.5 py-0.5 ${partyColor(m.party)}`}>
-                      {partyLabel(m.party)}
-                    </span>
-                    <span className={`inline-flex items-center font-medium rounded-full text-xs px-1.5 py-0.5 ${m.chamber === 'Senate' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'}`}>
-                      {m.chamber}
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {STATE_NAMES[m.state] || m.state}
-                    {m.chamber === 'House' && m.district ? `, District ${m.district}` : ''}
-                  </p>
-                  {(() => {
-                    const f = financeIndex[m.bioguideId];
-                    if (!f) return null;
-                    return (
-                      <div className="flex flex-wrap items-center gap-1 mt-1.5">
-                        {f.trades > 0 && (
-                          <span className="inline-flex items-center rounded text-[10px] px-1.5 py-0.5 bg-gray-100 text-gray-600">
-                            {f.trades} trade{f.trades === 1 ? '' : 's'}
-                          </span>
-                        )}
-                        {f.trades === 0 && f.filings > 0 && (
-                          <span className="inline-flex items-center rounded text-[10px] px-1.5 py-0.5 bg-gray-100 text-gray-600">
-                            {f.filings} filing{f.filings === 1 ? '' : 's'}
-                          </span>
-                        )}
-                        {f.overlapTrades > 0 && (
-                          <span
-                            className="inline-flex items-center rounded text-[10px] px-1.5 py-0.5 bg-red-50 text-red-700 border border-red-100"
-                            title="Traded in a sector one of their committees oversees"
-                          >
-                            committee overlap
-                          </span>
-                        )}
-                      </div>
-                    );
-                  })()}
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
+                <span className="flex items-center gap-[10px] min-w-0">
+                  <span
+                    className={`inline-flex items-center justify-center w-[17px] h-[17px] rounded font-mono text-[10px] font-semibold shrink-0 ${partyTone(m.party)}`}
+                  >
+                    {partyLabel(m.party)}
+                  </span>
+                  <span className="font-serif text-[18px] font-medium truncate">{m.name}</span>
+                </span>
+                <span className="hidden md:block text-[13px] text-ink-2 truncate">
+                  {STATE_NAMES[m.state] || m.state}
+                  {m.chamber === 'House' && m.district ? `, District ${m.district}` : ''}
+                </span>
+                <span className="hidden md:block font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3">
+                  {m.chamber}
+                </span>
+                <span className="hidden md:flex items-center justify-end gap-2 font-mono text-[11px] text-ink-3 tabular">
+                  {f?.overlapTrades ? (
+                    <span
+                      className="w-[6px] h-[6px] rounded-full bg-accent shrink-0"
+                      title="Traded in a sector one of their committees oversees"
+                    />
+                  ) : null}
+                  {disclosure}
+                </span>
+              </a>
+            );
+          })}
+          <p className="font-mono text-[11px] leading-[1.6] text-ink-3 border-l-2 border-rule pl-3 mt-[14px]">
+            A dot marks a member who traded in a sector one of their committees oversees — a reason
+            to look closer, not a finding of wrongdoing.
+          </p>
+        </>
       )}
     </div>
   );

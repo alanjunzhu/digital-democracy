@@ -17,27 +17,25 @@ const districtLabel = member.chamber === 'House' && member.district
 
 <a
   href={`${base}members/${member.bioguideId}/`}
-  class="block bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all p-4 group"
+  class="group flex items-start gap-3 bg-card px-4 py-[14px] hover:bg-rule-2"
 >
-  <div class="flex items-start gap-3">
-    <img
-      src={member.imageUrl}
-      alt={member.name}
-      class="w-16 h-20 object-cover rounded bg-gray-200"
-      loading="lazy"
-      onerror="this.style.display='none'"
-    />
-    <div class="flex-1 min-w-0">
-      <h3 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate">
-        {member.name}
-      </h3>
-      <div class="flex items-center gap-2 mt-1">
-        <PartyBadge party={member.party} size="sm" />
-        <ChamberBadge chamber={member.chamber} size="sm" />
-      </div>
-      <p class="text-sm text-gray-500 mt-1">
-        {formatState(member.state)}{districtLabel ? `, ${districtLabel}` : ''}
-      </p>
+  <img
+    src={member.imageUrl}
+    alt=""
+    class="w-10 h-[52px] object-cover rounded-[1px] bg-rule grayscale contrast-[1.05] shrink-0"
+    loading="lazy"
+    onerror="this.style.display='none'"
+  />
+  <div class="flex-1 min-w-0">
+    <h3 class="font-serif text-[17px] leading-[1.2] font-medium group-hover:text-accent">
+      {member.name}
+    </h3>
+    <p class="font-mono text-[11px] text-ink-3 mt-[5px]">
+      {formatState(member.state)}{districtLabel ? `, ${districtLabel}` : ''}
+    </p>
+    <div class="flex items-center gap-[6px] mt-[7px]">
+      <PartyBadge party={member.party} size="sm" />
+      <ChamberBadge chamber={member.chamber} size="sm" />
     </div>
   </div>
 </a>
