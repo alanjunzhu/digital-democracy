@@ -682,7 +682,7 @@ const pageSections = [
     {memberCommittees.length > 0 && stockTrades.length === 0 && ptrFilings.length === 0 && (
       <div id="committee-assignments" data-page-section class="pt-8">
         <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Committee assignments</h2>
-        <div class="tile-grid grid-cols-1 sm:grid-cols-2 [&>*]:p-0">
+        <div class="tile-grid grid-cols-1 sm:grid-cols-2">
           {memberCommittees.map((c: string) => {
             const code = committeeLinks[c];
             return code ? (

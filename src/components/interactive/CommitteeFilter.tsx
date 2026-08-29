@@ -103,7 +103,7 @@ export default function CommitteeFilter({ committees, baseUrl }: Props) {
           </button>
         </div>
       ) : (
-        <div className="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 [&>*]:p-0 mt-6">
+        <div className="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6">
           {filtered.map(c => (
             <a
               key={c.systemCode}

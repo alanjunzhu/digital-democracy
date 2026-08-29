@@ -140,7 +140,7 @@ const pageSections = [
           No member roster matched this committee yet.
         </p>
       ) : (
-        <div class="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 [&>*]:p-0">
+        <div class="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {committeeMembers.map((member) => (
             <MemberCard member={member} />
           ))}

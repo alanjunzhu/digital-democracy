@@ -104,7 +104,7 @@ const nf = new Intl.NumberFormat('en-US');
           All {nf.format(membersData.total)} &rarr;
         </a>
       </div>
-      <div class="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 [&>*]:p-0">
+      <div class="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {membersData.members.slice(0, 8).map((m: any) => (
           <a
             href={`${base}members/${m.bioguideId}/`}

@@ -36,6 +36,13 @@ const partyColor = (p: string) => {
   return 'text-ind';
 };
 
+// Congress.gov records one identical action per committee on a multi-committee
+// referral (same date and text repeated), so collapse consecutive duplicates.
+const actions = (bill.actions || []).filter((a, i, arr) => {
+  const prev = arr[i - 1];
+  return !prev || prev.date !== a.date || prev.text !== a.text;
+});
+
 const billStage = getBillStage(bill.latestAction);
 
 // Build progress pipeline
@@ -91,7 +98,7 @@ const pageSections = [
   { id: 'committees', label: 'Committees', when: committees.length, count: committees.length },
   { id: 'subjects', label: 'Subjects', when: bill.subjects?.length, count: bill.subjects?.length },
   { id: 'roll-call-votes', label: 'Roll Call Votes', when: billVotes.length, count: billVotes.length },
-  { id: 'action-history', label: 'Action History', when: bill.actions?.length, count: bill.actions?.length },
+  { id: 'action-history', label: 'Action History', when: actions.length, count: actions.length },
 ];
 ---
 
@@ -279,11 +286,11 @@ const pageSections = [
       )}
 
       <!-- Action History -->
-      {bill.actions && bill.actions.length > 0 && (
+      {actions.length > 0 && (
         <div id="action-history" data-page-section class="md:col-span-2 pt-8">
           <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-4">Action history</h2>
           <div>
-            {bill.actions.map(a => (
+            {actions.map(a => (
               <div class="flex items-start gap-4 py-[10px] border-b border-rule last:border-0">
                 <span class="font-mono text-[11px] text-ink-3 whitespace-nowrap min-w-[86px] tabular">{a.date}</span>
                 <span class="text-[13px] leading-[1.5] text-ink-2">{a.text}</span>
