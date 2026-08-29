@@ -22,12 +22,15 @@ const byMemberVotes = loadJSON('votes/by-member.json')?.members || {};
 
 // Member stats
 const members = membersIndex.members;
-const stateCount: Record<string, number> = {};
+const stateCount: Record<string, { count: number; democratic: number; republican: number }> = {};
 for (const m of members) {
-  stateCount[m.state] = (stateCount[m.state] || 0) + 1;
+  const bucket = stateCount[m.state] || (stateCount[m.state] = { count: 0, democratic: 0, republican: 0 });
+  bucket.count++;
+  if (m.party === 'Democratic') bucket.democratic++;
+  if (m.party === 'Republican') bucket.republican++;
 }
 const stateBreakdown = Object.entries(stateCount)
-  .map(([state, count]) => ({ state, count }))
+  .map(([state, b]) => ({ state, count: b.count, democratic: b.democratic, republican: b.republican }))
   .sort((a, b) => b.count - a.count);
 
 const memberStats = {

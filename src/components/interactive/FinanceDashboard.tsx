@@ -204,64 +204,48 @@ export default function FinanceDashboard({
         <div>
           {sectors.slice(0, 15).map(row => (
             <div key={row.sector} className="flex items-center gap-3 py-[9px] border-b border-rule last:border-0">
-              <span className="text-[13px] font-medium text-ink w-32 shrink-0 truncate">{row.sector}</span>
-              <div className="flex-1 h-1 bg-rule">
-                <div
-                  className="h-full bg-ink"
-                  style={{ width: `${sectors[0]?.totalTrades ? (row.totalTrades / sectors[0].totalTrades) * 100 : 0}%` }}
-                />
-              </div>
-              <span className="font-mono text-[11px] text-ink-2 w-16 text-right tabular">{row.totalTrades} trades</span>
-              <span className="font-mono text-[11px] text-ink-3 w-20 text-right tabular">{row.memberCount} members</span>
+              <span className="text-[13.5px] text-ink w-32 shrink-0 truncate">{row.sector}</span>
+              <span className="flex-1 flex h-1 bg-rule">
+                <span className="h-full bg-ink" style={{ width: `${row.totalTrades ? (row.purchases / row.totalTrades) * 100 : 0}%` }} />
+                <span className="h-full bg-ink-3" style={{ width: `${row.totalTrades ? (row.sales / row.totalTrades) * 100 : 0}%` }} />
+              </span>
+              <span className="font-mono text-[11.5px] text-ink-3 w-16 text-right tabular">{row.purchases} / {row.sales}</span>
               {row.overlapTrades > 0 && (
-                <span className="font-mono text-[10px] tracking-[0.06em] uppercase text-accent border border-accent rounded px-[6px] py-[1px] shrink-0">{row.overlapTrades} overlap</span>
+                <span className="font-mono text-[10px] tracking-[0.06em] uppercase text-accent shrink-0">Committee overlap</span>
               )}
             </div>
           ))}
         </div>
+        <p className="font-mono text-[10.5px] text-ink-3 mt-3">
+          Solid = purchases &middot; grey = sales. Bar length is trade count against the busiest sector, not dollar value.
+        </p>
       </section>
 
       {/* Aggregate tickers */}
       <section id="most-traded-stocks" data-page-section className="pt-8">
         <h2 className="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Most traded stocks (aggregate)</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-[12px]">
-            <thead>
-              <tr className="border-b border-ink">
-                <th className="text-left py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Ticker</th>
-                <th className="text-left py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Sector</th>
-                <th className="text-right py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Trades</th>
-                <th className="text-right py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Members</th>
-                <th className="text-right py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Overlap</th>
-                <th className="text-right py-2 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-3 font-normal">Quote</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tickers.slice(0, 25).map(row => {
-                const quoteUrl = tickerQuoteUrl(row.ticker);
-                return (
-                  <tr key={row.ticker} className="border-b border-rule">
-                    <td className="py-[6px] font-mono font-medium text-accent">{row.ticker}</td>
-                    <td className="py-[6px] text-ink-2">{row.sector || '—'}</td>
-                    <td className="py-[6px] text-right font-mono tabular">{row.totalTrades}</td>
-                    <td className="py-[6px] text-right font-mono tabular">{row.memberCount}</td>
-                    <td className="py-[6px] text-right">
-                      {row.overlapTrades > 0 ? (
-                        <span className="font-mono font-medium text-accent tabular">{row.overlapTrades}</span>
-                      ) : (
-                        <span className="text-ink-3">—</span>
-                      )}
-                    </td>
-                    <td className="py-[6px] text-right">
-                      {quoteUrl ? (
-                        <a href={quoteUrl} target="_blank" rel="noopener" className="font-mono text-[10.5px] uppercase tracking-[0.06em] text-accent hover:underline">Yahoo</a>
-                      ) : '—'}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+        <div>
+          {tickers.slice(0, 25).map(row => {
+            const quoteUrl = tickerQuoteUrl(row.ticker);
+            return (
+              <div key={row.ticker} className="grid grid-cols-[64px_minmax(0,1fr)_60px] gap-3 items-center py-[9px] border-b border-rule last:border-0">
+                {quoteUrl ? (
+                  <a href={quoteUrl} target="_blank" rel="noopener" className="font-mono text-[12px] font-medium text-accent hover:underline">{row.ticker}</a>
+                ) : (
+                  <span className="font-mono text-[12px] font-medium text-accent">{row.ticker}</span>
+                )}
+                <span className="flex items-center gap-2 min-w-0">
+                  <span className="flex-1 h-1 bg-rule">
+                    <span className="block h-full bg-ink" style={{ width: `${(row.totalTrades / (tickers[0]?.totalTrades || 1)) * 100}%` }} />
+                  </span>
+                  {row.overlapTrades > 0 && (
+                    <span className="font-mono text-[9.5px] tracking-[0.06em] uppercase text-accent shrink-0">overlap</span>
+                  )}
+                </span>
+                <span className="font-mono text-[11.5px] text-ink-2 text-right tabular">{row.totalTrades}</span>
+              </div>
+            );
+          })}
         </div>
       </section>
 

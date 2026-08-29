@@ -15,7 +15,7 @@ interface Props {
     democratic: number;
     republican: number;
     independent: number;
-    stateBreakdown: { state: string; count: number }[];
+    stateBreakdown: { state: string; count: number; democratic: number; republican: number }[];
   };
   billStats: {
     total: number;
@@ -264,11 +264,24 @@ export default function AnalyticsDashboard({ memberStats, billStats, voteStats, 
         <div className="pb-8">
           <h3 className="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">Largest delegations</h3>
           {memberStats.stateBreakdown.length > 0 ? (
-            <div>
-              {memberStats.stateBreakdown.slice(0, 15).map(s => (
-                <Bar key={s.state} label={s.state} value={s.count} max={maxState} />
-              ))}
-            </div>
+            <>
+              <div>
+                {memberStats.stateBreakdown.slice(0, 15).map(s => {
+                  const scale = maxState > 0 ? s.count / maxState : 0;
+                  return (
+                    <div key={s.state} className="grid grid-cols-[minmax(0,1fr)_110px_34px] gap-3 items-center py-[9px] border-b border-rule">
+                      <span className="text-[13.5px] text-ink-2 truncate">{s.state}</span>
+                      <span className="flex h-1 bg-rule">
+                        <span className="h-full bg-dem" style={{ width: `${s.count > 0 ? (s.democratic / s.count) * 100 * scale : 0}%` }} />
+                        <span className="h-full bg-rep" style={{ width: `${s.count > 0 ? (s.republican / s.count) * 100 * scale : 0}%` }} />
+                      </span>
+                      <span className="font-mono text-[11.5px] text-ink-2 w-8 text-right tabular">{s.count}</span>
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="font-mono text-[10px] text-ink-3 mt-2">Bar split is the delegation's own party mix — D left, R right.</p>
+            </>
           ) : (
             <p className="text-[13px] text-ink-3">No member data available yet.</p>
           )}

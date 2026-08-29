@@ -11,18 +11,36 @@ try {
 } catch {}
 
 const base = import.meta.env.BASE_URL;
+
+const committees: any[] = committeesData.committees;
+const houseCount = committees.filter((c: any) => c.chamber === 'House').length;
+const senateCount = committees.filter((c: any) => c.chamber === 'Senate').length;
+const jointCount = committees.filter((c: any) => c.chamber === 'Joint').length;
 ---
 
 <Layout title="Committees" description="Browse all committees of the US Congress. Filter by chamber.">
   <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
-    <div class="pb-[18px] border-b border-ink">
-      <p class="eyebrow mb-3">Structure</p>
-      <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">
-        Committees
-      </h1>
-      <p class="font-mono text-[11px] tracking-[0.06em] uppercase text-ink-3 mt-3">
-        {committeesData.congress}th Congress &middot; {committeesData.total} committees
-      </p>
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-6 lg:gap-10 items-end pb-[18px] border-b border-ink">
+      <div>
+        <p class="eyebrow mb-3">Where bills go</p>
+        <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">
+          Committees
+        </h1>
+      </div>
+      <div class="flex flex-wrap gap-8 pb-1">
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{houseCount}</div>
+          <div class="field-label mt-[2px]">House</div>
+        </div>
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{senateCount}</div>
+          <div class="field-label mt-[2px]">Senate</div>
+        </div>
+        <div>
+          <div class="font-serif text-[26px] font-medium tabular">{jointCount}</div>
+          <div class="field-label mt-[2px]">Joint</div>
+        </div>
+      </div>
     </div>
 
     {committeesData.committees.length > 0 ? (
