@@ -38,6 +38,33 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "hr1869",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 1869,
+      "relationshipType": "Reported By",
+      "actionDate": "2026-08-27",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1869"
+    },
+    {
+      "billId": "hr625",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 625,
+      "relationshipType": "Reported By",
+      "actionDate": "2026-08-27",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/625"
+    },
+    {
+      "billId": "hr7730",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 7730,
+      "relationshipType": "Reported By",
+      "actionDate": "2026-08-27",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7730"
+    },
+    {
       "billId": "hr8476",
       "congress": 119,
       "type": "H.R.",
@@ -54,15 +81,6 @@
       "relationshipType": "Markup By",
       "actionDate": "2026-07-15",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3100"
-    },
-    {
-      "billId": "hr625",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 625,
-      "relationshipType": "Markup By",
-      "actionDate": "2026-07-15",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/625"
     },
     {
       "billId": "hr7651",
@@ -108,6 +126,105 @@
       "relationshipType": "Reported By",
       "actionDate": "2026-07-06",
       "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1"
+    },
+    {
+      "billId": "hr9429",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9429,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9429"
+    },
+    {
+      "billId": "hr9432",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9432,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9432"
+    },
+    {
+      "billId": "hr9435",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9435,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9435"
+    },
+    {
+      "billId": "hr9437",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9437,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9437"
+    },
+    {
+      "billId": "hr9440",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9440,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9440"
+    },
+    {
+      "billId": "hr9443",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9443,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9443"
+    },
+    {
+      "billId": "hr9445",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9445,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9445"
+    },
+    {
+      "billId": "hr9447",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9447,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9447"
+    },
+    {
+      "billId": "hres1384",
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1384,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1384"
+    },
+    {
+      "billId": "hr9399",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9399,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-23",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9399"
+    },
+    {
+      "billId": "hr9401",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9401,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-06-23",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9401"
     },
     {
       "billId": "hr9408",
@@ -684,15 +801,6 @@
       "relationshipType": "Markup By",
       "actionDate": "2026-06-03",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/175"
-    },
-    {
-      "billId": "hr1869",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 1869,
-      "relationshipType": "Markup By",
-      "actionDate": "2026-06-03",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1869"
     },
     {
       "billId": "hr5437",
@@ -2178,114 +2286,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-04-28",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/8564"
-    },
-    {
-      "billId": "hres1220",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 1220,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-28",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1220"
-    },
-    {
-      "billId": "hres1222",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 1222,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-28",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1222"
-    },
-    {
-      "billId": "hr8506",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8506,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-27",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8506"
-    },
-    {
-      "billId": "hr8512",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8512,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-27",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8512"
-    },
-    {
-      "billId": "hr8515",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8515,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-27",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8515"
-    },
-    {
-      "billId": "hr8516",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8516,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-27",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8516"
-    },
-    {
-      "billId": "hres1216",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 1216,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-27",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1216"
-    },
-    {
-      "billId": "hres1217",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 1217,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-27",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1217"
-    },
-    {
-      "billId": "hr8460",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8460,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-23",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8460"
-    },
-    {
-      "billId": "hr8470",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8470,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-23",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8470"
-    },
-    {
-      "billId": "hr8480",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8480,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-23",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8480"
-    },
-    {
-      "billId": "hr8481",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8481,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-23",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8481"
     }
   ]
 }

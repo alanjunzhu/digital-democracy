@@ -5,8 +5,17 @@
   "committeeType": "Standing",
   "isSubcommittee": false,
   "url": "https://www.congress.gov/committee/house-ethics/hsso00",
-  "billCount": 38,
+  "billCount": 39,
   "bills": [
+    {
+      "billId": "hres1498",
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1498,
+      "relationshipType": "Reported Original Measure",
+      "actionDate": "2026-08-03",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1498"
+    },
     {
       "billId": "hres1465",
       "congress": 119,
@@ -147,7 +156,7 @@
       "congress": 119,
       "type": "H.Res.",
       "number": 1100,
-      "relationshipType": "Unknown",
+      "relationshipType": "Referred To",
       "actionDate": "2026-03-04",
       "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1100"
     },

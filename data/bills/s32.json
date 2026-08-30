@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "S.",
-  "number": "32",
+  "number": 32,
   "billId": "s32",
   "title": "LACA",
   "introducedDate": "2025-01-08",
@@ -13,13 +13,29 @@
   },
   "latestAction": "Held at the desk.",
   "latestActionDate": "2025-02-13",
+  "updateDate": "2026-08-28T08:05:55Z",
   "originChamber": "Senate",
   "policyArea": "Law",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
   "summary": "<p><strong>Local Access to Courts Act or LACA</strong></p><p>This bill adds College Station to the list of places where court must be held in the Galveston Division of the Southern District of Texas.&nbsp;</p><p>Additionally, the bill adds El Centro to the list of places where court must be held in the Southern District of California.&nbsp;</p><p>&nbsp;</p>",
   "cosponsors": 1,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "ssju00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2025-02-13T01:38:04Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-08T16:32:33Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
