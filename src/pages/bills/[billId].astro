@@ -4,7 +4,7 @@ import PageIndex from '../../components/layout/PageIndex.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import type { BillDetail, CommitteeSummary } from '../../lib/types';
-import { getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
+import { getBillStage, STAGE_COLORS, BILL_STAGES, getVoteOutcome, getVoteVerdict } from '../../lib/utils';
 import { buildCommitteeLookup, normalizeBillCommittees, resolveCommittee } from '../../lib/committees';
 import { getBillTextWebUrl, getBillWebUrl } from '../../../shared/congress-urls.mjs';
 
@@ -247,7 +247,7 @@ const pageSections = [
           </h2>
           <div>
             {billVotes.map((v: any) => {
-              const agreed = v.result === 'Passed' || v.result === 'Agreed to';
+              const outcome = getVoteOutcome(v.result);
               const total = v.totalYea + v.totalNay;
               const yeaPct = total > 0 ? Math.round((v.totalYea / total) * 100) : 50;
               const castLower = String(v.sponsorVote || '').toLowerCase();
@@ -263,8 +263,8 @@ const pageSections = [
                   </div>
                   <div class="text-right">
                     <div class="flex items-baseline justify-between gap-2">
-                      <span class={`font-mono text-[10.5px] font-semibold tracking-[0.05em] uppercase ${agreed ? 'text-yea' : 'text-accent'}`}>
-                        {agreed ? 'Agreed' : 'Rejected'}
+                      <span class={`font-mono text-[10.5px] font-semibold tracking-[0.05em] uppercase ${outcome === 'agreed' ? 'text-yea' : outcome === 'rejected' ? 'text-accent' : 'text-ink-3'}`}>
+                        {getVoteVerdict(v.result)}
                       </span>
                       <span class="font-mono text-[12px] text-ink-2 tabular">{v.totalYea}&ndash;{v.totalNay}</span>
                     </div>

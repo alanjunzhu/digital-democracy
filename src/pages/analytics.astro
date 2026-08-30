@@ -8,6 +8,8 @@ import {
   rankPartyAlignment,
   summarizePartyLineVotes,
 } from '../lib/party-alignment';
+import { getVoteOutcome } from '../lib/utils';
+import { loadRecountedBreakdowns } from '../../shared/policy-data.mjs';
 
 function loadJSON(path: string) {
   try { return JSON.parse(readFileSync(join(process.cwd(), 'data', path), 'utf-8')); }
@@ -61,23 +63,27 @@ const billStats = {
 
 // Vote stats + party alignment
 const votes = votesIndex.votes || [];
-const passed = votes.filter((v: any) => {
-  const r = String(v.result || '').toLowerCase();
-  return r.includes('pass') || r.includes('agreed') || r.includes('confirm') || r.includes('concur');
-}).length;
-const failed = votes.filter((v: any) => {
-  const r = String(v.result || '').toLowerCase();
-  return r.includes('fail') || r.includes('reject');
-}).length;
+const passed = votes.filter((v: any) => getVoteOutcome(v.result) === 'agreed').length;
+const failed = votes.filter((v: any) => getVoteOutcome(v.result) === 'rejected').length;
 const totalYea = votes.reduce((sum: number, v: any) => sum + (v.totalYea || 0), 0);
 const totalNay = votes.reduce((sum: number, v: any) => sum + (v.totalNay || 0), 0);
 
+// The stored partyBreakdown files every House member under `democratic` and
+// leaves `republican` at zero, so no House roll call can ever register a
+// D-vs-R split — which rendered as a flat "House 0% (0/501)" party-line rate
+// and dropped most House members out of the alignment ranking entirely.
+// Recount from the individual casts, exactly as the member profile does.
+const recountedBreakdowns = loadRecountedBreakdowns();
+
 const voteBreakdownById: Record<string, any> = {};
 for (const v of votes) {
-  if (v.voteId && v.partyBreakdown) voteBreakdownById[v.voteId] = v.partyBreakdown;
+  const breakdown = recountedBreakdowns[v.voteId] || v.partyBreakdown;
+  if (v.voteId && breakdown) voteBreakdownById[v.voteId] = breakdown;
 }
 
-const partyLine = summarizePartyLineVotes(votes);
+const partyLine = summarizePartyLineVotes(
+  votes.map((v: any) => ({ ...v, partyBreakdown: voteBreakdownById[v.voteId] || v.partyBreakdown })),
+);
 const houseLoyalists = rankPartyAlignment(members, byMemberVotes, voteBreakdownById, { chamber: 'House', limit: 8 });
 const senateLoyalists = rankPartyAlignment(members, byMemberVotes, voteBreakdownById, { chamber: 'Senate', limit: 8 });
 const houseRebels = rankPartyAlignment(members, byMemberVotes, voteBreakdownById, { chamber: 'House', limit: 8, order: 'asc' });

@@ -1,13 +1,12 @@
 import { useState, useMemo } from 'react';
 import type { VoteSummary } from '../../lib/types';
+import { getVoteOutcome, getVoteVerdict } from '../../lib/utils';
 
 interface Props {
   votes: VoteSummary[];
   baseUrl: string;
 }
 
-const AGREED_RESULTS = new Set(['Passed', 'Agreed to', 'Confirmed']);
-const REJECTED_RESULTS = new Set(['Failed', 'Rejected', 'Not Sustained']);
 
 export default function VoteFilter({ votes, baseUrl }: Props) {
   const [search, setSearch] = useState('');
@@ -30,8 +29,7 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
   const filtered = useMemo(() => {
     return votes.filter(v => {
       if (chamber !== 'all' && v.chamber !== chamber) return false;
-      if (result === 'agreed' && !AGREED_RESULTS.has(v.result)) return false;
-      if (result === 'rejected' && !REJECTED_RESULTS.has(v.result)) return false;
+      if (result !== 'all' && getVoteOutcome(v.result) !== result) return false;
       if (topic !== 'all') {
         const vTopic = (v as any).topic || 'Uncategorized';
         if (vTopic !== topic) return false;
@@ -156,8 +154,7 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
       ) : (
         <div>
           {filtered.map(v => {
-            const agreed = AGREED_RESULTS.has(v.result);
-            const rejected = REJECTED_RESULTS.has(v.result);
+            const outcome = getVoteOutcome(v.result);
             const yeaPct = barWidth(v.totalYea, v.totalNay);
             return (
               <a
@@ -202,10 +199,10 @@ export default function VoteFilter({ votes, baseUrl }: Props) {
                   <div className="flex items-baseline justify-between gap-3">
                     <span
                       className={`font-mono text-[11px] font-semibold tracking-[0.05em] uppercase ${
-                        agreed ? 'text-yea' : rejected ? 'text-accent' : 'text-ink-3'
+                        outcome === 'agreed' ? 'text-yea' : outcome === 'rejected' ? 'text-accent' : 'text-ink-3'
                       }`}
                     >
-                      {agreed ? 'Agreed' : rejected ? 'Rejected' : v.result}
+                      {getVoteVerdict(v.result)}
                     </span>
                     <span className="font-serif text-[20px] font-medium tabular">
                       {v.totalYea}&ndash;{v.totalNay}

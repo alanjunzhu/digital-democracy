@@ -108,3 +108,7 @@ export const STAGE_COLORS: Record<BillStage, { bg: string; text: string; dot: st
   'Vetoed': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-accent' },
   'Other': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-ink-3' },
 };
+
+// Vote-result classification lives in shared/ so the data tests can exercise
+// it directly; re-exported here as the single import site for pages.
+export { getVoteOutcome, getVoteVerdict } from '../../shared/vote-outcome.mjs';
