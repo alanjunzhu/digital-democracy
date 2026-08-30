@@ -1,0 +1,52 @@
+{
+  "eventId": "119514",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Supporting Working Families: State-Led Child Care Solutions”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-01T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed14",
+      "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119514?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Ryan Page",
+      "position": "Director of Child Care, Iowa Department of Health and Human Services",
+      "organization": ""
+    },
+    {
+      "name": "Ms. Kate Shanks",
+      "position": "Senior Vice President of Public Affairs",
+      "organization": "Kentucky Chamber of Commerce"
+    },
+    {
+      "name": "Ms. Hanna Melnick",
+      "position": "Senior Policy Advisor and Director of Early Learning Policy",
+      "organization": "Learning Policy Institute"
+    },
+    {
+      "name": "Ms. Jude White",
+      "position": "Assistant Commissioner for Child Care and Community Services",
+      "organization": "Tennessee Department of Human Services"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119514/documents/HHRG-119-ED14-20260901-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

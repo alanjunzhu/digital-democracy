@@ -1,0 +1,68 @@
+{
+  "eventId": "119467",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "A Review of the Office of Space Commerce’s Mission Authorization Proposal",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssy16",
+      "name": "House Science, Space, and Technology Subcommittee on Space and Aeronautics"
+    }
+  ],
+  "location": {
+    "room": "2318",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119467?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Taylor Jordan",
+      "position": "Director of the Office of Space Commerce",
+      "organization": "National Oceanic and Atmospheric Administration"
+    }
+  ],
+  "videos": [
+    {
+      "name": "“A Review of the Office of Space Commerce’s Mission Authorization Proposal”",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119467",
+      "format": ""
+    },
+    {
+      "name": "“A Review of the Office of Space Commerce’s Mission Authorization Proposal”",
+      "url": "https://www.youtube.com/watch?v=FsSGuBPdBKQ",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119467/documents/HHRG-119-SY16-20260715-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Brian Babin",
+      "url": "https://www.congress.gov/119/meeting/house/119467/documents/HHRG-119-SY16-MState-B001291-20260715.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Mike Haridopolos",
+      "url": "https://www.congress.gov/119/meeting/house/119467/documents/HHRG-119-SY16-MState-H001099-20260715.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Zoe Lofgren",
+      "url": "https://www.congress.gov/119/meeting/house/119467/documents/HHRG-119-SY16-MState-L000397-20260715.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Valerie P. Foushee",
+      "url": "https://www.congress.gov/119/meeting/house/119467/documents/HHRG-119-SY16-MState-F000477-20260715.pdf",
+      "format": "PDF"
+    }
+  ]
+}

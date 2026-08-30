@@ -1,0 +1,63 @@
+{
+  "eventId": "119451",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Ending Supply Chain Dependency: Aligning Tools, Capital, and Partnerships",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa00",
+      "name": "House Foreign Affairs"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119451?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Dan Petrie",
+      "position": "Acting Chief of Staff",
+      "organization": "Millennium Challenge Corporation"
+    },
+    {
+      "name": "Mr. Thomas Hardy",
+      "position": "Deputy Director / Chief Operating Officer",
+      "organization": "U.S. Trade and Development Agency"
+    },
+    {
+      "name": "Mr. Ben Black",
+      "position": "Chief Executive Officer",
+      "organization": "U.S. International Development Finance Corporation"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Ending Supply Chain Dependency: Aligning Tools, Capital, and Partnerships",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119451",
+      "format": ""
+    },
+    {
+      "name": "Ending Supply Chain Dependency: Aligning Tools, Capital, and Partnerships",
+      "url": "https://www.youtube.com/watch?v=dt2FpOVTtxI",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119451/documents/HHRG-119-FA00-20260715-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119451/documents/HHRG-119-FA00-20260715-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

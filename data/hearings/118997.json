@@ -1,0 +1,52 @@
+{
+  "eventId": "118997",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "\"Proposals for a Water Resources Development Act of 2026 - Administration Priorities\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-02-24T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw02",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118997?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Adam Telle",
+      "position": "Assistant Secretary",
+      "organization": "United States Army (Civil Works)"
+    },
+    {
+      "name": "Lieutenant General William Graham",
+      "position": "Chief of Engineers and Commanding General",
+      "organization": "United States Army Corps of Engineers"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118997/documents/HMTG-119-PW02-20260224-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/118997/documents/HMTG-119-PW02-20260224-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/118997/documents/CHRG-119hhrg64140.pdf",
+      "format": "PDF"
+    }
+  ]
+}

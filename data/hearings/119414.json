@@ -1,0 +1,62 @@
+{
+  "eventId": "119414",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "Fiscal Year 2027 Defense Bill",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-24T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsap00",
+      "name": "House Appropriations"
+    }
+  ],
+  "location": {
+    "room": "2359",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119414?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Full Committee Markup of the FY27 Defense Bill",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119414",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Markup of the FY27 Defense Bill",
+      "url": "https://www.youtube.com/watch?v=K0kj5hEGTJw",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice of FY27 Full Committee Markup – Defense Bill",
+      "url": "https://www.congress.gov/119/meeting/house/119414/documents/HMKP-119-AP00-20260624-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "FY27 Defense – Full Committee Mark",
+      "url": "https://www.congress.gov/119/meeting/house/119414/documents/BILLS-119-FC-AP-FY2027-AP00-FY27DefenseFullCommitteeMark.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "FY27 Defense – Report",
+      "url": "https://www.congress.gov/119/meeting/house/119414/documents/HMKP-119-AP00-20260624-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "FY27 Defense – Amendments",
+      "url": "https://www.congress.gov/119/meeting/house/119414/documents/HMKP-119-AP00-20260624-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "FY27 Defense – Roll Call Votes",
+      "url": "https://www.congress.gov/119/meeting/house/119414/documents/HMKP-119-AP00-20260624-SD004.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "eventId": "119533",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Industrial Base and Workforce Development for Skilled Trades",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-04T17:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsap02",
+      "name": "House Appropriations Subcommittee on Defense"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119533?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Michael Cadenazzi",
+      "position": "Assistant Secretary of War for Industrial Base Policy",
+      "organization": "U.S. Department of War"
+    },
+    {
+      "name": "Mr. Eric Chewning",
+      "position": "Executive Vice President, Maritime Systems & Corporate Strategy",
+      "organization": "Huntington Ingalls Industries"
+    },
+    {
+      "name": "Dr. Michael Reed",
+      "position": "President",
+      "organization": "Pennsylvania College of Technology"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": []
+}

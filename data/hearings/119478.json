@@ -1,0 +1,68 @@
+{
+  "eventId": "119478",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Examining Customer Protections and Market Integrity in Sports Event Prediction Markets\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-21T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsag22",
+      "name": "House Agriculture Subcommittee on Commodity Markets, Digital Assets, and Rural Development"
+    }
+  ],
+  "location": {
+    "room": "1300",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119478?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Robert Schwartz",
+      "position": "Partner",
+      "organization": "Morgan, Lewis & Bockius"
+    },
+    {
+      "name": "Mr. David Bean",
+      "position": "Chairman",
+      "organization": "Indian Gaming Association"
+    },
+    {
+      "name": "Mr. Christopher Cylke",
+      "position": "Senior Vice President, Government Relations",
+      "organization": "American Gaming Association"
+    },
+    {
+      "name": "Mr. Carl Kennedy",
+      "position": "Partner, Co-Chair, Financial Markets and Regulation Practices",
+      "organization": "Katten Muchin Rosenman LLP"
+    },
+    {
+      "name": "Mr. Asaf Meir",
+      "position": "Founder & Chief Executive Officer",
+      "organization": "Solidus Labs"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Examining Customer Protections and Market Integrity in Sports Event Prediction Markets",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119478",
+      "format": ""
+    },
+    {
+      "name": "Examining Customer Protections and Market Integrity in Sports Event Prediction Markets",
+      "url": "https://www.youtube.com/watch?v=UJvIH_CrYiQ",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Witness-List_07.21.2026",
+      "url": "https://www.congress.gov/119/meeting/house/119478/documents/HHRG-119-AG22-WList-20260721-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

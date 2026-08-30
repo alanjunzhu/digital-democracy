@@ -1,0 +1,27 @@
+{
+  "eventId": "119513",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Committee Business to Consider: Review of the 9/11 Commission Report",
+  "meetingStatus": "Scheduled",
+  "date": "2026-08-31T17:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hlig00",
+      "name": "House Intelligence (Permanent Select)"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119513?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "9/11 Commission Report",
+      "url": "https://www.congress.gov/119/meeting/house/119513/documents/HRPT-119-1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "eventId": "119341",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Connecting Rural America to the National Airspace System\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-04T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw05",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119341?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Gregory Pecoraro",
+      "position": "President and Chief Executive Officer",
+      "organization": "National Association of State Aviation Officials (NASAO)"
+    },
+    {
+      "name": "Ms. Faye Black",
+      "position": "President and Chief Executive Officer",
+      "organization": "Regional Airlines Association (RAA)"
+    },
+    {
+      "name": "Mr. Shawn Dobberstein",
+      "position": "Executive Director",
+      "organization": "Fargo Airport Authority"
+    },
+    {
+      "name": "Mr. Derrick Collins",
+      "position": "Director, Physical Infrastructure",
+      "organization": "United States Government Accountability Office"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Connecting Rural America to the National Airspace System",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119341",
+      "format": ""
+    },
+    {
+      "name": "Connecting Rural America to the National Airspace System",
+      "url": "https://www.youtube.com/watch?v=EnCKTzC3ugI",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119341/documents/CHRG-119hhrg64295.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/119341/documents/HHRG-119-PW05-20260604-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119341/documents/HHRG-119-PW05-20260604-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

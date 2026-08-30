@@ -1,0 +1,46 @@
+{
+  "eventId": "338509",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine S.630, to authorize the Secretary of the Treasury to make payments to the Quapaw Nation and certain members of the Quapaw Nation in accordance with the recommendation of the United States Court of Federal Claims, S.1514 and H.R.2389, bills to take certain land in the State of Washington into trust for the benefit of the Quinault Indian Nation, S.2796, to provide for a land exchange in San Bernardino County, California, S.2871 and H.R.2400, bills to take certain Federal land in the State of California into trust for the benefit of the Pit River Tribe, S.3219, to transfer certain Federal land into trust for certain Indian Pueblos in the State of New Mexico, and S.3475 and H.R.2916, bills to authorize, ratify, and confirm the Agreement of Settlement and Compromise to Resolve the Akwesasne Mohawk Land Claim in the State of New York.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-03T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "slia00",
+      "name": "Senate Indian Affairs"
+    }
+  ],
+  "location": {
+    "room": "628",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr2389",
+    "hr2400",
+    "hr2916",
+    "s1514",
+    "s2796",
+    "s2871",
+    "s3219",
+    "s3475",
+    "s630"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338509?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine S.630, to authorize the Secretary of the Treasury to make payments to the Quapaw Nation and certain members of the Quapaw Nation in accordance with the recommendation of the United States Court of Federal Claims, S.1514 and H.R.2389, bills to take certain land in the State of Washington into trust for the benefit of the Quinault Indian Nation, S.2796, to provide for a land exchange in San Bernardino County, California, S.2871 and H.R.2400, bills to take certain Federal land in the State of California into trust for the benefit of the Pit River Tribe, S.3219, to transfer certain Federal land into trust for certain Indian Pueblos in the State of New Mexico, and S.3475 and H.R.2916, bills to authorize, ratify, and confirm the Agreement of Settlement and Compromise to Resolve the Akwesasne Mohawk Land Claim in the State of New York.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338509",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine S.630, to authorize the Secretary of the Treasury to make payments to the Quapaw Nation and certain members of the Quapaw Nation in accordance with the recommendation of the United States Court of Federal Claims, S.1514 and H.R.2389, bills to take certain land in the State of Washington into trust for the benefit of the Quinault Indian Nation, S.2796, to provide for a land exchange in San Bernardino County, California, S.2871 and H.R.2400, bills to take certain Federal land in the State of California into trust for the benefit of the Pit River Tribe, S.3219, to transfer certain Federal land into trust for certain Indian Pueblos in the State of New Mexico, and S.3475 and H.R.2916, bills to authorize, ratify, and confirm the Agreement of Settlement and Compromise to Resolve the Akwesasne Mohawk Land Claim in the State of New York.",
+      "url": "https://www.senate.gov/isvp/?comm=indian&filename=indian060326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

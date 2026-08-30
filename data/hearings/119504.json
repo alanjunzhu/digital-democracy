@@ -1,0 +1,31 @@
+{
+  "eventId": "119504",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Committee on House Administration Joint Deposition of Matt DeBergalis",
+  "meetingStatus": "Scheduled",
+  "date": "2026-08-20T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsha00",
+      "name": "Committee on House Administration"
+    }
+  ],
+  "location": {
+    "room": "2237",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119504?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119504/documents/HMTG-119-HA00-20260820-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

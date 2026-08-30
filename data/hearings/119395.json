@@ -1,0 +1,48 @@
+{
+  "eventId": "119395",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"To Review the Implementation of Farm Safety Net, Disaster, and Conservation Programs\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-24T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsag00",
+      "name": "House Agriculture"
+    }
+  ],
+  "location": {
+    "room": "1300",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119395?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Richard Fordyce",
+      "position": "Under Secretary, Farm Production and Conservation",
+      "organization": "United States Department of Agriculture"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing on the Implementation of Farm Safety Net, Disaster, and Conservation Programs",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119395",
+      "format": ""
+    },
+    {
+      "name": "Hearing on the Implementation of Farm Safety Net, Disaster, and Conservation Programs",
+      "url": "https://www.youtube.com/watch?v=WNx8cqv3-jk",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Witness-List_06.24.2026",
+      "url": "https://www.congress.gov/119/meeting/house/119395/documents/HHRG-119-AG00-WList-20260624.pdf",
+      "format": "PDF"
+    }
+  ]
+}

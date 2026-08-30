@@ -1,0 +1,69 @@
+{
+  "eventId": "119383",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "Markup of H.R. 9250 (Rep. Westerman), “Great American Outdoors Act 250”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-24T14:30:00Z",
+  "committees": [
+    {
+      "systemCode": "hsii00",
+      "name": "House Natural Resources"
+    }
+  ],
+  "location": {
+    "room": "1324",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr9250"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119383?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Full Committee Markup",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119383",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Markup",
+      "url": "https://www.youtube.com/watch?v=vMAeIPeQfqY",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "• H.R. 9250 (Rep. Westerman), “Great American Outdoors Act 250”",
+      "url": "https://www.congress.gov/119/meeting/house/119383/documents/BILLS-119HR9250ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Markup Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119383/documents/HMKP-119-II00-20260624-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9250 Westerman_081 ANS",
+      "url": "https://www.congress.gov/119/meeting/house/119383/documents/BILLS-119-HR9250-W000821-Amdt-081ANS.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9250 Magaziner #1 to ANS",
+      "url": "https://www.congress.gov/119/meeting/house/119383/documents/BILLS-119-HR9250-M001223-Amdt-1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Markup Committee Action",
+      "url": "https://www.congress.gov/119/meeting/house/119383/documents/HMKP-119-II00-20260624-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Markup Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119383/documents/HMKP-119-II00-20260624-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

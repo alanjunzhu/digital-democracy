@@ -1,0 +1,63 @@
+{
+  "eventId": "119404",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“From Startup to Scale: The Role of the SBA Office of Investment and Innovation in Powering America’s Small Businesses.”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-25T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssm00",
+      "name": "House Small Business"
+    }
+  ],
+  "location": {
+    "room": "2360",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119404?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Joshua Carter",
+      "position": "Associate Administrator",
+      "organization": "Office of Investment and Innovation, U.S. Small Business Administration"
+    }
+  ],
+  "videos": [
+    {
+      "name": "The Role of the SBA Office of Investment and Innovation in Powering America’s Small Businesses",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119404",
+      "format": ""
+    },
+    {
+      "name": "The Role of the SBA Office of Investment and Innovation in Powering America’s Small Businesses",
+      "url": "https://www.youtube.com/watch?v=Fs9TgIKR0Zg",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Public Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119404/documents/HHRG-119-SM00-20260625-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Public Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119404/documents/HHRG-119-SM00-20260625-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "UC-Majority-SBIA-Letter for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119404/documents/HHRG-119-SM00-20260625-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119404/documents/HHRG-119-SM00-20260625-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "eventId": "119477",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight of the Federal Home Loan Bank System",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-21T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba04",
+      "name": "House Financial Services Subcommittee on Housing and Insurance"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119477?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Ryan Donovan",
+      "position": "President and Chief Executive Officer",
+      "organization": "Council of Federal Home Loan Banks"
+    },
+    {
+      "name": "Mr. Barry Lockard",
+      "position": "President and Chief Executive Officer",
+      "organization": "Cornhusker Bank"
+    },
+    {
+      "name": "Professor Kathryn Judge",
+      "position": "Harvey J. Goldschmid Professor of Law",
+      "organization": "Columbia University"
+    },
+    {
+      "name": "Ms. Jill Naamane",
+      "position": "Director",
+      "organization": "U.S. Government Accountability Office"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Oversight of the Federal Home Loan Bank System",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119477",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Oversight of the Federal Home Loan Bank System",
+      "url": "https://www.youtube.com/watch?v=oDY-mcwOYe0",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119477/documents/HHRG-119-BA04-20260721-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____, the Federal Home Loan Bank Mortgage Asset Modernization Act",
+      "url": "https://www.congress.gov/119/meeting/house/119477/documents/BILLS-119pih-establishesfreestandingstatu.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____, the Federal Home Loan Bank Advances as Core Funding Act",
+      "url": "https://www.congress.gov/119/meeting/house/119477/documents/BILLS-119pih-definesFHLBadvances.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____, the Federal Home Loan Bank Membership Clarification Act",
+      "url": "https://www.congress.gov/119/meeting/house/119477/documents/BILLS-119pih-clarifiesthestatutoryrequir.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____, the Federal Home Loan Bank Capital Clarification Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119477/documents/BILLS-119pih-clarifiesthestatutorycapita.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____, a bill to increase the mandatory contribution amount of Federal Home Loan Banks to the Affordable Housing Program, and for other purposes",
+      "url": "https://www.congress.gov/119/meeting/house/119477/documents/BILLS-119pih-increasestheFHLBanksstatut.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119477/documents/HHRG-119-BA04-20260721-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

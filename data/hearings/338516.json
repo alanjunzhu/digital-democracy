@@ -1,0 +1,25 @@
+{
+  "eventId": "338516",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Closed Markup Session",
+  "title": "Closed business meeting to markup the National Defense Authorization Act for fiscal year 2027.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-09T13:15:00Z",
+  "committees": [
+    {
+      "systemCode": "ssas20",
+      "name": "Senate Armed Services Subcommittee on Emerging Threats and Capabilities"
+    }
+  ],
+  "location": {
+    "room": "232A",
+    "building": "Russell Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338516?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

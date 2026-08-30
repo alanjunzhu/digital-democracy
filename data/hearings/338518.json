@@ -1,0 +1,25 @@
+{
+  "eventId": "338518",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Closed Markup Session",
+  "title": "Closed business meeting to markup the National Defense Authorization Act for fiscal year 2027.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-09T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssas14",
+      "name": "Senate Armed Services Subcommittee on Airland"
+    }
+  ],
+  "location": {
+    "room": "232A",
+    "building": "Russell Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338518?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

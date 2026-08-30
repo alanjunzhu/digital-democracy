@@ -1,0 +1,57 @@
+{
+  "eventId": "119425",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Full Committee Hearing on The Growing Business of Sports: Reviewing Federal Tax Policy in the Multibillion-Dollar Industry",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-30T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hswm00",
+      "name": "House Ways and Means"
+    }
+  ],
+  "location": {
+    "room": "1100",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119425?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Sam Acho",
+      "position": "ESPN Analyst",
+      "organization": "Director of Human Capital at AWM Capital"
+    },
+    {
+      "name": "Mr. Thad Madden",
+      "position": "NIL Tax Consultant",
+      "organization": "Former IRS Revenue Officer and Fraud Analyst"
+    },
+    {
+      "name": "Mr. Robert Raiola",
+      "position": "CPA, Director, Sports and Entertainment Practive",
+      "organization": "PKF O’Connor Davis, LLP"
+    },
+    {
+      "name": "Dr. Dennis Coates",
+      "position": "Professor at University of Maryland",
+      "organization": ""
+    }
+  ],
+  "videos": [
+    {
+      "name": "Committee Hearing on Growing Business of Sports: Federal Tax Policy in Multi-Billion Dollar Industry",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119425",
+      "format": ""
+    },
+    {
+      "name": "Committee Hearing on Growing Business of Sports: Federal Tax Policy in Multi-Billion Dollar Industry",
+      "url": "https://www.youtube.com/watch?v=iXcL5vv_3A8",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

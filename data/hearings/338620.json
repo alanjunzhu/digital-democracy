@@ -1,0 +1,25 @@
+{
+  "eventId": "338620",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Closed Hearing",
+  "title": "To receive a closed briefing on the Department of War's fiscal year 2027 budget request.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T20:30:00Z",
+  "committees": [
+    {
+      "systemCode": "sseg00",
+      "name": "Senate Energy and Natural Resources"
+    }
+  ],
+  "location": {
+    "room": "217",
+    "building": "Capitol Visitor Center (Senate side",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338620?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

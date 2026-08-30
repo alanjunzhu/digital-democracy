@@ -1,0 +1,88 @@
+{
+  "eventId": "119338",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Building an AI-Ready America: Higher Education in the Age of AI\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-03T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed13",
+      "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119338?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Michael Horn",
+      "position": "Author & Adjunct Professor",
+      "organization": "Harvard Graduate School of Education"
+    },
+    {
+      "name": "Mr. Michael Horn",
+      "position": "Author & Adjunct Professor",
+      "organization": "Harvard Graduate School of Education"
+    },
+    {
+      "name": "Mr. Jonathan Fozard",
+      "position": "Chief Information Officer",
+      "organization": "Florida State University"
+    },
+    {
+      "name": "Dr. Dave Duke",
+      "position": "Chief Product Officer for Higher Education",
+      "organization": "McGraw Hill"
+    },
+    {
+      "name": "Dr. Bridget Burns",
+      "position": "CEO",
+      "organization": "University Innovation Alliance"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Building an AI-Ready America: Higher Education in the Age of AI",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119338",
+      "format": ""
+    },
+    {
+      "name": "Building an AI-Ready America: Higher Education in the Age of AI",
+      "url": "https://www.youtube.com/watch?v=kfRYHhh8yD4",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119338/documents/HHRG-119-ED13-20260603-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Tim Walberg | Submission for the Record | SHRM Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119338/documents/HHRG-119-ED13-20260603-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Alma S. Adams | Submission for the Record | Ellucian Report",
+      "url": "https://www.congress.gov/119/meeting/house/119338/documents/HHRG-119-ED13-20260603-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Suzanne Bonamici | Submission for the Record | New York Times Article",
+      "url": "https://www.congress.gov/119/meeting/house/119338/documents/HHRG-119-ED13-20260603-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Alma S. Adams | Submission for the Record | Statement for Bridget Burns",
+      "url": "https://www.congress.gov/119/meeting/house/119338/documents/HHRG-119-ED13-20260603-SD005.pdf",
+      "format": "PDF"
+    }
+  ]
+}

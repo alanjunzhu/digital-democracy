@@ -1,0 +1,36 @@
+{
+  "eventId": "338388",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine whistleblower testimony on COVID.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-13T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssga00",
+      "name": "Senate Homeland Security and Governmental Affairs"
+    }
+  ],
+  "location": {
+    "room": "342",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338388?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine whistleblower testimony on COVID.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338388",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine whistleblower testimony on COVID.",
+      "url": "https://www.senate.gov/isvp/?comm=govtaff&filename=govtaff051326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

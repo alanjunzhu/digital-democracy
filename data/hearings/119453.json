@@ -1,0 +1,68 @@
+{
+  "eventId": "119453",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Semi-Annual Report of the Bureau of Consumer Financial Protection",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119453?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Russell Vought",
+      "position": "Acting Director",
+      "organization": "Consumer Financial Protection Bureau"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: The Semi-Annual Report of the Bureau of Consumer Financial Protection",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119453",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: The Semi-Annual Report of the Bureau of Consumer Financial Protection",
+      "url": "https://www.youtube.com/watch?v=T8dn1Z7delc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119453/documents/HHRG-119-BA00-20260715-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119453/documents/HHRG-119-BA00-20260715-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. __, the CFPB Reform Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119453/documents/BILLS-119pih-proposesarestructuringoftheCFPBbyincreasingcongressionaloversight.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Vote on Motion to Table Subpoena Resolution to compel testimony of the Acting Director of the Bureau of Consumer Financial Protection, offered by Rep. Waters",
+      "url": "https://www.congress.gov/119/meeting/house/119453/documents/CRPT-119-BA00-Vote303-20260715.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "E-Voting Picture",
+      "url": "https://www.congress.gov/119/meeting/house/119453/documents/HHRG-119-BA00-20260715-SD003.pdf",
+      "format": "PDF"
+    }
+  ]
+}

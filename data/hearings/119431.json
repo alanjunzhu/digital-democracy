@@ -1,0 +1,57 @@
+{
+  "eventId": "119431",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "H.R. 8552, the “Veterans’ Compensation Cost-of-Living Adjustment Act of 2026”; \r\nH.R. 9006, the “Locating Our Unclaimed Veterans Act”; \r\nH.R. 6588, the “PROVIDE Act”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-30T18:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr09",
+      "name": "House Veterans' Affairs Subcommittee on Disability Assistance and Memorial Affairs"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119431?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Subcommittee on Disability Assistance and Memorial Affairs Oversight Hearing and Markup",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119431",
+      "format": ""
+    },
+    {
+      "name": "Subcommittee on Disability Assistance and Memorial Affairs Oversight Hearing and Markup",
+      "url": "https://www.youtube.com/watch?v=ZpXxWxZMTWo",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119431/documents/HMKP-119-VR09-20260630-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 8552, the “Veterans’ Compensation Cost-of-Living Adjustment Act of 2026”",
+      "url": "https://www.congress.gov/119/meeting/house/119431/documents/BILLS-1198552ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9006, the “Locating Our Unclaimed Veterans Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119431/documents/BILLS-1199006ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6588, the “PROVIDE Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119431/documents/BILLS-1196588ih.pdf",
+      "format": "PDF"
+    }
+  ]
+}

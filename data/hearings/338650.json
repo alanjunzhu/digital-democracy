@@ -1,0 +1,36 @@
+{
+  "eventId": "338650",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the Semiannual Monetary Policy Report to the Congress.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssbk00",
+      "name": "Senate Banking, Housing, and Urban Affairs"
+    }
+  ],
+  "location": {
+    "room": "538",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338650?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the Semiannual Monetary Policy Report to the Congress.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338650",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the Semiannual Monetary Policy Report to the Congress.",
+      "url": "https://www.senate.gov/isvp/?comm=banking&filename=banking071526",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

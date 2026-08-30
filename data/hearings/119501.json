@@ -1,0 +1,54 @@
+{
+  "eventId": "119501",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Deployed, Not Disqualified: Defending Servicemembers in Our Schools”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-08-25T15:30:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119501?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Jonathan Butcher",
+      "position": "Acting Director of the Center for Education Policy and Will Skillman Senior Research Fellow",
+      "organization": "Heritage Foundation"
+    },
+    {
+      "name": "Mrs. Amy Stier",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Mr. Chris Neeley",
+      "position": "Superintendent",
+      "organization": "South Carolina Public Charter School District"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Deployed, Not Disqualified: Defending Servicemembers in Our Schools",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119501",
+      "format": ""
+    },
+    {
+      "name": "Deployed, Not Disqualified: Defending Servicemembers in Our Schools",
+      "url": "https://www.youtube.com/watch?v=Nw5H6MVZBWs",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119501/documents/HHRG-119-ED00-20260825-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

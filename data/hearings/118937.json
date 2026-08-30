@@ -1,0 +1,118 @@
+{
+  "eventId": "118937",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "Markup of 5 Bills",
+  "meetingStatus": "Scheduled",
+  "date": "2026-02-04T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif03",
+      "name": "House Energy and Commerce Subcommittee on Energy"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr7258",
+    "hr7257",
+    "hr7272",
+    "hr7266",
+    "hr7305"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118937?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Energy Subcommittee Markup",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118937",
+      "format": ""
+    },
+    {
+      "name": "Energy Subcommittee Markup",
+      "url": "https://www.youtube.com/watch?v=G2eqsf8drZQ",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 7272, Pipeline Cybersecurity Preparedness Act (Reps. Weber and Dingell)",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/BILLS-119HR7272ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7305, Energy Threat Analysis Center Act of 2026 (Reps. Castor and Evans)",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/BILLS-119HR7305ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/HMKP-119-IF03-20260204-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/HMKP-119-IF03-20260204-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Kathy Castor",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/HMKP-119-IF03-MState-C001066-20260204.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7257, Securing Community Upgrades for a Resilient Grid (SECURE Grid) Act (Reps. Latta and Matsui)",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/BILLS-119HR7257ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "SC_AMD_HR7266_01",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/BILLS-119-7266-M001215-Amdt-1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Brett Guthrie",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/HMKP-119-IF03-MState-G000558-20260204.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Frank Pallone",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/HMKP-119-IF03-MState-P000034-20260204.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Robert E. Latta",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/HMKP-119-IF03-MState-L000566-20260204.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7266, Rural and Municipal Utility Cybersecurity Act (Reps. Miller-Meeks and McClellan)",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/BILLS-119HR7266ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7258, Energy Emergency Leadership Act (Reps. Lee-FL and Landsman)",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/BILLS-119HR7258ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Preliminary Transcript",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/HMKP-119-IF03-Transcript-20260204.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Vote Summary",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/HMKP-119-IF03-20260204-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/118937/documents/HMKP-119-IF03-20260204-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

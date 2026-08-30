@@ -1,0 +1,53 @@
+{
+  "eventId": "119411",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Implementing an America First Approach in the East Asia and Pacific Region",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-25T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa05",
+      "name": "House Foreign Affairs East Asia and Pacific Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119411?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Michael DeSombre",
+      "position": "Assistant Secretary, Bureau of East Asian and Pacific Affairs",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Implementing an America First Approach in the East Asia and Pacific Region",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119411",
+      "format": ""
+    },
+    {
+      "name": "Implementing an America First Approach in the East Asia and Pacific Region",
+      "url": "https://www.youtube.com/watch?v=fNmZBCtKtLQ",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119411/documents/HHRG-119-FA05-20260625-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119411/documents/HHRG-119-FA05-20260625-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

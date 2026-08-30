@@ -1,0 +1,69 @@
+{
+  "eventId": "119522",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Strengthening the American Economy: Promoting Growth, Opportunity, and Prosperity",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-02T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr7866"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119522?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Heath Talbert",
+      "position": "President",
+      "organization": "Circle"
+    },
+    {
+      "name": "Ms. Kathleen Kraninger",
+      "position": "President and Chief Executive Officer",
+      "organization": "Florida Bankers Association"
+    },
+    {
+      "name": "Ms. Lynn Martin",
+      "position": "President",
+      "organization": "New York Stock Exchange"
+    },
+    {
+      "name": "Mr. Alex Pollock",
+      "position": "Senior Fellow",
+      "organization": "Mises Institute"
+    },
+    {
+      "name": "Professor Darrick Hamilton",
+      "position": "University Professor",
+      "organization": "the New School, and Chief Economist, AFL-CIO"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119522/documents/HHRG-119-BA00-20260902-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119522/documents/HHRG-119-BA00-20260902-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7866, the American Lending Fairness Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119522/documents/BILLS-119HR7866ih.pdf",
+      "format": "PDF"
+    }
+  ]
+}

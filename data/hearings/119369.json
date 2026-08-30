@@ -1,0 +1,88 @@
+{
+  "eventId": "119369",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Examining the Sports Broadcasting Act”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-10T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsju05",
+      "name": "House Judiciary Subcommittee on Administrative State, Regulatory Reform, and Antitrust"
+    }
+  ],
+  "location": {
+    "room": "2141",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119369?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Jim Hallers",
+      "position": "Founder and Managing Partner",
+      "organization": "Citizen's Grill"
+    },
+    {
+      "name": "Mr. Clay Travis",
+      "position": "President",
+      "organization": "OutKick Media"
+    },
+    {
+      "name": "Ms. Anna Gomez",
+      "position": "Commissioner",
+      "organization": "Federal Communications Commission"
+    },
+    {
+      "name": "Mr. Curtis LeGeyt",
+      "position": "President and Chief Executive Officer",
+      "organization": "National Association of Broadcasters"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Examining the Sports Broadcasting Act",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119369",
+      "format": ""
+    },
+    {
+      "name": "Examining the Sports Broadcasting Act",
+      "url": "https://www.youtube.com/watch?v=vXXWVDRfo6o",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "An article from the Seattle Times titled, “Mergers, FCC pressure threaten integrity of American journalism”, submitted for the Record by Mr. Raskin of MD",
+      "url": "https://www.congress.gov/119/meeting/house/119369/documents/HHRG-119-JU05-20260610-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "An article from Sports Pro titled, “Paramount’s WBD takeover explained: How the US $111 billion deal could reshape sports media”, submitted for the Record by Mr. Raskin of MD",
+      "url": "https://www.congress.gov/119/meeting/house/119369/documents/HHRG-119-JU05-20260610-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "An article from the Wall Street Journal titled, “Rupert Murdoch’s High-Stakes Blitz Against the NFL”, submitted for the Record by Mr. Raskin of MD",
+      "url": "https://www.congress.gov/119/meeting/house/119369/documents/HHRG-119-JU05-20260610-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Questions for the Record for Mr. LeGeyt with responses, submitted for the Record by Mr. Johnson of GA",
+      "url": "https://www.congress.gov/119/meeting/house/119369/documents/HHRG-119-JU05-20260610-QFR004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Questions for the Record for Mr. Hallers, submitted for the Record by Mr. Issa of CA",
+      "url": "https://www.congress.gov/119/meeting/house/119369/documents/HHRG-119-JU05-20260610-QFR005.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Question for the Record for Mr. Travis, submitted for the Record by Mr. Issa of CA",
+      "url": "https://www.congress.gov/119/meeting/house/119369/documents/HHRG-119-JU05-20260610-QFR006.pdf",
+      "format": "PDF"
+    }
+  ]
+}

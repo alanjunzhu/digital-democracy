@@ -1,0 +1,47 @@
+{
+  "eventId": "119419",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Taking Account: Implementation of the Coast Guard Authorization Act of 2025, Reconciliation, and Force Design 2028.\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-30T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw07",
+      "name": "House Transportation and Infrastructure Subcommittee on Coast Guard and Maritime Transportation"
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119419?format=json",
+  "witnesses": [
+    {
+      "name": "Vice Admiral Douglas Schofield",
+      "position": "Chief of Staff",
+      "organization": "United States Coast Guard"
+    },
+    {
+      "name": "Trina McNeil",
+      "position": "Director, Homeland Security and Justice Programs",
+      "organization": "Government Accountability Office"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119419/documents/HHRG-119-PW07-20260630-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/119419/documents/HHRG-119-PW07-20260630-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

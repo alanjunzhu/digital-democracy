@@ -1,0 +1,52 @@
+{
+  "eventId": "119524",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Fueling the Golden Age: Future Resource Needs and Small Business Opportunity.”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-02T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssm21",
+      "name": "House Small Business Subcommittee on Rural Development, Energy, and Supply Chains"
+    }
+  ],
+  "location": {
+    "room": "2360",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119524?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Cody Harris",
+      "position": "Representative, District 8",
+      "organization": "Texas House of Representatives"
+    },
+    {
+      "name": "Mr. Ted Ellis",
+      "position": "Deputy Director, Energy & the Environment",
+      "organization": "America First Policy Institute"
+    },
+    {
+      "name": "Mr. Trevor Higgins",
+      "position": "Senior Vice President, Energy and Environment",
+      "organization": "Center for American Progress"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Public Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119524/documents/HHRG-119-SM21-20260902-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Public Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119524/documents/HHRG-119-SM21-20260902-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

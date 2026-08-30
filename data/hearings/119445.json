@@ -1,0 +1,83 @@
+{
+  "eventId": "119445",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Training Activists, Not Physicians: The Impact of DEI on Medical Schools”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-14T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119445?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Steve Dubinett",
+      "position": "Dean",
+      "organization": "University of California Los Angeles David Geffen School of Medicine"
+    },
+    {
+      "name": "Dr. Sam Hawgood",
+      "position": "Chancellor",
+      "organization": "University of California San Francisco"
+    },
+    {
+      "name": "Dr. Roger Mitchell, Jr.",
+      "position": "President",
+      "organization": "National Medical Association"
+    },
+    {
+      "name": "Dr. Enrico Benedetti",
+      "position": "Interim G. Stephen Irwin Executive Dean",
+      "organization": "University of Illinois College of Medicine"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Training Activists, Not Physicians: The Impact of DEI on Medical Schools",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119445",
+      "format": ""
+    },
+    {
+      "name": "Training Activists, Not Physicians: The Impact of DEI on Medical Schools",
+      "url": "https://www.youtube.com/watch?v=m4EeaPsxa2s",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119445/documents/HHRG-119-ED00-20260714-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Alma S. Adams | Submission for the Record | National Council on Disability Policy Brief",
+      "url": "https://www.congress.gov/119/meeting/house/119445/documents/HHRG-119-ED00-20260714-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Mark DeSaulnier | Submission for the Record | ADL UCLA Report Card",
+      "url": "https://www.congress.gov/119/meeting/house/119445/documents/HHRG-119-ED00-20260714-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Mark DeSaulnier | Submission for the Record | San Francisco Hillel Letter",
+      "url": "https://www.congress.gov/119/meeting/house/119445/documents/HHRG-119-ED00-20260714-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Robert C. \"Bobby\" Scott | Submission for the Record | Testimony of Jin Hee Lee",
+      "url": "https://www.congress.gov/119/meeting/house/119445/documents/HHRG-119-ED00-20260714-SD005.pdf",
+      "format": "PDF"
+    }
+  ]
+}

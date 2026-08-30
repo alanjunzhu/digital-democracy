@@ -1,0 +1,36 @@
+{
+  "eventId": "338542",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "An oversight hearing to examine the U.S. Department of Agriculture.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-10T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssaf00",
+      "name": "Senate Agriculture, Nutrition, and Forestry"
+    }
+  ],
+  "location": {
+    "room": "G50",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338542?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "An oversight hearing to examine the U.S. Department of Agriculture.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338542",
+      "format": ""
+    },
+    {
+      "name": "An oversight hearing to examine the U.S. Department of Agriculture.",
+      "url": "https://www.senate.gov/isvp/?comm=ag&filename=ag061026",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

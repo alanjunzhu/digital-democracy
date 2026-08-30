@@ -1,0 +1,88 @@
+{
+  "eventId": "119167",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Fiscal Year 2027 Department of Energy Budget.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-16T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif03",
+      "name": "House Energy and Commerce Subcommittee on Energy"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119167?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Chris Wright",
+      "position": "Secretary",
+      "organization": "Department of Energy"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Energy Hearing: The Fiscal Year 2027 Department of Energy Budget",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119167",
+      "format": ""
+    },
+    {
+      "name": "Energy Hearing: The Fiscal Year 2027 Department of Energy Budget",
+      "url": "https://www.youtube.com/watch?v=BR1jTnGfgL4",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "The Honorable Kathy Castor",
+      "url": "https://www.congress.gov/119/meeting/house/119167/documents/HHRG-119-IF03-MState-C001066-20260416.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Brett Guthrie",
+      "url": "https://www.congress.gov/119/meeting/house/119167/documents/HHRG-119-IF03-MState-G000558-20260416.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Robert E. Latta",
+      "url": "https://www.congress.gov/119/meeting/house/119167/documents/HHRG-119-IF03-MState-L000566-20260416.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Frank Pallone",
+      "url": "https://www.congress.gov/119/meeting/house/119167/documents/HHRG-119-IF03-MState-P000034-20260416.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119167/documents/HHRG-119-IF03-20260416-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119167/documents/HHRG-119-IF03-20260416-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119167/documents/HHRG-119-IF03-20260416-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Documents for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119167/documents/HHRG-119-IF03-20260416-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Preliminary Transcript",
+      "url": "https://www.congress.gov/119/meeting/house/119167/documents/HHRG-119-IF03-20260416-SD004.pdf",
+      "format": "PDF"
+    }
+  ]
+}

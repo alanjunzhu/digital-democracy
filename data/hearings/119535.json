@@ -1,0 +1,114 @@
+{
+  "eventId": "119535",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Markup of Twelve Pieces of Legislation",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-01T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif17",
+      "name": "House Energy and Commerce Subcommittee on Commerce, Manufacturing, and Trade"
+    }
+  ],
+  "location": {
+    "room": "2125",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr10158",
+    "hr7945",
+    "hr6207",
+    "hr5967",
+    "hr7502",
+    "hr6832",
+    "hr10170",
+    "hr10163",
+    "hr2713",
+    "hr9385",
+    "hr10152",
+    "hr6488"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119535?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/HMTG-119-IF17-20260901-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/HMTG-119-IF17-20260901-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10170, Memory Chip Competitiveness Assessment Act",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR10170ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10158, Automotive National and Economic Security Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR10158ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10152, Open-Source AI Leadership Act",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR10152ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6207, Chip EQUIP Act",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR6207ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10163, American Quantum Competitiveness Act",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR10163ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6832, Packaging and Claims Knowledge (PACK) Act of 2025",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR6832ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7502, Recycled Materials Attribution Act",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR7502ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9385, PROTECT USA Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR9385ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7945, Nitrous Oxide Safety Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR7945ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 2713, Mitigating Automated internet Networks for (MAIN) Event Ticketing Act",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR2713ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 5967, Strategic Task Force on Scam Prevention Act",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR5967ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6488, Reducing Exploitative Social Media Exposure for Teens (RESET) Act",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119HR6488ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H6488_ANS_xml",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119-HR6488-H001093-Amdt-1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

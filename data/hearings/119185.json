@@ -1,0 +1,83 @@
+{
+  "eventId": "119185",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Examining VA Benefits: Pension and Fiduciary, and VA Life Insurance \r\nOptions",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-21T17:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr09",
+      "name": "House Veterans' Affairs Subcommittee on Disability Assistance and Memorial Affairs"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119185?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Tim Sirhal",
+      "position": "Acting Principal Deputy Under Secretary for Benefits",
+      "organization": "Veterans Benefits Administration, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Ms. Jennifer Bover",
+      "position": "Executive Director, Pension & Fiduciary Service",
+      "organization": "Veterans Benefits Administration, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Ms. Tamra Sipes",
+      "position": "National President",
+      "organization": "Gold Star Spouses of America Inc"
+    },
+    {
+      "name": "Mr. Joseph Barnet",
+      "position": "Vice President",
+      "organization": "Office of Servicemembers Group Life Insurance, Prudential Financial"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Subcommittee on Disability Assistance and Memorial Affairs Oversight Hearing",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119185",
+      "format": ""
+    },
+    {
+      "name": "Subcommittee on Disability Assistance and Memorial Affairs Oversight Hearing",
+      "url": "https://www.youtube.com/watch?v=gSXPXXsiRsE",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Statement for the Record: Defense Credit Union Council",
+      "url": "https://www.congress.gov/119/meeting/house/119185/documents/HHRG-119-VR09-20260421-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119185/documents/HHRG-119-VR09-20260421-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: Veterans of Foreign Wars",
+      "url": "https://www.congress.gov/119/meeting/house/119185/documents/HHRG-119-VR09-20260421-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119185/documents/HHRG-119-VR09-WList-20260421.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Final Printed Hearing",
+      "url": "https://www.congress.gov/119/meeting/house/119185/documents/HHRG-119-VR09-Transcript-20260421.pdf",
+      "format": "PDF"
+    }
+  ]
+}

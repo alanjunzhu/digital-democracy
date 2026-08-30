@@ -1,0 +1,68 @@
+{
+  "eventId": "119363",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Northern Exposure: Assessing the Evolving Threat Landscape at America's Northern Border”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-30T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm11",
+      "name": "Homeland Security Subcommittee on Border Security and Enforcement"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119363?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Michael Krol",
+      "position": "Assistant Director, Domestic Operations, Homeland Security Investigations",
+      "organization": "U.S. Immigration and Customs Enforcement"
+    },
+    {
+      "name": "Ms. Heather MacLeod",
+      "position": "Director, Homeland Security and Justice",
+      "organization": "U.S. Government Accountability Office"
+    },
+    {
+      "name": "Mr. Jason Schneider",
+      "position": "Acting Deputy Chief of the Operations Directorate, Border Patrol",
+      "organization": "U.S. Customs and Border Protection"
+    },
+    {
+      "name": "Mr. Chris Holtzer",
+      "position": "Executive Director of Operations, Office of Field Operations",
+      "organization": "U.S. Customs and Border Protection"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Northern Exposure: Assessing the Evolving Threat Landscape at America's Northern Border",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119363",
+      "format": ""
+    },
+    {
+      "name": "Northern Exposure: Assessing the Evolving Threat Landscape at America's Northern Border",
+      "url": "https://www.youtube.com/watch?v=2VazULnBzYQ",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119363/documents/HHRG-119-HM11-20260630-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119363/documents/HHRG-119-HM11-WList-20260630.pdf",
+      "format": "PDF"
+    }
+  ]
+}

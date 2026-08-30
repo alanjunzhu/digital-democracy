@@ -1,0 +1,68 @@
+{
+  "eventId": "119449",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "U.S. Economic Security and Investment Abroad: Assessing Economic Security Zones",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-14T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa17",
+      "name": "House Foreign Affairs Oversight and Intelligence Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2200",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119449?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Michael Hollomon II",
+      "position": "Chief Commercial Officer",
+      "organization": "US Strategic Metals"
+    },
+    {
+      "name": "Mr. Erick Brimen",
+      "position": "Founder and CEO",
+      "organization": "Prospera International"
+    },
+    {
+      "name": "Mr. Paul Sullivan",
+      "position": "President",
+      "organization": "Acrow Bridge"
+    },
+    {
+      "name": "Mr. Clark Packard",
+      "position": "Research Fellow, Herbert A. Stiefel Center for Trade Policy Studies",
+      "organization": "CATO Institute"
+    }
+  ],
+  "videos": [
+    {
+      "name": "U.S. Economic Security and Investment Abroad: Assessing Economic Security Zones",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119449",
+      "format": ""
+    },
+    {
+      "name": "U.S. Economic Security and Investment Abroad: Assessing Economic Security Zones",
+      "url": "https://www.youtube.com/watch?v=QCcl7NPrq8U",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119449/documents/HHRG-119-FA17-20260714-SD001-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119449/documents/HHRG-119-FA17-20260714-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

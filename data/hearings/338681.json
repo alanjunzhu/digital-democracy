@@ -1,0 +1,36 @@
+{
+  "eventId": "338681",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the President's 2026 trade policy agenda.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssfi00",
+      "name": "Senate Finance"
+    }
+  ],
+  "location": {
+    "room": "215",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338681?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the President's 2026 trade policy agenda.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338681",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the President's 2026 trade policy agenda.",
+      "url": "https://www.senate.gov/isvp/?comm=finance&filename=finance072226",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

@@ -1,0 +1,36 @@
+{
+  "eventId": "338500",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine proposed budget estimates and justification for fiscal year 2027 for the Department of Homeland Security.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-02T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssap14",
+      "name": "Senate Appropriations Subcommittee on Department of Homeland Security"
+    }
+  ],
+  "location": {
+    "room": "138",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338500?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine proposed budget estimates and justification for fiscal year 2027 for the Department of Homeland Security.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338500",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine proposed budget estimates and justification for fiscal year 2027 for the Department of Homeland Security.",
+      "url": "https://www.senate.gov/isvp/?comm=approps&filename=appropsA060226",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

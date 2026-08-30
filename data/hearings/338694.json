@@ -1,0 +1,36 @@
+{
+  "eventId": "338694",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Business Meeting",
+  "title": "Business meeting to consider an original bill entitled, \"Taxpayer Assistance and Service Act\".",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-30T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssfi00",
+      "name": "Senate Finance"
+    }
+  ],
+  "location": {
+    "room": "215",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338694?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Business meeting to consider an original bill entitled, \"Taxpayer Assistance and Service Act\".",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338694",
+      "format": ""
+    },
+    {
+      "name": "Business meeting to consider an original bill entitled, \"Taxpayer Assistance and Service Act\".",
+      "url": "https://www.senate.gov/isvp/?comm=finance&filename=finance073026",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

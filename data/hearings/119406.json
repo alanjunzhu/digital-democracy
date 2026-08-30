@@ -1,0 +1,47 @@
+{
+  "eventId": "119406",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight Hearing – Department of Homeland Security",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-25T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsap15",
+      "name": "House Appropriations Subcommittee on Department of Homeland Security"
+    }
+  ],
+  "location": {
+    "room": "2358-C",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119406?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Troy Edgar",
+      "position": "Deputy Secretary",
+      "organization": "Department of Homeland Security"
+    },
+    {
+      "name": "The Honorable Markwayne Mullin",
+      "position": "Secretary",
+      "organization": "Department of Homeland Security"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Oversight Hearing – Department of Homeland Security",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119406",
+      "format": ""
+    },
+    {
+      "name": "Oversight Hearing – Department of Homeland Security",
+      "url": "https://www.youtube.com/watch?v=9-mke4zwv2Q",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

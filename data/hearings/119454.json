@@ -1,0 +1,58 @@
+{
+  "eventId": "119454",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Committee on House Administration Elections Subcommittee Hearing:“Election Observation: Best Practices and Congress’s Role”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsha08",
+      "name": "House Administration Subcommittee on Elections"
+    }
+  ],
+  "location": {
+    "room": "1310",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119454?format=json",
+  "witnesses": [
+    {
+      "name": "Lance Reed",
+      "position": "Director",
+      "organization": "Summit County Board of Elections"
+    },
+    {
+      "name": "Wesley Wilcox",
+      "position": "Supervisor",
+      "organization": "Marion County Supervisor of Elections"
+    },
+    {
+      "name": "Paige Gallagher",
+      "position": "Legislative Attorney",
+      "organization": "Congressional Research Service"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Subcommittee on Elections Hearing: “Election Observation: Best Practices and Congress’s Role”",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119454",
+      "format": ""
+    },
+    {
+      "name": "Subcommittee on Elections Hearing: “Election Observation: Best Practices and Congress’s Role”",
+      "url": "https://www.youtube.com/watch?v=kMkyun33vj0",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119454/documents/HHRG-119-HA08-20260715-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

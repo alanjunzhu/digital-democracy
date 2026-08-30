@@ -1,0 +1,78 @@
+{
+  "eventId": "119435",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Oversight of the National Telecommunications and Information Administration",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-30T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif16",
+      "name": "House Energy and Commerce Subcommittee on Communications and Technology"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119435?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Arielle Roth",
+      "position": "Assistant Secretary of Commerce for Communications and Information and Administrator",
+      "organization": "National Telecommunications and Information Administration"
+    }
+  ],
+  "videos": [
+    {
+      "name": "C&T Hearing: Oversight of the National Telecommunications and Information Administration.",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119435",
+      "format": ""
+    },
+    {
+      "name": "C&T Hearing: Oversight of the National Telecommunications and Information Administration.",
+      "url": "https://www.youtube.com/watch?v=-NsQjEsXkPw",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119435/documents/HMTG-119-IF16-20260630-SD156464.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119435/documents/HMTG-119-IF16-20260630-SD59494.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement: Frank Pallone, Jr.",
+      "url": "https://www.congress.gov/119/meeting/house/119435/documents/HMTG-119-IF16-MState-P000034-20260630.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement: Doris Matsui",
+      "url": "https://www.congress.gov/119/meeting/house/119435/documents/HMTG-119-IF16-MState-M001163-20260630.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement: Brett Guthrie",
+      "url": "https://www.congress.gov/119/meeting/house/119435/documents/HMTG-119-IF16-MState-G000558-20260630.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement: Richard Hudson",
+      "url": "https://www.congress.gov/119/meeting/house/119435/documents/HMTG-119-IF16-MState-H001067-20260630.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Transcript",
+      "url": "https://www.congress.gov/119/meeting/house/119435/documents/HMTG-119-IF16-Transcript-20260630.pdf",
+      "format": "PDF"
+    }
+  ]
+}

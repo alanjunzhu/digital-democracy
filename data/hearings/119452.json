@@ -1,0 +1,58 @@
+{
+  "eventId": "119452",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "A New Beginning for Colombia",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa07",
+      "name": "House Foreign Affairs Subcommittee on Western Hemisphere"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119452?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Luis Mendez",
+      "position": "Deputy Assistant Secretary for South America, Bureau of Western Hemisphere Affairs",
+      "organization": "U.S. Department of State"
+    },
+    {
+      "name": "The Honorable F. Weiland",
+      "position": "Assistant Secretary, Bureau of International Narcotics and Law Enforcement",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [
+    {
+      "name": "A New Beginning for Colombia",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119452",
+      "format": ""
+    },
+    {
+      "name": "A New Beginning for Colombia",
+      "url": "https://www.youtube.com/watch?v=BH_EiY8VBVk",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119452/documents/HHRG-119-FA07-20260715-SD001-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119452/documents/HHRG-119-FA07-20260715-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

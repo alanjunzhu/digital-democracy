@@ -1,0 +1,41 @@
+{
+  "eventId": "119528",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Reliable Water in the Digital Age: Examining Legislation to Strengthen Drinking Water Systems and Protect Ratepayers.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-03T13:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif18",
+      "name": "House Energy and Commerce Subcommittee on Environment"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119528?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119528/documents/HMTG-119-IF18-20260903-CPg.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. ____, [Safe Drinking Water Infrastructure Improvement Act of 2026]",
+      "url": "https://www.congress.gov/119/meeting/house/119528/documents/BILLS-119pih-HR____SafeDrinkingWaterInfrastructureImprovementActof2026.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. ____, [Water Cost Accountability Act of 2026]",
+      "url": "https://www.congress.gov/119/meeting/house/119528/documents/BILLS-119pih-HR____WaterCostAccountabilityActof2026.pdf",
+      "format": "PDF"
+    }
+  ]
+}

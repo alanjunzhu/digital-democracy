@@ -1,0 +1,137 @@
+{
+  "eventId": "119389",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Legislative Hearing on the following bill:\r\n•    H.R. 8003 (Rep. Deluzio), “Expanding the Fast Track Act of 2026.’’\r\n•    H.R. 9640 (Rep. Wittman), “Earth MRI Reauthorization Act of 2026.’’\r\n•    H.R. 9646 (Rep. Hurd), “Quantum-Enhanced Critical Minerals Mapping Act of 2026.’’",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-21T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsii06",
+      "name": "House Natural Resources Subcommittee on Energy and Mineral Resources"
+    }
+  ],
+  "location": {
+    "room": "1324",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr8003",
+    "hr9640",
+    "hr9646"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119389?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Eric Beightel",
+      "position": "Federal Strategy Director",
+      "organization": "Environmental Science Associates"
+    },
+    {
+      "name": "Mr. Matthew Kinsella",
+      "position": "CEO",
+      "organization": "Infleqtion"
+    },
+    {
+      "name": "The Honorable Jeff Hurd",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Jeff Crank",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Christopher Deluzio",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "Ms. Emily Domenech",
+      "position": "Executive Director",
+      "organization": "Federal Permitting Improvement Steering Council"
+    },
+    {
+      "name": "Mr. Matthew Heller",
+      "position": "State Geologist",
+      "organization": "Virginia Department of Energy"
+    },
+    {
+      "name": "Dr. Ruarri Day-Stirrat",
+      "position": "President",
+      "organization": "Association of American State Geologists"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Legislative Hearing on H.R. 8003, H.R. 9640 and H.R. 9646",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119389",
+      "format": ""
+    },
+    {
+      "name": "Legislative Hearing on H.R. 8003, H.R. 9640 and H.R. 9646",
+      "url": "https://www.youtube.com/watch?v=33D_2tAvzeM",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/HHRG-119-II06-20260721-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR Response Heller",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/HHRG-119-II06-20260721-SD005.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR Response Day-Stirrat",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/HHRG-119-II06-20260721-SD006.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR Response Kinsella",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/HHRG-119-II06-20260721-SD007.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR Response Beightel",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/HHRG-119-II06-20260721-SD008.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 8003 (Rep. Deluzio), “Expanding the Fast Track Act of 2026.’’",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/BILLS-119HR8003ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9640 (Rep. Wittman), “Earth MRI Reauthorization Act of 2026.’",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/BILLS-119HR9640ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9646 (Rep. Hurd), “Quantum-Enhanced Critical Minerals Mapping Act of 2026.’’",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/BILLS-119HR9646ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement FTR -- U.S. Geological Survey",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/HHRG-119-II06-20260721-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Dingell FTR Third Way Letter",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/HHRG-119-II06-20260721-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119389/documents/HHRG-119-II06-20260721-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

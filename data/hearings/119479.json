@@ -1,0 +1,48 @@
+{
+  "eventId": "119479",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"For the Purpose of Receiving Testimony from Chief Tom Schultz, U.S. Forest Service\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsag15",
+      "name": "House Subcommittee on Forestry and Horticulture"
+    }
+  ],
+  "location": {
+    "room": "1300",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119479?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Tom Schultz",
+      "position": "Chief",
+      "organization": "United States Forest Service"
+    }
+  ],
+  "videos": [
+    {
+      "name": "For the Purpose of Receiving Testimony from Chief Tom Schultz, U.S. Forest Service",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119479",
+      "format": ""
+    },
+    {
+      "name": "For the Purpose of Receiving Testimony from Chief Tom Schultz, U.S. Forest Service",
+      "url": "https://www.youtube.com/watch?v=YTQiQFcv_J4",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Witness-List_07.22.2026",
+      "url": "https://www.congress.gov/119/meeting/house/119479/documents/HHRG-119-AG15-WList-20260722.pdf",
+      "format": "PDF"
+    }
+  ]
+}

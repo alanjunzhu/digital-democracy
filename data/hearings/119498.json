@@ -1,0 +1,25 @@
+{
+  "eventId": "119498",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Member Day Hearing on Proposed Rules Changes for the 120th Congress",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-02T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsru00",
+      "name": "House Rules"
+    }
+  ],
+  "location": {
+    "room": "H-313",
+    "building": "Capitol",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119498?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

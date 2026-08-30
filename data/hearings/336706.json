@@ -1,0 +1,25 @@
+{
+  "eventId": "336706",
+  "congress": 119,
+  "chamber": "NoChamber",
+  "type": "Meeting",
+  "title": "Business meeting to consider committee rules of procedure for the 119th Congress, and to designate the Chair and Vice Chair.",
+  "meetingStatus": "Scheduled",
+  "date": "2025-03-11T18:15:00Z",
+  "committees": [
+    {
+      "systemCode": "jslc00",
+      "name": "Joint Committee on the Library"
+    }
+  ],
+  "location": {
+    "room": "219",
+    "building": "Capitol (Senate side)",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/336706?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

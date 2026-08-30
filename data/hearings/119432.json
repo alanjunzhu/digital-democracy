@@ -1,0 +1,63 @@
+{
+  "eventId": "119432",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Charting a New Course: Countering China's Dominance in Global Shipbuilding",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa05",
+      "name": "House Foreign Affairs East Asia and Pacific Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119432?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Matthew Funaiole",
+      "position": "Vice President & Dracopoulos Chair in Innovation",
+      "organization": "Center for Strategic and International Studies"
+    },
+    {
+      "name": "Mr. Brent Sadler",
+      "position": "Senior Research Fellow, Naval Warfare and Advanced Technology, Allison Center for National Security",
+      "organization": "The Heritage Foundation"
+    },
+    {
+      "name": "Mr. J. James Kim",
+      "position": "Program Director, Korea Program",
+      "organization": "Henry L. Stimson Center"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Charting a New Course: Countering China's Dominance in Global Shipbuilding",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119432",
+      "format": ""
+    },
+    {
+      "name": "Charting a New Course: Countering China's Dominance in Global Shipbuilding",
+      "url": "https://www.youtube.com/watch?v=0SJQ4HUVABY",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119432/documents/HHRG-119-FA05-20260722-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119432/documents/HHRG-119-FA05-20260722-SD001-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "eventId": "119044",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Force Design or Force in Decline: Reviewing Readiness\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-17T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw07",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119044?format=json",
+  "witnesses": [
+    {
+      "name": "Admiral Thomas Allan Jr.",
+      "position": "Vice Commandant",
+      "organization": "United States Coast Guard"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Force Design or Force in Decline: Reviewing Readiness",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119044",
+      "format": ""
+    },
+    {
+      "name": "Force Design or Force in Decline: Reviewing Readiness",
+      "url": "https://www.youtube.com/watch?v=YEWSU7QwumE",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119044/documents/HHRG-119-PW07-20260317-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/119044/documents/HHRG-119-PW07-20260317-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119044/documents/CHRG-119hhrg63902.pdf",
+      "format": "PDF"
+    }
+  ]
+}

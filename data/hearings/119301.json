@@ -1,0 +1,58 @@
+{
+  "eventId": "119301",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "More Bang for the Buck: Aligning Commercial Diplomacy Between State and Commerce",
+  "meetingStatus": "Rescheduled",
+  "date": "2026-07-14T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa05",
+      "name": "House Foreign Affairs East Asia and Pacific Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119301?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Caleb Orr",
+      "position": "Assistant Secretary, Bureau of Economic, Energy, and Business Affairs",
+      "organization": "U.S. Department of State"
+    },
+    {
+      "name": "The Honorable David Fogel",
+      "position": "Assistant Secretary, Commerce and Director General of the United States and Foreign Commercial Service, International Trade Administration",
+      "organization": "U.S. Department of Commerce"
+    }
+  ],
+  "videos": [
+    {
+      "name": "More Bang for the Buck: Aligning Commercial Diplomacy Between State and Commerce",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119301",
+      "format": ""
+    },
+    {
+      "name": "More Bang for the Buck: Aligning Commercial Diplomacy Between State and Commerce",
+      "url": "https://www.youtube.com/watch?v=6sAdr7weWfc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119301/documents/HHRG-119-FA05-20260714-SD001-U2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119301/documents/HHRG-119-FA05-20260714-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

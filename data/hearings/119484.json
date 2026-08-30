@@ -1,0 +1,63 @@
+{
+  "eventId": "119484",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Unleashing the Golden Age of Science: Examining the Priorities of the FY2027 Research and Technology Enterprise",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hssy00",
+      "name": "House Science, Space, and Technology"
+    }
+  ],
+  "location": {
+    "room": "2318",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119484?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Michael Kratsios",
+      "position": "Director",
+      "organization": "White House Office of Science and Technology Capacity"
+    }
+  ],
+  "videos": [
+    {
+      "name": "\"Examining the Priorities of the FY2027 Research and Technology Enterprise\"",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119484",
+      "format": ""
+    },
+    {
+      "name": "\"Examining the Priorities of the FY2027 Research and Technology Enterprise\"",
+      "url": "https://www.youtube.com/watch?v=SLqi22MdCFU",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "The Honorable Brian Babin",
+      "url": "https://www.congress.gov/119/meeting/house/119484/documents/HHRG-119-SY00-MState-B001291-20260722.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Zoe Lofgren",
+      "url": "https://www.congress.gov/119/meeting/house/119484/documents/HHRG-119-SY00-MState-L000397-20260722.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Charter",
+      "url": "https://www.congress.gov/119/meeting/house/119484/documents/HHRG-119-SY00-20260722-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119484/documents/HHRG-119-SY00-20260722-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

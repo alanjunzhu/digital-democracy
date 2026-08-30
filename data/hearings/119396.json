@@ -1,0 +1,63 @@
+{
+  "eventId": "119396",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Reviewing Partnerships to Enhance Management of the National Forest System\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-25T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsag15",
+      "name": "House Subcommittee on Forestry and Horticulture"
+    }
+  ],
+  "location": {
+    "room": "1300",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119396?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Travis Joseph",
+      "position": "President and CEO",
+      "organization": "American Forest Resource Council"
+    },
+    {
+      "name": "The Honorable Ned Coe",
+      "position": "Supervisor",
+      "organization": "Modoc County, California"
+    },
+    {
+      "name": "Mr. Tracy Glover",
+      "position": "Sheriff",
+      "organization": "Kane County, Utah"
+    },
+    {
+      "name": "Ms. Molly Whitney",
+      "position": "Executive Director",
+      "organization": "Cascade Forest Conservancy"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Reviewing Partnerships to Enhance Management of the National Forest System",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119396",
+      "format": ""
+    },
+    {
+      "name": "Reviewing Partnerships to Enhance Management of the National Forest System",
+      "url": "https://www.youtube.com/watch?v=ESz2dGeMndM",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Witness-List_06.25.2026",
+      "url": "https://www.congress.gov/119/meeting/house/119396/documents/HHRG-119-AG15-WList-20260625.pdf",
+      "format": "PDF"
+    }
+  ]
+}

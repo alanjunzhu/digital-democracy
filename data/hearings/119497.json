@@ -1,0 +1,41 @@
+{
+  "eventId": "119497",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Persistent Competition & Legacy Architectures",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-02T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hlig00",
+      "name": "House Intelligence (Permanent Select)"
+    }
+  ],
+  "location": {
+    "room": "1334",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119497?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Seth Jones",
+      "position": "President, Defense and Security Department",
+      "organization": "Center for Strategic and International Studies"
+    },
+    {
+      "name": "Mr. David Feith",
+      "position": "Senior Fellow",
+      "organization": "Hudson Institute"
+    },
+    {
+      "name": "Mr. Frank Cilluffo",
+      "position": "Director",
+      "organization": "McCrary Institute for Cyber and Critical Infrastructure at Auburn University"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": []
+}

@@ -1,0 +1,42 @@
+{
+  "eventId": "119388",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Effectiveness of the Intelligence Community's Inspector General (CLOSED)",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-24T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hlig00",
+      "name": "House Intelligence (Permanent Select)"
+    }
+  ],
+  "location": {
+    "room": "",
+    "building": "Capitol",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119388?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Aaron Lukas",
+      "position": "Principal Deputy Director",
+      "organization": "Office of the Director of National Intelligence"
+    },
+    {
+      "name": "The Honorable Christopher Fox",
+      "position": "Inspector General",
+      "organization": "Office of the Inspector General of the Intelligence Community"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Statement for the Record of ICIG Fox in advance of Hearing.",
+      "url": "https://www.congress.gov/119/meeting/house/119388/documents/HHRG-119-IG00-20260624-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "eventId": "119412",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Work & Welfare Subcommittee Hearing on the Maternal, Infant, and Early Childhood Home Visiting (MIECHV) Program: Early Support, Lifelong Impact",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-25T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hswm00",
+      "name": "House Ways and Means"
+    }
+  ],
+  "location": {
+    "room": "2020",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119412?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Shemya Smith",
+      "position": "Parent Ambassador",
+      "organization": "Changent"
+    },
+    {
+      "name": "Dr. Paula Seanez",
+      "position": "Director, Department of Diné Education",
+      "organization": "Navajo Nation Growing in Beauty"
+    },
+    {
+      "name": "Ms. Mendy Smith",
+      "position": "Vice President, Early Childhood Services",
+      "organization": "Brightpoint"
+    },
+    {
+      "name": "Ms. Shemya Wlison",
+      "position": "Parent Ambassador",
+      "organization": "Changent"
+    },
+    {
+      "name": "Ms. Shawn Longoria",
+      "position": "Program Director, Parents as Teachers",
+      "organization": "Community Healthcore"
+    },
+    {
+      "name": "Ms. Patricia West",
+      "position": "MIECHV Program Director",
+      "organization": "Iowa Department of Health and Human Services"
+    }
+  ],
+  "videos": [
+    {
+      "name": "W&W Subcommittee Hearing on the Maternal, Infant, and Early Childhood Home Visiting (MIECHV) Program",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119412",
+      "format": ""
+    },
+    {
+      "name": "W&W Subcommittee Hearing on the Maternal, Infant, and Early Childhood Home Visiting (MIECHV) Program",
+      "url": "https://www.youtube.com/watch?v=INJjmGKakSg",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

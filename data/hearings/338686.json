@@ -1,0 +1,36 @@
+{
+  "eventId": "338686",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the impact of AI on the workplace.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-29T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "sshr11",
+      "name": "Senate Health, Education, Labor, and Pensions Subcommittee on Employment and Workplace Safety"
+    }
+  ],
+  "location": {
+    "room": "430",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338686?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the impact of AI on the workplace.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338686",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the impact of AI on the workplace.",
+      "url": "https://www.senate.gov/isvp/?comm=help&filename=help072926",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

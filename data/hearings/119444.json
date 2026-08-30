@@ -1,0 +1,53 @@
+{
+  "eventId": "119444",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "FY27 BIS Budget: the AI Arms Race and the ICTS Office",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-14T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa00",
+      "name": "House Foreign Affairs"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119444?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Jeffrey Kessler",
+      "position": "Under Secretary of Commerce for Industry and Security",
+      "organization": "U.S. Department of Commerce"
+    }
+  ],
+  "videos": [
+    {
+      "name": "FY27 BIS Budget: the AI Arms Race and the ICTS Office",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119444",
+      "format": ""
+    },
+    {
+      "name": "FY27 BIS Budget: the AI Arms Race and the ICTS Office",
+      "url": "https://www.youtube.com/watch?v=XcKNV5ZqyAg",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119444/documents/HHRG-119-FA00-20260714-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119444/documents/HHRG-119-FA00-20260714-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

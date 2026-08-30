@@ -1,0 +1,86 @@
+{
+  "eventId": "119506",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Legislative hearing on:      H.R. 642 (Rep. Steube), “Myakka Wild and Scenic River Act of 2025”;\r\nH.R. 5470 (Rep. LaHood), “Route 66 National Historic Trail Designation Act”;\r\nH.R. 6788 (Rep. Downing), “Montana Sportsmen Conservation Act”;\r\nH.R. 9269 (Rep. Clyburn), “Renewing the African American Civil Rights Network Act”;\r\nH.R. 9600 (Rep. Raskin), \"Common Sense Act 250 Act of 2026\";\r\nH.R. 9779 (Rep. Gonzalez), “Hands Off Our Boca Chica Beach Act of 2026” ;\r\nH.R. 10128 (Rep. McClintock), To codify Secretary's Order No. 3434 of the Department of the Interior;\r\nH.R. 10136 (Rep. Westerman), “Crossett Experimental Forest Act of 2026”;\r\nS. 675 (Rep. Hoeven) “Theodore Roosevelt Presidential Library Act”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-02T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsii10",
+      "name": "House Natural Resources Subcommittee on Federal Lands"
+    }
+  ],
+  "location": {
+    "room": "1324",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr9269",
+    "hr642",
+    "hr9779",
+    "hr10128",
+    "hr9600",
+    "hr5470",
+    "hr6788",
+    "s675",
+    "hr10136"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 642 (Rep. Steube) “Myakka Wild and Scenic River Act of 2025”",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/BILLS-119HR642RepSteubeMyakkaWildandScenicRiverActof2025ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 5470 (Rep. LaHood), “Route 66 National Historic Trail Designation Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/BILLS-119HR5470RepLaHoodRoute66NationalHistoricTrailDesignationActih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6788 (Rep. Downing), “Montana Sportsmen Conservation Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/BILLS-119HR6788RepDowningMontanaSportsmenConservationActih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9269 (Rep. Clyburn), “Renewing the African American Civil Rights Network Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/BILLS-119HR9269RepClyburnRenewingtheAfricanAmericanCivilRightsNetworkActih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9600 (Rep. Raskin), \"Common Sense Act 250 Act of 2026\"",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/BILLS-119HR9600RepRaskinCommonSenseAct250Actof2026ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9779 (Rep. Gonzalez), “Hands Off Our Boca Chica Beach Act of 2026”",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/BILLS-119HR9779RepGonzalezHandsOffOurBocaChicaBeachActof2026ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/HHRG-119-II10-20260902-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "S. 675 (Rep. Hoeven) “Theodore Roosevelt Presidential Library Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/BILLS-119S675RepHoevenTheodoreRooseveltPresidentialLibraryActats.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10128 (Rep. McClintock), To codify Secretary's Order No. 3434 of the Department of the Interior",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/BILLS-119HR10128RepMcClintockTocodifySecretarysOrderNo3434oftheDepartmentoftheInteriorih-U2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10136 (Rep. Westerman), “Crossett Experimental Forest Act of 2026”",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/BILLS-119HR10136RepWestermanCrossettExperimentalForestActof2026ih-U2.pdf",
+      "format": "PDF"
+    }
+  ]
+}

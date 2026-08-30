@@ -1,0 +1,36 @@
+{
+  "eventId": "338693",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the reality of Medicaid.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-08-04T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssbu00",
+      "name": "Senate Budget"
+    }
+  ],
+  "location": {
+    "room": "608",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338693?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the reality of Medicaid.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338693",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the reality of Medicaid.",
+      "url": "https://www.senate.gov/isvp/?comm=budget&filename=budget080426",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

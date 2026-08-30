@@ -1,0 +1,25 @@
+{
+  "eventId": "338706",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Closed Hearing",
+  "title": "Closed hearings to examine certain intelligence matters.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-08-04T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "slin00",
+      "name": "Senate Intelligence (Select)"
+    }
+  ],
+  "location": {
+    "room": "219",
+    "building": "Hart Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338706?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

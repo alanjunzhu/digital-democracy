@@ -1,0 +1,93 @@
+{
+  "eventId": "118659",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"The Future of College: Harnessing Innovation to Improve Outcomes and Lower Costs\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-11-18T15:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118659?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Kollin Napier",
+      "position": "Director",
+      "organization": "Mississippi Artificial Intelligence Network"
+    },
+    {
+      "name": "Dr. Jeffrey Docking",
+      "position": "President",
+      "organization": "Adrian College"
+    },
+    {
+      "name": "Dr. Kollin Napier",
+      "position": "Director",
+      "organization": "Mississippi Artificial Intelligence Network"
+    },
+    {
+      "name": "Dr. Wil Pilar",
+      "position": "Senior Vice President, Higher Education",
+      "organization": "EdTrust"
+    },
+    {
+      "name": "Mr. Tade Oyerinde",
+      "position": "Chancellor",
+      "organization": "Campus.edu"
+    },
+    {
+      "name": "Dr. Jeffrey Docking",
+      "position": "President",
+      "organization": "Adrian College"
+    },
+    {
+      "name": "Dr. Wil Pilar",
+      "position": "Senior Vice President, Higher Education",
+      "organization": "EdTrust"
+    },
+    {
+      "name": "Mr. Tade Oyerinde",
+      "position": "Chancellor",
+      "organization": "Campus.edu"
+    }
+  ],
+  "videos": [
+    {
+      "name": "The Future of College: Harnessing Innovation to Improve Outcomes and Lower Costs",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118659",
+      "format": ""
+    },
+    {
+      "name": "The Future of College: Harnessing Innovation to Improve Outcomes and Lower Costs",
+      "url": "https://www.youtube.com/watch?v=zEpQLJJEUCw",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118659/documents/HHRG-119-ED00-20251118-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Dr. Tade Oyerinde | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118659/documents/HHRG-119-ED00-20251118-QFR001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Dr. Tade Oyerinde | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118659/documents/HHRG-119-ED00-20251118-QFR001-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "eventId": "119212",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Review of the Coast Guard's Fiscal Year 2027 Budget Request\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-28T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw07",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119212?format=json",
+  "witnesses": [
+    {
+      "name": "Admiral Kevin Lunday",
+      "position": "Commandant",
+      "organization": "United States Coast Guard"
+    },
+    {
+      "name": "Master Chief Petty Officer Phillip Waldron",
+      "position": "Master Chief Petty Officer of the Coast Guard",
+      "organization": "United States Coast Guard"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Review of the Coast Guard’s Fiscal Year 2027 Budget Request",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119212",
+      "format": ""
+    },
+    {
+      "name": "Review of the Coast Guard’s Fiscal Year 2027 Budget Request",
+      "url": "https://www.youtube.com/watch?v=xEavTAUuJ-s",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119212/documents/CHRG-119hhrg64287.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119212/documents/HHRG-119-PW07-20260428-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/119212/documents/HHRG-119-PW07-20260428-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

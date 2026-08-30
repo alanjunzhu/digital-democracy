@@ -1,0 +1,73 @@
+{
+  "eventId": "119483",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Oversight of SBA’s Office of Entrepreneurial Development.”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssm00",
+      "name": "House Small Business"
+    }
+  ],
+  "location": {
+    "room": "2360",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119483?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Paul Fitzpatrick",
+      "position": "Associate Administrator",
+      "organization": "Office of Entrepreneurial Development, U.S. Small Business Administration"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Oversight of SBA’s Office of Entrepreneurial Development",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119483",
+      "format": ""
+    },
+    {
+      "name": "Oversight of SBA’s Office of Entrepreneurial Development",
+      "url": "https://www.youtube.com/watch?v=A0KGtWpACMM",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "UC-Majority-Texas Venture Alliance-Letter for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119483/documents/HHRG-119-SM00-20260722-SD005.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119483/documents/HHRG-119-SM00-20260722-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "UC-Minority-AWBC-Letter for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119483/documents/HHRG-119-SM00-20260722-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "UC-Majority-SIDO-Letter for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119483/documents/HHRG-119-SM00-20260722-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Public Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119483/documents/HHRG-119-SM00-20260722-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Public Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119483/documents/HHRG-119-SM00-20260722-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

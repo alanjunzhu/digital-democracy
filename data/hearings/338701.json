@@ -1,0 +1,36 @@
+{
+  "eventId": "338701",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine exploring process approaches for addressing Social Security solvency.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-08-05T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssfi00",
+      "name": "Senate Finance"
+    }
+  ],
+  "location": {
+    "room": "215",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338701?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine exploring process approaches for addressing Social Security solvency.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338701",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine exploring process approaches for addressing Social Security solvency.",
+      "url": "https://www.senate.gov/isvp/?comm=finance&filename=finance080526",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

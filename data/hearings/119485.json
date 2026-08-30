@@ -1,0 +1,52 @@
+{
+  "eventId": "119485",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Funding Lapses: Analyzing Shutdown Reform",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsap00",
+      "name": "House Appropriations"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119485?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Shalanda Young",
+      "position": "Resident Scholar",
+      "organization": "New York University School of Law"
+    },
+    {
+      "name": "The Honorable Tom McClintock",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable James Lankford",
+      "position": "United States Senator",
+      "organization": ""
+    }
+  ],
+  "videos": [
+    {
+      "name": "Full Committee Hearing – Funding Lapses: Analyzing Shutdown Reform",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119485",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Hearing – Funding Lapses: Analyzing Shutdown Reform",
+      "url": "https://www.youtube.com/watch?v=01xlahGSbuo",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

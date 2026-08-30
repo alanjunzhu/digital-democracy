@@ -1,0 +1,36 @@
+{
+  "eventId": "338506",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the Department of the Treasury.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-03T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssfi00",
+      "name": "Senate Finance"
+    }
+  ],
+  "location": {
+    "room": "215",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338506?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the Department of the Treasury.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338506",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the Department of the Treasury.",
+      "url": "https://www.senate.gov/isvp/?comm=finance&filename=finance060326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

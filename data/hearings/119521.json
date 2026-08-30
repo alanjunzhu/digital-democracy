@@ -1,0 +1,31 @@
+{
+  "eventId": "119521",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Less Red Tape, More Opportunity: Unleashing American Workers and Job Creators”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-02T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed10",
+      "name": "House Education and Workforce Subcommittee on Workforce Protections"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119521?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119521/documents/HHRG-119-ED10-20260902-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

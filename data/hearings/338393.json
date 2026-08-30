@@ -1,0 +1,36 @@
+{
+  "eventId": "338393",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the U.S. Nuclear Regulatory Commission.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-13T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssev00",
+      "name": "Senate Environment and Public Works"
+    }
+  ],
+  "location": {
+    "room": "406",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338393?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the U.S. Nuclear Regulatory Commission.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338393",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the U.S. Nuclear Regulatory Commission.",
+      "url": "https://www.senate.gov/isvp/?comm=epw&filename=epw051326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

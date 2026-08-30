@@ -1,0 +1,25 @@
+{
+  "eventId": "338414",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Closed Hearing",
+  "title": "To receive a closed briefing on anomalous health incidents.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-20T19:30:00Z",
+  "committees": [
+    {
+      "systemCode": "ssas00",
+      "name": "Senate Armed Services"
+    }
+  ],
+  "location": {
+    "room": "217",
+    "building": "Capitol Visitor Center (Senate side",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338414?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

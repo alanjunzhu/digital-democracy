@@ -1,0 +1,97 @@
+{
+  "eventId": "119401",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "From Wall Street to Main Street: The Future of How America Invests",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-25T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba16",
+      "name": "House Financial Services Subcommittee on Capital Markets"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr3248",
+    "hr7187",
+    "hr9329"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119401?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Matthew Ringgenberg",
+      "position": "Emma Eccles Jones Professor of Finance",
+      "organization": "David Eccles School of Business, University of Utah"
+    },
+    {
+      "name": "Mr. Jeffrey Ptak",
+      "position": "Managing Director",
+      "organization": "Morningstar"
+    },
+    {
+      "name": "Mr. Tom Quaadman",
+      "position": "Chief of Government Affairs and Public Policy",
+      "organization": "Investment company Institute"
+    },
+    {
+      "name": "Ms. Natalia Renta",
+      "position": "Associate Director for Corporate Governance & Power",
+      "organization": "Americans for Financial Reform"
+    },
+    {
+      "name": "Ms. Jody Jonsson",
+      "position": "Vice Chair",
+      "organization": "Capital Group"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: From Wall Street to Main Street: The Future of How America Invests",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119401",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: From Wall Street to Main Street: The Future of How America Invests",
+      "url": "https://www.youtube.com/watch?v=vf2rIMEj350",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119401/documents/HHRG-119-BA16-20260625-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 3248, the American Ownership and Resilience Act",
+      "url": "https://www.congress.gov/119/meeting/house/119401/documents/BILLS-119HR3248ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7187, the Clarity for Compensation Act",
+      "url": "https://www.congress.gov/119/meeting/house/119401/documents/BILLS-119HR7187ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. ____, the Consumer-Led Enhancement of Annuity and Insurance Registration (CLEAR) Forms Act",
+      "url": "https://www.congress.gov/119/meeting/house/119401/documents/BILLS-119pih-requirestheSECtocreatefor.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9329, the SEC Reform and Restructuring Act",
+      "url": "https://www.congress.gov/119/meeting/house/119401/documents/BILLS-119HR9329ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119401/documents/HHRG-119-BA16-20260625-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

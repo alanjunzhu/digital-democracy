@@ -1,0 +1,88 @@
+{
+  "eventId": "119213",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Fiscal Year 2027 Department of Health and Human Services Budget",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-21T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif14",
+      "name": "House Energy and Commerce Subcommittee on Health"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119213?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Robert F. Kennedy, Jr.",
+      "position": "Secretary",
+      "organization": "U.S. Department of Health and Human Services"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Health Hearing: The Fiscal Year 2027 Department of Health and Human Services Budget",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119213",
+      "format": ""
+    },
+    {
+      "name": "Health Hearing: The Fiscal Year 2027 Department of Health and Human Services Budget",
+      "url": "https://www.youtube.com/watch?v=oYcjq7eO1Hc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119213/documents/HHRG-119-IF14-20260421-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Roster",
+      "url": "https://www.congress.gov/119/meeting/house/119213/documents/HHRG-119-IF14-20260421-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Brett Guthrie",
+      "url": "https://www.congress.gov/119/meeting/house/119213/documents/HHRG-119-IF14-MState-G000558-20260421.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Diana Harshbarger",
+      "url": "https://www.congress.gov/119/meeting/house/119213/documents/HHRG-119-IF14-MState-A000370-20260421.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Frank Pallone, Jr.",
+      "url": "https://www.congress.gov/119/meeting/house/119213/documents/HHRG-119-IF14-MState-P000034-20260421.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Diana DeGette",
+      "url": "https://www.congress.gov/119/meeting/house/119213/documents/HHRG-119-IF14-MState-D000197-20260421.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119213/documents/HHRG-119-IF14-Transcript-20260421.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119213/documents/HHRG-119-IF14-20260421-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Documents for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119213/documents/HHRG-119-IF14-20260421-SD003.pdf",
+      "format": "PDF"
+    }
+  ]
+}

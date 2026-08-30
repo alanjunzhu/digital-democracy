@@ -1,0 +1,86 @@
+{
+  "eventId": "119326",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Legislative field hearing on a Discussion Draft of the “Great American Outdoors Act 250.”\r\n(10:00AM local time)",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-12T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsii00",
+      "name": ""
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [
+    "hr9250"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119326?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Katharine Macgregor",
+      "position": "Deputy Secretary",
+      "organization": "U.S. Department of the Interior"
+    },
+    {
+      "name": "Mr. Mike Ward",
+      "position": "",
+      "organization": "The Coalition to Protect America's National Parks"
+    },
+    {
+      "name": "Mr. Kevin Costner",
+      "position": "Actor/Director",
+      "organization": ""
+    },
+    {
+      "name": "Ms. Katherine Andrews",
+      "position": "Director",
+      "organization": "Arkansas Department of Parks, Heritage and Tourism"
+    },
+    {
+      "name": "The Honorable Chris French",
+      "position": "Associate Chief",
+      "organization": "U.S. Forest Service"
+    },
+    {
+      "name": "Mr. Cole McCaskill",
+      "position": "Interim President & CEO",
+      "organization": "The Greater Hot Springs Chamber of Commerce"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Great American Outdoors Act 250 | Field Hearing",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119326",
+      "format": ""
+    },
+    {
+      "name": "Great American Outdoors Act 250 | Field Hearing",
+      "url": "https://www.youtube.com/watch?v=it6SCrH3izw",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Discussion Draft of the “Great American Outdoors Act 250\"",
+      "url": "https://www.congress.gov/119/meeting/house/119326/documents/BILLS-119pih-GreatAmericanOutdoorsAct250.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119326/documents/HHRG-119-II00-20260612-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9250 (Rep. Westerman), \"Great American Outdoors Act 250\"",
+      "url": "https://www.congress.gov/119/meeting/house/119326/documents/BILLS-119HR9250ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119326/documents/HHRG-119-II00-20260612-SD002-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

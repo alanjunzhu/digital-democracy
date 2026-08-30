@@ -1,0 +1,68 @@
+{
+  "eventId": "119394",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Workforce Rewired: Modern Apprenticeships for a Modern Economy”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-24T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed13",
+      "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119394?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Joe Ross",
+      "position": "President",
+      "organization": "Reach University"
+    },
+    {
+      "name": "Ms. Natasha Sherwood",
+      "position": "Director, Chapter & Workforce Development",
+      "organization": "Independent Electrical Contractors"
+    },
+    {
+      "name": "Ms. Jaime Angell",
+      "position": "Senior Director of Apprenticeships and Transitional Programs",
+      "organization": "Caliber"
+    },
+    {
+      "name": "Mr. John Ladd",
+      "position": "Senior Advisor, Center for Apprenticeship & Work-Based Learning",
+      "organization": "Jobs for the Future"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Workforce Rewired: Modern Apprenticeships for a Modern Economy",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119394",
+      "format": ""
+    },
+    {
+      "name": "Workforce Rewired: Modern Apprenticeships for a Modern Economy",
+      "url": "https://www.youtube.com/watch?v=O4Ojf6ZUeJY",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119394/documents/HHRG-119-ED13-20260624-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Chairman Burgess Owens | Submission for the Record | EASA Letter",
+      "url": "https://www.congress.gov/119/meeting/house/119394/documents/HHRG-119-ED13-20260624-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

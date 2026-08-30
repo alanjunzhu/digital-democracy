@@ -1,0 +1,63 @@
+{
+  "eventId": "119486",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Committee on House Administration Full Committee Hearing, “Oversight of the Smithsonian: Radical Revisionism at the National Museum of American History.”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsha00",
+      "name": "Committee on House Administration"
+    }
+  ],
+  "location": {
+    "room": "1310",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119486?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Anthea Hartig",
+      "position": "Elizabeth MacMillan Director",
+      "organization": ""
+    },
+    {
+      "name": "Dr. David Blight",
+      "position": "Sterling Professor of History and African American Studies",
+      "organization": "Yale University"
+    },
+    {
+      "name": "Dr. Jeffrey Anderson",
+      "position": "President & Founder",
+      "organization": "American Main Street Initiative"
+    },
+    {
+      "name": "Mr. Mike Gonzalez",
+      "position": "Senior Fellow",
+      "organization": "Angeles T. Arrendondo E Pluribus Unum"
+    }
+  ],
+  "videos": [
+    {
+      "name": "“Oversight of the Smithsonian: Radical Revisionism at the National Museum of American History”",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119486",
+      "format": ""
+    },
+    {
+      "name": "“Oversight of the Smithsonian: Radical Revisionism at the National Museum of American History”",
+      "url": "https://www.youtube.com/watch?v=J-Q4fuu7dPc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119486/documents/HHRG-119-HA00-20260722-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

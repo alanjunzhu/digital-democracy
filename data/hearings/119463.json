@@ -1,0 +1,58 @@
+{
+  "eventId": "119463",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "United Nations Accountability and Reform: Advancing an America First Foreign Policy Through Strategic Diplomacy and Burden Sharing",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa00",
+      "name": "House Foreign Affairs"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119463?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Jeff Bartos",
+      "position": "Representative of the United States of America to the United Nations, U.N. Management and Reform",
+      "organization": "U.S. Department of State"
+    },
+    {
+      "name": "The Honorable Mike Waltz",
+      "position": "Representative of the United States of America to the United Nations",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Ambassador Mike Waltz testifies before Congress: United Nations Accountability and Reform",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119463",
+      "format": ""
+    },
+    {
+      "name": "Ambassador Mike Waltz testifies before Congress: United Nations Accountability and Reform",
+      "url": "https://www.youtube.com/watch?v=y9qQ01rLYOs",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119463/documents/HHRG-119-FA00-20260722-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119463/documents/HHRG-119-FA00-20260722-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

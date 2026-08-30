@@ -1,0 +1,98 @@
+{
+  "eventId": "118948",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Opportunities with VHA Reorganization",
+  "meetingStatus": "Scheduled",
+  "date": "2026-02-11T15:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr00",
+      "name": "House Veterans' Affairs"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118948?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Douglas Collins",
+      "position": "Secretary",
+      "organization": "U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "The Honorable John Bartrum",
+      "position": "Under Secretary for Health",
+      "organization": "U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Mr. Gregory Goins",
+      "position": "Acting Chief Operating Officer",
+      "organization": "Veterans Health Administration, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Mr. Mark Englebaum",
+      "position": "Assistant Secretary for Human Resources and Administration",
+      "organization": "U.S. Department of Veterans Affairs"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Full Committee Oversight Hearing",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118948",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Oversight Hearing",
+      "url": "https://www.youtube.com/watch?v=ssj2bJHQGHw",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Final Printed Hearing",
+      "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-Transcript-20260211.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-20260211-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-WList-20260211.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: Kenneth W. Kizer, MD, MPH, DCM",
+      "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-20260211-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: Response Letter from Sec. Collins to Rep. Kennedy",
+      "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-20260211-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: Rep. Kennedy letter to Sec. Collins",
+      "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-20260211-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: American Podiatric Medical Association",
+      "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-20260211-SD005.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Takano to Department of Veterans Affairs",
+      "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-20260211-QFR001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "eventId": "119428",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Weathering the Solar Storm: Advancing America’s Space Weather Capabilities",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-01T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssy00",
+      "name": "House Science, Space, and Technology"
+    }
+  ],
+  "location": {
+    "room": "2318",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119428?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119428/documents/HHRG-119-SY00-20260701-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119428/documents/HHRG-119-SY00-20260701-SD002-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119428/documents/HHRG-119-SY00-20260701-SD003-U2.pdf",
+      "format": "PDF"
+    }
+  ]
+}

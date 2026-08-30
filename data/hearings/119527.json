@@ -1,0 +1,52 @@
+{
+  "eventId": "119527",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“No Flame, More Pain: How State and Local Bans on Natural Gas Increase Costs”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-02T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsgo05",
+      "name": "House Oversight and Government Reform Subcommittee on Economic Growth, Energy Policy, and Regulatory Affairs"
+    }
+  ],
+  "location": {
+    "room": "2154",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119527?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Patrick McCormick",
+      "position": "Former Chief Counsel",
+      "organization": "U.S. Senate Committee on Energy and Natural Resources"
+    },
+    {
+      "name": "Mr. Mike Fazio",
+      "position": "Executive Director, New York State Builders Association (NYSBA)",
+      "organization": "National Association of Home Builders"
+    },
+    {
+      "name": "Mr. James Conde",
+      "position": "Partner, Boyden Gray PLLC",
+      "organization": "Prime Mover Institute"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119527/documents/HHRG-119-GO05-20260902-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119527/documents/HHRG-119-GO05-20260902-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

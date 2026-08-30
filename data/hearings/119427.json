@@ -1,0 +1,63 @@
+{
+  "eventId": "119427",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Direct Contracting: A Prescription for Lower Health Care Costs”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-01T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed02",
+      "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119427?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Mark Newman",
+      "position": "CEO and Co-Founder",
+      "organization": "Nomi Health"
+    },
+    {
+      "name": "Mr. James Gelfand",
+      "position": "President and CEO",
+      "organization": "The ERISA Industry Committee (ERIC)"
+    },
+    {
+      "name": "Mr. Brad Woodhouse",
+      "position": "President",
+      "organization": "Protect Our Care"
+    },
+    {
+      "name": "Dr. Chad Savage",
+      "position": "President, DPC Action",
+      "organization": "Founder and Physician, YourChoice Direct Care"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Direct Contracting: A Prescription for Lower Health Care Costs",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119427",
+      "format": ""
+    },
+    {
+      "name": "Direct Contracting: A Prescription for Lower Health Care Costs",
+      "url": "https://www.youtube.com/watch?v=nCpnx3CffH4",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119427/documents/HHRG-119-ED02-20260701-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

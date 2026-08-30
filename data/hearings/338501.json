@@ -1,0 +1,36 @@
+{
+  "eventId": "338501",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "An oversight hearing to examine the United States Forest Service.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-02T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssaf00",
+      "name": "Senate Agriculture, Nutrition, and Forestry"
+    }
+  ],
+  "location": {
+    "room": "106",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338501?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "An oversight hearing to examine the United States Forest Service.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338501",
+      "format": ""
+    },
+    {
+      "name": "An oversight hearing to examine the United States Forest Service.",
+      "url": "https://www.senate.gov/isvp/?comm=ag&filename=ag060226",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

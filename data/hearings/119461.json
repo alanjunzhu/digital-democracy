@@ -1,0 +1,82 @@
+{
+  "eventId": "119461",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Building the Future of Finance: How the CLARITY Act Unlocks Innovation",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-17T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba21",
+      "name": "House Financial Services Subcommittee on Digital Assets, Financial Technology, and Artificial Intelligence"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [
+    "hr8957",
+    "hres111"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119461?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Randi Abernethy",
+      "position": "Head of Cleraing and Group Risk",
+      "organization": "Bullish"
+    },
+    {
+      "name": "Mr. Ryan Louvar",
+      "position": "Chief Legal Officer",
+      "organization": "WisdomTree"
+    },
+    {
+      "name": "Mr. Jason Somensatto",
+      "position": "Director of Policy",
+      "organization": "Coin Center"
+    },
+    {
+      "name": "Ms. Sarah Aberg",
+      "position": "Chief Legal Officer",
+      "organization": "Nova Labs Inc."
+    },
+    {
+      "name": "Ms. Randi Abernethy",
+      "position": "Head of Clearing and Group Risk",
+      "organization": "Bullish"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Field Hearing Entitled: Building the Future of Finance: How the CLARITY Act Unlocks Innovation",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119461",
+      "format": ""
+    },
+    {
+      "name": "Field Hearing Entitled: Building the Future of Finance: How the CLARITY Act Unlocks Innovation",
+      "url": "https://www.youtube.com/watch?v=fijdz8IDEDc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119461/documents/HHRG-119-BA21-20260717-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.Res. 111, Expressing support for blockchain technology and digital assets",
+      "url": "https://www.congress.gov/119/meeting/house/119461/documents/BILLS-119HRes111ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 8957, the American Reserve Modernization Act",
+      "url": "https://www.congress.gov/119/meeting/house/119461/documents/BILLS-119HR8957ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119461/documents/HHRG-119-BA21-20260717-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

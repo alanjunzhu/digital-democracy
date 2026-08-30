@@ -1,0 +1,36 @@
+{
+  "eventId": "338389",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine supporting families in the sandwich generation.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-13T19:30:00Z",
+  "committees": [
+    {
+      "systemCode": "spag00",
+      "name": "Senate Aging (Special)"
+    }
+  ],
+  "location": {
+    "room": "G50",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338389?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine supporting families in the sandwich generation.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338389",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine supporting families in the sandwich generation.",
+      "url": "https://www.senate.gov/isvp/?comm=aging&filename=aging051326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

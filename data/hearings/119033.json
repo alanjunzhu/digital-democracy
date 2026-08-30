@@ -1,0 +1,73 @@
+{
+  "eventId": "119033",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "From the Science Lab to the Medicine Cabinet: How China is Cornering the Market on Our Medicines",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-18T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hlzs00",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "390",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119033?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Francisco Gimenez",
+      "position": "Partner",
+      "organization": "8VC"
+    },
+    {
+      "name": "Dr. Jacob Becraft",
+      "position": "CEO and Co-Founder",
+      "organization": "Strand Therapeutics"
+    },
+    {
+      "name": "Mr. Patrick Cashman",
+      "position": "President",
+      "organization": "USAntibiotics"
+    },
+    {
+      "name": "Dr. Marta Wosińska",
+      "position": "Senior Fellow",
+      "organization": "Economic Studies, Center on Health Policy at Brookings"
+    }
+  ],
+  "videos": [
+    {
+      "name": "From the Science Lab to the Medicine Cabinet: How China is Cornering the Market on Our Medicines",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119033",
+      "format": ""
+    },
+    {
+      "name": "From the Science Lab to the Medicine Cabinet: How China is Cornering the Market on Our Medicines",
+      "url": "https://www.youtube.com/watch?v=uFLE30RWZ2w",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119033/documents/HHRG-119-ZS00-Transcript-20260318.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR: Dr. Wonsinska",
+      "url": "https://www.congress.gov/119/meeting/house/119033/documents/HHRG-119-ZS00-20260318-QFR001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR:MR. CASHMAN",
+      "url": "https://www.congress.gov/119/meeting/house/119033/documents/HHRG-119-ZS00-20260318-QFR002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

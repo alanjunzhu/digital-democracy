@@ -1,0 +1,68 @@
+{
+  "eventId": "119487",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Building a New Regional Security Architecture: The Next Phase of the Abraham Accords",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa13",
+      "name": "House Subcommittee on the Middle East and North Africa"
+    }
+  ],
+  "location": {
+    "room": "2200",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119487?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable David Friedman",
+      "position": "",
+      "organization": "Former Ambassador of the United States to Israel"
+    },
+    {
+      "name": "Mr. Asher Fredman",
+      "position": "Executive Director of the Misgav Institute for National Security",
+      "organization": "Visiting Fellow at The Heritage Foundation"
+    },
+    {
+      "name": "The Honorable Daniel Shapiro",
+      "position": "Former U.S. Ambassador to Israel, Distinguished Fellow, Scowcroft Middle East Initiative",
+      "organization": "Atlantic Council"
+    },
+    {
+      "name": "The Honorable David Friedman",
+      "position": "",
+      "organization": "Former U.S. Ambassador to Israel"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Building a New Regional Security Architecture: The Next Phase of the Abraham Accords",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119487",
+      "format": ""
+    },
+    {
+      "name": "Building a New Regional Security Architecture: The Next Phase of the Abraham Accords",
+      "url": "https://www.youtube.com/watch?v=ACGwn5jsRuM",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119487/documents/HHRG-119-FA13-20260722-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119487/documents/HHRG-119-FA13-20260722-SD001-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

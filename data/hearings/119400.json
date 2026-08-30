@@ -1,0 +1,68 @@
+{
+  "eventId": "119400",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Committee on House Administration Subcommittee on Modernization and Innovation Hearing: “Modernizing Public Access to Legislative Data and Information.”",
+  "meetingStatus": "Rescheduled",
+  "date": "2026-07-21T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsha27",
+      "name": "House Administration Subcommittee on Modernization and Innovation"
+    }
+  ],
+  "location": {
+    "room": "1310",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119400?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. John Rutledge",
+      "position": "Deputy Chief Information Officer",
+      "organization": "Library of Congress"
+    },
+    {
+      "name": "Ms. Charlotte Lee",
+      "position": "Adjunct Professor",
+      "organization": "Customer Experience Leadership Institute"
+    },
+    {
+      "name": "Ms. Kirsten Gullickson",
+      "position": "Director, Analysis, Quality Assurance, and Product Support",
+      "organization": "Office of the House Clerk"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Modernization and Innovation: “Modernizing Public Access to Legislative Data and Information\"",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119400",
+      "format": ""
+    },
+    {
+      "name": "Modernization and Innovation: “Modernizing Public Access to Legislative Data and Information\"",
+      "url": "https://www.youtube.com/watch?v=CLQAhWXznn0",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119400/documents/HHRG-119-HA27-20260721-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "POSTPONED NOTICE",
+      "url": "https://www.congress.gov/119/meeting/house/119400/documents/HHRG-119-HA27-20260721-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rescheduled Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119400/documents/HHRG-119-HA27-20260721-SD003.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "eventId": "119439",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Protecting American Innovation: The Federal Research Security Enterprise",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hlzs00",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "390",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119439?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Rebecca Keiser",
+      "position": "Acting Chief of Staff and Chief of Research Security Policy and Strategy",
+      "organization": "National Science Foundation"
+    },
+    {
+      "name": "Mr. Jeremy Ison",
+      "position": "Chief of Staff to the Under Secretary for Science",
+      "organization": "U.S. Department of Energy"
+    },
+    {
+      "name": "Dr. Patricia Valdez",
+      "position": "Chief Extramural Research Integrity Officer",
+      "organization": "National Institutes of Health"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Protecting American Innovation: The Federal Research Security Enterprise",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119439",
+      "format": ""
+    },
+    {
+      "name": "Protecting American Innovation: The Federal Research Security Enterprise",
+      "url": "https://www.youtube.com/watch?v=Qx-K4zz-K88",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119439/documents/HHRG-119-ZS00-Transcript-20260715.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Brian Babin",
+      "url": "https://www.congress.gov/119/meeting/house/119439/documents/HHRG-119-ZS00-MState-B001291-20260715.pdf",
+      "format": "PDF"
+    }
+  ]
+}

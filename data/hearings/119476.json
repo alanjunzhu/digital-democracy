@@ -1,0 +1,53 @@
+{
+  "eventId": "119476",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight of the Financial Crimes Enforcement Network",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-21T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba10",
+      "name": "House Financial Services Subcommittee on National Security, Illicit Finance, and International Financial Institutions"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119476?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Andrea Gacki",
+      "position": "Director",
+      "organization": "Financial Crimes Enforcement Network (FinCEN)"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Oversight of the Financial Crimes Enforcement Network",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119476",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Oversight of the Financial Crimes Enforcement Network",
+      "url": "https://www.youtube.com/watch?v=Hoz61NpdPzI",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119476/documents/HHRG-119-BA10-20260721-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119476/documents/HHRG-119-BA10-20260721-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

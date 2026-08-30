@@ -1,0 +1,68 @@
+{
+  "eventId": "119421",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Sanctuary Policies: Victims’ Perspectives”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-30T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsju01",
+      "name": "House Judiciary Subcommittee on Immigration Integrity, Security, and Enforcement"
+    }
+  ],
+  "location": {
+    "room": "2141",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119421?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Joe Abraham",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Mrs. Jessica Gorman",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Mr. Gary Redman",
+      "position": "Sheriff",
+      "organization": "Amador County Sheriff’s Office"
+    },
+    {
+      "name": "Ms. Sarah Pierce",
+      "position": "Director of Social Policy",
+      "organization": "Third Way"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Sanctuary Policies: Victims’ Perspectives",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119421",
+      "format": ""
+    },
+    {
+      "name": "Sanctuary Policies: Victims’ Perspectives",
+      "url": "https://www.youtube.com/watch?v=5WD04woytqQ",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "An article from the Washington Examiner titled, “Seven in 10 ICE arrests under Trump have criminal histories”, submitted for the Record by Mr. McClintock of CA",
+      "url": "https://www.congress.gov/119/meeting/house/119421/documents/HHRG-119-JU01-20260630-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "A statement for the record from multiple organizations regarding the hearing on June 30, 2026, submitted for the Record by Ms. Jayapal of WA",
+      "url": "https://www.congress.gov/119/meeting/house/119421/documents/HHRG-119-JU01-20260630-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

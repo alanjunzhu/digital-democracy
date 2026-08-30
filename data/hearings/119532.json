@@ -1,0 +1,31 @@
+{
+  "eventId": "119532",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Powering the Nuclear Renaissance: Accelerating U.S. Leadership in Advanced Nuclear Reactors",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-02T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssy20",
+      "name": "House Science, Space, and Technology Subcommittee on Energy"
+    }
+  ],
+  "location": {
+    "room": "2318",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119532?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119532/documents/HHRG-119-SY20-20260902-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "eventId": "338663",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine a review of the President's supplemental funding request of June 24, 2026.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-21T18:30:00Z",
+  "committees": [
+    {
+      "systemCode": "ssap00",
+      "name": "Senate Appropriations"
+    }
+  ],
+  "location": {
+    "room": "106",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338663?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine a review of the President's supplemental funding request of June 24, 2026.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338663",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine a review of the President's supplemental funding request of June 24, 2026.",
+      "url": "https://www.senate.gov/isvp/?comm=approps&filename=appropsA072126",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

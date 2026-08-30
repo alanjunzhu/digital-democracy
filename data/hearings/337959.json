@@ -1,0 +1,36 @@
+{
+  "eventId": "337959",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Closed Business Meeting",
+  "title": "Closed hearing to examine certain intelligence matters.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-02-04T20:00:00Z",
+  "committees": [
+    {
+      "systemCode": "slin00",
+      "name": "Senate Intelligence (Select)"
+    }
+  ],
+  "location": {
+    "room": "219",
+    "building": "Hart Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/337959?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Closed hearing to examine certain intelligence matters.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/337959",
+      "format": ""
+    },
+    {
+      "name": "Closed hearing to examine certain intelligence matters.",
+      "url": "https://www.senate.gov/isvp/?comm=intel&filename=intel020426",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

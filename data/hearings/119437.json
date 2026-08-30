@@ -1,0 +1,111 @@
+{
+  "eventId": "119437",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "Nine Pieces of Legislation",
+  "meetingStatus": "Postponed",
+  "date": "2026-07-01T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif00",
+      "name": "House Energy and Commerce"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr2004",
+    "hr9340",
+    "hr1266",
+    "hr6529",
+    "hr6633",
+    "hr9339",
+    "hr9332",
+    "hr7970",
+    "hr9335"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119437?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 1266, Combatting Illicit Xylazine Act",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119HR1266ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 2004, Tyler’s Law",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119HR2004ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6529, Protecting Families from AI Data Center Energy Costs Act",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119HR6529ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6633, High-Capacity Grid Act",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119HR6633ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7970, STOP Nitazenes Act",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119HR7970ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9332, Load Forecasting Enhancement Act",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119HR9332ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9335, Advanced Transmission Technology to Reduce Rates Act",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119HR9335ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9339, Affordable Innovation for the Grid Act",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119HR9339ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9340, Ratepayer Protection Act",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119HR9340ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Markup Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/HMKP-119-IF00-20260701-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Mark Up Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/HMKP-119-IF00-20260701-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Postponement Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/HMKP-119-IF00-20260701-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "h1266-fcr-ains_01_xml",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119-HR1266-P000048-Amdt-1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "h7970-fcr-ains_01_xml",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119-HR7970-L000566-Amdt-2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "ains_tariff_01_xml",
+      "url": "https://www.congress.gov/119/meeting/house/119437/documents/BILLS-119-HR9340-A000370-Amdt-3.pdf",
+      "format": "PDF"
+    }
+  ]
+}

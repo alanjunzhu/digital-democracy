@@ -1,0 +1,41 @@
+{
+  "eventId": "119407",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "updated Subcommittee rosters due to changes on the Majority side; General Services Administration Capital Investment and Leasing Program Resolutions' an ANS to H.R. ____, the \"Water Resources Development Act of 2026\"; and other matters cleared for consideration",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-01T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw00",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119407?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/119407/documents/HMKP-119-PW00-20260701-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119407/documents/HMKP-119-PW00-20260701-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice of Postponement",
+      "url": "https://www.congress.gov/119/meeting/house/119407/documents/HMKP-119-PW00-20260701-SD003.pdf",
+      "format": "PDF"
+    }
+  ]
+}

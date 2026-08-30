@@ -1,0 +1,48 @@
+{
+  "eventId": "119397",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Committee on House Administration Full Committee Hearing, “The Congressional Research Service and the Future of AI-Enabled Policy Analysis”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-25T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsha00",
+      "name": "Committee on House Administration"
+    }
+  ],
+  "location": {
+    "room": "1310",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119397?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Karen Donfried",
+      "position": "Director",
+      "organization": "Congressional Research Service"
+    }
+  ],
+  "videos": [
+    {
+      "name": "“The Congressional Research Service and the Future of AI-Enabled Policy Analysis”",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119397",
+      "format": ""
+    },
+    {
+      "name": "“The Congressional Research Service and the Future of AI-Enabled Policy Analysis”",
+      "url": "https://www.youtube.com/watch?v=xB79ey569Cg",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119397/documents/HMTG-119-HA00-20260625-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

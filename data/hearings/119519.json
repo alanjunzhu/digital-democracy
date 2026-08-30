@@ -1,0 +1,56 @@
+{
+  "eventId": "119519",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Subcommittee Hearing on Welfare Reform at 30: Restoring the Promise of Work and Personal Responsibility in Federal Welfare Programs",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-01T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hswm03",
+      "name": "House Ways and Means Subcommittee on Work and Welfare"
+    }
+  ],
+  "location": {
+    "room": "2020",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119519?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Scott Winship",
+      "position": "Senior Fellow and Director",
+      "organization": "Center on Opportunity and Social Mobility, American Enterprise Institute"
+    },
+    {
+      "name": "Ms. Missy Hanks",
+      "position": "Executive Director",
+      "organization": "The ELM Foundation"
+    },
+    {
+      "name": "Mr. Matt Damschroder",
+      "position": "Director",
+      "organization": "Ohio Department of Job and Family Services"
+    },
+    {
+      "name": "Ms. Misty Kelso",
+      "position": "Operations Manager",
+      "organization": "Watered Gardens Ministries"
+    },
+    {
+      "name": "Ms. Kristin Rowe-Finkbeiner",
+      "position": "Co-Founder and CEO",
+      "organization": "MomsRising"
+    },
+    {
+      "name": "Ms. Kristin Rowe-Finkbeiner",
+      "position": "Co-Founder and CEO",
+      "organization": "MomsRising"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": []
+}

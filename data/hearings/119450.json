@@ -1,0 +1,53 @@
+{
+  "eventId": "119450",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Federal Reserve's Semi-Annual Monetary Policy Report",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-14T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119450?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Kevin Warsh",
+      "position": "Chairman",
+      "organization": "Board of Governors of the Federal Reserve System"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: The Federal Reserve’s Semi-Annual Monetary Policy Report",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119450",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: The Federal Reserve’s Semi-Annual Monetary Policy Report",
+      "url": "https://www.youtube.com/watch?v=ZO9HbvGe7cE",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119450/documents/HHRG-119-BA00-20260714-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119450/documents/HHRG-119-BA00-20260714-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

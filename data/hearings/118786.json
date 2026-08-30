@@ -1,0 +1,58 @@
+{
+  "eventId": "118786",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"The State of American Aviation\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-12-16T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw05",
+      "name": "House Transportation and Infrastructure Subcommittee on Aviation"
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118786?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Bryan Bedford",
+      "position": "Administrator",
+      "organization": "Federal Aviation Administration, United States Department of Transportation"
+    }
+  ],
+  "videos": [
+    {
+      "name": "The State of American Aviation",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118786",
+      "format": ""
+    },
+    {
+      "name": "The State of American Aviation",
+      "url": "https://www.youtube.com/watch?v=Okq1WkRn86Q",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/118786/documents/CHRG-119hhrg64353.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118786/documents/HHRG-119-PW05-20251216-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/118786/documents/HHRG-119-PW05-20251216-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

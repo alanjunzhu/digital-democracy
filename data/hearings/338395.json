@@ -1,0 +1,36 @@
+{
+  "eventId": "338395",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine proposed budget estimates and justification for fiscal year 2027 for the General Services Administration.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-13T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssap23",
+      "name": "Senate Appropriations Subcommittee on Financial Services and General Government"
+    }
+  ],
+  "location": {
+    "room": "138",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338395?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine proposed budget estimates and justification for fiscal year 2027 for the General Services Administration.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338395",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine proposed budget estimates and justification for fiscal year 2027 for the General Services Administration.",
+      "url": "https://www.senate.gov/isvp/?comm=approps&filename=appropsA051326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

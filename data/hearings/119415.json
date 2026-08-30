@@ -1,0 +1,48 @@
+{
+  "eventId": "119415",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight Hearing - Office of Management and Budget",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-30T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsap23",
+      "name": "House Appropriations Subcommittee on Financial Services and General Government"
+    }
+  ],
+  "location": {
+    "room": "2359",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119415?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Russell Vought",
+      "position": "Director",
+      "organization": "Office of Management and Budget"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Oversight Hearing – U.S. Office of Management and Budget",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119415",
+      "format": ""
+    },
+    {
+      "name": "Oversight Hearing – U.S. Office of Management and Budget",
+      "url": "https://www.youtube.com/watch?v=m3SIAqhR59A",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119415/documents/HHRG-119-AP23-20260630-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

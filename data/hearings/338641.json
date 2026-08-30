@@ -1,0 +1,36 @@
+{
+  "eventId": "338641",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the nomination of Walter Clayton, of New York, to be Director of National Intelligence.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T13:30:00Z",
+  "committees": [
+    {
+      "systemCode": "slin00",
+      "name": "Senate Intelligence (Select)"
+    }
+  ],
+  "location": {
+    "room": "106",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338641?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the nomination of Walter Clayton, of New York, to be Director of National Intelligence.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338641",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the nomination of Walter Clayton, of New York, to be Director of National Intelligence.",
+      "url": "https://www.senate.gov/isvp/?comm=intel&filename=intel071526",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

@@ -1,0 +1,83 @@
+{
+  "eventId": "118882",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Community Care Network Next Generation: One Trillion Dollars of Oversight",
+  "meetingStatus": "Scheduled",
+  "date": "2026-01-22T15:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr00",
+      "name": "House Veterans' Affairs"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118882?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. John Vick",
+      "position": "Executive Director",
+      "organization": "Concerned Veterans for America"
+    },
+    {
+      "name": "Dr. Rachel Madley, Ph.D.",
+      "position": "Executive Director",
+      "organization": "Center for Health and Democracy"
+    },
+    {
+      "name": "Ms. Alicia Skolrood",
+      "position": "Executive Director, Integrated External Networks, Office of Integrated Veteran Care",
+      "organization": "Veterans Health Administration, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Mr. Richard Topping",
+      "position": "Assistant Secretary for Management and Chief Financial Officer",
+      "organization": "U.S. Department of Veterans Affairs"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Full Committee Oversight Hearing",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118882",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Oversight Hearing",
+      "url": "https://www.youtube.com/watch?v=7XnfqzbYmwU",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118882/documents/HHRG-119-VR00-20260122-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/118882/documents/HHRG-119-VR00-WList-20260122.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: Dr. Dexter letter to Sec. Collins",
+      "url": "https://www.congress.gov/119/meeting/house/118882/documents/HHRG-119-VR00-20260122-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Final Printed Hearing",
+      "url": "https://www.congress.gov/119/meeting/house/118882/documents/HHRG-119-VR00-Transcript-20260122.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Hamadeh to the U.S. Department of Veterans Affairs",
+      "url": "https://www.congress.gov/119/meeting/house/118882/documents/HHRG-119-VR00-20260122-QFR003.pdf",
+      "format": "PDF"
+    }
+  ]
+}

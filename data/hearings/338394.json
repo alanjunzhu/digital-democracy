@@ -1,0 +1,36 @@
+{
+  "eventId": "338394",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the United States Forest Service.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-13T13:30:00Z",
+  "committees": [
+    {
+      "systemCode": "sseg00",
+      "name": "Senate Energy and Natural Resources"
+    }
+  ],
+  "location": {
+    "room": "366",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338394?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the United States Forest Service.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338394",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the United States Forest Service.",
+      "url": "https://www.senate.gov/isvp/?comm=energy&filename=energy051326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

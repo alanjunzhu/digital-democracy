@@ -1,0 +1,88 @@
+{
+  "eventId": "119443",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "PACT Act Implementation: Modernizing VA Disability Claims Through Effective Technology",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-13T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr11",
+      "name": "House Veterans' Affairs Subcommittee on Technology Modernization"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119443?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Derek Herbert",
+      "position": "Acting Chief Production Officer",
+      "organization": "Veterans Benefits Administration, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Dr. Sterling Thomas",
+      "position": "Chief Scientist",
+      "organization": "Science, Technology Assessment, and Analytics, U.S. Government Accountability Office"
+    },
+    {
+      "name": "Mr. Caleb Max",
+      "position": "President and Chief Executive Officer",
+      "organization": "National Artificial Intelligence Association"
+    },
+    {
+      "name": "Mr. Jeremy Villanueva",
+      "position": "Associate Legislative Director",
+      "organization": "Paralyzed Veterans of America"
+    },
+    {
+      "name": "Mr. Gregg Orto",
+      "position": "Deputy Director, National Veterans Service",
+      "organization": "Veterans of Foreign Wars"
+    },
+    {
+      "name": "Mr. Robert Orifici",
+      "position": "Acting Deputy Chief Information Officer, Product Delivery Service",
+      "organization": "Office of Information and Technology, U.S. Department of Veterans Affairs"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Subcommittee on Technology Modernization Oversight Hearing",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119443",
+      "format": ""
+    },
+    {
+      "name": "Subcommittee on Technology Modernization Oversight Hearing",
+      "url": "https://www.youtube.com/watch?v=fzzumzymGoA",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Chairman Barrett and Ranking Member Budzinski to the U.S. Department of Veterans Affairs",
+      "url": "https://www.congress.gov/119/meeting/house/119443/documents/HHRG-119-VR11-20260713-QFR001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119443/documents/HHRG-119-VR11-20260713-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119443/documents/HHRG-119-VR11-WList-20260713.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: American Federation of Government Employees, AFL-CIO (AFGE)",
+      "url": "https://www.congress.gov/119/meeting/house/119443/documents/HHRG-119-VR11-20260713-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

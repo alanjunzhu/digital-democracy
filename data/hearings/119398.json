@@ -1,0 +1,72 @@
+{
+  "eventId": "119398",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Failure at the Front Gate: Examining VA Police and Security Deficiencies”",
+  "meetingStatus": "Postponed",
+  "date": "2026-06-24T18:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr08",
+      "name": "House Veterans' Affairs Subcommittee on Oversight and Investigations"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119398?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Patrick Hernandez",
+      "position": "Director of Security and Law Enforcement",
+      "organization": "Office of Operations, Security and Preparedness, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Mr. Brett Simms",
+      "position": "Executive Director Office of Asset Enterprise Management",
+      "organization": "U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Ms. Triana McNeil",
+      "position": "Director, Homeland Security and Justice",
+      "organization": "U.S. Government Accountability Office"
+    },
+    {
+      "name": "Mr. Matthew Leffler",
+      "position": "Vice President of AFGE Local 1699",
+      "organization": "American Federation of Government Employees, AFL-CIO"
+    },
+    {
+      "name": "Mr. Mark Engelbaum",
+      "position": "Assistant Secretary for Human Resources and Administration",
+      "organization": "Human Resources and Administration, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Mr. Brett Simms",
+      "position": "Executive Director, Office of Asset Enterprise Management",
+      "organization": "U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Mr. Reginald Neal",
+      "position": "Assistant Secretary for Operations, Security, and Preparedness",
+      "organization": "Office of Operations, Security and Preparedness, U.S. Department of Veterans Affairs"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119398/documents/HHRG-119-VR08-20260624-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119398/documents/HHRG-119-VR08-WList-20260624.pdf",
+      "format": "PDF"
+    }
+  ]
+}

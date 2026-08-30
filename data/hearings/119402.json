@@ -1,0 +1,51 @@
+{
+  "eventId": "119402",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "H.R. 5992, the “Stuck on Hold Act”; \r\nH.R. 8532, the “VA Home Loan Affordability Act”; \r\nDiscussion Draft, the “VA Education Oversight Improvement Act”; \r\nDiscussion Draft, the “Affordable Homes for Veterans Act of 2026”",
+  "meetingStatus": "Postponed",
+  "date": "2026-06-25T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr10",
+      "name": "House Veterans' Affairs Subcommittee on Economic Opportunity"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119402?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119402/documents/HHRG-119-VR10-20260625-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 5992, the “Stuck on Hold Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119402/documents/BILLS-1195992ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 8532, the “VA Home Loan Affordability Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119402/documents/BILLS-1198532ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Discussion Draft, the “VA Education Oversight Improvement Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119402/documents/BILLS-119XXX1ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Discussion Draft, the “Affordable Homes for Veterans Act of 2026”",
+      "url": "https://www.congress.gov/119/meeting/house/119402/documents/BILLS-119XXXXih.pdf",
+      "format": "PDF"
+    }
+  ]
+}

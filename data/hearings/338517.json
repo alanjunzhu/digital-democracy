@@ -1,0 +1,36 @@
+{
+  "eventId": "338517",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Markup Session",
+  "title": "Business meeting to markup the National Defense Authorization Act for fiscal year 2027.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-09T13:30:00Z",
+  "committees": [
+    {
+      "systemCode": "ssas17",
+      "name": "Senate Armed Services Subcommittee on Personnel"
+    }
+  ],
+  "location": {
+    "room": "G50",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338517?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Business meeting to markup the National Defense Authorization Act for fiscal year 2027.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338517",
+      "format": ""
+    },
+    {
+      "name": "Business meeting to markup the National Defense Authorization Act for fiscal year 2027.",
+      "url": "https://www.senate.gov/isvp/?comm=armed&filename=armedA060926",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

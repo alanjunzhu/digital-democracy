@@ -1,0 +1,108 @@
+{
+  "eventId": "119386",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight hearing titled \"Beneath the Surface: Earth MRI and America's Resource Potential\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-25T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsii06",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "1324",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119386?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Nick Hayman",
+      "position": "President-Elect",
+      "organization": "Association of American State Geologists"
+    },
+    {
+      "name": "Mr. Jeff Lovin",
+      "position": "Senior Vice President, Woolpert",
+      "organization": "Board Member, MAPPS"
+    },
+    {
+      "name": "Dr. Elizabeth Holley",
+      "position": "Professor, Mining Engineering",
+      "organization": "Colorado School of Mines"
+    },
+    {
+      "name": "Dr. Colin Williams",
+      "position": "Program Director",
+      "organization": "U.S. Geological Survey"
+    },
+    {
+      "name": "Dr. Graham Lederer",
+      "position": "Principal Scientist",
+      "organization": "Jataware"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Beneath the Surface: Earth MRI and America’s Resource Potential",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119386",
+      "format": ""
+    },
+    {
+      "name": "Beneath the Surface: Earth MRI and America’s Resource Potential",
+      "url": "https://www.youtube.com/watch?v=vJgM-vEjwug",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119386/documents/HHRG-119-II06-20260625-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119386/documents/HHRG-119-II06-20260625-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Ansari FTR Breakthrough Institute Letter",
+      "url": "https://www.congress.gov/119/meeting/house/119386/documents/HHRG-119-II06-20260625-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Ansari FTR Zanskar Letter",
+      "url": "https://www.congress.gov/119/meeting/house/119386/documents/HHRG-119-II06-20260625-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Rivas FTR NASA JPL Article",
+      "url": "https://www.congress.gov/119/meeting/house/119386/documents/HHRG-119-II06-20260625-SD005.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Stauber FTR BellGeospace Letter",
+      "url": "https://www.congress.gov/119/meeting/house/119386/documents/HHRG-119-II06-20260625-SD006.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR Responses Hayman",
+      "url": "https://www.congress.gov/119/meeting/house/119386/documents/HHRG-119-II06-20260625-SD007.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR Responses Lederer",
+      "url": "https://www.congress.gov/119/meeting/house/119386/documents/HHRG-119-II06-20260625-SD008.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR Responses Holley",
+      "url": "https://www.congress.gov/119/meeting/house/119386/documents/HHRG-119-II06-20260625-SD009.pdf",
+      "format": "PDF"
+    }
+  ]
+}

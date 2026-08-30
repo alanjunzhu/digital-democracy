@@ -1,0 +1,25 @@
+{
+  "eventId": "336705",
+  "congress": 119,
+  "chamber": "NoChamber",
+  "type": "Meeting",
+  "title": "Business meeting to consider committee rules of procedure for the 119th Congress, and to designate the Chair and Vice Chair.",
+  "meetingStatus": "Scheduled",
+  "date": "2025-03-11T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "jspr00",
+      "name": "Joint Committee on Printing"
+    }
+  ],
+  "location": {
+    "room": "219",
+    "building": "Capitol (Senate side)",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/336705?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

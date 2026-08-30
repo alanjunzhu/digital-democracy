@@ -1,0 +1,63 @@
+{
+  "eventId": "119385",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "China’s Economic Espionage and Subnational Influence in the United States",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-25T14:30:00Z",
+  "committees": [
+    {
+      "systemCode": "hlzs00",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "390",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119385?format=json",
+  "witnesses": [
+    {
+      "name": "Michael Lucci",
+      "position": "Founder, CEO",
+      "organization": "State Armor"
+    },
+    {
+      "name": "David Shedd",
+      "position": "Former Acting Director",
+      "organization": "Defense Intelligence Agency"
+    },
+    {
+      "name": "John Yang",
+      "position": "President and Executive Director",
+      "organization": "Asian Americans Advancing Justice"
+    }
+  ],
+  "videos": [
+    {
+      "name": "China’s Economic Espionage and Subnational Influence in the United States",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119385",
+      "format": ""
+    },
+    {
+      "name": "China’s Economic Espionage and Subnational Influence in the United States",
+      "url": "https://www.youtube.com/watch?v=qxl7kz0WQP8",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119385/documents/HHRG-119-ZS00-Transcript-20260625.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119385/documents/HHRG-119-ZS00-20260625-QFR001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "eventId": "338676",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Closed Business Meeting",
+  "title": "Closed business meeting to consider pending intelligence matters.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-21T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "slin00",
+      "name": "Senate Intelligence (Select)"
+    }
+  ],
+  "location": {
+    "room": "216",
+    "building": "Capitol (Senate side)",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338676?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

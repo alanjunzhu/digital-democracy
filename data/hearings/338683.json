@@ -1,0 +1,36 @@
+{
+  "eventId": "338683",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the testimony of Anthony Fauci.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-29T12:30:00Z",
+  "committees": [
+    {
+      "systemCode": "ssga00",
+      "name": "Senate Homeland Security and Governmental Affairs"
+    }
+  ],
+  "location": {
+    "room": "342",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338683?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the testimony of Anthony Fauci.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338683",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the testimony of Anthony Fauci.",
+      "url": "https://www.senate.gov/isvp/?comm=govtaff&filename=govtaff072926",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

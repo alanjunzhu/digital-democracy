@@ -1,0 +1,83 @@
+{
+  "eventId": "119269",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“DoW Financial Management: Examining Progress and New Audit Approaches”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-13T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsgo24",
+      "name": "House Oversight and Government Reform Subcommittee on Government Operations"
+    }
+  ],
+  "location": {
+    "room": "2154",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119269?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Thomas Harker",
+      "position": "Deputy Chief Financial Officer",
+      "organization": "U.S. Department of War"
+    },
+    {
+      "name": "Mr. Ryan A. Busby, CPA",
+      "position": "Deputy Assistant Secretary of the Army for Financial Operations",
+      "organization": "U.S. Army"
+    },
+    {
+      "name": "Mr. Brett Mansfield",
+      "position": "Deputy Inspector General for Audit",
+      "organization": "U.S. Department of War, Office of Inspector General"
+    },
+    {
+      "name": "Mr. Asif Khan",
+      "position": "Director, Financial Management Assurance",
+      "organization": "U.S. Government Accountability Office"
+    }
+  ],
+  "videos": [
+    {
+      "name": "DoW Financial Management: Examining Progress and New Audit Approaches",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119269",
+      "format": ""
+    },
+    {
+      "name": "DoW Financial Management: Examining Progress and New Audit Approaches",
+      "url": "https://www.youtube.com/watch?v=FeYLwdwoZgc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119269/documents/HHRG-119-GO24-20260513-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Attendance Sheet",
+      "url": "https://www.congress.gov/119/meeting/house/119269/documents/HHRG-119-GO24-20260513-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119269/documents/HHRG-119-GO24-20260513-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "UC - Frost - Article - Iran has hit far more U.S. military assets than reported, satellite images show - Washington Post",
+      "url": "https://www.congress.gov/119/meeting/house/119269/documents/HHRG-119-GO24-20260513-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Transcript",
+      "url": "https://www.congress.gov/119/meeting/house/119269/documents/HHRG-119-GO24-Transcript-20260513.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "eventId": "119434",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Reforming FEMA: Ensuring the Nation's Disaster Readiness Works for Americans\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw00",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119434?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Craig Fugate",
+      "position": "Former Federal Emergency Management Agency Administrator (2009-2017)",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Cynthia Sheng",
+      "position": "President",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Jim Matheson",
+      "position": "Chief Executive Officer",
+      "organization": "National Rural Electric Cooperative Association"
+    },
+    {
+      "name": "Brian Waller",
+      "position": "Vice President, External Relations",
+      "organization": "Shelter Mutual Insurance Company"
+    },
+    {
+      "name": "Chuck Chaitovitz",
+      "position": "Vice President, Environmental Affairs and Sustainability",
+      "organization": "United States Chamber of Commerce"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Reforming FEMA: Ensuring the Nation’s Disaster Readiness Works for Americans",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119434",
+      "format": ""
+    },
+    {
+      "name": "Reforming FEMA: Ensuring the Nation’s Disaster Readiness Works for Americans",
+      "url": "https://www.youtube.com/watch?v=KiCA6fRmWM8",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119434/documents/HHRG-119-PW00-20260715-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/119434/documents/HHRG-119-PW00-20260715-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

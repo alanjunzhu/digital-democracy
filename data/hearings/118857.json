@@ -1,0 +1,76 @@
+{
+  "eventId": "118857",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "H.R. 9436 – To amend the Consolidated Appropriations Act, 2023 to extend the time period for which certain regulation concerning the North Atlantic right whale are effective. [Northeast Lobsterman Protection Act of 2026]; H.R. 4795 – \tProtect Economic and Academic Freedom Act of 2026; H.R. 1501 – Protecting Domestic Mining Act of 2025; H. Res. 1490 – \tProviding for the condemnation and denouncement of socialism in all its forms, and for other purposes.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-08-31T20:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsru00",
+      "name": "House Rules"
+    }
+  ],
+  "location": {
+    "room": "H-313",
+    "building": "Capitol",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr4795",
+    "hr1501",
+    "hr9436",
+    "hres1490"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118857?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 1501 – Protecting Domestic Mining Act of 2025",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/BILLS-119hr1501rh.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: H. Rept. 119-691 – Report from the Committee on Natural Resources to accompany H.R. 1501",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/CRPT-119hrpt691.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H. Res. 1490 – \tProviding for the condemnation and denouncement of socialism in all its forms, and for other purposes.",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/hressocialism_xml.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9436 – To amend the Consolidated Appropriations Act, 2023 to extend the time period for which certain regulation concerning the North Atlantic right whale are effective. [Northeast Lobsterman Protection Act of 2026]",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/BILLS-119hr9436rh.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: Rules Committee Print 119-40 – Showing the text of H.R. 9436, as reported by the Committee on Natural Resources",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/BILLS-119119-40ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: H. Rept. 119-766 – Report from the Committee on Natural Resources to accompany H.R. 9436",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/CRPT-119hrpt766.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 4795 – Protect Economic and Academic Freedom Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/BILLS-119hr4795rh.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: Rules Committee Print 119-39 – Showing the text of H.R. 4795, as reported by the Committee on Education and Workforce",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/BILLS-119119-39ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: H. Rept. 119-780 – Report from the Committee on Education and Workforce to accompany H.R. 4795",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/CRPT-119hrpt780.pdf",
+      "format": "PDF"
+    }
+  ]
+}

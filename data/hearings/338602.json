@@ -1,0 +1,36 @@
+{
+  "eventId": "338602",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the future of social security.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-24T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssfi02",
+      "name": "Senate Finance Subcommittee on Social Security, Pensions, and Family Policy"
+    }
+  ],
+  "location": {
+    "room": "215",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338602?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the future of social security.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338602",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the future of social security.",
+      "url": "https://www.senate.gov/isvp/?comm=finance&filename=finance062426",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

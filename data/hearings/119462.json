@@ -1,0 +1,58 @@
+{
+  "eventId": "119462",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Confronting Haiti’s Terrorist Gangs: The Gang Suppression Force and the Path Ahead",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-21T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa00",
+      "name": "House Foreign Affairs"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119462?format=json",
+  "witnesses": [
+    {
+      "name": "Colonel Justin Gorkowski",
+      "position": "Co-Lead, Haiti Gang Suppression Force Tiger Team",
+      "organization": "U.S. Department of War"
+    },
+    {
+      "name": "The Honorable Michael Kozak",
+      "position": "Senior Bureau Official, Bureau of Western Hemisphere Affairs",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Confronting Haiti’s Terrorist Gangs: The Gang Suppression Force and the Path Ahead",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119462",
+      "format": ""
+    },
+    {
+      "name": "Confronting Haiti’s Terrorist Gangs: The Gang Suppression Force and the Path Ahead",
+      "url": "https://www.youtube.com/watch?v=rfbzxFHS4KI",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119462/documents/HHRG-119-FA00-20260721-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119462/documents/HHRG-119-FA00-20260721-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

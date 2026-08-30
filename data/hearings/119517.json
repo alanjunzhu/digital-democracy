@@ -1,0 +1,31 @@
+{
+  "eventId": "119517",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Beyond Go-Live: VA Electronic Health Record Modernization Status Update",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-02T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr00",
+      "name": "House Veterans' Affairs"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119517?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119517/documents/HHRG-119-VR00-20260902-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

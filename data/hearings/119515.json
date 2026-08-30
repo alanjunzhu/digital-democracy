@@ -1,0 +1,42 @@
+{
+  "eventId": "119515",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Countering Houthi Terrorism: Protecting U.S. Interests and Security in the Red Sea",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-01T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa13",
+      "name": "House Subcommittee on the Middle East and North Africa"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119515?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Nadwa Al-Dawsari",
+      "position": "Associate Fellow",
+      "organization": "Middle East Institute"
+    },
+    {
+      "name": "Ms. Allison Minor",
+      "position": "Director, Project for Middle East Integration",
+      "organization": "Atlantic Council"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119515/documents/HHRG-119-FA13-20260901-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

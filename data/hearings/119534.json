@@ -1,0 +1,66 @@
+{
+  "eventId": "119534",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "Subcommittee Markup of 6 Bills",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-01T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif16",
+      "name": "House Energy and Commerce Subcommittee on Communications and Technology"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119534?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 2805, PLAN for Broadband Act",
+      "url": "https://www.congress.gov/119/meeting/house/119534/documents/BILLS-1192805ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 4950, Data BRIDGE Act",
+      "url": "https://www.congress.gov/119/meeting/house/119534/documents/BILLS-1194950ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6152, the Foreign Robocall Elimination Act",
+      "url": "https://www.congress.gov/119/meeting/house/119534/documents/BILLS-1196152ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7294, AI for Secure Networks Act",
+      "url": "https://www.congress.gov/119/meeting/house/119534/documents/BILLS-1197294ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 8255, the Satellite and Telecommunications Streamlining, or the “SAT Streamlining” Act (Rep. Brett Guthrie)",
+      "url": "https://www.congress.gov/119/meeting/house/119534/documents/BILLS-1198255ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9129, the GUARD Act",
+      "url": "https://www.congress.gov/119/meeting/house/119534/documents/BILLS-1199129ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Markup Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119534/documents/HMKP-119-IF16-20260901-SD1619489.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Markup Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119534/documents/HMKP-119-IF16-20260901-SD161235.pdf",
+      "format": "PDF"
+    }
+  ]
+}

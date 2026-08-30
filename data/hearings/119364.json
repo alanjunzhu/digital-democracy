@@ -1,0 +1,78 @@
+{
+  "eventId": "119364",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"On Call for America: Strengthening Access Through Locum Tenens Providers\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-09T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed10",
+      "name": "House Education and Workforce Subcommittee on Workforce Protections"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119364?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Autumn Begay",
+      "position": "Senior Corporate Counsel",
+      "organization": "CHG Healthcare"
+    },
+    {
+      "name": "Dr. Katie Wells",
+      "position": "Senior Fellow, AI and Healthcare",
+      "organization": "AI Now Institute"
+    },
+    {
+      "name": "Dr. Liya Palagashvili",
+      "position": "Senior Research Fellow",
+      "organization": "Mercatus Center at George Mason University"
+    },
+    {
+      "name": "Mr. Jonathan Wolfson",
+      "position": "Visiting Fellow",
+      "organization": "Institute for the American Worker (I4AW)"
+    }
+  ],
+  "videos": [
+    {
+      "name": "On Call for America: Strengthening Access Through Locum Tenens Providers",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119364",
+      "format": ""
+    },
+    {
+      "name": "On Call for America: Strengthening Access Through Locum Tenens Providers",
+      "url": "https://www.youtube.com/watch?v=7IrZlTtSrBw",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Dr. Katie Wells | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119364/documents/HHRG-119-ED10-20260609-QFR001-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119364/documents/HHRG-119-ED10-20260609-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Ilhan Omar | Submission for the Record | National Nurses United Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119364/documents/HHRG-119-ED10-20260609-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Dr. Katie Wells | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119364/documents/HHRG-119-ED10-20260609-QFR001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

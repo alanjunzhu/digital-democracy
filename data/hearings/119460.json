@@ -1,0 +1,59 @@
+{
+  "eventId": "119460",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Building an AI-Ready America: How AI Is Creating Opportunities Across America's Workforce”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-24T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119460?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Ajikumar Parayil",
+      "position": "Founder and CEO",
+      "organization": "Manus Bio"
+    },
+    {
+      "name": "Dr. Jeffery Talbert",
+      "position": "Professor and Department Chair in AI and Health, Georgia Research Alliance Eminent Scholar, Department of Artificial Intelligence and Health",
+      "organization": "Medical College of Georgia, Augusta University"
+    },
+    {
+      "name": "Mr. Brad Edenfield",
+      "position": "Farmer and General Manager",
+      "organization": "RT Farms, Inc."
+    },
+    {
+      "name": "Mr. Tony Barlow",
+      "position": "Vice President",
+      "organization": "Communications Workers of America, Local 3204"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Building an AI-Ready America: How AI Is Creating Opportunities Across America's Workforce",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119460",
+      "format": ""
+    },
+    {
+      "name": "Building an AI-Ready America: How AI Is Creating Opportunities Across America's Workforce",
+      "url": "https://www.youtube.com/watch?v=FR63vqNRH9E",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119460/documents/HHRG-119-ED00-20260724-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

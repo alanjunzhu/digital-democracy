@@ -1,0 +1,36 @@
+{
+  "eventId": "338387",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine VA police operations.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-13T20:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssva00",
+      "name": "Senate Veterans' Affairs"
+    }
+  ],
+  "location": {
+    "room": "216",
+    "building": "Hart Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338387?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine VA police operations.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338387",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine VA police operations.",
+      "url": "https://www.senate.gov/isvp/?comm=vetaff&filename=vetaff051326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

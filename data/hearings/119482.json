@@ -1,0 +1,63 @@
+{
+  "eventId": "119482",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Broken Trust: How the Biden-Harris DOL Leaked Confidential Information”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-22T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed10",
+      "name": "House Education and Workforce Subcommittee on Workforce Protections"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119482?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Anthony D'Esposito",
+      "position": "Inspector General",
+      "organization": "U.S. Department of Labor"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Broken Trust: How the Biden-Harris DOL Leaked Confidential Information",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119482",
+      "format": ""
+    },
+    {
+      "name": "Broken Trust: How the Biden-Harris DOL Leaked Confidential Information",
+      "url": "https://www.youtube.com/watch?v=m2aC2dWOdPE",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Rep. Tim Walberg | Submission for the Record | Department of Labor Report",
+      "url": "https://www.congress.gov/119/meeting/house/119482/documents/HHRG-119-ED10-20260722-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Tim Walberg | Submission for the Record | James Bonham- ESOP Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119482/documents/HHRG-119-ED10-20260722-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Tim Walberg | Submission for the Record | ERIC Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119482/documents/HHRG-119-ED10-20260722-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119482/documents/HHRG-119-ED10-20260722-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

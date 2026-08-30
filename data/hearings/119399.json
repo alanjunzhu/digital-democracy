@@ -1,0 +1,73 @@
+{
+  "eventId": "119399",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Future of Payments: Promoting Innovation and Fair Markets",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-24T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119399?format=json",
+  "witnesses": [
+    {
+      "name": "Mrs. Paige Paridon",
+      "position": "Executive Vice President & Co-Head of Regulatory Affairs",
+      "organization": "Bank Policy Institute"
+    },
+    {
+      "name": "Ms. Tara Flynn",
+      "position": "Policy Director",
+      "organization": "National Community Reinvestment Coalition"
+    },
+    {
+      "name": "Mrs. Eileen O'Mara",
+      "position": "Vice Chair",
+      "organization": "Stripe"
+    },
+    {
+      "name": "Ms. Rachel Anderika",
+      "position": "Head of Global Operations",
+      "organization": "Anchorage Digital"
+    },
+    {
+      "name": "Mr. David Portilla",
+      "position": "Partner and Co-Head, Financial Institutions",
+      "organization": "Davis Polk & Wardwell LLP"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Future of Payments: Promoting Innovation and Fair Markets",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119399",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Future of Payments: Promoting Innovation and Fair Markets",
+      "url": "https://www.youtube.com/watch?v=98cIEA8JbSg",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119399/documents/HHRG-119-BA00-20260624-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119399/documents/HHRG-119-BA00-20260624-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

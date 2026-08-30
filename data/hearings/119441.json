@@ -1,0 +1,53 @@
+{
+  "eventId": "119441",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Budget Hearing - Supreme Court of the United States",
+  "meetingStatus": "Scheduled",
+  "date": "2026-07-14T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsap23",
+      "name": "House Appropriations Subcommittee on Financial Services and General Government"
+    }
+  ],
+  "location": {
+    "room": "2359",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119441?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Amy Coney Barrett",
+      "position": "Associate Justice",
+      "organization": "Supreme Court of the United States"
+    },
+    {
+      "name": "The Honorable Elena Kagan",
+      "position": "Associate Justice",
+      "organization": "Supreme Court of the United States"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Budget Hearing – The Supreme Court of the United States",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119441",
+      "format": ""
+    },
+    {
+      "name": "Budget Hearing – The Supreme Court of the United States",
+      "url": "https://www.youtube.com/watch?v=o6wzOeWfVAI",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119441/documents/HHRG-119-AP23-20260714-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
