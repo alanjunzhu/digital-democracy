@@ -201,3 +201,21 @@ test('every disposition has a dot colour and none of them is green', () => {
     'dot map and disposition list have drifted apart',
   );
 });
+
+test('an action with a date but no text is dropped from the action history', () => {
+  // Congress.gov's amendment actions include tracking records (seen on
+  // IntroReferral entries) that carry a date and a type but no text at all.
+  // This page shows nothing but text per row, so keeping one would render as
+  // a blank line with no information in it.
+  const { full } = normalizeAmendment(
+    { congress: 119, number: 6732, type: 'SAMDT' },
+    null,
+    [
+      { actionDate: '2026-08-08', text: 'Amendment SA 6732 agreed to in Senate by Unanimous Consent.', type: 'Floor' },
+      { actionDate: '2026-08-04', text: '', type: 'IntroReferral' },
+    ],
+  );
+
+  assert.equal(full.actions.length, 1);
+  assert.equal(full.actions[0].date, '2026-08-08');
+});

@@ -147,9 +147,13 @@ export function normalizeAmendment(listItem, detail, actions = []) {
 
   const full = {
     ...summary,
+    // Congress.gov's amendment actions include tracking records with a date
+    // and a type but no text at all (seen on IntroReferral entries) — nothing
+    // this page shows besides text, so a date-only row would just be a blank
+    // line with no information in it.
     actions: actions
       .map((a) => ({ date: a?.actionDate || '', text: a?.text || '', type: a?.type || '' }))
-      .filter((a) => a.date || a.text),
+      .filter((a) => a.text),
   };
 
   return { summary, full };
