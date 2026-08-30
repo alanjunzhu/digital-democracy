@@ -415,6 +415,92 @@ paper/card value difference and from rules. Full reference in the README.
 
 ---
 
+### Phase 8: Amendment tracking
+
+**Goal:** Cover the measures that change bills on the floor, and close a gap the
+vote records already expose.
+
+**Why it earns a phase.** 118 of the 1,008 stored roll calls are votes on an
+amendment, and the House ones are titled only `"On Agreeing to the Amendment"` —
+the site cannot currently say *which* amendment was voted on. Amendments are not
+a standalone list; they are the missing join between bills, members and votes.
+
+**Source.** `/v3/amendment/{congress}/{type}` where type is `hamdt` or `samdt`,
+then the item endpoint, then `/actions` for the roll-call reference.
+
+**Volume.** Same guard as bills: request with `sort=updateDate+desc`, paginate at
+250, cap the stored set. Without that sort the endpoint returns a congress's
+oldest amendments first, so a capped fetch only ever sees the ones submitted the
+week the congress convened.
+
+**The three joins, and how each is built:**
+
+| Join | Source field | Where it surfaces |
+| --- | --- | --- |
+| Amendment → bill | `amendedBill{congress,type,number}` | Amendments section on bill detail |
+| Amendment → member | `sponsors[].bioguideId` | Amendments sponsored on member profile |
+| Amendment → roll call | `actions[].recordedVotes[]` | Vote detail names the amendment |
+
+The roll-call join is deterministic rather than fuzzy: `recordedVotes` carries
+`chamber`, `sessionNumber` and `rollNumber`, which compose into the existing
+voteId format (`s2-rc217`, `h2-rc283`) as
+`` `${chamber[0].toLowerCase()}${sessionNumber}-rc${rollNumber}` ``.
+
+**Disposition is read, never compared.** Amendment results carry the same variety
+as roll-call results, so `shared/amendment-outcome.mjs` classifies by wording the
+way `shared/vote-outcome.mjs` does. Matching against a fixed set of strings is
+what made a third of all roll calls render backwards; the same mistake is
+available here and is explicitly not repeated.
+
+**Files:**
+- `scripts/fetch-amendments.mjs` → `data/amendments/index.json` + `{amendmentId}.json`
+- `shared/amendment-outcome.mjs` — disposition from wording
+- `src/pages/amendments/index.astro`, `[amendmentId].astro`
+- `src/components/interactive/AmendmentFilter.tsx`
+
+---
+
+### Phase 9: Hearing schedules
+
+**Goal:** Show what each committee has scheduled, and what it recently held.
+
+**Endpoint choice.** This is `/v3/committee-meeting/{congress}/{chamber}`, not
+`/v3/hearing/`. They are different datasets and only the first is a schedule:
+
+| Endpoint | Carries |
+| --- | --- |
+| `committee-meeting` | `meetingStatus` (Scheduled / Canceled / Postponed / Rescheduled), `date`, `location{room,building,address}`, `witnesses`, `relatedItems`, `videos` |
+| `hearing` | Published transcripts of past hearings — `jacketNumber`, `citation`, PDF formats |
+
+`/v3/hearing/` is a later add-on for transcript links, not the schedule.
+
+**The freshness problem, stated rather than hidden.** A schedule is the most
+time-sensitive data on the site, and the site is a static build on a cron. A
+meeting can be canceled hours after a build. The design system already forbids
+the dishonest resolution — never say "live" or "real-time" when the build is
+scheduled — so instead:
+
+1. Fetch **daily**; the dataset is small enough that cadence is cheap.
+2. Render `meetingStatus` explicitly rather than assuming every listed meeting
+   will happen. Status takes the stage-dot vocabulary: Scheduled navy, Canceled
+   red, Postponed goldenrod, Rescheduled ink-3.
+3. Carry a coverage note reading **"Schedule as of {date}"**, and settle past
+   meetings back visually instead of dropping them.
+
+**Joins.** `committees[].systemCode` gives committee pages an upcoming/recent
+meetings section; `relatedItems` gives bill pages a "scheduled for hearing" line.
+
+**Files:**
+- `scripts/fetch-hearings.mjs` → `data/hearings/index.json` + `{eventId}.json`
+- `src/pages/hearings/index.astro`, `[eventId].astro`
+- `src/components/interactive/HearingFilter.tsx`
+
+**Known coverage limit.** Congress.gov's Senate committee-meeting data is
+thinner than the House's. Where a chamber returns little, the page says so rather
+than rendering an empty list that reads as "no meetings scheduled".
+
+---
+
 ## Data Flow
 
 ```
