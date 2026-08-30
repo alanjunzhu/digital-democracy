@@ -211,13 +211,15 @@ export default function MemberFilter({ members, financeIndex = {}, baseUrl }: Pr
                 href={`${baseUrl}members/${m.bioguideId}/`}
                 className="grid grid-cols-[44px_minmax(0,1fr)] md:grid-cols-[44px_minmax(0,1.5fr)_minmax(0,1fr)_96px_110px] gap-[18px] items-center py-[10px] border-b border-rule hover:border-ink-3"
               >
-                <img
-                  src={m.imageUrl}
-                  alt=""
-                  className="w-[34px] h-[44px] object-cover rounded-[1px] bg-rule grayscale contrast-[1.05]"
-                  loading="lazy"
-                  onError={(e) => { (e.target as HTMLImageElement).style.visibility = 'hidden'; }}
-                />
+                <span className="block w-[34px] h-[44px] bg-rule rounded-[1px] overflow-hidden">
+                  <img
+                    src={m.imageUrl}
+                    alt=""
+                    className="w-full h-full object-cover grayscale contrast-[1.05]"
+                    loading="lazy"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
+                </span>
                 <span className="flex items-center gap-[10px] min-w-0">
                   <span
                     className={`inline-flex items-center justify-center w-[17px] h-[17px] rounded font-mono text-[10px] font-semibold shrink-0 ${partyTone(m.party)}`}

@@ -32,35 +32,29 @@ const entries = buildPageIndex(sections);
       aria-expanded="false"
       aria-controls="page-index-panel"
       title={`${title} (${entries.length} sections)`}
-      class="grid h-10 w-10 place-items-center rounded-full border border-rule bg-card text-ink-3 transition-colors hover:border-ink-3 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]"
+      class="inline-flex items-center gap-[7px] rounded border border-rule bg-paper px-[9px] py-[4px] font-mono text-[10px] tracking-[0.1em] uppercase text-ink-3 hover:border-ink-3 hover:text-ink focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--navy)]"
     >
-      <span class="sr-only">{title}</span>
-      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M10.34 3.94c.09-.54.56-.94 1.11-.94h1.1c.55 0 1.02.4 1.11.94l.17 1.02c.5.17.97.4 1.4.7l.96-.4c.5-.2 1.08-.03 1.36.44l.55.95c.28.47.16 1.07-.27 1.4l-.81.63c.05.27.08.55.08.83s-.03.56-.08.83l.81.63c.43.33.55.93.27 1.4l-.55.95c-.28.47-.86.65-1.36.44l-.96-.4c-.43.3-.9.53-1.4.7l-.17 1.02c-.09.54-.56.94-1.11.94h-1.1c-.55 0-1.02-.4-1.11-.94l-.17-1.02c-.5-.17-.97-.4-1.4-.7l-.96.4c-.5.2-1.08.03-1.36-.44l-.55-.95c-.28-.47-.16-1.07.27-1.4l.81-.63A5.1 5.1 0 0 1 6.5 12c0-.28.03-.56.08-.83l-.81-.63c-.43-.33-.55-.93-.27-1.4l.55-.95c.28-.47.86-.65 1.36-.44l.96.4c.43-.3.9-.53 1.4-.7l.17-1.02Z"
-        />
-        <circle cx="12" cy="12" r="2.4" stroke-linejoin="round" />
-      </svg>
+      <span data-page-index-rule class="inline-block h-px w-3 bg-ink-3" aria-hidden="true"></span>
+      <span>Contents</span>
+      <span class="tabular text-ink-3">{entries.length}</span>
     </button>
 
     <nav
       id="page-index-panel"
       data-page-index-panel
       aria-label={title}
-      class="hidden w-64 max-w-[calc(100vw-1.5rem)] max-h-[min(70vh,34rem)] overflow-y-auto rounded border border-rule bg-card px-2.5 py-2.5"
+      class="hidden w-[232px] max-w-[calc(100vw-1.5rem)] max-h-[min(70vh,34rem)] overflow-y-auto border border-rule bg-card"
     >
-      <p class="px-2 pb-2 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-3">{title}</p>
-      <ol class="space-y-0.5">
+      <p class="field-label border-b border-ink px-3 py-[9px]">{title}</p>
+      <ol>
         {entries.map(entry => (
           <li>
             <a
               href={`#${entry.id}`}
               data-page-index-link={entry.id}
               class:list={[
-                'flex items-baseline gap-2 rounded px-2 py-1.5 text-ink-2 transition-colors hover:bg-rule-2 hover:text-accent',
-                entry.depth === 1 ? 'ml-3 text-[11px]' : 'text-xs font-medium',
+                'flex items-baseline gap-3 border-b border-rule px-3 py-[9px] hover:bg-rule-2',
+                entry.depth === 1 ? 'pl-6 text-[11.5px] text-ink-3' : 'text-[12.5px] text-ink-2',
               ]}
             >
               <span class="flex-1 leading-snug">{entry.label}</span>
@@ -76,24 +70,27 @@ const entries = buildPageIndex(sections);
 )}
 
 <style>
-  [data-page-index-toggle] svg {
-    transition: transform 0.45s ease;
+  /* The rule grows into an open bracket when the panel is showing — the only
+     motion in the system, and it stays within the hairline vocabulary. */
+  [data-page-index-rule] {
+    transition: width 0.2s ease;
   }
-  [data-page-index-toggle]:hover svg {
-    transform: rotate(60deg);
-  }
-  [data-page-index-toggle][aria-expanded='true'] svg {
-    transform: rotate(30deg);
+  [data-page-index-toggle]:hover [data-page-index-rule],
+  [data-page-index-toggle][aria-expanded='true'] [data-page-index-rule] {
+    width: 1.25rem;
   }
   [data-page-index-toggle][aria-expanded='true'] {
-    border-color: var(--ink-3);
+    border-color: var(--ink);
     color: var(--ink);
   }
+  /* Current section is marked the way a caveat note is: a rule in the margin. */
   [data-page-index-link][aria-current='true'] {
     background-color: var(--rule-2);
     color: var(--ink);
-    font-weight: 600;
     box-shadow: inset 2px 0 0 var(--red);
+  }
+  [data-page-index-panel] li:last-child a {
+    border-bottom: none;
   }
 </style>
 
@@ -104,8 +101,8 @@ const entries = buildPageIndex(sections);
 
   if (root && toggle instanceof HTMLElement && panel instanceof HTMLElement) {
     const STORAGE_KEY = 'page-index:open';
-    // left-3 offset + the panel's own w-64 + room to breathe.
-    const PANEL_CLEARANCE = 280;
+    // left-3 offset + the panel's own width + room to breathe.
+    const PANEL_CLEARANCE = 256;
     const links = Array.from(panel.querySelectorAll('[data-page-index-link]')) as HTMLAnchorElement[];
     const targets = links
       .map(link => {

@@ -111,12 +111,15 @@ const nf = new Intl.NumberFormat('en-US');
             href={`${base}members/${m.bioguideId}/`}
             class="group flex items-start gap-3 bg-card px-4 py-[14px] hover:bg-rule-2"
           >
-            <img
-              src={m.imageUrl}
-              alt=""
-              class="w-10 h-[52px] object-cover rounded-[1px] bg-rule grayscale contrast-[1.05] shrink-0"
-              loading="lazy"
-            />
+            <div class="w-10 h-[52px] bg-rule rounded-[1px] overflow-hidden shrink-0">
+              <img
+                src={m.imageUrl}
+                alt=""
+                class="w-full h-full object-cover grayscale contrast-[1.05]"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+            </div>
             <div class="flex-1 min-w-0">
               <h3 class="font-serif text-[17px] leading-[1.2] font-medium group-hover:text-accent text-pretty">
                 {m.name}
