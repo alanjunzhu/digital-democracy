@@ -415,7 +415,7 @@ paper/card value difference and from rules. Full reference in the README.
 
 ---
 
-### Phase 8: Amendment tracking
+### Phase 8: Amendment tracking — built
 
 **Goal:** Cover the measures that change bills on the floor, and close a gap the
 vote records already expose.
@@ -460,7 +460,7 @@ available here and is explicitly not repeated.
 
 ---
 
-### Phase 9: Hearing schedules
+### Phase 9: Hearing schedules — built
 
 **Goal:** Show what each committee has scheduled, and what it recently held.
 
@@ -501,6 +501,41 @@ than rendering an empty list that reads as "no meetings scheduled".
 
 ---
 
+### What Phases 8 and 9 settled in the building
+
+Three things were decided at the code rather than in this plan, and are worth
+stating because they are the parts a future change could quietly undo.
+
+**The roll-call join is composed, not looked up.** The amendment endpoint reports
+a vote as chamber + session + roll number and never as an id, so
+`recordedVoteId()` builds the same id `fetch-votes.mjs` stores. If the two drift,
+every "voted on" link points at a page that does not exist — and it fails
+silently, because a wrong id is indistinguishable from an amendment that was
+never voted on. `tests/amendments.test.mjs` pins the format.
+
+**`meetingStatus` does not mean what its name suggests.** It answers "was this
+called off?", not "has this happened?": Congress.gov leaves a hearing held last
+March sitting at `Scheduled` indefinitely. Rendering it verbatim tells a reader a
+past meeting is still ahead of them, so `meetingLabel()` reads a past meeting as
+**Held**, while Canceled and Postponed survive the date passing — those describe
+a decision that stays true. The status filter compares against the same label the
+rows show, so a filter can never contradict the list beneath it.
+
+**Cross-links check their target exists.** An amendment can name a bill outside
+the tracked set; a meeting can name a committee with no page. Those render as
+plain text saying so, rather than as links to a 404.
+
+**Still unverified against the live API.** `api.congress.gov` was unreachable
+from the session that built this, so the shapes were exercised against fixtures
+rather than responses. Three things to confirm on the first real run: actual
+119th-Congress amendment volume (against the `MAX_PER_TYPE = 250` cap), Senate
+`committee-meeting` coverage depth (the hearings page states the gap only when
+Senate coverage is under a quarter of the House's), and whether `relatedItems`
+reliably carries bill references — `normalizeRelatedBillIds` reads both nestings
+seen in the docs, but only live data proves which one the endpoint actually uses.
+
+---
+
 ## Data Flow
 
 ```
@@ -510,6 +545,8 @@ Weekly Cron (Sunday 2am UTC)
   ├── fetch-bills.mjs ────→ data/bills/*.json        (sequential after members)
   ├── fetch-committees.mjs → data/committees/*.json
   ├── fetch-votes.mjs ────→ data/votes/*.json         (Clerk + Senate XML)
+  ├── fetch-amendments.mjs → data/amendments/*.json
+  ├── fetch-hearings.mjs ─→ data/hearings/*.json      (also daily, on its own cron)
   └── fetch-finances.mjs ─→ data/finances/by-member.json
   │
   ├── git commit + push (commit-data.sh, fetch-data concurrency group)
