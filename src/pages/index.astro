@@ -1,6 +1,7 @@
 ---
 import Layout from '../components/layout/Layout.astro';
 import PartyBadge from '../components/shared/PartyBadge.astro';
+import { getVoteOutcome, getVoteVerdict } from '../lib/utils';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
@@ -104,7 +105,7 @@ const nf = new Intl.NumberFormat('en-US');
           All {nf.format(membersData.total)} &rarr;
         </a>
       </div>
-      <div class="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 [&>*]:p-0">
+      <div class="tile-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {membersData.members.slice(0, 8).map((m: any) => (
           <a
             href={`${base}members/${m.bioguideId}/`}
@@ -182,7 +183,7 @@ const nf = new Intl.NumberFormat('en-US');
             </a>
           </div>
           {votesData.votes.slice(0, 5).map((v: any) => {
-            const agreed = v.result === 'Passed' || v.result === 'Agreed to';
+            const outcome = getVoteOutcome(v.result);
             const total = v.totalYea + v.totalNay;
             const yeaPct = total > 0 ? Math.round((v.totalYea / total) * 100) : 50;
             return (
@@ -194,10 +195,10 @@ const nf = new Intl.NumberFormat('en-US');
                   <span
                     class:list={[
                       'font-mono text-[11px] font-semibold tracking-[0.04em] uppercase whitespace-nowrap',
-                      agreed ? 'text-yea' : 'text-accent',
+                      outcome === 'agreed' ? 'text-yea' : outcome === 'rejected' ? 'text-accent' : 'text-ink-3',
                     ]}
                   >
-                    {agreed ? 'Agreed' : 'Rejected'}
+                    {getVoteVerdict(v.result)}
                   </span>
                 </div>
                 <div class="flex items-center gap-3 mt-[10px]">

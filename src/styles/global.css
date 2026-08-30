@@ -96,9 +96,13 @@
     border: 1px solid var(--rule);
   }
 
+  /* Every real usage supplies its own padding on the child (a component
+     already shaped for its own content), so this only sets the background
+     that makes the 1px gap read as a hairline. A default padding here would
+     conflict with the child's own utilities regardless of class order,
+     since Tailwind always emits variant utilities after plain ones. */
   .tile-grid > * {
     background: var(--card);
-    padding: 14px 16px;
   }
 
   /* Record row */

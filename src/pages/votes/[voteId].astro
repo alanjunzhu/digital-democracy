@@ -4,6 +4,7 @@ import PageIndex from '../../components/layout/PageIndex.astro';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import type { VoteDetail } from '../../lib/types';
+import { getVoteOutcome } from '../../lib/utils';
 
 export function getStaticPaths() {
   const votesDir = join(process.cwd(), 'data', 'votes');
@@ -30,8 +31,9 @@ const base = import.meta.env.BASE_URL;
 const totalVotes = vote.totalYea + vote.totalNay;
 const yeaPct = totalVotes > 0 ? Math.round((vote.totalYea / totalVotes) * 100) : 0;
 const nayPct = 100 - yeaPct;
-const agreed = vote.result === 'Passed' || vote.result === 'Agreed to';
-const rejected = vote.result === 'Failed' || vote.result === 'Rejected';
+const outcome = getVoteOutcome(vote.result);
+const agreed = outcome === 'agreed';
+const rejected = outcome === 'rejected';
 
 const partyRows = [
   { label: 'Democrats', mark: 'D', tone: 'text-dem', data: vote.partyBreakdown.democratic },
