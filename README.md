@@ -52,8 +52,86 @@ The site is static. Node scripts fetch public data into `data/`, that JSON is co
 - **Committees** — Standing committees and subcommittees, each listing legislation referred to it in this congress
 - **Finances** — STOCK Act periodic transaction reports (and ticker-level trades when the Stock Watcher dumps are reachable), with a Congress-wide chart of cash vs all trading vs the S&P 500 vs committee-overlap trades, plus committee-overlap and bill-timing flags
 - **Analytics** — Party breakdown, bill stages, and voting patterns
-- **Section index** — The long pages (member, bill, vote and committee profiles, and the trading dashboard) carry an "On this page" rail on the left, opened and closed by the gearwheel button, that jumps to a section and marks the one being read
+- **Section index** — The long pages (member, bill, vote and committee profiles, and the trading dashboard) carry an "On this page" rail on the left, opened and closed by the **Contents** button, that jumps to a section and marks the one being read. It docks in the gutter on wide screens and opens over the text on narrow ones
+- **Light and dark** — A theme toggle in the utility strip, remembered in `localStorage` and applied before first paint so there is no flash
 - **Automated refresh** — GitHub Actions fetch and commit data on a schedule; a push to `main` rebuilds the site
+
+---
+
+## Design system
+
+The site is set like a public record rather than a dashboard: newsroom typography on a
+warm paper ground, hairline rules instead of cards, and monospace reserved for anything a
+reader might want to verify. The tokens live in `src/styles/global.css` and are surfaced to
+Tailwind in `tailwind.config.mjs`, so `bg-paper`, `border-rule` and `text-ink-2` work in
+class lists.
+
+### Tokens
+
+| Token | Light | Dark | Used for |
+| --- | --- | --- | --- |
+| `--paper` | `#f7f6f3` | `#14140f` | Page ground. Warm, never pure white |
+| `--card` | `#fffefb` | `#1b1a16` | Tiles and panels sitting on paper |
+| `--ink` | `#1a1a18` | `#f2f0e9` | Headlines, figures, primary button, section rules |
+| `--ink-2` | `#4a473f` | `#c2bdb1` | Body copy, nav at rest |
+| `--ink-3` | `#7d786d` | `#8e887b` | Mono metadata, captions, hover rule |
+| `--rule` | `#e2dfd7` | `#2f2d26` | Every hairline, grid gap, bar track |
+| `--red` | `#8a1c1c` | `#d2635a` | Eyebrows, identifiers, hover, Nay, caveats |
+| `--navy` | `#1f3d5c` | `#8fb4d6` | Yea, Agreed, focus ring, affirmative status |
+| `--dem` / `--rep` / `--ind` | `#2563eb` / `#dc2626` / `#7c3aed` | lightened | Party series and party marks |
+
+Party hues are data, not brand, and are unchanged from the original site so existing charts
+and legends stay correct. **Red is the interface accent and navy is Yea** — neither is ever
+used for party meaning.
+
+### Type
+
+Three families, each with one job:
+
+- **Newsreader** (400/500 only, never bold) — display, page titles, section and record headings
+- **Public Sans** — interface and prose; body caps at 66ch, headlines at 24ch
+- **IBM Plex Mono** — identifiers, dates, tallies, counts, field labels. Prose never uses it
+
+Any figure in a column or that updates gets `font-variant-numeric: tabular-nums` (the
+`.tabular` helper).
+
+### Layout
+
+1200px measure, 40px gutters, a 4px spacing step. Radius is 2px everywhere or 0; nothing is
+pill-shaped except a 6px status dot. **There are no box-shadows** — depth comes from the
+paper/card value difference and from rules. Tiles use a 1px-gap grid on a `--rule`
+background so the gap reads as a hairline (`.tile-grid`).
+
+### Chart theme
+
+One vocabulary for every graph. Colour marks the *series*, not the value — gains never turn
+green and losses never turn red:
+
+| Role | Mark |
+| --- | --- |
+| Subject | 2px solid ink — the thing the chart is about |
+| Benchmark | 1.5px navy, 5-4 dash — always dashed, so it reads as counterfactual |
+| Do-nothing baseline | 1px `--ink-3`, 2-3 dot — cash or no-change, flat at the axis |
+| Flagged series | 2px red — only the committee-overlap cut |
+| Cohort behind | 1px rule-grey, drawn first, unlabelled — texture, not data to read off |
+| Bars | 4px for inline tallies, square ends, rule-grey track. Never rounded, never gradient |
+| Gridlines | 1px rule horizontals, zero line in `--ink-3`. No vertical gridlines, no chart border |
+
+**Axis and series labels are HTML in a gutter beside the plot, never SVG `<text>`.** That
+keeps them selectable, themable, and immune to viewBox scaling — the charts use
+`preserveAspectRatio="none"`, which would otherwise stretch any text inside them.
+
+### Voice
+
+| Do | Don't |
+| --- | --- |
+| "Agreed" or "Rejected", with the tally beside it | Green and red pills that read as good and bad news |
+| "Estimated at the disclosed midpoint" | A precise-looking dollar figure with no qualifier |
+| "Traded in a sector their committee oversees" | "Suspicious trade", or any word implying a finding |
+| "Roll calls through 30 Jul 2026" | "Live" or "real-time" when the build is scheduled |
+
+Estimates, midpoints and flags carry their caveat in the same view — a note with a red left
+rule for a limit on what the data can support, a grey one for coverage or freshness.
 
 ---
 
@@ -82,7 +160,8 @@ Votes, finances, and the unitedstates files need no Congress.gov key. Members, b
 |-------|------------|
 | Pages | [Astro 5](https://astro.build/) (static) |
 | Filters / search | [React 19](https://react.dev/) + [Fuse.js](https://www.fusejs.io/) |
-| Styles | [Tailwind CSS 3](https://tailwindcss.com/) |
+| Styles | [Tailwind CSS 3](https://tailwindcss.com/) over CSS-variable design tokens |
+| Type | Newsreader · Public Sans · IBM Plex Mono ([Google Fonts](https://fonts.google.com/)) |
 | Hosting | [GitHub Pages](https://pages.github.com/) at `/digital-democracy/` |
 | CI | [GitHub Actions](https://github.com/features/actions) |
 
@@ -122,11 +201,11 @@ digital-democracy/
 │   │       └── AnalyticsDashboard.tsx
 │   ├── lib/
 │   │   ├── types.ts                     # Shared TypeScript types
-│   │   ├── utils.ts                     # Bill stages, state names, formatting
+│   │   ├── utils.ts                     # Bill stages, vote outcomes, state names, formatting
 │   │   ├── committees.ts                # Resolve referrals by systemCode
 │   │   └── committee-bills.ts           # Group stored bills onto committee pages
 │   └── styles/
-│       └── global.css
+│       └── global.css                   # Design tokens (light + dark) and shared helpers
 ├── scripts/
 │   ├── fetch-members.mjs                # Congress.gov members + legislator bios
 │   ├── fetch-bills.mjs                  # Recently updated bills + sub-resources
@@ -151,6 +230,7 @@ digital-democracy/
 │   ├── timing-precompute.mjs            # Build-time pairing of chart data to trades
 │   ├── portfolio-series.mjs             # Member and Congress portfolios vs S&P 500 vs cash
 │   ├── member-finance-index.mjs         # Per-member trading record for the directory filter
+│   ├── vote-outcome.mjs                 # Reads a roll-call result string as agreed/rejected
 │   ├── page-index.mjs                   # Section lists for the on-page index rail
 │   └── data-loader.mjs                  # Memoised reads of the shared data indexes
 ├── tests/                               # node --test
@@ -162,6 +242,7 @@ digital-democracy/
 │   ├── finances.test.mjs
 │   ├── members.test.mjs
 │   ├── unitedstates.test.mjs
+│   ├── vote-outcome.test.mjs
 │   └── votes.test.mjs
 ├── data/                                # Generated JSON, committed
 │   ├── members/                         # index.json + {bioguideId}.json
@@ -240,7 +321,9 @@ node scripts/fix-data-urls.mjs          # rewrite stored congress.gov URLs
 npm test
 ```
 
-Covers URL builders, fetch normalization, an end-to-end fetch against a stand-in API, member name preservation, committee-membership mapping, Clerk PTR parsing, vote probing, HTTP client behavior, and `commit-data.sh` races.
+Covers URL builders, fetch normalization, an end-to-end fetch against a stand-in API, member
+name preservation, committee-membership mapping, Clerk PTR parsing, vote probing, roll-call
+outcome classification, HTTP client behavior, and `commit-data.sh` races.
 
 ### Production Build
 
@@ -408,6 +491,7 @@ shown with its context but no chart.
 - [x] Build-time price cache and counterfactual timing charts
 - [x] Member-level portfolio vs cash and S&P 500 baseline chart
 - [x] Congress-wide cash vs trading vs S&P 500 vs committee-overlap chart
+- [x] Editorial design system across every page, with light and dark themes
 - [ ] Amendment tracking
 - [ ] Hearing schedules
 

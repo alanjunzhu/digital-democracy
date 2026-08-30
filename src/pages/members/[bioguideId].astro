@@ -318,12 +318,17 @@ const pageSections = [
 
     <!-- Profile Header: identity + ledger rail -->
     <div id="profile" data-page-section class="mt-5 grid grid-cols-1 lg:grid-cols-[112px_minmax(0,1fr)_260px] gap-8 items-start pb-6 border-b border-ink">
-      <img
-        src={member.imageUrl}
-        alt=""
-        class="w-[112px] h-36 object-cover rounded-[1px] bg-rule grayscale contrast-[1.05]"
-        onerror="this.style.display='none'"
-      />
+      {/* The frame carries the size and the placeholder tone, so a portrait that
+          404s leaves an empty plate rather than collapsing the grid column and
+          shifting the identity and ledger each one column to the left. */}
+      <div class="w-[112px] h-36 bg-rule rounded-[1px] overflow-hidden shrink-0">
+        <img
+          src={member.imageUrl}
+          alt=""
+          class="w-full h-full object-cover grayscale contrast-[1.05]"
+          onerror="this.style.display='none'"
+        />
+      </div>
       <div>
         <p class="eyebrow mb-[10px]">
           {member.chamber === 'Senate' ? 'Senator' : 'Representative'} &middot; {formatState(member.state)}{districtLabel}
