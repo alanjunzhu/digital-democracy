@@ -2,17 +2,49 @@
 import membersIndex from '../../../data/members/index.json';
 
 const base = import.meta.env.BASE_URL;
-const navItems = [
+
+interface NavLink {
+  href: string;
+  label: string;
+}
+interface NavGroup {
+  label: string;
+  items: NavLink[];
+}
+type NavEntry = NavLink | NavGroup;
+
+const isGroup = (entry: NavEntry): entry is NavGroup => 'items' in entry;
+
+// Ten flat links stopped being scannable once Amendments and Hearings joined
+// the bar. Grouped by what they're for rather than by data type: a reader
+// looking for "what happened to a bill" wants Bills, Votes and Amendments
+// together, not scattered between Committees and Insights.
+const navEntries: NavEntry[] = [
   { href: `${base}`, label: 'Home' },
   { href: `${base}members/`, label: 'Members' },
-  { href: `${base}bills/`, label: 'Bills' },
-  { href: `${base}votes/`, label: 'Votes' },
-  { href: `${base}amendments/`, label: 'Amendments' },
-  { href: `${base}committees/`, label: 'Committees' },
-  { href: `${base}hearings/`, label: 'Hearings' },
-  { href: `${base}policy/`, label: 'Policy' },
+  {
+    label: 'Legislation',
+    items: [
+      { href: `${base}bills/`, label: 'Bills' },
+      { href: `${base}votes/`, label: 'Votes' },
+      { href: `${base}amendments/`, label: 'Amendments' },
+    ],
+  },
+  {
+    label: 'Committees',
+    items: [
+      { href: `${base}committees/`, label: 'Committees' },
+      { href: `${base}hearings/`, label: 'Hearings' },
+    ],
+  },
   { href: `${base}finances/`, label: 'Finances' },
-  { href: `${base}analytics/`, label: 'Analytics' },
+  {
+    label: 'Insights',
+    items: [
+      { href: `${base}policy/`, label: 'Policy' },
+      { href: `${base}analytics/`, label: 'Analytics' },
+    ],
+  },
 ];
 
 const current = Astro.url.pathname.replace(/\/+$/, '');
@@ -22,6 +54,7 @@ const isActive = (href: string) => {
     ? current === target
     : current === target || current.startsWith(`${target}/`);
 };
+const isGroupActive = (items: NavLink[]) => items.some(item => isActive(item.href));
 
 const updated = new Date(membersIndex.lastUpdated).toLocaleDateString('en-GB', {
   day: '2-digit',
@@ -65,20 +98,67 @@ const updated = new Date(membersIndex.lastUpdated).toLocaleDateString('en-GB', {
     >
     <nav class="hidden md:flex items-baseline gap-[22px] pb-[2px]">
       {
-        navItems.map(item => (
-          <a
-            href={item.href}
-            aria-current={isActive(item.href) ? 'page' : undefined}
-            class:list={[
-              'text-[13px] pb-[2px]',
-              isActive(item.href)
-                ? 'font-semibold text-ink border-b-2 border-accent'
-                : 'font-medium text-ink-2 hover:text-accent',
-            ]}
-          >
-            {item.label}
-          </a>
-        ))
+        navEntries.map(entry =>
+          isGroup(entry) ? (
+            <div class="relative" data-nav-group>
+              <button
+                type="button"
+                data-nav-trigger
+                aria-expanded="false"
+                class:list={[
+                  'flex items-center gap-[5px] appearance-none bg-transparent border-none p-0 pb-[2px] cursor-pointer text-[13px]',
+                  isGroupActive(entry.items)
+                    ? 'font-semibold text-ink border-b-2 border-accent'
+                    : 'font-medium text-ink-2 hover:text-accent',
+                ]}
+              >
+                {entry.label}
+                <svg
+                  class="h-[8px] w-[8px] shrink-0"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  aria-hidden="true"
+                >
+                  <path d="M2 3.5 5 6.5 8 3.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div
+                data-nav-panel
+                class="hidden absolute left-0 top-full mt-[10px] w-[184px] border border-rule bg-card z-50"
+              >
+                {entry.items.map(item => (
+                  <a
+                    href={item.href}
+                    aria-current={isActive(item.href) ? 'page' : undefined}
+                    class:list={[
+                      'block border-b border-rule px-3 py-[9px] text-[12.5px] last:border-b-0',
+                      isActive(item.href)
+                        ? 'bg-rule-2 font-semibold text-ink'
+                        : 'text-ink-2 hover:bg-rule-2 hover:text-ink',
+                    ]}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a
+              href={entry.href}
+              aria-current={isActive(entry.href) ? 'page' : undefined}
+              class:list={[
+                'text-[13px] pb-[2px]',
+                isActive(entry.href)
+                  ? 'font-semibold text-ink border-b-2 border-accent'
+                  : 'font-medium text-ink-2 hover:text-accent',
+              ]}
+            >
+              {entry.label}
+            </a>
+          )
+        )
       }
     </nav>
     <button
@@ -97,17 +177,34 @@ const updated = new Date(membersIndex.lastUpdated).toLocaleDateString('en-GB', {
   </div>
   <nav id="mobile-menu" class="md:hidden hidden px-10 pb-4">
     {
-      navItems.map(item => (
-        <a
-          href={item.href}
-          class:list={[
-            'block py-2 text-[13px]',
-            isActive(item.href) ? 'font-semibold text-ink' : 'font-medium text-ink-2 hover:text-accent',
-          ]}
-        >
-          {item.label}
-        </a>
-      ))
+      navEntries.map(entry =>
+        isGroup(entry) ? (
+          <div class="pt-3">
+            <p class="field-label pb-[6px]">{entry.label}</p>
+            {entry.items.map(item => (
+              <a
+                href={item.href}
+                class:list={[
+                  'block py-2 pl-3 text-[13px]',
+                  isActive(item.href) ? 'font-semibold text-ink' : 'font-medium text-ink-2 hover:text-accent',
+                ]}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        ) : (
+          <a
+            href={entry.href}
+            class:list={[
+              'block py-2 text-[13px]',
+              isActive(entry.href) ? 'font-semibold text-ink' : 'font-medium text-ink-2 hover:text-accent',
+            ]}
+          >
+            {entry.label}
+          </a>
+        )
+      )
     }
   </nav>
 </header>
@@ -138,5 +235,37 @@ const updated = new Date(membersIndex.lastUpdated).toLocaleDateString('en-GB', {
       localStorage.setItem('ct:theme', next);
     } catch {}
     paint();
+  });
+
+  // Desktop nav dropdowns: one open at a time, closed by an outside click or Escape.
+  const groups = Array.from(document.querySelectorAll('[data-nav-group]'));
+  const closeAll = (except?: Element) => {
+    for (const group of groups) {
+      if (group === except) continue;
+      group.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded', 'false');
+      group.querySelector('[data-nav-panel]')?.classList.add('hidden');
+    }
+  };
+
+  for (const group of groups) {
+    const trigger = group.querySelector('[data-nav-trigger]');
+    const panel = group.querySelector('[data-nav-panel]');
+    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) continue;
+
+    trigger.addEventListener('click', () => {
+      const open = trigger.getAttribute('aria-expanded') === 'true';
+      closeAll(group);
+      trigger.setAttribute('aria-expanded', open ? 'false' : 'true');
+      panel.classList.toggle('hidden', open);
+    });
+  }
+
+  document.addEventListener('click', event => {
+    if (groups.some(g => event.target instanceof Node && g.contains(event.target))) return;
+    closeAll();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeAll();
   });
 </script>
