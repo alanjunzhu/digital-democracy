@@ -36,7 +36,8 @@ Congress Tracker is a free, open-source civic transparency tool for monitoring t
 |-------------|-----------------------------------------------|
 | Framework   | Astro 5 (static site generation)              |
 | Interactive | React 19 (filters, search)                    |
-| Styling     | Tailwind CSS 3                                |
+| Styling     | Tailwind CSS 3 over CSS-variable design tokens |
+| Type        | Newsreader · Public Sans · IBM Plex Mono      |
 | Data        | Congress.gov API v3                           |
 | Hosting     | GitHub Pages                                  |
 | CI/CD       | GitHub Actions (weekly fetch + auto-deploy)   |
@@ -222,6 +223,15 @@ often roll calls split on party lines.
    House/Senate loyalist and least-aligned lists.
 3. Member pages show a party-alignment percentage next to the voting record.
 
+**The stored House breakdown cannot be used directly.** `partyBreakdown` in
+`data/votes/index.json` files every House member under `democratic` and leaves
+`republican` at zero, so no House roll call can ever register a D-vs-R split.
+Read straight, that produced a party-line rate of `0% (0/501)` for the House and
+dropped most House members out of the alignment ranking. Both the member page and
+the analytics page recount from the individual casts via
+`loadRecountedBreakdowns()` in `shared/policy-data.mjs` — anything scoring party
+alignment has to do the same.
+
 ---
 
 ## Phases
@@ -371,6 +381,40 @@ often roll calls split on party lines.
 
 ---
 
+### Phase 7: Design system ✅ Complete
+
+**Goal:** Set the site like a public record rather than a dashboard, and make every
+page speak one vocabulary.
+
+**The design language.** Newsroom typography on a warm paper ground; hairline rules
+instead of cards; monospace reserved for anything a reader might want to verify
+(identifiers, dates, tallies, counts). Radius is 2px or 0, nothing is pill-shaped
+except a 6px status dot, and there are no box-shadows anywhere — depth comes from the
+paper/card value difference and from rules. Full reference in the README.
+
+**Rules worth keeping in mind when adding to the site:**
+
+- **Colour marks the series, not the value.** Gains never turn green, losses never
+  turn red. Red is the interface accent and navy is Yea; neither ever carries party
+  meaning. Party hues (D/R/I) are data and are unchanged from the original site.
+- **Chart axis and series labels are HTML in a gutter, never SVG `<text>`.** The plots
+  use `preserveAspectRatio="none"`, which stretches any text inside the viewBox.
+  Keeping labels in HTML also leaves them selectable and themable.
+- **State the limit in the same view.** Estimates, midpoints and flags carry a caveat
+  note beside them — red left rule for a limit on what the data can support, grey for
+  coverage or freshness — not a link to a methodology page.
+- **`.tile-grid` children own their own padding.** The shared rule sets only the
+  background; Tailwind emits variant utilities after plain ones, so a default padding
+  there cannot be overridden per-tile by class order.
+
+**Files:**
+- `src/styles/global.css` — tokens (light + dark) and the shared helpers
+- `tailwind.config.mjs` — tokens surfaced so `bg-paper` / `border-rule` work in classes
+- `src/components/layout/` — Layout (theme before first paint), Header, Footer, PageIndex
+- `shared/vote-outcome.mjs` — reads a roll-call result string as agreed/rejected
+
+---
+
 ## Data Flow
 
 ```
@@ -427,17 +471,23 @@ digital-democracy/
 │   ├── committees/
 │   ├── votes/
 │   └── meta/
+├── shared/                     # Logic used by both scripts and pages (.mjs)
+│   ├── vote-outcome.mjs        # Reads a roll-call result as agreed/rejected
+│   ├── party-alignment.mjs     # Party-line and member alignment scoring
+│   ├── portfolio-series.mjs    # Member and Congress portfolios vs S&P 500
+│   └── page-index.mjs          # Section lists for the on-page index rail
 ├── src/
 │   ├── pages/                  # Astro routes (SSG)
 │   ├── components/
-│   │   ├── layout/             # Layout, Header, Footer
-│   │   ├── shared/             # PartyBadge, ChamberBadge
-│   │   └── interactive/        # React filter components
+│   │   ├── layout/             # Layout, Header, Footer, PageIndex
+│   │   ├── shared/             # PartyBadge, ChamberBadge, record rows
+│   │   ├── members/            # MemberCard
+│   │   └── interactive/        # React filters and charts
 │   ├── lib/
 │   │   ├── types.ts            # TypeScript interfaces
-│   │   └── utils.ts            # Shared utilities
+│   │   └── utils.ts            # Bill stages, vote outcomes, formatting
 │   └── styles/
-│       └── global.css          # Tailwind directives
+│       └── global.css          # Design tokens (light + dark) and helpers
 ├── PLAN.md                     # This file
 ├── README.md                   # User-facing documentation
 ├── astro.config.mjs
