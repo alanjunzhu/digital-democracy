@@ -1,0 +1,232 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import PageIndex from '../../components/layout/PageIndex.astro';
+import { readFileSync, readdirSync, existsSync } from 'fs';
+import { join } from 'path';
+import type { AmendmentDetail } from '../../lib/types';
+import { getAmendmentDisposition, getAmendmentVerdict, AMENDMENT_DISPOSITION_DOT } from '../../lib/utils';
+
+export function getStaticPaths() {
+  const dir = join(process.cwd(), 'data', 'amendments');
+  const paths: { params: { amendmentId: string } }[] = [];
+
+  if (existsSync(dir)) {
+    for (const file of readdirSync(dir)) {
+      if (file === 'index.json' || !file.endsWith('.json')) continue;
+      paths.push({ params: { amendmentId: file.replace('.json', '') } });
+    }
+  }
+
+  return paths;
+}
+
+const { amendmentId } = Astro.params;
+const amendment: AmendmentDetail = JSON.parse(
+  readFileSync(join(process.cwd(), 'data', 'amendments', `${amendmentId}.json`), 'utf-8'),
+);
+const base = import.meta.env.BASE_URL;
+
+const disposition = getAmendmentDisposition(amendment.latestAction);
+
+// The stored bill id is only useful if the bill was actually fetched; an
+// amendment can name a bill outside the tracked set.
+const billPath = amendment.amendedBillId
+  ? join(process.cwd(), 'data', 'bills', `${amendment.amendedBillId}.json`)
+  : '';
+const billIsLocal = Boolean(billPath && existsSync(billPath));
+
+// Same for the sponsor and for each roll call: link only what resolves.
+const sponsorId = amendment.sponsor?.bioguideId;
+const sponsorIsLocal = Boolean(
+  sponsorId && existsSync(join(process.cwd(), 'data', 'members', `${sponsorId}.json`)),
+);
+
+const votes = (amendment.recordedVotes || []).map(v => ({
+  ...v,
+  isLocal: Boolean(v.voteId && existsSync(join(process.cwd(), 'data', 'votes', `${v.voteId}.json`))),
+}));
+
+const actions = amendment.actions || [];
+const headline = amendment.purpose || amendment.description || `${amendment.type} ${amendment.number}`;
+
+const partyColor = (p: string) => (p === 'D' ? 'text-dem' : p === 'R' ? 'text-rep' : 'text-ind');
+
+const pageSections = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'amends', label: 'Amends', when: amendment.amendedBillId },
+  { id: 'sponsor', label: 'Sponsor', when: amendment.sponsor },
+  { id: 'roll-call-votes', label: 'Roll Call Votes', when: votes.length, count: votes.length },
+  { id: 'action-history', label: 'Action History', when: actions.length, count: actions.length },
+];
+---
+
+<Layout title={`${amendment.type} ${amendment.number}`} description={headline}>
+  <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
+    <PageIndex sections={pageSections} />
+
+    <a href={`${base}amendments/`} class="font-mono text-[11px] tracking-[0.06em] uppercase text-ink-3 hover:text-accent">
+      &larr; All amendments
+    </a>
+
+    <div id="overview" data-page-section class="mt-4 pb-5 border-b border-ink">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <span class="font-mono text-[18px] font-medium text-accent">{amendment.type} {amendment.number}</span>
+        <span class="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink-3">{amendment.chamber}</span>
+        <span class="inline-flex items-center gap-[7px] font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink border border-ink-3 rounded px-2 py-1">
+          <span class={`w-[5px] h-[5px] rounded-full shrink-0 ${AMENDMENT_DISPOSITION_DOT[disposition]}`} />
+          {getAmendmentVerdict(amendment.latestAction)}
+        </span>
+      </div>
+
+      <h1 class="font-serif text-[28px] md:text-[34px] leading-[1.15] font-normal tracking-[-0.015em] max-w-prose text-pretty">
+        {headline}
+      </h1>
+
+      <div class="flex flex-wrap gap-x-10 gap-y-3 mt-5">
+        {amendment.submittedDate && (
+          <div>
+            <div class="field-label">Submitted</div>
+            <div class="font-mono text-[13px] tabular mt-[3px]">{amendment.submittedDate.slice(0, 10)}</div>
+          </div>
+        )}
+        {amendment.proposedDate && (
+          <div>
+            <div class="field-label">Proposed</div>
+            <div class="font-mono text-[13px] tabular mt-[3px]">{amendment.proposedDate.slice(0, 10)}</div>
+          </div>
+        )}
+        {amendment.cosponsorCount > 0 && (
+          <div>
+            <div class="field-label">Cosponsors</div>
+            <div class="font-mono text-[13px] tabular mt-[3px]">{amendment.cosponsorCount}</div>
+          </div>
+        )}
+        {amendment.url && (
+          <div>
+            <div class="field-label">Source</div>
+            <a
+              href={amendment.url}
+              rel="noopener noreferrer"
+              target="_blank"
+              class="font-mono text-[13px] text-accent underline underline-offset-[3px] mt-[3px] inline-block"
+            >
+              congress.gov
+            </a>
+          </div>
+        )}
+      </div>
+
+      {amendment.latestAction && (
+        <p class="mt-5 max-w-prose text-[14.5px] leading-[1.55] text-ink-2">
+          <span class="field-label block mb-[5px]">Latest action</span>
+          {amendment.latestAction}
+          {amendment.latestActionDate && (
+            <span class="font-mono text-[12px] text-ink-3"> &middot; {amendment.latestActionDate}</span>
+          )}
+        </p>
+      )}
+    </div>
+
+    {amendment.amendedBillId && (
+      <section id="amends" data-page-section class="pt-8">
+        <h2 class="font-serif text-[22px] font-medium pb-[10px] border-b border-ink">Amends</h2>
+        {billIsLocal ? (
+          <a
+            href={`${base}bills/${amendment.amendedBillId}/`}
+            class="grid grid-cols-[128px_minmax(0,1fr)] gap-6 items-baseline py-4 border-b border-rule hover:border-ink-3"
+          >
+            <span class="font-mono text-[13px] font-medium text-accent">
+              {amendment.amendedBillId.toUpperCase()}
+            </span>
+            <span class="font-serif text-[17px] leading-[1.35] font-medium text-pretty">
+              {amendment.amendedBillTitle || 'Untitled'}
+            </span>
+          </a>
+        ) : (
+          <div class="grid grid-cols-[128px_minmax(0,1fr)] gap-6 items-baseline py-4 border-b border-rule">
+            <span class="font-mono text-[13px] font-medium text-ink-2">
+              {amendment.amendedBillId.toUpperCase()}
+            </span>
+            <div>
+              <span class="font-serif text-[17px] leading-[1.35] font-medium text-pretty">
+                {amendment.amendedBillTitle || 'Untitled'}
+              </span>
+              <p class="font-mono text-[11px] text-ink-3 mt-[6px]">
+                Not in the tracked set of bills, so there is no page for it here.
+              </p>
+            </div>
+          </div>
+        )}
+      </section>
+    )}
+
+    {amendment.sponsor && (
+      <section id="sponsor" data-page-section class="pt-8">
+        <h2 class="font-serif text-[22px] font-medium pb-[10px] border-b border-ink">Sponsor</h2>
+        <div class="py-4 border-b border-rule">
+          {sponsorIsLocal ? (
+            <a
+              href={`${base}members/${amendment.sponsor.bioguideId}/`}
+              class="font-serif text-[18px] font-medium hover:text-accent"
+            >
+              {amendment.sponsor.fullName}
+            </a>
+          ) : (
+            <span class="font-serif text-[18px] font-medium">{amendment.sponsor.fullName}</span>
+          )}
+          <div class="font-mono text-[11.5px] text-ink-3 mt-[5px]">
+            <span class={`font-semibold ${partyColor(amendment.sponsor.party)}`}>
+              {amendment.sponsor.party}
+            </span>
+            {amendment.sponsor.state && <span> &middot; {amendment.sponsor.state}</span>}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {votes.length > 0 && (
+      <section id="roll-call-votes" data-page-section class="pt-8">
+        <h2 class="font-serif text-[22px] font-medium pb-[10px] border-b border-ink">
+          Roll call votes
+        </h2>
+        {votes.map(vote => (
+          vote.isLocal && vote.voteId ? (
+            <a
+              href={`${base}votes/${vote.voteId}/`}
+              class="grid grid-cols-[128px_minmax(0,1fr)_auto] gap-6 items-baseline py-[14px] border-b border-rule hover:border-ink-3"
+            >
+              <span class="font-mono text-[12.5px] font-medium text-accent tabular">
+                Roll call #{vote.rollNumber}
+              </span>
+              <span class="text-[13.5px] text-ink-2">{vote.chamber}</span>
+              <span class="font-mono text-[11.5px] text-ink-3 tabular">{(vote.date || '').slice(0, 10)}</span>
+            </a>
+          ) : (
+            <div class="grid grid-cols-[128px_minmax(0,1fr)_auto] gap-6 items-baseline py-[14px] border-b border-rule">
+              <span class="font-mono text-[12.5px] font-medium text-ink-2 tabular">
+                Roll call #{vote.rollNumber}
+              </span>
+              <span class="text-[13.5px] text-ink-3">
+                {vote.chamber}
+                <span class="font-mono text-[11px]"> &middot; outside the tracked set of votes</span>
+              </span>
+              <span class="font-mono text-[11.5px] text-ink-3 tabular">{(vote.date || '').slice(0, 10)}</span>
+            </div>
+          )
+        ))}
+      </section>
+    )}
+
+    {actions.length > 0 && (
+      <section id="action-history" data-page-section class="pt-8">
+        <h2 class="font-serif text-[22px] font-medium pb-[10px] border-b border-ink">Action history</h2>
+        {actions.map(action => (
+          <div class="grid grid-cols-[100px_minmax(0,1fr)] gap-6 items-baseline py-[14px] border-b border-rule">
+            <span class="font-mono text-[11.5px] text-ink-3 tabular">{action.date}</span>
+            <span class="text-[13.5px] leading-[1.5] text-ink-2">{action.text}</span>
+          </div>
+        ))}
+      </section>
+    )}
+  </div>
+</Layout>

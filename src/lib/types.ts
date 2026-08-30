@@ -335,3 +335,98 @@ export interface CongressMemberLine {
   thin: boolean;
   exceptional: boolean;
 }
+
+// Amendment types (Congress.gov /amendment)
+
+export interface AmendmentSponsor {
+  bioguideId: string;
+  fullName: string;
+  party: string;
+  state: string;
+}
+
+/** The roll call an amendment action recorded, joined to our stored vote ids. */
+export interface AmendmentRecordedVote {
+  voteId: string | null;
+  chamber: string;
+  rollNumber: number;
+  sessionNumber: number;
+  date?: string;
+}
+
+export interface AmendmentSummary {
+  amendmentId: string;
+  congress: number;
+  type: string;
+  number: number;
+  chamber: 'House' | 'Senate';
+  /** Senate amendments carry a purpose; House ones carry a description. */
+  purpose?: string;
+  description?: string;
+  submittedDate?: string;
+  proposedDate?: string;
+  latestAction?: string;
+  latestActionDate?: string;
+  sponsor?: AmendmentSponsor | null;
+  /** The measure this amendment changes, when it amends a bill. */
+  amendedBillId?: string | null;
+  amendedBillTitle?: string;
+  cosponsorCount?: number;
+  recordedVotes?: AmendmentRecordedVote[];
+  url: string | null;
+}
+
+export interface AmendmentDetail extends AmendmentSummary {
+  actions?: { date: string; text: string; type?: string }[];
+}
+
+export interface AmendmentsIndex {
+  lastUpdated: string;
+  congress: number;
+  total: number;
+  amendments: AmendmentSummary[];
+}
+
+// Hearing / committee-meeting types (Congress.gov /committee-meeting)
+
+export type MeetingStatus = 'Scheduled' | 'Canceled' | 'Postponed' | 'Rescheduled';
+
+export interface MeetingLocation {
+  room?: string;
+  building?: string;
+  address?: string;
+}
+
+export interface MeetingWitness {
+  name?: string;
+  position?: string;
+  organization?: string;
+}
+
+export interface HearingSummary {
+  eventId: string;
+  congress: number;
+  chamber: 'House' | 'Senate' | 'NoChamber';
+  type?: string;
+  title?: string;
+  meetingStatus?: MeetingStatus;
+  /** ISO timestamp of the meeting itself, not of the record. */
+  date?: string;
+  committees: { systemCode: string; name: string }[];
+  location?: MeetingLocation;
+  relatedBillIds?: string[];
+  url: string | null;
+}
+
+export interface HearingDetail extends HearingSummary {
+  witnesses?: MeetingWitness[];
+  videos?: { name?: string; url: string }[];
+  meetingDocuments?: { name?: string; url: string; format?: string }[];
+}
+
+export interface HearingsIndex {
+  lastUpdated: string;
+  congress: number;
+  total: number;
+  hearings: HearingSummary[];
+}

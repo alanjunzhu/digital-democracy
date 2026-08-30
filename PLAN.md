@@ -415,6 +415,127 @@ paper/card value difference and from rules. Full reference in the README.
 
 ---
 
+### Phase 8: Amendment tracking — built
+
+**Goal:** Cover the measures that change bills on the floor, and close a gap the
+vote records already expose.
+
+**Why it earns a phase.** 118 of the 1,008 stored roll calls are votes on an
+amendment, and the House ones are titled only `"On Agreeing to the Amendment"` —
+the site cannot currently say *which* amendment was voted on. Amendments are not
+a standalone list; they are the missing join between bills, members and votes.
+
+**Source.** `/v3/amendment/{congress}/{type}` where type is `hamdt` or `samdt`,
+then the item endpoint, then `/actions` for the roll-call reference.
+
+**Volume.** Same guard as bills: request with `sort=updateDate+desc`, paginate at
+250, cap the stored set. Without that sort the endpoint returns a congress's
+oldest amendments first, so a capped fetch only ever sees the ones submitted the
+week the congress convened.
+
+**The three joins, and how each is built:**
+
+| Join | Source field | Where it surfaces |
+| --- | --- | --- |
+| Amendment → bill | `amendedBill{congress,type,number}` | Amendments section on bill detail |
+| Amendment → member | `sponsors[].bioguideId` | Amendments sponsored on member profile |
+| Amendment → roll call | `actions[].recordedVotes[]` | Vote detail names the amendment |
+
+The roll-call join is deterministic rather than fuzzy: `recordedVotes` carries
+`chamber`, `sessionNumber` and `rollNumber`, which compose into the existing
+voteId format (`s2-rc217`, `h2-rc283`) as
+`` `${chamber[0].toLowerCase()}${sessionNumber}-rc${rollNumber}` ``.
+
+**Disposition is read, never compared.** Amendment results carry the same variety
+as roll-call results, so `shared/amendment-outcome.mjs` classifies by wording the
+way `shared/vote-outcome.mjs` does. Matching against a fixed set of strings is
+what made a third of all roll calls render backwards; the same mistake is
+available here and is explicitly not repeated.
+
+**Files:**
+- `scripts/fetch-amendments.mjs` → `data/amendments/index.json` + `{amendmentId}.json`
+- `shared/amendment-outcome.mjs` — disposition from wording
+- `src/pages/amendments/index.astro`, `[amendmentId].astro`
+- `src/components/interactive/AmendmentFilter.tsx`
+
+---
+
+### Phase 9: Hearing schedules — built
+
+**Goal:** Show what each committee has scheduled, and what it recently held.
+
+**Endpoint choice.** This is `/v3/committee-meeting/{congress}/{chamber}`, not
+`/v3/hearing/`. They are different datasets and only the first is a schedule:
+
+| Endpoint | Carries |
+| --- | --- |
+| `committee-meeting` | `meetingStatus` (Scheduled / Canceled / Postponed / Rescheduled), `date`, `location{room,building,address}`, `witnesses`, `relatedItems`, `videos` |
+| `hearing` | Published transcripts of past hearings — `jacketNumber`, `citation`, PDF formats |
+
+`/v3/hearing/` is a later add-on for transcript links, not the schedule.
+
+**The freshness problem, stated rather than hidden.** A schedule is the most
+time-sensitive data on the site, and the site is a static build on a cron. A
+meeting can be canceled hours after a build. The design system already forbids
+the dishonest resolution — never say "live" or "real-time" when the build is
+scheduled — so instead:
+
+1. Fetch **daily**; the dataset is small enough that cadence is cheap.
+2. Render `meetingStatus` explicitly rather than assuming every listed meeting
+   will happen. Status takes the stage-dot vocabulary: Scheduled navy, Canceled
+   red, Postponed goldenrod, Rescheduled ink-3.
+3. Carry a coverage note reading **"Schedule as of {date}"**, and settle past
+   meetings back visually instead of dropping them.
+
+**Joins.** `committees[].systemCode` gives committee pages an upcoming/recent
+meetings section; `relatedItems` gives bill pages a "scheduled for hearing" line.
+
+**Files:**
+- `scripts/fetch-hearings.mjs` → `data/hearings/index.json` + `{eventId}.json`
+- `src/pages/hearings/index.astro`, `[eventId].astro`
+- `src/components/interactive/HearingFilter.tsx`
+
+**Known coverage limit.** Congress.gov's Senate committee-meeting data is
+thinner than the House's. Where a chamber returns little, the page says so rather
+than rendering an empty list that reads as "no meetings scheduled".
+
+---
+
+### What Phases 8 and 9 settled in the building
+
+Three things were decided at the code rather than in this plan, and are worth
+stating because they are the parts a future change could quietly undo.
+
+**The roll-call join is composed, not looked up.** The amendment endpoint reports
+a vote as chamber + session + roll number and never as an id, so
+`recordedVoteId()` builds the same id `fetch-votes.mjs` stores. If the two drift,
+every "voted on" link points at a page that does not exist — and it fails
+silently, because a wrong id is indistinguishable from an amendment that was
+never voted on. `tests/amendments.test.mjs` pins the format.
+
+**`meetingStatus` does not mean what its name suggests.** It answers "was this
+called off?", not "has this happened?": Congress.gov leaves a hearing held last
+March sitting at `Scheduled` indefinitely. Rendering it verbatim tells a reader a
+past meeting is still ahead of them, so `meetingLabel()` reads a past meeting as
+**Held**, while Canceled and Postponed survive the date passing — those describe
+a decision that stays true. The status filter compares against the same label the
+rows show, so a filter can never contradict the list beneath it.
+
+**Cross-links check their target exists.** An amendment can name a bill outside
+the tracked set; a meeting can name a committee with no page. Those render as
+plain text saying so, rather than as links to a 404.
+
+**Still unverified against the live API.** `api.congress.gov` was unreachable
+from the session that built this, so the shapes were exercised against fixtures
+rather than responses. Three things to confirm on the first real run: actual
+119th-Congress amendment volume (against the `MAX_PER_TYPE = 250` cap), Senate
+`committee-meeting` coverage depth (the hearings page states the gap only when
+Senate coverage is under a quarter of the House's), and whether `relatedItems`
+reliably carries bill references — `normalizeRelatedBillIds` reads both nestings
+seen in the docs, but only live data proves which one the endpoint actually uses.
+
+---
+
 ## Data Flow
 
 ```
@@ -424,6 +545,8 @@ Weekly Cron (Sunday 2am UTC)
   ├── fetch-bills.mjs ────→ data/bills/*.json        (sequential after members)
   ├── fetch-committees.mjs → data/committees/*.json
   ├── fetch-votes.mjs ────→ data/votes/*.json         (Clerk + Senate XML)
+  ├── fetch-amendments.mjs → data/amendments/*.json
+  ├── fetch-hearings.mjs ─→ data/hearings/*.json      (also daily, on its own cron)
   └── fetch-finances.mjs ─→ data/finances/by-member.json
   │
   ├── git commit + push (commit-data.sh, fetch-data concurrency group)

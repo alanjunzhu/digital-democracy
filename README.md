@@ -48,11 +48,13 @@ The site is static. Node scripts fetch public data into `data/`, that JSON is co
 
 - **Members** — Directory of current members with photos, party, state, and chamber, filterable by whether they have a trading record; profiles with contact info, service history, sponsored bills by stage, votes by topic, committee assignments, and financial filings
 - **Bills** — The most recently *updated* measures (not the oldest introductions), filterable by stage, with committee referrals that distinguish House from Senate committees of the same name
-- **Votes** — House and Senate roll calls for both sessions of the 119th Congress, filterable by chamber and topic
-- **Committees** — Standing committees and subcommittees, each listing legislation referred to it in this congress
+- **Votes** — House and Senate roll calls for both sessions of the 119th Congress, filterable by chamber and topic; where a roll call decided an amendment, the vote page names it — the Clerk titles those votes only "On Agreeing to the Amendment"
+- **Amendments** — Amendments offered to legislation, with the bill each one changes, the member who offered it, and the roll call taken on it. Dispositions are read from the action wording, so "not agreed to" is not mistaken for "agreed to"
+- **Committees** — Standing committees and subcommittees, each listing legislation referred to it in this congress and the meetings it has scheduled or held
+- **Hearings** — Committee hearings and markups, with status, room, witnesses and the bills at issue. A markup is labelled as a markup rather than filed under hearings, and the schedule states the date it was read rather than claiming to be live
 - **Finances** — STOCK Act periodic transaction reports (and ticker-level trades when the Stock Watcher dumps are reachable), with a Congress-wide chart of cash vs all trading vs the S&P 500 vs committee-overlap trades, plus committee-overlap and bill-timing flags
 - **Analytics** — Party breakdown, bill stages, and voting patterns
-- **Section index** — The long pages (member, bill, vote and committee profiles, and the trading dashboard) carry an "On this page" rail on the left, opened and closed by the **Contents** button, that jumps to a section and marks the one being read. It docks in the gutter on wide screens and opens over the text on narrow ones
+- **Section index** — The long pages (member, bill, vote and committee profiles, and the trading dashboard) carry an "On this page" rail on the left, opened and closed by the gearwheel in the left margin, that jumps to a section and marks the one being read. It docks in the gutter on wide screens and opens over the text on narrow ones
 - **Light and dark** — A theme toggle in the utility strip, remembered in `localStorage` and applied before first paint so there is no flash
 - **Automated refresh** — GitHub Actions fetch and commit data on a schedule; a push to `main` rebuilds the site
 
@@ -139,7 +141,7 @@ rule for a limit on what the data can support, a grey one for coverage or freshn
 
 | Source | Used for |
 |--------|----------|
-| [Congress.gov API v3](https://api.congress.gov/) | Members, bills (sorted `updateDate+desc`), committees, committee legislation |
+| [Congress.gov API v3](https://api.congress.gov/) | Members, bills (sorted `updateDate+desc`), committees, committee legislation, amendments, committee meetings |
 | [unitedstates/congress-legislators](https://unitedstates.github.io/congress-legislators/) | Names, websites, social links, committee memberships (`github.io` first; `theunitedstates.io` as fallback) |
 | [clerk.house.gov](https://clerk.house.gov/legislative/legvotes.aspx) | House roll call XML |
 | [senate.gov](https://www.senate.gov/legislative/votes_new.htm) | Senate roll call XML |
@@ -183,10 +185,16 @@ digital-democracy/
 │   │   │   └── [billId].astro           # Detail
 │   │   ├── votes/
 │   │   │   ├── index.astro              # Roll call list
-│   │   │   └── [voteId].astro           # Member positions
+│   │   │   └── [voteId].astro           # Member positions + amendment at issue
+│   │   ├── amendments/
+│   │   │   ├── index.astro              # Amendment list
+│   │   │   └── [amendmentId].astro      # Bill amended, sponsor, roll calls, actions
+│   │   ├── hearings/
+│   │   │   ├── index.astro              # Committee meeting schedule
+│   │   │   └── [eventId].astro          # Witnesses, documents, bills at issue
 │   │   └── committees/
 │   │       ├── index.astro              # Directory
-│   │       └── [committeeId].astro      # Referrals + subcommittees
+│   │       └── [committeeId].astro      # Referrals + subcommittees + meetings
 │   ├── components/
 │   │   ├── layout/                      # Layout, Header, Footer, PageIndex
 │   │   ├── shared/                      # PartyBadge, ChamberBadge
@@ -195,6 +203,8 @@ digital-democracy/
 │   │       ├── MemberFilter.tsx
 │   │       ├── BillFilter.tsx
 │   │       ├── VoteFilter.tsx
+│   │       ├── AmendmentFilter.tsx
+│   │       ├── HearingFilter.tsx
 │   │       ├── CommitteeFilter.tsx
 │   │       ├── MemberPortfolioChart.tsx
 │   │       ├── CongressPortfolioChart.tsx
@@ -211,6 +221,8 @@ digital-democracy/
 │   ├── fetch-bills.mjs                  # Recently updated bills + sub-resources
 │   ├── fetch-committees.mjs             # Committees + referred legislation
 │   ├── fetch-votes.mjs                  # House + Senate XML (both sessions)
+│   ├── fetch-amendments.mjs             # Amendments + actions, joined to bills and roll calls
+│   ├── fetch-hearings.mjs               # Committee meetings (schedule, not transcripts)
 │   ├── fetch-finances.mjs               # Trades / PTR filings + conflict flags
 │   ├── fetch-stock-prices.mjs           # Daily closes per traded ticker -> data/prices/
 │   ├── enrich-trade-timing.mjs          # Counterfactuals from the price cache (no network)
@@ -231,6 +243,8 @@ digital-democracy/
 │   ├── portfolio-series.mjs             # Member and Congress portfolios vs S&P 500 vs cash
 │   ├── member-finance-index.mjs         # Per-member trading record for the directory filter
 │   ├── vote-outcome.mjs                 # Reads a roll-call result string as agreed/rejected
+│   ├── amendment-outcome.mjs            # Reads an amendment's latest action as its disposition
+│   ├── meeting-status.mjs               # Meeting labels, ordering, and upcoming/past
 │   ├── page-index.mjs                   # Section lists for the on-page index rail
 │   └── data-loader.mjs                  # Memoised reads of the shared data indexes
 ├── tests/                               # node --test
@@ -336,7 +350,7 @@ npm run preview
 
 ## CI/CD
 
-All three data workflows check out `main`, write JSON, and publish with `scripts/commit-data.sh`. They share the `fetch-data` concurrency group (`cancel-in-progress: false`) so they queue instead of overlapping. If `main` still moves during a run, the script resets to the latest `main` and reapplies only the paths that job owns, instead of rebasing and failing on aggregate files like `data/bills/index.json`.
+All five data workflows check out `main`, write JSON, and publish with `scripts/commit-data.sh`. They share the `fetch-data` concurrency group (`cancel-in-progress: false`) so they queue instead of overlapping. If `main` still moves during a run, the script resets to the latest `main` and reapplies only the paths that job owns, instead of rebasing and failing on aggregate files like `data/bills/index.json`.
 
 | Workflow | Schedule | What it writes |
 |----------|----------|----------------|
@@ -344,7 +358,14 @@ All three data workflows check out `main`, write JSON, and publish with `scripts
 | **Fetch Congress Data** (`fetch-members.yml`) | Sunday 02:00 UTC | All of `data/` — members, then bills, then committees, then votes + finances |
 | **Fetch Bills Data** (`fetch-bills.yml`) | Monday and Thursday 11:00 UTC | `data/bills/`, `data/meta/` |
 | **Fetch Votes Data** (`fetch-votes.yml`) | Tuesday and Friday 11:00 UTC | `data/votes/`, `data/meta/` |
+| **Fetch Amendments Data** (`fetch-amendments.yml`) | Tuesday and Friday 11:30 UTC | `data/amendments/` |
+| **Fetch Hearings Data** (`fetch-hearings.yml`) | Daily 10:00 UTC | `data/hearings/` |
 | **Deploy to GitHub Pages** (`deploy.yml`) | Push to `main` | `npm test`, `astro build`, Pages deploy |
+
+Hearings run daily rather than twice weekly. A schedule is the most
+time-sensitive data on the site, and cadence is the only thing that narrows the
+window in which a canceled meeting still renders as scheduled — the dataset is
+small enough that the extra runs are cheap.
 
 **Required Actions secret:** `CONGRESS_API_KEY`
 
@@ -492,8 +513,8 @@ shown with its context but no chart.
 - [x] Member-level portfolio vs cash and S&P 500 baseline chart
 - [x] Congress-wide cash vs trading vs S&P 500 vs committee-overlap chart
 - [x] Editorial design system across every page, with light and dark themes
-- [ ] Amendment tracking
-- [ ] Hearing schedules
+- [x] Amendment tracking, joined to bills, sponsors and roll calls
+- [x] Committee hearing and markup schedules
 
 ---
 

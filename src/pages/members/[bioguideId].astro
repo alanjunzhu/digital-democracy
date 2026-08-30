@@ -16,7 +16,15 @@ import { buildPortfolioSeries, BENCHMARK_LABEL } from '../../../shared/portfolio
 import { createPriceCacheReader, decodePriceSeries, BENCHMARK_TICKER } from '../../../shared/price-cache.mjs';
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
-import { formatState, formatDate, getBillStage, STAGE_COLORS, BILL_STAGES } from '../../lib/utils';
+import {
+  formatState,
+  formatDate,
+  getBillStage,
+  STAGE_COLORS,
+  BILL_STAGES,
+  getAmendmentDisposition,
+  getAmendmentVerdict,
+} from '../../lib/utils';
 import type { MemberDetail } from '../../lib/types';
 import { partitionFinanceTrades } from '../../../scripts/fetch-finances.mjs';
 import { scoreMemberPartyAlignment } from '../../lib/party-alignment';
@@ -289,10 +297,17 @@ const stageOrder = [...BILL_STAGES, 'Other'] as const;
 
 const hasFinanceCard = stockTrades.length > 0 || ptrFilings.length > 0;
 const highSeverityFlags = conflictFlags.filter((f: any) => f.severity === 'high').length;
+// Amendments this member offered. Read through the memoised loader because
+// every one of 500+ member pages needs the same index.
+const memberAmendments = ((loadDataJSON('amendments/index.json')?.amendments || []) as any[])
+  .filter(a => a.sponsor?.bioguideId === bioguideId)
+  .sort((a, b) => String(b.latestActionDate || '').localeCompare(String(a.latestActionDate || '')));
+
 const pageSections = [
   { id: 'profile', label: 'Profile' },
   { id: 'details', label: 'Details & Service History' },
   { id: 'sponsored-legislation', label: 'Sponsored Legislation', when: sponsoredBills.length, count: sponsoredBills.length },
+  { id: 'amendments-offered', label: 'Amendments Offered', when: memberAmendments.length, count: memberAmendments.length },
   { id: 'policy-stances', label: 'Policy Stances', when: policyProfiles && policySummary },
   { id: 'voting-record', label: 'Voting Record', when: memberVotes.length, count: voteStats.total },
   { id: 'committee-assignments', label: 'Committee Assignments', when: !hasFinanceCard && memberCommittees.length, count: memberCommittees.length },
@@ -503,6 +518,53 @@ const pageSections = [
           )}
         </div>
         <a href={`${base}bills/`} class="font-mono text-[11px] tracking-[0.06em] uppercase text-accent hover:underline mt-4 inline-block">View all bills &rarr;</a>
+      </div>
+    )}
+
+    <!-- Amendments offered -->
+    {memberAmendments.length > 0 && (
+      <div id="amendments-offered" data-page-section class="pt-8">
+        <h2 class="font-serif text-2xl font-medium tracking-[-0.01em] border-t border-ink pt-3 mb-5">
+          Amendments offered <span class="font-mono text-[11px] text-ink-3 tabular">{memberAmendments.length}</span>
+        </h2>
+        <p class="text-[13.5px] leading-[1.55] text-ink-2 max-w-prose mb-4">
+          A member who sponsors few bills may still shape a great deal of legislation
+          here. Most amendments are never called up, so a pending disposition is the
+          ordinary outcome rather than a defeat.
+        </p>
+        <div>
+          {memberAmendments.slice(0, 15).map((a: any) => {
+            const disposition = getAmendmentDisposition(a.latestAction);
+            return (
+              <a
+                href={`${base}amendments/${a.amendmentId}/`}
+                class="grid grid-cols-[110px_minmax(0,1fr)_120px] gap-5 items-start py-4 border-b border-rule hover:border-ink-3"
+              >
+                <span class="font-mono text-[12.5px] font-medium text-accent tabular">{a.type} {a.number}</span>
+                <div class="min-w-0">
+                  <h3 class="text-[14px] leading-[1.45] text-ink-2 line-clamp-2">
+                    {a.purpose || a.description || 'No purpose stated'}
+                  </h3>
+                  <p class="font-mono text-[11px] text-ink-3 mt-[6px]">
+                    {a.amendedBillId ? `${a.amendedBillId.toUpperCase()} · ` : ''}{a.latestActionDate || 'No action recorded'}
+                  </p>
+                </div>
+                <span
+                  class={`font-mono text-[10.5px] font-semibold tracking-[0.06em] uppercase text-right ${
+                    disposition === 'agreed' ? 'text-yea' : disposition === 'rejected' ? 'text-accent' : 'text-ink-3'
+                  }`}
+                >
+                  {getAmendmentVerdict(a.latestAction)}
+                </span>
+              </a>
+            );
+          })}
+          {memberAmendments.length > 15 && (
+            <p class="font-mono text-[11px] text-ink-3 pt-3">
+              {memberAmendments.length - 15} more not shown.
+            </p>
+          )}
+        </div>
       </div>
     )}
 

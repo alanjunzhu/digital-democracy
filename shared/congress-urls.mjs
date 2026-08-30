@@ -209,3 +209,79 @@ export const API_BASE_URL = 'https://api.congress.gov/v3';
 export function isApiUrl(url) {
   return /^https?:\/\/api\.congress\.gov\//i.test(String(url || ''));
 }
+
+// ---------------------------------------------------------------------------
+// Amendments
+// ---------------------------------------------------------------------------
+
+const AMENDMENT_TYPE_PATHS = {
+  hamdt: 'house-amendment',
+  samdt: 'senate-amendment',
+  suamdt: 'senate-unprinted-amendment',
+};
+
+const AMENDMENT_TYPE_LABELS = {
+  hamdt: 'H.Amdt.',
+  samdt: 'S.Amdt.',
+  suamdt: 'S.U.Amdt.',
+};
+
+/**
+ * @param {string} type
+ * @returns {string} Lowercased type with punctuation stripped ("H.Amdt." -> "hamdt").
+ */
+export function normalizeAmendmentType(type) {
+  return String(type || '').toLowerCase().replace(/[^a-z]/g, '');
+}
+
+/** Display citation for an amendment type ("hamdt" -> "H.Amdt."). */
+export function formatAmendmentType(type) {
+  const key = normalizeAmendmentType(type);
+  return AMENDMENT_TYPE_LABELS[key] || String(type || '').toUpperCase();
+}
+
+/** The chamber an amendment type originates in. */
+export function amendmentChamber(type) {
+  return normalizeAmendmentType(type).startsWith('h') ? 'House' : 'Senate';
+}
+
+/**
+ * @param {string} type
+ * @param {number | string} number
+ * @returns {string} Stable id used for data filenames and site routes.
+ */
+export function getAmendmentId(type, number) {
+  return `${normalizeAmendmentType(type)}${number}`;
+}
+
+/**
+ * @param {number | string} congress
+ * @param {string} type
+ * @param {number | string} number
+ * @returns {string | null}
+ */
+export function getAmendmentWebUrl(congress, type, number) {
+  const typePath = AMENDMENT_TYPE_PATHS[normalizeAmendmentType(type)];
+  if (!typePath || !congress || !number) return null;
+  return `https://www.congress.gov/amendment/${ordinal(congress)}-congress/${typePath}/${number}`;
+}
+
+/**
+ * Compose the stored voteId for a roll call referenced by an amendment action.
+ *
+ * `recordedVotes` entries carry the chamber, session and roll number rather
+ * than an id, but the vote records are keyed as `s2-rc217` / `h2-rc283`, so the
+ * join is deterministic and needs no lookup table.
+ *
+ * @param {{ chamber?: string, sessionNumber?: number | string, rollNumber?: number | string }} recordedVote
+ * @returns {string | null} null when any part is missing, rather than a malformed id.
+ */
+export function recordedVoteId(recordedVote) {
+  const chamber = String(recordedVote?.chamber || '').trim().toLowerCase();
+  const session = Number(recordedVote?.sessionNumber);
+  const roll = Number(recordedVote?.rollNumber);
+  if (!chamber || !Number.isFinite(session) || !Number.isFinite(roll)) return null;
+  const prefix = chamber.startsWith('h') ? 'h' : chamber.startsWith('s') ? 's' : '';
+  if (!prefix) return null;
+  return `${prefix}${session}-rc${roll}`;
+}

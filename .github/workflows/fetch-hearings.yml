@@ -1,0 +1,49 @@
+name: Fetch Hearings Data
+
+on:
+  schedule:
+    # Daily, unlike the other fetches. A schedule is the most time-sensitive
+    # data here: a meeting canceled after the last build still renders as
+    # scheduled, and cadence is the only thing that narrows that window. The
+    # dataset is small enough that running it daily is cheap.
+    - cron: '0 10 * * *'  # 5AM EST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Data runs all push to main, so let them queue instead of racing.
+concurrency:
+  group: fetch-data
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  fetch-hearings:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch hearings data
+        run: node scripts/fetch-hearings.mjs
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          scripts/commit-data.sh "chore: update hearings data [$(date -u +%Y-%m-%d)]" data/hearings/

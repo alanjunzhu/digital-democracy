@@ -32,11 +32,19 @@ const entries = buildPageIndex(sections);
       aria-expanded="false"
       aria-controls="page-index-panel"
       title={`${title} (${entries.length} sections)`}
-      class="inline-flex items-center gap-[7px] rounded border border-rule bg-paper px-[9px] py-[4px] font-mono text-[10px] tracking-[0.1em] uppercase text-ink-3 hover:border-ink-3 hover:text-ink focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--navy)]"
+      class="inline-grid h-9 w-9 place-items-center border-none bg-transparent p-0 text-ink-3 opacity-45 hover:opacity-100 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--navy)]"
     >
-      <span data-page-index-rule class="inline-block h-px w-3 bg-ink-3" aria-hidden="true"></span>
-      <span>Contents</span>
-      <span class="tabular text-ink-3">{entries.length}</span>
+      <span class="sr-only">{title} ({entries.length} sections)</span>
+      {/* No plate and no border: the cog sits directly on the paper so it reads
+          as part of the page rather than a control floating above it. */}
+      <svg class="h-[22px] w-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.34 3.94c.09-.54.56-.94 1.11-.94h1.1c.55 0 1.02.4 1.11.94l.17 1.02c.5.17.97.4 1.4.7l.96-.4c.5-.2 1.08-.03 1.36.44l.55.95c.28.47.16 1.07-.27 1.4l-.81.63c.05.27.08.55.08.83s-.03.56-.08.83l.81.63c.43.33.55.93.27 1.4l-.55.95c-.28.47-.86.65-1.36.44l-.96-.4c-.43.3-.9.53-1.4.7l-.17 1.02c-.09.54-.56.94-1.11.94h-1.1c-.55 0-1.02-.4-1.11-.94l-.17-1.02c-.5-.17-.97-.4-1.4-.7l-.96.4c-.5.2-1.08.03-1.36-.44l-.55-.95c-.28-.47-.16-1.07.27-1.4l.81-.63A5.1 5.1 0 0 1 6.5 12c0-.28.03-.56.08-.83l-.81-.63c-.43-.33-.55-.93-.27-1.4l.55-.95c.28-.47.86-.65 1.36-.44l.96.4c.43-.3.9-.53 1.4-.7l.17-1.02Z"
+        />
+        <circle cx="12" cy="12" r="2.4" stroke-linejoin="round" />
+      </svg>
     </button>
 
     <nav
@@ -70,17 +78,19 @@ const entries = buildPageIndex(sections);
 )}
 
 <style>
-  /* The rule grows into an open bracket when the panel is showing — the only
-     motion in the system, and it stays within the hairline vocabulary. */
-  [data-page-index-rule] {
-    transition: width 0.2s ease;
+  /* The cog turns rather than lighting up a plate, so the affordance stays in
+     the mark itself and nothing new is painted over the paper. */
+  [data-page-index-toggle] svg {
+    transition: transform 0.45s ease;
   }
-  [data-page-index-toggle]:hover [data-page-index-rule],
-  [data-page-index-toggle][aria-expanded='true'] [data-page-index-rule] {
-    width: 1.25rem;
+  [data-page-index-toggle]:hover svg {
+    transform: rotate(60deg);
+  }
+  [data-page-index-toggle][aria-expanded='true'] svg {
+    transform: rotate(30deg);
   }
   [data-page-index-toggle][aria-expanded='true'] {
-    border-color: var(--ink);
+    opacity: 1;
     color: var(--ink);
   }
   /* Current section is marked the way a caveat note is: a rule in the margin. */
