@@ -112,3 +112,19 @@ export const STAGE_COLORS: Record<BillStage, { bg: string; text: string; dot: st
 // Vote-result classification lives in shared/ so the data tests can exercise
 // it directly; re-exported here as the single import site for pages.
 export { getVoteOutcome, getVoteVerdict } from '../../shared/vote-outcome.mjs';
+export {
+  getAmendmentDisposition,
+  getAmendmentVerdict,
+  AMENDMENT_DISPOSITION_DOT,
+  AMENDMENT_DISPOSITIONS,
+} from '../../shared/amendment-outcome.mjs';
+export {
+  MEETING_STATUSES,
+  MEETING_STATUS_DOT,
+  MEETING_STATUS_TEXT,
+  meetingStatusDot,
+  meetingStatusText,
+  meetingLabel,
+  isUpcoming,
+  compareMeetings,
+} from '../../shared/meeting-status.mjs';

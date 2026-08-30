@@ -15,6 +15,15 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
 import {
+  compareMeetings,
+  isUpcoming,
+  MEETING_STATUS_DOT,
+  MEETING_STATUSES,
+  meetingLabel,
+  meetingStatusDot,
+  meetingStatusText,
+} from '../shared/meeting-status.mjs';
+import {
   normalizeLocation,
   normalizeMeeting,
   normalizeMeetingCommittees,
@@ -160,4 +169,66 @@ test('a meeting whose detail call failed still normalizes from the list item', (
 test('a numeric eventId is stored as the string the filename and route use', () => {
   const { summary } = normalizeMeeting({ eventId: 117538, chamber: 'House' }, null);
   assert.equal(summary.eventId, '117538');
+});
+
+/**
+ * meetingStatus answers "was this called off?", not "has this happened?".
+ * Congress.gov leaves a meeting held last March sitting at "Scheduled"
+ * indefinitely, so printing the raw value tells a reader a past meeting is
+ * still ahead of them.
+ */
+test('a past meeting reads Held rather than the Scheduled the source still reports', () => {
+  const now = Date.parse('2025-06-01T12:00:00Z');
+  const past = { meetingStatus: 'Scheduled', date: '2025-03-04T14:00:00Z' };
+
+  assert.equal(meetingLabel(past, now), 'Held');
+  assert.equal(isUpcoming(past, now), false);
+});
+
+test('an upcoming meeting keeps the status the source reported', () => {
+  const now = Date.parse('2025-06-01T12:00:00Z');
+  assert.equal(meetingLabel({ meetingStatus: 'Scheduled', date: '2025-06-09T14:00:00Z' }, now), 'Scheduled');
+  assert.equal(meetingLabel({ meetingStatus: 'Rescheduled', date: '2025-06-09T14:00:00Z' }, now), 'Rescheduled');
+});
+
+test('Canceled and Postponed survive the date passing', () => {
+  const now = Date.parse('2025-06-01T12:00:00Z');
+  // These describe a decision made about the meeting; they stay true afterwards,
+  // and rewriting a canceled meeting to "Held" would assert it took place.
+  assert.equal(meetingLabel({ meetingStatus: 'Canceled', date: '2025-03-04T14:00:00Z' }, now), 'Canceled');
+  assert.equal(meetingLabel({ meetingStatus: 'Postponed', date: '2025-03-04T14:00:00Z' }, now), 'Postponed');
+});
+
+test('an undated meeting is not claimed to have been held', () => {
+  const now = Date.parse('2025-06-01T12:00:00Z');
+  // The source never said when, so neither do we — and it sorts as not-upcoming
+  // so it is never listed among what is still to come.
+  assert.equal(meetingLabel({ meetingStatus: 'Scheduled', date: '' }, now), 'Scheduled');
+  assert.equal(isUpcoming({ meetingStatus: 'Scheduled', date: '' }, now), false);
+});
+
+test('every label a meeting can show has a dot colour', () => {
+  for (const label of [...MEETING_STATUSES, 'Held']) {
+    assert.ok(MEETING_STATUS_DOT[label], `${label} has no dot colour`);
+    assert.doesNotMatch(MEETING_STATUS_DOT[label], /green/, `${label} uses green`);
+  }
+  // An unrecognized status still renders rather than producing an empty class.
+  assert.equal(meetingStatusDot('Recessed'), 'bg-ink-3');
+  assert.equal(meetingStatusText('Recessed'), 'text-ink-3');
+});
+
+test('meetings sort soonest-upcoming first, then most recent past, undated last', () => {
+  const now = Date.parse('2025-06-01T12:00:00Z');
+  const meetings = [
+    { eventId: 'past-old', date: '2025-01-01T14:00:00Z' },
+    { eventId: 'undated', date: '' },
+    { eventId: 'soon', date: '2025-06-02T14:00:00Z' },
+    { eventId: 'past-recent', date: '2025-05-30T14:00:00Z' },
+    { eventId: 'later', date: '2025-07-15T14:00:00Z' },
+  ];
+
+  assert.deepEqual(
+    [...meetings].sort((a, b) => compareMeetings(a, b, now)).map(m => m.eventId),
+    ['soon', 'later', 'past-recent', 'past-old', 'undated'],
+  );
 });
