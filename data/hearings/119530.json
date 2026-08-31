@@ -19,7 +19,38 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119530?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Ambassador John Herbst",
+      "position": "Senior Director",
+      "organization": "The Atlantic Council’s Eurasia Center"
+    },
+    {
+      "name": "Mr. Daniel Runde",
+      "position": "Author",
+      "organization": "“The American Imperative: Reclaiming Global Leadership through Soft Power”"
+    },
+    {
+      "name": "Dr. Morgan Bazilian",
+      "position": "Professor of Public Policy and Director",
+      "organization": "Payne Institute at the Colorado School of Mines"
+    },
+    {
+      "name": "Ms. Melinda St. Louis",
+      "position": "Director",
+      "organization": "Global Trade Watch, Public Citizen"
+    },
+    {
+      "name": "Ambassador John Herbst",
+      "position": "Senior Director",
+      "organization": "Atlantic Council’s Eurasia Center"
+    },
+    {
+      "name": "Dr. Gracelin Baskaran",
+      "position": "Director of the Critical Minerals Security Program",
+      "organization": "Center for Strategic and International Studies (CSIS)"
+    }
+  ],
   "videos": [],
   "meetingDocuments": []
 }

@@ -1,26 +1,8 @@
 {
-  "lastUpdated": "2026-08-30T22:58:08.044Z",
+  "lastUpdated": "2026-08-31T17:18:14.372Z",
   "congress": 119,
   "total": 428,
   "hearings": [
-    {
-      "eventId": "119513",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "Committee Business to Consider: Review of the 9/11 Commission Report",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-31T17:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hlig00",
-          "name": "House Intelligence (Permanent Select)"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119513?format=json"
-    },
     {
       "eventId": "118857",
       "congress": 119,
@@ -194,6 +176,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119534?format=json"
     },
     {
+      "eventId": "119530",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Full Committee Hearing on Strategic Partnerships to Secure Critical Resources and Supply Chains",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hswm00",
+          "name": "House Ways and Means"
+        }
+      ],
+      "location": {
+        "room": "390",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119530?format=json"
+    },
+    {
       "eventId": "119522",
       "congress": 119,
       "chamber": "House",
@@ -216,6 +220,60 @@
         "hr7866"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119522?format=json"
+    },
+    {
+      "eventId": "119506",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative hearing on:      H.R. 642 (Rep. Steube), “Myakka Wild and Scenic River Act of 2025”;\r\nH.R. 5470 (Rep. LaHood), “Route 66 National Historic Trail Designation Act”;\r\nH.R. 6788 (Rep. Downing), “Montana Sportsmen Conservation Act”;\r\nH.R. 9269 (Rep. Clyburn), “Renewing the African American Civil Rights Network Act”;\r\nH.R. 9600 (Rep. Raskin), \"Common Sense Act 250 Act of 2026\";\r\nH.R. 9779 (Rep. Gonzalez), “Hands Off Our Boca Chica Beach Act of 2026” ;\r\nH.R. 10128 (Rep. McClintock), To codify Secretary's Order No. 3434 of the Department of the Interior;\r\nH.R. 10136 (Rep. Westerman), “Crossett Experimental Forest Act of 2026”;\r\nS. 675 (Rep. Hoeven) “Theodore Roosevelt Presidential Library Act”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii10",
+          "name": "House Natural Resources Subcommittee on Federal Lands"
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr9269",
+        "hr642",
+        "hr9779",
+        "hr10128",
+        "hr9600",
+        "hr5470",
+        "hr6788",
+        "s675",
+        "hr10136"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json"
+    },
+    {
+      "eventId": "119531",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "A Resolution to assign Representative Goodlander to subcommittees on the  \r\nHouse Committee on Veterans’ Affairs",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr00",
+          "name": "House Veterans' Affairs"
+        }
+      ],
+      "location": {
+        "room": "360",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119531?format=json"
     },
     {
       "eventId": "119527",
@@ -262,28 +320,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119524?format=json"
     },
     {
-      "eventId": "119531",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "A Resolution to assign Representative Goodlander to subcommittees on the  \r\nHouse Committee on Veterans’ Affairs",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr00",
-          "name": "House Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119531?format=json"
-    },
-    {
       "eventId": "119532",
       "congress": 119,
       "chamber": "House",
@@ -304,60 +340,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119532?format=json"
-    },
-    {
-      "eventId": "119506",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative hearing on:      H.R. 642 (Rep. Steube), “Myakka Wild and Scenic River Act of 2025”;\r\nH.R. 5470 (Rep. LaHood), “Route 66 National Historic Trail Designation Act”;\r\nH.R. 6788 (Rep. Downing), “Montana Sportsmen Conservation Act”;\r\nH.R. 9269 (Rep. Clyburn), “Renewing the African American Civil Rights Network Act”;\r\nH.R. 9600 (Rep. Raskin), \"Common Sense Act 250 Act of 2026\";\r\nH.R. 9779 (Rep. Gonzalez), “Hands Off Our Boca Chica Beach Act of 2026” ;\r\nH.R. 10128 (Rep. McClintock), To codify Secretary's Order No. 3434 of the Department of the Interior;\r\nH.R. 10136 (Rep. Westerman), “Crossett Experimental Forest Act of 2026”;\r\nS. 675 (Rep. Hoeven) “Theodore Roosevelt Presidential Library Act”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii10",
-          "name": "House Natural Resources Subcommittee on Federal Lands"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr9269",
-        "hr642",
-        "hr9779",
-        "hr10128",
-        "hr9600",
-        "hr5470",
-        "hr6788",
-        "s675",
-        "hr10136"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json"
-    },
-    {
-      "eventId": "119530",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Full Committee Hearing on Strategic Partnerships to Secure Critical Resources and Supply Chains",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hswm00",
-          "name": "House Ways and Means"
-        }
-      ],
-      "location": {
-        "room": "390",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119530?format=json"
     },
     {
       "eventId": "119497",
@@ -552,6 +534,24 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338724?format=json"
+    },
+    {
+      "eventId": "119513",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "Committee Business to Consider: Review of the 9/11 Commission Report",
+      "meetingStatus": "Scheduled",
+      "date": "2026-08-31T17:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hlig00",
+          "name": "House Intelligence (Permanent Select)"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119513?format=json"
     },
     {
       "eventId": "119501",

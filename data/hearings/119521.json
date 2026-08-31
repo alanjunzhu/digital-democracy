@@ -19,7 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119521?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Austen Bannan",
+      "position": "Employment Policy Fellow",
+      "organization": "Americans for Prosperity (AFP)"
+    },
+    {
+      "name": "Ms. Elizabeth Milito",
+      "position": "Executive Director",
+      "organization": "National Federation of Independent Business (NFIB) Small Business Legal Center"
+    },
+    {
+      "name": "Ms. Rebecca Reindel",
+      "position": "Director of Occupational Safety and Health",
+      "organization": "AFL-CIO"
+    },
+    {
+      "name": "Dr. Douglas Holtz-Eakin",
+      "position": "President",
+      "organization": "American Action Forum (AAF)"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

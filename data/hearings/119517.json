@@ -19,12 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119517?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Paul Lawrence",
+      "position": "Deputy Secretary",
+      "organization": "U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Dr. Neil Evans, MD",
+      "position": "Program Executive Director, Electronic Health Record Modernization Integrationd Office",
+      "organization": "U.S. Department of Veterans Affairs"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Hearing Notice",
       "url": "https://www.congress.gov/119/meeting/house/119517/documents/HHRG-119-VR00-20260902-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119517/documents/HHRG-119-VR00-WList-20260902.pdf",
       "format": "PDF"
     }
   ]
