@@ -17,8 +17,8 @@ export const MEETING_STATUSES = ['Scheduled', 'Rescheduled', 'Postponed', 'Cance
 
 export const MEETING_STATUS_DOT = {
   Scheduled: 'bg-yea',
-  Rescheduled: 'bg-[#b8860b]',
-  Postponed: 'bg-[#b8860b]',
+  Rescheduled: 'bg-pending',
+  Postponed: 'bg-pending',
   Canceled: 'bg-accent',
   Held: 'bg-ink-3',
 };

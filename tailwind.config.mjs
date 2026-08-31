@@ -18,6 +18,9 @@ export default {
         field: 'var(--field)',
         accent: 'var(--red)',
         yea: 'var(--navy)',
+        // Goldenrod: the "unresolved" note shared by a bill still in committee,
+        // an amendment never called up, and a postponed meeting.
+        pending: 'var(--pending)',
         dem: { DEFAULT: 'var(--dem)', soft: 'var(--dem-soft)' },
         rep: { DEFAULT: 'var(--rep)', soft: 'var(--rep-soft)' },
         ind: { DEFAULT: 'var(--ind)', soft: 'var(--ind-soft)' },

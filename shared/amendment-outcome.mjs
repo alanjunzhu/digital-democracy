@@ -50,7 +50,7 @@ export const AMENDMENT_DISPOSITION_DOT = {
   agreed: 'bg-yea',
   rejected: 'bg-accent',
   withdrawn: 'bg-ink-3',
-  pending: 'bg-[#b8860b]',
+  pending: 'bg-pending',
 };
 
 export const AMENDMENT_DISPOSITIONS = ['agreed', 'rejected', 'withdrawn', 'pending'];
