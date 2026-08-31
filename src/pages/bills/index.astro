@@ -24,20 +24,12 @@ const senateCount = billsData.bills.filter((b: any) => b.originChamber === 'Sena
           Bills
         </h1>
       </div>
-      <div class="flex flex-wrap gap-8 pb-1">
-        <div>
-          <div class="font-serif text-[26px] font-medium tabular">{billsData.total}</div>
-          <div class="field-label mt-[2px]">Introduced</div>
-        </div>
-        <div>
-          <div class="font-serif text-[26px] font-medium tabular">{houseCount}</div>
-          <div class="field-label mt-[2px]">House</div>
-        </div>
-        <div>
-          <div class="font-serif text-[26px] font-medium tabular">{senateCount}</div>
-          <div class="field-label mt-[2px]">Senate</div>
-        </div>
-      </div>
+      {/* The counts moved into the ledger the filter island renders, so this
+          column says how to read the page instead of repeating them. */}
+      <p class="font-mono text-[12px] leading-[1.7] text-ink-3 lg:text-right m-0">
+        {billsData.bills.length} bills indexed &middot; {houseCount} House / {senateCount} Senate<br />
+        Stage is inferred from the latest recorded action
+      </p>
     </div>
 
     {billsData.bills.length > 0 ? (

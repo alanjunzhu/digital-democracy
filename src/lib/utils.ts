@@ -101,7 +101,7 @@ export function getBillStage(latestAction: string | undefined): BillStage {
 // as good or bad news.
 export const STAGE_COLORS: Record<BillStage, { bg: string; text: string; dot: string }> = {
   'Introduced': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-ink-3' },
-  'In Committee': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-[#b8860b]' },
+  'In Committee': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-pending' },
   'Passed One Chamber': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-yea' },
   'Passed Both Chambers': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-yea' },
   'Signed into Law': { bg: 'bg-rule-2', text: 'text-ink', dot: 'bg-ink' },
@@ -128,3 +128,5 @@ export {
   isUpcoming,
   compareMeetings,
 } from '../../shared/meeting-status.mjs';
+export { referral } from '../../shared/referral.mjs';
+export { shortSponsorName } from '../../shared/sponsor-name.mjs';

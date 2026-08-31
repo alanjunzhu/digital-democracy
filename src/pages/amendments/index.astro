@@ -4,7 +4,6 @@ import AmendmentFilter from '../../components/interactive/AmendmentFilter';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import type { AmendmentsIndex } from '../../lib/types';
-import { getAmendmentDisposition } from '../../lib/utils';
 
 let data: AmendmentsIndex = { lastUpdated: '', congress: 119, total: 0, amendments: [] };
 try {
@@ -13,9 +12,6 @@ try {
 
 const amendments = data.amendments || [];
 const base = import.meta.env.BASE_URL;
-
-const agreed = amendments.filter(a => getAmendmentDisposition(a.latestAction) === 'agreed').length;
-const voted = amendments.filter(a => (a.recordedVotes || []).some(v => v.voteId)).length;
 ---
 
 <Layout
@@ -25,39 +21,26 @@ const voted = amendments.filter(a => (a.recordedVotes || []).some(v => v.voteId)
   <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
     <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-6 lg:gap-10 items-end pb-[18px] border-b border-ink">
       <div>
-        <p class="eyebrow mb-3">The record</p>
+        <p class="eyebrow mb-3">Legislation</p>
         <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">
           Amendments
         </h1>
-        <p class="mt-3 max-w-prose text-[14.5px] leading-[1.55] text-ink-2">
-          Most of what changes a bill happens here rather than on final passage. An
-          amendment names the bill it alters, the member who offered it, and — where
-          one was taken — the roll call that decided it.
-        </p>
       </div>
-      <div class="flex flex-wrap gap-8 pb-1">
-        <div>
-          <div class="font-serif text-[26px] font-medium tabular">{amendments.length}</div>
-          <div class="field-label mt-[2px]">Tracked</div>
-        </div>
-        <div>
-          <div class="font-serif text-[26px] font-medium tabular">{agreed}</div>
-          <div class="field-label mt-[2px]">Agreed to</div>
-        </div>
-        <div>
-          <div class="font-serif text-[26px] font-medium tabular">{voted}</div>
-          <div class="field-label mt-[2px]">Roll call</div>
-        </div>
-      </div>
+      {/* The right column states what the page is and how to read it, rather
+          than repeating counts the chip band below already carries. */}
+      <p class="font-mono text-[12px] leading-[1.7] text-ink-3 lg:text-right m-0">
+        {amendments.length} amendments indexed<br />
+        Disposition is read from the latest recorded action
+      </p>
     </div>
 
     {amendments.length > 0 ? (
       <>
         <AmendmentFilter amendments={amendments} baseUrl={base} client:load />
-        <p class="mt-6 max-w-prose font-mono text-[11px] leading-[1.6] text-ink-3">
-          The most recently updated amendments of the 119th Congress, not all of them.
-          An amendment with no disposition has not been called up — that is the normal
-          state for most of what is submitted, not a gap in the data.
+        <p class="mt-[26px] font-mono text-[11.5px] leading-[1.6] text-ink-3 max-w-[70ch] border-l-2 border-accent pl-3">
+          Disposition is inferred from the wording of the latest action, not from a
+          status field. An amendment that fell with the one it was attached to reads
+          as rejected; one that was never called up stays pending.
         </p>
       </>
     ) : (

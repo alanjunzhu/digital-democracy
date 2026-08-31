@@ -4,90 +4,52 @@ import HearingFilter from '../../components/interactive/HearingFilter';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import type { HearingsIndex } from '../../lib/types';
-import { isUpcoming } from '../../lib/utils';
+import { compareMeetings } from '../../lib/utils';
 
 let data: HearingsIndex = { lastUpdated: '', congress: 119, total: 0, hearings: [] };
 try {
   data = JSON.parse(readFileSync(join(process.cwd(), 'data', 'hearings', 'index.json'), 'utf-8'));
 } catch {}
 
-const hearings = data.hearings || [];
+// Frozen here and handed to the island, so the ledger, the filter and the
+// caveat below all agree on where "now" was when this page was built.
+const builtAt = Date.now();
+const hearings = [...(data.hearings || [])].sort((a, b) => compareMeetings(a, b, builtAt));
 const base = import.meta.env.BASE_URL;
 
-// Frozen at build time and handed to the client, so the counts on this page and
-// the filter below it agree on where "now" was — and so the caveat states a
-// date rather than implying the page is live.
-const builtAt = Date.now();
-const upcoming = hearings.filter(h => isUpcoming(h, builtAt)).length;
-const canceled = hearings.filter(h => h.meetingStatus === 'Canceled').length;
-
-const scheduleRead = data.lastUpdated
-  ? new Date(data.lastUpdated).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
-  : '';
-
-const senateCount = hearings.filter(h => h.chamber === 'Senate').length;
-const houseCount = hearings.filter(h => h.chamber === 'House').length;
-// Congress.gov's Senate meeting coverage is genuinely thinner than the House's.
-// Saying so is better than rendering a short list that reads as an idle chamber.
-const thinSenateCoverage = hearings.length > 0 && senateCount * 4 < houseCount;
+const buildDate = new Date(builtAt).toLocaleDateString('en-GB', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric',
+});
 ---
 
 <Layout
-  title="Committee meetings"
-  description="Hearings and markups scheduled by House and Senate committees, with status, room, witnesses and the bills at issue."
+  title="Hearings"
+  description="Committee hearings and markups scheduled in the 119th Congress, with status, room, witnesses and the bills at issue."
 >
   <div class="max-w-measure mx-auto px-10 pt-11 pb-16">
     <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-6 lg:gap-10 items-end pb-[18px] border-b border-ink">
       <div>
-        <p class="eyebrow mb-3">The calendar</p>
+        <p class="eyebrow mb-3">Committees</p>
         <h1 class="font-serif text-[36px] md:text-[44px] leading-[1.05] font-normal tracking-[-0.02em]">
-          Committee meetings
+          Hearings
         </h1>
-        <p class="mt-3 max-w-prose text-[14.5px] leading-[1.55] text-ink-2">
-          Hearings and markups, with the committee holding each one, the room, the
-          witnesses called and the bills at issue. A markup is where a bill is
-          actually rewritten, so the two are labelled separately rather than filed
-          together as hearings.
-        </p>
       </div>
-      <div class="flex flex-wrap gap-8 pb-1">
-        <div>
-          <div class="font-serif text-[26px] font-medium tabular">{hearings.length}</div>
-          <div class="field-label mt-[2px]">Meetings</div>
-        </div>
-        <div>
-          <div class="font-serif text-[26px] font-medium tabular">{upcoming}</div>
-          <div class="field-label mt-[2px]">Ahead</div>
-        </div>
-        <div>
-          <div class="font-serif text-[26px] font-medium tabular">{canceled}</div>
-          <div class="field-label mt-[2px]">Canceled</div>
-        </div>
-      </div>
+      <p class="font-mono text-[12px] leading-[1.7] text-ink-3 lg:text-right m-0">
+        {hearings.length} meetings indexed<br />
+        A meeting whose date has passed reads Held, whatever the source still says
+      </p>
     </div>
 
     {hearings.length > 0 ? (
       <>
-        {/* The freshness caveat is stated before the list, not after it. */}
-        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mt-5 pb-4 border-b border-rule">
-          <span class="field-label">Schedule as of</span>
-          <span class="font-mono text-[13px] tabular">{scheduleRead || 'unknown'}</span>
-          <span class="font-mono text-[11px] leading-[1.6] text-ink-3 max-w-prose">
-            This site is rebuilt on a schedule, not continuously. A meeting can be
-            canceled or moved after the last build, so check the committee before
-            relying on a time here.
-          </span>
-        </div>
-
         <HearingFilter hearings={hearings} baseUrl={base} builtAt={builtAt} client:load />
-
-        {thinSenateCoverage && (
-          <p class="mt-6 max-w-prose font-mono text-[11px] leading-[1.6] text-ink-3">
-            Senate meetings are underrepresented here — {senateCount} against {houseCount}
-            {' '}for the House. That is a gap in Congress.gov's committee-meeting feed, not
-            a Senate that has stopped meeting.
-          </p>
-        )}
+        <p class="mt-[26px] font-mono text-[11.5px] leading-[1.6] text-ink-3 max-w-[70ch] border-l-2 border-accent pl-3">
+          A schedule is only as fresh as the last build. A meeting called off after
+          {' '}{buildDate} still reads as it did then, so the status is stated on every
+          row rather than implied by the row being here at all.
+        </p>
       </>
     ) : (
       <div class="text-center py-16">
