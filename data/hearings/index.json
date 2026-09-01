@@ -1,135 +1,29 @@
 {
-  "lastUpdated": "2026-08-31T17:18:14.372Z",
+  "lastUpdated": "2026-09-01T14:23:49.095Z",
   "congress": 119,
   "total": 428,
   "hearings": [
     {
-      "eventId": "118857",
+      "eventId": "119534",
       "congress": 119,
       "chamber": "House",
-      "type": "Meeting",
-      "title": "H.R. 9436 – To amend the Consolidated Appropriations Act, 2023 to extend the time period for which certain regulation concerning the North Atlantic right whale are effective. [Northeast Lobsterman Protection Act of 2026]; H.R. 4795 – \tProtect Economic and Academic Freedom Act of 2026; H.R. 1501 – Protecting Domestic Mining Act of 2025; H. Res. 1490 – \tProviding for the condemnation and denouncement of socialism in all its forms, and for other purposes.",
+      "type": "Markup",
+      "title": "Subcommittee Markup of 6 Bills",
       "meetingStatus": "Scheduled",
-      "date": "2026-08-31T20:00:00Z",
+      "date": "2026-09-01T18:00:00Z",
       "committees": [
         {
-          "systemCode": "hsru00",
-          "name": "House Rules"
+          "systemCode": "hsif16",
+          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
         }
       ],
       "location": {
-        "room": "H-313",
-        "building": "Capitol",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr4795",
-        "hr1501",
-        "hr9436",
-        "hres1490"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118857?format=json"
-    },
-    {
-      "eventId": "119515",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Countering Houthi Terrorism: Protecting U.S. Interests and Security in the Red Sea",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-01T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa13",
-          "name": "House Subcommittee on the Middle East and North Africa"
-        }
-      ],
-      "location": {
-        "room": "2172",
+        "room": "2123",
         "building": "Rayburn House Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119515?format=json"
-    },
-    {
-      "eventId": "119516",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Sanctuary Policies, Tragic Consequences”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-01T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju01",
-          "name": "House Judiciary Subcommittee on Immigration Integrity, Security, and Enforcement"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119516?format=json"
-    },
-    {
-      "eventId": "119535",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "Markup of Twelve Pieces of Legislation",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-01T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif17",
-          "name": "House Energy and Commerce Subcommittee on Commerce, Manufacturing, and Trade"
-        }
-      ],
-      "location": {
-        "room": "2125",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr10158",
-        "hr7945",
-        "hr6207",
-        "hr5967",
-        "hr7502",
-        "hr6832",
-        "hr10170",
-        "hr10163",
-        "hr2713",
-        "hr9385",
-        "hr10152",
-        "hr6488"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119535?format=json"
-    },
-    {
-      "eventId": "119514",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Supporting Working Families: State-Led Child Care Solutions”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-01T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed14",
-          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119514?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119534?format=json"
     },
     {
       "eventId": "119519",
@@ -154,48 +48,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119519?format=json"
     },
     {
-      "eventId": "119534",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Subcommittee Markup of 6 Bills",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-01T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif16",
-          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119534?format=json"
-    },
-    {
-      "eventId": "119530",
+      "eventId": "119524",
       "congress": 119,
       "chamber": "House",
       "type": "Hearing",
-      "title": "Full Committee Hearing on Strategic Partnerships to Secure Critical Resources and Supply Chains",
+      "title": "“Fueling the Golden Age: Future Resource Needs and Small Business Opportunity.”",
       "meetingStatus": "Scheduled",
       "date": "2026-09-02T14:00:00Z",
       "committees": [
         {
-          "systemCode": "hswm00",
-          "name": "House Ways and Means"
+          "systemCode": "hssm21",
+          "name": "House Small Business Subcommittee on Rural Development, Energy, and Supply Chains"
         }
       ],
       "location": {
-        "room": "390",
-        "building": "Cannon House Office Building",
+        "room": "2360",
+        "building": "Rayburn House Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119530?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119524?format=json"
     },
     {
       "eventId": "119522",
@@ -220,6 +92,61 @@
         "hr7866"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119522?format=json"
+    },
+    {
+      "eventId": "119518",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Markup",
+      "title": "Ten Pieces of Legislation",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif00",
+          "name": "House Energy and Commerce"
+        }
+      ],
+      "location": {
+        "room": "2123",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr2140",
+        "hr5549",
+        "hr3978",
+        "hr9317",
+        "hr9615",
+        "hr9613",
+        "hr9614",
+        "hr9084",
+        "hr9612",
+        "hr3194"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119518?format=json"
+    },
+    {
+      "eventId": "119530",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Full Committee Hearing on Strategic Partnerships to Secure Critical Resources and Supply Chains",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hswm00",
+          "name": "House Ways and Means"
+        }
+      ],
+      "location": {
+        "room": "390",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119530?format=json"
     },
     {
       "eventId": "119506",
@@ -296,28 +223,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119527?format=json"
-    },
-    {
-      "eventId": "119524",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Fueling the Golden Age: Future Resource Needs and Small Business Opportunity.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hssm21",
-          "name": "House Small Business Subcommittee on Rural Development, Energy, and Supply Chains"
-        }
-      ],
-      "location": {
-        "room": "2360",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119524?format=json"
     },
     {
       "eventId": "119532",
@@ -534,6 +439,134 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338724?format=json"
+    },
+    {
+      "eventId": "119535",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "Markup of Twelve Pieces of Legislation",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-01T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif17",
+          "name": "House Energy and Commerce Subcommittee on Commerce, Manufacturing, and Trade"
+        }
+      ],
+      "location": {
+        "room": "2125",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr10158",
+        "hr7945",
+        "hr6207",
+        "hr5967",
+        "hr7502",
+        "hr6832",
+        "hr10170",
+        "hr10163",
+        "hr2713",
+        "hr9385",
+        "hr10152",
+        "hr6488"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119535?format=json"
+    },
+    {
+      "eventId": "119514",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Supporting Working Families: State-Led Child Care Solutions”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-01T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119514?format=json"
+    },
+    {
+      "eventId": "119515",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Countering Houthi Terrorism: Protecting U.S. Interests and Security in the Red Sea",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-01T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa13",
+          "name": "House Subcommittee on the Middle East and North Africa"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119515?format=json"
+    },
+    {
+      "eventId": "119516",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Sanctuary Policies, Tragic Consequences”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-01T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju01",
+          "name": "House Judiciary Subcommittee on Immigration Integrity, Security, and Enforcement"
+        }
+      ],
+      "location": {
+        "room": "2141",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119516?format=json"
+    },
+    {
+      "eventId": "118857",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "H.R. 9436 – To amend the Consolidated Appropriations Act, 2023 to extend the time period for which certain regulation concerning the North Atlantic right whale are effective. [Northeast Lobsterman Protection Act of 2026]; H.R. 4795 – \tProtect Economic and Academic Freedom Act of 2026; H.R. 1501 – Protecting Domestic Mining Act of 2025; H. Res. 1490 – Providing for the condemnation and denouncement of socialism in all its forms, and for other purposes.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-08-31T20:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsru00",
+          "name": "House Rules"
+        }
+      ],
+      "location": {
+        "room": "H-313",
+        "building": "Capitol",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr4795",
+        "hr1501",
+        "hr9436",
+        "hres1490"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118857?format=json"
     },
     {
       "eventId": "119513",
@@ -7390,28 +7423,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119310?format=json"
-    },
-    {
-      "eventId": "119211",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "H.R. 8870, Building Unrivaled Infrastructure and Long-term Development for America's 250th Act (BUILD America 250 Act); and other matters cleared for consideration",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-21T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hspw00",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "2167",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119211?format=json"
     },
     {
       "eventId": "338440",
