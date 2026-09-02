@@ -1,20 +1,42 @@
 {
-  "lastUpdated": "2026-09-01T14:23:49.095Z",
+  "lastUpdated": "2026-09-02T13:57:10.549Z",
   "congress": 119,
   "total": 428,
   "hearings": [
     {
-      "eventId": "119534",
+      "eventId": "119532",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Powering the Nuclear Renaissance: Accelerating U.S. Leadership in Advanced Nuclear Reactors",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hssy20",
+          "name": "House Science, Space, and Technology Subcommittee on Energy"
+        }
+      ],
+      "location": {
+        "room": "2318",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119532?format=json"
+    },
+    {
+      "eventId": "119518",
       "congress": 119,
       "chamber": "House",
       "type": "Markup",
-      "title": "Subcommittee Markup of 6 Bills",
+      "title": "Ten Pieces of Legislation",
       "meetingStatus": "Scheduled",
-      "date": "2026-09-01T18:00:00Z",
+      "date": "2026-09-02T14:00:00Z",
       "committees": [
         {
-          "systemCode": "hsif16",
-          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
+          "systemCode": "hsif00",
+          "name": "House Energy and Commerce"
         }
       ],
       "location": {
@@ -22,30 +44,95 @@
         "building": "Rayburn House Office Building",
         "address": ""
       },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119534?format=json"
+      "relatedBillIds": [
+        "hr2140",
+        "hr5549",
+        "hr3978",
+        "hr9317",
+        "hr9615",
+        "hr9613",
+        "hr9614",
+        "hr9084",
+        "hr9612",
+        "hr3194"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119518?format=json"
     },
     {
-      "eventId": "119519",
+      "eventId": "119506",
       "congress": 119,
       "chamber": "House",
-      "type": "Meeting",
-      "title": "Subcommittee Hearing on Welfare Reform at 30: Restoring the Promise of Work and Personal Responsibility in Federal Welfare Programs",
+      "type": "Hearing",
+      "title": "Legislative hearing on:      H.R. 642 (Rep. Steube), “Myakka Wild and Scenic River Act of 2025”;\r\nH.R. 5470 (Rep. LaHood), “Route 66 National Historic Trail Designation Act”;\r\nH.R. 6788 (Rep. Downing), “Montana Sportsmen Conservation Act”;\r\nH.R. 9269 (Rep. Clyburn), “Renewing the African American Civil Rights Network Act”;\r\nH.R. 9600 (Rep. Raskin), \"Common Sense Act 250 Act of 2026\";\r\nH.R. 9779 (Rep. Gonzalez), “Hands Off Our Boca Chica Beach Act of 2026” ;\r\nH.R. 10128 (Rep. McClintock), To codify Secretary's Order No. 3434 of the Department of the Interior;\r\nH.R. 10136 (Rep. Westerman), “Crossett Experimental Forest Act of 2026”;\r\nS. 675 (Rep. Hoeven) “Theodore Roosevelt Presidential Library Act”",
       "meetingStatus": "Scheduled",
-      "date": "2026-09-01T18:00:00Z",
+      "date": "2026-09-02T14:00:00Z",
       "committees": [
         {
-          "systemCode": "hswm03",
-          "name": "House Ways and Means Subcommittee on Work and Welfare"
+          "systemCode": "hsii10",
+          "name": "House Natural Resources Subcommittee on Federal Lands"
         }
       ],
       "location": {
-        "room": "2020",
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr9269",
+        "hr642",
+        "hr9779",
+        "hr10128",
+        "hr9600",
+        "hr5470",
+        "hr6788",
+        "s675",
+        "hr10136"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json"
+    },
+    {
+      "eventId": "119497",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Persistent Competition & Legacy Architectures",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hlig00",
+          "name": "House Intelligence (Permanent Select)"
+        }
+      ],
+      "location": {
+        "room": "1334",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119497?format=json"
+    },
+    {
+      "eventId": "119527",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“No Flame, More Pain: How State and Local Bans on Natural Gas Increase Costs”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsgo05",
+          "name": "House Oversight and Government Reform Subcommittee on Economic Growth, Energy Policy, and Regulatory Affairs"
+        }
+      ],
+      "location": {
+        "room": "2154",
         "building": "Rayburn House Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119519?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119527?format=json"
     },
     {
       "eventId": "119524",
@@ -94,39 +181,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119522?format=json"
     },
     {
-      "eventId": "119518",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Ten Pieces of Legislation",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif00",
-          "name": "House Energy and Commerce"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr2140",
-        "hr5549",
-        "hr3978",
-        "hr9317",
-        "hr9615",
-        "hr9613",
-        "hr9614",
-        "hr9084",
-        "hr9612",
-        "hr3194"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119518?format=json"
-    },
-    {
       "eventId": "119530",
       "congress": 119,
       "chamber": "House",
@@ -149,38 +203,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119530?format=json"
     },
     {
-      "eventId": "119506",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative hearing on:      H.R. 642 (Rep. Steube), “Myakka Wild and Scenic River Act of 2025”;\r\nH.R. 5470 (Rep. LaHood), “Route 66 National Historic Trail Designation Act”;\r\nH.R. 6788 (Rep. Downing), “Montana Sportsmen Conservation Act”;\r\nH.R. 9269 (Rep. Clyburn), “Renewing the African American Civil Rights Network Act”;\r\nH.R. 9600 (Rep. Raskin), \"Common Sense Act 250 Act of 2026\";\r\nH.R. 9779 (Rep. Gonzalez), “Hands Off Our Boca Chica Beach Act of 2026” ;\r\nH.R. 10128 (Rep. McClintock), To codify Secretary's Order No. 3434 of the Department of the Interior;\r\nH.R. 10136 (Rep. Westerman), “Crossett Experimental Forest Act of 2026”;\r\nS. 675 (Rep. Hoeven) “Theodore Roosevelt Presidential Library Act”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii10",
-          "name": "House Natural Resources Subcommittee on Federal Lands"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr9269",
-        "hr642",
-        "hr9779",
-        "hr10128",
-        "hr9600",
-        "hr5470",
-        "hr6788",
-        "s675",
-        "hr10136"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json"
-    },
-    {
       "eventId": "119531",
       "congress": 119,
       "chamber": "House",
@@ -201,72 +223,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119531?format=json"
-    },
-    {
-      "eventId": "119527",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“No Flame, More Pain: How State and Local Bans on Natural Gas Increase Costs”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsgo05",
-          "name": "House Oversight and Government Reform Subcommittee on Economic Growth, Energy Policy, and Regulatory Affairs"
-        }
-      ],
-      "location": {
-        "room": "2154",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119527?format=json"
-    },
-    {
-      "eventId": "119532",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Powering the Nuclear Renaissance: Accelerating U.S. Leadership in Advanced Nuclear Reactors",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hssy20",
-          "name": "House Science, Space, and Technology Subcommittee on Energy"
-        }
-      ],
-      "location": {
-        "room": "2318",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119532?format=json"
-    },
-    {
-      "eventId": "119497",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Persistent Competition & Legacy Architectures",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hlig00",
-          "name": "House Intelligence (Permanent Select)"
-        }
-      ],
-      "location": {
-        "room": "1334",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119497?format=json"
     },
     {
       "eventId": "119498",
@@ -441,6 +397,50 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338724?format=json"
     },
     {
+      "eventId": "119519",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "Subcommittee Hearing on Welfare Reform at 30: Restoring the Promise of Work and Personal Responsibility in Federal Welfare Programs",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-01T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hswm03",
+          "name": "House Ways and Means Subcommittee on Work and Welfare"
+        }
+      ],
+      "location": {
+        "room": "2020",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119519?format=json"
+    },
+    {
+      "eventId": "119534",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Markup",
+      "title": "Subcommittee Markup of 6 Bills",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-01T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif16",
+          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
+        }
+      ],
+      "location": {
+        "room": "2123",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119534?format=json"
+    },
+    {
       "eventId": "119535",
       "congress": 119,
       "chamber": "House",
@@ -498,28 +498,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119514?format=json"
     },
     {
-      "eventId": "119515",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Countering Houthi Terrorism: Protecting U.S. Interests and Security in the Red Sea",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-01T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa13",
-          "name": "House Subcommittee on the Middle East and North Africa"
-        }
-      ],
-      "location": {
-        "room": "2172",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119515?format=json"
-    },
-    {
       "eventId": "119516",
       "congress": 119,
       "chamber": "House",
@@ -540,6 +518,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119516?format=json"
+    },
+    {
+      "eventId": "119515",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Countering Houthi Terrorism: Protecting U.S. Interests and Security in the Red Sea",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-01T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa13",
+          "name": "House Subcommittee on the Middle East and North Africa"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119515?format=json"
     },
     {
       "eventId": "118857",
@@ -1543,28 +1543,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338674?format=json"
     },
     {
-      "eventId": "119408",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“False Narratives Surrounding Conditions at the Delaney Hall ICE Detention Center”",
-      "meetingStatus": "Rescheduled",
-      "date": "2026-07-22T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju13",
-          "name": "House Judiciary Subcommittee on Oversight"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119408?format=json"
-    },
-    {
       "eventId": "119487",
       "congress": 119,
       "chamber": "House",
@@ -1585,6 +1563,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119487?format=json"
+    },
+    {
+      "eventId": "119408",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“False Narratives Surrounding Conditions at the Delaney Hall ICE Detention Center”",
+      "meetingStatus": "Rescheduled",
+      "date": "2026-07-22T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju13",
+          "name": "House Judiciary Subcommittee on Oversight"
+        }
+      ],
+      "location": {
+        "room": "2141",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119408?format=json"
     },
     {
       "eventId": "119432",
@@ -6763,28 +6763,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338551?format=json"
     },
     {
-      "eventId": "119341",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"Connecting Rural America to the National Airspace System\"",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-04T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hspw05",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "2167",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119341?format=json"
-    },
-    {
       "eventId": "119349",
       "congress": 119,
       "chamber": "House",
@@ -6805,6 +6783,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119349?format=json"
+    },
+    {
+      "eventId": "119341",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Connecting Rural America to the National Airspace System\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-04T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hspw05",
+          "name": ""
+        }
+      ],
+      "location": {
+        "room": "2167",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119341?format=json"
     },
     {
       "eventId": "119351",

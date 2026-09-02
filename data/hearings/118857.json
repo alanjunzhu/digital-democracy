@@ -25,7 +25,18 @@
   ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/118857?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Rules Committee Hearing H.R. 1501, H.R. 9436, H.R. 4795, H. Res. 1490",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118857",
+      "format": ""
+    },
+    {
+      "name": "Rules Committee Hearing H.R. 1501, H.R. 9436, H.R. 4795, H. Res. 1490",
+      "url": "https://www.youtube.com/watch?v=t5KLRLBqvuQ",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "H.R. 1501 – Protecting Domestic Mining Act of 2025",
@@ -99,12 +110,7 @@
     },
     {
       "name": "H. Res. 1499 – Providing for consideration of the bill (H.R. 1501) to amend the FAST Act to include certain mineral production activities as a covered project, and for other purposes; providing for consideration of the bill (H.R. 9436) to amend the Consolidated Appropriations Act, 2023 to extend the time period for which certain regulations concerning the North Atlantic right whale are effective; providing for consideration of the resolution (H. Res. 1490) providing for the condemnation and denouncement of socialism in all its forms, and for other purposes; providing for consideration of the bill (H.R. 4795) to amend the Higher Education Act of 1965 to prohibit an institution that participates in a nonexpressive commercial boycott of Israel from being eligible for certain funds under that Act, to require an institution that participates in certain programs under that Act to certify that students are not unreasonably obstructed from participating in academic programs in Israel, and for other purposes; and relating to consideration of motions to suspend the rules.",
-      "url": "https://www.congress.gov/119/meeting/house/118857/documents/HMTG-119-RU00-20260831-SD001.pdf",
-      "format": "PDF"
-    },
-    {
-      "name": ":: H. Rept. 119-785 – Report from the Committee on Rules to accompany H. Res. 1499",
-      "url": "https://www.congress.gov/119/meeting/house/118857/documents/HMTG-119-RU00-20260831-SD002.pdf",
+      "url": "https://www.congress.gov/119/meeting/house/118857/documents/BILLS-119hres1499rh.pdf",
       "format": "PDF"
     }
   ]

@@ -19,7 +19,75 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119516?format=json",
-  "witnesses": [],
-  "videos": [],
-  "meetingDocuments": []
+  "witnesses": [
+    {
+      "name": "Mr. Marcus Coleman",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Ms. Patricia Fox",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Mr. Jeffrey Gahler",
+      "position": "Sheriff",
+      "organization": ""
+    },
+    {
+      "name": "Mr. David Bier",
+      "position": "Director of Immigration Studies",
+      "organization": "Cato Institute"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Sanctuary Policies, Tragic Consequences",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119516",
+      "format": ""
+    },
+    {
+      "name": "Sanctuary Policies, Tragic Consequences",
+      "url": "https://www.youtube.com/watch?v=RRVKnWxPhCU",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "A tweet from David Bier dated August 30, 2026, submitted for the Record by Mr. Roy of TX.",
+      "url": "https://www.congress.gov/119/meeting/house/119516/documents/HHRG-119-JU01-20260901-SD001-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "A tweet from David Bier dated August 25, 2026, submitted for the Record by Mr. Roy of TX.",
+      "url": "https://www.congress.gov/119/meeting/house/119516/documents/HHRG-119-JU01-20260901-SD002-U2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "An article from the Cato Institute titled “ICE Is Releasing 23% More Convicted Criminals Than Under Biden” dated August 27, 2026, submitted for the Record by Mr. Raskin of MD.",
+      "url": "https://www.congress.gov/119/meeting/house/119516/documents/HHRG-119-JU01-20260901-SD003-U3.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "An article from The New York Times titled “Deportees Recount Harrowing Journeys to Africa: Shackles, a ‘Freezer’ and Blows” dated August 30, 2026, submitted for the Record by Mr. Nadler of NY.",
+      "url": "https://www.congress.gov/119/meeting/house/119516/documents/HHRG-119-JU01-20260901-SD004-U4.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "An article from The New York Times titled “ICE Arrests Soar as People With No Criminal Records Are Increasingly Targeted” dated August 27, 2026, submitted for the Record by Mr. Nadler of NY.",
+      "url": "https://www.congress.gov/119/meeting/house/119516/documents/HHRG-119-JU01-20260901-SD005-U5.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "An article from CREW titled “Trump has made 29 private prison stock trades since taking office” dated July 21, 2026, submitted for the Record by Ms. Ross of NC.",
+      "url": "https://www.congress.gov/119/meeting/house/119516/documents/HHRG-119-JU01-20260901-SD006-U6.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "An article from The New York Times titled “Prison Firm Donated to Trump’s PAC After ICE Gave It $165 Million a Year in Contracts” dated August 21, 2026, submitted for the Record by Ms. Ross of NC.",
+      "url": "https://www.congress.gov/119/meeting/house/119516/documents/HHRG-119-JU01-20260901-SD007-U7.pdf",
+      "format": "PDF"
+    }
+  ]
 }

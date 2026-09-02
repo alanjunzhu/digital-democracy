@@ -20,7 +20,18 @@
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119534?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "C&T Subcommittee Markup",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119534",
+      "format": ""
+    },
+    {
+      "name": "C&T Subcommittee Markup",
+      "url": "https://www.youtube.com/watch?v=k3_Q-P-FOxg",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "H.R. 2805, PLAN for Broadband Act",

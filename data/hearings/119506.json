@@ -30,7 +30,18 @@
   ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Legislative Hearing",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119506",
+      "format": ""
+    },
+    {
+      "name": "Legislative Hearing",
+      "url": "https://www.youtube.com/watch?v=_zELc9Wtv3I",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "H.R. 642 (Rep. Steube) “Myakka Wild and Scenic River Act of 2025”",
@@ -84,7 +95,7 @@
     },
     {
       "name": "Hearing Memo",
-      "url": "https://www.congress.gov/119/meeting/house/119506/documents/HHRG-119-II10-20260902-SD002.pdf",
+      "url": "https://www.congress.gov/119/meeting/house/119506/documents/HHRG-119-II10-20260902-SD001-U1.pdf",
       "format": "PDF"
     }
   ]

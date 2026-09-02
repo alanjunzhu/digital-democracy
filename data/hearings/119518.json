@@ -31,7 +31,18 @@
   ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119518?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Full Committee Markup of 10 Bills",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119518",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Markup of 10 Bills",
+      "url": "https://www.youtube.com/watch?v=oCB-R-SFu2M",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "H.R. 2140, Diesel Emissions Reduction Act of 2025",
@@ -91,6 +102,26 @@
     {
       "name": "Markup Notice",
       "url": "https://www.congress.gov/119/meeting/house/119518/documents/HMKP-119-IF00-20260902-CPg.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "ANS_HR9612_02.XML (filed by Rep. Fry), an amendment in the nature of a substitute to H.R. 9612",
+      "url": "https://www.congress.gov/119/meeting/house/119518/documents/BILLS-119-ANS_HR9612_02XMLfiledbyRepFryanamendmentinthenatureofasubstitutetoHR9612-F000478-Amdt-ANS_HR9612_02XML.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "ANS_HR9613_01.XML (filed by the Minority), an amendment in the nature of a substitute to H.R. 9613",
+      "url": "https://www.congress.gov/119/meeting/house/119518/documents/BILLS-119-ANS_HR9613_01XML-C001066-Amdt-2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "FC_ANS_HR9615_01.XML (filed by the Majority), an amendment in the nature of a substitute to H.R. 9615",
+      "url": "https://www.congress.gov/119/meeting/house/119518/documents/BILLS-119-FC_ANS_HR9615_01XML-M001215-Amdt-3.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Locomotives_amd_01_xml",
+      "url": "https://www.congress.gov/119/meeting/house/119518/documents/BILLS-119-HR3194-A000370-Amdt-4.pdf",
       "format": "PDF"
     }
   ]

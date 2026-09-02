@@ -33,7 +33,18 @@
   ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119535?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "CMT Subcommittee Markup",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119535",
+      "format": ""
+    },
+    {
+      "name": "CMT Subcommittee Markup",
+      "url": "https://www.youtube.com/watch?v=tfwknDhm--U",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "Notice",
@@ -138,6 +149,36 @@
     {
       "name": "H9385_ANS_xml",
       "url": "https://www.congress.gov/119/meeting/house/119535/documents/BILLS-119-HR9385-G000601-Amdt-7.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Chairman Guthrie Opening Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/HMTG-119-IF17-MState-G000558-20260901.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Chairman Bilirakis Opening Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/HMTG-119-IF17-MState-B001257-20260901.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Representative Mullin Opening Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/HMTG-119-IF17-MState-M001225-20260901.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Clarke Opening Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/HMTG-119-IF17-MState-C001067-20260901.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Pallone Opening Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/HMTG-119-IF17-MState-P000034-20260901.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119535/documents/HMTG-119-IF17-20260901-SD009.pdf",
       "format": "PDF"
     }
   ]
