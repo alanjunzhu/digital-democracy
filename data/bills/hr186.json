@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "186",
+  "number": 186,
   "billId": "hr186",
   "title": "Hershel Woody Williams National Medal of Honor Monument Location Act",
   "introducedDate": "2025-01-03",
@@ -11,22 +11,45 @@
     "party": "R",
     "state": "UT"
   },
-  "latestAction": "Committee on Energy and Natural Resources Subcommittee on National Parks. Hearings held.",
+  "latestAction": "Committee on Energy and Natural Resources Subcommittee on National Parks. Hearings held. With printed Hearing: S.Hrg. 119-238.",
   "latestActionDate": "2025-12-09",
+  "updateDate": "2026-09-03T10:56:27Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/186",
   "summary": "<p><strong>Hershel \"Woody\" Williams National Medal of Honor Monument Location Act</strong></p><p>This bill requires the authorized monument&nbsp;honoring Medal of Honor recipients to be located within the Reserve (the great cross-axis of the National Mall, which generally extends from the Capitol to the Lincoln Memorial and from the White House to the Jefferson Memorial).</p>",
   "cosponsors": 8,
   "committees": [
-    "Energy and Natural Resources Committee",
-    "Natural Resources Committee"
+    {
+      "name": "Energy and Natural Resources Committee",
+      "systemCode": "sseg00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-22T17:57:43Z"
+        }
+      ]
+    },
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:19:50Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
     {
       "date": "2025-12-09",
-      "text": "Committee on Energy and Natural Resources Subcommittee on National Parks. Hearings held."
+      "text": "Committee on Energy and Natural Resources Subcommittee on National Parks. Hearings held. With printed Hearing: S.Hrg. 119-238."
     },
     {
       "date": "2025-01-22",

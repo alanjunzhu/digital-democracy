@@ -11,27 +11,15 @@
     "party": "R",
     "state": "TN"
   },
-  "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Science, Space, and Technology, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-  "latestActionDate": "2026-08-27",
-  "updateDate": "2026-08-31T15:15:17Z",
+  "latestAction": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+  "latestActionDate": "2026-09-01",
+  "updateDate": "2026-09-03T08:06:46Z",
   "originChamber": "House",
   "policyArea": "Transportation and Public Works",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10158",
   "summary": "",
-  "cosponsors": 1,
+  "cosponsors": 2,
   "committees": [
-    {
-      "name": "Science, Space, and Technology Committee",
-      "systemCode": "hssy00",
-      "chamber": "House",
-      "type": "Standing",
-      "activities": [
-        {
-          "name": "Referred To",
-          "date": "2026-08-27T13:02:45Z"
-        }
-      ]
-    },
     {
       "name": "Energy and Commerce Committee",
       "systemCode": "hsif00",
@@ -43,10 +31,37 @@
           "date": "2026-08-27T13:02:40Z"
         }
       ]
+    },
+    {
+      "name": "Science, Space, and Technology Committee",
+      "systemCode": "hssy00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-08-27T13:02:45Z"
+        }
+      ]
     }
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-01",
+      "text": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-01",
+      "text": "Subcommittee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-08-27",
+      "text": "Referred to the Subcommittee on Commerce, Manufacturing, and Trade.",
+      "chamber": "House"
+    },
     {
       "date": "2026-08-27",
       "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Science, Space, and Technology, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",

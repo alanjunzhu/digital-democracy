@@ -11,9 +11,9 @@
     "party": "R",
     "state": "NY"
   },
-  "latestAction": "Ordered to be Reported (Amended) by Voice Vote.",
-  "latestActionDate": "2026-06-30",
-  "updateDate": "2026-08-27T20:43:07Z",
+  "latestAction": "Placed on the Union Calendar, Calendar No. 689.",
+  "latestActionDate": "2026-09-01",
+  "updateDate": "2026-09-02T13:07:18Z",
   "originChamber": "House",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/8141",
@@ -27,6 +27,10 @@
       "type": "Standing",
       "activities": [
         {
+          "name": "Reported By",
+          "date": "2026-09-01T15:56:24Z"
+        },
+        {
           "name": "Markup By",
           "date": "2026-06-30T15:08:00Z"
         },
@@ -39,6 +43,20 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-01",
+      "text": "Placed on the Union Calendar, Calendar No. 689.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-01",
+      "text": "Reported (Amended) by the Committee on Financial Services. H. Rept. 119-789.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-01",
+      "text": "Reported (Amended) by the Committee on Financial Services. H. Rept. 119-789."
+    },
     {
       "date": "2026-06-30",
       "text": "Ordered to be Reported (Amended) by Voice Vote.",
