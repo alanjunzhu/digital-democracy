@@ -19,7 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119520?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Ms. Teresa Rea",
+      "position": "Principal",
+      "organization": "Rea Consulting LLC"
+    },
+    {
+      "name": "Mr. Morgan Reed",
+      "position": "President",
+      "organization": ""
+    },
+    {
+      "name": "Ms. Melissa Wasserman",
+      "position": "Associate Dean for Research",
+      "organization": "University of Texas School of Law"
+    },
+    {
+      "name": "Mr. David Kappos",
+      "position": "Chairman of the Board",
+      "organization": "Council for Innovation Promotion"
+    }
+  ],
   "videos": [
     {
       "name": "Renewal of USPTO Fee Setting Authority: Giving Full Effect to the America Invents Act",
@@ -32,5 +53,16 @@
       "format": ""
     }
   ],
-  "meetingDocuments": []
+  "meetingDocuments": [
+    {
+      "name": "A letter to Chairman Issa and Ranking Member Johnson from Randy Landreneau, President of US Investor, Inc., and Dirk Tomsin, COO of Investor Inc., dated September 2, 2026, regarding America Invents Act, submitted for the Record by Mr. Massie of KY.",
+      "url": "https://www.congress.gov/119/meeting/house/119520/documents/HHRG-119-JU03-20260902-SD001-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "A letter to Chairman Issa and Ranking Member Johnson from Randy Landreneau, President of US Investor, Inc., and Dirk Tomsin, COO of Investor Inc., dated September 2, 2026, regarding the United States Patent and Trademark Office’s fee-setting authority, submitted for the Record by Mr. Massie of KY.",
+      "url": "https://www.congress.gov/119/meeting/house/119520/documents/HHRG-119-JU03-20260902-SD002-U2.pdf",
+      "format": "PDF"
+    }
+  ]
 }

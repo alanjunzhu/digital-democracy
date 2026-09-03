@@ -19,7 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119528?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Neil Bradley",
+      "position": "Executive Vice President, Chief Policy Officer, and Head of Strategic Advocacy",
+      "organization": "U.S. Chamber of Commerce"
+    },
+    {
+      "name": "Ms. Julie Moore",
+      "position": "Secretary",
+      "organization": "Vermont Agency of Natural Resources"
+    },
+    {
+      "name": "Ms. Mae Wu",
+      "position": "Founder and Principal",
+      "organization": "Health and Environmental Advising, LLC"
+    }
+  ],
   "videos": [
     {
       "name": "Examining Legislation To Strengthen Drinking Water Systems And Protect Ratepayer",

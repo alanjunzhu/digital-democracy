@@ -19,7 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119526?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Ms. Rosemary Jenks",
+      "position": "Policy Director",
+      "organization": "Immigration Accountability Project"
+    },
+    {
+      "name": "The Honorable Kris Kobach",
+      "position": "Attorney General",
+      "organization": "Office of the Kansas Attorney General"
+    },
+    {
+      "name": "Mr. Kenneth Cuccinelli",
+      "position": "Senior Fellow for Immigration and Homeland Security",
+      "organization": "Center for Renewing America"
+    },
+    {
+      "name": "Mr. Jonathan Weinberg",
+      "position": "Distinguished Professor of Law",
+      "organization": "Wayne State University"
+    }
+  ],
   "videos": [
     {
       "name": "\"Subject to the Jurisdiction Thereof\": Birthright Citizenship and the Fourteenth Amendment, Part II",
@@ -32,5 +53,11 @@
       "format": ""
     }
   ],
-  "meetingDocuments": []
+  "meetingDocuments": [
+    {
+      "name": "An article from The Atlantic titled, “How the Right Could Actually End Birthright Citizenship”, submitted for the Record by Ms. Balint of VT",
+      "url": "https://www.congress.gov/119/meeting/house/119526/documents/HHRG-119-JU10-20260902-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
 }
