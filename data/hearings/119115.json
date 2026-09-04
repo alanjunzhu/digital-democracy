@@ -1,0 +1,103 @@
+{
+  "eventId": "119115",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Telecommunications Act of 1996: 30 Years Later",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-26T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif16",
+      "name": "House Energy and Commerce Subcommittee on Communications and Technology"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119115?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Michael O'Rielly",
+      "position": "President",
+      "organization": "MPORielly Consulting, LLC"
+    },
+    {
+      "name": "The Honorable Chip Pickering",
+      "position": "Chief Executive Officer",
+      "organization": "INCOMPAS"
+    },
+    {
+      "name": "Mr. Matt Woods",
+      "position": "Vice President of Policy and General Counsel",
+      "organization": "Free Press"
+    },
+    {
+      "name": "Mr. Adam Thierer",
+      "position": "Senior Fellow, Technology and Innovation",
+      "organization": "Senior Fellow, Technology and Innovation"
+    }
+  ],
+  "videos": [
+    {
+      "name": "C&T Hearing: The Telecommunications Act of 1996: 30 Years Later",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119115",
+      "format": ""
+    },
+    {
+      "name": "C&T Hearing: The Telecommunications Act of 1996: 30 Years Later",
+      "url": "https://www.youtube.com/watch?v=kQbdKXi14uc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119115/documents/HHRG-119-IF16-20260326-SD19494.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Transcript",
+      "url": "https://www.congress.gov/119/meeting/house/119115/documents/HHRG-119-IF16-Transcript-20260326.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement: Brett Guthrie",
+      "url": "https://www.congress.gov/119/meeting/house/119115/documents/HHRG-119-IF16-MState-G000558-20260326.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement: Richard Hudson",
+      "url": "https://www.congress.gov/119/meeting/house/119115/documents/HHRG-119-IF16-MState-H001067-20260326.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement: Doris Matsui",
+      "url": "https://www.congress.gov/119/meeting/house/119115/documents/HHRG-119-IF16-MState-M001163-20260326.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement: Frank Pallone, Jr.",
+      "url": "https://www.congress.gov/119/meeting/house/119115/documents/HHRG-119-IF16-MState-P000034-20260326.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Documents for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119115/documents/HHRG-119-IF16-20260326-SD489498.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance - 03.26",
+      "url": "https://www.congress.gov/119/meeting/house/119115/documents/HHRG-119-IF16-20260326-SD4949494.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep Staff Attendance - 03.26",
+      "url": "https://www.congress.gov/119/meeting/house/119115/documents/HHRG-119-IF16-20260326-SD194948.pdf",
+      "format": "PDF"
+    }
+  ]
+}

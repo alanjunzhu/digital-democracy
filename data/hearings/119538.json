@@ -1,0 +1,25 @@
+{
+  "eventId": "119538",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "HEARING",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hlzs00",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "390",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119538?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

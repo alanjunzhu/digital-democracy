@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-03T13:59:47.506Z",
+  "lastUpdated": "2026-09-04T13:52:44.911Z",
   "congress": 119,
   "total": 428,
   "hearings": [
@@ -20,6 +20,28 @@
       "location": null,
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119533?format=json"
+    },
+    {
+      "eventId": "119538",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "HEARING",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-16T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hlzs00",
+          "name": ""
+        }
+      ],
+      "location": {
+        "room": "390",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119538?format=json"
     },
     {
       "eventId": "338724",
@@ -132,28 +154,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119521?format=json"
     },
     {
-      "eventId": "119531",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "A Resolution to assign Representative Goodlander to subcommittees on the  \r\nHouse Committee on Veterans’ Affairs",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr00",
-          "name": "House Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119531?format=json"
-    },
-    {
       "eventId": "119506",
       "congress": 119,
       "chamber": "House",
@@ -184,6 +184,50 @@
         "hr10136"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json"
+    },
+    {
+      "eventId": "119530",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Full Committee Hearing on Strategic Partnerships to Secure Critical Resources and Supply Chains",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hswm00",
+          "name": "House Ways and Means"
+        }
+      ],
+      "location": {
+        "room": "390",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119530?format=json"
+    },
+    {
+      "eventId": "119531",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "A Resolution to assign Representative Goodlander to subcommittees on the  \r\nHouse Committee on Veterans’ Affairs",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr00",
+          "name": "House Veterans' Affairs"
+        }
+      ],
+      "location": {
+        "room": "360",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119531?format=json"
     },
     {
       "eventId": "119520",
@@ -272,28 +316,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119524?format=json"
-    },
-    {
-      "eventId": "119530",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Full Committee Hearing on Strategic Partnerships to Secure Critical Resources and Supply Chains",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hswm00",
-          "name": "House Ways and Means"
-        }
-      ],
-      "location": {
-        "room": "390",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119530?format=json"
     },
     {
       "eventId": "119518",
@@ -9050,28 +9072,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119213?format=json"
     },
     {
-      "eventId": "119164",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Bounce Houses, Drones, and Massage Chairs: A Review of VA’s \r\nPurchase History in the Veteran Readiness and Employment \r\nProgram",
-      "meetingStatus": "Scheduled",
-      "date": "2026-04-16T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr10",
-          "name": "House Veterans' Affairs Subcommittee on Economic Opportunity"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119164?format=json"
-    },
-    {
       "eventId": "119161",
       "congress": 119,
       "chamber": "House",
@@ -9182,26 +9182,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/338121?format=json"
     },
     {
-      "eventId": "119104",
+      "eventId": "119115",
       "congress": 119,
       "chamber": "House",
       "type": "Hearing",
-      "title": "Oversight: Kitchen Table Issues: Lowering Costs for Veteran Families Through the VA Home Loan \r\nProgram",
-      "meetingStatus": "Rescheduled",
-      "date": "2026-03-26T19:00:00Z",
+      "title": "The Telecommunications Act of 1996: 30 Years Later",
+      "meetingStatus": "Scheduled",
+      "date": "2026-03-26T14:15:00Z",
       "committees": [
         {
-          "systemCode": "hsvr10",
-          "name": "House Veterans' Affairs Subcommittee on Economic Opportunity"
+          "systemCode": "hsif16",
+          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
         }
       ],
       "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
+        "room": "2123",
+        "building": "Rayburn House Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119104?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119115?format=json"
     },
     {
       "eventId": "338091",
