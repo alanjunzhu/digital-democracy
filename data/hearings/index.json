@@ -1,26 +1,8 @@
 {
-  "lastUpdated": "2026-09-04T13:52:44.911Z",
+  "lastUpdated": "2026-09-05T13:06:47.175Z",
   "congress": 119,
   "total": 428,
   "hearings": [
-    {
-      "eventId": "119533",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Industrial Base and Workforce Development for Skilled Trades",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-04T17:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsap02",
-          "name": "House Appropriations Subcommittee on Defense"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119533?format=json"
-    },
     {
       "eventId": "119538",
       "congress": 119,
@@ -64,6 +46,24 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338724?format=json"
+    },
+    {
+      "eventId": "119533",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Industrial Base and Workforce Development for Skilled Trades",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-04T17:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsap02",
+          "name": "House Appropriations Subcommittee on Defense"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119533?format=json"
     },
     {
       "eventId": "119528",
