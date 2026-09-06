@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "138",
+  "number": 138,
   "billId": "hr138",
   "title": "Lowering Costs for Caregivers Act of 2025",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Ways and Means.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-09-05T08:05:59Z",
   "originChamber": "House",
   "policyArea": "Taxation",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/138",
   "summary": "",
-  "cosponsors": 28,
+  "cosponsors": 31,
   "committees": [
-    "Ways and Means Committee"
+    {
+      "name": "Ways and Means Committee",
+      "systemCode": "hswm00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:25:40Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

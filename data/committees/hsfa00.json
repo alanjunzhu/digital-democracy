@@ -42,6 +42,42 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "hconres115",
+      "congress": 119,
+      "type": "H.Con.Res.",
+      "number": 115,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-02",
+      "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/115"
+    },
+    {
+      "billId": "hr10223",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10223,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-02",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10223"
+    },
+    {
+      "billId": "hr10195",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10195,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-08-31",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10195"
+    },
+    {
+      "billId": "hres1501",
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1501,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-08-31",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1501"
+    },
+    {
       "billId": "hr10183",
       "congress": 119,
       "type": "H.R.",
@@ -2254,42 +2290,6 @@
       "relationshipType": "Markup By",
       "actionDate": "2026-03-26",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7675"
-    },
-    {
-      "billId": "hr8103",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8103,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-03-26",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8103"
-    },
-    {
-      "billId": "hr8106",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8106,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-03-26",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8106"
-    },
-    {
-      "billId": "hres971",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 971,
-      "relationshipType": "Markup By",
-      "actionDate": "2026-03-26",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/971"
-    },
-    {
-      "billId": "hr8086",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8086,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-03-25",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8086"
     }
   ]
 }

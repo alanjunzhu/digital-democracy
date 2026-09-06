@@ -15,8 +15,26 @@
       "name": "Rules and Organization of the House Subcommittee"
     }
   ],
-  "billCount": 166,
+  "billCount": 165,
   "bills": [
+    {
+      "billId": "hr10251",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10251,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-03",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10251"
+    },
+    {
+      "billId": "hres1499",
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1499,
+      "relationshipType": "Reported Original Measure",
+      "actionDate": "2026-08-31",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1499"
+    },
     {
       "billId": "hr10132",
       "congress": 119,
@@ -1447,33 +1465,6 @@
       "relationshipType": "Reported Original Measure",
       "actionDate": "2025-09-09",
       "url": "https://www.congress.gov/bill/119th-congress/house-resolution/682"
-    },
-    {
-      "billId": "hr5130",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5130,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-09-04",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5130"
-    },
-    {
-      "billId": "hres672",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 672,
-      "relationshipType": "Reported Original Measure",
-      "actionDate": "2025-09-03",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/672"
-    },
-    {
-      "billId": "hres668",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 668,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-09-02",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/668"
     },
     {
       "billId": "hr4634",

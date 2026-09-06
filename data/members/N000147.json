@@ -151,6 +151,18 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1502,
+      "billId": "hres1502",
+      "title": "Expressing support for the designation of September 2026 as \"Peace Month\" and calling on Congress to take action to promote peace.",
+      "introducedDate": "2026-08-31",
+      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
+      "latestActionDate": "2026-08-31",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1502"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10172,
       "billId": "hr10172",
@@ -736,18 +748,6 @@
       "latestActionDate": "2025-11-04",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/5920"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5856,
-      "billId": "hr5856",
-      "title": "District of Columbia Government Title Equality Act",
-      "introducedDate": "2025-10-28",
-      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
-      "latestActionDate": "2025-10-28",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5856"
     }
   ]
 }

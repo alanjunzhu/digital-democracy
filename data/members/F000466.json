@@ -65,10 +65,34 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1510,
+      "billId": "hres1510",
+      "title": "Expressing support for the designation of September 4, 2026, as \"Taekwondo Grandmasters Appreciation Day\".",
+      "introducedDate": "2026-09-03",
+      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
+      "latestActionDate": "2026-09-03",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1510"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10261,
+      "billId": "hr10261",
+      "title": "Edgely Community Protection and Transparency Act",
+      "introducedDate": "2026-09-03",
+      "latestAction": "Referred to the House Committee on Natural Resources.",
+      "latestActionDate": "2026-09-03",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10261"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10153,
       "billId": "hr10153",
-      "title": "To amend the Internal Revenue Code of 1986 to treat income earned by United States merchant mariners as foreign earned income.",
+      "title": "American Mariner Tax Fairness Act",
       "introducedDate": "2026-08-27",
       "latestAction": "Referred to the House Committee on Ways and Means.",
       "latestActionDate": "2026-08-27",
@@ -626,18 +650,6 @@
       "latestActionDate": "2025-05-13",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3338"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 3144,
-      "billId": "hr3144",
-      "title": "Honoring our K9 Heroes Act",
-      "introducedDate": "2025-05-01",
-      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
-      "latestActionDate": "2025-05-01",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3144"
     }
   ]
 }
