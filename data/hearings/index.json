@@ -1,8 +1,92 @@
 {
-  "lastUpdated": "2026-09-07T15:23:26.853Z",
+  "lastUpdated": "2026-09-08T13:59:33.105Z",
   "congress": 119,
   "total": 428,
   "hearings": [
+    {
+      "eventId": "119539",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Examining Healthcare Markets: Fraud and Competition”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-14T13:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju05",
+          "name": "House Judiciary Subcommittee on Administrative State, Regulatory Reform, and Antitrust"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119539?format=json"
+    },
+    {
+      "eventId": "119543",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Missing and Murdered Indigenous People: Strengthening Public Safety in Tribal Communities”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju08",
+          "name": "House Judiciary Subcommittee on Crime and Federal Government Surveillance"
+        }
+      ],
+      "location": {
+        "room": "2237",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119543?format=json"
+    },
+    {
+      "eventId": "119542",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“The Continuing Tragedy of Sanctuary Laws”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju01",
+          "name": "House Judiciary Subcommittee on Immigration Integrity, Security, and Enforcement"
+        }
+      ],
+      "location": {
+        "room": "2141",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119542?format=json"
+    },
+    {
+      "eventId": "119541",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Main Street Meets Crypto: What Digital Assets Mean for Small Businesses.”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hssm22",
+          "name": "House Small Business Subcommittee on Innovation, Entrepreneurship, and Workforce Development"
+        }
+      ],
+      "location": {
+        "room": "2360",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119541?format=json"
+    },
     {
       "eventId": "119538",
       "congress": 119,
@@ -4979,28 +5063,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119401?format=json"
     },
     {
-      "eventId": "119402",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "H.R. 5992, the “Stuck on Hold Act”; \r\nH.R. 8532, the “VA Home Loan Affordability Act”; \r\nDiscussion Draft, the “VA Education Oversight Improvement Act”; \r\nDiscussion Draft, the “Affordable Homes for Veterans Act of 2026”",
-      "meetingStatus": "Postponed",
-      "date": "2026-06-25T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr10",
-          "name": "House Veterans' Affairs Subcommittee on Economic Opportunity"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119402?format=json"
-    },
-    {
       "eventId": "338608",
       "congress": 119,
       "chamber": "Senate",
@@ -5504,28 +5566,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119395?format=json"
-    },
-    {
-      "eventId": "119399",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Future of Payments: Promoting Innovation and Fair Markets",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsba00",
-          "name": "House Financial Services"
-        }
-      ],
-      "location": {
-        "room": "2128",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119399?format=json"
     },
     {
       "eventId": "338584",
@@ -7080,33 +7120,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119343?format=json"
     },
     {
-      "eventId": "119330",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative Hearing on: \r\n•\tH.R. 2406 (Rep. Bonamici), “National Oceanic and Atmospheric Administration Sexual Harassment and Assault Prevention Improvements Act of 2025”\r\n•\tH.R. 8401 (Rep. Begich), To amend the Marine Mammal Protection Act of 1972 to allow the transport, purchase, and sale of pelts of, and handicrafts, garments, and art produced from, Southcentral and Southeast Alaska northern sea otters that are taken for subsistence purposes.\r\n•\tH.R. 8542 (Rep. Ezell), “Offshore Parity Act of 2026”\r\n•\tH.R. 8904 (Rep. Radewagen), To amend the Magnuson-Stevens Fishery Conservation and Management Act to provide for the regulation of fishing in marine national monuments.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-03T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii13",
-          "name": "House Natural Resources Subcommittee on Water, Wildlife and Fisheries"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr8401",
-        "hr8542",
-        "hr2406",
-        "hr8904"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119330?format=json"
-    },
-    {
       "eventId": "338507",
       "congress": 119,
       "chamber": "Senate",
@@ -7771,28 +7784,6 @@
         "hr8844"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119316?format=json"
-    },
-    {
-      "eventId": "119311",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“The Southern Poverty Law Center: Manufacturing Hate”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-20T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju00",
-          "name": "House Judiciary"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119311?format=json"
     },
     {
       "eventId": "338413",

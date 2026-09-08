@@ -1,0 +1,31 @@
+{
+  "eventId": "119541",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Main Street Meets Crypto: What Digital Assets Mean for Small Businesses.”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssm22",
+      "name": "House Small Business Subcommittee on Innovation, Entrepreneurship, and Workforce Development"
+    }
+  ],
+  "location": {
+    "room": "2360",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119541?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Public Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119541/documents/HHRG-119-SM22-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
