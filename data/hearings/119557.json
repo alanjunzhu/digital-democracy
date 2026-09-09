@@ -1,0 +1,31 @@
+{
+  "eventId": "119557",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Unequal Treatment: Addressing the Drivers of Unaffordability for Oral Chemotherapy”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsgo27",
+      "name": "House Oversight and Government Reform Subcommittee on Health Care and Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2154",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119557?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119557/documents/HHRG-119-GO27-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

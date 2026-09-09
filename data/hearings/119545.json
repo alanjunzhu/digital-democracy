@@ -1,0 +1,47 @@
+{
+  "eventId": "119545",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Trojan Horses: Covert Foreign Malign Influence Operations in America",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa19",
+      "name": "House Foreign Affairs South and Central Asia Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119545?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Mike Gonzalez",
+      "position": "Angeles T. Arredondo E Pluribus Unum Senior Fellow",
+      "organization": "The Heritage Foundation"
+    },
+    {
+      "name": "Mr. Matthew Johnson",
+      "position": "Senior Fellow",
+      "organization": "The Jamestown Foundation"
+    },
+    {
+      "name": "Mr. Sam Lyman",
+      "position": "Head of Research",
+      "organization": "Bitcoin Policy Institute"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119545/documents/HHRG-119-FA19-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-08T13:59:33.105Z",
+  "lastUpdated": "2026-09-09T14:02:11.148Z",
   "congress": 119,
   "total": 428,
   "hearings": [
@@ -20,6 +20,178 @@
       "location": null,
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119539?format=json"
+    },
+    {
+      "eventId": "338740",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "An oversight hearing to examine the Federal Bureau of Investigation.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T13:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssju00",
+          "name": "Senate Judiciary"
+        }
+      ],
+      "location": {
+        "room": "216",
+        "building": "Hart Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338740?format=json"
+    },
+    {
+      "eventId": "119550",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "Nuclear Spent Fuel Policy: Examining Nuclear Lifecycle Innovation Campuses",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif03",
+          "name": "House Energy and Commerce Subcommittee on Energy"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119550?format=json"
+    },
+    {
+      "eventId": "119557",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Unequal Treatment: Addressing the Drivers of Unaffordability for Oral Chemotherapy”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsgo27",
+          "name": "House Oversight and Government Reform Subcommittee on Health Care and Financial Services"
+        }
+      ],
+      "location": {
+        "room": "2154",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119557?format=json"
+    },
+    {
+      "eventId": "119556",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Innovation in Disaster Prevention: Advancing Technology for Prediction and Response",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hssy00",
+          "name": "House Science, Space, and Technology"
+        }
+      ],
+      "location": {
+        "room": "2318",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119556?format=json"
+    },
+    {
+      "eventId": "119546",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "The Annual Testimony of the Secretary of the Treasury on the State of the International Financial System",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba00",
+          "name": "House Financial Services"
+        }
+      ],
+      "location": {
+        "room": "2128",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119546?format=json"
+    },
+    {
+      "eventId": "119554",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "U.S. Policy and Regional Security Challenges in the Western Balkans",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa14",
+          "name": "House Foreign Affairs Subcommittee on Europe"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119554?format=json"
+    },
+    {
+      "eventId": "119548",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Oversight Hearing – Federal Aviation Administration",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsap20",
+          "name": "House Appropriations Subcommittee on Departments of Transportation, and Housing and Urban Development, and Related Agencies"
+        }
+      ],
+      "location": {
+        "room": "2358-A",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119548?format=json"
+    },
+    {
+      "eventId": "119540",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Oversight Hearing - The Economy Act",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsap23",
+          "name": "House Appropriations Subcommittee on Financial Services and General Government"
+        }
+      ],
+      "location": {
+        "room": "2362-A",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119540?format=json"
     },
     {
       "eventId": "119543",
@@ -66,6 +238,67 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119542?format=json"
     },
     {
+      "eventId": "119549",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Examining Legislative Proposals to Reform Medicare Provider Payment and Bolster Health Care Cybersecurity.”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif14",
+          "name": "House Energy and Commerce Subcommittee on Health"
+        }
+      ],
+      "location": {
+        "room": "1334",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr8163",
+        "hr4331",
+        "hr3164",
+        "hr9693",
+        "hr8319",
+        "hr8622",
+        "hr9908",
+        "hr1189",
+        "hr7905",
+        "hr1616",
+        "hr1254",
+        "hr1521",
+        "hr6214",
+        "hr7863",
+        "hr5737",
+        "hr6130"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119549?format=json"
+    },
+    {
+      "eventId": "119544",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Out of Touch: When Union Politics Leave Workers Behind\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119544?format=json"
+    },
+    {
       "eventId": "119541",
       "congress": 119,
       "chamber": "House",
@@ -86,6 +319,72 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119541?format=json"
+    },
+    {
+      "eventId": "119306",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Confronting the Totalitarian Ortega-Murillo Regime",
+      "meetingStatus": "Rescheduled",
+      "date": "2026-09-15T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa07",
+          "name": "House Foreign Affairs Subcommittee on Western Hemisphere"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119306?format=json"
+    },
+    {
+      "eventId": "119545",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Trojan Horses: Covert Foreign Malign Influence Operations in America",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa19",
+          "name": "House Foreign Affairs South and Central Asia Subcommittee"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119545?format=json"
+    },
+    {
+      "eventId": "119553",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Fixing Fraud and Failure in Federally Funded Homelessness Services”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsgo16",
+          "name": "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency"
+        }
+      ],
+      "location": {
+        "room": "2154",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119553?format=json"
     },
     {
       "eventId": "119538",
@@ -238,6 +537,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119521?format=json"
     },
     {
+      "eventId": "119524",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Fueling the Golden Age: Future Resource Needs and Small Business Opportunity.”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hssm21",
+          "name": "House Small Business Subcommittee on Rural Development, Energy, and Supply Chains"
+        }
+      ],
+      "location": {
+        "room": "2360",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119524?format=json"
+    },
+    {
       "eventId": "119506",
       "congress": 119,
       "chamber": "House",
@@ -378,28 +699,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119527?format=json"
-    },
-    {
-      "eventId": "119524",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Fueling the Golden Age: Future Resource Needs and Small Business Opportunity.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hssm21",
-          "name": "House Small Business Subcommittee on Rural Development, Energy, and Supply Chains"
-        }
-      ],
-      "location": {
-        "room": "2360",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119524?format=json"
     },
     {
       "eventId": "119518",
@@ -1026,26 +1325,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338700?format=json"
     },
     {
-      "eventId": "338701",
+      "eventId": "338704",
       "congress": 119,
       "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine exploring process approaches for addressing Social Security solvency.",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to markup S.737, to require certain interactive computer services to adopt and operate technology verification measures to ensure that users of the platform are not minors, S.1748, to protect the safety of children on the internet, S.4199, to require entities that make artificial intelligence chatbots available to minors to implement certain safe design features, S.4407, to require the creation of family accounts for children to be able to use artificial intelligence chatbots, to require verifiable parental consent for teens using artificial intelligence chatbots, S.5171, to require a study of AI-enabled toys and development of a joint action plan regarding the marketing and sale of AI-enabled toys, and a promotion list in the Coast Guard.",
       "meetingStatus": "Scheduled",
       "date": "2026-08-05T14:00:00Z",
       "committees": [
         {
-          "systemCode": "ssfi00",
-          "name": "Senate Finance"
+          "systemCode": "sscm00",
+          "name": "Senate Commerce, Science, and Transportation"
         }
       ],
       "location": {
-        "room": "215",
-        "building": "Dirksen Senate Office Building",
+        "room": "253",
+        "building": "Russell Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338701?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338704?format=json"
     },
     {
       "eventId": "338702",
@@ -1070,26 +1369,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338702?format=json"
     },
     {
-      "eventId": "338704",
+      "eventId": "338701",
       "congress": 119,
       "chamber": "Senate",
-      "type": "Open Business Meeting",
-      "title": "Business meeting to markup S.737, to require certain interactive computer services to adopt and operate technology verification measures to ensure that users of the platform are not minors, S.1748, to protect the safety of children on the internet, S.4199, to require entities that make artificial intelligence chatbots available to minors to implement certain safe design features, S.4407, to require the creation of family accounts for children to be able to use artificial intelligence chatbots, to require verifiable parental consent for teens using artificial intelligence chatbots, S.5171, to require a study of AI-enabled toys and development of a joint action plan regarding the marketing and sale of AI-enabled toys, and a promotion list in the Coast Guard.",
+      "type": "Open Hearing",
+      "title": "Hearings to examine exploring process approaches for addressing Social Security solvency.",
       "meetingStatus": "Scheduled",
       "date": "2026-08-05T14:00:00Z",
       "committees": [
         {
-          "systemCode": "sscm00",
-          "name": "Senate Commerce, Science, and Transportation"
+          "systemCode": "ssfi00",
+          "name": "Senate Finance"
         }
       ],
       "location": {
-        "room": "253",
-        "building": "Russell Senate Office Building",
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338704?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338701?format=json"
     },
     {
       "eventId": "338697",
@@ -1158,28 +1457,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338698?format=json"
     },
     {
-      "eventId": "338693",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the reality of Medicaid.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-04T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssbu00",
-          "name": "Senate Budget"
-        }
-      ],
-      "location": {
-        "room": "608",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338693?format=json"
-    },
-    {
       "eventId": "338695",
       "congress": 119,
       "chamber": "Senate",
@@ -1200,6 +1477,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338695?format=json"
+    },
+    {
+      "eventId": "338693",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the reality of Medicaid.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-08-04T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssbu00",
+          "name": "Senate Budget"
+        }
+      ],
+      "location": {
+        "room": "608",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338693?format=json"
     },
     {
       "eventId": "338723",
@@ -1268,28 +1567,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338688?format=json"
     },
     {
-      "eventId": "338694",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Business Meeting",
-      "title": "Business meeting to consider an original bill entitled, \"Taxpayer Assistance and Service Act\".",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-30T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfi00",
-          "name": "Senate Finance"
-        }
-      ],
-      "location": {
-        "room": "215",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338694?format=json"
-    },
-    {
       "eventId": "338689",
       "congress": 119,
       "chamber": "Senate",
@@ -1310,6 +1587,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338689?format=json"
+    },
+    {
+      "eventId": "338694",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider an original bill entitled, \"Taxpayer Assistance and Service Act\".",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-30T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfi00",
+          "name": "Senate Finance"
+        }
+      ],
+      "location": {
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338694?format=json"
     },
     {
       "eventId": "338684",
@@ -2112,6 +2411,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338682?format=json"
     },
     {
+      "eventId": "338681",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the President's 2026 trade policy agenda.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-22T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfi00",
+          "name": "Senate Finance"
+        }
+      ],
+      "location": {
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338681?format=json"
+    },
+    {
       "eventId": "338667",
       "congress": 119,
       "chamber": "Senate",
@@ -2146,28 +2467,6 @@
         "s5026"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338667?format=json"
-    },
-    {
-      "eventId": "338681",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the President's 2026 trade policy agenda.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfi00",
-          "name": "Senate Finance"
-        }
-      ],
-      "location": {
-        "room": "215",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338681?format=json"
     },
     {
       "eventId": "338666",
@@ -2883,28 +3182,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338654?format=json"
     },
     {
-      "eventId": "338653",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of David Cummins, of Virginia, to be Administrator of the Transportation Security Administration.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-16T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "sscm00",
-          "name": "Senate Commerce, Science, and Transportation"
-        }
-      ],
-      "location": {
-        "room": "253",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338653?format=json"
-    },
-    {
       "eventId": "338657",
       "congress": 119,
       "chamber": "Senate",
@@ -2927,26 +3204,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338657?format=json"
     },
     {
-      "eventId": "338643",
+      "eventId": "338653",
       "congress": 119,
       "chamber": "Senate",
       "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of Lieutenant General Douglas A. Schiess, USSF, to be general and Chief of Space Operations.",
+      "title": "Hearings to examine the nomination of David Cummins, of Virginia, to be Administrator of the Transportation Security Administration.",
       "meetingStatus": "Scheduled",
-      "date": "2026-07-16T13:30:00Z",
+      "date": "2026-07-16T14:00:00Z",
       "committees": [
         {
-          "systemCode": "ssas00",
-          "name": "Senate Armed Services"
+          "systemCode": "sscm00",
+          "name": "Senate Commerce, Science, and Transportation"
         }
       ],
       "location": {
-        "room": "G50",
-        "building": "Dirksen Senate Office Building",
+        "room": "253",
+        "building": "Russell Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338643?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338653?format=json"
     },
     {
       "eventId": "338662",
@@ -2991,6 +3268,28 @@
         "s945"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338662?format=json"
+    },
+    {
+      "eventId": "338643",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nomination of Lieutenant General Douglas A. Schiess, USSF, to be general and Chief of Space Operations.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-16T13:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssas00",
+          "name": "Senate Armed Services"
+        }
+      ],
+      "location": {
+        "room": "G50",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338643?format=json"
     },
     {
       "eventId": "119471",
@@ -3081,28 +3380,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338652?format=json"
     },
     {
-      "eventId": "338612",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the TRICARE pharmacy program.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-15T18:30:00Z",
-      "committees": [
-        {
-          "systemCode": "ssas17",
-          "name": "Senate Armed Services Subcommittee on Personnel"
-        }
-      ],
-      "location": {
-        "room": "222",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338612?format=json"
-    },
-    {
       "eventId": "338648",
       "congress": 119,
       "chamber": "Senate",
@@ -3140,6 +3417,28 @@
         "s4960"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338648?format=json"
+    },
+    {
+      "eventId": "338612",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the TRICARE pharmacy program.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-15T18:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssas17",
+          "name": "Senate Armed Services Subcommittee on Personnel"
+        }
+      ],
+      "location": {
+        "room": "222",
+        "building": "Russell Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338612?format=json"
     },
     {
       "eventId": "119455",
@@ -3527,6 +3826,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338646?format=json"
     },
     {
+      "eventId": "338650",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the Semiannual Monetary Policy Report to the Congress.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssbk00",
+          "name": "Senate Banking, Housing, and Urban Affairs"
+        }
+      ],
+      "location": {
+        "room": "538",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338650?format=json"
+    },
+    {
       "eventId": "338661",
       "congress": 119,
       "chamber": "Senate",
@@ -3549,28 +3870,6 @@
         "s4949"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338661?format=json"
-    },
-    {
-      "eventId": "338650",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the Semiannual Monetary Policy Report to the Congress.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-15T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssbk00",
-          "name": "Senate Banking, Housing, and Urban Affairs"
-        }
-      ],
-      "location": {
-        "room": "538",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338650?format=json"
     },
     {
       "eventId": "338647",
@@ -4617,28 +4916,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119415?format=json"
     },
     {
-      "eventId": "119256",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Arms Control and Nonproliferation in an Era of Great Power Competition",
-      "meetingStatus": "Postponed",
-      "date": "2026-06-30T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa14",
-          "name": "House Foreign Affairs Subcommittee on Europe"
-        }
-      ],
-      "location": {
-        "room": "2172",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119256?format=json"
-    },
-    {
       "eventId": "118853",
       "congress": 119,
       "chamber": "House",
@@ -4664,28 +4941,6 @@
         "hr8595"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118853?format=json"
-    },
-    {
-      "eventId": "119403",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "H.R. 8552, the “Veterans’ Compensation Cost-of-Living Adjustment Act of 2026”; \r\nH.R. 8767, the “Compensation Fund Recrediting Act”; \r\nH.R. 9006, the “Locating Our Unclaimed Veterans Act”; \r\nH.R. 6588, the “PROVIDE Act” \r\nH.R. 6921, the “Hawai’i National Cemetery Act” \r\nDiscussion Draft, the “Unclaimed Veterans’ Legacy Grant Program Act”",
-      "meetingStatus": "Rescheduled",
-      "date": "2026-06-25T19:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr09",
-          "name": "House Veterans' Affairs Subcommittee on Disability Assistance and Memorial Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119403?format=json"
     },
     {
       "eventId": "119412",
@@ -4847,28 +5102,6 @@
         "hr5055"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119420?format=json"
-    },
-    {
-      "eventId": "119397",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "Committee on House Administration Full Committee Hearing, “The Congressional Research Service and the Future of AI-Enabled Policy Analysis”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-25T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsha00",
-          "name": "Committee on House Administration"
-        }
-      ],
-      "location": {
-        "room": "1310",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119397?format=json"
     },
     {
       "eventId": "119410",
@@ -5037,32 +5270,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119396?format=json"
     },
     {
-      "eventId": "119401",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "From Wall Street to Main Street: The Future of How America Invests",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-25T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsba16",
-          "name": "House Financial Services Subcommittee on Capital Markets"
-        }
-      ],
-      "location": {
-        "room": "2128",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr3248",
-        "hr7187",
-        "hr9329"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119401?format=json"
-    },
-    {
       "eventId": "338608",
       "congress": 119,
       "chamber": "Senate",
@@ -5195,28 +5402,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338600?format=json"
     },
     {
-      "eventId": "119398",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Failure at the Front Gate: Examining VA Police and Security Deficiencies”",
-      "meetingStatus": "Postponed",
-      "date": "2026-06-24T18:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr08",
-          "name": "House Veterans' Affairs Subcommittee on Oversight and Investigations"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119398?format=json"
-    },
-    {
       "eventId": "119393",
       "congress": 119,
       "chamber": "House",
@@ -5246,28 +5431,6 @@
         "hr9340"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119393?format=json"
-    },
-    {
-      "eventId": "119388",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Effectiveness of the Intelligence Community's Inspector General (CLOSED)",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hlig00",
-          "name": "House Intelligence (Permanent Select)"
-        }
-      ],
-      "location": {
-        "room": "",
-        "building": "Capitol",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119388?format=json"
     },
     {
       "eventId": "338579",
@@ -5336,30 +5499,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119414?format=json"
     },
     {
-      "eventId": "119383",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Markup of H.R. 9250 (Rep. Westerman), “Great American Outdoors Act 250”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T14:30:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii00",
-          "name": "House Natural Resources"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr9250"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119383?format=json"
-    },
-    {
       "eventId": "119392",
       "congress": 119,
       "chamber": "House",
@@ -5407,35 +5546,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119394?format=json"
-    },
-    {
-      "eventId": "119413",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Committee on House Administration Full Committee Markup on Various Measures",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsha00",
-          "name": "Committee on House Administration"
-        }
-      ],
-      "location": {
-        "room": "1310",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr3334",
-        "hr9368",
-        "hr9342",
-        "hr9360",
-        "hr9367",
-        "hr8810"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119413?format=json"
     },
     {
       "eventId": "338601",
@@ -5544,28 +5654,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119390?format=json"
-    },
-    {
-      "eventId": "119395",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"To Review the Implementation of Farm Safety Net, Disaster, and Conservation Programs\"",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsag00",
-          "name": "House Agriculture"
-        }
-      ],
-      "location": {
-        "room": "1300",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119395?format=json"
     },
     {
       "eventId": "338584",
@@ -5700,33 +5788,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338603?format=json"
     },
     {
-      "eventId": "118852",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "H.R. 8595 – National Security, Department of State, and Related Programs Appropriations Act, 2027; H.R. 9022 – Energy and Water Development and Related Agencies Appropriations Act, 2027; H.R. 9237 – Take Care of America’s Veterans Act; H.R. 1181 – Protecting Privacy in Purchases Act",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-23T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsru00",
-          "name": "House Rules"
-        }
-      ],
-      "location": {
-        "room": "H-313",
-        "building": "Capitol",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr9022",
-        "hr8595",
-        "hr1181",
-        "hr9237"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118852?format=json"
-    },
-    {
       "eventId": "338577",
       "congress": 119,
       "chamber": "Senate",
@@ -5749,28 +5810,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338577?format=json"
     },
     {
-      "eventId": "338578",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine improving safety across the National Airspace System.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-23T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "sscm33",
-          "name": "Senate Commerce, Science, and Transportation Subcommittee on Aviation, Space, and Innovation"
-        }
-      ],
-      "location": {
-        "room": "253",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338578?format=json"
-    },
-    {
       "eventId": "338580",
       "congress": 119,
       "chamber": "Senate",
@@ -5791,6 +5830,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338580?format=json"
+    },
+    {
+      "eventId": "338578",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine improving safety across the National Airspace System.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-23T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "sscm33",
+          "name": "Senate Commerce, Science, and Transportation Subcommittee on Aviation, Space, and Innovation"
+        }
+      ],
+      "location": {
+        "room": "253",
+        "building": "Russell Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338578?format=json"
     },
     {
       "eventId": "338581",
@@ -7120,28 +7181,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119343?format=json"
     },
     {
-      "eventId": "338507",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine protecting American citizenship, focusing on denaturalization and its constitutional limits.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-03T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssju21",
-          "name": "Senate Judiciary Subcommittee on Constitution"
-        }
-      ],
-      "location": {
-        "room": "226",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338507?format=json"
-    },
-    {
       "eventId": "338509",
       "congress": 119,
       "chamber": "Senate",
@@ -7172,6 +7211,28 @@
         "s630"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338509?format=json"
+    },
+    {
+      "eventId": "338507",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine protecting American citizenship, focusing on denaturalization and its constitutional limits.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-03T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssju21",
+          "name": "Senate Judiciary Subcommittee on Constitution"
+        }
+      ],
+      "location": {
+        "room": "226",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338507?format=json"
     },
     {
       "eventId": "119338",
@@ -7592,6 +7653,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338425?format=json"
     },
     {
+      "eventId": "338418",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine proposed budget estimates and justification for fiscal year 2027 for the U.S. Army Corps of Engineers and the Bureau of Reclamation.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-05-20T18:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssap22",
+          "name": "Senate Appropriations Subcommittee on Energy and Water Development"
+        }
+      ],
+      "location": {
+        "room": "124",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338418?format=json"
+    },
+    {
       "eventId": "338417",
       "congress": 119,
       "chamber": "Senate",
@@ -7643,28 +7726,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338416?format=json"
-    },
-    {
-      "eventId": "338418",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine proposed budget estimates and justification for fiscal year 2027 for the U.S. Army Corps of Engineers and the Bureau of Reclamation.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-20T18:30:00Z",
-      "committees": [
-        {
-          "systemCode": "ssap22",
-          "name": "Senate Appropriations Subcommittee on Energy and Water Development"
-        }
-      ],
-      "location": {
-        "room": "124",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338418?format=json"
     },
     {
       "eventId": "119304",
@@ -7786,26 +7847,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119316?format=json"
     },
     {
-      "eventId": "338413",
+      "eventId": "338422",
       "congress": 119,
       "chamber": "Senate",
       "type": "Open Hearing",
-      "title": "Hearings to examine meeting the individual needs of all students, focusing on the role of charter schools.",
+      "title": "Hearings to examine the nominations of Michael Kavoukjian, of Florida, to be Ambassador to the Kingdom of Norway, Michelle Steel, of California, to be Ambassador to the Republic of Korea, Brock Dahl, of Maryland, to be Legal Adviser, David Brat, of Virginia, to be Ambassador to the Commonwealth of Australia, and Eric Wendt, of California, to be Ambassador to the Republic of Albania, all of the Department of State.",
       "meetingStatus": "Scheduled",
       "date": "2026-05-20T14:00:00Z",
       "committees": [
         {
-          "systemCode": "sshr00",
-          "name": "Senate Health, Education, Labor, and Pensions"
+          "systemCode": "ssfr00",
+          "name": "Senate Foreign Relations"
         }
       ],
       "location": {
-        "room": "430",
+        "room": "419",
         "building": "Dirksen Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338413?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338422?format=json"
     },
     {
       "eventId": "338367",
@@ -7830,26 +7891,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338367?format=json"
     },
     {
-      "eventId": "338422",
+      "eventId": "338413",
       "congress": 119,
       "chamber": "Senate",
       "type": "Open Hearing",
-      "title": "Hearings to examine the nominations of Michael Kavoukjian, of Florida, to be Ambassador to the Kingdom of Norway, Michelle Steel, of California, to be Ambassador to the Republic of Korea, Brock Dahl, of Maryland, to be Legal Adviser, David Brat, of Virginia, to be Ambassador to the Commonwealth of Australia, and Eric Wendt, of California, to be Ambassador to the Republic of Albania, all of the Department of State.",
+      "title": "Hearings to examine meeting the individual needs of all students, focusing on the role of charter schools.",
       "meetingStatus": "Scheduled",
       "date": "2026-05-20T14:00:00Z",
       "committees": [
         {
-          "systemCode": "ssfr00",
-          "name": "Senate Foreign Relations"
+          "systemCode": "sshr00",
+          "name": "Senate Health, Education, Labor, and Pensions"
         }
       ],
       "location": {
-        "room": "419",
+        "room": "430",
         "building": "Dirksen Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338422?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338413?format=json"
     },
     {
       "eventId": "338421",
@@ -8881,52 +8942,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338356?format=json"
     },
     {
-      "eventId": "338350",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine S.749, to amend title 38, United States Code, to extend increased dependency and indemnity compensation paid to surviving spouses of veterans who die from amyotrophic lateral sclerosis, regardless of how long the veterans had such disease prior to death, S.1127, to amend title 38, United States Code, to expand eligibility for memorial headstones and markers furnished by the Secretary of Veterans Affairs to certain individuals who died before November 11, 1998, S.3000, to require the Secretary of Veterans Affairs to identify and report instances of disability benefit questionnaire fraud, S.3098, to amend title 38, United States Code, to require the Secretary of Veterans Affairs to publish information about conditions and cohorts the Department of Veterans Affairs is considering for purposes of establishing or removing presumptions of service connection regarding toxic exposure, S.3170, to direct the Secretary of Veterans Affairs to implement an automated system with callback functionality for each customer service telephone line of the Department of Veterans Affairs, S.3286, to amend title 38, United States Code, to improve processes relating to appeals of decisions regarding claims for benefits under the laws administered by the Secretary of Veterans Affairs, S.3311, to amend title 38, United States Code, to eliminate conflicts of interest in peer review for quality management of care conducted by the Veterans Health Administration, S.3395, to expand the telescreening mammography pilot program of the Department of Veterans Affairs, S.3591, to require the Secretary of Labor, in coordination with the Secretary of Veterans Affairs, to develop a notice detailing benefits available to veterans, and to require employers to display such notice, S.3647, to require the Secretary of Veterans Affairs to establish a program to address bowel and bladder care needs for veterans with spinal cord injuries and disorders, S.3653, to require the Secretary of Veterans Affairs to carry out efforts to inform veterans of their rights with regards to the receipt of health care, benefits, and services furnished under provisions of law administered by the Secretary, S.3706, to amend title 38, United States Code, to authorize the provision of produce prescriptions to veterans, S.3726, to amend title 38, United States Code, to require the President to define veteran success and to develop and implement a National Veterans Strategy, S.3988, to amend title 38, United States Code, to direct the Secretary of Veterans Affairs to offer annual preventative health evaluations to veterans with a spinal cord injury or disorder and increase access to assistive technologies, S.3992, to amend title 10, United States Code, to codify authority for the Joint Medical Facility Fund of the Department of Defense and the Department of Veterans Affairs, S.3993, to amend title 38, United States Code, and title 10, United States Code, to eliminate those provisions relating to veterans educational assistance that disadvantage eligible individuals who choose to pursue programs of apprenticeship or other on-job training instead of a four-year college degree, S.3999, to require the Secretary of Veterans Affairs to ensure that women veterans may schedule appointments for women's specialty care under the laws administered by the Secretary without requiring a referral, S.4043, to amend title 38, United States Code, to make permanent the authority of the Secretary of Veterans Affairs to provide treatment and rehabilitation for seriously mentally ill and homeless veterans, S.4108, to amend title 38, United States Code, to increase burial and funeral expenses paid by the Secretary of Veterans Affairs in the case of death from a service-connected disability, S.4140, to amend title 38, United States Code, to improve the Department of Veterans Affairs schedule for rating disabilities, S.4197, to require the Secretary of Veterans Affairs to establish a program under which the Secretary shall award grants to certain State entities to expand access to structured outdoor recreation programs for veterans that enhance veteran wellness, S.4220, to amend title 38, United States Code, to establish within the Veterans Health Administration an Office of Novel Therapeutics, S.4400, to amend title 38, United States Code, to require the Secretary of Veterans Affairs to develop a five-year human capital plan to support the mission and responsibilities of the Department of Veterans Affairs and to require the Secretary provide notice before carrying out a reduction in force, an original bill entitled \"Veteran Acquired Brain Injury Caregiving Act\", and an original bill entitled \"Maternal Health for Veterans Act\".",
-      "meetingStatus": "Scheduled",
-      "date": "2026-04-29T20:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssva00",
-          "name": "Senate Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "418",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "s1127",
-        "s3000",
-        "s3098",
-        "s3170",
-        "s3286",
-        "s3311",
-        "s3395",
-        "s3591",
-        "s3647",
-        "s3653",
-        "s3706",
-        "s3726",
-        "s3988",
-        "s3992",
-        "s3993",
-        "s3999",
-        "s4043",
-        "s4108",
-        "s4140",
-        "s4197",
-        "s4220",
-        "s749",
-        "s4400"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338350?format=json"
-    },
-    {
       "eventId": "119189",
       "congress": 119,
       "chamber": "House",
@@ -9017,28 +9032,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/338180?format=json"
-    },
-    {
-      "eventId": "119185",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Examining VA Benefits: Pension and Fiduciary, and VA Life Insurance \r\nOptions",
-      "meetingStatus": "Scheduled",
-      "date": "2026-04-21T17:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr09",
-          "name": "House Veterans' Affairs Subcommittee on Disability Assistance and Memorial Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119185?format=json"
     },
     {
       "eventId": "119213",
@@ -9771,28 +9764,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337663?format=json"
-    },
-    {
-      "eventId": "118659",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"The Future of College: Harnessing Innovation to Improve Outcomes and Lower Costs\"",
-      "meetingStatus": "Scheduled",
-      "date": "2025-11-18T15:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed00",
-          "name": "House Education and Workforce"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118659?format=json"
     },
     {
       "eventId": "337656",

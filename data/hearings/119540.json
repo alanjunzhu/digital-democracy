@@ -1,0 +1,42 @@
+{
+  "eventId": "119540",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight Hearing - The Economy Act",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsap23",
+      "name": "House Appropriations Subcommittee on Financial Services and General Government"
+    }
+  ],
+  "location": {
+    "room": "2362-A",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119540?format=json",
+  "witnesses": [
+    {
+      "name": "Shirley Jones",
+      "position": "Managing Associate General Counsel",
+      "organization": "U.S. Government Accountability Office"
+    },
+    {
+      "name": "Dominick Fiorentino",
+      "position": "Analyst in Government Organization and Management",
+      "organization": "Congressional Research Service"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119540/documents/HHRG-119-AP23-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "eventId": "119554",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "U.S. Policy and Regional Security Challenges in the Western Balkans",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa14",
+      "name": "House Foreign Affairs Subcommittee on Europe"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119554?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Daniel Lawton",
+      "position": "Deputy Assistant Secretary, Bureau of European and Eurasian Affairs",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119554/documents/HHRG-119-FA14-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "eventId": "119544",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Out of Touch: When Union Politics Leave Workers Behind\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed02",
+      "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119544?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119544/documents/HHRG-119-ED02-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

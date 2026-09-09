@@ -1,0 +1,53 @@
+{
+  "eventId": "119306",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Confronting the Totalitarian Ortega-Murillo Regime",
+  "meetingStatus": "Rescheduled",
+  "date": "2026-09-15T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa07",
+      "name": "House Foreign Affairs Subcommittee on Western Hemisphere"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119306?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Ana Quintana-Lovett",
+      "position": "Deputy Assistant Secretary, Bureau of Western Hemisphere Affairs",
+      "organization": "U.S. Department of State"
+    },
+    {
+      "name": "Ms. Ana Quintana-Lovett",
+      "position": "Deputy Assistant Secretary for Central America and Migration Affairs, Bureau of Western Hemisphere Affairs",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Confronting the Totalitarian Ortega-Murillo Regime",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119306",
+      "format": ""
+    },
+    {
+      "name": "Confronting the Totalitarian Ortega-Murillo Regime",
+      "url": "https://www.youtube.com/watch?v=coSg6gH7aec",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119306/documents/HHRG-119-FA07-20260915-SD001-U5.pdf",
+      "format": "PDF"
+    }
+  ]
+}

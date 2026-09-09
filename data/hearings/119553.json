@@ -1,0 +1,31 @@
+{
+  "eventId": "119553",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Fixing Fraud and Failure in Federally Funded Homelessness Services”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsgo16",
+      "name": "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency"
+    }
+  ],
+  "location": {
+    "room": "2154",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119553?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119553/documents/HHRG-119-GO16-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

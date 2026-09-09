@@ -1,0 +1,31 @@
+{
+  "eventId": "119546",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Annual Testimony of the Secretary of the Treasury on the State of the International Financial System",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119546?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119546/documents/HHRG-119-BA00-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

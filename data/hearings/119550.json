@@ -1,0 +1,27 @@
+{
+  "eventId": "119550",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Nuclear Spent Fuel Policy: Examining Nuclear Lifecycle Innovation Campuses",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif03",
+      "name": "House Energy and Commerce Subcommittee on Energy"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119550?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119550/documents/HMTG-119-IF03-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

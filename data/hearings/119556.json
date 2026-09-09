@@ -1,0 +1,31 @@
+{
+  "eventId": "119556",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Innovation in Disaster Prevention: Advancing Technology for Prediction and Response",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssy00",
+      "name": "House Science, Space, and Technology"
+    }
+  ],
+  "location": {
+    "room": "2318",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119556?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119556/documents/HHRG-119-SY00-20260915-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
