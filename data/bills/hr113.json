@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "113",
+  "number": 113,
   "billId": "hr113",
   "title": "Budget Process Enhancement Act",
   "introducedDate": "2025-01-03",
@@ -13,15 +13,49 @@
   },
   "latestAction": "Referred to the Committee on the Budget, and in addition to the Committees on House Administration, and Oversight and Government Reform, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-09-08T19:31:27Z",
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/113",
   "summary": "<p><strong>Budget Process Enhancement Act</strong></p> <p>This bill modifies the federal budget process to withhold the salaries of Members of Congress and cancel the salaries of certain employees of the Office of Management and Budget when certain budget process requirements are not met.</p> <p>The bill also changes the assumptions that the Congressional Budget Office uses to calculate its baseline for discretionary spending to eliminate certain adjustments for inflation and other factors. (A baseline is a projection of federal spending and receipts during a fiscal year under current law.) </p>",
   "cosponsors": 0,
   "committees": [
-    "Oversight and Government Reform Committee",
-    "Committee on House Administration",
-    "Budget Committee"
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:11:50Z"
+        }
+      ]
+    },
+    {
+      "name": "Committee on House Administration",
+      "systemCode": "hsha00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:11:45Z"
+        }
+      ]
+    },
+    {
+      "name": "Budget Committee",
+      "systemCode": "hsbu00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:11:40Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

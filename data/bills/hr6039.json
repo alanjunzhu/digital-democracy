@@ -1,0 +1,380 @@
+{
+  "congress": 119,
+  "type": "H.R.",
+  "number": 6039,
+  "billId": "hr6039",
+  "title": "Commonsense Legislating Act",
+  "introducedDate": "2025-11-12",
+  "sponsor": {
+    "bioguideId": "M000312",
+    "name": "James McGovern",
+    "party": "D",
+    "state": "MA"
+  },
+  "latestAction": "Referred to the Subcommittee on Health.",
+  "latestActionDate": "2025-11-20",
+  "updateDate": "2026-09-08T19:31:27Z",
+  "originChamber": "House",
+  "policyArea": "Government Operations and Politics",
+  "url": "https://www.congress.gov/bill/119th-congress/house-bill/6039",
+  "summary": "",
+  "cosponsors": 0,
+  "committees": [
+    {
+      "name": "Veterans' Affairs Committee",
+      "systemCode": "hsvr00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:20Z"
+        }
+      ]
+    },
+    {
+      "name": "Homeland Security Committee",
+      "systemCode": "hshm00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:04:25Z"
+        }
+      ]
+    },
+    {
+      "name": "Budget Committee",
+      "systemCode": "hsbu00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:04:35Z"
+        }
+      ]
+    },
+    {
+      "name": "Rules Committee",
+      "systemCode": "hsru00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:04:30Z"
+        }
+      ]
+    },
+    {
+      "name": "Intelligence (Permanent Select) Committee",
+      "systemCode": "hlig00",
+      "chamber": "House",
+      "type": "Select",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:04:20Z"
+        }
+      ]
+    },
+    {
+      "name": "Foreign Affairs Committee",
+      "systemCode": "hsfa00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:04:15Z"
+        }
+      ]
+    },
+    {
+      "name": "Armed Services Committee",
+      "systemCode": "hsas00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:04:10Z"
+        }
+      ]
+    },
+    {
+      "name": "Agriculture Committee",
+      "systemCode": "hsag00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:04:05Z"
+        }
+      ]
+    },
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:04:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Transportation and Infrastructure Committee",
+      "systemCode": "hspw00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:50Z"
+        }
+      ]
+    },
+    {
+      "name": "Financial Services Committee",
+      "systemCode": "hsba00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:45Z"
+        }
+      ]
+    },
+    {
+      "name": "Energy and Commerce Committee",
+      "systemCode": "hsif00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:40Z"
+        }
+      ]
+    },
+    {
+      "name": "Science, Space, and Technology Committee",
+      "systemCode": "hssy00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:35Z"
+        }
+      ]
+    },
+    {
+      "name": "Committee on House Administration",
+      "systemCode": "hsha00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:30Z"
+        }
+      ]
+    },
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:25Z"
+        }
+      ]
+    },
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:15Z"
+        }
+      ]
+    },
+    {
+      "name": "Education and Workforce Committee",
+      "systemCode": "hsed00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:10Z"
+        }
+      ]
+    },
+    {
+      "name": "Ethics Committee",
+      "systemCode": "hsso00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:05Z"
+        }
+      ]
+    },
+    {
+      "name": "Appropriations Committee",
+      "systemCode": "hsap00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:03:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Small Business Committee",
+      "systemCode": "hssm00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:02:50Z"
+        }
+      ]
+    },
+    {
+      "name": "Ways and Means Committee",
+      "systemCode": "hswm00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-11-12T17:02:45Z"
+        }
+      ]
+    }
+  ],
+  "subjects": [],
+  "actions": [
+    {
+      "date": "2025-11-20",
+      "text": "Referred to the Subcommittee on Health.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-13",
+      "text": "Referred to the Subcommittee on Border Security and Enforcement.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    },
+    {
+      "date": "2025-11-12",
+      "text": "Referred to the Committee on Ways and Means, and in addition to the Committees on Small Business, Appropriations, Ethics, Education and Workforce, the Judiciary, Veterans' Affairs, Natural Resources, House Administration, Science, Space, and Technology, Energy and Commerce, Financial Services, Transportation and Infrastructure, Oversight and Government Reform, Agriculture, Armed Services, Foreign Affairs, Intelligence (Permanent Select), Homeland Security, Rules, and the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "chamber": "House"
+    }
+  ],
+  "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6039/text"
+}

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "204",
+  "number": 204,
   "billId": "hr204",
   "title": "ACRES Act",
   "introducedDate": "2025-01-03",
@@ -13,15 +13,57 @@
   },
   "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 490.",
   "latestActionDate": "2026-07-23",
+  "updateDate": "2026-09-08T18:09:59Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/204",
   "summary": "<p><strong>Accurately Counting Risk Elimination Solutions Act or the ACRES Act</strong></p><p>This bill establishes requirements regarding&nbsp;reports&nbsp;about hazardous fuels reduction activities and&nbsp;standardized procedures for tracking data for hazardous fuels reduction. <em>Hazardous fuels reduction activities</em> means any vegetation management activities that reduce the risk of wildfire but excludes the award of contracts to conduct hazardous fuels reduction activities.</p><p>First, the Department of Agriculture (USDA) and the Department of the Interior must include in the materials submitted in support of the President's budget each fiscal year a report on the number of acres of federal land on which such activities were carried out during the preceding year.</p><p>Next, USDA and Interior must implement standardized procedures for tracking data related to such activities. The standardized procedures must include</p><ul><li>regular, standardized data reviews of the accuracy and timely input of data used to track hazardous fuels reduction activities;</li><li>verification methods that validate whether such data accurately correlates to such activities;</li><li>an analysis of the short- and long-term effectiveness of such activities on reducing the risk of wildfire; and</li><li>for hazardous fuels reduction activities that occur partially within the wildland-urban interface, methods to distinguish which acres are located within and which located outside the wildland-urban interface.</li></ul><p>Finally, the Government Accountability Office must (1) conduct a study on this bill's implementation, and (2) submit a report to Congress with the results of the study.</p>",
   "cosponsors": 0,
   "committees": [
-    "Energy and Natural Resources Committee",
-    "Agriculture Committee",
-    "Natural Resources Committee"
+    {
+      "name": "Energy and Natural Resources Committee",
+      "systemCode": "sseg00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Reported By",
+          "date": "2026-07-23T20:17:16Z"
+        },
+        {
+          "name": "Markup By",
+          "date": "2026-03-04T16:05:01Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-22T17:56:51Z"
+        }
+      ]
+    },
+    {
+      "name": "Agriculture Committee",
+      "systemCode": "hsag00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:28:35Z"
+        }
+      ]
+    },
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:28:30Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

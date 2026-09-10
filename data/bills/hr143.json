@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "143",
+  "number": 143,
   "billId": "hr143",
   "title": "Unauthorized Spending Accountability Act",
   "introducedDate": "2025-01-03",
@@ -13,15 +13,53 @@
   },
   "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 25 - 19.",
   "latestActionDate": "2025-12-02",
+  "updateDate": "2026-09-08T19:31:27Z",
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/143",
   "summary": "<p><strong>Unauthorized Spending Accountability Act</strong></p><p>This bill reduces budgetary levels for certain federal programs that are funded through the annual appropriations process and do not have an authorization of appropriations.</p><p>Under the bill, <em>budgetary levels</em> are spending allocations provided to the congressional appropriations committees by a congressional budget resolution or a deeming resolution. The allocations are provided under the Congressional Budget Act of 1974 and are often referred to as 302(a) allocations.</p><p>The bill applies to programs included in the Congressional Budget Office's (CBO's) annual report listing programs that are funded through the appropriations process and have an authorization of appropriations that has either expired or will expire during the year.&nbsp;</p><p>If a program is listed in the&nbsp;CBO report, the bill requires specified reductions to be implemented over a three-year period and terminates the unauthorized programs at the end of the third unauthorized year.</p>",
   "cosponsors": 2,
   "committees": [
-    "Oversight and Government Reform Committee",
-    "Rules Committee",
-    "Budget Committee"
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Markup By",
+          "date": "2025-12-02T17:48:12Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:15:15Z"
+        }
+      ]
+    },
+    {
+      "name": "Rules Committee",
+      "systemCode": "hsru00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:15:25Z"
+        }
+      ]
+    },
+    {
+      "name": "Budget Committee",
+      "systemCode": "hsbu00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:15:20Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

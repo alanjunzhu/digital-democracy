@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "131",
+  "number": 131,
   "billId": "hr131",
   "title": "Finish the Arkansas Valley Conduit Act",
   "introducedDate": "2025-01-03",
@@ -13,14 +13,57 @@
   },
   "latestAction": "The Chair directed the Clerk to notify the Senate of the action of the House.",
   "latestActionDate": "2026-01-08",
+  "updateDate": "2026-09-08T18:09:59Z",
   "originChamber": "House",
   "policyArea": "Water Resources Development",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/131",
   "summary": "<p><strong>Finish the Arkansas Valley Conduit Act</strong></p><p>This bill reduces payments that communities within the Arkansas River Valley must pay to the Bureau of Reclamation for the construction of the Arkansas Valley Conduit, a pipeline in Colorado for delivering water from the Pueblo Reservoir to such communities. Specifically, it removes interest payments and extends the repayment period to 100 years.</p>",
   "cosponsors": 1,
   "committees": [
-    "Natural Resources Committee",
-    "Energy and Natural Resources Committee"
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Unknown",
+          "date": "2026-01-08T20:24:26Z"
+        },
+        {
+          "name": "Unknown",
+          "date": "2026-01-08T20:24:06Z"
+        },
+        {
+          "name": "Reported By",
+          "date": "2025-07-10T15:37:15Z"
+        },
+        {
+          "name": "Markup By",
+          "date": "2025-06-25T20:29:06Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:22:30Z"
+        }
+      ]
+    },
+    {
+      "name": "Energy and Natural Resources Committee",
+      "systemCode": "sseg00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2025-12-16T22:14:50Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-07-22T16:21:17Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
