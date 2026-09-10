@@ -1,0 +1,41 @@
+{
+  "eventId": "119560",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Budget Hearing – Trade and Investment Agencies",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsap04",
+      "name": "House Appropriations Subcommittee on National Security, Department of State, and Related Programs"
+    }
+  ],
+  "location": {
+    "room": "2362-A",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119560?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Conor Coleman",
+      "position": "Head of Investments and Chief of Staff",
+      "organization": "United States International Development Finance Corporation"
+    },
+    {
+      "name": "Mr. Dan Petrie",
+      "position": "Acting Chief of Staff",
+      "organization": "Millenium Challenge Corporation"
+    },
+    {
+      "name": "Mr. Thomas Hardy",
+      "position": "Deputy Director and Chief Operating Officer",
+      "organization": "United States Trade and Development Agency"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": []
+}

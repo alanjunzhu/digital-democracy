@@ -1,0 +1,37 @@
+{
+  "eventId": "119555",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Twenty-Five Years After 9/11: The Evolving Terrorism Landscape and State's Counterterrorism Response",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa13",
+      "name": "House Subcommittee on the Middle East and North Africa"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119555?format=json",
+  "witnesses": [
+    {
+      "name": "Lieutenant Colonel Joel Borkert",
+      "position": "Deputy Coordinator for Programs and Military Coordination, Bureau of Counterterrorism",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119555/documents/HHRG-119-FA13-20260916-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

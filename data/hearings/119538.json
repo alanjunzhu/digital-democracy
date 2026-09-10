@@ -3,7 +3,7 @@
   "congress": 119,
   "chamber": "House",
   "type": "Hearing",
-  "title": "HEARING",
+  "title": "Import Controls: Tools to Counter the CCP’s Industrial Policy and Supply Chain Threats",
   "meetingStatus": "Scheduled",
   "date": "2026-09-16T14:00:00Z",
   "committees": [
@@ -19,7 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119538?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Craig Singleton",
+      "position": "China Program Senior Director",
+      "organization": "Foundation for Defense of Democracies"
+    },
+    {
+      "name": "Oren Cass",
+      "position": "Founder and Chief Economist",
+      "organization": "American Compass"
+    },
+    {
+      "name": "Peter Harrell",
+      "position": "Visiting Scholar",
+      "organization": "Georgetown Law School’s Institute of International Economic Law"
+    }
+  ],
   "videos": [],
   "meetingDocuments": []
 }

@@ -1,0 +1,31 @@
+{
+  "eventId": "119537",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“25 Years Later: Evolutions in Federal, State, and Local Counterterrorism Efforts Since 9/11”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm00",
+      "name": "House Homeland Security"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119537?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119537/documents/HHRG-119-HM00-20260916-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

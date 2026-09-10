@@ -1,0 +1,47 @@
+{
+  "eventId": "119561",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Lives, not Leverage: the Long Arm of China and North Korea’s Repression",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa05",
+      "name": "House Foreign Affairs East Asia and Pacific Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119561?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Peter Mattis",
+      "position": "President",
+      "organization": "The Jamestown Foundation"
+    },
+    {
+      "name": "Ms. Deborah Choi",
+      "position": "North Korean Refugee",
+      "organization": "Human Rights Activist"
+    },
+    {
+      "name": "Ms. Silvia Zin",
+      "position": "Victim of PRC Repression",
+      "organization": ""
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119561/documents/HHRG-119-FA05-20260916-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

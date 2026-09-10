@@ -1,0 +1,31 @@
+{
+  "eventId": "119563",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Balancing Biotechnology Innovation and Biosecurity: Securing U.S. Leadership in a Global Race",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssy21",
+      "name": "House Science, Space, and Technology Subcommittee on Investigations and Oversight"
+    }
+  ],
+  "location": {
+    "room": "2318",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119563?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119563/documents/HMTG-119-SY21-20260916-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
