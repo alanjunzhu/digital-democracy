@@ -1,0 +1,38 @@
+{
+  "eventId": "338746",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine housing needs in native communities, including  S.5354, to reauthorize the Native American Housing Assistance and Self-Determination Act of 1996.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T18:30:00Z",
+  "committees": [
+    {
+      "systemCode": "slia00",
+      "name": "Senate Indian Affairs"
+    }
+  ],
+  "location": {
+    "room": "628",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "s5354"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338746?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine housing needs in native communities, including  S.5354, to reauthorize the Native American Housing Assistance and Self-Determination Act of 1996.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338746",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine housing needs in native communities, including  S.5354, to reauthorize the Native American Housing Assistance and Self-Determination Act of 1996.",
+      "url": "https://www.senate.gov/isvp/?comm=indian&filename=indian091626",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

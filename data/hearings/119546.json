@@ -19,12 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119546?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Scott Bessent",
+      "position": "Secretary",
+      "organization": "U.S. Department of the Treasury"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Notice",
       "url": "https://www.congress.gov/119/meeting/house/119546/documents/HHRG-119-BA00-20260915-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119546/documents/HHRG-119-BA00-20260915-SD002.pdf",
       "format": "PDF"
     }
   ]

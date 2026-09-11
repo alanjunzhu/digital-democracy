@@ -1,0 +1,36 @@
+{
+  "eventId": "338748",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine the menopause care gap in America.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T19:30:00Z",
+  "committees": [
+    {
+      "systemCode": "spag00",
+      "name": "Senate Aging (Special)"
+    }
+  ],
+  "location": {
+    "room": "216",
+    "building": "Hart Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338748?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the menopause care gap in America.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338748",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the menopause care gap in America.",
+      "url": "https://www.senate.gov/isvp/?comm=aging&filename=aging091626",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

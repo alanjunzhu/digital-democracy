@@ -19,12 +19,33 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119553?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Karen Bass (Invited)",
+      "position": "Mayor",
+      "organization": "City of Los Angeles"
+    },
+    {
+      "name": "Mr. Paul Webster",
+      "position": "Executive Director",
+      "organization": "Los Angeles Alliance for Human Rights"
+    },
+    {
+      "name": "Mr. Jonathan Choe",
+      "position": "Senior Fellow and Journalist",
+      "organization": "Discovery Institute"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Notice",
       "url": "https://www.congress.gov/119/meeting/house/119553/documents/HHRG-119-GO16-20260915-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119553/documents/HHRG-119-GO16-20260915-SD002.pdf",
       "format": "PDF"
     }
   ]

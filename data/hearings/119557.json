@@ -19,12 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119557?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Ted Okon",
+      "position": "Executive Director",
+      "organization": "Community Oncology Alliance"
+    },
+    {
+      "name": "Dr. Sheetal Kircher",
+      "position": "Clinical Practice Director and Medical Director",
+      "organization": "Survivorship Institute, Robert H. Lurie Comprehensive Cancer Center, Northwestern University"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Notice",
       "url": "https://www.congress.gov/119/meeting/house/119557/documents/HHRG-119-GO27-20260915-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119557/documents/HHRG-119-GO27-20260915-SD002.pdf",
       "format": "PDF"
     }
   ]

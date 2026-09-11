@@ -1,0 +1,41 @@
+{
+  "eventId": "119508",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Legislative Hearing on: H.R. 7269 (Rep. Randall), \"Helping Out People Act of 2026\" and H.R. 8674 (Rep. Begich), \"Geese House Site Conveyance Act\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-17T14:30:00Z",
+  "committees": [
+    {
+      "systemCode": "hsii24",
+      "name": "House Natural Resources Subcommittee on Indian and Insular Affairs"
+    }
+  ],
+  "location": {
+    "room": "1324",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119508?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119508/documents/HHRG-119-II24-20260917-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7269 (Rep. Randall), \"Helping Our People Act of 2026\"",
+      "url": "https://www.congress.gov/119/meeting/house/119508/documents/BILLS-1197269ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 8674 (Rep. Begich), \"Geese House Site Conveyance Act\"",
+      "url": "https://www.congress.gov/119/meeting/house/119508/documents/BILLS-1198674ih.pdf",
+      "format": "PDF"
+    }
+  ]
+}

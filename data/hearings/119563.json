@@ -2,7 +2,7 @@
   "eventId": "119563",
   "congress": 119,
   "chamber": "House",
-  "type": "Meeting",
+  "type": "Hearing",
   "title": "Balancing Biotechnology Innovation and Biosecurity: Securing U.S. Leadership in a Global Race",
   "meetingStatus": "Scheduled",
   "date": "2026-09-16T14:00:00Z",
@@ -24,7 +24,12 @@
   "meetingDocuments": [
     {
       "name": "Notice",
-      "url": "https://www.congress.gov/119/meeting/house/119563/documents/HMTG-119-SY21-20260916-SD001.pdf",
+      "url": "https://www.congress.gov/119/meeting/house/119563/documents/HHRG-119-SY21-20260916-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119563/documents/HHRG-119-SY21-20260916-SD002-U1.pdf",
       "format": "PDF"
     }
   ]

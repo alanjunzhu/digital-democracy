@@ -21,11 +21,6 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119545?format=json",
   "witnesses": [
     {
-      "name": "Mr. Mike Gonzalez",
-      "position": "Angeles T. Arredondo E Pluribus Unum Senior Fellow",
-      "organization": "The Heritage Foundation"
-    },
-    {
       "name": "Mr. Matthew Johnson",
       "position": "Senior Fellow",
       "organization": "The Jamestown Foundation"
@@ -34,13 +29,23 @@
       "name": "Mr. Sam Lyman",
       "position": "Head of Research",
       "organization": "Bitcoin Policy Institute"
+    },
+    {
+      "name": "Mr. Mike Gonzalez",
+      "position": "Angeles T. Arredondo E Pluribus Unum Senior Fellow",
+      "organization": "The Heritage Foundation"
+    },
+    {
+      "name": "Mr. Donald Sherman",
+      "position": "President and Chief Executive Officer",
+      "organization": "Citizens for Responsibility and Ethics in Washington"
     }
   ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Hearing Notice",
-      "url": "https://www.congress.gov/119/meeting/house/119545/documents/HHRG-119-FA19-20260915-SD001.pdf",
+      "url": "https://www.congress.gov/119/meeting/house/119545/documents/HHRG-119-FA19-20260915-SD001-U1.pdf",
       "format": "PDF"
     }
   ]
