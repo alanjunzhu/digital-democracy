@@ -12,15 +12,50 @@
       "name": "House Energy and Commerce Subcommittee on Energy"
     }
   ],
-  "location": null,
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119550?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Theodore Garrish",
+      "position": "Assistant Secretary for Nuclear Energy",
+      "organization": "Department of Energy"
+    },
+    {
+      "name": "The Honorable Stacey Paradis",
+      "position": "Commissioner",
+      "organization": "Illinois Commerce Commission"
+    },
+    {
+      "name": "Ms. Maria Korsnick",
+      "position": "President and CEO",
+      "organization": "Nuclear Energy Institute"
+    },
+    {
+      "name": "Mr. Greg White",
+      "position": "Legacy Officer",
+      "organization": "Nuclear Waste Strategy Coalition"
+    },
+    {
+      "name": "Mr. Jared des Rosiers",
+      "position": "Deputy General Counsel and VP for Public, Government & Regulatory Affairs",
+      "organization": "Maine Yankee"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Hearing Notice",
       "url": "https://www.congress.gov/119/meeting/house/119550/documents/HMTG-119-IF03-20260915-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119550/documents/HMTG-119-IF03-20260915-SD002.pdf",
       "format": "PDF"
     }
   ]

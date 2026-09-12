@@ -1,0 +1,36 @@
+{
+  "eventId": "119567",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "Full Committee business meeting to consider the following:\r\n\r\n1) H.Res. _____, Recommending that the House of Representatives find Leon David Black in Contempt of Congress for refusal to comply with subpoenas duly issued by the Committee on Oversight and Government Reform.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-15T20:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsgo00",
+      "name": "House Oversight and Government Reform"
+    }
+  ],
+  "location": {
+    "room": "2154",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119567?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119567/documents/HMKP-119-GO00-20260915-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119567/documents/HMKP-119-GO00-20260915-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

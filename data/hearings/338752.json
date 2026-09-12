@@ -1,0 +1,36 @@
+{
+  "eventId": "338752",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Business Meeting",
+  "title": "Business meeting to consider executive business meeting matters.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-17T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "ssju00",
+      "name": "Senate Judiciary"
+    }
+  ],
+  "location": {
+    "room": "216",
+    "building": "Hart Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338752?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Business meeting to consider executive business meeting matters.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338752",
+      "format": ""
+    },
+    {
+      "name": "Business meeting to consider executive business meeting matters.",
+      "url": "https://www.senate.gov/isvp/?comm=judiciary&filename=judiciary091726",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

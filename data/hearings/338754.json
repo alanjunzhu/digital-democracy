@@ -1,0 +1,29 @@
+{
+  "eventId": "338754",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Business Meeting",
+  "title": "Business meeting to consider S.5045, to amend the Clean Air Act to modify the handling of air quality monitoring with respect to prescribed fires, S.3135, to require the Administrator of the Environmental Protection Agency to authorize manufacturers of certain vehicles to suspend engine derate or shutdown functions in prolonged cold weather conditions, and S.5249, to amend the Atomic Energy Act of 1954 to align the licensing of uranium enrichment facilities with other fuel cycle facilities under that Act.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T13:30:00Z",
+  "committees": [
+    {
+      "systemCode": "ssev00",
+      "name": "Senate Environment and Public Works"
+    }
+  ],
+  "location": {
+    "room": "406",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "s3135",
+    "s5045",
+    "s5249"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338754?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

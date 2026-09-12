@@ -19,7 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119544?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Dr. Adam Dean",
+      "position": "Associate Professor of Political Science",
+      "organization": "The George Washington University"
+    },
+    {
+      "name": "Mr. Thomas Jones",
+      "position": "President",
+      "organization": "American Accountability Foundation"
+    },
+    {
+      "name": "Mr. Akash Chougule",
+      "position": "President",
+      "organization": "Foundation for Research on Equal Opportunity"
+    },
+    {
+      "name": "Mr. Greg Mourad",
+      "position": "Vice President of Federal Affairs",
+      "organization": "National Right to Work Committee"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

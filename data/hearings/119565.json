@@ -1,0 +1,91 @@
+{
+  "eventId": "119565",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "Various Measures",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr1653",
+    "hr10325",
+    "hr7030",
+    "hr7866",
+    "hr10234",
+    "hr4936",
+    "hr8957",
+    "hr5889",
+    "hr10184"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119565?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 5889, the Eviction Helpline Act",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/BILLS-119HR5889ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7030, the Securing Facilities for Mental Health Services Act",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/BILLS-119HR7030ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R.7866, the American Lending Fairness Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/BILLS-119HR7866ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10234, the Consumer-Led Enhancement of Annuity and Insurance Registration (CLEAR) Forms Act",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/BILLS-119HR10234ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 1653, the Civil Investigative Demand Reform Act of 2025",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/BILLS-119HR1653ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/HMKP-119-BA00-20260916-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 4936, the Taskforce for Recognizing and Averting Payment Scams (TRAPS) Act",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/BILLS-119HR4936ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 8957, the American Reserve Modernization Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/BILLS-119HR8957ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10184, the Consumer Financial Protection Accountability and Reform Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/BILLS-119HR10184ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10325, a bill to increase the mandatory contribution amount of Federal Home Loan Banks to the Affordable Housing Program, and for other purposes",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/BILLS-119HR10325ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119565/documents/HMKP-119-BA00-20260916-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

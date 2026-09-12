@@ -3,7 +3,7 @@
   "congress": 119,
   "chamber": "House",
   "type": "Meeting",
-  "title": "H.J. Res. 210 – Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Nonroad Engine Pollution Control Standards; Ocean-Going Vessels At-Berth; Notice of Decision\".; H.J. Res. 213 – Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule issued by the Environmental Protection Agency relating to the \"California State Nonroad Engine Pollution Control Standards; Commercial Harbor Craft Regulations; Notice of Decision\".; H.R. 9576 – National Fraud Enforcement Division Act of 2026; H.R.____ – Protecting Taxpayers from Health Care Fraudsters Act; H.R. 10326 – Preventing Rip-offs and Obtaining Oversight of Funds Act",
+  "title": "H.J. Res. 210 – Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Nonroad Engine Pollution Control Standards; Ocean-Going Vessels At-Berth; Notice of Decision\".; H.J. Res. 213 – Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule issued by the Environmental Protection Agency relating to the \"California State Nonroad Engine Pollution Control Standards; Commercial Harbor Craft Regulations; Notice of Decision\".; H.R. 9576 – National Fraud Enforcement Division Act of 2026; H.R. 10326 – Preventing Rip-offs and Obtaining Oversight of Funds Act; Senate amendments to H.R. 5334 – Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
   "meetingStatus": "Scheduled",
   "date": "2026-09-14T20:00:00Z",
   "committees": [
@@ -21,7 +21,8 @@
     "hjres210",
     "hjres213",
     "hr9576",
-    "hr10326"
+    "hr10326",
+    "hr5334"
   ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/118858?format=json",
   "witnesses": [],
@@ -53,13 +54,13 @@
       "format": "PDF"
     },
     {
-      "name": "H.R. ____ – Protecting Taxpayers from Health Care Fraudsters Act",
-      "url": "https://www.congress.gov/119/meeting/house/118858/documents/BILLS-119HR____ih.pdf",
+      "name": "H.R. 10326 – Preventing Rip-offs and Obtaining Oversight of Funds Act",
+      "url": "https://www.congress.gov/119/meeting/house/118858/documents/BILLS-119HR____--ih.pdf",
       "format": "PDF"
     },
     {
-      "name": "H.R. 10326 – Preventing Rip-offs and Obtaining Oversight of Funds Act",
-      "url": "https://www.congress.gov/119/meeting/house/118858/documents/BILLS-119HR____--ih.pdf",
+      "name": "Senate amendments to H.R. 5334 – \tLindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/118858/documents/BILLS-119hr5334eas.pdf",
       "format": "PDF"
     }
   ]
