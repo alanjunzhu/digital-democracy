@@ -9,8 +9,26 @@
     "name": "Natural Resources Committee"
   },
   "url": null,
-  "billCount": 20,
+  "billCount": 18,
   "bills": [
+    {
+      "billId": "hr7269",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 7269,
+      "relationshipType": "Referred to",
+      "actionDate": "2026-09-10",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7269"
+    },
+    {
+      "billId": "hr8674",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8674,
+      "relationshipType": "Referred to",
+      "actionDate": "2026-09-10",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8674"
+    },
     {
       "billId": "hr2827",
       "congress": 119,
@@ -154,42 +172,6 @@
       "relationshipType": "Hearings By (subcommittee)",
       "actionDate": "2025-11-19",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/5696"
-    },
-    {
-      "billId": "hr3654",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 3654,
-      "relationshipType": "Hearings By (subcommittee)",
-      "actionDate": "2025-09-09",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3654"
-    },
-    {
-      "billId": "hr3903",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 3903,
-      "relationshipType": "Hearings By (subcommittee)",
-      "actionDate": "2025-09-09",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3903"
-    },
-    {
-      "billId": "hr4463",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4463,
-      "relationshipType": "Hearings By (subcommittee)",
-      "actionDate": "2025-09-09",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4463"
-    },
-    {
-      "billId": "hr681",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 681,
-      "relationshipType": "Hearings By (subcommittee)",
-      "actionDate": "2025-09-09",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/681"
     }
   ]
 }

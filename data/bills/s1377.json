@@ -11,15 +11,27 @@
     "party": "R",
     "state": "ND"
   },
-  "latestAction": "Held at the desk.",
-  "latestActionDate": "2026-06-15",
-  "updateDate": "2026-09-03T11:03:20Z",
+  "latestAction": "Referred to the House Committee on Natural Resources.",
+  "latestActionDate": "2026-09-10",
+  "updateDate": "2026-09-12T08:05:50Z",
   "originChamber": "Senate",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1377",
   "summary": "<p><strong>Theodore Roosevelt National Park Wild Horses Protection Act</strong></p><p>This bill directs the Department of the Interior to maintain a genetically diverse herd of horses, with a population of no fewer than 150 horses, in the South Unit of Theodore Roosevelt National Park in North Dakota. Interior must develop a management plan to protect the horses while ensuring that the natural resources within the park are not adversely impacted.</p><p>The bill also prohibits Interior from removing horses from the park unless the removal is (1) to maintain a genetically diverse herd of horses, (2) in the case of an emergency, or (3) to protect public health and safety.</p><p>Interior must annually monitor, assess, and publish findings regarding the population, structure, and health of the horses in the park.</p>",
   "cosponsors": 1,
   "committees": [
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-10T19:30:00Z"
+        }
+      ]
+    },
     {
       "name": "Energy and Natural Resources Committee",
       "systemCode": "sseg00",
@@ -43,6 +55,16 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-10",
+      "text": "Referred to the House Committee on Natural Resources.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-10",
+      "text": "Referred to the Subcommittee on Federal Lands.",
+      "chamber": "House"
+    },
     {
       "date": "2026-06-15",
       "text": "Held at the desk.",

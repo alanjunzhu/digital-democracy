@@ -89,6 +89,18 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1529,
+      "billId": "hres1529",
+      "title": "Congratulating the Paseo Verde Little League baseball team on winning the 2026 Little League World Series United States Championship.",
+      "introducedDate": "2026-09-10",
+      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
+      "latestActionDate": "2026-09-10",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1529"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10292,
       "billId": "hr10292",
@@ -674,18 +686,6 @@
       "latestActionDate": "2025-03-18",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/2233"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 1584,
-      "billId": "hr1584",
-      "title": "Democracy in Design Act",
-      "introducedDate": "2025-02-25",
-      "latestAction": "Referred to the Subcommittee on Economic Development, Public Buildings, and Emergency Management.",
-      "latestActionDate": "2025-02-25",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1584"
     }
   ]
 }

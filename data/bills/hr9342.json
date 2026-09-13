@@ -11,9 +11,9 @@
     "party": "R",
     "state": "OK"
   },
-  "latestAction": "Ordered to be Reported (Amended) by Voice Vote.",
-  "latestActionDate": "2026-06-24",
-  "updateDate": "2026-08-28T15:04:15Z",
+  "latestAction": "Placed on the Union Calendar, Calendar No. 708.",
+  "latestActionDate": "2026-09-10",
+  "updateDate": "2026-09-11T23:06:20Z",
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9342",
@@ -21,11 +21,31 @@
   "cosponsors": 0,
   "committees": [
     {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2026-09-10T20:18:38Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2026-06-18T14:02:45Z"
+        }
+      ]
+    },
+    {
       "name": "Committee on House Administration",
       "systemCode": "hsha00",
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Reported By",
+          "date": "2026-09-10T20:18:26Z"
+        },
         {
           "name": "Markup By",
           "date": "2026-06-24T14:15:00Z"
@@ -35,22 +55,33 @@
           "date": "2026-06-18T14:02:40Z"
         }
       ]
-    },
-    {
-      "name": "Oversight and Government Reform Committee",
-      "systemCode": "hsgo00",
-      "chamber": "House",
-      "type": "Standing",
-      "activities": [
-        {
-          "name": "Referred To",
-          "date": "2026-06-18T14:02:45Z"
-        }
-      ]
     }
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-10",
+      "text": "Placed on the Union Calendar, Calendar No. 708.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-10",
+      "text": "Committee on Oversight and Gov Reform discharged.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-10",
+      "text": "Committee on Oversight and Gov Reform discharged."
+    },
+    {
+      "date": "2026-09-10",
+      "text": "Reported (Amended) by the Committee on House Administration. H. Rept. 119-809, Part I.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-10",
+      "text": "Reported (Amended) by the Committee on House Administration. H. Rept. 119-809, Part I."
+    },
     {
       "date": "2026-06-24",
       "text": "Ordered to be Reported (Amended) by Voice Vote.",
