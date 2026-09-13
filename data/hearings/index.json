@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-12T13:14:07.554Z",
+  "lastUpdated": "2026-09-13T13:58:44.083Z",
   "congress": 119,
   "total": 428,
   "hearings": [
@@ -70,6 +70,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338740?format=json"
+    },
+    {
+      "eventId": "119540",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Oversight Hearing - The Economy Act",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsap23",
+          "name": "House Appropriations Subcommittee on Financial Services and General Government"
+        }
+      ],
+      "location": {
+        "room": "2362-A",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119540?format=json"
     },
     {
       "eventId": "119550",
@@ -202,28 +224,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119548?format=json"
-    },
-    {
-      "eventId": "119540",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Oversight Hearing - The Economy Act",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsap23",
-          "name": "House Appropriations Subcommittee on Financial Services and General Government"
-        }
-      ],
-      "location": {
-        "room": "2362-A",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119540?format=json"
     },
     {
       "eventId": "119543",
