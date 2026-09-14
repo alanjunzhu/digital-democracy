@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-13T07:27:56.260Z",
+  "lastUpdated": "2026-09-14T16:47:19.468Z",
   "congress": 119,
   "total": 500,
   "bills": [
@@ -18,7 +18,7 @@
       },
       "latestAction": "Signed by President.",
       "latestActionDate": "2026-09-11",
-      "updateDate": "2026-09-11T19:41:59Z",
+      "updateDate": "2026-09-14T11:16:18Z",
       "originChamber": "House",
       "policyArea": "Taxation",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/5366"
@@ -38,7 +38,7 @@
       },
       "latestAction": "Signed by President.",
       "latestActionDate": "2026-09-11",
-      "updateDate": "2026-09-11T19:41:43Z",
+      "updateDate": "2026-09-14T11:15:57Z",
       "originChamber": "House",
       "policyArea": "Public Lands and Natural Resources",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/2196"
@@ -58,7 +58,7 @@
       },
       "latestAction": "Signed by President.",
       "latestActionDate": "2026-09-11",
-      "updateDate": "2026-09-11T19:41:29Z",
+      "updateDate": "2026-09-14T11:15:34Z",
       "originChamber": "House",
       "policyArea": "Government Operations and Politics",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/2069"
@@ -78,30 +78,50 @@
       },
       "latestAction": "Signed by President.",
       "latestActionDate": "2026-09-11",
-      "updateDate": "2026-09-11T19:41:16Z",
+      "updateDate": "2026-09-14T11:15:09Z",
       "originChamber": "House",
       "policyArea": "Public Lands and Natural Resources",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/1276"
     },
     {
       "congress": 119,
-      "type": "S.",
-      "number": 1377,
-      "billId": "s1377",
-      "title": "Theodore Roosevelt National Park Wild Horses Protection Act",
-      "introducedDate": "2025-04-09",
+      "type": "H.R.",
+      "number": 9340,
+      "billId": "hr9340",
+      "title": "Ratepayer Protection Act",
+      "introducedDate": "2026-06-18",
       "sponsor": {
-        "bioguideId": "H001061",
-        "name": "John Hoeven",
+        "bioguideId": "E000300",
+        "name": "Gabe Evans",
         "party": "R",
-        "state": "ND"
+        "state": "CO"
       },
-      "latestAction": "Referred to the House Committee on Natural Resources.",
+      "latestAction": "Placed on the Union Calendar, Calendar No. 713.",
       "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-12T08:05:50Z",
-      "originChamber": "Senate",
-      "policyArea": "Public Lands and Natural Resources",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1377"
+      "updateDate": "2026-09-14T13:27:41Z",
+      "originChamber": "House",
+      "policyArea": "Energy",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9340"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9342,
+      "billId": "hr9342",
+      "title": "GPO Modernization Act of 2026",
+      "introducedDate": "2026-06-18",
+      "sponsor": {
+        "bioguideId": "B000740",
+        "name": "Stephanie Bice",
+        "party": "R",
+        "state": "OK"
+      },
+      "latestAction": "Placed on the Union Calendar, Calendar No. 708.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-14T13:19:08Z",
+      "originChamber": "House",
+      "policyArea": "Congress",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9342"
     },
     {
       "congress": 119,
@@ -125,6 +145,26 @@
     },
     {
       "congress": 119,
+      "type": "S.",
+      "number": 1377,
+      "billId": "s1377",
+      "title": "Theodore Roosevelt National Park Wild Horses Protection Act",
+      "introducedDate": "2025-04-09",
+      "sponsor": {
+        "bioguideId": "H001061",
+        "name": "John Hoeven",
+        "party": "R",
+        "state": "ND"
+      },
+      "latestAction": "Referred to the House Committee on Natural Resources.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-12T08:05:50Z",
+      "originChamber": "Senate",
+      "policyArea": "Public Lands and Natural Resources",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1377"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10344,
       "billId": "hr10344",
@@ -142,46 +182,6 @@
       "originChamber": "House",
       "policyArea": "",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10344"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 9342,
-      "billId": "hr9342",
-      "title": "GPO Modernization Act of 2026",
-      "introducedDate": "2026-06-18",
-      "sponsor": {
-        "bioguideId": "B000740",
-        "name": "Stephanie Bice",
-        "party": "R",
-        "state": "OK"
-      },
-      "latestAction": "Placed on the Union Calendar, Calendar No. 708.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T23:06:20Z",
-      "originChamber": "House",
-      "policyArea": "Congress",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9342"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 9340,
-      "billId": "hr9340",
-      "title": "Ratepayer Protection Act",
-      "introducedDate": "2026-06-18",
-      "sponsor": {
-        "bioguideId": "E000300",
-        "name": "Gabe Evans",
-        "party": "R",
-        "state": "CO"
-      },
-      "latestAction": "Placed on the Union Calendar, Calendar No. 713.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T19:51:56Z",
-      "originChamber": "House",
-      "policyArea": "Energy",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9340"
     },
     {
       "congress": 119,
@@ -585,26 +585,6 @@
     },
     {
       "congress": 119,
-      "type": "H.Res.",
-      "number": 1523,
-      "billId": "hres1523",
-      "title": "Expressing support for the designation of November 20, 2026, as \"Carbon Monoxide Poisoning Awareness Day\".",
-      "introducedDate": "2026-09-10",
-      "sponsor": {
-        "bioguideId": "K000398",
-        "name": "Thomas Kean",
-        "party": "R",
-        "state": "NJ"
-      },
-      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T13:18:32Z",
-      "originChamber": "House",
-      "policyArea": "",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1523"
-    },
-    {
-      "congress": 119,
       "type": "H.R.",
       "number": 10346,
       "billId": "hr10346",
@@ -622,6 +602,26 @@
       "originChamber": "House",
       "policyArea": "",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10346"
+    },
+    {
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1523,
+      "billId": "hres1523",
+      "title": "Expressing support for the designation of November 20, 2026, as \"Carbon Monoxide Poisoning Awareness Day\".",
+      "introducedDate": "2026-09-10",
+      "sponsor": {
+        "bioguideId": "K000398",
+        "name": "Thomas Kean",
+        "party": "R",
+        "state": "NJ"
+      },
+      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-11T13:18:32Z",
+      "originChamber": "House",
+      "policyArea": "",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1523"
     },
     {
       "congress": 119,
@@ -726,6 +726,66 @@
     {
       "congress": 119,
       "type": "H.R.",
+      "number": 10349,
+      "billId": "hr10349",
+      "title": "To amend the Public Health Service Act to direct the Secretary of Health and Human Services to establish a Public Safety Mental Health Fellowship Program, and for other purposes.",
+      "introducedDate": "2026-09-10",
+      "sponsor": {
+        "bioguideId": "T000491",
+        "name": "Derek Tran",
+        "party": "D",
+        "state": "CA"
+      },
+      "latestAction": "Referred to the House Committee on Energy and Commerce.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-11T08:05:22Z",
+      "originChamber": "House",
+      "policyArea": "",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10349"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10338,
+      "billId": "hr10338",
+      "title": "To award a Congressional Gold Medal, collectively, to the Naval Special Warfare Development Group (commonly referred to as \"SEAL Team Six\"), in recognition of their critical role in defeating Osama bin Laden in the fight against terrorism.",
+      "introducedDate": "2026-09-10",
+      "sponsor": {
+        "bioguideId": "K000398",
+        "name": "Thomas Kean",
+        "party": "R",
+        "state": "NJ"
+      },
+      "latestAction": "Referred to the Committee on Financial Services, and in addition to the Committee on House Administration, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-11T08:05:50Z",
+      "originChamber": "House",
+      "policyArea": "",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10338"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10339,
+      "billId": "hr10339",
+      "title": "To amend the Terrorism Risk Insurance Act of 2002 to clarify the timing of the assessment with respect to the status of whether an entity is an agency or instrumentality of a terrorist party.",
+      "introducedDate": "2026-09-10",
+      "sponsor": {
+        "bioguideId": "K000398",
+        "name": "Thomas Kean",
+        "party": "R",
+        "state": "NJ"
+      },
+      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-11T08:05:31Z",
+      "originChamber": "House",
+      "policyArea": "",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10339"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
       "number": 10342,
       "billId": "hr10342",
       "title": "To amend the Consolidated Farm and Rural Development Act to expand eligibility of Department of Agriculture loans and grants for fishing and mariculture businesses, and for other purposes.",
@@ -758,70 +818,10 @@
       },
       "latestAction": "Referred to the Committee on Ways and Means, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
       "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:38Z",
+      "updateDate": "2026-09-14T16:02:22Z",
       "originChamber": "House",
-      "policyArea": "",
+      "policyArea": "Social Welfare",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10348"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 10339,
-      "billId": "hr10339",
-      "title": "To amend the Terrorism Risk Insurance Act of 2002 to clarify the timing of the assessment with respect to the status of whether an entity is an agency or instrumentality of a terrorist party.",
-      "introducedDate": "2026-09-10",
-      "sponsor": {
-        "bioguideId": "K000398",
-        "name": "Thomas Kean",
-        "party": "R",
-        "state": "NJ"
-      },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:31Z",
-      "originChamber": "House",
-      "policyArea": "",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10339"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 10338,
-      "billId": "hr10338",
-      "title": "To award a Congressional Gold Medal, collectively, to the Naval Special Warfare Development Group (commonly referred to as \"SEAL Team Six\"), in recognition of their critical role in defeating Osama bin Laden in the fight against terrorism.",
-      "introducedDate": "2026-09-10",
-      "sponsor": {
-        "bioguideId": "K000398",
-        "name": "Thomas Kean",
-        "party": "R",
-        "state": "NJ"
-      },
-      "latestAction": "Referred to the Committee on Financial Services, and in addition to the Committee on House Administration, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:50Z",
-      "originChamber": "House",
-      "policyArea": "",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10338"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 10349,
-      "billId": "hr10349",
-      "title": "To amend the Public Health Service Act to direct the Secretary of Health and Human Services to establish a Public Safety Mental Health Fellowship Program, and for other purposes.",
-      "introducedDate": "2026-09-10",
-      "sponsor": {
-        "bioguideId": "T000491",
-        "name": "Derek Tran",
-        "party": "D",
-        "state": "CA"
-      },
-      "latestAction": "Referred to the House Committee on Energy and Commerce.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:22Z",
-      "originChamber": "House",
-      "policyArea": "",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10349"
     },
     {
       "congress": 119,
@@ -842,46 +842,6 @@
       "originChamber": "House",
       "policyArea": "",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10336"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 10341,
-      "billId": "hr10341",
-      "title": "To amend section 212(l) of the Immigration and Nationality Act with respect to the Guam and Northern Mariana Islands Visa Waiver Program.",
-      "introducedDate": "2026-09-10",
-      "sponsor": {
-        "bioguideId": "K000404",
-        "name": "Kimberlyn King-Hinds",
-        "party": "R",
-        "state": "MP"
-      },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:50Z",
-      "originChamber": "House",
-      "policyArea": "",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10341"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 10340,
-      "billId": "hr10340",
-      "title": "To establish a program in the Library of Congress for the collection of oral histories related to the terrorist attacks of September 11, 2001, and for other purposes.",
-      "introducedDate": "2026-09-10",
-      "sponsor": {
-        "bioguideId": "K000398",
-        "name": "Thomas Kean",
-        "party": "R",
-        "state": "NJ"
-      },
-      "latestAction": "Referred to the House Committee on House Administration.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:35Z",
-      "originChamber": "House",
-      "policyArea": "",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10340"
     },
     {
       "congress": 119,
@@ -926,22 +886,42 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 10333,
-      "billId": "hr10333",
-      "title": "To support national training, technical assistance, and resource centers, to ensure that all individuals with significant expressive communication disabilities have access to the augmentative and alternative communication the individuals need to interact with others, in order to learn, work, socialize, and take advantage of all aspects of life in the United States.",
+      "number": 10340,
+      "billId": "hr10340",
+      "title": "To establish a program in the Library of Congress for the collection of oral histories related to the terrorist attacks of September 11, 2001, and for other purposes.",
       "introducedDate": "2026-09-10",
       "sponsor": {
-        "bioguideId": "D000624",
-        "name": "Debbie Dingell",
-        "party": "D",
-        "state": "MI"
+        "bioguideId": "K000398",
+        "name": "Thomas Kean",
+        "party": "R",
+        "state": "NJ"
       },
-      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestAction": "Referred to the House Committee on House Administration.",
       "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:21Z",
+      "updateDate": "2026-09-11T08:05:35Z",
       "originChamber": "House",
       "policyArea": "",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10333"
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10340"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10341,
+      "billId": "hr10341",
+      "title": "To amend section 212(l) of the Immigration and Nationality Act with respect to the Guam and Northern Mariana Islands Visa Waiver Program.",
+      "introducedDate": "2026-09-10",
+      "sponsor": {
+        "bioguideId": "K000404",
+        "name": "Kimberlyn King-Hinds",
+        "party": "R",
+        "state": "MP"
+      },
+      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-11T08:05:50Z",
+      "originChamber": "House",
+      "policyArea": "",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10341"
     },
     {
       "congress": 119,
@@ -962,6 +942,26 @@
       "originChamber": "House",
       "policyArea": "",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10337"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10333,
+      "billId": "hr10333",
+      "title": "To support national training, technical assistance, and resource centers, to ensure that all individuals with significant expressive communication disabilities have access to the augmentative and alternative communication the individuals need to interact with others, in order to learn, work, socialize, and take advantage of all aspects of life in the United States.",
+      "introducedDate": "2026-09-10",
+      "sponsor": {
+        "bioguideId": "D000624",
+        "name": "Debbie Dingell",
+        "party": "D",
+        "state": "MI"
+      },
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-11T08:05:21Z",
+      "originChamber": "House",
+      "policyArea": "",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10333"
     },
     {
       "congress": 119,
@@ -1086,26 +1086,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 6869,
-      "billId": "hr6869",
-      "title": "To amend the Aamodt Litigation Settlement Act to modify a provision relating to the extension of certain dates for the completion of the Regional Water System, and for other purposes.",
-      "introducedDate": "2025-12-18",
-      "sponsor": {
-        "bioguideId": "L000273",
-        "name": "Teresa Leger Fernandez",
-        "party": "D",
-        "state": "NM"
-      },
-      "latestAction": "Referred to the Subcommittee on Water, Wildlife and Fisheries.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:40Z",
-      "originChamber": "House",
-      "policyArea": "Native Americans",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6869"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 7269,
       "billId": "hr7269",
       "title": "Helping Our People Act of 2026",
@@ -1122,6 +1102,26 @@
       "originChamber": "House",
       "policyArea": "Native Americans",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7269"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 6869,
+      "billId": "hr6869",
+      "title": "To amend the Aamodt Litigation Settlement Act to modify a provision relating to the extension of certain dates for the completion of the Regional Water System, and for other purposes.",
+      "introducedDate": "2025-12-18",
+      "sponsor": {
+        "bioguideId": "L000273",
+        "name": "Teresa Leger Fernandez",
+        "party": "D",
+        "state": "NM"
+      },
+      "latestAction": "Referred to the Subcommittee on Water, Wildlife and Fisheries.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-11T08:05:40Z",
+      "originChamber": "House",
+      "policyArea": "Native Americans",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6869"
     },
     {
       "congress": 119,
@@ -1186,26 +1186,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 9148,
-      "billId": "hr9148",
-      "title": "Scipio Jones House Assessment Act",
-      "introducedDate": "2026-06-04",
-      "sponsor": {
-        "bioguideId": "H001072",
-        "name": "J. Hill",
-        "party": "R",
-        "state": "AR"
-      },
-      "latestAction": "Referred to the Subcommittee on Federal Lands.",
-      "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:28Z",
-      "originChamber": "House",
-      "policyArea": "Public Lands and Natural Resources",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9148"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 9017,
       "billId": "hr9017",
       "title": "Restore Florida Water Independence Act of 2026",
@@ -1226,22 +1206,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 2323,
-      "billId": "hr2323",
-      "title": "Big Bend National Park Boundary Adjustment Act",
-      "introducedDate": "2025-03-25",
+      "number": 9148,
+      "billId": "hr9148",
+      "title": "Scipio Jones House Assessment Act",
+      "introducedDate": "2026-06-04",
       "sponsor": {
-        "bioguideId": "G000594",
-        "name": "Tony Gonzales",
+        "bioguideId": "H001072",
+        "name": "J. Hill",
         "party": "R",
-        "state": "TX"
+        "state": "AR"
       },
       "latestAction": "Referred to the Subcommittee on Federal Lands.",
       "latestActionDate": "2026-09-10",
-      "updateDate": "2026-09-11T08:05:26Z",
+      "updateDate": "2026-09-11T08:05:28Z",
       "originChamber": "House",
       "policyArea": "Public Lands and Natural Resources",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2323"
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9148"
     },
     {
       "congress": 119,
@@ -1262,6 +1242,26 @@
       "originChamber": "House",
       "policyArea": "Public Lands and Natural Resources",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7495"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 2323,
+      "billId": "hr2323",
+      "title": "Big Bend National Park Boundary Adjustment Act",
+      "introducedDate": "2025-03-25",
+      "sponsor": {
+        "bioguideId": "G000594",
+        "name": "Tony Gonzales",
+        "party": "R",
+        "state": "TX"
+      },
+      "latestAction": "Referred to the Subcommittee on Federal Lands.",
+      "latestActionDate": "2026-09-10",
+      "updateDate": "2026-09-11T08:05:26Z",
+      "originChamber": "House",
+      "policyArea": "Public Lands and Natural Resources",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2323"
     },
     {
       "congress": 119,
@@ -1322,6 +1322,46 @@
       "originChamber": "House",
       "policyArea": "Public Lands and Natural Resources",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/8276"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9496,
+      "billId": "hr9496",
+      "title": "End Tax Penalties on American Hostages Act",
+      "introducedDate": "2026-06-29",
+      "sponsor": {
+        "bioguideId": "T000478",
+        "name": "Claudia Tenney",
+        "party": "R",
+        "state": "NY"
+      },
+      "latestAction": "Placed on the Union Calendar, Calendar No. 697.",
+      "latestActionDate": "2026-09-08",
+      "updateDate": "2026-09-14T14:47:29Z",
+      "originChamber": "House",
+      "policyArea": "Taxation",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9496"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10319,
+      "billId": "hr10319",
+      "title": "Gender Delusion Disqualification Act",
+      "introducedDate": "2026-09-08",
+      "sponsor": {
+        "bioguideId": "M000194",
+        "name": "Nancy Mace",
+        "party": "R",
+        "state": "SC"
+      },
+      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
+      "latestActionDate": "2026-09-08",
+      "updateDate": "2026-09-14T14:32:50Z",
+      "originChamber": "House",
+      "policyArea": "Government Operations and Politics",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10319"
     },
     {
       "congress": 119,
@@ -1546,26 +1586,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 10319,
-      "billId": "hr10319",
-      "title": "Gender Delusion Disqualification Act",
-      "introducedDate": "2026-09-08",
-      "sponsor": {
-        "bioguideId": "M000194",
-        "name": "Nancy Mace",
-        "party": "R",
-        "state": "SC"
-      },
-      "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
-      "latestActionDate": "2026-09-08",
-      "updateDate": "2026-09-11T04:08:23Z",
-      "originChamber": "House",
-      "policyArea": "",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10319"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 10310,
       "billId": "hr10310",
       "title": "Robo COP Act",
@@ -1666,26 +1686,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 10320,
-      "billId": "hr10320",
-      "title": "Town Halls for All Act of 2026",
-      "introducedDate": "2026-09-08",
-      "sponsor": {
-        "bioguideId": "N000191",
-        "name": "Joe Neguse",
-        "party": "D",
-        "state": "CO"
-      },
-      "latestAction": "Referred to the House Committee on House Administration.",
-      "latestActionDate": "2026-09-08",
-      "updateDate": "2026-09-10T14:06:24Z",
-      "originChamber": "House",
-      "policyArea": "Congress",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10320"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 10323,
       "billId": "hr10323",
       "title": "Thirty-Two Hour Workweek Act",
@@ -1706,22 +1706,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 10322,
-      "billId": "hr10322",
-      "title": "Data Center Fair Share Act",
+      "number": 10320,
+      "billId": "hr10320",
+      "title": "Town Halls for All Act of 2026",
       "introducedDate": "2026-09-08",
       "sponsor": {
-        "bioguideId": "S001230",
-        "name": "Suhas Subramanyam",
+        "bioguideId": "N000191",
+        "name": "Joe Neguse",
         "party": "D",
-        "state": "VA"
+        "state": "CO"
       },
-      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Transportation and Infrastructure, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestAction": "Referred to the House Committee on House Administration.",
       "latestActionDate": "2026-09-08",
-      "updateDate": "2026-09-10T14:05:01Z",
+      "updateDate": "2026-09-10T14:06:24Z",
       "originChamber": "House",
-      "policyArea": "Transportation and Public Works",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10322"
+      "policyArea": "Congress",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10320"
     },
     {
       "congress": 119,
@@ -1742,6 +1742,26 @@
       "originChamber": "House",
       "policyArea": "",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10321"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10322,
+      "billId": "hr10322",
+      "title": "Data Center Fair Share Act",
+      "introducedDate": "2026-09-08",
+      "sponsor": {
+        "bioguideId": "S001230",
+        "name": "Suhas Subramanyam",
+        "party": "D",
+        "state": "VA"
+      },
+      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Transportation and Infrastructure, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2026-09-08",
+      "updateDate": "2026-09-10T14:05:01Z",
+      "originChamber": "House",
+      "policyArea": "Transportation and Public Works",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10322"
     },
     {
       "congress": 119,
@@ -1782,26 +1802,6 @@
       "originChamber": "House",
       "policyArea": "Government Operations and Politics",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9191"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 9496,
-      "billId": "hr9496",
-      "title": "End Tax Penalties on American Hostages Act",
-      "introducedDate": "2026-06-29",
-      "sponsor": {
-        "bioguideId": "T000478",
-        "name": "Claudia Tenney",
-        "party": "R",
-        "state": "NY"
-      },
-      "latestAction": "Placed on the Union Calendar, Calendar No. 697.",
-      "latestActionDate": "2026-09-08",
-      "updateDate": "2026-09-10T12:43:48Z",
-      "originChamber": "House",
-      "policyArea": "Taxation",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9496"
     },
     {
       "congress": 119,
@@ -1962,46 +1962,6 @@
       "originChamber": "House",
       "policyArea": "Taxation",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9501"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 9098,
-      "billId": "hr9098",
-      "title": "Congressional Records Protection Act of 2026",
-      "introducedDate": "2026-06-02",
-      "sponsor": {
-        "bioguideId": "K000376",
-        "name": "Mike Kelly",
-        "party": "R",
-        "state": "PA"
-      },
-      "latestAction": "Placed on the Union Calendar, Calendar No. 704.",
-      "latestActionDate": "2026-09-08",
-      "updateDate": "2026-09-09T14:53:01Z",
-      "originChamber": "House",
-      "policyArea": "Crime and Law Enforcement",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9098"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5634,
-      "billId": "hr5634",
-      "title": "Veterans Flight Training Responsibility Act of 2026",
-      "introducedDate": "2025-09-30",
-      "sponsor": {
-        "bioguideId": "K000398",
-        "name": "Thomas Kean",
-        "party": "R",
-        "state": "NJ"
-      },
-      "latestAction": "Placed on the Union Calendar, Calendar No. 696.",
-      "latestActionDate": "2026-09-08",
-      "updateDate": "2026-09-09T14:52:56Z",
-      "originChamber": "House",
-      "policyArea": "Armed Forces and National Security",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5634"
     },
     {
       "congress": 119,
@@ -2586,42 +2546,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 10240,
-      "billId": "hr10240",
-      "title": "Behavioral Health Crisis Services Expansion Act of 2026",
-      "introducedDate": "2026-09-03",
+      "number": 10128,
+      "billId": "hr10128",
+      "title": "To codify Secretary's Order 3434 of the Department of the Interior.",
+      "introducedDate": "2026-08-20",
       "sponsor": {
-        "bioguideId": "M001227",
-        "name": "Jennifer McClellan",
-        "party": "D",
-        "state": "VA"
+        "bioguideId": "M001177",
+        "name": "Tom McClintock",
+        "party": "R",
+        "state": "CA"
       },
-      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committees on Ways and Means, Armed Services, Veterans' Affairs, Oversight and Government Reform, and Education and Workforce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2026-09-03",
-      "updateDate": "2026-09-09T14:53:02Z",
+      "latestAction": "Subcommittee Hearings Held",
+      "latestActionDate": "2026-09-02",
+      "updateDate": "2026-09-14T15:20:57Z",
       "originChamber": "House",
-      "policyArea": "Health",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10240"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 10293,
-      "billId": "hr10293",
-      "title": "Rural Emergency Hospital Designation Improvement Act",
-      "introducedDate": "2026-09-03",
-      "sponsor": {
-        "bioguideId": "T000487",
-        "name": "Jill Tokuda",
-        "party": "D",
-        "state": "HI"
-      },
-      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2026-09-03",
-      "updateDate": "2026-09-09T14:52:55Z",
-      "originChamber": "House",
-      "policyArea": "Health",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10293"
+      "policyArea": "Public Lands and Natural Resources",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10128"
     },
     {
       "congress": 119,
@@ -2866,22 +2806,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 642,
-      "billId": "hr642",
-      "title": "Myakka Wild and Scenic River Act of 2025",
-      "introducedDate": "2025-01-23",
+      "number": 9129,
+      "billId": "hr9129",
+      "title": "GUARD Act of 2026",
+      "introducedDate": "2026-06-03",
       "sponsor": {
-        "bioguideId": "S001214",
-        "name": "W. Steube",
+        "bioguideId": "M001194",
+        "name": "John Moolenaar",
         "party": "R",
-        "state": "FL"
+        "state": "MI"
       },
-      "latestAction": "Subcommittee Hearings Held",
-      "latestActionDate": "2026-09-02",
-      "updateDate": "2026-09-09T14:52:57Z",
+      "latestAction": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+      "latestActionDate": "2026-09-01",
+      "updateDate": "2026-09-14T15:29:28Z",
       "originChamber": "House",
-      "policyArea": "Public Lands and Natural Resources",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/642"
+      "policyArea": "Science, Technology, Communications",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9129"
     },
     {
       "congress": 119,
@@ -2946,26 +2886,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 8141,
-      "billId": "hr8141",
-      "title": "Fair Credit Reporting Reseller Accuracy Act",
-      "introducedDate": "2026-03-27",
-      "sponsor": {
-        "bioguideId": "L000599",
-        "name": "Michael Lawler",
-        "party": "R",
-        "state": "NY"
-      },
-      "latestAction": "Placed on the Union Calendar, Calendar No. 689.",
-      "latestActionDate": "2026-09-01",
-      "updateDate": "2026-09-11T19:08:02Z",
-      "originChamber": "House",
-      "policyArea": "Finance and Financial Sector",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8141"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 9330,
       "billId": "hr9330",
       "title": "Earned Wage Access Consumer Protection Act",
@@ -2982,6 +2902,26 @@
       "originChamber": "House",
       "policyArea": "Finance and Financial Sector",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9330"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8141,
+      "billId": "hr8141",
+      "title": "Fair Credit Reporting Reseller Accuracy Act",
+      "introducedDate": "2026-03-27",
+      "sponsor": {
+        "bioguideId": "L000599",
+        "name": "Michael Lawler",
+        "party": "R",
+        "state": "NY"
+      },
+      "latestAction": "Placed on the Union Calendar, Calendar No. 689.",
+      "latestActionDate": "2026-09-01",
+      "updateDate": "2026-09-11T19:08:02Z",
+      "originChamber": "House",
+      "policyArea": "Finance and Financial Sector",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8141"
     },
     {
       "congress": 119,
@@ -3126,46 +3066,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 9129,
-      "billId": "hr9129",
-      "title": "GUARD Act of 2026",
-      "introducedDate": "2026-06-03",
-      "sponsor": {
-        "bioguideId": "M001194",
-        "name": "John Moolenaar",
-        "party": "R",
-        "state": "MI"
-      },
-      "latestAction": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
-      "latestActionDate": "2026-09-01",
-      "updateDate": "2026-09-09T14:52:59Z",
-      "originChamber": "House",
-      "policyArea": "Science, Technology, Communications",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9129"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6152,
-      "billId": "hr6152",
-      "title": "Foreign Robocall Elimination Act",
-      "introducedDate": "2025-11-19",
-      "sponsor": {
-        "bioguideId": "M001240",
-        "name": "Addison McDowell",
-        "party": "R",
-        "state": "NC"
-      },
-      "latestAction": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
-      "latestActionDate": "2026-09-01",
-      "updateDate": "2026-09-09T14:52:55Z",
-      "originChamber": "House",
-      "policyArea": "Science, Technology, Communications",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6152"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 5210,
       "billId": "hr5210",
       "title": "To make technical amendments to update statutory references to certain provisions classified to title 2, United States Code, title 50, United States Code, and title 52, United States Code, and to correct related technical errors.",
@@ -3246,22 +3146,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 2555,
-      "billId": "hr2555",
-      "title": "Freedom of Association in Higher Education Act of 2026",
-      "introducedDate": "2025-04-01",
+      "number": 5063,
+      "billId": "hr5063",
+      "title": "Safe Beaches, Safe Swimmers Act",
+      "introducedDate": "2025-08-29",
       "sponsor": {
-        "bioguideId": "H001093",
-        "name": "Erin Houchin",
+        "bioguideId": "K000399",
+        "name": "Jennifer Kiggans",
         "party": "R",
-        "state": "IN"
+        "state": "VA"
       },
-      "latestAction": "Placed on the Union Calendar, Calendar No. 682.",
+      "latestAction": "Placed on the Union Calendar, Calendar No. 673.",
       "latestActionDate": "2026-08-27",
-      "updateDate": "2026-09-11T21:06:20Z",
+      "updateDate": "2026-09-14T12:29:10Z",
       "originChamber": "House",
-      "policyArea": "Education",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2555"
+      "policyArea": "Public Lands and Natural Resources",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5063"
     },
     {
       "congress": 119,
@@ -3282,6 +3182,26 @@
       "originChamber": "House",
       "policyArea": "Taxation",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9722"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 2555,
+      "billId": "hr2555",
+      "title": "Freedom of Association in Higher Education Act of 2026",
+      "introducedDate": "2025-04-01",
+      "sponsor": {
+        "bioguideId": "H001093",
+        "name": "Erin Houchin",
+        "party": "R",
+        "state": "IN"
+      },
+      "latestAction": "Placed on the Union Calendar, Calendar No. 682.",
+      "latestActionDate": "2026-08-27",
+      "updateDate": "2026-09-11T21:06:20Z",
+      "originChamber": "House",
+      "policyArea": "Education",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2555"
     },
     {
       "congress": 119,
@@ -3606,42 +3526,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 10173,
-      "billId": "hr10173",
-      "title": "To amend the America COMPETES Reauthorization Act of 2010 to reauthorize the research experiences for undergraduates program at the National Science Foundation, and for other purposes.",
-      "introducedDate": "2026-08-27",
+      "number": 8476,
+      "billId": "hr8476",
+      "title": "No Antisemitism in Education Act of 2026",
+      "introducedDate": "2026-04-23",
       "sponsor": {
-        "bioguideId": "R000620",
-        "name": "Luz Rivas",
-        "party": "D",
-        "state": "CA"
-      },
-      "latestAction": "Referred to the House Committee on Science, Space, and Technology.",
-      "latestActionDate": "2026-08-27",
-      "updateDate": "2026-09-09T14:52:55Z",
-      "originChamber": "House",
-      "policyArea": "",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10173"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 10148,
-      "billId": "hr10148",
-      "title": "Safeguarding America’s Nonprofits Act",
-      "introducedDate": "2026-08-24",
-      "sponsor": {
-        "bioguideId": "S001214",
-        "name": "W. Steube",
+        "bioguideId": "F000484",
+        "name": "Randy Fine",
         "party": "R",
         "state": "FL"
       },
-      "latestAction": "Referred to the House Committee on Ways and Means.",
-      "latestActionDate": "2026-08-24",
-      "updateDate": "2026-09-11T08:05:41Z",
+      "latestAction": "Placed on the Union Calendar, Calendar No. 660.",
+      "latestActionDate": "2026-08-20",
+      "updateDate": "2026-09-14T15:28:32Z",
       "originChamber": "House",
-      "policyArea": "Taxation",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10148"
+      "policyArea": "Education",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8476"
     },
     {
       "congress": 119,
@@ -3846,6 +3746,26 @@
     {
       "congress": 119,
       "type": "S.Con.Res.",
+      "number": 38,
+      "billId": "sconres38",
+      "title": "A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2027 and setting forth the appropriate budgetary levels for fiscal years 2028 through 2036.",
+      "introducedDate": "2026-08-07",
+      "sponsor": {
+        "bioguideId": "J000293",
+        "name": "Ron Johnson",
+        "party": "R",
+        "state": "WI"
+      },
+      "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 550. (text: CR S4571-4577)",
+      "latestActionDate": "2026-08-07",
+      "updateDate": "2026-09-10T18:08:37Z",
+      "originChamber": "Senate",
+      "policyArea": "Economics and Public Finance",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/38"
+    },
+    {
+      "congress": 119,
+      "type": "S.Con.Res.",
       "number": 39,
       "billId": "sconres39",
       "title": "A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2027 and setting forth the appropriate budgetary levels for fiscal years 2028 through 2036.",
@@ -3865,23 +3785,23 @@
     },
     {
       "congress": 119,
-      "type": "S.Con.Res.",
-      "number": 38,
-      "billId": "sconres38",
-      "title": "A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2027 and setting forth the appropriate budgetary levels for fiscal years 2028 through 2036.",
-      "introducedDate": "2026-08-07",
+      "type": "H.J.Res.",
+      "number": 210,
+      "billId": "hjres210",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Nonroad Engine Pollution Control Standards; Ocean-Going Vessels At-Berth; Notice of Decision\".",
+      "introducedDate": "2026-08-06",
       "sponsor": {
-        "bioguideId": "J000293",
-        "name": "Ron Johnson",
+        "bioguideId": "F000480",
+        "name": "Vince Fong",
         "party": "R",
-        "state": "WI"
+        "state": "CA"
       },
-      "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 550. (text: CR S4571-4577)",
-      "latestActionDate": "2026-08-07",
-      "updateDate": "2026-09-10T18:08:37Z",
-      "originChamber": "Senate",
-      "policyArea": "Economics and Public Finance",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/38"
+      "latestAction": "Referred to the House Committee on Energy and Commerce.",
+      "latestActionDate": "2026-08-06",
+      "updateDate": "2026-09-14T15:02:11Z",
+      "originChamber": "House",
+      "policyArea": "Environmental Protection",
+      "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/210"
     },
     {
       "congress": 119,
@@ -3922,26 +3842,6 @@
       "originChamber": "House",
       "policyArea": "Civil Rights and Liberties, Minority Issues",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10052"
-    },
-    {
-      "congress": 119,
-      "type": "H.J.Res.",
-      "number": 210,
-      "billId": "hjres210",
-      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Nonroad Engine Pollution Control Standards; Ocean-Going Vessels At-Berth; Notice of Decision\".",
-      "introducedDate": "2026-08-06",
-      "sponsor": {
-        "bioguideId": "F000480",
-        "name": "Vince Fong",
-        "party": "R",
-        "state": "CA"
-      },
-      "latestAction": "Referred to the House Committee on Energy and Commerce.",
-      "latestActionDate": "2026-08-06",
-      "updateDate": "2026-09-11T08:05:33Z",
-      "originChamber": "House",
-      "policyArea": "Environmental Protection",
-      "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/210"
     },
     {
       "congress": 119,
@@ -4022,6 +3922,26 @@
       "originChamber": "Senate",
       "policyArea": "Native Americans",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1055"
+    },
+    {
+      "congress": 119,
+      "type": "S.",
+      "number": 2511,
+      "billId": "s2511",
+      "title": "College Transparency Act",
+      "introducedDate": "2025-07-29",
+      "sponsor": {
+        "bioguideId": "C001075",
+        "name": "Bill Cassidy",
+        "party": "R",
+        "state": "LA"
+      },
+      "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 537.",
+      "latestActionDate": "2026-08-04",
+      "updateDate": "2026-09-14T15:10:43Z",
+      "originChamber": "Senate",
+      "policyArea": "Education",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2511"
     },
     {
       "congress": 119,
@@ -4182,6 +4102,46 @@
       "originChamber": "Senate",
       "policyArea": "Native Americans",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4417"
+    },
+    {
+      "congress": 119,
+      "type": "S.",
+      "number": 4392,
+      "billId": "s4392",
+      "title": "Energy Security Pacts Act",
+      "introducedDate": "2026-04-27",
+      "sponsor": {
+        "bioguideId": "C001088",
+        "name": "Christopher Coons",
+        "party": "D",
+        "state": "DE"
+      },
+      "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 508.",
+      "latestActionDate": "2026-07-27",
+      "updateDate": "2026-09-14T15:30:00Z",
+      "originChamber": "Senate",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4392"
+    },
+    {
+      "congress": 119,
+      "type": "S.",
+      "number": 4259,
+      "billId": "s4259",
+      "title": "Blue Skies for Taiwan Act of 2026",
+      "introducedDate": "2026-03-26",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "name": "Jeff Merkley",
+        "party": "D",
+        "state": "OR"
+      },
+      "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 507.",
+      "latestActionDate": "2026-07-27",
+      "updateDate": "2026-09-14T13:42:29Z",
+      "originChamber": "Senate",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4259"
     },
     {
       "congress": 119,
@@ -4486,6 +4446,66 @@
     {
       "congress": 119,
       "type": "H.R.",
+      "number": 9723,
+      "billId": "hr9723",
+      "title": "Fit Future Act",
+      "introducedDate": "2026-07-16",
+      "sponsor": {
+        "bioguideId": "M001230",
+        "name": "Ryan Mackenzie",
+        "party": "R",
+        "state": "PA"
+      },
+      "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 33 - 0.",
+      "latestActionDate": "2026-07-21",
+      "updateDate": "2026-09-14T15:47:21Z",
+      "originChamber": "House",
+      "policyArea": "Sports and Recreation",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9723"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8775,
+      "billId": "hr8775",
+      "title": "Ending Predator Access to Union Power Act",
+      "introducedDate": "2026-05-12",
+      "sponsor": {
+        "bioguideId": "W000795",
+        "name": "Joe Wilson",
+        "party": "R",
+        "state": "SC"
+      },
+      "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 33 - 0.",
+      "latestActionDate": "2026-07-21",
+      "updateDate": "2026-09-14T14:33:34Z",
+      "originChamber": "House",
+      "policyArea": "Labor and Employment",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8775"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8003,
+      "billId": "hr8003",
+      "title": "Expanding the Fast Track Act of 2026",
+      "introducedDate": "2026-03-19",
+      "sponsor": {
+        "bioguideId": "D000530",
+        "name": "Christopher Deluzio",
+        "party": "D",
+        "state": "PA"
+      },
+      "latestAction": "Subcommittee Hearings Held",
+      "latestActionDate": "2026-07-21",
+      "updateDate": "2026-09-14T13:14:48Z",
+      "originChamber": "House",
+      "policyArea": "Transportation and Public Works",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8003"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
       "number": 9332,
       "billId": "hr9332",
       "title": "Load Forecasting Enhancement Act",
@@ -4685,26 +4705,6 @@
     },
     {
       "congress": 119,
-      "type": "H.R.",
-      "number": 9799,
-      "billId": "hr9799",
-      "title": "Online Sellers’ Bill of Rights Act of 2026",
-      "introducedDate": "2026-07-21",
-      "sponsor": {
-        "bioguideId": "B001318",
-        "name": "Becca Balint",
-        "party": "D",
-        "state": "VT"
-      },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2026-07-21",
-      "updateDate": "2026-09-09T14:52:55Z",
-      "originChamber": "House",
-      "policyArea": "Commerce",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9799"
-    },
-    {
-      "congress": 119,
       "type": "H.Res.",
       "number": 1442,
       "billId": "hres1442",
@@ -4762,6 +4762,46 @@
       "originChamber": "Senate",
       "policyArea": "Congress",
       "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/801"
+    },
+    {
+      "congress": 119,
+      "type": "S.",
+      "number": 4239,
+      "billId": "s4239",
+      "title": "Plug Offshore Wells Act",
+      "introducedDate": "2026-03-26",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "name": "Peter Welch",
+        "party": "D",
+        "state": "VT"
+      },
+      "latestAction": "Committee on Energy and Natural Resources Subcommittee on Public Lands, Forests, and Mining. Hearings held.",
+      "latestActionDate": "2026-07-15",
+      "updateDate": "2026-09-14T13:20:19Z",
+      "originChamber": "Senate",
+      "policyArea": "Environmental Protection",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4239"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9693,
+      "billId": "hr9693",
+      "title": "Patients First Act of 2026",
+      "introducedDate": "2026-07-15",
+      "sponsor": {
+        "bioguideId": "J000302",
+        "name": "John Joyce",
+        "party": "R",
+        "state": "PA"
+      },
+      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2026-07-15",
+      "updateDate": "2026-09-11T08:05:41Z",
+      "originChamber": "House",
+      "policyArea": "Health",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9693"
     },
     {
       "congress": 119,
@@ -4825,6 +4865,26 @@
     },
     {
       "congress": 119,
+      "type": "S.Res.",
+      "number": 802,
+      "billId": "sres802",
+      "title": "A resolution honoring and celebrating National Boys and Girls Club Week.",
+      "introducedDate": "2026-07-14",
+      "sponsor": {
+        "bioguideId": "B001319",
+        "name": "Katie Britt",
+        "party": "R",
+        "state": "AL"
+      },
+      "latestAction": "Referred to the Committee on the Judiciary. (text: CR S3946)",
+      "latestActionDate": "2026-07-14",
+      "updateDate": "2026-09-14T15:09:41Z",
+      "originChamber": "Senate",
+      "policyArea": "Education",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/802"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 9615,
       "billId": "hr9615",
@@ -4842,26 +4902,6 @@
       "originChamber": "House",
       "policyArea": "Energy",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9615"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 9612,
-      "billId": "hr9612",
-      "title": "American Enrichment Deployment Act",
-      "introducedDate": "2026-07-09",
-      "sponsor": {
-        "bioguideId": "F000478",
-        "name": "Russell Fry",
-        "party": "R",
-        "state": "SC"
-      },
-      "latestAction": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
-      "latestActionDate": "2026-07-14",
-      "updateDate": "2026-09-11T08:05:41Z",
-      "originChamber": "House",
-      "policyArea": "Energy",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9612"
     },
     {
       "congress": 119,
@@ -4926,26 +4966,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 9625,
-      "billId": "hr9625",
-      "title": "Freedom to Build Act",
-      "introducedDate": "2026-07-09",
-      "sponsor": {
-        "bioguideId": "D000594",
-        "name": "Monica De La Cruz",
-        "party": "R",
-        "state": "TX"
-      },
-      "latestAction": "Referred to the House Committee on Financial Services.",
-      "latestActionDate": "2026-07-09",
-      "updateDate": "2026-09-09T14:52:55Z",
-      "originChamber": "House",
-      "policyArea": "Housing and Community Development",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9625"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 9211,
       "billId": "hr9211",
       "title": "Jewish American Security Act",
@@ -4982,6 +5002,26 @@
       "originChamber": "House",
       "policyArea": "Immigration",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9099"
+    },
+    {
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1420,
+      "billId": "hres1420",
+      "title": "Honoring the 31st International President and CEO of Alpha Kappa Alpha Sorority, Inc., Danette Anthony Reed.",
+      "introducedDate": "2026-07-06",
+      "sponsor": {
+        "bioguideId": "W000788",
+        "name": "Nikema Williams",
+        "party": "D",
+        "state": "GA"
+      },
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2026-07-06",
+      "updateDate": "2026-09-14T15:04:16Z",
+      "originChamber": "House",
+      "policyArea": "Education",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1420"
     },
     {
       "congress": 119,
@@ -5326,26 +5366,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 9150,
-      "billId": "hr9150",
-      "title": "Boxing Therapy for Parkinson’s Access Act",
-      "introducedDate": "2026-06-04",
-      "sponsor": {
-        "bioguideId": "L000585",
-        "name": "Darin LaHood",
-        "party": "R",
-        "state": "IL"
-      },
-      "latestAction": "Referred to the Subcommittee on Health.",
-      "latestActionDate": "2026-06-23",
-      "updateDate": "2026-09-11T08:05:37Z",
-      "originChamber": "House",
-      "policyArea": "Armed Forces and National Security",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9150"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 9105,
       "billId": "hr9105",
       "title": "SAFEGUARD Veterans Act of 2026",
@@ -5366,22 +5386,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 9404,
-      "billId": "hr9404",
-      "title": "VA Home Loan Navigator Act",
-      "introducedDate": "2026-06-23",
+      "number": 8290,
+      "billId": "hr8290",
+      "title": "China Exchange Rate Accountability Act of 2026",
+      "introducedDate": "2026-04-15",
       "sponsor": {
-        "bioguideId": "E000299",
-        "name": "Veronica Escobar",
-        "party": "D",
+        "bioguideId": "S000250",
+        "name": "Pete Sessions",
+        "party": "R",
         "state": "TX"
       },
-      "latestAction": "Referred to the House Committee on Veterans' Affairs.",
-      "latestActionDate": "2026-06-23",
-      "updateDate": "2026-09-09T14:52:57Z",
+      "latestAction": "Placed on the Union Calendar, Calendar No. 611.",
+      "latestActionDate": "2026-06-18",
+      "updateDate": "2026-09-14T15:24:57Z",
       "originChamber": "House",
-      "policyArea": "Armed Forces and National Security",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9404"
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8290"
     },
     {
       "congress": 119,
@@ -5445,43 +5465,23 @@
     },
     {
       "congress": 119,
-      "type": "H.R.",
-      "number": 9057,
-      "billId": "hr9057",
-      "title": "COOL Online Act",
-      "introducedDate": "2026-05-29",
+      "type": "S.",
+      "number": 1547,
+      "billId": "s1547",
+      "title": "America the Beautiful Act",
+      "introducedDate": "2025-05-01",
       "sponsor": {
-        "bioguideId": "G000593",
-        "name": "Carlos Gimenez",
+        "bioguideId": "D000618",
+        "name": "Steve Daines",
         "party": "R",
-        "state": "FL"
+        "state": "MT"
       },
-      "latestAction": "Referred to the Subcommittee on Nutrition and Foreign Agriculture.",
-      "latestActionDate": "2026-06-15",
-      "updateDate": "2026-09-12T08:05:51Z",
-      "originChamber": "House",
-      "policyArea": "Commerce",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9057"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8953,
-      "billId": "hr8953",
-      "title": "Preserving Community Food Assistance Act of 2026",
-      "introducedDate": "2026-05-21",
-      "sponsor": {
-        "bioguideId": "Y000067",
-        "name": "Rudy Yakym",
-        "party": "R",
-        "state": "IN"
-      },
-      "latestAction": "Referred to the Subcommittee on Nutrition and Foreign Agriculture.",
-      "latestActionDate": "2026-06-15",
-      "updateDate": "2026-09-12T08:05:51Z",
-      "originChamber": "House",
-      "policyArea": "Agriculture and Food",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8953"
+      "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 439.",
+      "latestActionDate": "2026-06-17",
+      "updateDate": "2026-09-14T15:00:35Z",
+      "originChamber": "Senate",
+      "policyArea": "Public Lands and Natural Resources",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1547"
     },
     {
       "congress": 119,
@@ -5506,22 +5506,42 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 8960,
-      "billId": "hr8960",
-      "title": "Local Beef Marketing Incentive Act of 2026",
+      "number": 8953,
+      "billId": "hr8953",
+      "title": "Preserving Community Food Assistance Act of 2026",
       "introducedDate": "2026-05-21",
       "sponsor": {
-        "bioguideId": "B001309",
-        "name": "Tim Burchett",
+        "bioguideId": "Y000067",
+        "name": "Rudy Yakym",
         "party": "R",
-        "state": "TN"
+        "state": "IN"
       },
-      "latestAction": "Referred to the Subcommittee on Livestock, Dairy, and Poultry.",
+      "latestAction": "Referred to the Subcommittee on Nutrition and Foreign Agriculture.",
       "latestActionDate": "2026-06-15",
       "updateDate": "2026-09-12T08:05:51Z",
       "originChamber": "House",
       "policyArea": "Agriculture and Food",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8960"
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8953"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9057,
+      "billId": "hr9057",
+      "title": "COOL Online Act",
+      "introducedDate": "2026-05-29",
+      "sponsor": {
+        "bioguideId": "G000593",
+        "name": "Carlos Gimenez",
+        "party": "R",
+        "state": "FL"
+      },
+      "latestAction": "Referred to the Subcommittee on Nutrition and Foreign Agriculture.",
+      "latestActionDate": "2026-06-15",
+      "updateDate": "2026-09-12T08:05:51Z",
+      "originChamber": "House",
+      "policyArea": "Commerce",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9057"
     },
     {
       "congress": 119,
@@ -5546,22 +5566,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 9101,
-      "billId": "hr9101",
-      "title": "Rural Grants Transparency Act",
-      "introducedDate": "2026-06-02",
+      "number": 8960,
+      "billId": "hr8960",
+      "title": "Local Beef Marketing Incentive Act of 2026",
+      "introducedDate": "2026-05-21",
       "sponsor": {
-        "bioguideId": "L000595",
-        "name": "Julia Letlow",
+        "bioguideId": "B001309",
+        "name": "Tim Burchett",
         "party": "R",
-        "state": "LA"
+        "state": "TN"
       },
-      "latestAction": "Referred to the Subcommittee on Commodity Markets, Digital Assets, and Rural Development.",
+      "latestAction": "Referred to the Subcommittee on Livestock, Dairy, and Poultry.",
       "latestActionDate": "2026-06-15",
-      "updateDate": "2026-09-12T08:05:50Z",
+      "updateDate": "2026-09-12T08:05:51Z",
       "originChamber": "House",
       "policyArea": "Agriculture and Food",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9101"
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8960"
     },
     {
       "congress": 119,
@@ -5606,6 +5626,26 @@
     {
       "congress": 119,
       "type": "H.R.",
+      "number": 9101,
+      "billId": "hr9101",
+      "title": "Rural Grants Transparency Act",
+      "introducedDate": "2026-06-02",
+      "sponsor": {
+        "bioguideId": "L000595",
+        "name": "Julia Letlow",
+        "party": "R",
+        "state": "LA"
+      },
+      "latestAction": "Referred to the Subcommittee on Commodity Markets, Digital Assets, and Rural Development.",
+      "latestActionDate": "2026-06-15",
+      "updateDate": "2026-09-12T08:05:50Z",
+      "originChamber": "House",
+      "policyArea": "Agriculture and Food",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9101"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
       "number": 9310,
       "billId": "hr9310",
       "title": "Department of Homeland Security Appropriations Act, 2027",
@@ -5626,22 +5666,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 9298,
-      "billId": "hr9298",
-      "title": "Stopping Harmful and Outrageous Torts Act",
+      "number": 9293,
+      "billId": "hr9293",
+      "title": "ReCement Act",
       "introducedDate": "2026-06-11",
       "sponsor": {
-        "bioguideId": "S001228",
-        "name": "Derek Schmidt",
+        "bioguideId": "O000019",
+        "name": "Jay Obernolte",
         "party": "R",
-        "state": "KS"
+        "state": "CA"
       },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestAction": "Referred to the House Committee on Energy and Commerce.",
       "latestActionDate": "2026-06-11",
       "updateDate": "2026-09-11T08:05:41Z",
       "originChamber": "House",
-      "policyArea": "Crime and Law Enforcement",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9298"
+      "policyArea": "Environmental Protection",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9293"
     },
     {
       "congress": 119,
@@ -5662,6 +5702,26 @@
       "originChamber": "House",
       "policyArea": "Environmental Protection",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9293"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9298,
+      "billId": "hr9298",
+      "title": "Stopping Harmful and Outrageous Torts Act",
+      "introducedDate": "2026-06-11",
+      "sponsor": {
+        "bioguideId": "S001228",
+        "name": "Derek Schmidt",
+        "party": "R",
+        "state": "KS"
+      },
+      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestActionDate": "2026-06-11",
+      "updateDate": "2026-09-11T08:05:41Z",
+      "originChamber": "House",
+      "policyArea": "Crime and Law Enforcement",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9298"
     },
     {
       "congress": 119,
@@ -5806,42 +5866,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 9132,
-      "billId": "hr9132",
-      "title": "Preventing International Surrogacy Exploitation Act",
-      "introducedDate": "2026-06-03",
+      "number": 9086,
+      "billId": "hr9086",
+      "title": "Foreign Service Modernization Act",
+      "introducedDate": "2026-06-02",
       "sponsor": {
-        "bioguideId": "P000605",
-        "name": "Scott Perry",
+        "bioguideId": "L000599",
+        "name": "Michael Lawler",
         "party": "R",
-        "state": "PA"
+        "state": "NY"
       },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2026-06-03",
-      "updateDate": "2026-09-09T14:53:02Z",
+      "latestAction": "Referred to the Committee on Foreign Affairs, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2026-06-02",
+      "updateDate": "2026-09-14T15:12:41Z",
       "originChamber": "House",
-      "policyArea": "Immigration",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9132"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 9131,
-      "billId": "hr9131",
-      "title": "Protecting Kids from Creeps Act",
-      "introducedDate": "2026-06-03",
-      "sponsor": {
-        "bioguideId": "P000605",
-        "name": "Scott Perry",
-        "party": "R",
-        "state": "PA"
-      },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2026-06-03",
-      "updateDate": "2026-09-09T14:53:02Z",
-      "originChamber": "House",
-      "policyArea": "Crime and Law Enforcement",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9131"
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9086"
     },
     {
       "congress": 119,
@@ -5862,26 +5902,6 @@
       "originChamber": "House",
       "policyArea": "Health",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9090"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 9043,
-      "billId": "hr9043",
-      "title": "Sex Trafficking Demand Reduction Act",
-      "introducedDate": "2026-05-26",
-      "sponsor": {
-        "bioguideId": "W000812",
-        "name": "Ann Wagner",
-        "party": "R",
-        "state": "MO"
-      },
-      "latestAction": "Referred to the House Committee on Foreign Affairs.",
-      "latestActionDate": "2026-05-26",
-      "updateDate": "2026-09-09T14:52:53Z",
-      "originChamber": "House",
-      "policyArea": "International Affairs",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9043"
     },
     {
       "congress": 119,
@@ -6145,6 +6165,106 @@
     },
     {
       "congress": 119,
+      "type": "H.R.",
+      "number": 8661,
+      "billId": "hr8661",
+      "title": "Foreign Military Financing Loan Authorization Act of 2026",
+      "introducedDate": "2026-05-04",
+      "sponsor": {
+        "bioguideId": "M001199",
+        "name": "Brian Mast",
+        "party": "R",
+        "state": "FL"
+      },
+      "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 37 - 9.",
+      "latestActionDate": "2026-05-13",
+      "updateDate": "2026-09-14T15:33:53Z",
+      "originChamber": "House",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8661"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8649,
+      "billId": "hr8649",
+      "title": "Expanding the Defense Industrial Base Sales Act",
+      "introducedDate": "2026-05-04",
+      "sponsor": {
+        "bioguideId": "B001322",
+        "name": "Michael Baumgartner",
+        "party": "R",
+        "state": "WA"
+      },
+      "latestAction": "Ordered to be Reported Unfavorably by the Yeas and Nays: 23 - 23.",
+      "latestActionDate": "2026-05-13",
+      "updateDate": "2026-09-14T15:32:22Z",
+      "originChamber": "House",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8649"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8562,
+      "billId": "hr8562",
+      "title": "To designate a building of the Chancery of the United States in Pristina, Kosovo, as the \"Eliot L. Engel Building\".",
+      "introducedDate": "2026-04-28",
+      "sponsor": {
+        "bioguideId": "T000486",
+        "name": "Ritchie Torres",
+        "party": "D",
+        "state": "NY"
+      },
+      "latestAction": "Ordered to be Reported by the Yeas and Nays: 39 - 7.",
+      "latestActionDate": "2026-05-13",
+      "updateDate": "2026-09-14T15:30:43Z",
+      "originChamber": "House",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8562"
+    },
+    {
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1179,
+      "billId": "hres1179",
+      "title": "Condemning attacks on civilians in Sudan and calling for an end to external support to the warring parties and for efforts to promote a negotiated settlement of the war.",
+      "introducedDate": "2026-04-15",
+      "sponsor": {
+        "bioguideId": "J000298",
+        "name": "Pramila Jayapal",
+        "party": "D",
+        "state": "WA"
+      },
+      "latestAction": "Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 44 - 2.",
+      "latestActionDate": "2026-05-13",
+      "updateDate": "2026-09-14T15:25:55Z",
+      "originChamber": "House",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1179"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8019,
+      "billId": "hr8019",
+      "title": "U.S.-Greece Defense Cooperation Advancement Act",
+      "introducedDate": "2026-03-19",
+      "sponsor": {
+        "bioguideId": "P000614",
+        "name": "Chris Pappas",
+        "party": "D",
+        "state": "NH"
+      },
+      "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 43 - 3.",
+      "latestActionDate": "2026-05-13",
+      "updateDate": "2026-09-14T13:16:00Z",
+      "originChamber": "House",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8019"
+    },
+    {
+      "congress": 119,
       "type": "S.",
       "number": 4484,
       "billId": "s4484",
@@ -6282,6 +6402,86 @@
       "originChamber": "House",
       "policyArea": "Families",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/8590"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8320,
+      "billId": "hr8320",
+      "title": "USA 6G Global Leadership Act",
+      "introducedDate": "2026-04-16",
+      "sponsor": {
+        "bioguideId": "J000310",
+        "name": "Julie Johnson",
+        "party": "D",
+        "state": "TX"
+      },
+      "latestAction": "Ordered to be Reported by the Yeas and Nays: 41 - 2.",
+      "latestActionDate": "2026-04-22",
+      "updateDate": "2026-09-14T15:28:33Z",
+      "originChamber": "House",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8320"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8287,
+      "billId": "hr8287",
+      "title": "Semiconductor Controls Effectiveness Act of 2026",
+      "introducedDate": "2026-04-15",
+      "sponsor": {
+        "bioguideId": "S001211",
+        "name": "Greg Stanton",
+        "party": "D",
+        "state": "AZ"
+      },
+      "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 43 - 0.",
+      "latestActionDate": "2026-04-22",
+      "updateDate": "2026-09-14T15:19:06Z",
+      "originChamber": "House",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8287"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8283,
+      "billId": "hr8283",
+      "title": "Deterring American AI Model Theft Act of 2026",
+      "introducedDate": "2026-04-15",
+      "sponsor": {
+        "bioguideId": "H001058",
+        "name": "Bill Huizenga",
+        "party": "R",
+        "state": "MI"
+      },
+      "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 43 - 0.",
+      "latestActionDate": "2026-04-22",
+      "updateDate": "2026-09-14T15:16:42Z",
+      "originChamber": "House",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8283"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8170,
+      "billId": "hr8170",
+      "title": "MATCH Act",
+      "introducedDate": "2026-04-02",
+      "sponsor": {
+        "bioguideId": "B001322",
+        "name": "Michael Baumgartner",
+        "party": "R",
+        "state": "WA"
+      },
+      "latestAction": "Ordered to be Reported in the Nature of a Substitute (Amended) by the Yeas and Nays: 36 - 8.",
+      "latestActionDate": "2026-04-22",
+      "updateDate": "2026-09-14T15:09:06Z",
+      "originChamber": "House",
+      "policyArea": "International Affairs",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8170"
     },
     {
       "congress": 119,
@@ -6726,26 +6926,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 7866,
-      "billId": "hr7866",
-      "title": "American Lending Fairness Act of 2026",
-      "introducedDate": "2026-03-09",
-      "sponsor": {
-        "bioguideId": "D000626",
-        "name": "Warren Davidson",
-        "party": "R",
-        "state": "OH"
-      },
-      "latestAction": "Referred to the House Committee on Financial Services.",
-      "latestActionDate": "2026-03-09",
-      "updateDate": "2026-09-09T14:52:57Z",
-      "originChamber": "House",
-      "policyArea": "Finance and Financial Sector",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7866"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 7853,
       "billId": "hr7853",
       "title": "PrEP Access and Coverage Act of 2026",
@@ -6926,6 +7106,26 @@
     {
       "congress": 119,
       "type": "H.R.",
+      "number": 7454,
+      "billId": "hr7454",
+      "title": "USMCA Travel and Tourism Resiliency Act",
+      "introducedDate": "2026-02-09",
+      "sponsor": {
+        "bioguideId": "T000468",
+        "name": "Dina Titus",
+        "party": "D",
+        "state": "NV"
+      },
+      "latestAction": "Referred to the House Committee on Ways and Means.",
+      "latestActionDate": "2026-02-09",
+      "updateDate": "2026-09-14T10:15:43Z",
+      "originChamber": "House",
+      "policyArea": "Foreign Trade and International Finance",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7454"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
       "number": 7450,
       "billId": "hr7450",
       "title": "Disaster Zone Energy Affordability and Investment Act",
@@ -7002,26 +7202,6 @@
       "originChamber": "Senate",
       "policyArea": "Public Lands and Natural Resources",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/91"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 7361,
-      "billId": "hr7361",
-      "title": "No Tax on Restored Benefits Act",
-      "introducedDate": "2026-02-04",
-      "sponsor": {
-        "bioguideId": "G000589",
-        "name": "Lance Gooden",
-        "party": "R",
-        "state": "TX"
-      },
-      "latestAction": "Referred to the House Committee on Ways and Means.",
-      "latestActionDate": "2026-02-04",
-      "updateDate": "2026-09-11T08:05:37Z",
-      "originChamber": "House",
-      "policyArea": "Taxation",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7361"
     },
     {
       "congress": 119,
@@ -7122,26 +7302,6 @@
       "originChamber": "House",
       "policyArea": "International Affairs",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3307"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 7188,
-      "billId": "hr7188",
-      "title": "MOLD Act",
-      "introducedDate": "2026-01-21",
-      "sponsor": {
-        "bioguideId": "P000613",
-        "name": "Jimmy Panetta",
-        "party": "D",
-        "state": "CA"
-      },
-      "latestAction": "Referred to the House Committee on Armed Services.",
-      "latestActionDate": "2026-01-21",
-      "updateDate": "2026-09-09T14:53:01Z",
-      "originChamber": "House",
-      "policyArea": "Armed Forces and National Security",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7188"
     },
     {
       "congress": 119,
@@ -7582,26 +7742,6 @@
       "originChamber": "House",
       "policyArea": "Social Welfare",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6424"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6423,
-      "billId": "hr6423",
-      "title": "HELP Copays Act",
-      "introducedDate": "2025-12-04",
-      "sponsor": {
-        "bioguideId": "K000398",
-        "name": "Thomas Kean",
-        "party": "R",
-        "state": "NJ"
-      },
-      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2025-12-04",
-      "updateDate": "2026-09-09T14:52:54Z",
-      "originChamber": "House",
-      "policyArea": "Health",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6423"
     },
     {
       "congress": 119,
@@ -8066,26 +8206,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 5657,
-      "billId": "hr5657",
-      "title": "Fair Pay for Federal Contractors Act of 2025",
-      "introducedDate": "2025-09-30",
-      "sponsor": {
-        "bioguideId": "P000617",
-        "name": "Ayanna Pressley",
-        "party": "D",
-        "state": "MA"
-      },
-      "latestAction": "Referred to the Committee on Appropriations, and in addition to the Committee on Oversight and Government Reform, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2025-09-30",
-      "updateDate": "2026-09-09T14:52:59Z",
-      "originChamber": "House",
-      "policyArea": "Government Operations and Politics",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5657"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 5511,
       "billId": "hr5511",
       "title": "Algorithmic Accountability Act of 2025",
@@ -8202,26 +8322,6 @@
       "originChamber": "House",
       "policyArea": "Health",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/5434"
-    },
-    {
-      "congress": 119,
-      "type": "H.J.Res.",
-      "number": 122,
-      "billId": "hjres122",
-      "title": "Proposing an amendment to the Constitution of the United States relating to the authority of Congress and the States to regulate contributions and expenditures intended to affect elections and to enact public financing systems for political campaigns.",
-      "introducedDate": "2025-09-17",
-      "sponsor": {
-        "bioguideId": "N000191",
-        "name": "Joe Neguse",
-        "party": "D",
-        "state": "CO"
-      },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2025-09-17",
-      "updateDate": "2026-09-09T14:52:57Z",
-      "originChamber": "House",
-      "policyArea": "Government Operations and Politics",
-      "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/122"
     },
     {
       "congress": 119,
@@ -8426,26 +8526,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 4806,
-      "billId": "hr4806",
-      "title": "College Transparency Act",
-      "introducedDate": "2025-07-29",
-      "sponsor": {
-        "bioguideId": "K000391",
-        "name": "Raja Krishnamoorthi",
-        "party": "D",
-        "state": "IL"
-      },
-      "latestAction": "Referred to the House Committee on Education and Workforce.",
-      "latestActionDate": "2025-07-29",
-      "updateDate": "2026-09-09T14:52:53Z",
-      "originChamber": "House",
-      "policyArea": "Education",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4806"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 4651,
       "billId": "hr4651",
       "title": "Immigration Enforcement Staff Body Camera Accountability Act",
@@ -8646,26 +8726,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 4395,
-      "billId": "hr4395",
-      "title": "Stephanie Tubbs Jones Uterine Fibroid Research and Education Act of 2025",
-      "introducedDate": "2025-07-15",
-      "sponsor": {
-        "bioguideId": "C001067",
-        "name": "Yvette Clarke",
-        "party": "D",
-        "state": "NY"
-      },
-      "latestAction": "Referred to the House Committee on Energy and Commerce.",
-      "latestActionDate": "2025-07-15",
-      "updateDate": "2026-09-09T14:52:55Z",
-      "originChamber": "House",
-      "policyArea": "Health",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4395"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 4365,
       "billId": "hr4365",
       "title": "Consumer Online Payment Transparency and Integrity Act",
@@ -8702,26 +8762,6 @@
       "originChamber": "House",
       "policyArea": "Finance and Financial Sector",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/4382"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4362,
-      "billId": "hr4362",
-      "title": "AFIDA Improvements Act of 2025",
-      "introducedDate": "2025-07-14",
-      "sponsor": {
-        "bioguideId": "B001298",
-        "name": "Don Bacon",
-        "party": "R",
-        "state": "NE"
-      },
-      "latestAction": "Referred to the House Committee on Agriculture.",
-      "latestActionDate": "2025-07-14",
-      "updateDate": "2026-09-09T14:53:02Z",
-      "originChamber": "House",
-      "policyArea": "Agriculture and Food",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4362"
     },
     {
       "congress": 119,
@@ -8806,46 +8846,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 4074,
-      "billId": "hr4074",
-      "title": "Optimizing Postpartum Outcomes Act of 2025",
-      "introducedDate": "2025-06-23",
-      "sponsor": {
-        "bioguideId": "B001298",
-        "name": "Don Bacon",
-        "party": "R",
-        "state": "NE"
-      },
-      "latestAction": "Referred to the House Committee on Energy and Commerce.",
-      "latestActionDate": "2025-06-23",
-      "updateDate": "2026-09-09T14:53:02Z",
-      "originChamber": "House",
-      "policyArea": "Health",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4074"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4032,
-      "billId": "hr4032",
-      "title": "Lowering Broadband Costs for Consumers Act of 2025",
-      "introducedDate": "2025-06-17",
-      "sponsor": {
-        "bioguideId": "F000446",
-        "name": "Randy Feenstra",
-        "party": "R",
-        "state": "IA"
-      },
-      "latestAction": "Referred to the House Committee on Energy and Commerce.",
-      "latestActionDate": "2025-06-17",
-      "updateDate": "2026-09-11T08:05:37Z",
-      "originChamber": "House",
-      "policyArea": "Science, Technology, Communications",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4032"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 4032,
       "billId": "hr4032",
       "title": "Lowering Broadband Costs for Consumers Act of 2025",
@@ -8882,26 +8882,6 @@
       "originChamber": "House",
       "policyArea": "Civil Rights and Liberties, Minority Issues",
       "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/37"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 3954,
-      "billId": "hr3954",
-      "title": "Improving Access to Medicare Coverage Act of 2025",
-      "introducedDate": "2025-06-12",
-      "sponsor": {
-        "bioguideId": "C001069",
-        "name": "Joe Courtney",
-        "party": "D",
-        "state": "CT"
-      },
-      "latestAction": "Referred to the Committee on Ways and Means, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2025-06-12",
-      "updateDate": "2026-09-09T14:52:59Z",
-      "originChamber": "House",
-      "policyArea": "Health",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3954"
     },
     {
       "congress": 119,
@@ -8962,6 +8942,26 @@
       "originChamber": "House",
       "policyArea": "Immigration",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3763"
+    },
+    {
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 442,
+      "billId": "hres442",
+      "title": "Recognizing the importance of California's public higher education systems and reaffirming the United States' commitment to supporting these institutions.",
+      "introducedDate": "2025-05-23",
+      "sponsor": {
+        "bioguideId": "B001287",
+        "name": "Ami Bera",
+        "party": "D",
+        "state": "CA"
+      },
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2025-05-23",
+      "updateDate": "2026-09-14T15:16:30Z",
+      "originChamber": "House",
+      "policyArea": "Education",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/442"
     },
     {
       "congress": 119,
@@ -9085,23 +9085,23 @@
     },
     {
       "congress": 119,
-      "type": "H.R.",
-      "number": 3199,
-      "billId": "hr3199",
-      "title": "Captive Primate Safety Act of 2025",
-      "introducedDate": "2025-05-05",
+      "type": "S.Res.",
+      "number": 205,
+      "billId": "sres205",
+      "title": "A resolution condemning recent attacks on the free press by President Donald J. Trump and reaffirming the United States commitment to preserving and protecting freedom of the press as a cornerstone of democracy.",
+      "introducedDate": "2025-05-06",
       "sponsor": {
-        "bioguideId": "Q000023",
-        "name": "Mike Quigley",
+        "bioguideId": "W000802",
+        "name": "Sheldon Whitehouse",
         "party": "D",
-        "state": "IL"
+        "state": "RI"
       },
-      "latestAction": "Referred to the House Committee on Natural Resources.",
-      "latestActionDate": "2025-05-05",
-      "updateDate": "2026-09-09T14:53:01Z",
-      "originChamber": "House",
-      "policyArea": "Animals",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3199"
+      "latestAction": "Referred to the Committee on the Judiciary. (text: CR S2777)",
+      "latestActionDate": "2025-05-06",
+      "updateDate": "2026-09-14T15:46:07Z",
+      "originChamber": "Senate",
+      "policyArea": "Science, Technology, Communications",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/205"
     },
     {
       "congress": 119,
@@ -9202,6 +9202,26 @@
       "originChamber": "House",
       "policyArea": "Armed Forces and National Security",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/1288"
+    },
+    {
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 164,
+      "billId": "sres164",
+      "title": "A resolution supporting the goals and ideals of National Public Safety Telecommunicators Week.",
+      "introducedDate": "2025-04-09",
+      "sponsor": {
+        "bioguideId": "K000367",
+        "name": "Amy Klobuchar",
+        "party": "D",
+        "state": "MN"
+      },
+      "latestAction": "Referred to the Committee on Commerce, Science, and Transportation. (text: CR S2528)",
+      "latestActionDate": "2025-04-09",
+      "updateDate": "2026-09-14T14:39:34Z",
+      "originChamber": "Senate",
+      "policyArea": "Science, Technology, Communications",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/164"
     },
     {
       "congress": 119,
@@ -9306,26 +9326,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 2244,
-      "billId": "hr2244",
-      "title": "Michael Lecik Military Firefighters Protection Act",
-      "introducedDate": "2025-03-21",
-      "sponsor": {
-        "bioguideId": "B001298",
-        "name": "Don Bacon",
-        "party": "R",
-        "state": "NE"
-      },
-      "latestAction": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
-      "latestActionDate": "2025-04-04",
-      "updateDate": "2026-09-09T14:53:01Z",
-      "originChamber": "House",
-      "policyArea": "Armed Forces and National Security",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2244"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 2627,
       "billId": "hr2627",
       "title": "Keep STEM Talent Act of 2025",
@@ -9422,6 +9422,26 @@
       "originChamber": "House",
       "policyArea": "Finance and Financial Sector",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/2257"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 2120,
+      "billId": "hr2120",
+      "title": "ROCR Value Based Program Act",
+      "introducedDate": "2025-03-14",
+      "sponsor": {
+        "bioguideId": "F000466",
+        "name": "Brian Fitzpatrick",
+        "party": "R",
+        "state": "PA"
+      },
+      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2025-03-14",
+      "updateDate": "2026-09-11T08:05:37Z",
+      "originChamber": "House",
+      "policyArea": "Health",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2120"
     },
     {
       "congress": 119,
@@ -9566,26 +9586,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 1530,
-      "billId": "hr1530",
-      "title": "American Victims of Terrorism Compensation Act",
-      "introducedDate": "2025-02-24",
-      "sponsor": {
-        "bioguideId": "L000599",
-        "name": "Michael Lawler",
-        "party": "R",
-        "state": "NY"
-      },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2025-02-24",
-      "updateDate": "2026-09-09T14:52:54Z",
-      "originChamber": "House",
-      "policyArea": "Crime and Law Enforcement",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1530"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 1502,
       "billId": "hr1502",
       "title": "North Platte Canteen Congressional Gold Medal Act",
@@ -9626,26 +9626,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 1407,
-      "billId": "hr1407",
-      "title": "Permanent Telehealth from Home Act",
-      "introducedDate": "2025-02-18",
-      "sponsor": {
-        "bioguideId": "B001260",
-        "name": "Vern Buchanan",
-        "party": "R",
-        "state": "FL"
-      },
-      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2025-02-18",
-      "updateDate": "2026-09-11T08:05:35Z",
-      "originChamber": "House",
-      "policyArea": "Health",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1407"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 1443,
       "billId": "hr1443",
       "title": "Public Safety Free Speech Act",
@@ -9662,6 +9642,26 @@
       "originChamber": "House",
       "policyArea": "Labor and Employment",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/1443"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 1407,
+      "billId": "hr1407",
+      "title": "Permanent Telehealth from Home Act",
+      "introducedDate": "2025-02-18",
+      "sponsor": {
+        "bioguideId": "B001260",
+        "name": "Vern Buchanan",
+        "party": "R",
+        "state": "FL"
+      },
+      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2025-02-18",
+      "updateDate": "2026-09-11T08:05:35Z",
+      "originChamber": "House",
+      "policyArea": "Health",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1407"
     },
     {
       "congress": 119,
@@ -9826,6 +9826,26 @@
     {
       "congress": 119,
       "type": "H.R.",
+      "number": 879,
+      "billId": "hr879",
+      "title": "Medicare Patient Access and Practice Stabilization Act of 2025",
+      "introducedDate": "2025-01-31",
+      "sponsor": {
+        "bioguideId": "M001210",
+        "name": "Gregory Murphy",
+        "party": "R",
+        "state": "NC"
+      },
+      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2025-01-31",
+      "updateDate": "2026-09-11T08:05:37Z",
+      "originChamber": "House",
+      "policyArea": "Health",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/879"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
       "number": 865,
       "billId": "hr865",
       "title": "Service-Disabled Veteran Opportunities in Small Business Act",
@@ -9886,22 +9906,22 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 621,
-      "billId": "hr621",
-      "title": "Protecting First Responders from Secondary Exposure Act of 2025",
+      "number": 7,
+      "billId": "hr7",
+      "title": "No Taxpayer Funding for Abortion and Abortion Insurance Full Disclosure Act of 2025",
       "introducedDate": "2025-01-22",
       "sponsor": {
-        "bioguideId": "J000295",
-        "name": "David Joyce",
+        "bioguideId": "S000522",
+        "name": "Christopher Smith",
         "party": "R",
-        "state": "OH"
+        "state": "NJ"
       },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committees on the Judiciary, and Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
       "latestActionDate": "2025-01-22",
-      "updateDate": "2026-09-09T14:53:02Z",
+      "updateDate": "2026-09-11T08:05:37Z",
       "originChamber": "House",
-      "policyArea": "Crime and Law Enforcement",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/621"
+      "policyArea": "Health",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7"
     },
     {
       "congress": 119,
@@ -9982,26 +10002,6 @@
       "originChamber": "House",
       "policyArea": "Government Operations and Politics",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/45"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 40,
-      "billId": "hr40",
-      "title": "Commission to Study and Develop Reparation Proposals for African Americans Act",
-      "introducedDate": "2025-01-03",
-      "sponsor": {
-        "bioguideId": "P000617",
-        "name": "Ayanna Pressley",
-        "party": "D",
-        "state": "MA"
-      },
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2025-01-03",
-      "updateDate": "2026-09-09T14:52:54Z",
-      "originChamber": "House",
-      "policyArea": "Civil Rights and Liberties, Minority Issues",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/40"
     }
   ]
 }
