@@ -19,7 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119558?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Patrick McEnroe",
+      "position": "Broadcaster",
+      "organization": "ESPN"
+    },
+    {
+      "name": "Mr. Tommy Brown",
+      "position": "Owner and CEO",
+      "organization": "One Heartbeat Inc."
+    },
+    {
+      "name": "Mr. Aaron Ament, M.A., J.D.",
+      "position": "President",
+      "organization": "National Student Legal Defense Network"
+    },
+    {
+      "name": "Mr. Douglas DePeppe, J.D., LL.M.",
+      "position": "Lieutenant Colonel (Retired), US Army",
+      "organization": "Special Counsel, Buchalter LLP"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

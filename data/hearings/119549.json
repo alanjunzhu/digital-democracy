@@ -36,7 +36,38 @@
     "hr6130"
   ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119549?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Greg Garcia",
+      "position": "Executive Director for Cybersecurity, Healthcare and Public Health Sector Coordinating Council (HSCC)",
+      "organization": ""
+    },
+    {
+      "name": "Anthony Pudlo, PharmD, MBA, MS",
+      "position": "Chief Executive Officer, Tennessee Pharmacists Association (TPA)",
+      "organization": ""
+    },
+    {
+      "name": "Murad Alam, MD, MSCI, MBA, FAAD",
+      "position": "President, American Academy of Dermatology Association (AADA)",
+      "organization": ""
+    },
+    {
+      "name": "Rebecca Andrews, MS, MD, MACP",
+      "position": "Immediate Past Chair, Board of Regents (2026 – 2027), American College of Physicians (ACP)",
+      "organization": ""
+    },
+    {
+      "name": "Eilean Attwood, MD, MPH",
+      "position": "Immediate Past Chair, Board of Regents (2026 – 2027), American College of Physicians (ACP)",
+      "organization": ""
+    },
+    {
+      "name": "Gabi Conecker, MPH",
+      "position": "Co-Founder and Executive Director, Decoding Developmental Epilepsies",
+      "organization": ""
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
@@ -47,11 +78,6 @@
     {
       "name": "H.R. 8163, Provider Reimbursement Stability Act of 2026 (Reps. Murphy and Schneider)",
       "url": "https://www.congress.gov/119/meeting/house/119549/documents/BILLS-119HR8163ih.pdf",
-      "format": "PDF"
-    },
-    {
-      "name": "H.R. 3164, Ensuring Community Access to Pharmacist Services Act (Reps. Smith (NE) and Schneider)",
-      "url": "https://www.congress.gov/119/meeting/house/119549/documents/BILLS-119HR3164ih.pdf",
       "format": "PDF"
     },
     {
@@ -100,16 +126,6 @@
       "format": "PDF"
     },
     {
-      "name": "H.R. 1254, Rural Obstetrics Readiness Act (Rep. Kelly (IL))",
-      "url": "https://www.congress.gov/119/meeting/house/119549/documents/BILLS-119HR1254ih.pdf",
-      "format": "PDF"
-    },
-    {
-      "name": "H.R. 7905, Diabetes Foot Health Access and Modernization Act of 2026 (Reps. Joyce (PA) and DeGette)",
-      "url": "https://www.congress.gov/119/meeting/house/119549/documents/BILLS-119HR7905ih.pdf",
-      "format": "PDF"
-    },
-    {
       "name": "H.R. 1616, Promoting Access to Diabetic Shoes Act (Reps. LaHood and Barragán)",
       "url": "https://www.congress.gov/119/meeting/house/119549/documents/BILLS-119HR1616ih.pdf",
       "format": "PDF"
@@ -127,6 +143,26 @@
     {
       "name": "Hearing Notice",
       "url": "https://www.congress.gov/119/meeting/house/119549/documents/HHRG-119-IF14-20260915-CPg.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Briefing Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119549/documents/HHRG-119-IF14-20260915-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 3164, Ensuring Community Access to Pharmacist Services Act (Reps. Smith (NE) and Schneider)",
+      "url": "https://www.congress.gov/119/meeting/house/119549/documents/BILLS-119HR3164ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 1254, Rural Obstetrics Readiness Act (Rep. Kelly (IL))",
+      "url": "https://www.congress.gov/119/meeting/house/119549/documents/BILLS-119HR1254ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 7905, Diabetes Foot Health Access and Modernization Act of 2026 (Reps. Joyce (PA) and DeGette)",
+      "url": "https://www.congress.gov/119/meeting/house/119549/documents/BILLS-119HR7905ih.pdf",
       "format": "PDF"
     }
   ]

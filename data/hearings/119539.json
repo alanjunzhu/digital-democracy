@@ -15,7 +15,23 @@
   "location": null,
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119539?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Dr. Brian Blase",
+      "position": "Founder and President",
+      "organization": "Paragon Health Institute"
+    },
+    {
+      "name": "Ms. Katherine Martin",
+      "position": "Vice President of Health Affairs",
+      "organization": "University of North Carolina System"
+    },
+    {
+      "name": "Dr. Brian Miller",
+      "position": "Associate Professor",
+      "organization": "School of Medicine"
+    }
+  ],
   "videos": [],
   "meetingDocuments": []
 }

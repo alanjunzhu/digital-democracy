@@ -1,32 +1,14 @@
 {
-  "lastUpdated": "2026-09-13T13:58:44.083Z",
+  "lastUpdated": "2026-09-14T16:03:10.651Z",
   "congress": 119,
   "total": 428,
   "hearings": [
-    {
-      "eventId": "119539",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Examining Healthcare Markets: Fraud and Competition”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-14T13:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju05",
-          "name": "House Judiciary Subcommittee on Administrative State, Regulatory Reform, and Antitrust"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119539?format=json"
-    },
     {
       "eventId": "118858",
       "congress": 119,
       "chamber": "House",
       "type": "Meeting",
-      "title": "H.J. Res. 210 – Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Nonroad Engine Pollution Control Standards; Ocean-Going Vessels At-Berth; Notice of Decision\".; H.J. Res. 213 – Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule issued by the Environmental Protection Agency relating to the \"California State Nonroad Engine Pollution Control Standards; Commercial Harbor Craft Regulations; Notice of Decision\".; H.R. 9576 – National Fraud Enforcement Division Act of 2026; H.R. 10326 – Preventing Rip-offs and Obtaining Oversight of Funds Act; Senate amendments to H.R. 5334 – Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+      "title": "H.J. Res. 210 – Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Nonroad Engine Pollution Control Standards; Ocean-Going Vessels At-Berth; Notice of Decision\".; H.J. Res. 213 – Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule issued by the Environmental Protection Agency relating to the \"California State Nonroad Engine Pollution Control Standards; Commercial Harbor Craft Regulations; Notice of Decision\".; H.R. 9576 – National Fraud Enforcement Division Act of 2026; H.R. 10326 – PROOF Act; Senate amendments to H.R. 5334 – Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
       "meetingStatus": "Scheduled",
       "date": "2026-09-14T20:00:00Z",
       "committees": [
@@ -72,28 +54,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338740?format=json"
     },
     {
-      "eventId": "119540",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Oversight Hearing - The Economy Act",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsap23",
-          "name": "House Appropriations Subcommittee on Financial Services and General Government"
-        }
-      ],
-      "location": {
-        "room": "2362-A",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119540?format=json"
-    },
-    {
       "eventId": "119550",
       "congress": 119,
       "chamber": "House",
@@ -114,6 +74,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119550?format=json"
+    },
+    {
+      "eventId": "119540",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Oversight Hearing - The Economy Act",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsap23",
+          "name": "House Appropriations Subcommittee on Financial Services and General Government"
+        }
+      ],
+      "location": {
+        "room": "2362-A",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119540?format=json"
     },
     {
       "eventId": "119546",
@@ -292,6 +274,67 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338741?format=json"
     },
     {
+      "eventId": "119549",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Examining Legislative Proposals to Reform Medicare Provider Payment and Bolster Health Care Cybersecurity.”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif14",
+          "name": "House Energy and Commerce Subcommittee on Health"
+        }
+      ],
+      "location": {
+        "room": "1334",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr8163",
+        "hr4331",
+        "hr3164",
+        "hr9693",
+        "hr8319",
+        "hr8622",
+        "hr9908",
+        "hr1189",
+        "hr7905",
+        "hr1616",
+        "hr1254",
+        "hr1521",
+        "hr6214",
+        "hr7863",
+        "hr5737",
+        "hr6130"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119549?format=json"
+    },
+    {
+      "eventId": "119544",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Out of Touch: When Union Politics Leave Workers Behind\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119544?format=json"
+    },
+    {
       "eventId": "119562",
       "congress": 119,
       "chamber": "House",
@@ -332,67 +375,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119562?format=json"
     },
     {
-      "eventId": "119544",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"Out of Touch: When Union Politics Leave Workers Behind\"",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed02",
-          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119544?format=json"
-    },
-    {
-      "eventId": "119549",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Examining Legislative Proposals to Reform Medicare Provider Payment and Bolster Health Care Cybersecurity.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif14",
-          "name": "House Energy and Commerce Subcommittee on Health"
-        }
-      ],
-      "location": {
-        "room": "1334",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr8163",
-        "hr4331",
-        "hr3164",
-        "hr9693",
-        "hr8319",
-        "hr8622",
-        "hr9908",
-        "hr1189",
-        "hr7905",
-        "hr1616",
-        "hr1254",
-        "hr1521",
-        "hr6214",
-        "hr7863",
-        "hr5737",
-        "hr6130"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119549?format=json"
-    },
-    {
       "eventId": "119541",
       "congress": 119,
       "chamber": "House",
@@ -415,26 +397,48 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119541?format=json"
     },
     {
-      "eventId": "119545",
+      "eventId": "119572",
       "congress": 119,
       "chamber": "House",
       "type": "Hearing",
-      "title": "Trojan Horses: Covert Foreign Malign Influence Operations in America",
+      "title": "“Restoring Election Integrity: Oversight of Voter Fraud in New Jersey”",
       "meetingStatus": "Scheduled",
       "date": "2026-09-15T18:00:00Z",
       "committees": [
         {
-          "systemCode": "hsfa19",
-          "name": "House Foreign Affairs South and Central Asia Subcommittee"
+          "systemCode": "hsju13",
+          "name": "House Judiciary Subcommittee on Oversight"
         }
       ],
       "location": {
-        "room": "2172",
+        "room": "2141",
         "building": "Rayburn House Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119545?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119572?format=json"
+    },
+    {
+      "eventId": "119571",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“The International Criminal Court’s Threat to the Sovereignty of the United States and its Allies”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju03",
+          "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
+        }
+      ],
+      "location": {
+        "room": "2237",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119571?format=json"
     },
     {
       "eventId": "119553",
@@ -457,6 +461,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119553?format=json"
+    },
+    {
+      "eventId": "119545",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Trojan Horses: Covert Foreign Malign Influence Operations in America",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa19",
+          "name": "House Foreign Affairs South and Central Asia Subcommittee"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119545?format=json"
     },
     {
       "eventId": "119306",
@@ -571,6 +597,64 @@
         "s5249"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338754?format=json"
+    },
+    {
+      "eventId": "119568",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Markup",
+      "title": "Various Measures",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-16T13:45:00Z",
+      "committees": [
+        {
+          "systemCode": "hssm00",
+          "name": "House Small Business"
+        }
+      ],
+      "location": {
+        "room": "2360",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr10329",
+        "hr4615",
+        "hr10328",
+        "hr10238",
+        "hr9718"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119568?format=json"
+    },
+    {
+      "eventId": "119570",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Markup",
+      "title": "H.R. 2442, the Freedom from Unfair Gun Taxes Act of 2025; H.R. 9298, the Stopping Harmful and Outrageous Torts Act;\r\nH.R. 9503, the Officer Leslie Coffelt U.S. Secret Service Police Act; H.R. 3342, the BOP Direct-Hire Authority Act; \r\nH.R. 10335, the Restoring Civil Rights Attorney’s Fees Act of 2026; H.R. 9834, the No Racketeers on our Shores Act; and H.R. 8330, the Stop Climate Shakedowns Act of 2026",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-16T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju00",
+          "name": "House Judiciary"
+        }
+      ],
+      "location": {
+        "room": "2141",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr9834",
+        "hr10335",
+        "hr8330",
+        "hr3342",
+        "hr9298",
+        "hr9503",
+        "hr2442"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119570?format=json"
     },
     {
       "eventId": "119565",
@@ -1173,6 +1257,24 @@
       "location": null,
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119564?format=json"
+    },
+    {
+      "eventId": "119539",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Examining Healthcare Markets: Fraud and Competition”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-14T13:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju05",
+          "name": "House Judiciary Subcommittee on Administrative State, Regulatory Reform, and Antitrust"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119539?format=json"
     },
     {
       "eventId": "119533",
@@ -5159,38 +5261,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119443?format=json"
     },
     {
-      "eventId": "119437",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Nine Pieces of Legislation",
-      "meetingStatus": "Postponed",
-      "date": "2026-07-01T15:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif00",
-          "name": "House Energy and Commerce"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr2004",
-        "hr9340",
-        "hr1266",
-        "hr6529",
-        "hr6633",
-        "hr9339",
-        "hr9332",
-        "hr7970",
-        "hr9335"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119437?format=json"
-    },
-    {
       "eventId": "119438",
       "congress": 119,
       "chamber": "House",
@@ -5307,55 +5377,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119428?format=json"
-    },
-    {
-      "eventId": "119407",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "updated Subcommittee rosters due to changes on the Majority side; General Services Administration Capital Investment and Leasing Program Resolutions' an ANS to H.R. ____, the \"Water Resources Development Act of 2026\"; and other matters cleared for consideration",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-01T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hspw00",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "2167",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119407?format=json"
-    },
-    {
-      "eventId": "119436",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "H.R. 9098, the Congressional Records Protection Act; H.R. 7651, the Chloe Cole Act of 2026; H. Res. 1394, Condemning prosecution policies that give preferential treatment to foreign nationals over United States citizens; H.R. 9191, the National Fossil Act; and H.R. 3100, To amend the National Child Protection Act of 1993 to ensure that businesses and organizations that work with vulnerable populations are able to request background checks for their contractors who work with those populations, as well as for individuals that the businesses or organizations license or certify to provide care for those populations",
-      "meetingStatus": "Postponed",
-      "date": "2026-07-01T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju00",
-          "name": "House Judiciary"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr7651",
-        "hr9098",
-        "hr3100",
-        "hr9191"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119436?format=json"
     },
     {
       "eventId": "119422",
@@ -9359,28 +9380,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119077?format=json"
-    },
-    {
-      "eventId": "119044",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"Force Design or Force in Decline: Reviewing Readiness\"",
-      "meetingStatus": "Scheduled",
-      "date": "2026-03-17T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hspw07",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "2167",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119044?format=json"
     },
     {
       "eventId": "338054",

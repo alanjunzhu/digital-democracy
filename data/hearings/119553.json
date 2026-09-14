@@ -21,11 +21,6 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119553?format=json",
   "witnesses": [
     {
-      "name": "The Honorable Karen Bass (Invited)",
-      "position": "Mayor",
-      "organization": "City of Los Angeles"
-    },
-    {
       "name": "Mr. Paul Webster",
       "position": "Executive Director",
       "organization": "Los Angeles Alliance for Human Rights"
@@ -34,6 +29,11 @@
       "name": "Mr. Jonathan Choe",
       "position": "Senior Fellow and Journalist",
       "organization": "Discovery Institute"
+    },
+    {
+      "name": "The Honorable Karen Bass (Invited)",
+      "position": "Mayor",
+      "organization": "City of Los Angeles"
     }
   ],
   "videos": [],

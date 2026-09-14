@@ -1,0 +1,92 @@
+{
+  "eventId": "119568",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "Various Measures",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T13:45:00Z",
+  "committees": [
+    {
+      "systemCode": "hssm00",
+      "name": "House Small Business"
+    }
+  ],
+  "location": {
+    "room": "2360",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr10329",
+    "hr4615",
+    "hr10328",
+    "hr10238",
+    "hr9718"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119568?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Public Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/HMKP-119-SM00-20260916-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Public Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/HMKP-119-SM00-20260916-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10329 – Combating Foreign Threats to Main Street Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-119HR10329rth.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 4615 – Small Business Payment for Performance Act of 2025",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-119HR4615rth.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____ – Disaster Loan Outreach Consistency Act",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-1190rth.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____ – Ensuring SBA Implementation of GAO Recommendations Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-1191rth.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____ – SBIC Reporting Modernization Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-1192rth.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10238 – Cybersecurity for Small Businesses Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-119HR10238rth.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 9718 – Reshoring American Manufacturing Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-119HR9718rth.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10328 – Badge to Business Act",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-119HR10328rth.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____ – 504 Program Level Flexibility Act",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-1193rth.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. _____ – 504 Modernization and Small Manufacturer Enhancement Act",
+      "url": "https://www.congress.gov/119/meeting/house/119568/documents/BILLS-1195ih.pdf",
+      "format": "PDF"
+    }
+  ]
+}
