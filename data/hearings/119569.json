@@ -1,0 +1,27 @@
+{
+  "eventId": "119569",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "America's Fiscal Future: Examining the Need for a Fiscal Commission",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-21T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsbu00",
+      "name": "House Budget"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119569?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Field Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119569/documents/HHRG-119-BU00-20260921-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

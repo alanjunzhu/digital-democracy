@@ -19,7 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119556?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. John Gale",
+      "position": "Federal Affairs Director",
+      "organization": "Pano AI"
+    },
+    {
+      "name": "Ms. Melissa Roberts",
+      "position": "Founder and Executive Director",
+      "organization": "American Flood Coalition"
+    },
+    {
+      "name": "Dr. Ali Mostafavidarani",
+      "position": "Founder and CEO",
+      "organization": "Resilitix AI"
+    },
+    {
+      "name": "Dr. Mike Falkowski",
+      "position": "Lead Scientist",
+      "organization": "Earth Fire Alliance"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

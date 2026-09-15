@@ -19,7 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119541?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Faryar Shirzad",
+      "position": "Chief Policy Officer",
+      "organization": "Coinbase"
+    },
+    {
+      "name": "Ben Leventhal",
+      "position": "Chief Executive Officer",
+      "organization": "Blackbird Labs, Inc."
+    },
+    {
+      "name": "Andrew Wu",
+      "position": "Associate Professor of Technology and Operations, Faculty  Director, MBA AI Concentration, Faculty Co-Director, Michigan Ross Fintech  Initiative",
+      "organization": "Stephen M. Ross School of Business, University of Michigan"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

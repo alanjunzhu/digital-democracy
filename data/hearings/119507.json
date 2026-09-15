@@ -12,7 +12,11 @@
       "name": "House Natural Resources Subcommittee on Federal Lands"
     }
   ],
-  "location": null,
+  "location": {
+    "room": "1324",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
   "relatedBillIds": [
     "s1051",
     "hr8276",
@@ -76,6 +80,11 @@
     {
       "name": "Hearing Notice",
       "url": "https://www.congress.gov/119/meeting/house/119507/documents/HHRG-119-II10-20260916-SD007.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119507/documents/HHRG-119-II10-20260916-SD002.pdf",
       "format": "PDF"
     }
   ]

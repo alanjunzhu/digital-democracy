@@ -19,7 +19,38 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119559?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Alexis Taylor",
+      "position": "Chief Global Policy Officer",
+      "organization": "International Fresh Produce Association"
+    },
+    {
+      "name": "Mr. Patrick Johnson",
+      "position": "Farmer",
+      "organization": ""
+    },
+    {
+      "name": "Mr. Carlyle Currier",
+      "position": "President",
+      "organization": "Colorado Farm Bureau"
+    },
+    {
+      "name": "Dr. Alex Buck",
+      "position": "Chairman of the Board",
+      "organization": "Plant Based Products Council"
+    },
+    {
+      "name": "Mr. Tyler Shields",
+      "position": "Chief Operating Officer",
+      "organization": "Bingaman & Son Lumber, Inc."
+    },
+    {
+      "name": "Mr. Chad Franke",
+      "position": "President",
+      "organization": "Rocky Mountain Farmers Union"
+    }
+  ],
   "videos": [],
   "meetingDocuments": []
 }

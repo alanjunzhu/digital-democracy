@@ -1,0 +1,61 @@
+{
+  "eventId": "119574",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "H.R. 10357, H.R. 10334, H.R. 6130, H.R. 5439, H.R. 4093, H.R. 10346, and H.R. 10356",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hswm00",
+      "name": "House Ways and Means"
+    }
+  ],
+  "location": {
+    "room": "210",
+    "building": "Capitol",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119574?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 6130, the “Alzheimer’s Screening and Prevention (ASAP) Act of 2025”",
+      "url": "https://www.congress.gov/119/meeting/house/119574/documents/BILLS-1196130ih-U3.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 5439, the “Medically Tailored Home-Delivered Meals Program Pilot Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119574/documents/BILLS-1195439ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 4093, the “Apples to Apples Comparison Act of 2025”",
+      "url": "https://www.congress.gov/119/meeting/house/119574/documents/BILLS-1194093ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10346, the “Stop China’s Exploitation of Congolese Children and Adult Forced Labor through Cobalt Mining Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119574/documents/BILLS-11910346ih-U6.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10357, the “Digital Asset Tax Certainty Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119574/documents/BILLS-11910357ih-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10334, the “EFIN Verification Act of 2026”",
+      "url": "https://www.congress.gov/119/meeting/house/119574/documents/BILLS-11910334ih-U2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10356, the “Empowering Moms Act”",
+      "url": "https://www.congress.gov/119/meeting/house/119574/documents/BILLS-11910356ih-U7.pdf",
+      "format": "PDF"
+    }
+  ]
+}

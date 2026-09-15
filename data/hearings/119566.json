@@ -1,0 +1,44 @@
+{
+  "eventId": "119566",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "H.R. 4464, the Preventive Health Savings Act; H.R. 6470, the Increasing Baseline Updates Act",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T13:30:00Z",
+  "committees": [
+    {
+      "systemCode": "hsbu00",
+      "name": "House Budget"
+    }
+  ],
+  "location": {
+    "room": "210",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr4464",
+    "hr6470"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119566?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Markup Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119566/documents/HMKP-119-BU00-20260916-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 4464, the Preventive Health Savings Act",
+      "url": "https://www.congress.gov/119/meeting/house/119566/documents/BILLS-119HR4464ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6470, the Increasing Baseline Updates Act",
+      "url": "https://www.congress.gov/119/meeting/house/119566/documents/BILLS-119HR6470ih.pdf",
+      "format": "PDF"
+    }
+  ]
+}
