@@ -19,7 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119563?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Dr. Anemone Franz",
+      "position": "Visiting Research Fellow",
+      "organization": "American Enterprise Institute"
+    },
+    {
+      "name": "Mr. Joshua Hodges",
+      "position": "Visiting Fellow",
+      "organization": "Hoover Institute"
+    },
+    {
+      "name": "Dr. Gigi Gronvall",
+      "position": "Professor",
+      "organization": "Johns Hopkins Bloomberg School of Public Health"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

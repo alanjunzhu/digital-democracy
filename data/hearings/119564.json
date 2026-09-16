@@ -15,12 +15,49 @@
   "location": null,
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119564?format=json",
-  "witnesses": [],
-  "videos": [],
+  "witnesses": [
+    {
+      "name": "Mr. Timothy Schenk",
+      "position": "President and Chief Executive Officer",
+      "organization": "Kentucy Bankers Association"
+    },
+    {
+      "name": "Mr. Kyle Aud",
+      "position": "President and Chief Executive Officer",
+      "organization": "Cornerstone Community Bank"
+    },
+    {
+      "name": "Mr. Jason Hawkins",
+      "position": "President and Chief Executive Officer",
+      "organization": "First United Bank"
+    },
+    {
+      "name": "Mr. Zach Worsham",
+      "position": "Vice President",
+      "organization": "Winterwood Inc."
+    }
+  ],
+  "videos": [
+    {
+      "name": "Field Hearing Entitled: Main Street Capital Access Act: Empowering Community Banks",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119564",
+      "format": ""
+    },
+    {
+      "name": "Field Hearing Entitled: Main Street Capital Access Act: Empowering Community Banks",
+      "url": "https://www.youtube.com/watch?v=-PLDJEawMmg",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "Notice",
       "url": "https://www.congress.gov/119/meeting/house/119564/documents/HHRG-119-BA20-20260918-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119564/documents/HHRG-119-BA20-20260918-SD002.pdf",
       "format": "PDF"
     }
   ]

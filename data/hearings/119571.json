@@ -19,7 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119571?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Abraham Bell",
+      "position": "Professor of Law",
+      "organization": "University of San Diego School of Law"
+    },
+    {
+      "name": "Mr. Stuart Smith",
+      "position": "Investigative Analyst",
+      "organization": "Manhattan Institute"
+    },
+    {
+      "name": "Mr. Stephen Rapp",
+      "position": "Senior Fellow",
+      "organization": "Georgetown Law Center on National Security"
+    }
+  ],
   "videos": [],
   "meetingDocuments": []
 }

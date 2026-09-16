@@ -19,7 +19,39 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119543?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Austin Knudsen",
+      "position": "Attorney General",
+      "organization": "Montana Department of Justice"
+    },
+    {
+      "name": "Mr. Myron Lizer",
+      "position": "Former Vice President",
+      "organization": "Navajo Nation"
+    },
+    {
+      "name": "Mr. Trent Shores",
+      "position": "Managing Shareholder",
+      "organization": "GableGotwals"
+    },
+    {
+      "name": "Ms. Abigail Echo-Hawk",
+      "position": "Executive Vice President of the Seattle Indian Health Board",
+      "organization": "Director of the Urban Indian Health Institute"
+    }
+  ],
   "videos": [],
-  "meetingDocuments": []
+  "meetingDocuments": [
+    {
+      "name": "A report from the Urban Indian Health Institute titled, “Not One More: Findings and Recommendations of the Not Invisible Act Commission”, submitted for the Record by Ms. McBath of GA",
+      "url": "https://www.congress.gov/119/meeting/house/119543/documents/HHRG-119-JU08-20260915-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "A 2023 report from the Florida Department of Law Enforcement Medical Examiners Commission, submitted for the Record by Ms. Lee of FL",
+      "url": "https://www.congress.gov/119/meeting/house/119543/documents/HHRG-119-JU08-20260915-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
 }

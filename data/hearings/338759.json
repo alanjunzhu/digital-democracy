@@ -1,0 +1,36 @@
+{
+  "eventId": "338759",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine to take sworn witness testimony.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-23T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssga00",
+      "name": "Senate Homeland Security and Governmental Affairs"
+    }
+  ],
+  "location": {
+    "room": "342",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338759?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine to take sworn witness testimony.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338759",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine to take sworn witness testimony.",
+      "url": "https://www.senate.gov/isvp/?comm=govtaff&filename=govtaff092326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

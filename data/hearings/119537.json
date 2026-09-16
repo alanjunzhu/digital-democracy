@@ -19,12 +19,43 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119537?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Chief John Donnelly, Sr.",
+      "position": "Fire and Emergency Medical Services Chief",
+      "organization": "District of Columbia Fire and Emergency Medical Services Department"
+    },
+    {
+      "name": "Mr. Daniel Nigro",
+      "position": "Former Commissioner",
+      "organization": "Fire Department of the City of New York, Testifying as a Private Citizen"
+    },
+    {
+      "name": "Mr. James Schwartz",
+      "position": "Former Chief",
+      "organization": ""
+    },
+    {
+      "name": "Chief Thomas Currao",
+      "position": "Chief of Fire Prevention",
+      "organization": "Fire Department of the City of New York"
+    },
+    {
+      "name": "Mr. Gregory Ehrie",
+      "position": "Chief Security Officer",
+      "organization": "Port Authority of New York and New Jersey"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Hearing Notice",
       "url": "https://www.congress.gov/119/meeting/house/119537/documents/HHRG-119-HM00-20260916-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119537/documents/HHRG-119-HM00-WList-20260916.pdf",
       "format": "PDF"
     }
   ]

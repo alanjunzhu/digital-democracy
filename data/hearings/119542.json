@@ -19,7 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119542?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Frederick Akshar",
+      "position": "Sheriff",
+      "organization": "Broome County Sheriff's Office"
+    },
+    {
+      "name": "Mrs. Elizabeth Carter",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Mr. Anatoly Varfolomeev",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Ms. Naureen Shah",
+      "position": "Director of Policy and Government Affairs",
+      "organization": "American Civil Liberties Union"
+    }
+  ],
   "videos": [],
   "meetingDocuments": []
 }
