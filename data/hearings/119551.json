@@ -16,7 +16,18 @@
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119551?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Full Committee Markup (September 15, 2026)",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119551",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Markup (September 15, 2026)",
+      "url": "https://www.youtube.com/watch?v=QS3BdGvvoo0",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "ANS to H.R. 10304; ANS and legislation were AGREED TO by voice vote",

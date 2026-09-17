@@ -37,7 +37,18 @@
   ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119573?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Full Committee Markup of 16 Bills",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119573",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Markup of 16 Bills",
+      "url": "https://www.youtube.com/watch?v=RKcoVpdqJWo",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "Notice",
@@ -127,6 +138,46 @@
     {
       "name": "H.R. 5967, Strategic Task Force on Scam Prevention Act",
       "url": "https://www.congress.gov/119/meeting/house/119573/documents/BILLS-119HR5967ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "CARTLA_071",
+      "url": "https://www.congress.gov/119/meeting/house/119573/documents/BILLS-119-HR6832-A000370-Amdt-1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "LANDSM_106",
+      "url": "https://www.congress.gov/119/meeting/house/119573/documents/BILLS-119-HR7502-A000370-Amdt-2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H8255_ANS_01",
+      "url": "https://www.congress.gov/119/meeting/house/119573/documents/BILLS-119-HR8255-A000370-Amdt-3.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "MILLIA_103",
+      "url": "https://www.congress.gov/119/meeting/house/119573/documents/BILLS-119-HR10170-A000370-Amdt-4.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H2713_ANS_02",
+      "url": "https://www.congress.gov/119/meeting/house/119573/documents/BILLS-119-HR2713-A000370-Amdt-5.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H10163_ANS",
+      "url": "https://www.congress.gov/119/meeting/house/119573/documents/BILLS-119-10163-A000370-Amdt-6.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H5967_ANS_02",
+      "url": "https://www.congress.gov/119/meeting/house/119573/documents/BILLS-119-HR5967-A000370-Amdt-7.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H10152_ANS",
+      "url": "https://www.congress.gov/119/meeting/house/119573/documents/BILLS-119-HR10152-A000370-Amdt-8.pdf",
       "format": "PDF"
     }
   ]

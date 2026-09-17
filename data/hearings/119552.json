@@ -1,0 +1,47 @@
+{
+  "eventId": "119552",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Always Ready: A Day in the Life of a United States Coast Guard Member\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-16T17:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw07",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119552?format=json",
+  "witnesses": [
+    {
+      "name": "Vice Admiral Nathan Moore",
+      "position": "Deputy Commandant for Operations",
+      "organization": "United States Coast Guard"
+    },
+    {
+      "name": "Master Chief Petty Officer Phillip Waldron",
+      "position": "Master Chief Petty Officer",
+      "organization": "United States Coast Guard"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119552/documents/HHRG-119-PW07-20260916-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/119552/documents/HHRG-119-PW07-20260916-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

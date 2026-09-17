@@ -23,7 +23,18 @@
   ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119566?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "House Budget Committee Markup",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119566",
+      "format": ""
+    },
+    {
+      "name": "House Budget Committee Markup",
+      "url": "https://www.youtube.com/watch?v=eIsujzAw01c",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "Markup Notice",
@@ -38,6 +49,16 @@
     {
       "name": "H.R. 6470, the Increasing Baseline Updates Act",
       "url": "https://www.congress.gov/119/meeting/house/119566/documents/BILLS-119HR6470ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Vote #1-On Favorably Reporting, without amendment, H.R. 6470",
+      "url": "https://www.congress.gov/119/meeting/house/119566/documents/CRPT-119-BU00-Vote001-20260916.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Vote #2-On Favorably Reporting, without amendment, H.R. 4464",
+      "url": "https://www.congress.gov/119/meeting/house/119566/documents/CRPT-119-BU00-Vote002-20260916.pdf",
       "format": "PDF"
     }
   ]

@@ -1,0 +1,36 @@
+{
+  "eventId": "338766",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine updating America's nuclear waste management policy.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-23T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssev00",
+      "name": "Senate Environment and Public Works"
+    }
+  ],
+  "location": {
+    "room": "406",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338766?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine updating America's nuclear waste management policy.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338766",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine updating America's nuclear waste management policy.",
+      "url": "https://www.senate.gov/isvp/?comm=epw&filename=epw092326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

@@ -21,14 +21,14 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119563?format=json",
   "witnesses": [
     {
-      "name": "Dr. Anemone Franz",
-      "position": "Visiting Research Fellow",
-      "organization": "American Enterprise Institute"
-    },
-    {
       "name": "Mr. Joshua Hodges",
       "position": "Visiting Fellow",
       "organization": "Hoover Institute"
+    },
+    {
+      "name": "Dr. Anemone Franz",
+      "position": "Visiting Research Fellow",
+      "organization": "American Enterprise Institute"
     },
     {
       "name": "Dr. Gigi Gronvall",
@@ -46,6 +46,31 @@
     {
       "name": "Notice",
       "url": "https://www.congress.gov/119/meeting/house/119563/documents/HHRG-119-SY21-20260916-SD002-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Brian Babin",
+      "url": "https://www.congress.gov/119/meeting/house/119563/documents/HHRG-119-SY21-MState-B001291-20260916.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Richard McCormick",
+      "url": "https://www.congress.gov/119/meeting/house/119563/documents/HHRG-119-SY21-MState-M001218-20260916.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Emilia Sykes",
+      "url": "https://www.congress.gov/119/meeting/house/119563/documents/HHRG-119-SY21-MState-S001223-20260916.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Zoe Lofgren",
+      "url": "https://www.congress.gov/119/meeting/house/119563/documents/HHRG-119-SY21-MState-L000397-20260916.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Charter",
+      "url": "https://www.congress.gov/119/meeting/house/119563/documents/HHRG-119-SY21-20260916-SD003.pdf",
       "format": "PDF"
     }
   ]

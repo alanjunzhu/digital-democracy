@@ -19,7 +19,53 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119529?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Dave Miko",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Jeff Grubbe",
+      "position": "Chairman",
+      "organization": "Agua Caliente Band of Cahuilla Indians"
+    },
+    {
+      "name": "The Honorable Mark Macarro",
+      "position": "Chairman",
+      "organization": "Pechanga Band of Indians"
+    },
+    {
+      "name": "The Honorable Christopher Moquino",
+      "position": "Governor",
+      "organization": "San Ildefosno Pueblo"
+    },
+    {
+      "name": "The Honorable Brett Barbre",
+      "position": "Director",
+      "organization": "Yorba Linda Water District"
+    },
+    {
+      "name": "Mr. Michael Sole",
+      "position": "Vice President of Environmental Services",
+      "organization": "NextEra Energy"
+    },
+    {
+      "name": "The Honorable George Roberts",
+      "position": "Board Chair",
+      "organization": "Northwest Florida Water Management District"
+    },
+    {
+      "name": "Ms. Amber Crooks",
+      "position": "Senior Environmental Policy Advisor",
+      "organization": "Conservancy of Southwest Florida"
+    },
+    {
+      "name": "Mr. John Truitt",
+      "position": "Deputy Secretary of Regulatory Programs",
+      "organization": "Florida Department of Environmental Protection"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
@@ -70,6 +116,11 @@
     {
       "name": "Hearing Memo",
       "url": "https://www.congress.gov/119/meeting/house/119529/documents/HHRG-119-II13-20260916-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statements FTR from DOI on H.R. 177, H.R. 5935, H.R. 6869, and H.R. 8546",
+      "url": "https://www.congress.gov/119/meeting/house/119529/documents/HHRG-119-II13-20260916-SD003.pdf",
       "format": "PDF"
     }
   ]
