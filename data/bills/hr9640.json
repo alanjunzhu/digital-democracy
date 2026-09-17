@@ -11,14 +11,14 @@
     "party": "R",
     "state": "VA"
   },
-  "latestAction": "Subcommittee Hearings Held",
-  "latestActionDate": "2026-07-21",
-  "updateDate": "2026-08-26T20:26:54Z",
+  "latestAction": "Ordered to be Reported in the Nature of a Substitute by Unanimous Consent.",
+  "latestActionDate": "2026-09-15",
+  "updateDate": "2026-09-17T08:08:23Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9640",
   "summary": "",
-  "cosponsors": 1,
+  "cosponsors": 5,
   "committees": [
     {
       "name": "Natural Resources Committee",
@@ -26,6 +26,10 @@
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Markup By",
+          "date": "2026-09-15T21:26:31Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-07-09T19:01:50Z"
@@ -35,6 +39,21 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-15",
+      "text": "Ordered to be Reported in the Nature of a Substitute by Unanimous Consent.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Subcommittee on Energy and Mineral Resources Discharged",
+      "chamber": "House"
+    },
     {
       "date": "2026-07-21",
       "text": "Subcommittee Hearings Held",

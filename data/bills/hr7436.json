@@ -11,9 +11,9 @@
     "party": "D",
     "state": "RI"
   },
-  "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 30 - 0.",
-  "latestActionDate": "2026-06-24",
-  "updateDate": "2026-09-11T18:35:58Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-17T10:56:39Z",
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/7436",
@@ -21,11 +21,27 @@
   "cosponsors": 3,
   "committees": [
     {
+      "name": "Homeland Security and Governmental Affairs Committee",
+      "systemCode": "ssga00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-16T22:10:43Z"
+        }
+      ]
+    },
+    {
       "name": "Homeland Security Committee",
       "systemCode": "hshm00",
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Reported By",
+          "date": "2026-09-14T17:51:33Z"
+        },
         {
           "name": "Markup By",
           "date": "2026-06-24T13:56:10Z"
@@ -39,6 +55,53 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote."
+    },
+    {
+      "date": "2026-09-16",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 7436.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Considered under suspension of the rules.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Mr. Van Epps moved to suspend the rules and pass the bill, as amended.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Placed on the Union Calendar, Calendar No. 714.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Reported (Amended) by the Committee on Homeland Security. H. Rept. 119-815.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Reported (Amended) by the Committee on Homeland Security. H. Rept. 119-815."
+    },
     {
       "date": "2026-06-24",
       "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 30 - 0.",

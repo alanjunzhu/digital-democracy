@@ -11,9 +11,9 @@
     "party": "D",
     "state": "FL"
   },
-  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources.",
-  "latestActionDate": "2025-07-15",
-  "updateDate": "2026-09-08T18:09:59Z",
+  "latestAction": "Committee on Energy and Natural Resources. Hearings held.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-17T10:56:44Z",
   "originChamber": "House",
   "policyArea": "Emergency Management",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/900",
@@ -26,6 +26,10 @@
       "chamber": "Senate",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Hearings By (full committee)",
+          "date": "2026-09-16T14:00:00Z"
+        },
         {
           "name": "Referred To",
           "date": "2025-07-15T20:09:25Z"
@@ -55,6 +59,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Committee on Energy and Natural Resources. Hearings held."
+    },
     {
       "date": "2025-07-15",
       "text": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources."

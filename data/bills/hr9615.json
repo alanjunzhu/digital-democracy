@@ -11,9 +11,9 @@
     "party": "R",
     "state": "IA"
   },
-  "latestAction": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
-  "latestActionDate": "2026-07-14",
-  "updateDate": "2026-09-11T20:12:32Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Environment and Public Works.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-17T10:56:34Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9615",
@@ -21,11 +21,27 @@
   "cosponsors": 3,
   "committees": [
     {
+      "name": "Environment and Public Works Committee",
+      "systemCode": "ssev00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-16T20:37:24Z"
+        }
+      ]
+    },
+    {
       "name": "Energy and Commerce Committee",
       "systemCode": "hsif00",
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Reported By",
+          "date": "2026-09-14T19:33:53Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-07-09T19:00:10Z"
@@ -35,6 +51,53 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Environment and Public Works."
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote."
+    },
+    {
+      "date": "2026-09-15",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 9615.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Considered under suspension of the rules.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Mr. Guthrie moved to suspend the rules and pass the bill, as amended.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Placed on the Union Calendar, Calendar No. 717.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Reported (Amended) by the Committee on Energy and Commerce. H. Rept. 119-818.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Reported (Amended) by the Committee on Energy and Commerce. H. Rept. 119-818."
+    },
     {
       "date": "2026-07-14",
       "text": "Forwarded by Subcommittee to Full Committee by Voice Vote.",

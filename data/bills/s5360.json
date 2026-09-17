@@ -11,14 +11,14 @@
     "party": "R",
     "state": "PA"
   },
-  "latestAction": "Read twice and referred to the Committee on Energy and Natural Resources.",
-  "latestActionDate": "2026-08-07",
-  "updateDate": "2026-09-08T18:09:59Z",
+  "latestAction": "Committee on Energy and Natural Resources. Hearings held.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-17T11:03:29Z",
   "originChamber": "Senate",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5360",
   "summary": "",
-  "cosponsors": 4,
+  "cosponsors": 5,
   "committees": [
     {
       "name": "Energy and Natural Resources Committee",
@@ -26,6 +26,10 @@
       "chamber": "Senate",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Hearings By (full committee)",
+          "date": "2026-09-16T14:00:38Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-08-07T16:27:02Z"
@@ -35,6 +39,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Committee on Energy and Natural Resources. Hearings held."
+    },
     {
       "date": "2026-08-07",
       "text": "Read twice and referred to the Committee on Energy and Natural Resources."

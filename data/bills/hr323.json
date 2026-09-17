@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "323",
+  "number": 323,
   "billId": "hr323",
   "title": "To designate the facility of the United States Postal Service located at 80 Prospect Street in Avon, New York, as the Officer Anthony Mazurkiewicz Memorial Post Office Building.",
   "introducedDate": "2025-01-09",
@@ -11,19 +11,66 @@
     "party": "R",
     "state": "NY"
   },
-  "latestAction": "Committee on Homeland Security and Governmental Affairs. Ordered to be reported without amendment favorably.",
-  "latestActionDate": "2026-08-06",
+  "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 591.",
+  "latestActionDate": "2026-09-14",
+  "updateDate": "2026-09-15T10:56:44Z",
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/323",
   "summary": "This bill designates the facility of the United States Postal Service located at 80 Prospect Street in Avon, New York, as the \"Officer Anthony Mazurkiewicz Memorial Post Office Building\".",
   "cosponsors": 24,
   "committees": [
-    "Homeland Security and Governmental Affairs Committee",
-    "Oversight and Government Reform Committee"
+    {
+      "name": "Homeland Security and Governmental Affairs Committee",
+      "systemCode": "ssga00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Reported By",
+          "date": "2026-09-14T23:20:31Z"
+        },
+        {
+          "name": "Markup By",
+          "date": "2026-08-06T13:50:16Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-12-10T20:32:31Z"
+        }
+      ]
+    },
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Markup By",
+          "date": "2025-04-30T14:36:39Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:40:45Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-14",
+      "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 591."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Committee on Homeland Security and Governmental Affairs. Reported by Senator Paul without amendment. Without written report."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Committee on Homeland Security and Governmental Affairs. Reported by Senator Paul without amendment. Without written report."
+    },
     {
       "date": "2026-08-06",
       "text": "Committee on Homeland Security and Governmental Affairs. Ordered to be reported without amendment favorably."

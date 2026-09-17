@@ -11,15 +11,27 @@
     "party": "R",
     "state": "WI"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-08-31",
-  "updateDate": "2026-09-02T15:01:17Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on the Judiciary.",
+  "latestActionDate": "2026-09-14",
+  "updateDate": "2026-09-17T04:38:39Z",
   "originChamber": "House",
   "policyArea": "Crime and Law Enforcement",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/6048",
   "summary": "<p><strong>NDO Fairness Act</strong><br/>&nbsp;<br/>This bill increases the requirements the government must meet to obtain a nondisclosure order (NDO) under the Stored Communications Act (SCA).</p><p>The SCA generally prohibits providers of remote computing services or electronic communication services (providers) from disclosing stored electronic communications or records (e.g., emails) or information pertaining to customers or subscribers. However, the SCA authorizes the government seek a warrant, order, or subpoena to compel providers to disclose electronic communications or records or information pertaining to customers or subscribers during an investigation. Providers may notify customers and subscribers of the warrant, order, or subpoena unless the government obtains a court order—an NDO—that delays the notification.</p><p>This bill raises the standard the government must meet to obtain (or extend) an NDO. The bill also requires the court, before issuing an NDO, to issue a written determination that the standard was met based on specific and articulable facts, and to review the underlying warrant, order, or subpoena. </p><p>The bill requires NDOs to be narrowly tailored. It also limits their duration to 90 days for most investigations, though it permits a duration of up to one year for investigations pertaining to an offense involving child pornography or sexual exploitation of children.</p><p>Finally, the bill requires the Department of Justice to report annually on data related to NDOs, including the number of customers or subscribers targeted; applications for orders; orders granted, extended, or denied; and orders targeting members of the media or conduct related to certain protected activities.</p>",
   "cosponsors": 1,
   "committees": [
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "ssju00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-14T22:09:19Z"
+        }
+      ]
+    },
     {
       "name": "Judiciary Committee",
       "systemCode": "hsju00",
@@ -43,6 +55,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-14",
+      "text": "Received in the Senate and Read twice and referred to the Committee on the Judiciary."
+    },
     {
       "date": "2026-08-31",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

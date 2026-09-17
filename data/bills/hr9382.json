@@ -11,9 +11,9 @@
     "party": "D",
     "state": "NY"
   },
-  "latestAction": "Ordered to be Reported by the Yeas and Nays: 30 - 0.",
-  "latestActionDate": "2026-06-24",
-  "updateDate": "2026-09-09T19:31:42Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-17T10:56:36Z",
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9382",
@@ -21,11 +21,27 @@
   "cosponsors": 3,
   "committees": [
     {
+      "name": "Homeland Security and Governmental Affairs Committee",
+      "systemCode": "ssga00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-16T22:11:28Z"
+        }
+      ]
+    },
+    {
       "name": "Homeland Security Committee",
       "systemCode": "hshm00",
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Reported By",
+          "date": "2026-09-15T17:19:11Z"
+        },
         {
           "name": "Markup By",
           "date": "2026-06-24T13:57:34Z"
@@ -39,6 +55,53 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "On motion to suspend the rules and pass the bill Agreed to by voice vote.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill Agreed to by voice vote."
+    },
+    {
+      "date": "2026-09-16",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 9382.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Considered under suspension of the rules.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Mr. Van Epps moved to suspend the rules and pass the bill.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Placed on the Union Calendar, Calendar No. 726.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Reported by the Committee on Homeland Security. H. Rept. 119-828.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Reported by the Committee on Homeland Security. H. Rept. 119-828."
+    },
     {
       "date": "2026-06-24",
       "text": "Ordered to be Reported by the Yeas and Nays: 30 - 0.",

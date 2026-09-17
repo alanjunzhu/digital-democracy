@@ -11,15 +11,27 @@
     "party": "R",
     "state": "OH"
   },
-  "latestAction": "Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 39 - 0.",
-  "latestActionDate": "2026-07-01",
-  "updateDate": "2026-09-11T20:47:24Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-17T10:56:35Z",
   "originChamber": "House",
   "policyArea": "Taxation",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
   "summary": "<p><strong>Tax Relief for Fraud Victims Act</strong></p><p>This bill expands the federal tax deduction for personal casualty and theft losses by eliminating certain limits, including the requirement that such losses arise from certain disasters. The bill also extends the tax refund deadline and modifies certain retirement plan rules related to certain fraud losses.</p><p>The bill repeals the limit on the federal tax deduction for personal casualty losses (not attributable to a trade, business, or transaction entered into for profit) that&nbsp;allows&nbsp;such losses only if arising from a federal&nbsp;or state declared disaster or to the extent that such losses offset personal casualty gains.</p><p>The bill&nbsp;allows taxpayers to elect to claim a tax deduction for losses arising from a theft involving fraud, deceit, or misrepresentation in the tax year such losses occur (rather than in the tax year discovered). Further, the bill extends the deadline for a refund claim related to a tax deduction for such losses to no less than one year after the date on which the losses are discovered and eliminates certain restrictions on the amount of such refund.</p><p>For early distributions from a qualified retirement plan arising from a theft loss involving fraud, deceit, or misrepresentation for which a tax deduction is allowed, the bill</p><ul><li>waives the 10% penalty,</li><li>extends the deadline for filing a refund claim and eliminates certain restrictions on the amount of such refund, and</li><li>allows one year (beginning on the day after the theft loss is discovered) to repay such early distributions.</li></ul>",
   "cosponsors": 2,
   "committees": [
+    {
+      "name": "Finance Committee",
+      "systemCode": "ssfi00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-16T20:38:18Z"
+        }
+      ]
+    },
     {
       "name": "Ways and Means Committee",
       "systemCode": "hswm00",
@@ -39,6 +51,49 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Finance."
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "On motion to suspend the rules and pass the bill, as amended Agreed to by the Yeas and Nays: (2/3 required): 408 - 17 (Roll no. 305).",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill, as amended Agreed to by the Yeas and Nays: (2/3 required): 408 - 17 (Roll no. 305)."
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Considered as unfinished business.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "At the conclusion of debate, the Yeas and Nays were demanded and ordered. Pursuant to the provisions of clause 8, rule XX, the Chair announced that further proceedings on the motion would be postponed.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 9500.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Considered under suspension of the rules.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Mr. Smith (MO) moved to suspend the rules and pass the bill, as amended.",
+      "chamber": "House"
+    },
     {
       "date": "2026-07-01",
       "text": "Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 39 - 0.",

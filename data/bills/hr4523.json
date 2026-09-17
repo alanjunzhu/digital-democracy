@@ -11,15 +11,27 @@
     "party": "R",
     "state": "MO"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-08-31",
-  "updateDate": "2026-09-02T15:09:16Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on the Judiciary.",
+  "latestActionDate": "2026-09-14",
+  "updateDate": "2026-09-15T10:56:38Z",
   "originChamber": "House",
   "policyArea": "Transportation and Public Works",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/4523",
   "summary": "<p>This bill makes technical amendments to Title 49 (Transportation) of the <em>U.S. Code</em>, including amendments related to the Railroad Rehabilitation and Improvement Financing program.</p>",
   "cosponsors": 0,
   "committees": [
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "ssju00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-14T20:16:34Z"
+        }
+      ]
+    },
     {
       "name": "Judiciary Committee",
       "systemCode": "hsju00",
@@ -39,6 +51,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-14",
+      "text": "Received in the Senate and Read twice and referred to the Committee on the Judiciary."
+    },
     {
       "date": "2026-08-31",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

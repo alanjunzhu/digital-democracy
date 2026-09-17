@@ -11,15 +11,27 @@
     "party": "D",
     "state": "TX"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-08-31",
-  "updateDate": "2026-09-09T20:01:25Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on the Judiciary.",
+  "latestActionDate": "2026-09-14",
+  "updateDate": "2026-09-15T10:56:37Z",
   "originChamber": "House",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/5174",
   "summary": "<p>This bill restates current law concerning specified U.S. space programs and related activities. Those provisions are consolidated into title 51 of the United States Code (National and Commercial Space Programs).</p>",
   "cosponsors": 0,
   "committees": [
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "ssju00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-14T20:13:40Z"
+        }
+      ]
+    },
     {
       "name": "Judiciary Committee",
       "systemCode": "hsju00",
@@ -39,6 +51,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-14",
+      "text": "Received in the Senate and Read twice and referred to the Committee on the Judiciary."
+    },
     {
       "date": "2026-08-31",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

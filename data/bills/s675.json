@@ -11,9 +11,9 @@
     "party": "R",
     "state": "ND"
   },
-  "latestAction": "Subcommittee Hearings Held",
-  "latestActionDate": "2026-09-02",
-  "updateDate": "2026-09-03T08:06:29Z",
+  "latestAction": "Ordered to be Reported by Unanimous Consent.",
+  "latestActionDate": "2026-09-15",
+  "updateDate": "2026-09-17T08:07:58Z",
   "originChamber": "Senate",
   "policyArea": "Arts, Culture, Religion",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/675",
@@ -26,6 +26,10 @@
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Markup By",
+          "date": "2026-09-15T21:30:28Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-08-27T13:01:00Z"
@@ -51,6 +55,21 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-15",
+      "text": "Ordered to be Reported by Unanimous Consent.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Subcommittee on Federal Lands Discharged",
+      "chamber": "House"
+    },
     {
       "date": "2026-09-02",
       "text": "Subcommittee Hearings Held",

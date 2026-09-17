@@ -11,9 +11,9 @@
     "party": "D",
     "state": "MD"
   },
-  "latestAction": "Subcommittee Hearings Held",
-  "latestActionDate": "2026-09-02",
-  "updateDate": "2026-09-10T17:08:32Z",
+  "latestAction": "Ordered to be Reported by Unanimous Consent.",
+  "latestActionDate": "2026-09-15",
+  "updateDate": "2026-09-17T08:07:29Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9600",
@@ -27,6 +27,10 @@
       "type": "Standing",
       "activities": [
         {
+          "name": "Markup By",
+          "date": "2026-09-15T21:25:27Z"
+        },
+        {
           "name": "Referred To",
           "date": "2026-07-06T14:30:15Z"
         }
@@ -35,6 +39,21 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-15",
+      "text": "Ordered to be Reported by Unanimous Consent.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Subcommittee on Federal Lands Discharged",
+      "chamber": "House"
+    },
     {
       "date": "2026-09-02",
       "text": "Subcommittee Hearings Held",

@@ -11,15 +11,27 @@
     "party": "R",
     "state": "AZ"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-08-31",
-  "updateDate": "2026-09-02T15:04:14Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on the Judiciary.",
+  "latestActionDate": "2026-09-14",
+  "updateDate": "2026-09-17T04:38:38Z",
   "originChamber": "House",
   "policyArea": "Crime and Law Enforcement",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/8481",
   "summary": "<p><strong>Kayleigh’s Law Act of 2026</strong></p><p>This bill establishes a federal statutory framework to require federal courts to issue an order prohibiting contact with a victim (i.e., a no-contact order) in the case of a defendant who is convicted of certain violent crimes or sex crimes.</p><p>Specifically, in the case of a defendant convicted of a felony offense that is a crime of violence or that involves a sexual act or sexual conduct, on a motion by the victim or federal government, the court must issue a no-contact order.</p><p>Under the framework, the no-contact order must be imposed at sentencing and be in effect for the lifetime of the defendant unless it is terminated or suspended in accordance with specified procedures. Additionally, no fee may be assessed&nbsp;or collected from a victim in connection with the issuance of a no-contact order.</p>",
   "cosponsors": 21,
   "committees": [
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "ssju00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-14T20:14:57Z"
+        }
+      ]
+    },
     {
       "name": "Judiciary Committee",
       "systemCode": "hsju00",
@@ -43,6 +55,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-14",
+      "text": "Received in the Senate and Read twice and referred to the Committee on the Judiciary."
+    },
     {
       "date": "2026-08-31",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

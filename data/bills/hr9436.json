@@ -11,15 +11,27 @@
     "party": "R",
     "state": "NY"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-09-01",
-  "updateDate": "2026-09-09T13:44:22Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Commerce, Science, and Transportation.",
+  "latestActionDate": "2026-09-14",
+  "updateDate": "2026-09-17T04:38:39Z",
   "originChamber": "House",
   "policyArea": "Animals",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9436",
   "summary": "<p><strong>Northeast Lobsterman Protection Act of 2026</strong></p><p>This bill extends the deadline from 2028 to 2035 for the National Marine Fisheries Service to issue new regulations that protect the endangered Atlantic large whale from certain lobster and crab fishing gear. Under current law, the new regulations must include requirements for the American lobster and Jonah crab fisheries to utilize existing and innovative fishing gear technologies as appropriate to reduce the risk of whales becoming entangled in their gear.</p>",
   "cosponsors": 1,
   "committees": [
+    {
+      "name": "Commerce, Science, and Transportation Committee",
+      "systemCode": "sscm00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-14T20:15:25Z"
+        }
+      ]
+    },
     {
       "name": "Natural Resources Committee",
       "systemCode": "hsii00",
@@ -51,6 +63,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-14",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Commerce, Science, and Transportation."
+    },
     {
       "date": "2026-09-01",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",
@@ -143,10 +159,6 @@
       "date": "2026-06-24",
       "text": "Referred to the House Committee on Natural Resources.",
       "chamber": "House"
-    },
-    {
-      "date": "2026-06-24",
-      "text": "Introduced in House"
     }
   ],
   "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9436/text"

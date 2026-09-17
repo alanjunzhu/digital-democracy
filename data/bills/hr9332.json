@@ -11,9 +11,9 @@
     "party": "R",
     "state": "OH"
   },
-  "latestAction": "Ordered to be Reported by the Yeas and Nays: 47 - 0.",
-  "latestActionDate": "2026-07-21",
-  "updateDate": "2026-09-11T17:50:09Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-17T10:56:36Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9332",
@@ -21,11 +21,27 @@
   "cosponsors": 6,
   "committees": [
     {
+      "name": "Energy and Natural Resources Committee",
+      "systemCode": "sseg00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-16T20:43:13Z"
+        }
+      ]
+    },
+    {
       "name": "Energy and Commerce Committee",
       "systemCode": "hsif00",
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Reported By",
+          "date": "2026-09-14T19:35:36Z"
+        },
         {
           "name": "Markup By",
           "date": "2026-07-21T16:37:42Z"
@@ -43,6 +59,53 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources."
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "On motion to suspend the rules and pass the bill Agreed to by voice vote.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill Agreed to by voice vote."
+    },
+    {
+      "date": "2026-09-15",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 9332.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Considered under suspension of the rules.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Mr. Guthrie moved to suspend the rules and pass the bill.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Placed on the Union Calendar, Calendar No. 722.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Reported by the Committee on Energy and Commerce. H. Rept. 119-823.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Reported by the Committee on Energy and Commerce. H. Rept. 119-823."
+    },
     {
       "date": "2026-07-21",
       "text": "Ordered to be Reported by the Yeas and Nays: 47 - 0.",

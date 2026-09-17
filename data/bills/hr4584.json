@@ -11,15 +11,27 @@
     "party": "R",
     "state": "WA"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-08-31",
-  "updateDate": "2026-09-10T19:23:59Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on the Judiciary.",
+  "latestActionDate": "2026-09-14",
+  "updateDate": "2026-09-15T10:56:38Z",
   "originChamber": "House",
   "policyArea": "Native Americans",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/4584",
   "summary": "<p>This bill updates references in the <em>U.S. Code</em> to certain provisions in Title 25 (Indians). In 2016, Congress transferred certain provisions in Chapter 14 (Miscellaneous) and Chapter 19 (Indian Land Claims Settlements) of Title 25 to new chapters at the end of the title as part of an effort to reclassify the code. To reflect the reclassification of the code, this bill updates references to Title 25.</p>",
   "cosponsors": 0,
   "committees": [
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "ssju00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-14T20:13:03Z"
+        }
+      ]
+    },
     {
       "name": "Judiciary Committee",
       "systemCode": "hsju00",
@@ -39,6 +51,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-14",
+      "text": "Received in the Senate and Read twice and referred to the Committee on the Judiciary."
+    },
     {
       "date": "2026-08-31",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

@@ -11,15 +11,27 @@
     "party": "R",
     "state": "FL"
   },
-  "latestAction": "Placed on the Union Calendar, Calendar No. 699.",
-  "latestActionDate": "2026-09-08",
-  "updateDate": "2026-09-09T14:52:35Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-17T10:56:35Z",
   "originChamber": "House",
   "policyArea": "Taxation",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9498",
   "summary": "<p><strong>Taxpayer Advocate Participation Act</strong></p><p>This bill authorizes the National Taxpayer Advocate to appear as amicus curiae and submit amicus briefs in a U.S. court in cases involving federal tax law. </p><p>Further, the bill requires federal courts to permit such appearances. (An amicus curiae is a person or group that is not a party in a court case but has an interest in the case and may be permitted to submit a brief, known as an amicus brief, to the court in relation to the case.) Under the bill, the National Taxpayer Advocate may present the views of the National Taxpayer Advocate in such a case only with respect to an issue which may broadly affect certain rights of taxpayers.</p><p>As background, the National Taxpayer Advocate leads the Taxpayer Advocate Service, which is an independent organization within the Internal Revenue Service (IRS) responsible for helping taxpayers resolve problems with the IRS. The National Taxpayer Advocate is also responsible for proposing administrative and legislative changes to mitigate such problems. Under current law, the National Taxpayer Advocate is not authorized to appear as amicus curiae or submit amicus briefs in cases involving federal tax law.</p>",
   "cosponsors": 1,
   "committees": [
+    {
+      "name": "Finance Committee",
+      "systemCode": "ssfi00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-16T20:37:01Z"
+        }
+      ]
+    },
     {
       "name": "Ways and Means Committee",
       "systemCode": "hswm00",
@@ -43,6 +55,39 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Finance."
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote."
+    },
+    {
+      "date": "2026-09-15",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 9498.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Considered under suspension of the rules.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Mr. Smith (MO) moved to suspend the rules and pass the bill, as amended.",
+      "chamber": "House"
+    },
     {
       "date": "2026-09-08",
       "text": "Placed on the Union Calendar, Calendar No. 699.",

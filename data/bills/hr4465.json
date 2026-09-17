@@ -11,15 +11,27 @@
     "party": "R",
     "state": "KS"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-08-31",
-  "updateDate": "2026-09-02T15:10:12Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on the Judiciary.",
+  "latestActionDate": "2026-09-14",
+  "updateDate": "2026-09-15T10:56:38Z",
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/4465",
   "summary": "<p>This bill amends Chapter 4 (Inspectors General), Chapter 10 (Federal Advisory Committees), and Chapter 131 (Ethics in Government) of Title 5 of the <em>U.S. Code</em>.&nbsp;The amendments (1) incorporate laws enacted after October 19, 2021, that amend or repeal provisions of those chapters, and (2) make related technical corrections.</p>",
   "cosponsors": 0,
   "committees": [
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "ssju00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-14T20:12:04Z"
+        }
+      ]
+    },
     {
       "name": "Judiciary Committee",
       "systemCode": "hsju00",
@@ -39,6 +51,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-14",
+      "text": "Received in the Senate and Read twice and referred to the Committee on the Judiciary."
+    },
     {
       "date": "2026-08-31",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

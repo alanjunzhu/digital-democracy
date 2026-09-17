@@ -11,14 +11,14 @@
     "party": "R",
     "state": "WI"
   },
-  "latestAction": "Referred to the House Committee on Small Business.",
-  "latestActionDate": "2026-09-02",
-  "updateDate": "2026-09-03T21:08:13Z",
+  "latestAction": "Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 23 - 0.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-17T08:08:21Z",
   "originChamber": "House",
   "policyArea": "Commerce",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10238",
   "summary": "",
-  "cosponsors": 2,
+  "cosponsors": 3,
   "committees": [
     {
       "name": "Small Business Committee",
@@ -26,6 +26,10 @@
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Markup By",
+          "date": "2026-09-16T20:27:04Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-09-02T14:01:20Z"
@@ -35,6 +39,16 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 23 - 0.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
     {
       "date": "2026-09-02",
       "text": "Referred to the House Committee on Small Business.",
