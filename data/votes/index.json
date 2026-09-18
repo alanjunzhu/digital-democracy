@@ -1,10 +1,395 @@
 {
-  "lastUpdated": "2026-09-15T15:30:36.070Z",
+  "lastUpdated": "2026-09-18T14:54:20.229Z",
   "congress": 119,
-  "total": 1429,
-  "houseTotal": 571,
-  "senateTotal": 858,
+  "total": 1531,
+  "houseTotal": 668,
+  "senateTotal": 863,
   "votes": [
+    {
+      "voteId": "h2-rc308",
+      "rollCallNumber": 308,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-16",
+      "question": "On Motion to Concur in the Senate Amendments",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 5334,
+      "billId": "hr5334",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 58,
+          "nay": 152,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 59,
+      "totalNay": 152,
+      "url": "https://clerk.house.gov/Votes/2026308",
+      "topic": "International Affairs"
+    },
+    {
+      "voteId": "h2-rc306",
+      "rollCallNumber": 306,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-15",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hjres",
+      "billNumber": 210,
+      "billId": "hjres210",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 3,
+          "nay": 210,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 4,
+      "totalNay": 210,
+      "url": "https://clerk.house.gov/Votes/2026306",
+      "topic": "Environmental Protection"
+    },
+    {
+      "voteId": "h2-rc305",
+      "rollCallNumber": 305,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-15",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 9500,
+      "billId": "hr9500",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 212,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 213,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2026305",
+      "topic": "Taxation"
+    },
+    {
+      "voteId": "h2-rc304",
+      "rollCallNumber": 304,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-15",
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 2140,
+      "billId": "hr2140",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 212,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 213,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2026304",
+      "topic": "Environmental Protection"
+    },
+    {
+      "voteId": "h2-rc303",
+      "rollCallNumber": 303,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-15",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 4646,
+      "billId": "hr4646",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 213,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 214,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2026303",
+      "topic": "Housing and Community Development"
+    },
+    {
+      "voteId": "h2-rc301",
+      "rollCallNumber": 301,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-15",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 2978,
+      "billId": "hr2978",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 0,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 211,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2026301",
+      "topic": "Crime and Law Enforcement"
+    },
+    {
+      "voteId": "h2-rc300",
+      "rollCallNumber": 300,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-15",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hres",
+      "billNumber": 1530,
+      "billId": "hres1530",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 2,
+          "nay": 209,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 3,
+      "totalNay": 209,
+      "url": "https://clerk.house.gov/Votes/2026300",
+      "topic": "Congress"
+    },
+    {
+      "voteId": "h2-rc299",
+      "rollCallNumber": 299,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-15",
+      "question": "On Ordering the Previous Question",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 1530,
+      "billId": "hres1530",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 214,
+          "nay": 208,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 215,
+      "totalNay": 208,
+      "url": "https://clerk.house.gov/Votes/2026299",
+      "topic": "Congress"
+    },
+    {
+      "voteId": "h2-rc298",
+      "rollCallNumber": 298,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-15",
+      "question": "On Motion to Table",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 1486,
+      "billId": "hres1486",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 18,
+          "nay": 147,
+          "notVoting": 49
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 19,
+      "totalNay": 147,
+      "url": "https://clerk.house.gov/Votes/2026298",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h2-rc297",
+      "rollCallNumber": 297,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-14",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3276,
+      "billId": "hr3276",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 206,
+          "nay": 0,
+          "notVoting": 8
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 207,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2026297",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h2-rc296",
+      "rollCallNumber": 296,
+      "congress": 119,
+      "session": 2,
+      "chamber": "House",
+      "date": "2026-09-14",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 4219,
+      "billId": "hr4219",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 205,
+          "nay": 0,
+          "notVoting": 9
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 206,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2026296",
+      "topic": "Procedural"
+    },
     {
       "voteId": "h2-rc295",
       "rollCallNumber": 295,
@@ -178,7 +563,7 @@
       "totalYea": 10,
       "totalNay": 194,
       "url": "https://clerk.house.gov/Votes/2026291",
-      "topic": null
+      "topic": "Animals"
     },
     {
       "voteId": "h2-rc290",
@@ -213,7 +598,7 @@
       "totalYea": 202,
       "totalNay": 3,
       "url": "https://clerk.house.gov/Votes/2026290",
-      "topic": "Procedural"
+      "topic": "Animals"
     },
     {
       "voteId": "h2-rc289",
@@ -353,7 +738,7 @@
       "totalYea": 177,
       "totalNay": 29,
       "url": "https://clerk.house.gov/Votes/2026286",
-      "topic": "Economics and Public Finance"
+      "topic": "Procedural"
     },
     {
       "voteId": "h2-rc285",
@@ -592,7 +977,7 @@
       "totalYea": 84,
       "totalNay": 12,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00213.htm",
-      "topic": "Procedural"
+      "topic": "International Affairs"
     },
     {
       "voteId": "s2-rc211",
@@ -3539,7 +3924,7 @@
       "totalYea": 192,
       "totalNay": 0,
       "url": "https://clerk.house.gov/Votes/2026224",
-      "topic": "Housing and Community Development"
+      "topic": "Procedural"
     },
     {
       "voteId": "h2-rc223",
@@ -3673,7 +4058,7 @@
       "totalYea": 85,
       "totalNay": 5,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00182.htm",
-      "topic": "Housing and Community Development"
+      "topic": "Procedural"
     },
     {
       "voteId": "s2-rc181",
@@ -3740,7 +4125,7 @@
       "totalYea": 84,
       "totalNay": 8,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00180.htm",
-      "topic": "Housing and Community Development"
+      "topic": "Procedural"
     },
     {
       "voteId": "s2-rc179",
@@ -3906,7 +4291,7 @@
       "totalYea": 87,
       "totalNay": 8,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00175.htm",
-      "topic": "Housing and Community Development"
+      "topic": "Procedural"
     },
     {
       "voteId": "s2-rc174",
@@ -7913,7 +8298,7 @@
       "totalYea": 99,
       "totalNay": 0,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00119.htm",
-      "topic": "Congress"
+      "topic": "Procedural"
     },
     {
       "voteId": "s2-rc118",
@@ -12553,7 +12938,7 @@
       "totalYea": 89,
       "totalNay": 10,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00053.htm",
-      "topic": "Housing and Community Development"
+      "topic": null
     },
     {
       "voteId": "s2-rc52",
@@ -12588,7 +12973,7 @@
       "totalYea": 82,
       "totalNay": 11,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00052.htm",
-      "topic": "Housing and Community Development"
+      "topic": "Procedural"
     },
     {
       "voteId": "s2-rc51",
@@ -13133,7 +13518,7 @@
       "totalYea": 90,
       "totalNay": 8,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00045.htm",
-      "topic": "Housing and Community Development"
+      "topic": "Procedural"
     },
     {
       "voteId": "s2-rc44",
@@ -13168,7 +13553,7 @@
       "totalYea": 84,
       "totalNay": 6,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00044.htm",
-      "topic": "Housing and Community Development"
+      "topic": "Procedural"
     },
     {
       "voteId": "s2-rc43",
@@ -14264,7 +14649,7 @@
       "totalYea": 198,
       "totalNay": 1,
       "url": "https://clerk.house.gov/Votes/2026057",
-      "topic": "Housing and Community Development"
+      "topic": "Procedural"
     },
     {
       "voteId": "s2-rc33",
@@ -16622,7 +17007,7 @@
       "totalYea": 191,
       "totalNay": 11,
       "url": "https://clerk.house.gov/Votes/2026014",
-      "topic": "Economics and Public Finance"
+      "topic": "Procedural"
     },
     {
       "voteId": "h2-rc13",
@@ -17508,6 +17893,391 @@
       "topic": null
     },
     {
+      "voteId": "h1-rc362",
+      "rollCallNumber": 362,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 498,
+      "billId": "hr498",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 4,
+          "nay": 201,
+          "notVoting": 8
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 4,
+      "totalNay": 201,
+      "url": "https://clerk.house.gov/Votes/2025362",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc361",
+      "rollCallNumber": 361,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 498,
+      "billId": "hr498",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 204,
+          "nay": 0,
+          "notVoting": 9
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 204,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025361",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc360",
+      "rollCallNumber": 360,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 845,
+      "billId": "hr845",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 5,
+          "nay": 200,
+          "notVoting": 8
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 5,
+      "totalNay": 200,
+      "url": "https://clerk.house.gov/Votes/2025360",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc359",
+      "rollCallNumber": 359,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 845,
+      "billId": "hr845",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 204,
+          "nay": 1,
+          "notVoting": 8
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 204,
+      "totalNay": 1,
+      "url": "https://clerk.house.gov/Votes/2025359",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc358",
+      "rollCallNumber": 358,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 1366,
+      "billId": "hr1366",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 9,
+          "nay": 197,
+          "notVoting": 7
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 9,
+      "totalNay": 197,
+      "url": "https://clerk.house.gov/Votes/2025358",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc357",
+      "rollCallNumber": 357,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 1366,
+      "billId": "hr1366",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 205,
+          "nay": 1,
+          "notVoting": 7
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 205,
+      "totalNay": 1,
+      "url": "https://clerk.house.gov/Votes/2025357",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc356",
+      "rollCallNumber": 356,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 4776,
+      "billId": "hr4776",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 11,
+          "nay": 195,
+          "notVoting": 7
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 11,
+      "totalNay": 195,
+      "url": "https://clerk.house.gov/Votes/2025356",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc355",
+      "rollCallNumber": 355,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 4776,
+      "billId": "hr4776",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 206,
+          "nay": 1,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 206,
+      "totalNay": 1,
+      "url": "https://clerk.house.gov/Votes/2025355",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc354",
+      "rollCallNumber": 354,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Agreeing to the Amendment",
+      "result": "Failed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hr",
+      "billNumber": 4776,
+      "billId": "hr4776",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 1,
+          "nay": 209,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 1,
+      "totalNay": 209,
+      "url": "https://clerk.house.gov/Votes/2025354",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc353",
+      "rollCallNumber": 353,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Agreeing to the Amendment",
+      "result": "Failed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hr",
+      "billNumber": 4776,
+      "billId": "hr4776",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 1,
+          "nay": 209,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 1,
+      "totalNay": 209,
+      "url": "https://clerk.house.gov/Votes/2025353",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc352",
+      "rollCallNumber": 352,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-18",
+      "question": "On Agreeing to the Amendment",
+      "result": "Failed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hr",
+      "billNumber": 4776,
+      "billId": "hr4776",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 2,
+          "nay": 209,
+          "notVoting": 5
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 2,
+      "totalNay": 209,
+      "url": "https://clerk.house.gov/Votes/2025352",
+      "topic": null
+    },
+    {
       "voteId": "s1-rc653",
       "rollCallNumber": 653,
       "congress": 119,
@@ -17706,6 +18476,531 @@
       "topic": "Procedural"
     },
     {
+      "voteId": "h1-rc351",
+      "rollCallNumber": 351,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-17",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3492,
+      "billId": "hr3492",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 3,
+          "nay": 207,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 3,
+      "totalNay": 207,
+      "url": "https://clerk.house.gov/Votes/2025351",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc350",
+      "rollCallNumber": 350,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-17",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3492,
+      "billId": "hr3492",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 210,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025350",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc349",
+      "rollCallNumber": 349,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-17",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 6703,
+      "billId": "hr6703",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 216,
+          "nay": 211,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 216,
+      "totalNay": 211,
+      "url": "https://clerk.house.gov/Votes/2025349",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc348",
+      "rollCallNumber": 348,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-17",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 6703,
+      "billId": "hr6703",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 210,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025348",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc347",
+      "rollCallNumber": 347,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-17",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3616,
+      "billId": "hr3616",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 7,
+          "nay": 203,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 7,
+      "totalNay": 203,
+      "url": "https://clerk.house.gov/Votes/2025347",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc346",
+      "rollCallNumber": 346,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-17",
+      "question": "On Agreeing to the Resolution",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hconres",
+      "billNumber": 64,
+      "billId": "hconres64",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 208,
+          "nay": 1,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 208,
+      "totalNay": 1,
+      "url": "https://clerk.house.gov/Votes/2025346",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc345",
+      "rollCallNumber": 345,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-17",
+      "question": "On Agreeing to the Resolution",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hconres",
+      "billNumber": 61,
+      "billId": "hconres61",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 208,
+          "nay": 2,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 208,
+      "totalNay": 2,
+      "url": "https://clerk.house.gov/Votes/2025345",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc344",
+      "rollCallNumber": 344,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-17",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hres",
+      "billNumber": 953,
+      "billId": "hres953",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 213,
+          "nay": 209,
+          "notVoting": 5
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 213,
+      "totalNay": 209,
+      "url": "https://clerk.house.gov/Votes/2025344",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc343",
+      "rollCallNumber": 343,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-17",
+      "question": "On Ordering the Previous Question",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 953,
+      "billId": "hres953",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 204,
+          "nay": 203,
+          "notVoting": 10
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 204,
+      "totalNay": 203,
+      "url": "https://clerk.house.gov/Votes/2025343",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc342",
+      "rollCallNumber": 342,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-16",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3632,
+      "billId": "hr3632",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 7,
+          "nay": 199,
+          "notVoting": 7
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 7,
+      "totalNay": 199,
+      "url": "https://clerk.house.gov/Votes/2025342",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc341",
+      "rollCallNumber": 341,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-16",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3632,
+      "billId": "hr3632",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 207,
+          "nay": 0,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 207,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025341",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc340",
+      "rollCallNumber": 340,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-16",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 4371,
+      "billId": "hr4371",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 7,
+          "nay": 201,
+          "notVoting": 5
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 7,
+      "totalNay": 201,
+      "url": "https://clerk.house.gov/Votes/2025340",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc339",
+      "rollCallNumber": 339,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-16",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 4371,
+      "billId": "hr4371",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 208,
+          "nay": 0,
+          "notVoting": 5
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 208,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025339",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc338",
+      "rollCallNumber": 338,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-16",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 951,
+      "billId": "hres951",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 215,
+          "nay": 209,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 215,
+      "totalNay": 209,
+      "url": "https://clerk.house.gov/Votes/2025338",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc337",
+      "rollCallNumber": 337,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-16",
+      "question": "On Ordering the Previous Question",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 951,
+      "billId": "hres951",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 215,
+          "nay": 207,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 215,
+      "totalNay": 207,
+      "url": "https://clerk.house.gov/Votes/2025337",
+      "topic": "Procedural"
+    },
+    {
       "voteId": "s1-rc647",
       "rollCallNumber": 647,
       "congress": 119,
@@ -17738,6 +19033,143 @@
       "totalYea": 76,
       "totalNay": 20,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00647.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc336",
+      "rollCallNumber": 336,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-15",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3187,
+      "billId": "hr3187",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 191,
+          "nay": 0,
+          "notVoting": 22
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 191,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025336",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc335",
+      "rollCallNumber": 335,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-15",
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 194,
+          "nay": 0,
+          "notVoting": 19
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 194,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025335",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc334",
+      "rollCallNumber": 334,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-12",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3668,
+      "billId": "hr3668",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 7,
+          "nay": 182,
+          "notVoting": 24
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 7,
+      "totalNay": 182,
+      "url": "https://clerk.house.gov/Votes/2025334",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc333",
+      "rollCallNumber": 333,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-12",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3668,
+      "billId": "hr3668",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 194,
+          "nay": 0,
+          "notVoting": 19
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 194,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025333",
       "topic": "Procedural"
     },
     {
@@ -17881,6 +19313,391 @@
       "topic": "Procedural"
     },
     {
+      "voteId": "h1-rc332",
+      "rollCallNumber": 332,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 2550,
+      "billId": "hr2550",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 211,
+          "nay": 0,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 211,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025332",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc331",
+      "rollCallNumber": 331,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 432,
+      "billId": "hres432",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 210,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025331",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc330",
+      "rollCallNumber": 330,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3898,
+      "billId": "hr3898",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 6,
+          "nay": 204,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 6,
+      "totalNay": 204,
+      "url": "https://clerk.house.gov/Votes/2025330",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc329",
+      "rollCallNumber": 329,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3898,
+      "billId": "hr3898",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 210,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025329",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc328",
+      "rollCallNumber": 328,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hr",
+      "billNumber": 3383,
+      "billId": "hr3383",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 87,
+          "nay": 123,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 87,
+      "totalNay": 123,
+      "url": "https://clerk.house.gov/Votes/2025328",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc327",
+      "rollCallNumber": 327,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Agreeing to the Amendment",
+      "result": "Failed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hr",
+      "billNumber": 3383,
+      "billId": "hr3383",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 212,
+          "nay": 1,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 212,
+      "totalNay": 1,
+      "url": "https://clerk.house.gov/Votes/2025327",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc326",
+      "rollCallNumber": 326,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Agreeing to the Amendment",
+      "result": "Failed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hr",
+      "billNumber": 3383,
+      "billId": "hr3383",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 207,
+          "nay": 6,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 207,
+      "totalNay": 6,
+      "url": "https://clerk.house.gov/Votes/2025326",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc325",
+      "rollCallNumber": 325,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Agreeing to the Amendment",
+      "result": "Failed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hr",
+      "billNumber": 3383,
+      "billId": "hr3383",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 1,
+          "nay": 209,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 1,
+      "totalNay": 209,
+      "url": "https://clerk.house.gov/Votes/2025325",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc324",
+      "rollCallNumber": 324,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3638,
+      "billId": "hr3638",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 51,
+          "nay": 159,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 159,
+      "url": "https://clerk.house.gov/Votes/2025324",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc323",
+      "rollCallNumber": 323,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3628,
+      "billId": "hr3628",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 4,
+          "nay": 206,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 4,
+      "totalNay": 206,
+      "url": "https://clerk.house.gov/Votes/2025323",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc322",
+      "rollCallNumber": 322,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-11",
+      "question": "On Motion to Table",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 939,
+      "billId": "hres939",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 23,
+          "nay": 140,
+          "notVoting": 50
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 23,
+      "totalNay": 140,
+      "url": "https://clerk.house.gov/Votes/2025322",
+      "topic": "Procedural"
+    },
+    {
       "voteId": "s1-rc642",
       "rollCallNumber": 642,
       "congress": 119,
@@ -17948,6 +19765,175 @@
       "totalYea": 50,
       "totalNay": 49,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00641.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc321",
+      "rollCallNumber": 321,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-10",
+      "question": "On Motion to Discharge",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 432,
+      "billId": "hres432",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 209,
+          "nay": 0,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 209,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025321",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc320",
+      "rollCallNumber": 320,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-10",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 115,
+          "nay": 94,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 115,
+      "totalNay": 94,
+      "url": "https://clerk.house.gov/Votes/2025320",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc319",
+      "rollCallNumber": 319,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-10",
+      "question": "On Motion to Commit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 209,
+          "nay": 0,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 209,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025319",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc318",
+      "rollCallNumber": 318,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-10",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hres",
+      "billNumber": 936,
+      "billId": "hres936",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 215,
+          "nay": 211,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 215,
+      "totalNay": 211,
+      "url": "https://clerk.house.gov/Votes/2025318",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc317",
+      "rollCallNumber": 317,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-10",
+      "question": "On Ordering the Previous Question",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 936,
+      "billId": "hres936",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 216,
+          "nay": 210,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 216,
+      "totalNay": 210,
+      "url": "https://clerk.house.gov/Votes/2025317",
       "topic": "Procedural"
     },
     {
@@ -18111,6 +20097,73 @@
       "topic": null
     },
     {
+      "voteId": "h1-rc316",
+      "rollCallNumber": 316,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-09",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 1676,
+      "billId": "hr1676",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 198,
+          "nay": 0,
+          "notVoting": 15
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 198,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025316",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc315",
+      "rollCallNumber": 315,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-09",
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 201,
+          "nay": 0,
+          "notVoting": 12
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 201,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025315",
+      "topic": "Procedural"
+    },
+    {
       "voteId": "s1-rc635",
       "rollCallNumber": 635,
       "congress": 119,
@@ -18245,6 +20298,76 @@
       "topic": null
     },
     {
+      "voteId": "h1-rc314",
+      "rollCallNumber": 314,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-04",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 1049,
+      "billId": "hr1049",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 33,
+          "nay": 166,
+          "notVoting": 14
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 33,
+      "totalNay": 166,
+      "url": "https://clerk.house.gov/Votes/2025314",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc313",
+      "rollCallNumber": 313,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-04",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 1069,
+      "billId": "hr1069",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 33,
+          "nay": 164,
+          "notVoting": 16
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 33,
+      "totalNay": 164,
+      "url": "https://clerk.house.gov/Votes/2025313",
+      "topic": null
+    },
+    {
       "voteId": "s1-rc631",
       "rollCallNumber": 631,
       "congress": 119,
@@ -18376,6 +20499,111 @@
       "topic": "Procedural"
     },
     {
+      "voteId": "h1-rc312",
+      "rollCallNumber": 312,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-03",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 1005,
+      "billId": "hr1005",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 30,
+          "nay": 176,
+          "notVoting": 7
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 30,
+      "totalNay": 176,
+      "url": "https://clerk.house.gov/Votes/2025312",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc311",
+      "rollCallNumber": 311,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-03",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 4305,
+      "billId": "hr4305",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 59,
+          "nay": 146,
+          "notVoting": 8
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 59,
+      "totalNay": 146,
+      "url": "https://clerk.house.gov/Votes/2025311",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc310",
+      "rollCallNumber": 310,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-03",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 2965,
+      "billId": "hr2965",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 15,
+          "nay": 190,
+          "notVoting": 8
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 15,
+      "totalNay": 190,
+      "url": "https://clerk.house.gov/Votes/2025310",
+      "topic": null
+    },
+    {
       "voteId": "s1-rc627",
       "rollCallNumber": 627,
       "congress": 119,
@@ -18472,6 +20700,76 @@
       "topic": null
     },
     {
+      "voteId": "h1-rc309",
+      "rollCallNumber": 309,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-02",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hres",
+      "billNumber": 916,
+      "billId": "hres916",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 209,
+          "notVoting": 7
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 210,
+      "totalNay": 209,
+      "url": "https://clerk.house.gov/Votes/2025309",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc308",
+      "rollCallNumber": 308,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-02",
+      "question": "On Ordering the Previous Question",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 916,
+      "billId": "hres916",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 205,
+          "notVoting": 8
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 210,
+      "totalNay": 205,
+      "url": "https://clerk.house.gov/Votes/2025308",
+      "topic": "Procedural"
+    },
+    {
       "voteId": "s1-rc624",
       "rollCallNumber": 624,
       "congress": 119,
@@ -18502,6 +20800,111 @@
       "totalNay": 41,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00624.htm",
       "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc307",
+      "rollCallNumber": 307,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-01",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 4423,
+      "billId": "hr4423",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 193,
+          "nay": 0,
+          "notVoting": 20
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 193,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025307",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc306",
+      "rollCallNumber": 306,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-12-01",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 5348,
+      "billId": "hr5348",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 191,
+          "nay": 0,
+          "notVoting": 22
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 191,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025306",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc305",
+      "rollCallNumber": 305,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-21",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hconres",
+      "billNumber": 58,
+      "billId": "hconres58",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 86,
+          "nay": 98,
+          "notVoting": 29
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 86,
+      "totalNay": 98,
+      "url": "https://clerk.house.gov/Votes/2025305",
+      "topic": null
     },
     {
       "voteId": "s1-rc623",
@@ -18536,6 +20939,76 @@
       "totalYea": 51,
       "totalNay": 43,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00623.htm",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc304",
+      "rollCallNumber": 304,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-20",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 1949,
+      "billId": "hr1949",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 11,
+          "nay": 188,
+          "notVoting": 15
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 11,
+      "totalNay": 188,
+      "url": "https://clerk.house.gov/Votes/2025304",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc303",
+      "rollCallNumber": 303,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-20",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3109,
+      "billId": "hr3109",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 25,
+          "nay": 176,
+          "notVoting": 13
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 25,
+      "totalNay": 176,
+      "url": "https://clerk.house.gov/Votes/2025303",
       "topic": null
     },
     {
@@ -18641,6 +21114,181 @@
       "topic": "Energy"
     },
     {
+      "voteId": "h1-rc302",
+      "rollCallNumber": 302,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-19",
+      "question": "On Motion to Refer",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 893,
+      "billId": "hres893",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 106,
+          "nay": 95,
+          "notVoting": 13
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 106,
+      "totalNay": 95,
+      "url": "https://clerk.house.gov/Votes/2025302",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc301",
+      "rollCallNumber": 301,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-19",
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 6019,
+      "billId": "hr6019",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 0,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 210,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025301",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc300",
+      "rollCallNumber": 300,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-19",
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 4058,
+      "billId": "hr4058",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 0,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 210,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025300",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc299",
+      "rollCallNumber": 299,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-19",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 5107,
+      "billId": "hr5107",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 20,
+          "nay": 190,
+          "notVoting": 4
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 20,
+      "totalNay": 190,
+      "url": "https://clerk.house.gov/Votes/2025299",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc298",
+      "rollCallNumber": 298,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-19",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 5214,
+      "billId": "hr5214",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 28,
+          "nay": 179,
+          "notVoting": 7
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 28,
+      "totalNay": 179,
+      "url": "https://clerk.house.gov/Votes/2025298",
+      "topic": null
+    },
+    {
       "voteId": "s1-rc619",
       "rollCallNumber": 619,
       "congress": 119,
@@ -18671,6 +21319,531 @@
       "totalNay": 32,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00619.htm",
       "topic": "Energy"
+    },
+    {
+      "voteId": "h1-rc297",
+      "rollCallNumber": 297,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-18",
+      "question": "On Agreeing to the Resolution",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 888,
+      "billId": "hres888",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 209,
+          "nay": 214,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 209,
+      "totalNay": 214,
+      "url": "https://clerk.house.gov/Votes/2025297",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc296",
+      "rollCallNumber": 296,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "sjres",
+      "billNumber": 80,
+      "billId": "sjres80",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 3,
+          "nay": 208,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 3,
+      "totalNay": 208,
+      "url": "https://clerk.house.gov/Votes/2025296",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc295",
+      "rollCallNumber": 295,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hjres",
+      "billNumber": 131,
+      "billId": "hjres131",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 3,
+          "nay": 208,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 3,
+      "totalNay": 208,
+      "url": "https://clerk.house.gov/Votes/2025295",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc294",
+      "rollCallNumber": 294,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hjres",
+      "billNumber": 130,
+      "billId": "hjres130",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 214,
+          "nay": 212,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 214,
+      "totalNay": 212,
+      "url": "https://clerk.house.gov/Votes/2025294",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc293",
+      "rollCallNumber": 293,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-18",
+      "question": "On Motion to Refer",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 888,
+      "billId": "hres888",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 211,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 211,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025293",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc292",
+      "rollCallNumber": 292,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-18",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 878,
+      "billId": "hres878",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 23,
+          "nay": 183,
+          "notVoting": 8
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 23,
+      "totalNay": 183,
+      "url": "https://clerk.house.gov/Votes/2025292",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc291",
+      "rollCallNumber": 291,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-18",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hres",
+      "billNumber": 879,
+      "billId": "hres879",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 1,
+          "nay": 210,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 1,
+      "totalNay": 210,
+      "url": "https://clerk.house.gov/Votes/2025291",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc290",
+      "rollCallNumber": 290,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-18",
+      "question": "On Ordering the Previous Question",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 879,
+      "billId": "hres879",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 217,
+          "nay": 211,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 217,
+      "totalNay": 211,
+      "url": "https://clerk.house.gov/Votes/2025290",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc289",
+      "rollCallNumber": 289,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-18",
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Passed",
+      "voteType": "2/3 RECORDED VOTE",
+      "billType": "hr",
+      "billNumber": 4405,
+      "billId": "hr4405",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 211,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 211,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025289",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc288",
+      "rollCallNumber": 288,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-17",
+      "question": "On Motion to Table",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 878,
+      "billId": "hres878",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 206,
+          "nay": 2,
+          "notVoting": 6
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 206,
+      "totalNay": 2,
+      "url": "https://clerk.house.gov/Votes/2025288",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc287",
+      "rollCallNumber": 287,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-17",
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 2659,
+      "billId": "hr2659",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 205,
+          "nay": 0,
+          "notVoting": 9
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 205,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025287",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc286",
+      "rollCallNumber": 286,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-17",
+      "question": "On Motion to Suspend the Rules and Pass, as Amended",
+      "result": "Passed",
+      "voteType": "2/3 YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 1608,
+      "billId": "hr1608",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 207,
+          "nay": 0,
+          "notVoting": 7
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 207,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025286",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc285",
+      "rollCallNumber": 285,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-12",
+      "question": "On Motion to Concur in the Senate Amendment",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 5371,
+      "billId": "hr5371",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 6,
+          "nay": 207,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 6,
+      "totalNay": 207,
+      "url": "https://clerk.house.gov/Votes/2025285",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "h1-rc284",
+      "rollCallNumber": 284,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-12",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "RECORDED VOTE",
+      "billType": "hres",
+      "billNumber": 873,
+      "billId": "hres873",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 213,
+          "nay": 209,
+          "notVoting": 5
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 213,
+      "totalNay": 209,
+      "url": "https://clerk.house.gov/Votes/2025284",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc283",
+      "rollCallNumber": 283,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-11-12",
+      "question": "On Ordering the Previous Question",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 873,
+      "billId": "hres873",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 216,
+          "nay": 213,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 216,
+      "totalNay": 213,
+      "url": "https://clerk.house.gov/Votes/2025283",
+      "topic": "Procedural"
     },
     {
       "voteId": "s1-rc618",
@@ -18985,41 +22158,6 @@
       "totalYea": 60,
       "totalNay": 40,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00610.htm",
-      "topic": "Procedural"
-    },
-    {
-      "voteId": "s1-rc609",
-      "rollCallNumber": 609,
-      "congress": 119,
-      "session": 1,
-      "chamber": "Senate",
-      "date": "2025-11-07",
-      "question": "Motion to Invoke Cloture: Motion to Proceed to S. 3012, Upon Reconsideration",
-      "result": "Cloture on the Motion to Proceed Rejected (53-43, 3/5 majority required)",
-      "voteType": "",
-      "billType": "s",
-      "billNumber": 3012,
-      "billId": "s3012",
-      "partyBreakdown": {
-        "democratic": {
-          "yea": 3,
-          "nay": 41,
-          "notVoting": 1
-        },
-        "republican": {
-          "yea": 50,
-          "nay": 0,
-          "notVoting": 3
-        },
-        "independent": {
-          "yea": 0,
-          "nay": 2,
-          "notVoting": 0
-        }
-      },
-      "totalYea": 53,
-      "totalNay": 43,
-      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00609.htm",
       "topic": "Procedural"
     },
     {
@@ -19390,41 +22528,6 @@
       "topic": null
     },
     {
-      "voteId": "s1-rc597",
-      "rollCallNumber": 597,
-      "congress": 119,
-      "session": 1,
-      "chamber": "Senate",
-      "date": "2025-10-29",
-      "question": "Motion to Proceed to S.J.Res. 69",
-      "result": "Motion to Proceed Rejected (25-72)",
-      "voteType": "",
-      "billType": "sjres",
-      "billNumber": 69,
-      "billId": "sjres69",
-      "partyBreakdown": {
-        "democratic": {
-          "yea": 2,
-          "nay": 42,
-          "notVoting": 1
-        },
-        "republican": {
-          "yea": 22,
-          "nay": 29,
-          "notVoting": 2
-        },
-        "independent": {
-          "yea": 1,
-          "nay": 1,
-          "notVoting": 0
-        }
-      },
-      "totalYea": 25,
-      "totalNay": 72,
-      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00597.htm",
-      "topic": "Procedural"
-    },
-    {
       "voteId": "s1-rc596",
       "rollCallNumber": 596,
       "congress": 119,
@@ -19589,6 +22692,38 @@
       "totalNay": 47,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00592.htm",
       "topic": null
+    },
+    {
+      "voteId": "s1-rc591",
+      "rollCallNumber": 591,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-10-28",
+      "question": "Motion to Invoke Cloture: Jordan Emery Pratt to be U.S. District Judge for the Middle District of Florida",
+      "result": "Cloture Motion Agreed to (52-47)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 52,
+          "nay": 0,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 52,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00591.htm",
+      "topic": "Procedural"
     },
     {
       "voteId": "s1-rc590",
@@ -19787,38 +22922,6 @@
       "totalNay": 45,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00585.htm",
       "topic": "Procedural"
-    },
-    {
-      "voteId": "s1-rc584",
-      "rollCallNumber": 584,
-      "congress": 119,
-      "session": 1,
-      "chamber": "Senate",
-      "date": "2025-10-22",
-      "question": "Confirmation: William W. Mercer, of Montana, to be U.S. District Judge for the District of Montana",
-      "result": "Nomination Confirmed (52-45)",
-      "voteType": "",
-      "partyBreakdown": {
-        "democratic": {
-          "yea": 0,
-          "nay": 43,
-          "notVoting": 2
-        },
-        "republican": {
-          "yea": 52,
-          "nay": 0,
-          "notVoting": 1
-        },
-        "independent": {
-          "yea": 0,
-          "nay": 2,
-          "notVoting": 0
-        }
-      },
-      "totalYea": 52,
-      "totalNay": 45,
-      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00584.htm",
-      "topic": null
     },
     {
       "voteId": "s1-rc583",
@@ -20153,6 +23256,41 @@
       "topic": "Procedural"
     },
     {
+      "voteId": "s1-rc572",
+      "rollCallNumber": 572,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-10-15",
+      "question": "Upon Reconsideration, Motion to Invoke Cloture on the Motion to Proceed to H.R. 5371",
+      "result": "Cloture on the Motion to Proceed Rejected (51-44, 3/5 majority required)",
+      "voteType": "",
+      "billType": "hr",
+      "billNumber": 5371,
+      "billId": "hr5371",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 2,
+          "nay": 42,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 48,
+          "nay": 1,
+          "notVoting": 4
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 51,
+      "totalNay": 44,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00572.htm",
+      "topic": "Procedural"
+    },
+    {
       "voteId": "s1-rc571",
       "rollCallNumber": 571,
       "congress": 119,
@@ -20258,41 +23396,6 @@
       "topic": null
     },
     {
-      "voteId": "s1-rc567",
-      "rollCallNumber": 567,
-      "congress": 119,
-      "session": 1,
-      "chamber": "Senate",
-      "date": "2025-10-09",
-      "question": "Duckworth Amdt. No. 3210",
-      "result": "Amendment Rejected (46-52, 3/5 majority required)",
-      "voteType": "",
-      "billType": "s",
-      "billNumber": 2296,
-      "billId": "s2296",
-      "partyBreakdown": {
-        "democratic": {
-          "yea": 44,
-          "nay": 0,
-          "notVoting": 1
-        },
-        "republican": {
-          "yea": 0,
-          "nay": 52,
-          "notVoting": 1
-        },
-        "independent": {
-          "yea": 2,
-          "nay": 0,
-          "notVoting": 0
-        }
-      },
-      "totalYea": 46,
-      "totalNay": 52,
-      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00567.htm",
-      "topic": null
-    },
-    {
       "voteId": "s1-rc566",
       "rollCallNumber": 566,
       "congress": 119,
@@ -20363,6 +23466,73 @@
       "topic": null
     },
     {
+      "voteId": "s1-rc563",
+      "rollCallNumber": 563,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-10-09",
+      "question": "Scott (FL) Amdt. No. 3535",
+      "result": "Amendment Rejected (53-43, 3/5 majority required)",
+      "voteType": "",
+      "billType": "s",
+      "billNumber": 2296,
+      "billId": "s2296",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 8,
+          "nay": 36,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 44,
+          "nay": 6,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 53,
+      "totalNay": 43,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00563.htm",
+      "topic": null
+    },
+    {
+      "voteId": "s1-rc561",
+      "rollCallNumber": 561,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-10-09",
+      "question": "Confirmation: Jennifer Lee Mascott, of Delaware, to be U.S. Circuit Judge for the Third Circuit",
+      "result": "Nomination Confirmed (50-47)",
+      "voteType": "",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 44,
+          "notVoting": 1
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 1,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 50,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00561.htm",
+      "topic": null
+    },
+    {
       "voteId": "s1-rc560",
       "rollCallNumber": 560,
       "congress": 119,
@@ -20395,6 +23565,146 @@
       "totalYea": 50,
       "totalNay": 46,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00560.htm",
+      "topic": null
+    },
+    {
+      "voteId": "s1-rc559",
+      "rollCallNumber": 559,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-10-09",
+      "question": "Motion to Proceed to H. J. Res. 106",
+      "result": "Motion to Proceed Agreed to (50-47)",
+      "voteType": "",
+      "billType": "hjres",
+      "billNumber": 106,
+      "billId": "hjres106",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 45,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 50,
+      "totalNay": 47,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00559.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc558",
+      "rollCallNumber": 558,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-10-09",
+      "question": "Motion to Invoke Cloture: Motion to Proceed to H.R. 5371",
+      "result": "Cloture on the Motion to Proceed Rejected (54-45, 3/5 majority required)",
+      "voteType": "",
+      "billType": "hr",
+      "billNumber": 5371,
+      "billId": "hr5371",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 2,
+          "nay": 43,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 51,
+          "nay": 1,
+          "notVoting": 1
+        },
+        "independent": {
+          "yea": 1,
+          "nay": 1,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 54,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00558.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc557",
+      "rollCallNumber": 557,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-10-09",
+      "question": "Motion to Invoke Cloture: Motion to Proceed to S. 2882",
+      "result": "Cloture on the Motion to Proceed Rejected (47-50, 3/5 majority required)",
+      "voteType": "",
+      "billType": "s",
+      "billNumber": 2882,
+      "billId": "s2882",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 45,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 50,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 2,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 47,
+      "totalNay": 50,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00557.htm",
+      "topic": "Procedural"
+    },
+    {
+      "voteId": "s1-rc556",
+      "rollCallNumber": 556,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-10-08",
+      "question": "H. J. Res. 105",
+      "result": "Joint Resolution Passed (50-45)",
+      "voteType": "",
+      "billType": "hjres",
+      "billNumber": 105,
+      "billId": "hjres105",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 0,
+          "nay": 43,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 50,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 2,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 50,
+      "totalNay": 45,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00556.htm",
       "topic": null
     },
     {
@@ -20431,6 +23741,41 @@
       "totalNay": 51,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00555.htm",
       "topic": "International Affairs"
+    },
+    {
+      "voteId": "s1-rc554",
+      "rollCallNumber": 554,
+      "congress": 119,
+      "session": 1,
+      "chamber": "Senate",
+      "date": "2025-10-08",
+      "question": "S. J. Res. 71",
+      "result": "Joint Resolution Defeated (47-51)",
+      "voteType": "",
+      "billType": "sjres",
+      "billNumber": 71,
+      "billId": "sjres71",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 45,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 51,
+          "notVoting": 2
+        },
+        "independent": {
+          "yea": 2,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 47,
+      "totalNay": 51,
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00554.htm",
+      "topic": null
     },
     {
       "voteId": "s1-rc553",
@@ -21357,6 +24702,111 @@
       "topic": null
     },
     {
+      "voteId": "h1-rc282",
+      "rollCallNumber": 282,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-09-19",
+      "question": "On Agreeing to the Resolution",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hres",
+      "billNumber": 719,
+      "billId": "hres719",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 95,
+          "nay": 58,
+          "notVoting": 60
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 95,
+      "totalNay": 58,
+      "url": "https://clerk.house.gov/Votes/2025282",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc281",
+      "rollCallNumber": 281,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-09-19",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 5371,
+      "billId": "hr5371",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 1,
+          "nay": 210,
+          "notVoting": 2
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 1,
+      "totalNay": 210,
+      "url": "https://clerk.house.gov/Votes/2025281",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc280",
+      "rollCallNumber": 280,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-09-19",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 5371,
+      "billId": "hr5371",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 210,
+          "nay": 0,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 210,
+      "totalNay": 0,
+      "url": "https://clerk.house.gov/Votes/2025280",
+      "topic": "Procedural"
+    },
+    {
       "voteId": "s1-rc526",
       "rollCallNumber": 526,
       "congress": 119,
@@ -21386,6 +24836,111 @@
       "totalYea": 51,
       "totalNay": 47,
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00526.htm",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc279",
+      "rollCallNumber": 279,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-09-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 1047,
+      "billId": "hr1047",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 5,
+          "nay": 205,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 5,
+      "totalNay": 205,
+      "url": "https://clerk.house.gov/Votes/2025279",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc278",
+      "rollCallNumber": 278,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-09-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3015,
+      "billId": "hr3015",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 4,
+          "nay": 206,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 4,
+      "totalNay": 206,
+      "url": "https://clerk.house.gov/Votes/2025278",
+      "topic": null
+    },
+    {
+      "voteId": "h1-rc277",
+      "rollCallNumber": 277,
+      "congress": 119,
+      "session": 1,
+      "chamber": "House",
+      "date": "2025-09-18",
+      "question": "On Passage",
+      "result": "Passed",
+      "voteType": "YEA-AND-NAY",
+      "billType": "hr",
+      "billNumber": 3062,
+      "billId": "hr3062",
+      "partyBreakdown": {
+        "democratic": {
+          "yea": 7,
+          "nay": 203,
+          "notVoting": 3
+        },
+        "republican": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        },
+        "independent": {
+          "yea": 0,
+          "nay": 0,
+          "notVoting": 0
+        }
+      },
+      "totalYea": 7,
+      "totalNay": 203,
+      "url": "https://clerk.house.gov/Votes/2025277",
       "topic": null
     },
     {
@@ -28084,7 +31639,7 @@
       "totalYea": 78,
       "totalNay": 134,
       "url": "https://clerk.house.gov/Votes/2025199",
-      "topic": null
+      "topic": "Finance and Financial Sector"
     },
     {
       "voteId": "s1-rc404",

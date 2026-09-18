@@ -1,21 +1,21 @@
 {
-  "voteId": "h2-rc224",
-  "rollCallNumber": 224,
+  "voteId": "h2-rc296",
+  "rollCallNumber": 296,
   "congress": 119,
   "session": 2,
   "chamber": "House",
-  "date": "2026-06-23",
-  "question": "On Motion to Suspend the Rules and Concur in Senate Adt to House Adt to Senate Adt",
+  "date": "2026-09-14",
+  "question": "On Motion to Suspend the Rules and Pass, as Amended",
   "result": "Passed",
   "voteType": "2/3 YEA-AND-NAY",
   "billType": "hr",
-  "billNumber": 6644,
-  "billId": "hr6644",
+  "billNumber": 4219,
+  "billId": "hr4219",
   "partyBreakdown": {
     "democratic": {
-      "yea": 191,
+      "yea": 205,
       "nay": 0,
-      "notVoting": 21
+      "notVoting": 9
     },
     "republican": {
       "yea": 0,
@@ -28,7 +28,7 @@
       "notVoting": 0
     }
   },
-  "totalYea": 192,
+  "totalYea": 206,
   "totalNay": 0,
   "memberVotes": [
     {
@@ -92,7 +92,7 @@
       "name": "Arrington",
       "party": "R",
       "state": "TX",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "A000148",
@@ -256,6 +256,13 @@
       "voteCast": "Yea"
     },
     {
+      "bioguideId": "B001328",
+      "name": "Blair",
+      "party": "D",
+      "state": "GA",
+      "voteCast": "Yea"
+    },
+    {
       "bioguideId": "B000825",
       "name": "Boebert",
       "party": "R",
@@ -281,14 +288,14 @@
       "name": "Boyle (PA)",
       "party": "D",
       "state": "PA",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "B001317",
       "name": "Brecheen",
       "party": "R",
       "state": "OK",
-      "voteCast": "Not Voting"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "B001327",
@@ -358,14 +365,14 @@
       "name": "Cammack",
       "party": "R",
       "state": "FL",
-      "voteCast": "Nay"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "C001112",
       "name": "Carbajal",
       "party": "D",
       "state": "CA",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "C001126",
@@ -386,7 +393,7 @@
       "name": "Carter (GA)",
       "party": "R",
       "state": "GA",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "C001125",
@@ -400,14 +407,14 @@
       "name": "Carter (TX)",
       "party": "R",
       "state": "TX",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "C001131",
       "name": "Casar",
       "party": "D",
       "state": "TX",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "C001055",
@@ -470,7 +477,7 @@
       "name": "Clarke (NY)",
       "party": "D",
       "state": "NY",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "C001061",
@@ -526,7 +533,7 @@
       "name": "Collins",
       "party": "R",
       "state": "GA",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "C001108",
@@ -680,7 +687,7 @@
       "name": "DelBene",
       "party": "D",
       "state": "WA",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "D000530",
@@ -736,7 +743,7 @@
       "name": "Donalds",
       "party": "R",
       "state": "FL",
-      "voteCast": "Nay"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "D000634",
@@ -792,14 +799,14 @@
       "name": "Espaillat",
       "party": "D",
       "state": "NY",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "E000298",
       "name": "Estes",
       "party": "R",
       "state": "KS",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "E000300",
@@ -813,7 +820,7 @@
       "name": "Evans (PA)",
       "party": "D",
       "state": "PA",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "E000235",
@@ -939,7 +946,7 @@
       "name": "Foxx",
       "party": "R",
       "state": "NC",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "F000462",
@@ -988,7 +995,7 @@
       "name": "Fuller",
       "party": "R",
       "state": "GA",
-      "voteCast": "Nay"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "G000607",
@@ -1002,7 +1009,7 @@
       "name": "Garamendi",
       "party": "D",
       "state": "CA",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "G000597",
@@ -1037,7 +1044,7 @@
       "name": "Gill (TX)",
       "party": "R",
       "state": "TX",
-      "voteCast": "Nay"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "G000602",
@@ -1058,7 +1065,7 @@
       "name": "Golden (ME)",
       "party": "D",
       "state": "ME",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "G000599",
@@ -1107,7 +1114,7 @@
       "name": "Gosar",
       "party": "R",
       "state": "AZ",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "G000583",
@@ -1128,7 +1135,7 @@
       "name": "Gray",
       "party": "D",
       "state": "CA",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "G000553",
@@ -1184,7 +1191,7 @@
       "name": "Hamadeh (AZ)",
       "party": "R",
       "state": "AZ",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "H001090",
@@ -1205,14 +1212,14 @@
       "name": "Harrigan",
       "party": "R",
       "state": "NC",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "H001052",
       "name": "Harris (MD)",
       "party": "R",
       "state": "MD",
-      "voteCast": "Nay"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "H001102",
@@ -1233,7 +1240,7 @@
       "name": "Hayes",
       "party": "D",
       "state": "CT",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "H001082",
@@ -1359,7 +1366,7 @@
       "name": "Jack",
       "party": "R",
       "state": "GA",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "J000309",
@@ -1411,13 +1418,6 @@
       "voteCast": "Yea"
     },
     {
-      "bioguideId": "J000299",
-      "name": "Johnson (LA)",
-      "party": "R",
-      "state": "LA",
-      "voteCast": "Yea"
-    },
-    {
       "bioguideId": "J000301",
       "name": "Johnson (SD)",
       "party": "R",
@@ -1436,7 +1436,7 @@
       "name": "Jordan",
       "party": "R",
       "state": "OH",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "J000295",
@@ -1450,7 +1450,7 @@
       "name": "Joyce (PA)",
       "party": "R",
       "state": "PA",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "K000400",
@@ -1471,7 +1471,7 @@
       "name": "Kean",
       "party": "R",
       "state": "NJ",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "K000375",
@@ -1513,7 +1513,7 @@
       "name": "Kennedy (UT)",
       "party": "R",
       "state": "UT",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "K000389",
@@ -1695,7 +1695,7 @@
       "name": "Loudermilk",
       "party": "R",
       "state": "GA",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "L000491",
@@ -1716,7 +1716,7 @@
       "name": "Luttrell",
       "party": "R",
       "state": "TX",
-      "voteCast": "Nay"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "L000562",
@@ -1730,7 +1730,7 @@
       "name": "Mace",
       "party": "R",
       "state": "SC",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001230",
@@ -1765,7 +1765,7 @@
       "name": "Mann",
       "party": "R",
       "state": "KS",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "M001231",
@@ -1814,7 +1814,7 @@
       "name": "McCaul",
       "party": "R",
       "state": "TX",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001136",
@@ -1828,7 +1828,7 @@
       "name": "McClain Delaney",
       "party": "D",
       "state": "MD",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001227",
@@ -1842,7 +1842,7 @@
       "name": "McClintock",
       "party": "R",
       "state": "CA",
-      "voteCast": "Nay"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001143",
@@ -1856,7 +1856,7 @@
       "name": "McCormick",
       "party": "R",
       "state": "GA",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "M001237",
@@ -1898,14 +1898,14 @@
       "name": "McIver",
       "party": "D",
       "state": "NJ",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001137",
       "name": "Meeks",
       "party": "D",
       "state": "NY",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001246",
@@ -1933,7 +1933,7 @@
       "name": "Meng",
       "party": "D",
       "state": "NY",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001233",
@@ -1954,7 +1954,7 @@
       "name": "Mfume",
       "party": "D",
       "state": "MD",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001211",
@@ -1989,7 +1989,7 @@
       "name": "Mills",
       "party": "R",
       "state": "FL",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "M001241",
@@ -2010,7 +2010,7 @@
       "name": "Moore (AL)",
       "party": "R",
       "state": "AL",
-      "voteCast": "Nay"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001236",
@@ -2031,7 +2031,7 @@
       "name": "Moore (WI)",
       "party": "D",
       "state": "WI",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "M001235",
@@ -2052,7 +2052,7 @@
       "name": "Morelle",
       "party": "D",
       "state": "NY",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001234",
@@ -2073,7 +2073,7 @@
       "name": "Moulton",
       "party": "D",
       "state": "MA",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "M001214",
@@ -2101,7 +2101,7 @@
       "name": "Nadler",
       "party": "D",
       "state": "NY",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "N000015",
@@ -2171,7 +2171,7 @@
       "name": "Ogles",
       "party": "R",
       "state": "TN",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "O000176",
@@ -2199,7 +2199,7 @@
       "name": "Owens",
       "party": "R",
       "state": "UT",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "P000034",
@@ -2374,7 +2374,7 @@
       "name": "Rose",
       "party": "R",
       "state": "TN",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "R000305",
@@ -2423,14 +2423,14 @@
       "name": "Ryan",
       "party": "D",
       "state": "NY",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "S000168",
       "name": "Salazar",
       "party": "R",
       "state": "FL",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "S001226",
@@ -2472,7 +2472,7 @@
       "name": "Schmidt",
       "party": "R",
       "state": "KS",
-      "voteCast": "Yea"
+      "voteCast": "Nay"
     },
     {
       "bioguideId": "S001190",
@@ -2500,7 +2500,7 @@
       "name": "Schweikert",
       "party": "R",
       "state": "AZ",
-      "voteCast": "Nay"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "S000185",
@@ -2591,14 +2591,14 @@
       "name": "Smith (WA)",
       "party": "D",
       "state": "WA",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "S001199",
       "name": "Smucker",
       "party": "R",
       "state": "PA",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "S001225",
@@ -2647,7 +2647,7 @@
       "name": "Stefanik",
       "party": "R",
       "state": "NY",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "S001213",
@@ -2661,7 +2661,7 @@
       "name": "Steube",
       "party": "R",
       "state": "FL",
-      "voteCast": "Nay"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "S001215",
@@ -2689,7 +2689,7 @@
       "name": "Stutzman",
       "party": "R",
       "state": "IN",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "S001230",
@@ -2759,7 +2759,7 @@
       "name": "Thompson (PA)",
       "party": "R",
       "state": "PA",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "T000165",
@@ -2815,7 +2815,7 @@
       "name": "Torres (NY)",
       "party": "D",
       "state": "NY",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "T000482",
@@ -2857,7 +2857,7 @@
       "name": "Van Drew",
       "party": "R",
       "state": "NJ",
-      "voteCast": "Yea"
+      "voteCast": "Not Voting"
     },
     {
       "bioguideId": "V000134",
@@ -2906,7 +2906,7 @@
       "name": "Velázquez",
       "party": "D",
       "state": "NY",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "V000138",
@@ -2920,6 +2920,13 @@
       "name": "Wagner",
       "party": "R",
       "state": "MO",
+      "voteCast": "Not Voting"
+    },
+    {
+      "bioguideId": "W000832",
+      "name": "Wahab",
+      "party": "D",
+      "state": "CA",
       "voteCast": "Yea"
     },
     {
@@ -2962,7 +2969,7 @@
       "name": "Weber (TX)",
       "party": "R",
       "state": "TX",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "W000806",
@@ -3018,7 +3025,7 @@
       "name": "Wilson (SC)",
       "party": "R",
       "state": "SC",
-      "voteCast": "Not Voting"
+      "voteCast": "Yea"
     },
     {
       "bioguideId": "W000804",
@@ -3049,6 +3056,6 @@
       "voteCast": "Yea"
     }
   ],
-  "url": "https://clerk.house.gov/Votes/2026224",
+  "url": "https://clerk.house.gov/Votes/2026296",
   "topic": "Procedural"
 }
