@@ -20,7 +20,18 @@
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119567?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Full Committee Business Meeting",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119567",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Business Meeting",
+      "url": "https://www.youtube.com/watch?v=P3YYBcmNckM",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "Notice",

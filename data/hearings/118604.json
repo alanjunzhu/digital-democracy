@@ -1,0 +1,58 @@
+{
+  "eventId": "118604",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Water Resources Development Acts Implementation: Review and Oversight of Past Provisions\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-09-10T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw02",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118604?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Adam Telle",
+      "position": "Assistant Secretary",
+      "organization": "United States Army (Civil Works)"
+    },
+    {
+      "name": "Lieutenant General William Graham, Jr.",
+      "position": "Chief of Engineers and Commanding General",
+      "organization": "United States Army Corps of Engineers"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Water Resources Development Acts Implementation: Review and Oversight of Past Provisions",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118604",
+      "format": ""
+    },
+    {
+      "name": "Water Resources Development Acts Implementation: Review and Oversight of Past Provisions",
+      "url": "https://www.youtube.com/watch?v=vnCaLBn-P8c",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118604/documents/HHRG-119-PW02-20250910-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/118604/documents/HHRG-119-PW02-20250910-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

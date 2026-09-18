@@ -1,0 +1,42 @@
+{
+  "eventId": "119025",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "CI Screening, Vetting, & Watch listing (CLOSED)",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-04T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hlig00",
+      "name": "House Intelligence (Permanent Select)"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119025?format=json",
+  "witnesses": [
+    {
+      "name": "David Tomlinson",
+      "position": "Assistant Director, CI Directorate",
+      "organization": "NCSC"
+    },
+    {
+      "name": "Lauren Elinsky",
+      "position": "Assistant Director, Mission Capabilities Directorate",
+      "organization": "NCSC"
+    },
+    {
+      "name": "Steve McQueen",
+      "position": "Assistant Director, Threats Screening Center",
+      "organization": "FBI"
+    },
+    {
+      "name": "Roman Rozhavsky",
+      "position": "Assistant Director, Counterintelligence and Espionage Division",
+      "organization": "FBI"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": []
+}

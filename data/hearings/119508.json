@@ -19,8 +19,40 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119508?format=json",
-  "witnesses": [],
-  "videos": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Nicholas Begich",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Emily Randall",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "Ms. Sarah Obed",
+      "position": "Senior Vice President of External Affairs",
+      "organization": "Doyon, Limited"
+    },
+    {
+      "name": "The Honorable Annette Bryan",
+      "position": "Councilwoman",
+      "organization": "Puyallup Tribe of Indians"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Legislative Hearing on H.R. 7269 and H.R. 8674",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119508",
+      "format": ""
+    },
+    {
+      "name": "Legislative Hearing on H.R. 7269 and H.R. 8674",
+      "url": "https://www.youtube.com/watch?v=MF-0_cJSPr8",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "Hearing Notice",

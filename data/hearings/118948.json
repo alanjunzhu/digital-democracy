@@ -21,13 +21,13 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/118948?format=json",
   "witnesses": [
     {
-      "name": "The Honorable Douglas Collins",
-      "position": "Secretary",
+      "name": "The Honorable John Bartrum",
+      "position": "Under Secretary for Health",
       "organization": "U.S. Department of Veterans Affairs"
     },
     {
-      "name": "The Honorable John Bartrum",
-      "position": "Under Secretary for Health",
+      "name": "The Honorable Douglas Collins",
+      "position": "Secretary",
       "organization": "U.S. Department of Veterans Affairs"
     },
     {
@@ -62,6 +62,11 @@
     {
       "name": "Hearing Notice",
       "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-20260211-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Department of Veteran Affairs Response to Ranking Member Takano",
+      "url": "https://www.congress.gov/119/meeting/house/118948/documents/HHRG-119-VR00-20260211-QFR002.pdf",
       "format": "PDF"
     },
     {

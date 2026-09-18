@@ -1,0 +1,53 @@
+{
+  "eventId": "118991",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"The General Services Administration: Examining the Future of Federal Real Estate Management to Reduce Costs for the Taxpayer\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-04T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw13",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118991?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Edward Forst",
+      "position": "Administrator",
+      "organization": "General Services Administration"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Examining the Future of Federal Real Estate Management to Reduce Costs for the Taxpayer",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118991",
+      "format": ""
+    },
+    {
+      "name": "Examining the Future of Federal Real Estate Management to Reduce Costs for the Taxpayer",
+      "url": "https://www.youtube.com/watch?v=6k90uI7y5cU",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118991/documents/HHRG-119-PW13-20260304-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/118991/documents/HHRG-119-PW13-20260304-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}
