@@ -15,7 +15,23 @@
   "location": null,
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119569?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Leon Panetta",
+      "position": "Chairman, The Panetta Institute for Public Policy",
+      "organization": "Former U.S. Representative for California, Budget Committee Chairman, Secretary of Defense, and White House Chief of Staff"
+    },
+    {
+      "name": "The Honorable Rob Portman",
+      "position": "Founder, The Portman Center for Policy Solutions",
+      "organization": "Former U.S. Senator and Representative for Ohio, Former Director of the Office of Management and Budget"
+    },
+    {
+      "name": "The Honorable Joe Manchin",
+      "position": "Former U.S. Senator for West Virginia",
+      "organization": "Former Governor of West Virginia"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

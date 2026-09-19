@@ -1,0 +1,74 @@
+{
+  "eventId": "119249",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Protecting Workers and Powering America: The Future of Mining\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-08T13:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119249?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Eric Carter",
+      "position": "General Manager",
+      "organization": "Peabody Energy"
+    },
+    {
+      "name": "Mr. Sam Petsonk",
+      "position": "Owner",
+      "organization": "Petsonk PLLC"
+    },
+    {
+      "name": "Mr. Bruce Stevens",
+      "position": "President",
+      "organization": "Resource Services, LLC"
+    },
+    {
+      "name": "Mr. Arthur Wolfson",
+      "position": "Partner",
+      "organization": "Fisher Phillips LLP"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Protecting Workers and Powering America: The Future of Mining",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119249",
+      "format": ""
+    },
+    {
+      "name": "Protecting Workers and Powering America: The Future of Mining",
+      "url": "https://www.youtube.com/watch?v=AQqN7YUb8Sc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Ranking Member Robert C. \"Bobby\" Scott | Submission for the Record | Ranking Member Robert C. \"Bobby\" Scott Statement for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119249/documents/HHRG-119-ED00-20260508-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Mr. Sam Petsonk | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119249/documents/HHRG-119-ED00-20260508-QFR001-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Robert C. \"Bobby\" Scott | Submission for the Record | USW Statement",
+      "url": "https://www.congress.gov/119/meeting/house/119249/documents/HHRG-119-ED00-20260508-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Mr. Sam Petsonk | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119249/documents/HHRG-119-ED00-20260508-QFR001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

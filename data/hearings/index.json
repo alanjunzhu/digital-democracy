@@ -1,26 +1,8 @@
 {
-  "lastUpdated": "2026-09-18T13:58:13.927Z",
+  "lastUpdated": "2026-09-19T13:34:22.817Z",
   "congress": 119,
   "total": 428,
   "hearings": [
-    {
-      "eventId": "119564",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Main Street Capital Access Act: Empowering Community Banks to Drive Economic Growth",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-18T16:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsba20",
-          "name": "House Financial Services Subcommittee on Financial Institutions"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119564?format=json"
-    },
     {
       "eventId": "119569",
       "congress": 119,
@@ -150,6 +132,34 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338769?format=json"
     },
     {
+      "eventId": "338765",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider S.5354, to reauthorize the Native American Housing Assistance and Self-Determination Act of 1996; to be immediately followed by hearings to examine S.1750, to reaffirm the applicability of the Indian Reorganization Act to the Poarch Band of Creek Indians, S.3859, to amend the Catawba Indian Tribe of South Carolina Land Claims Settlement Act of 1993 with respect to future membership in the Catawba Indian Nation, S.4053, to take certain land in the State of California into trust for the benefit of the Pechanga Band of Indians, and H.R.226, to take certain Federal lands in Tennessee into trust for the benefit of the Eastern Band of Cherokee Indians.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-23T18:30:00Z",
+      "committees": [
+        {
+          "systemCode": "slia00",
+          "name": "Senate Indian Affairs"
+        }
+      ],
+      "location": {
+        "room": "628",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr226",
+        "s1750",
+        "s3859",
+        "s4053",
+        "s5354"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338765?format=json"
+    },
+    {
       "eventId": "338767",
       "congress": 119,
       "chamber": "Senate",
@@ -170,33 +180,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338767?format=json"
-    },
-    {
-      "eventId": "338765",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine S.1750, to reaffirm the applicability of the Indian Reorganization Act to the Poarch Band of Creek Indians, S.3859, to amend the Catawba Indian Tribe of South Carolina Land Claims Settlement Act of 1993 with respect to future membership in the Catawba Indian Nation, S.4053, to take certain land in the State of California into trust for the benefit of the Pechanga Band of Indians, and H.R.226, to take certain Federal lands in Tennessee into trust for the benefit of the Eastern Band of Cherokee Indians.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-23T18:30:00Z",
-      "committees": [
-        {
-          "systemCode": "slia00",
-          "name": "Senate Indian Affairs"
-        }
-      ],
-      "location": {
-        "room": "628",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr226",
-        "s1750",
-        "s3859",
-        "s4053"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338765?format=json"
     },
     {
       "eventId": "338764",
@@ -443,6 +426,24 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338758?format=json"
     },
     {
+      "eventId": "119564",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Main Street Capital Access Act: Empowering Community Banks to Drive Economic Growth",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-18T16:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba20",
+          "name": "House Financial Services Subcommittee on Financial Institutions"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119564?format=json"
+    },
+    {
       "eventId": "119508",
       "congress": 119,
       "chamber": "House",
@@ -533,28 +534,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338724?format=json"
     },
     {
-      "eventId": "338748",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the menopause care gap in America.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-16T19:30:00Z",
-      "committees": [
-        {
-          "systemCode": "spag00",
-          "name": "Senate Aging (Special)"
-        }
-      ],
-      "location": {
-        "room": "216",
-        "building": "Hart Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338748?format=json"
-    },
-    {
       "eventId": "338756",
       "congress": 119,
       "chamber": "Senate",
@@ -575,6 +554,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338756?format=json"
+    },
+    {
+      "eventId": "338748",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the menopause care gap in America.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-16T19:30:00Z",
+      "committees": [
+        {
+          "systemCode": "spag00",
+          "name": "Senate Aging (Special)"
+        }
+      ],
+      "location": {
+        "room": "216",
+        "building": "Hart Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338748?format=json"
     },
     {
       "eventId": "338744",
@@ -775,6 +776,67 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119565?format=json"
     },
     {
+      "eventId": "119573",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Markup",
+      "title": "Markup of Sixteen Bills",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-16T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif00",
+          "name": "House Energy and Commerce"
+        }
+      ],
+      "location": {
+        "room": "2123",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr2713",
+        "hr6207",
+        "hr5967",
+        "hr6152",
+        "hr2805",
+        "hr7294",
+        "hr7502",
+        "hr10152",
+        "hr8255",
+        "hr9385",
+        "hr7945",
+        "hr4950",
+        "hr10158",
+        "hr10170",
+        "hr6832",
+        "hr10163"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119573?format=json"
+    },
+    {
+      "eventId": "119538",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Import Controls: Tools to Counter the CCP’s Industrial Policy and Supply Chain Threats",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-16T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hlzs00",
+          "name": ""
+        }
+      ],
+      "location": {
+        "room": "390",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119538?format=json"
+    },
+    {
       "eventId": "119570",
       "congress": 119,
       "chamber": "House",
@@ -803,28 +865,6 @@
         "hr2442"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119570?format=json"
-    },
-    {
-      "eventId": "119538",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Import Controls: Tools to Counter the CCP’s Industrial Policy and Supply Chain Threats",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-16T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hlzs00",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "390",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119538?format=json"
     },
     {
       "eventId": "119563",
@@ -891,45 +931,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119555?format=json"
-    },
-    {
-      "eventId": "119573",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Markup of Sixteen Bills",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-16T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif00",
-          "name": "House Energy and Commerce"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr2713",
-        "hr6207",
-        "hr5967",
-        "hr6152",
-        "hr2805",
-        "hr7294",
-        "hr7502",
-        "hr10152",
-        "hr8255",
-        "hr9385",
-        "hr7945",
-        "hr4950",
-        "hr10158",
-        "hr10170",
-        "hr6832",
-        "hr10163"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119573?format=json"
     },
     {
       "eventId": "119537",
@@ -1523,6 +1524,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119550?format=json"
     },
     {
+      "eventId": "119557",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Unequal Treatment: Addressing the Drivers of Unaffordability for Oral Chemotherapy”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsgo27",
+          "name": "House Oversight and Government Reform Subcommittee on Health Care and Financial Services"
+        }
+      ],
+      "location": {
+        "room": "2154",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119557?format=json"
+    },
+    {
       "eventId": "119551",
       "congress": 119,
       "chamber": "House",
@@ -1583,28 +1606,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119543?format=json"
-    },
-    {
-      "eventId": "119557",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Unequal Treatment: Addressing the Drivers of Unaffordability for Oral Chemotherapy”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsgo27",
-          "name": "House Oversight and Government Reform Subcommittee on Health Care and Financial Services"
-        }
-      ],
-      "location": {
-        "room": "2154",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119557?format=json"
     },
     {
       "eventId": "119554",
@@ -1869,28 +1870,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119526?format=json"
     },
     {
-      "eventId": "119521",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Less Red Tape, More Opportunity: Unleashing American Workers and Job Creators”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed10",
-          "name": "House Education and Workforce Subcommittee on Workforce Protections"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119521?format=json"
-    },
-    {
       "eventId": "119517",
       "congress": 119,
       "chamber": "House",
@@ -1911,6 +1890,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119517?format=json"
+    },
+    {
+      "eventId": "119521",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Less Red Tape, More Opportunity: Unleashing American Workers and Job Creators”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed10",
+          "name": "House Education and Workforce Subcommittee on Workforce Protections"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119521?format=json"
     },
     {
       "eventId": "119527",
@@ -6367,28 +6368,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119392?format=json"
     },
     {
-      "eventId": "119394",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Workforce Rewired: Modern Apprenticeships for a Modern Economy”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed13",
-          "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119394?format=json"
-    },
-    {
       "eventId": "338601",
       "congress": 119,
       "chamber": "Senate",
@@ -8870,6 +8849,24 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119199?format=json"
+    },
+    {
+      "eventId": "119249",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Protecting Workers and Powering America: The Future of Mining\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-05-08T13:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119249?format=json"
     },
     {
       "eventId": "119189",
