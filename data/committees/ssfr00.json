@@ -38,6 +38,96 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "hr9086",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9086,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-17",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9086"
+    },
+    {
+      "billId": "sres816",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 816,
+      "relationshipType": "Discharged From",
+      "actionDate": "2026-09-17",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/816"
+    },
+    {
+      "billId": "sres865",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 865,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-17",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/865"
+    },
+    {
+      "billId": "hconres93",
+      "congress": 119,
+      "type": "H.Con.Res.",
+      "number": 93,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-16",
+      "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/93"
+    },
+    {
+      "billId": "s5404",
+      "congress": 119,
+      "type": "S.",
+      "number": 5404,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-16",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5404"
+    },
+    {
+      "billId": "sjres215",
+      "congress": 119,
+      "type": "S.J.Res.",
+      "number": 215,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-16",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/215"
+    },
+    {
+      "billId": "sjres216",
+      "congress": 119,
+      "type": "S.J.Res.",
+      "number": 216,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-16",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/216"
+    },
+    {
+      "billId": "sres855",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 855,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-16",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/855"
+    },
+    {
+      "billId": "s5400",
+      "congress": 119,
+      "type": "S.",
+      "number": 5400,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5400"
+    },
+    {
+      "billId": "sres852",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 852,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-14",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/852"
+    },
+    {
       "billId": "s5382",
       "congress": 119,
       "type": "S.",
@@ -423,15 +513,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-07-23",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5131"
-    },
-    {
-      "billId": "sres816",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 816,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-07-23",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/816"
     },
     {
       "billId": "s5063",
@@ -2205,87 +2286,6 @@
       "relationshipType": "Reported By",
       "actionDate": "2025-10-30",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2978"
-    },
-    {
-      "billId": "sres226",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 226,
-      "relationshipType": "Reported By",
-      "actionDate": "2025-10-30",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/226"
-    },
-    {
-      "billId": "sres409",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 409,
-      "relationshipType": "Reported By",
-      "actionDate": "2025-10-30",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/409"
-    },
-    {
-      "billId": "sres472",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 472,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-10-29",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/472"
-    },
-    {
-      "billId": "sres473",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 473,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-10-29",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/473"
-    },
-    {
-      "billId": "s3056",
-      "congress": 119,
-      "type": "S.",
-      "number": 3056,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-10-27",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3056"
-    },
-    {
-      "billId": "s3036",
-      "congress": 119,
-      "type": "S.",
-      "number": 3036,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-10-23",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3036"
-    },
-    {
-      "billId": "s3051",
-      "congress": 119,
-      "type": "S.",
-      "number": 3051,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-10-23",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3051"
-    },
-    {
-      "billId": "sres462",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 462,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-10-22",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/462"
-    },
-    {
-      "billId": "sjres90",
-      "congress": 119,
-      "type": "S.J.Res.",
-      "number": 90,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-10-16",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/90"
     }
   ]
 }

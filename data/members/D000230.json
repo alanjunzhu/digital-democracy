@@ -40,18 +40,6 @@
   "sponsoredBills": [
     {
       "congress": 119,
-      "type": "H.R.",
-      "number": 10085,
-      "billId": "hr10085",
-      "title": "Lifelong Learning Act",
-      "introducedDate": "2026-08-13",
-      "latestAction": "Referred to the House Committee on Education and Workforce.",
-      "latestActionDate": "2026-08-13",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10085"
-    },
-    {
-      "congress": 119,
       "type": "H.Res.",
       "number": 1293,
       "billId": "hres1293",
@@ -61,6 +49,18 @@
       "latestActionDate": "2026-05-15",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1293"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10085,
+      "billId": "hr10085",
+      "title": "Lifelong Learning Act",
+      "introducedDate": "2026-08-13",
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2026-08-13",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10085"
     },
     {
       "congress": 119,
@@ -105,7 +105,7 @@
       "billId": "hr6385",
       "title": "Farm Transitions Act of 2025",
       "introducedDate": "2025-12-03",
-      "latestAction": "Referred to the Subcommittee on General Farm Commodities, Risk Management, and Credit.",
+      "latestAction": "Referred to the Subcommittee on Conservation, Research, and Biotechnology.",
       "latestActionDate": "2026-01-13",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6385"

@@ -12,6 +12,15 @@
   "billCount": 23,
   "bills": [
     {
+      "billId": "hr7625",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 7625,
+      "relationshipType": "Discharged from",
+      "actionDate": "2026-09-15",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7625"
+    },
+    {
       "billId": "hr8020",
       "congress": 119,
       "type": "H.R.",
@@ -37,15 +46,6 @@
       "relationshipType": "Referred to",
       "actionDate": "2026-03-13",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7900"
-    },
-    {
-      "billId": "hr7625",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 7625,
-      "relationshipType": "Referred to",
-      "actionDate": "2026-02-21",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7625"
     },
     {
       "billId": "hr7332",

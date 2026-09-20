@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.J.Res.",
-  "number": "12",
+  "number": 12,
   "billId": "hjres12",
   "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve.",
   "introducedDate": "2025-01-06",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on the Judiciary.",
   "latestActionDate": "2025-01-06",
+  "updateDate": "2026-09-19T23:41:03Z",
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/12",
   "summary": "<p>This joint resolution proposes an amendment to the Constitution establishing term limits for individuals serving in the Senate and the House of Representatives.</p><p>The proposed amendment makes an individual who has served two terms in the Senate ineligible for appointment or election to the Senate and an individual who has served three terms as a Member of the House of Representatives ineligible for election to the House of Representatives.</p><p>The joint resolution provides that the amendment shall be valid when ratified by the legislatures of three-fourths of the states within seven years after the date of its submission for ratification.</p><p>Under Article V of the Constitution, both chambers of Congress may propose an amendment by a vote of two-thirds of all Members present for such vote. A proposed amendment must be ratified by the states as prescribed in Article V and as specified by Congress.</p>",
   "cosponsors": 115,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-06T17:00:25Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

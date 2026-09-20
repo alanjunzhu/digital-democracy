@@ -87,6 +87,30 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "S.",
+      "number": 5444,
+      "billId": "s5444",
+      "title": "A bill to amend the Education Sciences Reform Act of 2002 to establish a National Center for Advanced Development in Education at the Institute for Education Sciences, and for other purposes.",
+      "introducedDate": "2026-09-17",
+      "latestAction": "Read twice and referred to the Committee on Health, Education, Labor, and Pensions.",
+      "latestActionDate": "2026-09-17",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5444"
+    },
+    {
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 857,
+      "billId": "sres857",
+      "title": "A resolution commemorating 1 year since the tragic act of violence on September 10, 2025, in Evergreen, Colorado, recognizing the victims, survivors, and responders, and expressing condolences and support to their families and their communities.",
+      "introducedDate": "2026-09-16",
+      "latestAction": "Referred to the Committee on the Judiciary.",
+      "latestActionDate": "2026-09-16",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/857"
+    },
+    {
+      "congress": 119,
       "type": "S.Res.",
       "number": 844,
       "billId": "sres844",
@@ -176,8 +200,8 @@
       "billId": "s5101",
       "title": "Glenwood Hot Springs Protection Act",
       "introducedDate": "2026-07-23",
-      "latestAction": "Read twice and referred to the Committee on Energy and Natural Resources.",
-      "latestActionDate": "2026-07-23",
+      "latestAction": "Committee on Energy and Natural Resources. Hearings held.",
+      "latestActionDate": "2026-09-16",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5101"
     },
@@ -312,18 +336,6 @@
       "latestActionDate": "2026-04-30",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4455"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 4433,
-      "billId": "s4433",
-      "title": "Disaster Declaration Transparency Act of 2026",
-      "introducedDate": "2026-04-29",
-      "latestAction": "Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
-      "latestActionDate": "2026-04-29",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4433"
     }
   ]
 }

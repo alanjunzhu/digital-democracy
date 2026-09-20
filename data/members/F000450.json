@@ -113,6 +113,30 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1281,
+      "billId": "hres1281",
+      "title": "Recognizing the 175th anniversary of the founding of Alpha Delta Pi sorority.",
+      "introducedDate": "2026-05-13",
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2026-05-13",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1281"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 8684,
+      "billId": "hr8684",
+      "title": "Transparency in Billing Act of 2026",
+      "introducedDate": "2026-05-07",
+      "latestAction": "Placed on the Union Calendar, Calendar No. 652.",
+      "latestActionDate": "2026-07-13",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8684"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10310,
       "billId": "hr10310",
@@ -146,30 +170,6 @@
       "latestActionDate": "2026-07-21",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1438"
-    },
-    {
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 1281,
-      "billId": "hres1281",
-      "title": "Recognizing the 175th anniversary of the founding of Alpha Delta Pi sorority.",
-      "introducedDate": "2026-05-13",
-      "latestAction": "Referred to the House Committee on Education and Workforce.",
-      "latestActionDate": "2026-05-13",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1281"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 8684,
-      "billId": "hr8684",
-      "title": "Transparency in Billing Act of 2026",
-      "introducedDate": "2026-05-07",
-      "latestAction": "Placed on the Union Calendar, Calendar No. 652.",
-      "latestActionDate": "2026-07-13",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8684"
     },
     {
       "congress": 119,
@@ -334,8 +334,8 @@
       "billId": "hr4795",
       "title": "Protect Economic and Academic Freedom Act of 2026",
       "introducedDate": "2025-07-29",
-      "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-      "latestActionDate": "2026-09-03",
+      "latestAction": "Received in the Senate and Read twice and referred to the Committee on Health, Education, Labor, and Pensions.",
+      "latestActionDate": "2026-09-14",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/4795"
     },

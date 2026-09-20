@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "305",
+  "number": 305,
   "billId": "hr305",
   "title": "One School, One Nurse Act of 2025",
   "introducedDate": "2025-01-09",
@@ -13,14 +13,37 @@
   },
   "latestAction": "Referred to the Committee on Education and Workforce, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-09-19T23:40:59Z",
   "originChamber": "House",
   "policyArea": "Education",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/305",
   "summary": "<p><strong>One School, One Nurse Act of </strong><strong>2025</strong></p><p>This bill directs the Department of Education (ED) to award competitive grants to eligible entities for recruiting, hiring, and retaining school nurses. An eligible entity is a local educational agency (LEA) or a partnership between a state educational agency and a consortium of LEAs in the state.</p><p>Further, ED must specify in regulation the recommended nurse-to-student ratios for elementary and secondary schools.</p>",
   "cosponsors": 5,
   "committees": [
-    "Energy and Commerce Committee",
-    "Education and Workforce Committee"
+    {
+      "name": "Energy and Commerce Committee",
+      "systemCode": "hsif00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:37:35Z"
+        }
+      ]
+    },
+    {
+      "name": "Education and Workforce Committee",
+      "systemCode": "hsed00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:37:30Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

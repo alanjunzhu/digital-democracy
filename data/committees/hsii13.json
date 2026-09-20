@@ -12,6 +12,15 @@
   "billCount": 42,
   "bills": [
     {
+      "billId": "hr9621",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9621,
+      "relationshipType": "Discharged from",
+      "actionDate": "2026-09-15",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9621"
+    },
+    {
       "billId": "hr10117",
       "congress": 119,
       "type": "H.R.",
@@ -84,15 +93,6 @@
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9590"
     },
     {
-      "billId": "hr4219",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4219,
-      "relationshipType": "Discharged from",
-      "actionDate": "2026-07-22",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4219"
-    },
-    {
       "billId": "hr6021",
       "congress": 119,
       "type": "H.R.",
@@ -129,15 +129,6 @@
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/8876"
     },
     {
-      "billId": "hr9621",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 9621,
-      "relationshipType": "Hearings By (subcommittee)",
-      "actionDate": "2026-07-21",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9621"
-    },
-    {
       "billId": "hr2406",
       "congress": 119,
       "type": "H.R.",
@@ -145,15 +136,6 @@
       "relationshipType": "Discharged from",
       "actionDate": "2026-07-15",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/2406"
-    },
-    {
-      "billId": "hr6251",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6251,
-      "relationshipType": "Discharged from",
-      "actionDate": "2026-07-15",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6251"
     },
     {
       "billId": "hr6893",
@@ -271,6 +253,24 @@
       "relationshipType": "Discharged from",
       "actionDate": "2026-04-21",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3756"
+    },
+    {
+      "billId": "hr4219",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 4219,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-04-16",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4219"
+    },
+    {
+      "billId": "hr6251",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 6251,
+      "relationshipType": "Hearings By (subcommittee)",
+      "actionDate": "2026-04-16",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6251"
     },
     {
       "billId": "hr7288",

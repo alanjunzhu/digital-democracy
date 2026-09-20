@@ -38,6 +38,18 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "S.Res.",
+      "number": 866,
+      "billId": "sres866",
+      "title": "A resolution supporting the designation of October 2026 as \"Substance Use & Misuse Prevention Month\" to raise awareness of substance use and misuse in the United States.",
+      "introducedDate": "2026-09-17",
+      "latestAction": "Referred to the Committee on Health, Education, Labor, and Pensions.",
+      "latestActionDate": "2026-09-17",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/866"
+    },
+    {
+      "congress": 119,
       "type": "S.",
       "number": 747,
       "billId": "s747",
@@ -67,8 +79,8 @@
       "billId": "s5293",
       "title": "PREPARE Act",
       "introducedDate": "2026-08-06",
-      "latestAction": "Read twice and referred to the Committee on Energy and Natural Resources.",
-      "latestActionDate": "2026-08-06",
+      "latestAction": "Committee on Energy and Natural Resources. Hearings held.",
+      "latestActionDate": "2026-09-16",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5293"
     },
@@ -455,18 +467,6 @@
       "latestActionDate": "2025-10-30",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/409"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 2804,
-      "billId": "s2804",
-      "title": "Strengthen Wood Products Supply Chain Act of 2025",
-      "introducedDate": "2025-09-15",
-      "latestAction": "Read twice and referred to the Committee on Environment and Public Works.",
-      "latestActionDate": "2025-09-15",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2804"
     }
   ]
 }
