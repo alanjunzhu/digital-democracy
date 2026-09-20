@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-19T13:34:22.817Z",
+  "lastUpdated": "2026-09-20T13:48:30.279Z",
   "congress": 119,
   "total": 428,
   "hearings": [
@@ -86,28 +86,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338766?format=json"
-    },
-    {
-      "eventId": "338759",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine to take sworn witness testimony.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-23T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssga00",
-          "name": "Senate Homeland Security and Governmental Affairs"
-        }
-      ],
-      "location": {
-        "room": "342",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338759?format=json"
     },
     {
       "eventId": "338769",
@@ -296,7 +274,7 @@
       "congress": 119,
       "chamber": "Senate",
       "type": "Closed Hearing",
-      "title": "Closed hearings to examine an update on the budget of the Department of Defense.",
+      "title": "To receive a closed briefing on an update on the budget of the Department of Defense.",
       "meetingStatus": "Scheduled",
       "date": "2026-09-24T13:30:00Z",
       "committees": [
@@ -534,28 +512,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338724?format=json"
     },
     {
-      "eventId": "338756",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Business Meeting",
-      "title": "Business meeting to consider an original bill entitled, \"Agricultural Act of 2026\".",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-16T19:30:00Z",
-      "committees": [
-        {
-          "systemCode": "ssaf00",
-          "name": "Senate Agriculture, Nutrition, and Forestry"
-        }
-      ],
-      "location": {
-        "room": "318",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338756?format=json"
-    },
-    {
       "eventId": "338748",
       "congress": 119,
       "chamber": "Senate",
@@ -576,6 +532,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338748?format=json"
+    },
+    {
+      "eventId": "338756",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider an original bill entitled, \"Agricultural Act of 2026\".",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-16T19:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssaf00",
+          "name": "Senate Agriculture, Nutrition, and Forestry"
+        }
+      ],
+      "location": {
+        "room": "318",
+        "building": "Russell Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338756?format=json"
     },
     {
       "eventId": "338744",
@@ -2702,6 +2680,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338700?format=json"
     },
     {
+      "eventId": "338702",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nominations of Peter McCoy, of South Carolina, to be Ambassador to Montenegro, Daniel Travis, of California, a Career Member of the Senior Foreign Service, Class of Counselor, to be Ambassador to the Republic of Sierra Leone, and Nathaniel Morris, of Kentucky, to be Ambassador to the Republic of Colombia, all of the Department of State.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-08-05T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfr00",
+          "name": "Senate Foreign Relations"
+        }
+      ],
+      "location": {
+        "room": "419",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338702?format=json"
+    },
+    {
       "eventId": "338701",
       "congress": 119,
       "chamber": "Senate",
@@ -2744,28 +2744,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338704?format=json"
-    },
-    {
-      "eventId": "338702",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nominations of Peter McCoy, of South Carolina, to be Ambassador to Montenegro, Daniel Travis, of California, a Career Member of the Senior Foreign Service, Class of Counselor, to be Ambassador to the Republic of Sierra Leone, and Nathaniel Morris, of Kentucky, to be Ambassador to the Republic of Colombia, all of the Department of State.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-05T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfr00",
-          "name": "Senate Foreign Relations"
-        }
-      ],
-      "location": {
-        "room": "419",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338702?format=json"
     },
     {
       "eventId": "338697",
@@ -2944,28 +2922,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338688?format=json"
     },
     {
-      "eventId": "338694",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Business Meeting",
-      "title": "Business meeting to consider an original bill entitled, \"Taxpayer Assistance and Service Act\".",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-30T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfi00",
-          "name": "Senate Finance"
-        }
-      ],
-      "location": {
-        "room": "215",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338694?format=json"
-    },
-    {
       "eventId": "338689",
       "congress": 119,
       "chamber": "Senate",
@@ -2986,6 +2942,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338689?format=json"
+    },
+    {
+      "eventId": "338694",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider an original bill entitled, \"Taxpayer Assistance and Service Act\".",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-30T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfi00",
+          "name": "Senate Finance"
+        }
+      ],
+      "location": {
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338694?format=json"
     },
     {
       "eventId": "338684",
@@ -3788,28 +3766,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338682?format=json"
     },
     {
-      "eventId": "338681",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the President's 2026 trade policy agenda.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfi00",
-          "name": "Senate Finance"
-        }
-      ],
-      "location": {
-        "room": "215",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338681?format=json"
-    },
-    {
       "eventId": "338667",
       "congress": 119,
       "chamber": "Senate",
@@ -3844,6 +3800,28 @@
         "s5026"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338667?format=json"
+    },
+    {
+      "eventId": "338681",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the President's 2026 trade policy agenda.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-22T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfi00",
+          "name": "Senate Finance"
+        }
+      ],
+      "location": {
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338681?format=json"
     },
     {
       "eventId": "338666",
@@ -4537,6 +4515,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338654?format=json"
     },
     {
+      "eventId": "338653",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nomination of David Cummins, of Virginia, to be Administrator of the Transportation Security Administration.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-16T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "sscm00",
+          "name": "Senate Commerce, Science, and Transportation"
+        }
+      ],
+      "location": {
+        "room": "253",
+        "building": "Russell Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338653?format=json"
+    },
+    {
       "eventId": "338657",
       "congress": 119,
       "chamber": "Senate",
@@ -4559,26 +4559,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338657?format=json"
     },
     {
-      "eventId": "338653",
+      "eventId": "338643",
       "congress": 119,
       "chamber": "Senate",
       "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of David Cummins, of Virginia, to be Administrator of the Transportation Security Administration.",
+      "title": "Hearings to examine the nomination of Lieutenant General Douglas A. Schiess, USSF, to be general and Chief of Space Operations.",
       "meetingStatus": "Scheduled",
-      "date": "2026-07-16T14:00:00Z",
+      "date": "2026-07-16T13:30:00Z",
       "committees": [
         {
-          "systemCode": "sscm00",
-          "name": "Senate Commerce, Science, and Transportation"
+          "systemCode": "ssas00",
+          "name": "Senate Armed Services"
         }
       ],
       "location": {
-        "room": "253",
-        "building": "Russell Senate Office Building",
+        "room": "G50",
+        "building": "Dirksen Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338653?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338643?format=json"
     },
     {
       "eventId": "338662",
@@ -4623,28 +4623,6 @@
         "s945"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338662?format=json"
-    },
-    {
-      "eventId": "338643",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of Lieutenant General Douglas A. Schiess, USSF, to be general and Chief of Space Operations.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-16T13:30:00Z",
-      "committees": [
-        {
-          "systemCode": "ssas00",
-          "name": "Senate Armed Services"
-        }
-      ],
-      "location": {
-        "room": "G50",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338643?format=json"
     },
     {
       "eventId": "119471",
@@ -6156,28 +6134,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338608?format=json"
     },
     {
-      "eventId": "338606",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nominations of Brett Doyle, of Connecticut, David Foley, Jr., of Virginia, Samuel Negatu, of the District of Columbia, Peter-Anthony Pappas, of New Jersey, and Bartholomew Thanhauser, of New York, each to be a Member of the United States International Trade Commission.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-25T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfi00",
-          "name": "Senate Finance"
-        }
-      ],
-      "location": {
-        "room": "215",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338606?format=json"
-    },
-    {
       "eventId": "338609",
       "congress": 119,
       "chamber": "Senate",
@@ -6198,6 +6154,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338609?format=json"
+    },
+    {
+      "eventId": "338606",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nominations of Brett Doyle, of Connecticut, David Foley, Jr., of Virginia, Samuel Negatu, of the District of Columbia, Peter-Anthony Pappas, of New Jersey, and Bartholomew Thanhauser, of New York, each to be a Member of the United States International Trade Commission.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-25T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfi00",
+          "name": "Senate Finance"
+        }
+      ],
+      "location": {
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338606?format=json"
     },
     {
       "eventId": "338602",
@@ -6390,28 +6368,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338601?format=json"
     },
     {
-      "eventId": "338584",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of Mark Cruz, of Oregon, to be Director of the Indian Health Service, Department of Health and Human Services.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "slia00",
-          "name": "Senate Indian Affairs"
-        }
-      ],
-      "location": {
-        "room": "628",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338584?format=json"
-    },
-    {
       "eventId": "338585",
       "congress": 119,
       "chamber": "Senate",
@@ -6432,6 +6388,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338585?format=json"
+    },
+    {
+      "eventId": "338584",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nomination of Mark Cruz, of Oregon, to be Director of the Indian Health Service, Department of Health and Human Services.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-24T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "slia00",
+          "name": "Senate Indian Affairs"
+        }
+      ],
+      "location": {
+        "room": "628",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338584?format=json"
     },
     {
       "eventId": "338587",
@@ -6544,28 +6522,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338577?format=json"
     },
     {
-      "eventId": "338578",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine improving safety across the National Airspace System.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-23T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "sscm33",
-          "name": "Senate Commerce, Science, and Transportation Subcommittee on Aviation, Space, and Innovation"
-        }
-      ],
-      "location": {
-        "room": "253",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338578?format=json"
-    },
-    {
       "eventId": "338580",
       "congress": 119,
       "chamber": "Senate",
@@ -6586,6 +6542,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338580?format=json"
+    },
+    {
+      "eventId": "338578",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine improving safety across the National Airspace System.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-23T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "sscm33",
+          "name": "Senate Commerce, Science, and Transportation Subcommittee on Aviation, Space, and Innovation"
+        }
+      ],
+      "location": {
+        "room": "253",
+        "building": "Russell Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338578?format=json"
     },
     {
       "eventId": "338581",
@@ -7096,28 +7074,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338543?format=json"
     },
     {
-      "eventId": "338547",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the U.S. Fish and Wildlife Service.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-10T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssev00",
-          "name": "Senate Environment and Public Works"
-        }
-      ],
-      "location": {
-        "room": "406",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338547?format=json"
-    },
-    {
       "eventId": "338542",
       "congress": 119,
       "chamber": "Senate",
@@ -7138,6 +7094,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338542?format=json"
+    },
+    {
+      "eventId": "338547",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the U.S. Fish and Wildlife Service.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-10T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssev00",
+          "name": "Senate Environment and Public Works"
+        }
+      ],
+      "location": {
+        "room": "406",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338547?format=json"
     },
     {
       "eventId": "338548",
@@ -7851,28 +7829,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119343?format=json"
     },
     {
-      "eventId": "338507",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine protecting American citizenship, focusing on denaturalization and its constitutional limits.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-03T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssju21",
-          "name": "Senate Judiciary Subcommittee on Constitution"
-        }
-      ],
-      "location": {
-        "room": "226",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338507?format=json"
-    },
-    {
       "eventId": "338509",
       "congress": 119,
       "chamber": "Senate",
@@ -7905,26 +7861,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338509?format=json"
     },
     {
-      "eventId": "338506",
+      "eventId": "338507",
       "congress": 119,
       "chamber": "Senate",
       "type": "Open Hearing",
-      "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the Department of the Treasury.",
+      "title": "Hearings to examine protecting American citizenship, focusing on denaturalization and its constitutional limits.",
       "meetingStatus": "Scheduled",
-      "date": "2026-06-03T14:00:00Z",
+      "date": "2026-06-03T18:00:00Z",
       "committees": [
         {
-          "systemCode": "ssfi00",
-          "name": "Senate Finance"
+          "systemCode": "ssju21",
+          "name": "Senate Judiciary Subcommittee on Constitution"
         }
       ],
       "location": {
-        "room": "215",
+        "room": "226",
         "building": "Dirksen Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338506?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338507?format=json"
     },
     {
       "eventId": "338504",
@@ -7969,6 +7925,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338427?format=json"
+    },
+    {
+      "eventId": "338506",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the Department of the Treasury.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-03T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfi00",
+          "name": "Senate Finance"
+        }
+      ],
+      "location": {
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338506?format=json"
     },
     {
       "eventId": "338524",
@@ -8059,28 +8037,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338502?format=json"
     },
     {
-      "eventId": "338480",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the Department of State.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfr00",
-          "name": "Senate Foreign Relations"
-        }
-      ],
-      "location": {
-        "room": "419",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338480?format=json"
-    },
-    {
       "eventId": "338503",
       "congress": 119,
       "chamber": "Senate",
@@ -8101,6 +8057,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338503?format=json"
+    },
+    {
+      "eventId": "338480",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the Department of State.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfr00",
+          "name": "Senate Foreign Relations"
+        }
+      ],
+      "location": {
+        "room": "419",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338480?format=json"
     },
     {
       "eventId": "338501",
@@ -8257,6 +8235,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338412?format=json"
     },
     {
+      "eventId": "338416",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine blowing the whistle, focusing on inside the grift that keeps giving.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-05-20T18:30:00Z",
+      "committees": [
+        {
+          "systemCode": "sssb00",
+          "name": "Senate Small Business and Entrepreneurship"
+        }
+      ],
+      "location": {
+        "room": "428A",
+        "building": "Russell Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338416?format=json"
+    },
+    {
       "eventId": "338417",
       "congress": 119,
       "chamber": "Senate",
@@ -8286,28 +8286,6 @@
         "s2735"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338417?format=json"
-    },
-    {
-      "eventId": "338416",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine blowing the whistle, focusing on inside the grift that keeps giving.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-20T18:30:00Z",
-      "committees": [
-        {
-          "systemCode": "sssb00",
-          "name": "Senate Small Business and Entrepreneurship"
-        }
-      ],
-      "location": {
-        "room": "428A",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338416?format=json"
     },
     {
       "eventId": "338418",
@@ -8473,28 +8451,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338422?format=json"
     },
     {
-      "eventId": "338413",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine meeting the individual needs of all students, focusing on the role of charter schools.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-20T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "sshr00",
-          "name": "Senate Health, Education, Labor, and Pensions"
-        }
-      ],
-      "location": {
-        "room": "430",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338413?format=json"
-    },
-    {
       "eventId": "338367",
       "congress": 119,
       "chamber": "Senate",
@@ -8515,6 +8471,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338367?format=json"
+    },
+    {
+      "eventId": "338413",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine meeting the individual needs of all students, focusing on the role of charter schools.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-05-20T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "sshr00",
+          "name": "Senate Health, Education, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "430",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338413?format=json"
     },
     {
       "eventId": "338421",
@@ -8673,6 +8651,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338410?format=json"
+    },
+    {
+      "eventId": "338408",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Closed Hearing",
+      "title": "Closed hearings to examine the posture of the Department of the Navy in review of the Defense Authorization Request for Fiscal Year 2027 and the Future Years Defense Program; to be immediately followed by an open hearing at approximately 11:00 a.m. in SD-G50.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-05-19T13:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssas00",
+          "name": "Senate Armed Services"
+        }
+      ],
+      "location": {
+        "room": "217",
+        "building": "Capitol Visitor Center (Senate side",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338408?format=json"
     },
     {
       "eventId": "338404",
