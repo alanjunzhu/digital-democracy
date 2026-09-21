@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T07:48:05.564Z",
+  "lastUpdated": "2026-09-21T10:42:49.638Z",
   "horizonDays": 60,
   "entries": {
     "F000472|PEP|2026-08-26|Purchase": {
@@ -6696,60 +6696,6 @@
         "actionAdvantage": -8.766308079652108,
         "timingAdvantage": 0.9085930498854937,
         "summary": "Holding would have beat selling by 8.8% · Timing beat alternatives by 0.9%"
-      }
-    },
-    "G000583|HDB|2024-09-20|Purchase": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-09-18",
-        "isPurchase": true,
-        "isSale": false,
-        "tradeDate": "2024-09-20",
-        "scenarios": {
-          "actual": -3.9251483340940285,
-          "earlier30": 0.6947890818858471,
-          "later30": 5.667816658452432,
-          "inaction": 0,
-          "labels": {
-            "actual": "Buy on 2024-09-20",
-            "earlier30": "Buy 30d earlier",
-            "later30": "Buy 30d later",
-            "inaction": "Do nothing (cash)"
-          }
-        },
-        "actionAdvantage": -3.9251483340940285,
-        "timingAdvantage": -7.106451204263168,
-        "summary": "Staying in cash would have beat buying by 3.9% · Alternative timing would have been better by 7.1%"
-      }
-    },
-    "G000583|IBN|2024-09-20|Sale (Full)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-09-18",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2024-09-20",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 1.5878378378378337,
-          "inaction": -5.162523900573606,
-          "labels": {
-            "actual": "Sell on 2024-09-20 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 5.162523900573606,
-        "timingAdvantage": -0.7939189189189169,
-        "summary": "Selling beat holding by 5.2% · Alternative timing would have been better by 0.8%"
       }
     },
     "P000048|VNOM|2026-03-13|Purchase": {
@@ -35829,60 +35775,6 @@
         "actionAdvantage": -10.542540073982726,
         "timingAdvantage": 2.622565613923298,
         "summary": "Holding would have beat selling by 10.5% · Timing beat alternatives by 2.6%"
-      }
-    },
-    "C001047|MSFT|2024-09-20|Sale (Partial)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-09-18",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2024-09-20",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 4.512626745743244,
-          "inaction": -4.015898178142294,
-          "labels": {
-            "actual": "Sell on 2024-09-20 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": 4.015898178142294,
-        "timingAdvantage": -2.256313372871622,
-        "summary": "Selling beat holding by 4.0% · Alternative timing would have been better by 2.3%"
-      }
-    },
-    "C001047|AAPL|2024-09-20|Sale (Partial)": {
-      "counterfactuals": {
-        "ok": true,
-        "horizonDays": 60,
-        "horizonComplete": true,
-        "alternativesComplete": true,
-        "lastPriceDate": "2026-09-18",
-        "isPurchase": false,
-        "isSale": true,
-        "tradeDate": "2024-09-20",
-        "scenarios": {
-          "actual": 0,
-          "earlier30": 0,
-          "later30": 6.293617021276593,
-          "inaction": 0.03505696757231048,
-          "labels": {
-            "actual": "Sell on 2024-09-20 (cash)",
-            "earlier30": "Sell 30d earlier (cash)",
-            "later30": "Sell 30d later",
-            "inaction": "Keep holding"
-          }
-        },
-        "actionAdvantage": -0.03505696757231048,
-        "timingAdvantage": -3.1468085106382966,
-        "summary": "Holding would have beat selling by 0.0% · Alternative timing would have been better by 3.1%"
       }
     },
     "H001047|BAC|2026-07-20|Sale": {

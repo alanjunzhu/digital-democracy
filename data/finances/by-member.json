@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T07:44:50.708Z",
+  "lastUpdated": "2026-09-21T10:19:15.347Z",
   "totalMembers": 541,
   "members": {
     "F000472": {
@@ -21795,57 +21795,6 @@
           "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025953.pdf",
           "source": "kadoa",
           "sector": "Technology"
-        },
-        {
-          "chamber": "House",
-          "member": "Josh Gottheimer",
-          "ticker": "BX",
-          "assetDescription": "Blackstone Inc. Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-10-03",
-          "district": "",
-          "party": "D",
-          "state": "NJ",
-          "owner": "JT",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025953.pdf",
-          "source": "kadoa",
-          "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Josh Gottheimer",
-          "ticker": "HDB",
-          "assetDescription": "HDFC Bank Limited Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-10-03",
-          "district": "",
-          "party": "D",
-          "state": "NJ",
-          "owner": "JT",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025953.pdf",
-          "source": "kadoa",
-          "sector": "Finance"
-        },
-        {
-          "chamber": "House",
-          "member": "Josh Gottheimer",
-          "ticker": "IBN",
-          "assetDescription": "ICICI Bank Limited Common Stock",
-          "type": "Sale (Full)",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-10-03",
-          "district": "",
-          "party": "D",
-          "state": "NJ",
-          "owner": "JT",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025953.pdf",
-          "source": "kadoa",
-          "sector": "Finance"
         }
       ],
       "sectors": {
@@ -21865,9 +21814,9 @@
           "total": 58
         },
         "Finance": {
-          "purchases": 22,
-          "sales": 35,
-          "total": 57
+          "purchases": 21,
+          "sales": 34,
+          "total": 55
         },
         "Agriculture": {
           "purchases": 2,
@@ -21920,12 +21869,12 @@
           "type": "committee_overlap",
           "severity": "high",
           "sector": "Finance",
-          "tradeCount": 57,
+          "tradeCount": 55,
           "relatedCommittees": [
             "Financial Services Committee",
             "Capital Markets Subcommittee"
           ],
-          "description": "57 trade(s) in Finance sector while serving on Financial Services Committee, Capital Markets Subcommittee"
+          "description": "55 trade(s) in Finance sector while serving on Financial Services Committee, Capital Markets Subcommittee"
         },
         {
           "type": "committee_overlap",
@@ -21941,9 +21890,9 @@
         }
       ],
       "summary": {
-        "totalTrades": 676,
-        "purchases": 236,
-        "sales": 416,
+        "totalTrades": 673,
+        "purchases": 234,
+        "sales": 415,
         "uniqueTickers": 241,
         "topSectors": [
           {
@@ -21960,9 +21909,9 @@
           },
           {
             "sector": "Finance",
-            "purchases": 22,
-            "sales": 35,
-            "total": 57
+            "purchases": 21,
+            "sales": 34,
+            "total": 55
           },
           {
             "sector": "Energy",
@@ -23998,23 +23947,6 @@
           "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026021.pdf",
           "source": "house-clerk",
           "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Hon. Thomas H. Kean",
-          "ticker": "",
-          "assetDescription": "Periodic Transaction Report",
-          "type": "PTR filing",
-          "amount": "",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-20",
-          "district": "07",
-          "party": "",
-          "state": "NJ",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025886.pdf",
-          "source": "house-clerk",
-          "sector": null
         }
       ],
       "sectors": {
@@ -24081,7 +24013,7 @@
         }
       ],
       "summary": {
-        "totalTrades": 92,
+        "totalTrades": 91,
         "purchases": 25,
         "sales": 41,
         "uniqueTickers": 31,
@@ -76547,23 +76479,6 @@
           "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025938.pdf",
           "source": "kadoa",
           "sector": "Healthcare"
-        },
-        {
-          "chamber": "House",
-          "member": "Hon. Jonathan Jackson",
-          "ticker": "",
-          "assetDescription": "Periodic Transaction Report",
-          "type": "PTR filing",
-          "amount": "",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-20",
-          "district": "01",
-          "party": "",
-          "state": "IL",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025792.pdf",
-          "source": "house-clerk",
-          "sector": null
         }
       ],
       "sectors": {
@@ -76618,7 +76533,7 @@
         }
       ],
       "summary": {
-        "totalTrades": 143,
+        "totalTrades": 142,
         "purchases": 66,
         "sales": 55,
         "uniqueTickers": 48,
@@ -120442,23 +120357,6 @@
           "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026191.pdf",
           "source": "kadoa",
           "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Hon. Richard W. Allen",
-          "ticker": "",
-          "assetDescription": "Periodic Transaction Report",
-          "type": "PTR filing",
-          "amount": "",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-20",
-          "district": "12",
-          "party": "",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025875.pdf",
-          "source": "house-clerk",
-          "sector": null
         }
       ],
       "sectors": {
@@ -120531,7 +120429,7 @@
         }
       ],
       "summary": {
-        "totalTrades": 74,
+        "totalTrades": 73,
         "purchases": 29,
         "sales": 23,
         "uniqueTickers": 22,
@@ -124045,23 +123943,6 @@
           "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026016.pdf",
           "source": "kadoa",
           "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Scott H. Peters",
-          "ticker": "",
-          "assetDescription": "Allocate Premier Access Fund [OT]",
-          "type": "Purchase",
-          "amount": "$15,001 - $50,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-10-16",
-          "district": "",
-          "party": "D",
-          "state": "CA",
-          "owner": "SP",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026016.pdf",
-          "source": "kadoa",
-          "sector": null
         }
       ],
       "sectors": {
@@ -124122,8 +124003,8 @@
         }
       ],
       "summary": {
-        "totalTrades": 176,
-        "purchases": 87,
+        "totalTrades": 175,
+        "purchases": 86,
         "sales": 66,
         "uniqueTickers": 2,
         "topSectors": [
@@ -190210,103 +190091,18 @@
           "url": "https://efdsearch.senate.gov/search/view/ptr/1489e003-c0e6-4370-9068-7c42946e5555/",
           "source": "kadoa",
           "sector": "Transportation"
-        },
-        {
-          "chamber": "Senate",
-          "member": "Shelley M Capito",
-          "ticker": "NKE",
-          "assetDescription": "Nike Inc",
-          "type": "Sale (Partial)",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-10-05",
-          "district": "",
-          "party": "R",
-          "state": "WV",
-          "owner": "Spouse",
-          "url": "https://efdsearch.senate.gov/search/view/ptr/1489e003-c0e6-4370-9068-7c42946e5555/",
-          "source": "kadoa",
-          "sector": null
-        },
-        {
-          "chamber": "Senate",
-          "member": "Shelley M Capito",
-          "ticker": "MSFT",
-          "assetDescription": "Microsoft Corp",
-          "type": "Sale (Partial)",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-10-05",
-          "district": "",
-          "party": "R",
-          "state": "WV",
-          "owner": "Spouse",
-          "url": "https://efdsearch.senate.gov/search/view/ptr/1489e003-c0e6-4370-9068-7c42946e5555/",
-          "source": "kadoa",
-          "sector": "Technology"
-        },
-        {
-          "chamber": "Senate",
-          "member": "Shelley M Capito",
-          "ticker": "GWW",
-          "assetDescription": "W.W. Grainger",
-          "type": "Sale (Partial)",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-10-05",
-          "district": "",
-          "party": "R",
-          "state": "WV",
-          "owner": "Spouse",
-          "url": "https://efdsearch.senate.gov/search/view/ptr/1489e003-c0e6-4370-9068-7c42946e5555/",
-          "source": "kadoa",
-          "sector": "Agriculture"
-        },
-        {
-          "chamber": "Senate",
-          "member": "Shelley M Capito",
-          "ticker": "AAPL",
-          "assetDescription": "Apple Inc",
-          "type": "Sale (Partial)",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-10-05",
-          "district": "",
-          "party": "R",
-          "state": "WV",
-          "owner": "Spouse",
-          "url": "https://efdsearch.senate.gov/search/view/ptr/1489e003-c0e6-4370-9068-7c42946e5555/",
-          "source": "kadoa",
-          "sector": "Technology"
-        },
-        {
-          "chamber": "Senate",
-          "member": "Shelley M Capito",
-          "ticker": "ACN",
-          "assetDescription": "Accenture Plc",
-          "type": "Sale (Partial)",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-10-05",
-          "district": "",
-          "party": "R",
-          "state": "WV",
-          "owner": "Spouse",
-          "url": "https://efdsearch.senate.gov/search/view/ptr/1489e003-c0e6-4370-9068-7c42946e5555/",
-          "source": "kadoa",
-          "sector": null
         }
       ],
       "sectors": {
         "Technology": {
           "purchases": 10,
-          "sales": 26,
-          "total": 36
+          "sales": 24,
+          "total": 34
         },
         "Agriculture": {
           "purchases": 0,
-          "sales": 3,
-          "total": 3
+          "sales": 2,
+          "total": 2
         },
         "Energy": {
           "purchases": 2,
@@ -190372,7 +190168,7 @@
           "type": "committee_overlap",
           "severity": "high",
           "sector": "Technology",
-          "tradeCount": 36,
+          "tradeCount": 34,
           "relatedCommittees": [
             "Commerce, Justice, Science, and Related Agencies Subcommittee",
             "Commerce, Science, and Transportation Committee",
@@ -190381,7 +190177,7 @@
             "Consumer Protection, Technology, and Data Privacy Subcommittee",
             "Clean Air, Climate, and Nuclear Innovation and Safety Subcommittee Subcommittee"
           ],
-          "description": "36 trade(s) in Technology sector while serving on Commerce, Justice, Science, and Related Agencies Subcommittee, Commerce, Science, and Transportation Committee, Aviation, Space, and Innovation Subcommittee, Telecommunications and Media Subcommittee, Consumer Protection, Technology, and Data Privacy Subcommittee, Clean Air, Climate, and Nuclear Innovation and Safety Subcommittee Subcommittee"
+          "description": "34 trade(s) in Technology sector while serving on Commerce, Justice, Science, and Related Agencies Subcommittee, Commerce, Science, and Transportation Committee, Aviation, Space, and Innovation Subcommittee, Telecommunications and Media Subcommittee, Consumer Protection, Technology, and Data Privacy Subcommittee, Clean Air, Climate, and Nuclear Innovation and Safety Subcommittee Subcommittee"
         },
         {
           "type": "committee_overlap",
@@ -190430,16 +190226,16 @@
         }
       ],
       "summary": {
-        "totalTrades": 100,
+        "totalTrades": 95,
         "purchases": 21,
-        "sales": 79,
+        "sales": 74,
         "uniqueTickers": 46,
         "topSectors": [
           {
             "sector": "Technology",
             "purchases": 10,
-            "sales": 26,
-            "total": 36
+            "sales": 24,
+            "total": 34
           },
           {
             "sector": "Finance",
@@ -190462,8 +190258,8 @@
           {
             "sector": "Agriculture",
             "purchases": 0,
-            "sales": 3,
-            "total": 3
+            "sales": 2,
+            "total": 2
           }
         ],
         "flagCount": 5,
@@ -250032,193 +249828,23 @@
           "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
           "source": "house-clerk",
           "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "GOOG",
-          "assetDescription": "Alphabet Inc. - Class C Capital Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": "Technology"
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "BRK.B",
-          "assetDescription": "Berkshire Hathaway Inc. New Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": "Finance"
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "BX",
-          "assetDescription": "Blackstone Inc. Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "CAH",
-          "assetDescription": "Cardinal Health, Inc. Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": "Healthcare"
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "CRWD",
-          "assetDescription": "CrowdStrike Holdings, Inc. - Class A Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "INTC",
-          "assetDescription": "Intel Corporation - Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": "Technology"
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "LRCX",
-          "assetDescription": "Lam Research Corporation - Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "MSFT",
-          "assetDescription": "Microsoft Corporation - Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": "Technology"
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "SCCO",
-          "assetDescription": "Southern Copper Corporation Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Marjorie Taylor Greene",
-          "ticker": "UPS",
-          "assetDescription": "United Parcel Service, Inc. Common Stock",
-          "type": "Purchase",
-          "amount": "$1,001 - $15,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-09-23",
-          "district": "",
-          "party": "R",
-          "state": "GA",
-          "owner": "",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20025889.pdf",
-          "source": "kadoa",
-          "sector": "Transportation"
         }
       ],
       "sectors": {
         "Technology": {
-          "purchases": 81,
+          "purchases": 78,
           "sales": 0,
-          "total": 81
+          "total": 78
         },
         "Healthcare": {
-          "purchases": 33,
+          "purchases": 32,
           "sales": 0,
-          "total": 33
+          "total": 32
         },
         "Finance": {
-          "purchases": 36,
+          "purchases": 35,
           "sales": 0,
-          "total": 36
+          "total": 35
         },
         "Energy": {
           "purchases": 21,
@@ -250226,9 +249852,9 @@
           "total": 21
         },
         "Transportation": {
-          "purchases": 26,
+          "purchases": 25,
           "sales": 0,
-          "total": 26
+          "total": 25
         },
         "Agriculture": {
           "purchases": 2,
@@ -250245,34 +249871,34 @@
       "committeeSectors": [],
       "flags": [],
       "summary": {
-        "totalTrades": 391,
-        "purchases": 353,
+        "totalTrades": 381,
+        "purchases": 343,
         "sales": 3,
         "uniqueTickers": 85,
         "topSectors": [
           {
             "sector": "Technology",
-            "purchases": 81,
+            "purchases": 78,
             "sales": 0,
-            "total": 81
+            "total": 78
           },
           {
             "sector": "Finance",
-            "purchases": 36,
+            "purchases": 35,
             "sales": 0,
-            "total": 36
+            "total": 35
           },
           {
             "sector": "Healthcare",
-            "purchases": 33,
+            "purchases": 32,
             "sales": 0,
-            "total": 33
+            "total": 32
           },
           {
             "sector": "Transportation",
-            "purchases": 26,
+            "purchases": 25,
             "sales": 0,
-            "total": 26
+            "total": 25
           },
           {
             "sector": "Energy",
@@ -260781,30 +260407,13 @@
           "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026136.pdf",
           "source": "house-clerk",
           "sector": null
-        },
-        {
-          "chamber": "House",
-          "member": "Victoria Spartz",
-          "ticker": "SPG",
-          "assetDescription": "Simon Property Group, Inc. Common Stock",
-          "type": "Sale (Partial)",
-          "amount": "$1,000,001 - $5,000,000",
-          "transactionDate": "2024-09-20",
-          "disclosureDate": "2024-11-04",
-          "district": "",
-          "party": "R",
-          "state": "IN",
-          "owner": "SP",
-          "url": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2024/20026136.pdf",
-          "source": "kadoa",
-          "sector": "Real Estate"
         }
       ],
       "sectors": {
         "Real Estate": {
           "purchases": 2,
-          "sales": 1,
-          "total": 3
+          "sales": 0,
+          "total": 2
         }
       },
       "committees": [
@@ -260813,16 +260422,16 @@
       "committeeSectors": [],
       "flags": [],
       "summary": {
-        "totalTrades": 6,
+        "totalTrades": 5,
         "purchases": 2,
-        "sales": 1,
+        "sales": 0,
         "uniqueTickers": 1,
         "topSectors": [
           {
             "sector": "Real Estate",
             "purchases": 2,
-            "sales": 1,
-            "total": 3
+            "sales": 0,
+            "total": 2
           }
         ],
         "flagCount": 0,
