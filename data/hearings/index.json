@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T13:48:30.279Z",
+  "lastUpdated": "2026-09-21T16:05:14.815Z",
   "congress": 119,
   "total": 428,
   "hearings": [
@@ -5871,6 +5871,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119418?format=json"
     },
     {
+      "eventId": "119435",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "Oversight of the National Telecommunications and Information Administration",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-30T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif16",
+          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
+        }
+      ],
+      "location": {
+        "room": "2123",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119435?format=json"
+    },
+    {
       "eventId": "119419",
       "congress": 119,
       "chamber": "House",
@@ -5913,28 +5935,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119417?format=json"
-    },
-    {
-      "eventId": "119435",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "Oversight of the National Telecommunications and Information Administration",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-30T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif16",
-          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119435?format=json"
     },
     {
       "eventId": "118853",
