@@ -1,26 +1,8 @@
 {
-  "lastUpdated": "2026-09-21T16:05:14.815Z",
+  "lastUpdated": "2026-09-22T14:15:52.235Z",
   "congress": 119,
   "total": 428,
   "hearings": [
-    {
-      "eventId": "119569",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "America's Fiscal Future: Examining the Need for a Fiscal Commission",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-21T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsbu00",
-          "name": "House Budget"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119569?format=json"
-    },
     {
       "eventId": "338760",
       "congress": 119,
@@ -402,6 +384,24 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338758?format=json"
+    },
+    {
+      "eventId": "119569",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "America's Fiscal Future: Examining the Need for a Fiscal Commission",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-21T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsbu00",
+          "name": "House Budget"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119569?format=json"
     },
     {
       "eventId": "119564",
@@ -1247,6 +1247,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338743?format=json"
     },
     {
+      "eventId": "119572",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Restoring Election Integrity: Oversight of Voter Fraud in New Jersey”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju13",
+          "name": "House Judiciary Subcommittee on Oversight"
+        }
+      ],
+      "location": {
+        "room": "2141",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119572?format=json"
+    },
+    {
       "eventId": "119545",
       "congress": 119,
       "chamber": "House",
@@ -1289,28 +1311,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119306?format=json"
-    },
-    {
-      "eventId": "119572",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Restoring Election Integrity: Oversight of Voter Fraud in New Jersey”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju13",
-          "name": "House Judiciary Subcommittee on Oversight"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119572?format=json"
     },
     {
       "eventId": "119553",
