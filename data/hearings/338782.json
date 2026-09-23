@@ -1,0 +1,36 @@
+{
+  "eventId": "338782",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Business Meeting",
+  "title": "Business meeting to consider the request to direct Senate Legal Counsel to file an application seeking immunity.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-09-23T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssga00",
+      "name": "Senate Homeland Security and Governmental Affairs"
+    }
+  ],
+  "location": {
+    "room": "342",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338782?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Business meeting to consider the request to direct Senate Legal Counsel to file an application seeking immunity.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338782",
+      "format": ""
+    },
+    {
+      "name": "Business meeting to consider the request to direct Senate Legal Counsel to file an application seeking immunity.",
+      "url": "https://www.senate.gov/isvp/?comm=govtaff&filename=govtaff092326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

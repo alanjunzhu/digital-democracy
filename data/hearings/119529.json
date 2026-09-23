@@ -21,6 +21,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119529?format=json",
   "witnesses": [
     {
+      "name": "The Honorable Christopher Moquino",
+      "position": "Governor",
+      "organization": "San Ildefosno Pueblo"
+    },
+    {
       "name": "Mr. Dave Miko",
       "position": "",
       "organization": ""
@@ -34,11 +39,6 @@
       "name": "The Honorable Mark Macarro",
       "position": "Chairman",
       "organization": "Pechanga Band of Indians"
-    },
-    {
-      "name": "The Honorable Christopher Moquino",
-      "position": "Governor",
-      "organization": "San Ildefosno Pueblo"
     },
     {
       "name": "The Honorable Brett Barbre",
@@ -132,6 +132,16 @@
     {
       "name": "Statements FTR from DOI on H.R. 177, H.R. 5935, H.R. 6869, and H.R. 8546",
       "url": "https://www.congress.gov/119/meeting/house/119529/documents/HHRG-119-II13-20260916-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Leger Fernandez FTR- Santa Fe County Statement on H.R. 6869",
+      "url": "https://www.congress.gov/119/meeting/house/119529/documents/HHRG-119-II13-20260916-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Leger Fernandez FTR- NPTWRA Statement on H.R. 6869",
+      "url": "https://www.congress.gov/119/meeting/house/119529/documents/HHRG-119-II13-20260916-SD005.pdf",
       "format": "PDF"
     }
   ]
