@@ -3,7 +3,7 @@
   "type": "H.R.",
   "number": 8193,
   "billId": "hr8193",
-  "title": "To designate the facility of the United States Postal Service located at 189 East Main Street in Xenia, Ohio, as the \"Gilman 'Gil' Whitney Post Office Building\".",
+  "title": "To designate the facility of the United States Postal Service located at 189 East Main Street in Xenia, Ohio, as the \"Gil Whitney Post Office Building\".",
   "introducedDate": "2026-04-02",
   "sponsor": {
     "bioguideId": "T000463",
@@ -11,15 +11,27 @@
     "party": "R",
     "state": "OH"
   },
-  "latestAction": "The title of the measure was amended. Agreed to without objection.",
-  "latestActionDate": "2026-09-16",
-  "updateDate": "2026-09-17T08:07:53Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
+  "latestActionDate": "2026-09-17",
+  "updateDate": "2026-09-23T17:17:48Z",
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/8193",
   "summary": "This bill designates the facility of the United States Postal Service located at 189 East Main Street in Xenia, Ohio, as the \"Gilman 'Gil' Whitney Post Office Building\".",
   "cosponsors": 14,
   "committees": [
+    {
+      "name": "Homeland Security and Governmental Affairs Committee",
+      "systemCode": "ssga00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-17T17:23:49Z"
+        }
+      ]
+    },
     {
       "name": "Oversight and Government Reform Committee",
       "systemCode": "hsgo00",
@@ -40,13 +52,17 @@
   "subjects": [],
   "actions": [
     {
+      "date": "2026-09-17",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+    },
+    {
       "date": "2026-09-16",
       "text": "The title of the measure was amended. Agreed to without objection.",
       "chamber": "House"
     },
     {
       "date": "2026-09-16",
-      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "text": "Motion to reconsider laid on the table Agreed to without objection. (text: CR H5935)",
       "chamber": "House"
     },
     {
@@ -65,7 +81,7 @@
     },
     {
       "date": "2026-09-16",
-      "text": "Considered under suspension of the rules.",
+      "text": "Considered under suspension of the rules. (consideration: CR H5935)",
       "chamber": "House"
     },
     {

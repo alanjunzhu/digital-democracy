@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "20",
+  "number": 20,
   "billId": "hr20",
   "title": "Richard L. Trumka Protecting the Right to Organize Act of 2025",
   "introducedDate": "2025-03-05",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Education and Workforce.",
   "latestActionDate": "2025-03-05",
+  "updateDate": "2026-09-22T22:26:20Z",
   "originChamber": "House",
   "policyArea": "Labor and Employment",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/20",
   "summary": "",
-  "cosponsors": 216,
+  "cosponsors": 217,
   "committees": [
-    "Education and Workforce Committee"
+    {
+      "name": "Education and Workforce Committee",
+      "systemCode": "hsed00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-03-05T15:00:10Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

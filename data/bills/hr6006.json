@@ -11,15 +11,27 @@
     "party": "D",
     "state": "AL"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-09-16",
-  "updateDate": "2026-09-17T08:08:01Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
+  "latestActionDate": "2026-09-17",
+  "updateDate": "2026-09-23T17:16:35Z",
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/6006",
   "summary": "This bill designates the facility of the United States Postal Service located at 401 North Elm Street in Tuskegee, Alabama, as the \"Tuskegee Airmen Memorial Post Office\".",
   "cosponsors": 13,
   "committees": [
+    {
+      "name": "Homeland Security and Governmental Affairs Committee",
+      "systemCode": "ssga00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-17T17:21:07Z"
+        }
+      ]
+    },
     {
       "name": "Oversight and Government Reform Committee",
       "systemCode": "hsgo00",
@@ -40,13 +52,17 @@
   "subjects": [],
   "actions": [
     {
+      "date": "2026-09-17",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+    },
+    {
       "date": "2026-09-16",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",
       "chamber": "House"
     },
     {
       "date": "2026-09-16",
-      "text": "On motion to suspend the rules and pass the bill Agreed to by voice vote.",
+      "text": "On motion to suspend the rules and pass the bill Agreed to by voice vote. (text: CR H5933)",
       "chamber": "House"
     },
     {
@@ -60,7 +76,7 @@
     },
     {
       "date": "2026-09-16",
-      "text": "Considered under suspension of the rules.",
+      "text": "Considered under suspension of the rules. (consideration: CR H5933-5935)",
       "chamber": "House"
     },
     {
