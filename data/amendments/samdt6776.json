@@ -8,8 +8,8 @@
   "description": "",
   "submittedDate": "2026-09-17T04:00:00Z",
   "proposedDate": "2026-09-17T04:00:00Z",
-  "latestAction": "Amendment SA 6776 proposed by Senator Thune for Senator Cruz. (consideration: CR S4789) In the nature of a substitute.",
-  "latestActionDate": "2026-09-17",
+  "latestAction": "Amendment SA 6776 agreed to in Senate by Yea-Nay Vote. 77 - 23. Record Vote Number: 242.",
+  "latestActionDate": "2026-09-24",
   "sponsor": {
     "bioguideId": "C001098",
     "fullName": "Sen. Cruz, Ted [R-TX]",
@@ -19,12 +19,72 @@
   "amendedBillId": "s4668",
   "amendedBillTitle": "Protect College Sports Act of 2026",
   "cosponsorCount": 3,
-  "recordedVotes": [],
+  "recordedVotes": [
+    {
+      "voteId": "s2-rc242",
+      "chamber": "Senate",
+      "rollNumber": 242,
+      "sessionNumber": 2,
+      "date": "2026-09-24T15:50:42Z"
+    },
+    {
+      "voteId": "s2-rc240",
+      "chamber": "Senate",
+      "rollNumber": 240,
+      "sessionNumber": 2,
+      "date": "2026-09-22T23:32:06Z"
+    }
+  ],
   "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6776",
   "actions": [
     {
+      "date": "2026-09-24",
+      "text": "Amendment SA 6776 agreed to in Senate by Yea-Nay Vote. 77 - 23. Record Vote Number: 242.",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Considered by Senate.",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-23",
+      "text": "Considered by Senate. In the nature of a substitute. (consideration: CR S4885)",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-22",
+      "text": "Considered by Senate. In the nature of a substitute. (consideration: CR S4851)",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-22",
+      "text": "Cloture on amendment SA 6776 invoked in Senate by Yea-Nay Vote. 70 - 21. Record Vote Number: 240. In the nature of a substitute. (CR S4850-4851)",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-17",
+      "text": "Cloture motion on amendment SA 6776 presented in Senate.",
+      "type": "Floor"
+    },
+    {
       "date": "2026-09-17",
       "text": "Amendment SA 6776 proposed by Senator Thune for Senator Cruz. (consideration: CR S4789) In the nature of a substitute.",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Senate amendment agreed to: Amendment SA 6776 agreed to in Senate by Yea-Nay Vote. 77 - 23. Record Vote Number: 242.",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Roll call votes on amendments in Senate: Amendment SA 6776 agreed to in Senate by Yea-Nay Vote. 77 - 23. Record Vote Number: 242.",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-22",
+      "text": "Roll call votes on amendments in Senate: Cloture on amendment SA 6776 invoked in Senate by Yea-Nay Vote. 70 - 21. Record Vote Number: 240.",
       "type": "Floor"
     },
     {
