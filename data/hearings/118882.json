@@ -21,6 +21,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/118882?format=json",
   "witnesses": [
     {
+      "name": "Ms. Alicia Skolrood",
+      "position": "Executive Director, Integrated External Networks, Office of Integrated Veteran Care",
+      "organization": "Veterans Health Administration, U.S. Department of Veterans Affairs"
+    },
+    {
       "name": "Mr. John Vick",
       "position": "Executive Director",
       "organization": "Concerned Veterans for America"
@@ -29,11 +34,6 @@
       "name": "Dr. Rachel Madley, Ph.D.",
       "position": "Executive Director",
       "organization": "Center for Health and Democracy"
-    },
-    {
-      "name": "Ms. Alicia Skolrood",
-      "position": "Executive Director, Integrated External Networks, Office of Integrated Veteran Care",
-      "organization": "Veterans Health Administration, U.S. Department of Veterans Affairs"
     },
     {
       "name": "Mr. Richard Topping",
@@ -77,6 +77,16 @@
     {
       "name": "Rep. Hamadeh to the U.S. Department of Veterans Affairs",
       "url": "https://www.congress.gov/119/meeting/house/118882/documents/HHRG-119-VR00-20260122-QFR003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "U.S. Department of Veterans Affairs response to Ranking Member Takano",
+      "url": "https://www.congress.gov/119/meeting/house/118882/documents/HHRG-119-VR00-20260122-QFR004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "U.S. Department of Veterans Affairs response to Rep. Hamadeh",
+      "url": "https://www.congress.gov/119/meeting/house/118882/documents/HHRG-119-VR00-20260122-QFR005.pdf",
       "format": "PDF"
     }
   ]

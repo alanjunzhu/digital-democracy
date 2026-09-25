@@ -1,0 +1,88 @@
+{
+  "eventId": "119188",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Fiscal Year 2027 Environmental Protection Agency Budget",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-28T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif18",
+      "name": "House Energy and Commerce Subcommittee on Environment"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119188?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Lee Zeldin",
+      "position": "Administrator",
+      "organization": "U.S. Environmental Protection Agency"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Environment Hearing: The Fiscal Year 2027 Environmental Protection Agency Budget",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119188",
+      "format": ""
+    },
+    {
+      "name": "Environment Hearing: The Fiscal Year 2027 Environmental Protection Agency Budget",
+      "url": "https://www.youtube.com/watch?v=LrjRJ2wfOwk",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119188/documents/HHRG-119-IF18-20260428-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119188/documents/HHRG-119-IF18-20260428-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Documents for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119188/documents/HHRG-119-IF18-20260428-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable H. Morgan Griffith",
+      "url": "https://www.congress.gov/119/meeting/house/119188/documents/HHRG-119-IF18-MState-G000568-20260428.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Brett Guthrie",
+      "url": "https://www.congress.gov/119/meeting/house/119188/documents/HHRG-119-IF18-MState-G000558-20260428.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Frank Pallone",
+      "url": "https://www.congress.gov/119/meeting/house/119188/documents/HHRG-119-IF18-MState-A000370-20260428.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "The Honorable Paul Tonko",
+      "url": "https://www.congress.gov/119/meeting/house/119188/documents/HHRG-119-IF18-MState-T000469-20260428.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119188/documents/HHRG-119-IF18-20260428-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Preliminary Transcript",
+      "url": "https://www.congress.gov/119/meeting/house/119188/documents/HHRG-119-IF18-Transcript-20260428.pdf",
+      "format": "PDF"
+    }
+  ]
+}
