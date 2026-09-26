@@ -21,6 +21,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119396?format=json",
   "witnesses": [
     {
+      "name": "Mr. Tracy Glover",
+      "position": "Sheriff",
+      "organization": "Kane County, Utah"
+    },
+    {
       "name": "Mr. Travis Joseph",
       "position": "President and CEO",
       "organization": "American Forest Resource Council"
@@ -29,11 +34,6 @@
       "name": "The Honorable Ned Coe",
       "position": "Supervisor",
       "organization": "Modoc County, California"
-    },
-    {
-      "name": "Mr. Tracy Glover",
-      "position": "Sheriff",
-      "organization": "Kane County, Utah"
     },
     {
       "name": "Ms. Molly Whitney",
@@ -54,6 +54,11 @@
     }
   ],
   "meetingDocuments": [
+    {
+      "name": "Transcript_06.25.2026",
+      "url": "https://www.congress.gov/119/meeting/house/119396/documents/HHRG-119-AG15-Transcript-20260625.pdf",
+      "format": "PDF"
+    },
     {
       "name": "Witness-List_06.25.2026",
       "url": "https://www.congress.gov/119/meeting/house/119396/documents/HHRG-119-AG15-WList-20260625.pdf",
