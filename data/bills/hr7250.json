@@ -11,9 +11,9 @@
     "party": "R",
     "state": "MT"
   },
-  "latestAction": "Message on Senate action sent to the House.",
-  "latestActionDate": "2026-09-16",
-  "updateDate": "2026-09-17T10:56:40Z",
+  "latestAction": "Signed by President.",
+  "latestActionDate": "2026-09-25",
+  "updateDate": "2026-09-25T21:12:16Z",
   "originChamber": "House",
   "policyArea": "Water Resources Development",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/7250",
@@ -64,12 +64,28 @@
   "subjects": [],
   "actions": [
     {
+      "date": "2026-09-25",
+      "text": "Signed by President."
+    },
+    {
+      "date": "2026-09-25",
+      "text": "Signed by President."
+    },
+    {
+      "date": "2026-09-17",
+      "text": "Presented to President."
+    },
+    {
+      "date": "2026-09-17",
+      "text": "Presented to President."
+    },
+    {
       "date": "2026-09-16",
       "text": "Message on Senate action sent to the House."
     },
     {
       "date": "2026-09-16",
-      "text": "Passed Senate without amendment by Voice Vote."
+      "text": "Passed Senate without amendment by Voice Vote. (consideration: CR S4746)"
     },
     {
       "date": "2026-09-16",
@@ -133,26 +149,6 @@
     {
       "date": "2026-06-02",
       "text": "Reported by the Committee on Natural Resources. H. Rept. 119-675."
-    },
-    {
-      "date": "2026-05-14",
-      "text": "Ordered to be Reported by Unanimous Consent.",
-      "chamber": "House"
-    },
-    {
-      "date": "2026-05-14",
-      "text": "Committee Consideration and Mark-up Session Held",
-      "chamber": "House"
-    },
-    {
-      "date": "2026-05-14",
-      "text": "Subcommittee on Water, Wildlife and Fisheries Discharged",
-      "chamber": "House"
-    },
-    {
-      "date": "2026-03-26",
-      "text": "Subcommittee Hearings Held",
-      "chamber": "House"
     }
   ],
   "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7250/text"

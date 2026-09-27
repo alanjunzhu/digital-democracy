@@ -9,7 +9,7 @@
   "chamber": "House",
   "imageUrl": "https://bioguide.congress.gov/bioguide/photo/B/B001328.jpg",
   "url": "https://www.congress.gov/member/B001328",
-  "website": "",
+  "website": "https://blair.house.gov/",
   "phone": "202-225-2939",
   "birthDate": "1992-04-23",
   "gender": "M",
@@ -25,5 +25,18 @@
   ],
   "officeAddress": "468 Cannon House Office Building Washington DC 20515-1013",
   "committees": [],
-  "sponsoredBills": []
+  "sponsoredBills": [
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10533,
+      "billId": "hr10533",
+      "title": "To amend the Water Resources Development Act of 1992 to authorize assistance for the project for water and wastewater infrastructure, Newton County, Georgia.",
+      "introducedDate": "2026-09-24",
+      "latestAction": "Referred to the House Committee on Transportation and Infrastructure.",
+      "latestActionDate": "2026-09-24",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10533"
+    }
+  ]
 }

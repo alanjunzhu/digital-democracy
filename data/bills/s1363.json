@@ -11,9 +11,9 @@
     "party": "D",
     "state": "NM"
   },
-  "latestAction": "Passed Senate with an amendment by Unanimous Consent.",
-  "latestActionDate": "2026-09-23",
-  "updateDate": "2026-09-24T10:58:23Z",
+  "latestAction": "Message on Senate action sent to the House.",
+  "latestActionDate": "2026-09-24",
+  "updateDate": "2026-09-26T11:03:20Z",
   "originChamber": "Senate",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1363",
@@ -44,12 +44,26 @@
   "subjects": [],
   "actions": [
     {
-      "date": "2026-09-23",
-      "text": "Passed Senate with an amendment by Unanimous Consent."
+      "date": "2026-09-24",
+      "text": "Message on Senate action sent to the House."
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Held at the desk.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Received in the House.",
+      "chamber": "House"
     },
     {
       "date": "2026-09-23",
-      "text": "Passed/agreed to in Senate: Passed Senate with an amendment by Unanimous Consent."
+      "text": "Passed Senate with an amendment by Unanimous Consent. (consideration: CR S4898-4901; text: CR S4898-4901)"
+    },
+    {
+      "date": "2026-09-23",
+      "text": "Passed/agreed to in Senate: Passed Senate with an amendment by Unanimous Consent. (consideration: CR S4898-4901; text: CR S4898-4901)"
     },
     {
       "date": "2026-07-23",

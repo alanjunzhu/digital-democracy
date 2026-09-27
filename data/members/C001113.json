@@ -59,10 +59,46 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "S.Res.",
+      "number": 888,
+      "billId": "sres888",
+      "title": "A resolution congratulating the Paseo Verde Little League baseball team on winning the 2026 Little League World Series United States Championship.",
+      "introducedDate": "2026-09-23",
+      "latestAction": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S4958; text: CR S4947)",
+      "latestActionDate": "2026-09-23",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/888"
+    },
+    {
+      "congress": 119,
+      "type": "S.",
+      "number": 5465,
+      "billId": "s5465",
+      "title": "A bill to amend the Federal Reserve Act to require the Board of Governors of the Federal Reserve System to carry out a review of discount window operations and to implement improvements to such operations, and for other purposes.",
+      "introducedDate": "2026-09-23",
+      "latestAction": "Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
+      "latestActionDate": "2026-09-23",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5465"
+    },
+    {
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 870,
+      "billId": "sres870",
+      "title": "A resolution recognizing Hispanic Heritage Month and celebrating the heritage and culture of Latinos in the United States and the immense contributions of Latinos to the United States.",
+      "introducedDate": "2026-09-22",
+      "latestAction": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S4882; text: CR S4861-4862)",
+      "latestActionDate": "2026-09-22",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/870"
+    },
+    {
+      "congress": 119,
       "type": "S.",
       "number": 5395,
       "billId": "s5395",
-      "title": "A bill to amend the Internal Revenue Code of 1986 to exclude from gross income any compensatory damages with respect to sexual assault claims, and for other purposes.",
+      "title": "Survivor Justice Tax Prevention Act",
       "introducedDate": "2026-09-15",
       "latestAction": "Read twice and referred to the Committee on Finance.",
       "latestActionDate": "2026-09-15",
@@ -296,30 +332,6 @@
       "latestActionDate": "2026-04-30",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4445"
-    },
-    {
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 701,
-      "billId": "sres701",
-      "title": "A resolution designating the week of April 20 through 26, 2026, as \"National Dark Sky Week\".",
-      "introducedDate": "2026-04-29",
-      "latestAction": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S2109; text: CR S2134-2135)",
-      "latestActionDate": "2026-04-29",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/701"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 4406,
-      "billId": "s4406",
-      "title": "Next-Generation Geothermal Research and Development Act",
-      "introducedDate": "2026-04-28",
-      "latestAction": "Read twice and referred to the Committee on Energy and Natural Resources.",
-      "latestActionDate": "2026-04-28",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4406"
     }
   ]
 }

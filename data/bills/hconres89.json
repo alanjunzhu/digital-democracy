@@ -11,9 +11,9 @@
     "party": "D",
     "state": "WA"
   },
-  "latestAction": "Received in the Senate and referred to the Committee on Foreign Relations.",
-  "latestActionDate": "2026-07-23",
-  "updateDate": "2026-08-26T17:38:34Z",
+  "latestAction": "Failed of passage in Senate by Yea-Nay Vote. 49 - 50. Record Vote Number: 244.",
+  "latestActionDate": "2026-09-24",
+  "updateDate": "2026-09-26T10:56:33Z",
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/89",
@@ -26,6 +26,10 @@
       "chamber": "Senate",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2026-09-24T17:18:33Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-07-23T19:02:15Z"
@@ -47,6 +51,26 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-24",
+      "text": "Failed of passage in Senate by Yea-Nay Vote. 49 - 50. Record Vote Number: 244."
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Failed of passage/not agreed to in Senate: Failed of passage in Senate by Yea-Nay Vote. 49 - 50. Record Vote Number: 244."
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Measure laid before Senate by unanimous consent. (consideration: CR S4962-4969)"
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Senate Committee on Foreign Relations discharged, under the order of 8/8/26."
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Senate Committee on Foreign Relations discharged, under the order of 8/8/26."
+    },
     {
       "date": "2026-07-23",
       "text": "Received in the Senate and referred to the Committee on Foreign Relations."

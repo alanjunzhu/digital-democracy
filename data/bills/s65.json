@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "S.",
-  "number": "65",
+  "number": 65,
   "billId": "s65",
   "title": "Constitutional Concealed Carry Reciprocity Act of 2025",
   "introducedDate": "2025-01-09",
@@ -13,13 +13,29 @@
   },
   "latestAction": "Read twice and referred to the Committee on the Judiciary.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-09-26T11:03:19Z",
   "originChamber": "Senate",
   "policyArea": "Crime and Law Enforcement",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/65",
   "summary": "<p><strong>Constitutional Concealed Carry Reciprocity Act of 2025&nbsp;</strong></p><p>This bill allows a qualified individual to carry a concealed handgun into or possess a concealed handgun in another state that allows its residents to carry concealed firearms.</p><p>A qualified individual must (1) be eligible to possess, transport, or receive a firearm under federal law; (2) carry a valid photo identification document; and (3) carry a valid state-issued concealed carry permit, or be eligible to carry a concealed firearm in his or her state of residence.</p><p>&nbsp;</p>",
-  "cosponsors": 48,
+  "cosponsors": 49,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "ssju00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T21:02:48Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T21:02:48Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

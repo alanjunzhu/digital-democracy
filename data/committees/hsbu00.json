@@ -5,8 +5,17 @@
   "committeeType": "Standing",
   "isSubcommittee": false,
   "url": "https://www.congress.gov/committee/house-budget/hsbu00",
-  "billCount": 82,
+  "billCount": 81,
   "bills": [
+    {
+      "billId": "hr10518",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10518,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-21",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10518"
+    },
     {
       "billId": "hr10462",
       "congress": 119,
@@ -681,24 +690,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-09-26",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/5613"
-    },
-    {
-      "billId": "hr5552",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5552,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-09-23",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5552"
-    },
-    {
-      "billId": "hr5554",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5554,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-09-23",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5554"
     },
     {
       "billId": "hr4634",

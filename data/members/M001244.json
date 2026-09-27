@@ -26,10 +26,22 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "S.Res.",
+      "number": 871,
+      "billId": "sres871",
+      "title": "A resolution supporting the goals and ideals of National Purple Heart Recognition Day.",
+      "introducedDate": "2026-09-22",
+      "latestAction": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S4882; text: CR S4862)",
+      "latestActionDate": "2026-09-22",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/871"
+    },
+    {
+      "congress": 119,
       "type": "S.",
       "number": 5426,
       "billId": "s5426",
-      "title": "A bill to amend title 28, United States Code, to establish the National Fraud Enforcement Division of the Department of Justice.",
+      "title": "National Fraud Enforcement Division Act of 2026",
       "introducedDate": "2026-09-17",
       "latestAction": "Read twice and referred to the Committee on the Judiciary.",
       "latestActionDate": "2026-09-17",
@@ -43,7 +55,7 @@
       "billId": "sres869",
       "title": "A resolution expressing the sense of the Senate that the third Friday of September should be recognized as \"National POW/MIA Recognition Day\".",
       "introducedDate": "2026-09-17",
-      "latestAction": "Referred to the Committee on Armed Services.",
+      "latestAction": "Referred to the Committee on Armed Services. (text: CR S4804)",
       "latestActionDate": "2026-09-17",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/869"
@@ -65,7 +77,7 @@
       "type": "S.",
       "number": 5398,
       "billId": "s5398",
-      "title": "A bill to establish the United States Space Academy as a service academy of the United States, to require that the Academy be located in the State of Florida, and for other purposes.",
+      "title": "STARS Act of 2026",
       "introducedDate": "2026-09-15",
       "latestAction": "Read twice and referred to the Committee on Commerce, Science, and Transportation.",
       "latestActionDate": "2026-09-15",
@@ -467,42 +479,6 @@
       "latestActionDate": "2025-11-18",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3179"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 3082,
-      "billId": "s3082",
-      "title": "American Shores Protection Act of 2025",
-      "introducedDate": "2025-10-30",
-      "latestAction": "Committee on Energy and Natural Resources Subcommittee on Public Lands, Forests, and Mining. Hearings held.",
-      "latestActionDate": "2026-02-12",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3082"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 2690,
-      "billId": "s2690",
-      "title": "Safer Truckers Act of 2025",
-      "introducedDate": "2025-09-03",
-      "latestAction": "Read twice and referred to the Committee on Commerce, Science, and Transportation.",
-      "latestActionDate": "2025-09-03",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2690"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 2622,
-      "billId": "s2622",
-      "title": "Space Ready Act",
-      "introducedDate": "2025-07-31",
-      "latestAction": "Read twice and referred to the Committee on Commerce, Science, and Transportation.",
-      "latestActionDate": "2025-07-31",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2622"
     }
   ]
 }

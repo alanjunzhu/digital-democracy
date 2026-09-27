@@ -5,8 +5,17 @@
   "committeeType": "Standing",
   "isSubcommittee": false,
   "url": "https://www.congress.gov/committee/senate-budget/ssbu00",
-  "billCount": 13,
+  "billCount": 14,
   "bills": [
+    {
+      "billId": "sconres40",
+      "congress": 119,
+      "type": "S.Con.Res.",
+      "number": 40,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-22",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/40"
+    },
     {
       "billId": "s5442",
       "congress": 119,
@@ -21,7 +30,7 @@
       "congress": 119,
       "type": "S.Con.Res.",
       "number": 38,
-      "relationshipType": "Referred To",
+      "relationshipType": "Discharged From",
       "actionDate": "2026-08-07",
       "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/38"
     },
@@ -30,7 +39,7 @@
       "congress": 119,
       "type": "S.Con.Res.",
       "number": 39,
-      "relationshipType": "Referred To",
+      "relationshipType": "Discharged From",
       "actionDate": "2026-08-07",
       "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/39"
     },
@@ -75,7 +84,7 @@
       "congress": 119,
       "type": "S.Con.Res.",
       "number": 33,
-      "relationshipType": "Discharged From",
+      "relationshipType": "Referred To",
       "actionDate": "2026-04-21",
       "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/33"
     },

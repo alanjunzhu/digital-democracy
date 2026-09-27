@@ -11,9 +11,9 @@
     "party": "D",
     "state": "WA"
   },
-  "latestAction": "Message on Senate action sent to the House.",
-  "latestActionDate": "2026-09-16",
-  "updateDate": "2026-09-17T10:56:42Z",
+  "latestAction": "Signed by President.",
+  "latestActionDate": "2026-09-25",
+  "updateDate": "2026-09-25T21:11:56Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/3657",
@@ -64,12 +64,28 @@
   "subjects": [],
   "actions": [
     {
+      "date": "2026-09-25",
+      "text": "Signed by President."
+    },
+    {
+      "date": "2026-09-25",
+      "text": "Signed by President."
+    },
+    {
+      "date": "2026-09-17",
+      "text": "Presented to President."
+    },
+    {
+      "date": "2026-09-17",
+      "text": "Presented to President."
+    },
+    {
       "date": "2026-09-16",
       "text": "Message on Senate action sent to the House."
     },
     {
       "date": "2026-09-16",
-      "text": "Passed Senate without amendment by Unanimous Consent."
+      "text": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S4746-4747)"
     },
     {
       "date": "2026-09-16",
@@ -103,7 +119,7 @@
     },
     {
       "date": "2025-07-14",
-      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote."
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote. (text: CR H3221-3222)"
     },
     {
       "date": "2025-07-14",
@@ -133,26 +149,6 @@
     {
       "date": "2025-07-10",
       "text": "Reported (Amended) by the Committee on Energy and Commerce. H. Rept. 119-193."
-    },
-    {
-      "date": "2025-06-25",
-      "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 47 - 0.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-06-25",
-      "text": "Committee Consideration and Mark-up Session Held",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-06-05",
-      "text": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-06-05",
-      "text": "Subcommittee Consideration and Mark-up Session Held",
-      "chamber": "House"
     }
   ],
   "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3657/text"

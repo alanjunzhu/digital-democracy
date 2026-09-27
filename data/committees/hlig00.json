@@ -31,8 +31,17 @@
       "name": "Subcommittee on Defense Intelligence and Overhead Architecture"
     }
   ],
-  "billCount": 50,
+  "billCount": 51,
   "bills": [
+    {
+      "billId": "hr10592",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10592,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-24",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10592"
+    },
     {
       "billId": "hr10502",
       "congress": 119,
@@ -200,7 +209,7 @@
       "congress": 119,
       "type": "H.R.",
       "number": 8322,
-      "relationshipType": "Discharged From",
+      "relationshipType": "Referred To",
       "actionDate": "2026-04-17",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/8322"
     },

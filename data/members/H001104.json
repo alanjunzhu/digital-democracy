@@ -26,12 +26,24 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "S.",
+      "number": 5523,
+      "billId": "s5523",
+      "title": "A bill to direct the Secretary of Homeland Security to develop performance metrics relating to the detection, deterrence, and seizure of illicit fentanyl, and for other purposes.",
+      "introducedDate": "2026-09-24",
+      "latestAction": "Read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
+      "latestActionDate": "2026-09-24",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5523"
+    },
+    {
+      "congress": 119,
       "type": "S.Res.",
       "number": 867,
       "billId": "sres867",
       "title": "A resolution designating the week of September 14 through September 20, 2026, as \"Interscholastic Athletic Administration Week\".",
       "introducedDate": "2026-09-17",
-      "latestAction": "Referred to the Committee on the Judiciary.",
+      "latestAction": "Referred to the Committee on the Judiciary. (text: CR S4803)",
       "latestActionDate": "2026-09-17",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/867"
@@ -311,18 +323,6 @@
       "latestActionDate": "2026-03-09",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4027"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 3903,
-      "billId": "s3903",
-      "title": "Railway Safety Act of 2026",
-      "introducedDate": "2026-02-24",
-      "latestAction": "Read twice and referred to the Committee on Commerce, Science, and Transportation.",
-      "latestActionDate": "2026-02-24",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3903"
     }
   ]
 }
