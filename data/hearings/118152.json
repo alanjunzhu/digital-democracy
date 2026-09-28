@@ -1,0 +1,123 @@
+{
+  "eventId": "118152",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Legislative Hearing on: H.R. 1451 (Rep. Brecheen), “Quapaw Tribal Settlement Act of 2025”; H.R. 2302 (Rep. McClintock), “Shingle Springs Band of Miwok Indians Land Transfer Act of 2025”; H.R. 2389 (Rep. Randall), “Quinault Indian Nation Land Transfer Act”; and H.R. 2400 (Rep. LaMalfa), “Pit River Land Transfer Act of 2025”.",
+  "meetingStatus": "Scheduled",
+  "date": "2025-04-30T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsii24",
+      "name": "House Natural Resources Subcommittee on Indian and Insular Affairs"
+    }
+  ],
+  "location": {
+    "room": "1324",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr2389",
+    "hr2400",
+    "hr2302",
+    "hr1451"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118152?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. John Crockett",
+      "position": "Deputy Chief for State, Private, and Tribal Forestry, U.S. Forest Service",
+      "organization": "U.S. Department of Agriculture"
+    },
+    {
+      "name": "The Honorable Wena Supernaw",
+      "position": "Chair",
+      "organization": "Quapaw Nation"
+    },
+    {
+      "name": "The Honorable Regina Cuellar",
+      "position": "Chairwoman",
+      "organization": "Shingle Springs Band of Miwok"
+    },
+    {
+      "name": "The Honorable Emily Randall",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "Mr. Bryan Mercier",
+      "position": "Director, Bureau of Indian Affairs",
+      "organization": "U.S. Department of the Interior"
+    },
+    {
+      "name": "The Honorable Tyson Johnston",
+      "position": "Councilman",
+      "organization": "Quinault Indian Nation"
+    },
+    {
+      "name": "The Honorable Yatch Bamford",
+      "position": "Chairman",
+      "organization": "Pit River Tribe"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Legislative Hearing | Indian and Insular Affairs Subcommittee",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118152",
+      "format": ""
+    },
+    {
+      "name": "Legislative Hearing | Indian and Insular Affairs Subcommittee",
+      "url": "https://www.youtube.com/watch?v=ycp8VbuIq-k",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/HHRG-119-II24-20250430-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "FTR - Quapaw Tribal Settlement Act of 2025 regarding T.C. Bear v. United States - Chair Supernaw",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/HHRG-119-II24-20250430-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 1451 - Rep. Brecheen",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/BILLS-119HR1451ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 2302 - Rep. McClintock",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/BILLS-119HR2302ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 2389 - Rep. Randall",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/BILLS-119HR2389ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 2400 - Rep. LaMalfa",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/BILLS-119HR2400ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/HHRG-119-II24-20250430-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR Responses Supernaw",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/HHRG-119-II24-20250430-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "QFR Responses Crockett",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/HHRG-119-II24-20250430-SD005.pdf",
+      "format": "PDF"
+    }
+  ]
+}

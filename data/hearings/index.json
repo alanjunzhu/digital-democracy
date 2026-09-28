@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-27T14:54:40.046Z",
+  "lastUpdated": "2026-09-28T17:52:50.513Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -5799,28 +5799,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119301?format=json"
     },
     {
-      "eventId": "119442",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Oversight Hearing - U.S. Small Business Administration",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-14T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsap23",
-          "name": "House Appropriations Subcommittee on Financial Services and General Government"
-        }
-      ],
-      "location": {
-        "room": "2359",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119442?format=json"
-    },
-    {
       "eventId": "338642",
       "congress": 119,
       "chamber": "Senate",
@@ -10158,6 +10136,33 @@
         "hr513"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118250?format=json"
+    },
+    {
+      "eventId": "118152",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative Hearing on: H.R. 1451 (Rep. Brecheen), “Quapaw Tribal Settlement Act of 2025”; H.R. 2302 (Rep. McClintock), “Shingle Springs Band of Miwok Indians Land Transfer Act of 2025”; H.R. 2389 (Rep. Randall), “Quinault Indian Nation Land Transfer Act”; and H.R. 2400 (Rep. LaMalfa), “Pit River Land Transfer Act of 2025”.",
+      "meetingStatus": "Scheduled",
+      "date": "2025-04-30T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii24",
+          "name": "House Natural Resources Subcommittee on Indian and Insular Affairs"
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr2389",
+        "hr2400",
+        "hr2302",
+        "hr1451"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118152?format=json"
     },
     {
       "eventId": "336816",
