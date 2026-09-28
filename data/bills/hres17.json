@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "17",
+  "number": 17,
   "billId": "hres17",
   "title": "Condemning Turkey for its illegal occupation of Cyprus and encouraging President Trump to make the resolution of the Cyprus problem a top foreign policy priority.",
   "introducedDate": "2025-01-07",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Foreign Affairs.",
   "latestActionDate": "2025-01-07",
+  "updateDate": "2026-09-28T18:06:49Z",
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/17",
   "summary": "<p>This resolution condemns Turkey's continued occupation of Cyprus and calls on Turkey to withdraw all of its troops from the island. It also calls on Turkey to adhere to NATO's democratic principles and mission.</p>",
   "cosponsors": 5,
   "committees": [
-    "Foreign Affairs Committee"
+    {
+      "name": "Foreign Affairs Committee",
+      "systemCode": "hsfa00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-07T16:00:40Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-07",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-07",

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "27",
+  "number": 27,
   "billId": "hres27",
   "title": "Expressing opposition to Central Business District Tolling Program of New York City.",
   "introducedDate": "2025-01-09",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Transportation and Infrastructure.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-09-28T17:53:48Z",
   "originChamber": "House",
   "policyArea": "Transportation and Public Works",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/27",
   "summary": "<p>This resolution disapproves of the Central Business District Tolling Program of New York City and strongly recommends that (1) New York conduct an economic impact report on the program, and (2) relevant federal agencies and New York halt the program's implementation. The tolling program, also known as congestion pricing, will charge drivers a toll to enter an area designated as Manhattan's central business district.</p>",
   "cosponsors": 3,
   "committees": [
-    "Transportation and Infrastructure Committee"
+    {
+      "name": "Transportation and Infrastructure Committee",
+      "systemCode": "hspw00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:30:30Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-09",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-09",

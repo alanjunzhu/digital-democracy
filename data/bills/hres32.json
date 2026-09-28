@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "32",
+  "number": 32,
   "billId": "hres32",
   "title": "Congratulating the North Dakota State University Bison football team for winning the 2024 National Collegiate Athletic Association Division I Football Championship Subdivision title.",
   "introducedDate": "2025-01-13",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Education and Workforce.",
   "latestActionDate": "2025-01-13",
+  "updateDate": "2026-09-28T17:36:39Z",
   "originChamber": "House",
   "policyArea": "Sports and Recreation",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/32",
   "summary": "<p>This resolution congratulates the North Dakota State University Bison football team for winning the 2024 National Collegiate Athletic Association Division I Football Championship Subdivision title.</p>",
   "cosponsors": 0,
   "committees": [
-    "Education and Workforce Committee"
+    {
+      "name": "Education and Workforce Committee",
+      "systemCode": "hsed00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-13T17:01:00Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-13",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-13",

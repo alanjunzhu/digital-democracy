@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "7",
+  "number": 7,
   "billId": "hres7",
   "title": "Recognizing the importance of access to comprehensive, high-quality, life-affirming medical care for women of all ages.",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Energy and Commerce.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2025-01-22T23:15:38Z",
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/7",
   "summary": "<p>This resolution expresses support for women nationwide to have access to comprehensive, convenient, compassionate, life-affirming, and high-quality health care.</p>",
   "cosponsors": 1,
   "committees": [
-    "Energy and Commerce Committee"
+    {
+      "name": "Energy and Commerce Committee",
+      "systemCode": "hsif00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:11:20Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-03",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-03",

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "28",
+  "number": 28,
   "billId": "hres28",
   "title": "BRIDGE to Congress Resolution",
   "introducedDate": "2025-01-09",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Rules.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-09-28T17:40:09Z",
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/28",
   "summary": "<p><strong>Bringing Real Ideas, Data, and Genuine Experience to Congress Resolution or the BRIDGE to Congress Resolution</strong></p><p>This resolution modifies the House Rules regarding remote testimony of witnesses in committee proceedings. Specifically, the resolution eliminates the requirement for the committee chair to approve remote testimony of witnesses. </p>",
   "cosponsors": 1,
   "committees": [
-    "Rules Committee"
+    {
+      "name": "Rules Committee",
+      "systemCode": "hsru00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:31:25Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-09",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-09",

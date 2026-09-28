@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "30",
+  "number": 30,
   "billId": "hres30",
   "title": "Honoring the life, achievements, legacy, and public service of former President James Earl \"Jimmy\" Carter, Jr.",
   "introducedDate": "2025-01-09",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-09-28T17:37:36Z",
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/30",
   "summary": "<p>This resolution honors the life, achievements, legacy, and distinguished public service of former President Jimmy Carter. The resolution also (1) acknowledges President Carter's contributions to the state of Georgia, the United States, and the world; and (2) establishes his legacy as one of the great leaders and statesmen of the United States.&nbsp;</p>",
   "cosponsors": 120,
   "committees": [
-    "Oversight and Government Reform Committee"
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:35:25Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-09",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-09",

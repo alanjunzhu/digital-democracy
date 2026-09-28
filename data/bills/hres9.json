@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "9",
+  "number": 9,
   "billId": "hres9",
   "title": "Reaffirming that the United States is not a party to the Rome Statute and does not recognize the jurisdiction of the International Criminal Court.",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Foreign Affairs.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2025-01-16T21:26:51Z",
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/9",
   "summary": "<p>This resolution reaffirms that the United States in not a party to the Rome Statute and does not recognize the jurisdiction of the International Criminal Court (ICC). &nbsp;The resolution also (1) condemns the ICC's issuance of arrest warrant applications for Israeli Prime Minister Benjamin Netanyahu and&nbsp;Israeli Minister of Defense Yoav Gallant, and (2) supports Israel's right to defend itself and its leaders from unwarranted international legal actions.&nbsp;</p>",
   "cosponsors": 0,
   "committees": [
-    "Foreign Affairs Committee"
+    {
+      "name": "Foreign Affairs Committee",
+      "systemCode": "hsfa00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:04:40Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-03",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-03",

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "16",
+  "number": 16,
   "billId": "hres16",
   "title": "Recognizing Russian actions in Ukraine as a genocide.",
   "introducedDate": "2025-01-06",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Foreign Affairs.",
   "latestActionDate": "2025-01-06",
+  "updateDate": "2025-02-27T09:06:13Z",
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/16",
   "summary": "<p>This resolution condemns Russia for committing acts of genocide against the Ukrainian people. It also calls on the United States, in cooperation with North Atlantic Treaty Organization and European Union allies, to undertake measures to support the Ukrainian government to prevent further acts of Russian genocide against the Ukrainian people.</p>",
   "cosponsors": 18,
   "committees": [
-    "Foreign Affairs Committee"
+    {
+      "name": "Foreign Affairs Committee",
+      "systemCode": "hsfa00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-06T17:00:15Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-06",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-06",

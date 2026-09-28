@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "12",
+  "number": 12,
   "billId": "hres12",
   "title": "Stay on Schedule (S.O.S.) Resolution",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Rules.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2025-11-20T09:06:42Z",
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/12",
   "summary": "<p><strong>Stay on Schedule (S.O.S.) Resolution</strong></p><p>This resolution prevents the House of Representatives from adjourning in August until it has passed regular appropriations legislation for the fiscal year beginning in October.&nbsp;</p><p>The resolution specifies that it is out of order for the House to consider a concurrent resolution for its adjournment during any day in August until the House has passed all of the regular appropriations bills.</p>",
   "cosponsors": 2,
   "committees": [
-    "Rules Committee"
+    {
+      "name": "Rules Committee",
+      "systemCode": "hsru00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:17:20Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-03",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-03",

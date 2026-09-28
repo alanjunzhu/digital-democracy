@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "36",
+  "number": 36,
   "billId": "hres36",
   "title": "Finding Federal Savings Committee Resolution",
   "introducedDate": "2025-01-13",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Rules.",
   "latestActionDate": "2025-01-13",
+  "updateDate": "2026-09-28T17:31:43Z",
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/36",
   "summary": "<p><strong>Finding Federal Savings Committee Resolution</strong></p> <p>This resolution establishes the House Committee on the Elimination of Nonessential Federal Programs to analyze underperforming or nonessential federal programs and recommend actions to modify or eliminate those programs. The resolution also establishes expedited procedures for legislation reported by the committee to eliminate programs or rescind funding.</p> <p>The committee shall cease to exist at the end of the 120th Congress.</p>",
   "cosponsors": 6,
   "committees": [
-    "Rules Committee"
+    {
+      "name": "Rules Committee",
+      "systemCode": "hsru00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-13T17:00:25Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-13",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-13",

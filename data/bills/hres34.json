@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "34",
+  "number": 34,
   "billId": "hres34",
   "title": "Expressing the sense of the House of Representatives that the Federal Government should drop all charges against Edward Snowden.",
   "introducedDate": "2025-01-13",
@@ -13,14 +13,37 @@
   },
   "latestAction": "Referred to the Committee on the Judiciary, and in addition to the Committee on Intelligence (Permanent Select), for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
   "latestActionDate": "2025-01-13",
+  "updateDate": "2026-09-28T17:34:00Z",
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/34",
   "summary": "<p>This resolution expresses the sense of the House of Representatives that the National Security Agency's bulk collection telephone records program was unconstitutional and that all federal charges against Edward Snowden should be dropped. (Mr. Snowden disclosed information about the program and was subsequently charged for unauthorized disclosure of national defense information, unauthorized disclosure of classified communication intelligence, and theft of government property).<br/><br/></p>",
   "cosponsors": 1,
   "committees": [
-    "Intelligence (Permanent Select) Committee",
-    "Judiciary Committee"
+    {
+      "name": "Intelligence (Permanent Select) Committee",
+      "systemCode": "hlig00",
+      "chamber": "House",
+      "type": "Select",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-13T17:06:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-13T17:05:50Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -36,8 +59,7 @@
     },
     {
       "date": "2025-01-13",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-13",

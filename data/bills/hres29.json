@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.Res.",
-  "number": "29",
+  "number": 29,
   "billId": "hres29",
   "title": "Recognizing the 125th anniversary of organized Okinawan immigration to the United States.",
   "introducedDate": "2025-01-09",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-09-28T17:38:55Z",
   "originChamber": "House",
   "policyArea": "Arts, Culture, Religion",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/29",
   "summary": "<p>This resolution recognizes the historic contributions of Okinawan Americans to the United States and urges the people of the United States to honor the 125th anniversary of Okinawan immigration to the United States.</p>",
   "cosponsors": 5,
   "committees": [
-    "Oversight and Government Reform Committee"
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:38:30Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
@@ -30,8 +42,7 @@
     },
     {
       "date": "2025-01-09",
-      "text": "Submitted in House",
-      "chamber": "House"
+      "text": "Submitted in House"
     },
     {
       "date": "2025-01-09",
