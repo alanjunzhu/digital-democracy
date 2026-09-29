@@ -1,20 +1,92 @@
 {
-  "lastUpdated": "2026-09-25T15:55:28.352Z",
+  "lastUpdated": "2026-09-29T16:58:59.436Z",
   "congress": 119,
   "total": 500,
   "amendments": [
+    {
+      "amendmentId": "samdt6837",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6837,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-28T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000805",
+        "fullName": "Sen. Warner, Mark R. [D-VA]",
+        "party": "D",
+        "state": "VA"
+      },
+      "amendedBillId": "hr9340",
+      "amendedBillTitle": "Ratepayer Protection Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6837"
+    },
+    {
+      "amendmentId": "samdt6836",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6836,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-28T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6836"
+    },
+    {
+      "amendmentId": "samdt6838",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6838,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-28T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C001098",
+        "fullName": "Sen. Cruz, Ted [R-TX]",
+        "party": "R",
+        "state": "TX"
+      },
+      "amendedBillId": "s3923",
+      "amendedBillTitle": "Weather Research and Forecasting Innovation Reauthorization Act of 2026",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6838"
+    },
     {
       "amendmentId": "samdt6835",
       "congress": 119,
       "type": "S.Amdt.",
       "number": 6835,
       "chamber": "Senate",
-      "purpose": "",
+      "purpose": "To establish certain standards with respect to coaches of varsity sports teams.",
       "description": "",
       "submittedDate": "2026-09-24T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
+      "proposedDate": "2026-09-28T04:00:00Z",
+      "latestAction": "Under the order of 9/28/26, amendment SA 6835 not agreed to in Senate by Yea-Nay Vote. 47 - 52. Record Vote Number: 249.",
+      "latestActionDate": "2026-09-28",
       "sponsor": {
         "bioguideId": "B001288",
         "fullName": "Sen. Booker, Cory A. [D-NJ]",
@@ -24,8 +96,168 @@
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 1,
-      "recordedVotes": [],
+      "recordedVotes": [
+        {
+          "voteId": "s2-rc249",
+          "chamber": "Senate",
+          "rollNumber": 249,
+          "sessionNumber": 2,
+          "date": "2026-09-29T01:40:51Z"
+        }
+      ],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6835"
+    },
+    {
+      "amendmentId": "samdt6805",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6805,
+      "chamber": "Senate",
+      "purpose": "To increase the limitation on funding for post-eligibility insurance and catastrophic injury for student athletes.",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "2026-09-28T04:00:00Z",
+      "latestAction": "Under the order of 9/28/26, amendment SA 6805 not agreed to in Senate by Yea-Nay Vote. 49 - 50. Record Vote Number: 248.",
+      "latestActionDate": "2026-09-28",
+      "sponsor": {
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 2,
+      "recordedVotes": [
+        {
+          "voteId": "s2-rc248",
+          "chamber": "Senate",
+          "rollNumber": 248,
+          "sessionNumber": 2,
+          "date": "2026-09-29T01:19:33Z"
+        }
+      ],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6805"
+    },
+    {
+      "amendmentId": "samdt6760",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6760,
+      "chamber": "Senate",
+      "purpose": "To limit price increases for college athletics tickets.",
+      "description": "",
+      "submittedDate": "2026-08-07T04:00:00Z",
+      "proposedDate": "2026-09-28T04:00:00Z",
+      "latestAction": "Under the order of 9/28/26, amendment SA 6760, not having achieved 60 votes in the affirmative, not agreed to in Senate by Yea-Nay Vote. 42 - 54. Record Vote Number: 247.",
+      "latestActionDate": "2026-09-28",
+      "sponsor": {
+        "bioguideId": "K000393",
+        "fullName": "Sen. Kennedy, John [R-LA]",
+        "party": "R",
+        "state": "LA"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [
+        {
+          "voteId": "s2-rc247",
+          "chamber": "Senate",
+          "rollNumber": 247,
+          "sessionNumber": 2,
+          "date": "2026-09-29T00:34:05Z"
+        }
+      ],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6760"
+    },
+    {
+      "amendmentId": "samdt6758",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6758,
+      "chamber": "Senate",
+      "purpose": "To improve the bill.",
+      "description": "",
+      "submittedDate": "2026-08-07T04:00:00Z",
+      "proposedDate": "2026-09-28T04:00:00Z",
+      "latestAction": "Under the order of 9/28/26, amendment SA 6758 not agreed to in Senate by Yea-Nay Vote. 1 - 94. Record Vote Number: 246.",
+      "latestActionDate": "2026-09-28",
+      "sponsor": {
+        "bioguideId": "P000603",
+        "fullName": "Sen. Paul, Rand [R-KY]",
+        "party": "R",
+        "state": "KY"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [
+        {
+          "voteId": "s2-rc246",
+          "chamber": "Senate",
+          "rollNumber": 246,
+          "sessionNumber": 2,
+          "date": "2026-09-29T00:05:05Z"
+        }
+      ],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6758"
+    },
+    {
+      "amendmentId": "samdt6831",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6831,
+      "chamber": "Senate",
+      "purpose": "To modify the prohibition on certain conference mergers and acquisitions.",
+      "description": "",
+      "submittedDate": "2026-09-24T04:00:00Z",
+      "proposedDate": "2026-09-28T04:00:00Z",
+      "latestAction": "Under the order of 9/28/26, amendment SA 6831, notwithstanding the adoption of amendment SA 6776, agreed to in Senate by Voice Vote.",
+      "latestActionDate": "2026-09-28",
+      "sponsor": {
+        "bioguideId": "M001244",
+        "fullName": "Sen. Moody, Ashley [R-FL]",
+        "party": "R",
+        "state": "FL"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6831"
+    },
+    {
+      "amendmentId": "samdt6828",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6828,
+      "chamber": "Senate",
+      "purpose": "To modify the provision relating to the relationship of this Act to existing law.",
+      "description": "",
+      "submittedDate": "2026-09-23T04:00:00Z",
+      "proposedDate": "2026-09-28T04:00:00Z",
+      "latestAction": "Under the order of 9/28/26, amendment SA 6828, notwithstanding the adoption of amendment SA 6776, agreed to in Senate by Yea-Nay Vote. 96 - 1. Record Vote Number: 245.",
+      "latestActionDate": "2026-09-28",
+      "sponsor": {
+        "bioguideId": "B001230",
+        "fullName": "Sen. Baldwin, Tammy [D-WI]",
+        "party": "D",
+        "state": "WI"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 2,
+      "recordedVotes": [
+        {
+          "voteId": "s2-rc245",
+          "chamber": "Senate",
+          "rollNumber": 245,
+          "sessionNumber": 2,
+          "date": "2026-09-28T23:35:14Z"
+        }
+      ],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6828"
     },
     {
       "amendmentId": "samdt6830",
@@ -33,12 +265,12 @@
       "type": "S.Amdt.",
       "number": 6830,
       "chamber": "Senate",
-      "purpose": "",
+      "purpose": "To require the disclosure of foreign financing of intercollegiate athletics.",
       "description": "",
       "submittedDate": "2026-09-24T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
+      "proposedDate": "2026-09-28T04:00:00Z",
+      "latestAction": "Under the order of 9/28/26, amendment SA 6830, notwithstanding the adoption of amendment SA 6776, agreed to in Senate by Voice Vote.",
+      "latestActionDate": "2026-09-28",
       "sponsor": {
         "bioguideId": "S001184",
         "fullName": "Sen. Scott, Tim [R-SC]",
@@ -52,30 +284,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6830"
     },
     {
-      "amendmentId": "samdt6831",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6831,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-24T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001244",
-        "fullName": "Sen. Moody, Ashley [R-FL]",
-        "party": "R",
-        "state": "FL"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6831"
-    },
-    {
       "amendmentId": "samdt6834",
       "congress": 119,
       "type": "S.Amdt.",
@@ -85,7 +293,7 @@
       "description": "",
       "submittedDate": "2026-09-24T04:00:00Z",
       "proposedDate": "2026-09-24T04:00:00Z",
-      "latestAction": "Amendment SA 6834 agreed to in Senate by Unanimous Consent.",
+      "latestAction": "Amendment SA 6834 agreed to in Senate by Unanimous Consent. In the nature of a substitute.",
       "latestActionDate": "2026-09-24",
       "sponsor": {
         "bioguideId": "H001061",
@@ -98,54 +306,6 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6834"
-    },
-    {
-      "amendmentId": "samdt6833",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6833,
-      "chamber": "Senate",
-      "purpose": "In the nature of a substitute.",
-      "description": "",
-      "submittedDate": "2026-09-24T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "Referred to the Committee on Commerce, Science, and Transportation.",
-      "latestActionDate": "2026-09-24",
-      "sponsor": {
-        "bioguideId": "C001098",
-        "fullName": "Sen. Cruz, Ted [R-TX]",
-        "party": "R",
-        "state": "TX"
-      },
-      "amendedBillId": "hr4624",
-      "amendedBillTitle": "Muhammad Ali American Boxing Revival Act of 2026",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6833"
-    },
-    {
-      "amendmentId": "samdt6832",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6832,
-      "chamber": "Senate",
-      "purpose": "To apply the prohibition relating to self-promotion through official advertisements to the President and the Vice President.",
-      "description": "",
-      "submittedDate": "2026-09-24T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "Referred to the Committee on Homeland Security and Governmental Affairs.",
-      "latestActionDate": "2026-09-24",
-      "sponsor": {
-        "bioguideId": "R000608",
-        "fullName": "Sen. Rosen, Jacky [D-NV]",
-        "party": "D",
-        "state": "NV"
-      },
-      "amendedBillId": "s4128",
-      "amendedBillTitle": "No Self-Promotion with Public Dollars Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6832"
     },
     {
       "amendmentId": "samdt6780",
@@ -194,6 +354,54 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6779"
+    },
+    {
+      "amendmentId": "samdt6832",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6832,
+      "chamber": "Senate",
+      "purpose": "To apply the prohibition relating to self-promotion through official advertisements to the President and the Vice President.",
+      "description": "",
+      "submittedDate": "2026-09-24T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "Referred to the Committee on Homeland Security and Governmental Affairs.",
+      "latestActionDate": "2026-09-24",
+      "sponsor": {
+        "bioguideId": "R000608",
+        "fullName": "Sen. Rosen, Jacky [D-NV]",
+        "party": "D",
+        "state": "NV"
+      },
+      "amendedBillId": "s4128",
+      "amendedBillTitle": "No Self-Promotion with Public Dollars Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6832"
+    },
+    {
+      "amendmentId": "samdt6833",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6833,
+      "chamber": "Senate",
+      "purpose": "In the nature of a substitute.",
+      "description": "",
+      "submittedDate": "2026-09-24T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "Referred to the Committee on Commerce, Science, and Transportation.",
+      "latestActionDate": "2026-09-24",
+      "sponsor": {
+        "bioguideId": "C001098",
+        "fullName": "Sen. Cruz, Ted [R-TX]",
+        "party": "R",
+        "state": "TX"
+      },
+      "amendedBillId": "hr4624",
+      "amendedBillTitle": "Muhammad Ali American Boxing Revival Act of 2026",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6833"
     },
     {
       "amendmentId": "samdt6776",
@@ -307,30 +515,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6825"
     },
     {
-      "amendmentId": "samdt6829",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6829,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-23T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001184",
-        "fullName": "Sen. Scott, Tim [R-SC]",
-        "party": "R",
-        "state": "SC"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6829"
-    },
-    {
       "amendmentId": "samdt6826",
       "congress": 119,
       "type": "S.Amdt.",
@@ -355,6 +539,30 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6826"
     },
     {
+      "amendmentId": "samdt6829",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6829,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-23T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6829"
+    },
+    {
       "amendmentId": "samdt6827",
       "congress": 119,
       "type": "S.Amdt.",
@@ -377,30 +585,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6827"
-    },
-    {
-      "amendmentId": "samdt6828",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6828,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-23T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001230",
-        "fullName": "Sen. Baldwin, Tammy [D-WI]",
-        "party": "D",
-        "state": "WI"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6828"
     },
     {
       "amendmentId": "samdt6783",
@@ -451,10 +635,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6781"
     },
     {
-      "amendmentId": "samdt6811",
+      "amendmentId": "samdt6815",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6811,
+      "number": 6815,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -463,16 +647,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "K000393",
-        "fullName": "Sen. Kennedy, John [R-LA]",
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
         "party": "R",
-        "state": "LA"
+        "state": "SC"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6811"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6815"
     },
     {
       "amendmentId": "samdt6817",
@@ -523,30 +707,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6818"
     },
     {
-      "amendmentId": "samdt6814",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6814,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001184",
-        "fullName": "Sen. Scott, Tim [R-SC]",
-        "party": "R",
-        "state": "SC"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6814"
-    },
-    {
       "amendmentId": "samdt6810",
       "congress": 119,
       "type": "S.Amdt.",
@@ -569,126 +729,6 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6810"
-    },
-    {
-      "amendmentId": "samdt6824",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6824,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001243",
-        "fullName": "Sen. Blackburn, Marsha [R-TN]",
-        "party": "R",
-        "state": "TN"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6824"
-    },
-    {
-      "amendmentId": "samdt6812",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6812,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "A000383",
-        "fullName": "Sen. Armstrong, Alan [R-OK]",
-        "party": "R",
-        "state": "OK"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6812"
-    },
-    {
-      "amendmentId": "samdt6819",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6819,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001277",
-        "fullName": "Sen. Blumenthal, Richard [D-CT]",
-        "party": "D",
-        "state": "CT"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6819"
-    },
-    {
-      "amendmentId": "samdt6816",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6816,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001184",
-        "fullName": "Sen. Scott, Tim [R-SC]",
-        "party": "R",
-        "state": "SC"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6816"
-    },
-    {
-      "amendmentId": "samdt6815",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6815,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001184",
-        "fullName": "Sen. Scott, Tim [R-SC]",
-        "party": "R",
-        "state": "SC"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6815"
     },
     {
       "amendmentId": "samdt6813",
@@ -715,6 +755,102 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6813"
     },
     {
+      "amendmentId": "samdt6812",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6812,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "A000383",
+        "fullName": "Sen. Armstrong, Alan [R-OK]",
+        "party": "R",
+        "state": "OK"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6812"
+    },
+    {
+      "amendmentId": "samdt6824",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6824,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001243",
+        "fullName": "Sen. Blackburn, Marsha [R-TN]",
+        "party": "R",
+        "state": "TN"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6824"
+    },
+    {
+      "amendmentId": "samdt6819",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6819,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001277",
+        "fullName": "Sen. Blumenthal, Richard [D-CT]",
+        "party": "D",
+        "state": "CT"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6819"
+    },
+    {
+      "amendmentId": "samdt6814",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6814,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6814"
+    },
+    {
       "amendmentId": "samdt6823",
       "congress": 119,
       "type": "S.Amdt.",
@@ -739,10 +875,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6823"
     },
     {
-      "amendmentId": "samdt6821",
+      "amendmentId": "samdt6816",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6821,
+      "number": 6816,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -751,22 +887,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001277",
-        "fullName": "Sen. Blumenthal, Richard [D-CT]",
-        "party": "D",
-        "state": "CT"
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
+        "party": "R",
+        "state": "SC"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6821"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6816"
     },
     {
-      "amendmentId": "samdt6803",
+      "amendmentId": "samdt6811",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6803,
+      "number": 6811,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -775,40 +911,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
+        "bioguideId": "K000393",
+        "fullName": "Sen. Kennedy, John [R-LA]",
+        "party": "R",
+        "state": "LA"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 4,
+      "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6803"
-    },
-    {
-      "amendmentId": "samdt6802",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6802,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6802"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6811"
     },
     {
       "amendmentId": "samdt6820",
@@ -859,82 +971,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6806"
     },
     {
-      "amendmentId": "samdt6800",
+      "amendmentId": "samdt6821",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6800,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6800"
-    },
-    {
-      "amendmentId": "samdt6805",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6805,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6805"
-    },
-    {
-      "amendmentId": "samdt6808",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6808,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001244",
-        "fullName": "Sen. Moody, Ashley [R-FL]",
-        "party": "R",
-        "state": "FL"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6808"
-    },
-    {
-      "amendmentId": "samdt6822",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6822,
+      "number": 6821,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -952,7 +992,55 @@
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6822"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6821"
+    },
+    {
+      "amendmentId": "samdt6799",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6799,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000790",
+        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+        "party": "D",
+        "state": "GA"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 5,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6799"
+    },
+    {
+      "amendmentId": "samdt6803",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6803,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 4,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6803"
     },
     {
       "amendmentId": "samdt6807",
@@ -1003,30 +1091,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6801"
     },
     {
-      "amendmentId": "samdt6804",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6804,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6804"
-    },
-    {
       "amendmentId": "samdt6809",
       "congress": 119,
       "type": "S.Amdt.",
@@ -1051,10 +1115,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6809"
     },
     {
-      "amendmentId": "samdt6799",
+      "amendmentId": "samdt6800",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6799,
+      "number": 6800,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1063,22 +1127,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "W000790",
-        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
         "party": "D",
-        "state": "GA"
+        "state": "NJ"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 5,
+      "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6799"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6800"
     },
     {
-      "amendmentId": "samdt6796",
+      "amendmentId": "samdt6804",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6796,
+      "number": 6804,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1087,16 +1151,88 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "H001042",
-        "fullName": "Sen. Hirono, Mazie K. [D-HI]",
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
         "party": "D",
-        "state": "HI"
+        "state": "NJ"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6804"
+    },
+    {
+      "amendmentId": "samdt6802",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6802,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6802"
+    },
+    {
+      "amendmentId": "samdt6822",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6822,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001277",
+        "fullName": "Sen. Blumenthal, Richard [D-CT]",
+        "party": "D",
+        "state": "CT"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6796"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6822"
+    },
+    {
+      "amendmentId": "samdt6808",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6808,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001244",
+        "fullName": "Sen. Moody, Ashley [R-FL]",
+        "party": "R",
+        "state": "FL"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6808"
     },
     {
       "amendmentId": "samdt6797",
@@ -1121,6 +1257,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6797"
+    },
+    {
+      "amendmentId": "samdt6796",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6796,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "H001042",
+        "fullName": "Sen. Hirono, Mazie K. [D-HI]",
+        "party": "D",
+        "state": "HI"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6796"
     },
     {
       "amendmentId": "samdt6798",
@@ -1171,10 +1331,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6782"
     },
     {
-      "amendmentId": "samdt6788",
+      "amendmentId": "samdt6789",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6788,
+      "number": 6789,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1192,7 +1352,7 @@
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6788"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6789"
     },
     {
       "amendmentId": "samdt6787",
@@ -1219,54 +1379,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6787"
     },
     {
-      "amendmentId": "samdt6792",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6792,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C000880",
-        "fullName": "Sen. Crapo, Mike [R-ID]",
-        "party": "R",
-        "state": "ID"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6792"
-    },
-    {
-      "amendmentId": "samdt6790",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6790,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 4,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6790"
-    },
-    {
       "amendmentId": "samdt6786",
       "congress": 119,
       "type": "S.Amdt.",
@@ -1291,10 +1403,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6786"
     },
     {
-      "amendmentId": "samdt6789",
+      "amendmentId": "samdt6788",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6789,
+      "number": 6788,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1312,7 +1424,7 @@
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6789"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6788"
     },
     {
       "amendmentId": "samdt6791",
@@ -1339,34 +1451,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6791"
     },
     {
-      "amendmentId": "samdt6775",
+      "amendmentId": "samdt6790",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6775,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "G000555",
-        "fullName": "Sen. Gillibrand, Kirsten E. [D-NY]",
-        "party": "D",
-        "state": "NY"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6775"
-    },
-    {
-      "amendmentId": "samdt6793",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6793,
+      "number": 6790,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1382,15 +1470,15 @@
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 1,
+      "cosponsorCount": 4,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6793"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6790"
     },
     {
-      "amendmentId": "samdt6795",
+      "amendmentId": "samdt6792",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6795,
+      "number": 6792,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1399,16 +1487,40 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "M001169",
-        "fullName": "Sen. Murphy, Christopher [D-CT]",
+        "bioguideId": "C000880",
+        "fullName": "Sen. Crapo, Mike [R-ID]",
+        "party": "R",
+        "state": "ID"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6792"
+    },
+    {
+      "amendmentId": "samdt6785",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6785,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001230",
+        "fullName": "Sen. Baldwin, Tammy [D-WI]",
         "party": "D",
-        "state": "CT"
+        "state": "WI"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 2,
+      "cosponsorCount": 11,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6795"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6785"
     },
     {
       "amendmentId": "samdt6784",
@@ -1435,30 +1547,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6784"
     },
     {
-      "amendmentId": "samdt6785",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6785,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001230",
-        "fullName": "Sen. Baldwin, Tammy [D-WI]",
-        "party": "D",
-        "state": "WI"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 10,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6785"
-    },
-    {
       "amendmentId": "samdt6794",
       "congress": 119,
       "type": "S.Amdt.",
@@ -1481,6 +1569,78 @@
       "cosponsorCount": 3,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6794"
+    },
+    {
+      "amendmentId": "samdt6793",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6793,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6793"
+    },
+    {
+      "amendmentId": "samdt6775",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6775,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "G000555",
+        "fullName": "Sen. Gillibrand, Kirsten E. [D-NY]",
+        "party": "D",
+        "state": "NY"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6775"
+    },
+    {
+      "amendmentId": "samdt6795",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6795,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001169",
+        "fullName": "Sen. Murphy, Christopher [D-CT]",
+        "party": "D",
+        "state": "CT"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6795"
     },
     {
       "amendmentId": "samdt6774",
@@ -1555,30 +1715,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/house-amendment/272"
     },
     {
-      "amendmentId": "samdt6772",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6772,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-15T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "H001046",
-        "fullName": "Sen. Heinrich, Martin [D-NM]",
-        "party": "D",
-        "state": "NM"
-      },
-      "amendedBillId": "hr3633",
-      "amendedBillTitle": "Digital Asset Market Clarity Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6772"
-    },
-    {
       "amendmentId": "samdt6771",
       "congress": 119,
       "type": "S.Amdt.",
@@ -1603,28 +1739,28 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6771"
     },
     {
-      "amendmentId": "samdt6769",
+      "amendmentId": "samdt6772",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6769,
+      "number": 6772,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
-      "submittedDate": "2026-09-14T04:00:00Z",
+      "submittedDate": "2026-09-15T04:00:00Z",
       "proposedDate": "",
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "W000790",
-        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+        "bioguideId": "H001046",
+        "fullName": "Sen. Heinrich, Martin [D-NM]",
         "party": "D",
-        "state": "GA"
+        "state": "NM"
       },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
+      "amendedBillId": "hr3633",
+      "amendedBillTitle": "Digital Asset Market Clarity Act",
+      "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6769"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6772"
     },
     {
       "amendmentId": "samdt6770",
@@ -1649,6 +1785,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6770"
+    },
+    {
+      "amendmentId": "samdt6769",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6769,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-14T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000790",
+        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+        "party": "D",
+        "state": "GA"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6769"
     },
     {
       "amendmentId": "hamdt271",
@@ -1931,78 +2091,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6768"
     },
     {
-      "amendmentId": "samdt6759",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6759,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-08-07T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "K000393",
-        "fullName": "Sen. Kennedy, John [R-LA]",
-        "party": "R",
-        "state": "LA"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6759"
-    },
-    {
-      "amendmentId": "samdt6763",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6763,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-08-07T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C001075",
-        "fullName": "Sen. Cassidy, Bill [R-LA]",
-        "party": "R",
-        "state": "LA"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6763"
-    },
-    {
-      "amendmentId": "samdt6761",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6761,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-08-07T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "K000393",
-        "fullName": "Sen. Kennedy, John [R-LA]",
-        "party": "R",
-        "state": "LA"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6761"
-    },
-    {
       "amendmentId": "samdt6756",
       "congress": 119,
       "type": "S.Amdt.",
@@ -2025,30 +2113,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6756"
-    },
-    {
-      "amendmentId": "samdt6762",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6762,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-08-07T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C001075",
-        "fullName": "Sen. Cassidy, Bill [R-LA]",
-        "party": "R",
-        "state": "LA"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6762"
     },
     {
       "amendmentId": "samdt6757",
@@ -2075,10 +2139,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6757"
     },
     {
-      "amendmentId": "samdt6758",
+      "amendmentId": "samdt6759",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6758,
+      "number": 6759,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2087,22 +2151,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "P000603",
-        "fullName": "Sen. Paul, Rand [R-KY]",
+        "bioguideId": "K000393",
+        "fullName": "Sen. Kennedy, John [R-LA]",
         "party": "R",
-        "state": "KY"
+        "state": "LA"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
+      "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6758"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6759"
     },
     {
-      "amendmentId": "samdt6760",
+      "amendmentId": "samdt6761",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6760,
+      "number": 6761,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2120,7 +2184,55 @@
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6760"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6761"
+    },
+    {
+      "amendmentId": "samdt6762",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6762,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-08-07T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C001075",
+        "fullName": "Sen. Cassidy, Bill [R-LA]",
+        "party": "R",
+        "state": "LA"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6762"
+    },
+    {
+      "amendmentId": "samdt6763",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6763,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-08-07T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C001075",
+        "fullName": "Sen. Cassidy, Bill [R-LA]",
+        "party": "R",
+        "state": "LA"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6763"
     },
     {
       "amendmentId": "samdt6712",
@@ -2315,30 +2427,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6742"
     },
     {
-      "amendmentId": "samdt6711",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6711,
-      "chamber": "Senate",
-      "purpose": "To impose sanctions and other measures with respect to the Russian Federation.",
-      "description": "",
-      "submittedDate": "2026-07-29T04:00:00Z",
-      "proposedDate": "2026-08-07T04:00:00Z",
-      "latestAction": "Amendment SA 6711, under the order of 8/6/2026, agreed to in Senate by Unanimous Consent.",
-      "latestActionDate": "2026-08-07",
-      "sponsor": {
-        "bioguideId": "G000608",
-        "fullName": "Sen. Graham, Darline [R-SC]",
-        "party": "R",
-        "state": "SC"
-      },
-      "amendedBillId": "hr5334",
-      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6711"
-    },
-    {
       "amendmentId": "samdt6715",
       "congress": 119,
       "type": "S.Amdt.",
@@ -2371,6 +2459,30 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6715"
     },
     {
+      "amendmentId": "samdt6711",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6711,
+      "chamber": "Senate",
+      "purpose": "To impose sanctions and other measures with respect to the Russian Federation.",
+      "description": "",
+      "submittedDate": "2026-07-29T04:00:00Z",
+      "proposedDate": "2026-08-07T04:00:00Z",
+      "latestAction": "Amendment SA 6711, under the order of 8/6/2026, agreed to in Senate by Unanimous Consent.",
+      "latestActionDate": "2026-08-07",
+      "sponsor": {
+        "bioguideId": "G000608",
+        "fullName": "Sen. Graham, Darline [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "hr5334",
+      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6711"
+    },
+    {
       "amendmentId": "samdt6752",
       "congress": 119,
       "type": "S.Amdt.",
@@ -2393,6 +2505,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6752"
+    },
+    {
+      "amendmentId": "samdt6755",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6755,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-08-06T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "L000577",
+        "fullName": "Sen. Lee, Mike [R-UT]",
+        "party": "R",
+        "state": "UT"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6755"
     },
     {
       "amendmentId": "samdt6753",
@@ -2441,30 +2577,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6754"
-    },
-    {
-      "amendmentId": "samdt6755",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6755,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-08-06T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "L000577",
-        "fullName": "Sen. Lee, Mike [R-UT]",
-        "party": "R",
-        "state": "UT"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6755"
     },
     {
       "amendmentId": "samdt6751",
@@ -2779,10 +2891,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6729"
     },
     {
-      "amendmentId": "samdt6724",
+      "amendmentId": "samdt6725",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6724,
+      "number": 6725,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2791,16 +2903,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "W000790",
-        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
-        "party": "D",
-        "state": "GA"
+        "bioguideId": "H001104",
+        "fullName": "Sen. Husted, Jon [R-OH]",
+        "party": "R",
+        "state": "OH"
       },
-      "amendedBillId": "hr5334",
-      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6724"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6725"
     },
     {
       "amendmentId": "samdt6723",
@@ -2827,30 +2939,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6723"
     },
     {
-      "amendmentId": "samdt6726",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6726,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-30T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C001098",
-        "fullName": "Sen. Cruz, Ted [R-TX]",
-        "party": "R",
-        "state": "TX"
-      },
-      "amendedBillId": "hr5334",
-      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6726"
-    },
-    {
       "amendmentId": "samdt6721",
       "congress": 119,
       "type": "S.Amdt.",
@@ -2873,54 +2961,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6721"
-    },
-    {
-      "amendmentId": "samdt6727",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6727,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-30T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000790",
-        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
-        "party": "D",
-        "state": "GA"
-      },
-      "amendedBillId": "hr5334",
-      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6727"
-    },
-    {
-      "amendmentId": "samdt6725",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6725,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-30T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "H001104",
-        "fullName": "Sen. Husted, Jon [R-OH]",
-        "party": "R",
-        "state": "OH"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6725"
     },
     {
       "amendmentId": "samdt6728",
@@ -2947,6 +2987,54 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6728"
     },
     {
+      "amendmentId": "samdt6727",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6727,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-30T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000790",
+        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+        "party": "D",
+        "state": "GA"
+      },
+      "amendedBillId": "hr5334",
+      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6727"
+    },
+    {
+      "amendmentId": "samdt6724",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6724,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-30T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000790",
+        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+        "party": "D",
+        "state": "GA"
+      },
+      "amendedBillId": "hr5334",
+      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6724"
+    },
+    {
       "amendmentId": "samdt6722",
       "congress": 119,
       "type": "S.Amdt.",
@@ -2969,6 +3057,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6722"
+    },
+    {
+      "amendmentId": "samdt6726",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6726,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-30T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C001098",
+        "fullName": "Sen. Cruz, Ted [R-TX]",
+        "party": "R",
+        "state": "TX"
+      },
+      "amendedBillId": "hr5334",
+      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6726"
     },
     {
       "amendmentId": "samdt6720",
@@ -3019,30 +3131,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6717"
     },
     {
-      "amendmentId": "samdt6718",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6718,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-29T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001267",
-        "fullName": "Sen. Bennet, Michael F. [D-CO]",
-        "party": "D",
-        "state": "CO"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6718"
-    },
-    {
       "amendmentId": "samdt6719",
       "congress": 119,
       "type": "S.Amdt.",
@@ -3067,6 +3155,30 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6719"
     },
     {
+      "amendmentId": "samdt6718",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6718,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-29T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001267",
+        "fullName": "Sen. Bennet, Michael F. [D-CO]",
+        "party": "D",
+        "state": "CO"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6718"
+    },
+    {
       "amendmentId": "samdt6710",
       "congress": 119,
       "type": "S.Amdt.",
@@ -3089,30 +3201,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6710"
-    },
-    {
-      "amendmentId": "samdt6716",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6716,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-29T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000800",
-        "fullName": "Sen. Welch, Peter [D-VT]",
-        "party": "D",
-        "state": "VT"
-      },
-      "amendedBillId": "hr5334",
-      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6716"
     },
     {
       "amendmentId": "samdt6713",
@@ -3163,6 +3251,54 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6714"
     },
     {
+      "amendmentId": "samdt6716",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6716,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-29T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr5334",
+      "amendedBillTitle": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6716"
+    },
+    {
+      "amendmentId": "samdt6707",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6707,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-27T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "T000250",
+        "fullName": "Sen. Thune, John [R-SD]",
+        "party": "R",
+        "state": "SD"
+      },
+      "amendedBillId": "sres817",
+      "amendedBillTitle": "An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6707"
+    },
+    {
       "amendmentId": "samdt6706",
       "congress": 119,
       "type": "S.Amdt.",
@@ -3185,30 +3321,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6706"
-    },
-    {
-      "amendmentId": "samdt6709",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6709,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-27T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "T000250",
-        "fullName": "Sen. Thune, John [R-SD]",
-        "party": "R",
-        "state": "SD"
-      },
-      "amendedBillId": "sres817",
-      "amendedBillTitle": "An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6709"
     },
     {
       "amendmentId": "samdt6708",
@@ -3235,10 +3347,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6708"
     },
     {
-      "amendmentId": "samdt6707",
+      "amendmentId": "samdt6709",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6707,
+      "number": 6709,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -3256,7 +3368,7 @@
       "amendedBillTitle": "An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6707"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6709"
     },
     {
       "amendmentId": "hamdt268",
@@ -4155,30 +4267,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6703"
     },
     {
-      "amendmentId": "samdt6702",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6702,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-16T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "D000618",
-        "fullName": "Sen. Daines, Steve [R-MT]",
-        "party": "R",
-        "state": "MT"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6702"
-    },
-    {
       "amendmentId": "samdt6701",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4201,6 +4289,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6701"
+    },
+    {
+      "amendmentId": "samdt6702",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6702,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-16T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "D000618",
+        "fullName": "Sen. Daines, Steve [R-MT]",
+        "party": "R",
+        "state": "MT"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6702"
     },
     {
       "amendmentId": "hamdt240",
@@ -4227,10 +4339,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/house-amendment/240"
     },
     {
-      "amendmentId": "samdt6697",
+      "amendmentId": "samdt6694",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6697,
+      "number": 6694,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -4239,16 +4351,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "L000571",
-        "fullName": "Sen. Lummis, Cynthia M. [R-WY]",
-        "party": "R",
-        "state": "WY"
+        "bioguideId": "P000145",
+        "fullName": "Sen. Padilla, Alex [D-CA]",
+        "party": "D",
+        "state": "CA"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
+      "cosponsorCount": 2,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6697"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6694"
     },
     {
       "amendmentId": "samdt6700",
@@ -4299,30 +4411,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6695"
     },
     {
-      "amendmentId": "samdt6699",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6699,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-15T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001153",
-        "fullName": "Sen. Murkowski, Lisa [R-AK]",
-        "party": "R",
-        "state": "AK"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6699"
-    },
-    {
       "amendmentId": "samdt6696",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4371,10 +4459,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6698"
     },
     {
-      "amendmentId": "samdt6694",
+      "amendmentId": "samdt6697",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6694,
+      "number": 6697,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -4383,16 +4471,40 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "P000145",
-        "fullName": "Sen. Padilla, Alex [D-CA]",
-        "party": "D",
-        "state": "CA"
+        "bioguideId": "L000571",
+        "fullName": "Sen. Lummis, Cynthia M. [R-WY]",
+        "party": "R",
+        "state": "WY"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 2,
+      "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6694"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6697"
+    },
+    {
+      "amendmentId": "samdt6699",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6699,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-15T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001153",
+        "fullName": "Sen. Murkowski, Lisa [R-AK]",
+        "party": "R",
+        "state": "AK"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6699"
     },
     {
       "amendmentId": "hamdt232",
@@ -4651,30 +4763,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/house-amendment/231"
     },
     {
-      "amendmentId": "samdt6693",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6693,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001243",
-        "fullName": "Sen. Blackburn, Marsha [R-TN]",
-        "party": "R",
-        "state": "TN"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6693"
-    },
-    {
       "amendmentId": "samdt6692",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4697,6 +4785,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6692"
+    },
+    {
+      "amendmentId": "samdt6693",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6693,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-14T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001243",
+        "fullName": "Sen. Blackburn, Marsha [R-TN]",
+        "party": "R",
+        "state": "TN"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6693"
     },
     {
       "amendmentId": "samdt6691",
@@ -4723,6 +4835,30 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6691"
     },
     {
+      "amendmentId": "samdt6689",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6689,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-14T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C001075",
+        "fullName": "Sen. Cassidy, Bill [R-LA]",
+        "party": "R",
+        "state": "LA"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6689"
+    },
+    {
       "amendmentId": "samdt6688",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4745,126 +4881,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6688"
-    },
-    {
-      "amendmentId": "samdt6675",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6675,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001184",
-        "fullName": "Sen. Scott, Tim [R-SC]",
-        "party": "R",
-        "state": "SC"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6675"
-    },
-    {
-      "amendmentId": "samdt6684",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6684,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001244",
-        "fullName": "Sen. Moody, Ashley [R-FL]",
-        "party": "R",
-        "state": "FL"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6684"
-    },
-    {
-      "amendmentId": "samdt6679",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6679,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "H000273",
-        "fullName": "Sen. Hickenlooper, John W. [D-CO]",
-        "party": "D",
-        "state": "CO"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6679"
-    },
-    {
-      "amendmentId": "samdt6682",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6682,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "G000574",
-        "fullName": "Sen. Gallego, Ruben [D-AZ]",
-        "party": "D",
-        "state": "AZ"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6682"
-    },
-    {
-      "amendmentId": "samdt6678",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6678,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "H000273",
-        "fullName": "Sen. Hickenlooper, John W. [D-CO]",
-        "party": "D",
-        "state": "CO"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6678"
     },
     {
       "amendmentId": "samdt6685",
@@ -4891,10 +4907,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6685"
     },
     {
-      "amendmentId": "samdt6686",
+      "amendmentId": "samdt6687",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6686,
+      "number": 6687,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -4903,16 +4919,88 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001319",
-        "fullName": "Sen. Britt, Katie Boyd [R-AL]",
+        "bioguideId": "M001242",
+        "fullName": "Sen. Moreno, Bernie [R-OH]",
         "party": "R",
-        "state": "AL"
+        "state": "OH"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6686"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6687"
+    },
+    {
+      "amendmentId": "samdt6690",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6690,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-14T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001232",
+        "fullName": "Sen. Sheehy, Tim [R-MT]",
+        "party": "R",
+        "state": "MT"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6690"
+    },
+    {
+      "amendmentId": "samdt6679",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6679,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-14T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "H000273",
+        "fullName": "Sen. Hickenlooper, John W. [D-CO]",
+        "party": "D",
+        "state": "CO"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6679"
+    },
+    {
+      "amendmentId": "samdt6674",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6674,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-14T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6674"
     },
     {
       "amendmentId": "samdt6680",
@@ -4939,10 +5027,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6680"
     },
     {
-      "amendmentId": "samdt6689",
+      "amendmentId": "samdt6682",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6689,
+      "number": 6682,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -4951,16 +5039,40 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "C001075",
-        "fullName": "Sen. Cassidy, Bill [R-LA]",
-        "party": "R",
-        "state": "LA"
+        "bioguideId": "G000574",
+        "fullName": "Sen. Gallego, Ruben [D-AZ]",
+        "party": "D",
+        "state": "AZ"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 2,
+      "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6689"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6682"
+    },
+    {
+      "amendmentId": "samdt6684",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6684,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-14T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001244",
+        "fullName": "Sen. Moody, Ashley [R-FL]",
+        "party": "R",
+        "state": "FL"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6684"
     },
     {
       "amendmentId": "samdt6676",
@@ -5011,10 +5123,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6677"
     },
     {
-      "amendmentId": "samdt6674",
+      "amendmentId": "samdt6686",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6674,
+      "number": 6686,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5023,64 +5135,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "S001184",
-        "fullName": "Sen. Scott, Tim [R-SC]",
+        "bioguideId": "B001319",
+        "fullName": "Sen. Britt, Katie Boyd [R-AL]",
         "party": "R",
-        "state": "SC"
+        "state": "AL"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6674"
-    },
-    {
-      "amendmentId": "samdt6690",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6690,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001232",
-        "fullName": "Sen. Sheehy, Tim [R-MT]",
-        "party": "R",
-        "state": "MT"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6690"
-    },
-    {
-      "amendmentId": "samdt6687",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6687,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001242",
-        "fullName": "Sen. Moreno, Bernie [R-OH]",
-        "party": "R",
-        "state": "OH"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6687"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6686"
     },
     {
       "amendmentId": "samdt6683",
@@ -5129,6 +5193,54 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6681"
+    },
+    {
+      "amendmentId": "samdt6678",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6678,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-14T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "H000273",
+        "fullName": "Sen. Hickenlooper, John W. [D-CO]",
+        "party": "D",
+        "state": "CO"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6678"
+    },
+    {
+      "amendmentId": "samdt6675",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6675,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-14T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6675"
     },
     {
       "amendmentId": "samdt6672",
@@ -5347,30 +5459,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6665"
     },
     {
-      "amendmentId": "samdt6662",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6662,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001194",
-        "fullName": "Sen. Schatz, Brian [D-HI]",
-        "party": "D",
-        "state": "HI"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6662"
-    },
-    {
       "amendmentId": "samdt6663",
       "congress": 119,
       "type": "S.Amdt.",
@@ -5393,150 +5481,6 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6663"
-    },
-    {
-      "amendmentId": "samdt6660",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6660,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001194",
-        "fullName": "Sen. Schatz, Brian [D-HI]",
-        "party": "D",
-        "state": "HI"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6660"
-    },
-    {
-      "amendmentId": "samdt6666",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6666,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "Y000064",
-        "fullName": "Sen. Young, Todd [R-IN]",
-        "party": "R",
-        "state": "IN"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 5,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6666"
-    },
-    {
-      "amendmentId": "samdt6658",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6658,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001194",
-        "fullName": "Sen. Schatz, Brian [D-HI]",
-        "party": "D",
-        "state": "HI"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6658"
-    },
-    {
-      "amendmentId": "samdt6659",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6659,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001194",
-        "fullName": "Sen. Schatz, Brian [D-HI]",
-        "party": "D",
-        "state": "HI"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6659"
-    },
-    {
-      "amendmentId": "samdt6657",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6657,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000790",
-        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
-        "party": "D",
-        "state": "GA"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6657"
-    },
-    {
-      "amendmentId": "samdt6664",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6664,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "Y000064",
-        "fullName": "Sen. Young, Todd [R-IN]",
-        "party": "R",
-        "state": "IN"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 5,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6664"
     },
     {
       "amendmentId": "samdt6661",
@@ -5563,10 +5507,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6661"
     },
     {
-      "amendmentId": "samdt6652",
+      "amendmentId": "samdt6659",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6652,
+      "number": 6659,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5575,16 +5519,160 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "S001181",
-        "fullName": "Sen. Shaheen, Jeanne [D-NH]",
+        "bioguideId": "S001194",
+        "fullName": "Sen. Schatz, Brian [D-HI]",
         "party": "D",
-        "state": "NH"
+        "state": "HI"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6659"
+    },
+    {
+      "amendmentId": "samdt6658",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6658,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001194",
+        "fullName": "Sen. Schatz, Brian [D-HI]",
+        "party": "D",
+        "state": "HI"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6658"
+    },
+    {
+      "amendmentId": "samdt6657",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6657,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000790",
+        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+        "party": "D",
+        "state": "GA"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6652"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6657"
+    },
+    {
+      "amendmentId": "samdt6660",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6660,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001194",
+        "fullName": "Sen. Schatz, Brian [D-HI]",
+        "party": "D",
+        "state": "HI"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6660"
+    },
+    {
+      "amendmentId": "samdt6662",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6662,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001194",
+        "fullName": "Sen. Schatz, Brian [D-HI]",
+        "party": "D",
+        "state": "HI"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6662"
+    },
+    {
+      "amendmentId": "samdt6664",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6664,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "Y000064",
+        "fullName": "Sen. Young, Todd [R-IN]",
+        "party": "R",
+        "state": "IN"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 5,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6664"
+    },
+    {
+      "amendmentId": "samdt6666",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6666,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "Y000064",
+        "fullName": "Sen. Young, Todd [R-IN]",
+        "party": "R",
+        "state": "IN"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 5,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6666"
     },
     {
       "amendmentId": "samdt6648",
@@ -5611,54 +5699,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6648"
     },
     {
-      "amendmentId": "samdt6651",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6651,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001181",
-        "fullName": "Sen. Shaheen, Jeanne [D-NH]",
-        "party": "D",
-        "state": "NH"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6651"
-    },
-    {
-      "amendmentId": "samdt6642",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6642,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "T000476",
-        "fullName": "Sen. Tillis, Thomas [R-NC]",
-        "party": "R",
-        "state": "NC"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6642"
-    },
-    {
       "amendmentId": "samdt6644",
       "congress": 119,
       "type": "S.Amdt.",
@@ -5683,10 +5723,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6644"
     },
     {
-      "amendmentId": "samdt6640",
+      "amendmentId": "samdt6643",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6640,
+      "number": 6643,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5695,16 +5735,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "S001227",
-        "fullName": "Sen. Schmitt, Eric [R-MO]",
+        "bioguideId": "M001244",
+        "fullName": "Sen. Moody, Ashley [R-FL]",
         "party": "R",
-        "state": "MO"
+        "state": "FL"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6640"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6643"
     },
     {
       "amendmentId": "samdt6655",
@@ -5731,10 +5771,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6655"
     },
     {
-      "amendmentId": "samdt6639",
+      "amendmentId": "samdt6641",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6639,
+      "number": 6641,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5743,40 +5783,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001261",
-        "fullName": "Sen. Barrasso, John [R-WY]",
+        "bioguideId": "J000293",
+        "fullName": "Sen. Johnson, Ron [R-WI]",
         "party": "R",
-        "state": "WY"
+        "state": "WI"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
+      "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6639"
-    },
-    {
-      "amendmentId": "samdt6650",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6650,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001181",
-        "fullName": "Sen. Shaheen, Jeanne [D-NH]",
-        "party": "D",
-        "state": "NH"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6650"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6641"
     },
     {
       "amendmentId": "samdt6645",
@@ -5803,10 +5819,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6645"
     },
     {
-      "amendmentId": "samdt6647",
+      "amendmentId": "samdt6653",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6647,
+      "number": 6653,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5815,16 +5831,40 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "G000555",
-        "fullName": "Sen. Gillibrand, Kirsten E. [D-NY]",
-        "party": "D",
-        "state": "NY"
+        "bioguideId": "L000575",
+        "fullName": "Sen. Lankford, James [R-OK]",
+        "party": "R",
+        "state": "OK"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6647"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6653"
+    },
+    {
+      "amendmentId": "samdt6642",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6642,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "T000476",
+        "fullName": "Sen. Tillis, Thomas [R-NC]",
+        "party": "R",
+        "state": "NC"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6642"
     },
     {
       "amendmentId": "samdt6646",
@@ -5851,6 +5891,150 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6646"
     },
     {
+      "amendmentId": "samdt6651",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6651,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001181",
+        "fullName": "Sen. Shaheen, Jeanne [D-NH]",
+        "party": "D",
+        "state": "NH"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6651"
+    },
+    {
+      "amendmentId": "samdt6647",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6647,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "G000555",
+        "fullName": "Sen. Gillibrand, Kirsten E. [D-NY]",
+        "party": "D",
+        "state": "NY"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6647"
+    },
+    {
+      "amendmentId": "samdt6650",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6650,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001181",
+        "fullName": "Sen. Shaheen, Jeanne [D-NH]",
+        "party": "D",
+        "state": "NH"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6650"
+    },
+    {
+      "amendmentId": "samdt6652",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6652,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001181",
+        "fullName": "Sen. Shaheen, Jeanne [D-NH]",
+        "party": "D",
+        "state": "NH"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6652"
+    },
+    {
+      "amendmentId": "samdt6639",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6639,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001261",
+        "fullName": "Sen. Barrasso, John [R-WY]",
+        "party": "R",
+        "state": "WY"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6639"
+    },
+    {
+      "amendmentId": "samdt6640",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6640,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001227",
+        "fullName": "Sen. Schmitt, Eric [R-MO]",
+        "party": "R",
+        "state": "MO"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6640"
+    },
+    {
       "amendmentId": "samdt6649",
       "congress": 119,
       "type": "S.Amdt.",
@@ -5873,78 +6057,6 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6649"
-    },
-    {
-      "amendmentId": "samdt6653",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6653,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "L000575",
-        "fullName": "Sen. Lankford, James [R-OK]",
-        "party": "R",
-        "state": "OK"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6653"
-    },
-    {
-      "amendmentId": "samdt6641",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6641,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "J000293",
-        "fullName": "Sen. Johnson, Ron [R-WI]",
-        "party": "R",
-        "state": "WI"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6641"
-    },
-    {
-      "amendmentId": "samdt6643",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6643,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001244",
-        "fullName": "Sen. Moody, Ashley [R-FL]",
-        "party": "R",
-        "state": "FL"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6643"
     },
     {
       "amendmentId": "samdt6654",
@@ -5995,10 +6107,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6638"
     },
     {
-      "amendmentId": "samdt6631",
+      "amendmentId": "samdt6635",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6631,
+      "number": 6635,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -6016,103 +6128,7 @@
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6631"
-    },
-    {
-      "amendmentId": "samdt6630",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6630,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "J000293",
-        "fullName": "Sen. Johnson, Ron [R-WI]",
-        "party": "R",
-        "state": "WI"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6630"
-    },
-    {
-      "amendmentId": "samdt6625",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6625,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001232",
-        "fullName": "Sen. Sheehy, Tim [R-MT]",
-        "party": "R",
-        "state": "MT"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6625"
-    },
-    {
-      "amendmentId": "samdt6634",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6634,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "J000293",
-        "fullName": "Sen. Johnson, Ron [R-WI]",
-        "party": "R",
-        "state": "WI"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6634"
-    },
-    {
-      "amendmentId": "samdt6629",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6629,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "J000293",
-        "fullName": "Sen. Johnson, Ron [R-WI]",
-        "party": "R",
-        "state": "WI"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6629"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6635"
     },
     {
       "amendmentId": "samdt6636",
@@ -6139,6 +6155,54 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6636"
     },
     {
+      "amendmentId": "samdt6621",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6621,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6621"
+    },
+    {
+      "amendmentId": "samdt6629",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6629,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "J000293",
+        "fullName": "Sen. Johnson, Ron [R-WI]",
+        "party": "R",
+        "state": "WI"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6629"
+    },
+    {
       "amendmentId": "samdt6626",
       "congress": 119,
       "type": "S.Amdt.",
@@ -6161,54 +6225,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6626"
-    },
-    {
-      "amendmentId": "samdt6633",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6633,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "J000293",
-        "fullName": "Sen. Johnson, Ron [R-WI]",
-        "party": "R",
-        "state": "WI"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6633"
-    },
-    {
-      "amendmentId": "samdt6627",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6627,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C001056",
-        "fullName": "Sen. Cornyn, John [R-TX]",
-        "party": "R",
-        "state": "TX"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6627"
     },
     {
       "amendmentId": "samdt6624",
@@ -6235,30 +6251,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6624"
     },
     {
-      "amendmentId": "samdt6621",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6621,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6621"
-    },
-    {
       "amendmentId": "samdt6628",
       "congress": 119,
       "type": "S.Amdt.",
@@ -6283,10 +6275,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6628"
     },
     {
-      "amendmentId": "samdt6635",
+      "amendmentId": "samdt6630",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6635,
+      "number": 6630,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -6304,13 +6296,13 @@
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6635"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6630"
     },
     {
-      "amendmentId": "samdt6622",
+      "amendmentId": "samdt6627",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6622,
+      "number": 6627,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -6319,22 +6311,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
+        "bioguideId": "C001056",
+        "fullName": "Sen. Cornyn, John [R-TX]",
+        "party": "R",
+        "state": "TX"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
+      "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6622"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6627"
     },
     {
-      "amendmentId": "samdt6623",
+      "amendmentId": "samdt6634",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6623,
+      "number": 6634,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -6343,16 +6335,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
+        "bioguideId": "J000293",
+        "fullName": "Sen. Johnson, Ron [R-WI]",
+        "party": "R",
+        "state": "WI"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6623"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6634"
     },
     {
       "amendmentId": "samdt6620",
@@ -6379,6 +6371,54 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6620"
     },
     {
+      "amendmentId": "samdt6623",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6623,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6623"
+    },
+    {
+      "amendmentId": "samdt6625",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6625,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001232",
+        "fullName": "Sen. Sheehy, Tim [R-MT]",
+        "party": "R",
+        "state": "MT"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6625"
+    },
+    {
       "amendmentId": "samdt6619",
       "congress": 119,
       "type": "S.Amdt.",
@@ -6401,6 +6441,54 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6619"
+    },
+    {
+      "amendmentId": "samdt6633",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6633,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "J000293",
+        "fullName": "Sen. Johnson, Ron [R-WI]",
+        "party": "R",
+        "state": "WI"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6633"
+    },
+    {
+      "amendmentId": "samdt6622",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6622,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6622"
     },
     {
       "amendmentId": "samdt6632",
@@ -6427,10 +6515,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6632"
     },
     {
-      "amendmentId": "samdt6603",
+      "amendmentId": "samdt6631",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6603,
+      "number": 6631,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -6439,46 +6527,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "S001217",
-        "fullName": "Sen. Scott, Rick [R-FL]",
+        "bioguideId": "J000293",
+        "fullName": "Sen. Johnson, Ron [R-WI]",
         "party": "R",
-        "state": "FL"
+        "state": "WI"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6603"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6631"
     },
     {
-      "amendmentId": "samdt6611",
+      "amendmentId": "samdt6607",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6611,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C001098",
-        "fullName": "Sen. Cruz, Ted [R-TX]",
-        "party": "R",
-        "state": "TX"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6611"
-    },
-    {
-      "amendmentId": "samdt6608",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6608,
+      "number": 6607,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -6496,7 +6560,31 @@
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6608"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6607"
+    },
+    {
+      "amendmentId": "samdt6609",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6609,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-07-13T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001243",
+        "fullName": "Sen. McCormick, David [R-PA]",
+        "party": "R",
+        "state": "PA"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6609"
     },
     {
       "amendmentId": "samdt6615",
@@ -6523,10 +6611,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6615"
     },
     {
-      "amendmentId": "samdt6606",
+      "amendmentId": "samdt6611",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6606,
+      "number": 6611,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -6535,88 +6623,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "M001243",
-        "fullName": "Sen. McCormick, David [R-PA]",
+        "bioguideId": "C001098",
+        "fullName": "Sen. Cruz, Ted [R-TX]",
         "party": "R",
-        "state": "PA"
+        "state": "TX"
       },
       "amendedBillId": "s4784",
       "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6606"
-    },
-    {
-      "amendmentId": "samdt6616",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6616,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "D000622",
-        "fullName": "Sen. Duckworth, Tammy [D-IL]",
-        "party": "D",
-        "state": "IL"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6616"
-    },
-    {
-      "amendmentId": "samdt6604",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6604,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "G000386",
-        "fullName": "Sen. Grassley, Chuck [R-IA]",
-        "party": "R",
-        "state": "IA"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6604"
-    },
-    {
-      "amendmentId": "samdt6613",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6613,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-07-13T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "K000383",
-        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
-        "party": "I",
-        "state": "ME"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6613"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6611"
     },
     {
       "amendmentId": "samdt6107",
@@ -6899,38 +6915,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5806"
     },
     {
-      "amendmentId": "samdt5457",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5457,
-      "chamber": "Senate",
-      "purpose": "To prohibit the Department of Justice from using taxpayer funds to make settlement payments to individuals convicted of assaulting law enforcement officers on January 6, 2021.",
-      "description": "",
-      "submittedDate": "2026-06-03T04:00:00Z",
-      "proposedDate": "2026-06-05T04:00:00Z",
-      "latestAction": "Amendment SA 5457 ruled out of order by the chair.",
-      "latestActionDate": "2026-06-05",
-      "sponsor": {
-        "bioguideId": "C001088",
-        "fullName": "Sen. Coons, Christopher A. [D-DE]",
-        "party": "D",
-        "state": "DE"
-      },
-      "amendedBillId": "s2",
-      "amendedBillTitle": "Secure America Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [
-        {
-          "voteId": "s2-rc158",
-          "chamber": "Senate",
-          "rollNumber": 158,
-          "sessionNumber": 2,
-          "date": "2026-06-05T07:43:14Z"
-        }
-      ],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5457"
-    },
-    {
       "amendmentId": "samdt5506",
       "congress": 119,
       "type": "S.Amdt.",
@@ -6995,6 +6979,94 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5463"
     },
     {
+      "amendmentId": "samdt5457",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 5457,
+      "chamber": "Senate",
+      "purpose": "To prohibit the Department of Justice from using taxpayer funds to make settlement payments to individuals convicted of assaulting law enforcement officers on January 6, 2021.",
+      "description": "",
+      "submittedDate": "2026-06-03T04:00:00Z",
+      "proposedDate": "2026-06-05T04:00:00Z",
+      "latestAction": "Amendment SA 5457 ruled out of order by the chair.",
+      "latestActionDate": "2026-06-05",
+      "sponsor": {
+        "bioguideId": "C001088",
+        "fullName": "Sen. Coons, Christopher A. [D-DE]",
+        "party": "D",
+        "state": "DE"
+      },
+      "amendedBillId": "s2",
+      "amendedBillTitle": "Secure America Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [
+        {
+          "voteId": "s2-rc158",
+          "chamber": "Senate",
+          "rollNumber": 158,
+          "sessionNumber": 2,
+          "date": "2026-06-05T07:43:14Z"
+        }
+      ],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5457"
+    },
+    {
+      "amendmentId": "samdt5632",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 5632,
+      "chamber": "Senate",
+      "purpose": "To prohibit the use of funds to provide payments to certain individuals.",
+      "description": "",
+      "submittedDate": "2026-06-04T04:00:00Z",
+      "proposedDate": "2026-06-05T04:00:00Z",
+      "latestAction": "Amendment SA 5632 ruled out of order by the chair.",
+      "latestActionDate": "2026-06-05",
+      "sponsor": {
+        "bioguideId": "V000128",
+        "fullName": "Sen. Van Hollen, Chris [D-MD]",
+        "party": "D",
+        "state": "MD"
+      },
+      "amendedBillId": "s2",
+      "amendedBillTitle": "Secure America Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [
+        {
+          "voteId": "s2-rc161",
+          "chamber": "Senate",
+          "rollNumber": 161,
+          "sessionNumber": 2,
+          "date": "2026-06-05T08:26:03Z"
+        }
+      ],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5632"
+    },
+    {
+      "amendmentId": "samdt5453",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 5453,
+      "chamber": "Senate",
+      "purpose": "In the nature of a substitute.",
+      "description": "",
+      "submittedDate": "2026-06-03T04:00:00Z",
+      "proposedDate": "2026-06-03T04:00:00Z",
+      "latestAction": "Amendment SA 5453 agreed to in Senate by Voice Vote.",
+      "latestActionDate": "2026-06-05",
+      "sponsor": {
+        "bioguideId": "G000359",
+        "fullName": "Sen. Graham, Lindsey [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "s2",
+      "amendedBillTitle": "Secure America Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5453"
+    },
+    {
       "amendmentId": "samdt5740",
       "congress": 119,
       "type": "S.Amdt.",
@@ -7057,62 +7129,6 @@
         }
       ],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5763"
-    },
-    {
-      "amendmentId": "samdt5453",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5453,
-      "chamber": "Senate",
-      "purpose": "In the nature of a substitute.",
-      "description": "",
-      "submittedDate": "2026-06-03T04:00:00Z",
-      "proposedDate": "2026-06-03T04:00:00Z",
-      "latestAction": "Amendment SA 5453 agreed to in Senate by Voice Vote.",
-      "latestActionDate": "2026-06-05",
-      "sponsor": {
-        "bioguideId": "G000359",
-        "fullName": "Sen. Graham, Lindsey [R-SC]",
-        "party": "R",
-        "state": "SC"
-      },
-      "amendedBillId": "s2",
-      "amendedBillTitle": "Secure America Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5453"
-    },
-    {
-      "amendmentId": "samdt5632",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5632,
-      "chamber": "Senate",
-      "purpose": "To prohibit the use of funds to provide payments to certain individuals.",
-      "description": "",
-      "submittedDate": "2026-06-04T04:00:00Z",
-      "proposedDate": "2026-06-05T04:00:00Z",
-      "latestAction": "Amendment SA 5632 ruled out of order by the chair.",
-      "latestActionDate": "2026-06-05",
-      "sponsor": {
-        "bioguideId": "V000128",
-        "fullName": "Sen. Van Hollen, Chris [D-MD]",
-        "party": "D",
-        "state": "MD"
-      },
-      "amendedBillId": "s2",
-      "amendedBillTitle": "Secure America Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [
-        {
-          "voteId": "s2-rc161",
-          "chamber": "Senate",
-          "rollNumber": 161,
-          "sessionNumber": 2,
-          "date": "2026-06-05T08:26:03Z"
-        }
-      ],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5632"
     },
     {
       "amendmentId": "hamdt226",
@@ -7267,38 +7283,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5545"
     },
     {
-      "amendmentId": "samdt5556",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5556,
-      "chamber": "Senate",
-      "purpose": "To prohibit an individual from acting as Director of National Intelligence if such individual is simultaneously serving as the head of any other Federal department or agency.",
-      "description": "",
-      "submittedDate": "2026-06-04T04:00:00Z",
-      "proposedDate": "2026-06-04T04:00:00Z",
-      "latestAction": "Amendment SA 5556 ruled out of order by the chair.",
-      "latestActionDate": "2026-06-04",
-      "sponsor": {
-        "bioguideId": "W000805",
-        "fullName": "Sen. Warner, Mark R. [D-VA]",
-        "party": "D",
-        "state": "VA"
-      },
-      "amendedBillId": "s2",
-      "amendedBillTitle": "Secure America Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [
-        {
-          "voteId": "s2-rc143",
-          "chamber": "Senate",
-          "rollNumber": 143,
-          "sessionNumber": 2,
-          "date": "2026-06-04T22:08:03Z"
-        }
-      ],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5556"
-    },
-    {
       "amendmentId": "samdt5535",
       "congress": 119,
       "type": "S.Amdt.",
@@ -7329,6 +7313,38 @@
         }
       ],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5535"
+    },
+    {
+      "amendmentId": "samdt5556",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 5556,
+      "chamber": "Senate",
+      "purpose": "To prohibit an individual from acting as Director of National Intelligence if such individual is simultaneously serving as the head of any other Federal department or agency.",
+      "description": "",
+      "submittedDate": "2026-06-04T04:00:00Z",
+      "proposedDate": "2026-06-04T04:00:00Z",
+      "latestAction": "Amendment SA 5556 ruled out of order by the chair.",
+      "latestActionDate": "2026-06-04",
+      "sponsor": {
+        "bioguideId": "W000805",
+        "fullName": "Sen. Warner, Mark R. [D-VA]",
+        "party": "D",
+        "state": "VA"
+      },
+      "amendedBillId": "s2",
+      "amendedBillTitle": "Secure America Act",
+      "cosponsorCount": 1,
+      "recordedVotes": [
+        {
+          "voteId": "s2-rc143",
+          "chamber": "Senate",
+          "rollNumber": 143,
+          "sessionNumber": 2,
+          "date": "2026-06-04T22:08:03Z"
+        }
+      ],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5556"
     },
     {
       "amendmentId": "samdt5803",
@@ -8649,6 +8665,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/house-amendment/199"
+    },
+    {
+      "amendmentId": "samdt5442",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 5442,
+      "chamber": "Senate",
+      "purpose": "To improve the bill.",
+      "description": "",
+      "submittedDate": "2026-04-30T04:00:00Z",
+      "proposedDate": "2026-04-30T04:00:00Z",
+      "latestAction": "Notwithstanding passage of S.Res. 708 and the adoption of amendment SA 5442 to S.Res. 708, the amendment SA 5442 is modified with the technical correction at the desk and is agreed to, as modified, by Unanimous Consent.",
+      "latestActionDate": "2026-04-30",
+      "sponsor": {
+        "bioguideId": "P000145",
+        "fullName": "Sen. Padilla, Alex [D-CA]",
+        "party": "D",
+        "state": "CA"
+      },
+      "amendedBillId": "sres708",
+      "amendedBillTitle": "A resolution amending rule XXXVII of the Standing Rules of the Senate to prohibit Senators from trading on prediction markets.",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5442"
     },
     {
       "amendmentId": "hamdt179",

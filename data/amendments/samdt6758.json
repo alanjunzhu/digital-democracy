@@ -4,12 +4,12 @@
   "type": "S.Amdt.",
   "number": 6758,
   "chamber": "Senate",
-  "purpose": "",
+  "purpose": "To improve the bill.",
   "description": "",
   "submittedDate": "2026-08-07T04:00:00Z",
-  "proposedDate": "",
-  "latestAction": "",
-  "latestActionDate": "",
+  "proposedDate": "2026-09-28T04:00:00Z",
+  "latestAction": "Under the order of 9/28/26, amendment SA 6758 not agreed to in Senate by Yea-Nay Vote. 1 - 94. Record Vote Number: 246.",
+  "latestActionDate": "2026-09-28",
   "sponsor": {
     "bioguideId": "P000603",
     "fullName": "Sen. Paul, Rand [R-KY]",
@@ -19,9 +19,42 @@
   "amendedBillId": "s4668",
   "amendedBillTitle": "Protect College Sports Act of 2026",
   "cosponsorCount": 0,
-  "recordedVotes": [],
+  "recordedVotes": [
+    {
+      "voteId": "s2-rc246",
+      "chamber": "Senate",
+      "rollNumber": 246,
+      "sessionNumber": 2,
+      "date": "2026-09-29T00:05:05Z"
+    }
+  ],
   "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6758",
   "actions": [
+    {
+      "date": "2026-09-28",
+      "text": "Under the order of 9/28/26, amendment SA 6758 not agreed to in Senate by Yea-Nay Vote. 1 - 94. Record Vote Number: 246.",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-28",
+      "text": "Amendment SA 6758 proposed by Senator Paul to Amendment SA 6776. To improve the bill. (consideration: CR S5040-5041)",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-28",
+      "text": "Senate amendment not agreed to: Under the order of 9/28/26, amendment SA 6758 not agreed to in Senate by Yea-Nay Vote. 1 - 94. Record Vote Number: 246.",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-28",
+      "text": "Roll call votes on amendments in Senate: Under the order of 9/28/26, amendment SA 6758 not agreed to in Senate by Yea-Nay Vote. 1 - 94. Record Vote Number: 246.",
+      "type": "Floor"
+    },
+    {
+      "date": "2026-09-28",
+      "text": "Senate amendment proposed (on the floor): Amendment SA 6758 proposed by Senator Paul to Amendment SA 6776.",
+      "type": "Floor"
+    },
     {
       "date": "2026-08-07",
       "text": "Senate amendment submitted",
