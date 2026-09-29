@@ -3,7 +3,7 @@
   "congress": 119,
   "chamber": "Senate",
   "type": "Open Business Meeting",
-  "title": "Business meeting to consider pending calendar business.",
+  "title": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Daniel Lewis Ballou, to be United States District Judge for the Eastern District of Kentucky, Richard Wesley Bennett, to be United States District Judge for the Southern District of Texas, Courtney Leigh Coker, to be United States District Judge for the Northern District of Texas, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Kyle Frederick Reardon, to be United States District Judge for the District of Alaska, and Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma.",
   "meetingStatus": "Scheduled",
   "date": "2026-10-01T14:15:00Z",
   "committees": [
@@ -17,17 +17,19 @@
     "building": "Hart Senate Office Building",
     "address": ""
   },
-  "relatedBillIds": [],
+  "relatedBillIds": [
+    "s5289"
+  ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338792?format=json",
   "witnesses": [],
   "videos": [
     {
-      "name": "Business meeting to consider pending calendar business.",
+      "name": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Daniel Lewis Ballou, to be United States District Judge for the Eastern District of Kentucky, Richard Wesley Bennett, to be United States District Judge for the Southern District of Texas, Courtney Leigh Coker, to be United States District Judge for the Northern District of Texas, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Kyle Frederick Reardon, to be United States District Judge for the District of Alaska, and Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma.",
       "url": "https://www.congress.gov/event/119th-Congress/senate-event/338792",
       "format": ""
     },
     {
-      "name": "Business meeting to consider pending calendar business.",
+      "name": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Daniel Lewis Ballou, to be United States District Judge for the Eastern District of Kentucky, Richard Wesley Bennett, to be United States District Judge for the Southern District of Texas, Courtney Leigh Coker, to be United States District Judge for the Northern District of Texas, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Kyle Frederick Reardon, to be United States District Judge for the District of Alaska, and Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma.",
       "url": "https://www.senate.gov/isvp/?comm=judiciary&filename=judiciary100126",
       "format": ""
     }

@@ -26,6 +26,41 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/118152?format=json",
   "witnesses": [
     {
+      "name": "The Honorable Emily Randall",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "Mr. Bryan Mercier",
+      "position": "Director, Bureau of Indian Affairs",
+      "organization": "U.S. Department of the Interior"
+    },
+    {
+      "name": "Mr. John Crockett",
+      "position": "Deputy Chief for State, Private, and Tribal Forestry, U.S. Forest Service",
+      "organization": "U.S. Department of Agriculture"
+    },
+    {
+      "name": "The Honorable Wena Supernaw",
+      "position": "Chair",
+      "organization": "Quapaw Nation"
+    },
+    {
+      "name": "The Honorable Regina Cuellar",
+      "position": "Chairwoman",
+      "organization": "Shingle Springs Band of Miwok"
+    },
+    {
+      "name": "The Honorable Tyson Johnston",
+      "position": "Councilman",
+      "organization": "Quinault Indian Nation"
+    },
+    {
+      "name": "The Honorable Yatch Bamford",
+      "position": "Chairman",
+      "organization": "Pit River Tribe"
+    },
+    {
       "name": "Mr. John Crockett",
       "position": "Deputy Chief for State, Private, and Tribal Forestry, U.S. Forest Service",
       "organization": "U.S. Department of Agriculture"
@@ -117,6 +152,11 @@
     {
       "name": "QFR Responses Crockett",
       "url": "https://www.congress.gov/119/meeting/house/118152/documents/HHRG-119-II24-20250430-SD005.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Transcript 119-20",
+      "url": "https://www.congress.gov/119/meeting/house/118152/documents/HHRG-119-II24-Transcript-20250430.pdf",
       "format": "PDF"
     }
   ]
