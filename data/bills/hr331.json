@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "331",
+  "number": 331,
   "billId": "hr331",
   "title": "To amend the Aquifer Recharge Flexibility Act to clarify a provision relating to conveyances for aquifer recharge purposes.",
   "introducedDate": "2025-01-13",
@@ -11,19 +11,62 @@
     "party": "R",
     "state": "ID"
   },
-  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources.",
-  "latestActionDate": "2025-05-14",
+  "latestAction": "Committee on Energy and Natural Resources. Ordered to be reported without amendment favorably.",
+  "latestActionDate": "2026-09-30",
+  "updateDate": "2026-10-01T10:57:22Z",
   "originChamber": "House",
   "policyArea": "Water Resources Development",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/331",
   "summary": "<p>This bill modifies the Aquifer Recharge Flexibility Act to expand provisions concerning authorizations (e.g., rights-of-way) to transport water across public land administered by the Bureau of Land Management (BLM) for aquifer recharge purposes.</p><p>Under the Aquifer Recharge Flexibility Act, the holder of existing rights-of-way, easements, permits, or other authorizations to transport water across BLM land may transport the water for aquifer recharge purposes without additional authorization from the Department of the Interior so long as the use does not expand or modify the operation of such authorizations across public land.</p><p>The bill allows the holders of such authorizations to act not only on behalf of themselves, but also on behalf of states, Indian Tribes, or public entities, to use the existing authorizations for aquifer recharge without additional authorization from the Department of the Interior. Further, the bill states that this use may not be considered an expansion, modification, major federal action, or substantial deviation.</p><p>Additionally, the bill exempts holders from paying additional rents to the BLM for any use of such authorizations; however, the exemption does not apply to for-profit uses of aquifer recharge or for-profit entities.&nbsp;</p><p>Finally, holders of rights-of-way or other authorizations must provide notice to the&nbsp;BLM of the intended use of authorization as specified by the bill.</p>",
   "cosponsors": 1,
   "committees": [
-    "Energy and Natural Resources Committee",
-    "Natural Resources Committee"
+    {
+      "name": "Energy and Natural Resources Committee",
+      "systemCode": "sseg00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Markup By",
+          "date": "2026-09-30T19:53:28Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-05-14T15:55:54Z"
+        }
+      ]
+    },
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Reported By",
+          "date": "2025-04-17T14:03:41Z"
+        },
+        {
+          "name": "Markup By",
+          "date": "2025-02-12T22:26:06Z"
+        },
+        {
+          "name": "Discharged from",
+          "date": "2025-02-12T21:40:55Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-13T17:02:35Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-30",
+      "text": "Committee on Energy and Natural Resources. Ordered to be reported without amendment favorably."
+    },
     {
       "date": "2025-05-14",
       "text": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources."

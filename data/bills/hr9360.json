@@ -11,15 +11,27 @@
     "party": "R",
     "state": "IL"
   },
-  "latestAction": "Placed on the Union Calendar, Calendar No. 707.",
-  "latestActionDate": "2026-09-10",
-  "updateDate": "2026-09-11T16:55:37Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
+  "latestActionDate": "2026-09-15",
+  "updateDate": "2026-09-30T20:41:24Z",
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9360",
   "summary": "<p><strong>Advisory Committee on the Records of Congress Sunset Act</strong></p><p>This bill eliminates the Advisory Committee on the Records of Congress 60 days after the bill's enactment.</p><p>Under the bill, the Center for Legislative Archives of the National Archives and Records Administration (NARA) must provide an annual report on the management and preservation of the records of Congress during the previous year to NARA, the Senate, and the House of Representatives.</p><p>The Archivist, the Secretary of the Senate, and the Clerk of the House of Representatives must regularly meet to review the management and preservation of the records of Congress.</p>",
   "cosponsors": 0,
   "committees": [
+    {
+      "name": "Homeland Security and Governmental Affairs Committee",
+      "systemCode": "ssga00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-15T22:05:10Z"
+        }
+      ]
+    },
     {
       "name": "Committee on House Administration",
       "systemCode": "hsha00",
@@ -43,6 +55,39 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-15",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote. (text: CR H5545)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 9360.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Considered under suspension of the rules. (consideration: CR H5545-5546)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Mr. Griffith moved to suspend the rules and pass the bill, as amended.",
+      "chamber": "House"
+    },
     {
       "date": "2026-09-10",
       "text": "Placed on the Union Calendar, Calendar No. 707.",

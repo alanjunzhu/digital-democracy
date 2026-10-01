@@ -3,7 +3,7 @@
   "type": "H.R.",
   "number": 10159,
   "billId": "hr10159",
-  "title": "To authorize the Secretary of the Army to convey to the State of North Carolina a certain parcel of real property located at Fort Bragg, North Carolina, on which the State shall construct a veterans' State home, and for other purposes.",
+  "title": "To authorize the Secretary of the Army to convey to the State of North Carolina a certain parcel of real property located at Fort Bragg, North Carolina, on which the State shall construct a veterans’ State home, and for other purposes.",
   "introducedDate": "2026-08-27",
   "sponsor": {
     "bioguideId": "H001067",
@@ -11,15 +11,31 @@
     "party": "R",
     "state": "NC"
   },
-  "latestAction": "Referred to the House Committee on Armed Services.",
-  "latestActionDate": "2026-08-27",
-  "updateDate": "2026-09-09T20:33:19Z",
+  "latestAction": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5186)",
+  "latestActionDate": "2026-09-29",
+  "updateDate": "2026-10-01T10:57:02Z",
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10159",
   "summary": "<p>This bill authorizes the Department of the Army to transfer, without compensation or other consideration, all right, title, and interest to a specified 20-acre parcel of land on&nbsp;Fort Bragg to the State of North Carolina for the purpose of constructing a state home under the jurisdiction of the North Carolina Department of Military and Veterans Affairs. (A <em>state home</em> is a home established by a state for veterans who are disabled by age, disease, or otherwise and are incapable of earning a living because of such disability. The term also includes a home that furnishes nursing home care for veterans.)</p><p>Specifically, the bill authorizes the conveyance of a 20-acre parcel of land situated on the Fort&nbsp;Bragg Training Area in Harnett County, North Carolina, that is commonly referred to as Parcel 3B.</p><p>The State of North Carolina must cover all costs to carry out the conveyance.</p><p>If the Department&nbsp;of the Army determines the property is not being used for activities related to a state home, all right, title, and interest in the property may revert to the United States.</p>",
   "cosponsors": 13,
   "committees": [
+    {
+      "name": "Armed Services Committee",
+      "systemCode": "ssas00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2026-09-30T00:32:32Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2026-09-15T22:04:46Z"
+        }
+      ]
+    },
     {
       "name": "Armed Services Committee",
       "systemCode": "hsas00",
@@ -35,6 +51,55 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-29",
+      "text": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5186)"
+    },
+    {
+      "date": "2026-09-29",
+      "text": "Passed/agreed to in Senate: Passed Senate without amendment by Unanimous Consent. (consideration: CR S5186)"
+    },
+    {
+      "date": "2026-09-29",
+      "text": "Senate Committee on Armed Services discharged by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-29",
+      "text": "Senate Committee on Armed Services discharged by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Armed Services."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "On motion to suspend the rules and pass the bill Agreed to by voice vote. (text: CR H5544)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill Agreed to by voice vote."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 10159.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Considered under suspension of the rules. (consideration: CR H5544-5545)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Mr. Harrigan moved to suspend the rules and pass the bill.",
+      "chamber": "House"
+    },
     {
       "date": "2026-08-27",
       "text": "Referred to the House Committee on Armed Services.",

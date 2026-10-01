@@ -11,9 +11,9 @@
     "party": "R",
     "state": "PA"
   },
-  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
-  "latestActionDate": "2026-07-21",
-  "updateDate": "2026-09-19T23:40:20Z",
+  "latestAction": "Passed Senate without amendment by Voice Vote.",
+  "latestActionDate": "2026-09-30",
+  "updateDate": "2026-10-01T14:38:15Z",
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/1703",
@@ -26,6 +26,10 @@
       "chamber": "Senate",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2026-10-01T03:17:50Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-07-21T20:32:38Z"
@@ -71,6 +75,22 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-30",
+      "text": "Passed Senate without amendment by Voice Vote."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "Passed/agreed to in Senate: Passed Senate without amendment by Voice Vote."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "Senate Committee on Finance discharged by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "Senate Committee on Finance discharged by Unanimous Consent."
+    },
     {
       "date": "2026-07-21",
       "text": "Received in the Senate and Read twice and referred to the Committee on Finance."
@@ -146,25 +166,6 @@
       "date": "2026-05-13",
       "text": "Subcommittee Consideration and Mark-up Session Held",
       "chamber": "House"
-    },
-    {
-      "date": "2026-02-27",
-      "text": "Referred to the Subcommittee on Health.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-02-27",
-      "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-02-27",
-      "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-02-27",
-      "text": "Introduced in House"
     }
   ],
   "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1703/text"

@@ -11,9 +11,9 @@
     "party": "R",
     "state": "AZ"
   },
-  "latestAction": "Committee on Energy and Natural Resources. Ordered to be reported with an amendment in the nature of a substitute favorably.",
-  "latestActionDate": "2026-07-29",
-  "updateDate": "2026-09-23T08:05:54Z",
+  "latestAction": "Passed Senate without amendment by Unanimous Consent.",
+  "latestActionDate": "2026-09-30",
+  "updateDate": "2026-10-01T10:57:13Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/6380",
@@ -26,6 +26,10 @@
       "chamber": "Senate",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2026-09-30T23:37:25Z"
+        },
         {
           "name": "Markup By",
           "date": "2026-07-29T13:30:00Z"
@@ -63,6 +67,22 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-30",
+      "text": "Passed Senate without amendment by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "Passed/agreed to in Senate: Passed Senate without amendment by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "Senate Committee on Energy and Natural Resources discharged by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "Senate Committee on Energy and Natural Resources discharged by Unanimous Consent."
+    },
     {
       "date": "2026-07-29",
       "text": "Committee on Energy and Natural Resources. Ordered to be reported with an amendment in the nature of a substitute favorably."
@@ -138,24 +158,6 @@
       "date": "2025-12-11",
       "text": "Subcommittee Hearings Held",
       "chamber": "House"
-    },
-    {
-      "date": "2025-12-04",
-      "text": "Referred to the Subcommittee on Federal Lands.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-12-03",
-      "text": "Referred to the House Committee on Natural Resources.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-12-03",
-      "text": "Introduced in House"
-    },
-    {
-      "date": "2025-12-03",
-      "text": "Introduced in House"
     }
   ],
   "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6380/text"

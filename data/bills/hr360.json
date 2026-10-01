@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "360",
+  "number": 360,
   "billId": "hr360",
   "title": "Oyster Reef Recovery Act of 2025",
   "introducedDate": "2025-01-13",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Natural Resources.",
   "latestActionDate": "2025-01-13",
+  "updateDate": "2026-10-01T14:04:19Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/360",
-  "summary": "",
+  "summary": "<p><strong>Oyster Reef Recovery Act of 2025</strong></p><p>This bill directs the National Oceanic and Atmospheric Administration (NOAA) to establish a grant program to support the conservation of oyster reefs.</p><p>Under the bill, NOAA must award grants and provide technical assistance to&nbsp;qualified entities to support the conservation, restoration, enhancement, or management of oyster reefs. (An oyster reef is a large colonial aggregation of living oysters and shells, rocks, or other items that have grown together and provide a habitat for other marine animals and plants.) </p><p>Grants must be used for research, planning, construction, assessments, management, building capacity, monitoring, collaborating and sharing information,&nbsp;or workforce training with respect to the conservation, restoration, enhancement, or management of oyster reefs. Grant applicants must demonstrate that proposed projects will not reasonably interfere with commercial or recreational fishing or other water-related uses of the relevant area.&nbsp;</p><p>Entities qualified to apply for grants are units of federal, state, local,&nbsp;or tribal government; nongovernmental institutions; nonprofit organizations; institutions of higher education; shellfish growers; shellfish harvesters; private individuals; and private entities.&nbsp;</p>",
   "cosponsors": 3,
   "committees": [
-    "Natural Resources Committee"
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-13T17:03:05Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

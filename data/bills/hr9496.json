@@ -11,9 +11,9 @@
     "party": "R",
     "state": "NY"
   },
-  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
-  "latestActionDate": "2026-09-16",
-  "updateDate": "2026-09-23T21:06:18Z",
+  "latestAction": "Passed Senate without amendment by Unanimous Consent.",
+  "latestActionDate": "2026-09-30",
+  "updateDate": "2026-10-01T10:57:05Z",
   "originChamber": "House",
   "policyArea": "Taxation",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9496",
@@ -26,6 +26,10 @@
       "chamber": "Senate",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2026-10-01T01:08:49Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-09-16T20:43:53Z"
@@ -55,6 +59,22 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-30",
+      "text": "Passed Senate without amendment by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "Passed/agreed to in Senate: Passed Senate without amendment by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "Senate Committee on Finance discharged by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "Senate Committee on Finance discharged by Unanimous Consent."
+    },
     {
       "date": "2026-09-16",
       "text": "Received in the Senate and Read twice and referred to the Committee on Finance."
