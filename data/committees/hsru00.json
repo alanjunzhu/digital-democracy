@@ -15,8 +15,35 @@
       "name": "Rules and Organization of the House Subcommittee"
     }
   ],
-  "billCount": 163,
+  "billCount": 165,
   "bills": [
+    {
+      "billId": "hr10697",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10697,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-01",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10697"
+    },
+    {
+      "billId": "hr10706",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10706,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-01",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10706"
+    },
+    {
+      "billId": "hres1596",
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1596,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-01",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1596"
+    },
     {
       "billId": "hr10586",
       "congress": 119,
@@ -1438,15 +1465,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-10-10",
       "url": "https://www.congress.gov/bill/119th-congress/house-resolution/802"
-    },
-    {
-      "billId": "hres779",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 779,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-09-30",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/779"
     },
     {
       "billId": "hr4634",

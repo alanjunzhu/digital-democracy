@@ -41,10 +41,22 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1599,
+      "billId": "hres1599",
+      "title": "Expressing support for the recognition of September 2026 as \"National Childhood Cancer Awareness Month\".",
+      "introducedDate": "2026-10-01",
+      "latestAction": "Referred to the House Committee on Energy and Commerce.",
+      "latestActionDate": "2026-10-01",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1599"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10572,
       "billId": "hr10572",
-      "title": "To amend the National Housing Act to include accessibility improvements in the Rehabilitation Mortgage Insurance Program, and for other purposes.",
+      "title": "Home Accessibility Improvements Inclusion Act",
       "introducedDate": "2026-09-24",
       "latestAction": "Referred to the House Committee on Financial Services.",
       "latestActionDate": "2026-09-24",
@@ -56,7 +68,7 @@
       "type": "H.R.",
       "number": 10573,
       "billId": "hr10573",
-      "title": "To amend the Internal Revenue Code of 1986 to determine surviving spouse status without regard to any dependent children.",
+      "title": "Tax Relief for Surviving Spouses Act",
       "introducedDate": "2026-09-24",
       "latestAction": "Referred to the House Committee on Ways and Means.",
       "latestActionDate": "2026-09-24",
@@ -626,18 +638,6 @@
       "latestActionDate": "2026-02-10",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1050"
-    },
-    {
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 1044,
-      "billId": "hres1044",
-      "title": "Expressing support for the designation of the year 2026 as the \"National Year of the Volunteer\".",
-      "introducedDate": "2026-02-09",
-      "latestAction": "Referred to the House Committee on Education and Workforce.",
-      "latestActionDate": "2026-02-09",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1044"
     }
   ]
 }

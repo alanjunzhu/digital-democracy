@@ -56,10 +56,22 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1596,
+      "billId": "hres1596",
+      "title": "Providing for consideration of the bill (H.R. 9899) to designate Afghanistan under section 244 of the Immigration and Nationality Act to permit nationals of Afghanistan to be eligible for temporary protected status under such section, and for other purposes.",
+      "introducedDate": "2026-10-01",
+      "latestAction": "Referred to the House Committee on Rules.",
+      "latestActionDate": "2026-10-01",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1596"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10541,
       "billId": "hr10541",
-      "title": "To authorize the Secretary of Defense to establish joint education and training programs on military trauma care and research with military forces of foreign countries.",
+      "title": "COMBAT Care Act",
       "introducedDate": "2026-09-24",
       "latestAction": "Referred to the House Committee on Armed Services.",
       "latestActionDate": "2026-09-24",
@@ -261,18 +273,6 @@
     {
       "congress": 119,
       "type": "H.R.",
-      "number": 6002,
-      "billId": "hr6002",
-      "title": "Veterans Earned Education Act",
-      "introducedDate": "2025-11-10",
-      "latestAction": "Referred to the Subcommittee on Economic Opportunity.",
-      "latestActionDate": "2025-11-17",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6002"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
       "number": 6003,
       "billId": "hr6003",
       "title": "Justice Involved Veterans Support Act",
@@ -281,6 +281,18 @@
       "latestActionDate": "2025-11-10",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6003"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 6002,
+      "billId": "hr6002",
+      "title": "Veterans Earned Education Act",
+      "introducedDate": "2025-11-10",
+      "latestAction": "Referred to the Subcommittee on Economic Opportunity.",
+      "latestActionDate": "2025-11-17",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6002"
     },
     {
       "congress": 119,

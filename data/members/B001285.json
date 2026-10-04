@@ -81,6 +81,18 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1592,
+      "billId": "hres1592",
+      "title": "Expressing support for the designation of October 2026 as \"National Learning Disabilities Awareness Month\".",
+      "introducedDate": "2026-10-01",
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2026-10-01",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1592"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 8496,
       "billId": "hr8496",
@@ -666,18 +678,6 @@
       "latestActionDate": "2025-01-16",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/481"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 480,
-      "billId": "hr480",
-      "title": "Methane Border Adjustment Mechanism Act",
-      "introducedDate": "2025-01-16",
-      "latestAction": "Referred to the House Committee on Ways and Means.",
-      "latestActionDate": "2025-01-16",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/480"
     }
   ]
 }

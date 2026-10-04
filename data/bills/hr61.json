@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "61",
+  "number": 61,
   "billId": "hr61",
   "title": "Ensuring United Families at the Border Act",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on the Judiciary.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-10-02T21:18:18Z",
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/61",
   "summary": "<p><strong>Ensuring United Families at the Border Act</strong></p><p>This bill addresses the treatment of children who are non-U.S. nationals (<em>aliens</em> under federal law), including by statutorily establishing that there is no presumption that such a child (other than an unaccompanied child) should not be detained for immigration purposes.</p><p>Specifically, the bill states that the detention of such minors shall be governed by specified sections of the Immigration and Nationality Act and not any other provision of law, judicial ruling, or settlement agreement.</p><p>(A 1997 settlement agreement, commonly known as the <em>Flores</em> agreement, imposes requirements relating to the treatment of detained alien minors, including requiring such minors to be released or placed in a nonsecure facility after a certain amount of time in detention.)</p><p>If an adult enters the United States unlawfully with their child, the Department of Homeland Security must detain the adult and child together if the only criminal charge against the adult is a misdemeanor for unlawful entry.</p><p>This bill also prohibits states from imposing licensing requirements on immigration detention facilities used to detain minors or families with minors.</p>",
   "cosponsors": 3,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:07:35Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

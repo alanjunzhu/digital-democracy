@@ -38,6 +38,69 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "hr1744",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 1744,
+      "relationshipType": "Discharged From",
+      "actionDate": "2026-09-30",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1744"
+    },
+    {
+      "billId": "s5611",
+      "congress": 119,
+      "type": "S.",
+      "number": 5611,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-30",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5611"
+    },
+    {
+      "billId": "s5623",
+      "congress": 119,
+      "type": "S.",
+      "number": 5623,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-30",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5623"
+    },
+    {
+      "billId": "s5637",
+      "congress": 119,
+      "type": "S.",
+      "number": 5637,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-30",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5637"
+    },
+    {
+      "billId": "sres932",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 932,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-30",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/932"
+    },
+    {
+      "billId": "s5589",
+      "congress": 119,
+      "type": "S.",
+      "number": 5589,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-29",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5589"
+    },
+    {
+      "billId": "s5595",
+      "congress": 119,
+      "type": "S.",
+      "number": 5595,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-09-29",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5595"
+    },
+    {
       "billId": "hconres89",
       "congress": 119,
       "type": "H.Con.Res.",
@@ -945,15 +1008,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-06-11",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4751"
-    },
-    {
-      "billId": "hr1744",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 1744,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-06-09",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1744"
     },
     {
       "billId": "hr3429",
@@ -2232,60 +2286,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-12-02",
       "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/523"
-    },
-    {
-      "billId": "hr4071",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4071,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-20",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4071"
-    },
-    {
-      "billId": "s3262",
-      "congress": 119,
-      "type": "S.",
-      "number": 3262,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-20",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3262"
-    },
-    {
-      "billId": "s3276",
-      "congress": 119,
-      "type": "S.",
-      "number": 3276,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-20",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3276"
-    },
-    {
-      "billId": "sres510",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 510,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-20",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/510"
-    },
-    {
-      "billId": "s3208",
-      "congress": 119,
-      "type": "S.",
-      "number": 3208,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-19",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3208"
-    },
-    {
-      "billId": "hr1512",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 1512,
-      "relationshipType": "Discharged From",
-      "actionDate": "2025-11-18",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1512"
     }
   ]
 }

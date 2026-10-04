@@ -30,6 +30,51 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "hr10648",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10648,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-01",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10648"
+    },
+    {
+      "billId": "hr10654",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10654,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-01",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10654"
+    },
+    {
+      "billId": "hr10655",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10655,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-01",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10655"
+    },
+    {
+      "billId": "hr10693",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10693,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-01",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10693"
+    },
+    {
+      "billId": "hr6993",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 6993,
+      "relationshipType": "Reported By",
+      "actionDate": "2026-10-01",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6993"
+    },
+    {
       "billId": "hr10543",
       "congress": 119,
       "type": "H.R.",
@@ -1074,15 +1119,6 @@
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6698"
     },
     {
-      "billId": "hr6993",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6993,
-      "relationshipType": "Markup By",
-      "actionDate": "2026-05-14",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6993"
-    },
-    {
       "billId": "hr7083",
       "congress": 119,
       "type": "H.R.",
@@ -1605,6 +1641,15 @@
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7586"
     },
     {
+      "billId": "hr2148",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 2148,
+      "relationshipType": "Markup By",
+      "actionDate": "2026-02-12",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2148"
+    },
+    {
       "billId": "hr7558",
       "congress": 119,
       "type": "H.R.",
@@ -1648,15 +1693,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-02-10",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7472"
-    },
-    {
-      "billId": "hr2148",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 2148,
-      "relationshipType": "Discharged from",
-      "actionDate": "2026-02-05",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2148"
     },
     {
       "billId": "hr7411",
@@ -2242,42 +2278,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-11-20",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6244"
-    },
-    {
-      "billId": "hr6024",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6024,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-12",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6024"
-    },
-    {
-      "billId": "hr6026",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6026,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-12",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6026"
-    },
-    {
-      "billId": "hr6027",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6027,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-12",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6027"
-    },
-    {
-      "billId": "hr6032",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6032,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-12",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6032"
     }
   ]
 }
