@@ -15,7 +15,28 @@
   "location": null,
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119575?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Boyden Moore",
+      "position": "President & CEO",
+      "organization": "Orgill"
+    },
+    {
+      "name": "Ms. Alex Grover",
+      "position": "Owner & CEO",
+      "organization": "i2M"
+    },
+    {
+      "name": "Mr. Wade Thomson",
+      "position": "Owner & President",
+      "organization": "Thomson Prestress"
+    },
+    {
+      "name": "Mr. Mike Miller",
+      "position": "Owner",
+      "organization": "Patrick’s Neighborhood Bar & Patio"
+    }
+  ],
   "videos": [],
   "meetingDocuments": []
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-04T15:02:15.524Z",
+  "lastUpdated": "2026-10-05T18:57:40.292Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -5708,50 +5708,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119448?format=json"
     },
     {
-      "eventId": "119449",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "U.S. Economic Security and Investment Abroad: Assessing Economic Security Zones",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-14T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa17",
-          "name": "House Foreign Affairs Oversight and Intelligence Subcommittee"
-        }
-      ],
-      "location": {
-        "room": "2200",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119449?format=json"
-    },
-    {
-      "eventId": "119301",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "More Bang for the Buck: Aligning Commercial Diplomacy Between State and Commerce",
-      "meetingStatus": "Rescheduled",
-      "date": "2026-07-14T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa05",
-          "name": "House Foreign Affairs East Asia and Pacific Subcommittee"
-        }
-      ],
-      "location": {
-        "room": "2172",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119301?format=json"
-    },
-    {
       "eventId": "338642",
       "congress": 119,
       "chamber": "Senate",
@@ -8921,6 +8877,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/338180?format=json"
     },
     {
+      "eventId": "119204",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "SAT Streamlining Act: Modernizing Satellite Licensing for the Final Frontier",
+      "meetingStatus": "Scheduled",
+      "date": "2026-04-21T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif16",
+          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
+        }
+      ],
+      "location": {
+        "room": "2123",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119204?format=json"
+    },
+    {
       "eventId": "119213",
       "congress": 119,
       "chamber": "House",
@@ -9761,6 +9739,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337774?format=json"
+    },
+    {
+      "eventId": "118762",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative Improvements to Public Safety Communications in the United States",
+      "meetingStatus": "Scheduled",
+      "date": "2025-12-16T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif16",
+          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
+        }
+      ],
+      "location": {
+        "room": "2123",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118762?format=json"
     },
     {
       "eventId": "118786",
