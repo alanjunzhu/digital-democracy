@@ -13,13 +13,30 @@
   },
   "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
   "latestActionDate": "2026-09-16",
-  "updateDate": "2026-09-25T14:12:07Z",
+  "updateDate": "2026-10-05T14:02:47Z",
   "originChamber": "House",
   "policyArea": "Congress",
   "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1543",
   "summary": "",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Unknown",
+          "date": "2026-09-15T16:14:16Z"
+        },
+        {
+          "name": "Unknown",
+          "date": "2026-09-15T16:10:48Z"
+        }
+      ]
+    }
+  ],
   "subjects": [],
   "actions": [
     {
@@ -34,7 +51,7 @@
     },
     {
       "date": "2026-09-16",
-      "text": "Passed/agreed to in House: On agreeing to the resolution Agreed to without objection."
+      "text": "Passed/agreed to in House: On agreeing to the resolution Agreed to without objection. (text: CR H5931)"
     },
     {
       "date": "2026-09-16",
@@ -44,6 +61,16 @@
     {
       "date": "2026-09-16",
       "text": "Considered by unanimous consent. (consideration: CR H5931)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "The committee favorably reported H.Rept. 119-831 by the yeas and nays 41-0.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "The committee report referred to in this resolution is H.Rept. 119-831.",
       "chamber": "House"
     }
   ],
