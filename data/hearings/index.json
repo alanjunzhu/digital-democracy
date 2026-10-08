@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07T17:05:26.688Z",
+  "lastUpdated": "2026-10-08T17:05:01.478Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -5847,28 +5847,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119446?format=json"
     },
     {
-      "eventId": "119459",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "updated Subcommittee Rosters due to changes on the Majority side; General Services Administration Capital Investment and Leasing Program Resolutions; an Amendment in the Nature of a Substitute to H.R. 9497, the Water Resources Development Act of 2026; and other matters cleared for consideration.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-14T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hspw00",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "2167",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119459?format=json"
-    },
-    {
       "eventId": "338621",
       "congress": 119,
       "chamber": "Senate",
@@ -8787,6 +8765,43 @@
         "hr6529"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119189?format=json"
+    },
+    {
+      "eventId": "119248",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Markup",
+      "title": "the full Committee to consider the following: \r\n1) H.R. 8463, Pre-Payment Fraud Prevention and Treasury Data Access Act;\r\n\r\n2) H.R. 8464, Stopping Fraudulent Payments Act;\r\n\t\r\n3) H.R. 8312, Fraud Prevention and Accountability Act;\r\n\t\r\n4) H.R. 8467, Zeroing Out Monetary Benefits Improperly Expended Act;\r\n\t\r\n5) H.R. 8428, Federal Fraud Prevention Workforce Training Act;\r\n\t\r\n6) H.R. 8466, Taxpayer Resources Used in Emergencies Accountability Act;\r\n\t\r\n7) H.R. 8340, Taxpayer Funds Oversight and Accountability Act;\r\n\t\r\n8) H.R. 1755, Timely and Accurate Benefits Act;\r\n\t\r\n9) H.R. 8107, Government Audit and Accountability of Federally Funded State-Administered Programs Act;\r\n\t\r\n10) Several postal naming measures.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-04-29T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsgo00",
+          "name": "House Oversight and Government Reform"
+        }
+      ],
+      "location": {
+        "room": "2154",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr8312",
+        "hr8340",
+        "hr8467",
+        "hr8428",
+        "hr8466",
+        "hr8193",
+        "hr8225",
+        "hr1755",
+        "hr8107",
+        "hr6099",
+        "hr2488",
+        "hr7809",
+        "hr8464",
+        "hr8463"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119248?format=json"
     },
     {
       "eventId": "119188",
