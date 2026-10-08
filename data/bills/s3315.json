@@ -11,9 +11,9 @@
     "party": "R",
     "state": "LA"
   },
-  "latestAction": "Passed Senate with an amendment by Unanimous Consent. (text: CR S5234-5236)",
-  "latestActionDate": "2026-09-30",
-  "updateDate": "2026-10-03T11:08:21Z",
+  "latestAction": "Held at the desk.",
+  "latestActionDate": "2026-10-05",
+  "updateDate": "2026-10-07T11:40:18Z",
   "originChamber": "Senate",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3315",
@@ -43,6 +43,20 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-05",
+      "text": "Held at the desk.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-10-05",
+      "text": "Received in the House.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-10-05",
+      "text": "Message on Senate action sent to the House."
+    },
     {
       "date": "2026-09-30",
       "text": "Passed Senate with an amendment by Unanimous Consent. (text: CR S5234-5236)"

@@ -11,14 +11,14 @@
     "party": "R",
     "state": "IA"
   },
-  "latestAction": "Referred to the House Committee on Financial Services.",
-  "latestActionDate": "2025-08-08",
-  "updateDate": "2026-09-11T08:05:40Z",
+  "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 49 - 0.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-10-07T16:33:31Z",
   "originChamber": "House",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/4936",
   "summary": "",
-  "cosponsors": 53,
+  "cosponsors": 56,
   "committees": [
     {
       "name": "Financial Services Committee",
@@ -26,6 +26,10 @@
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Markup By",
+          "date": "2026-09-16T15:02:00Z"
+        },
         {
           "name": "Referred To",
           "date": "2025-08-08T15:31:20Z"
@@ -35,6 +39,16 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 49 - 0.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
     {
       "date": "2025-08-08",
       "text": "Referred to the House Committee on Financial Services.",

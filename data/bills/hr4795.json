@@ -11,15 +11,27 @@
     "party": "R",
     "state": "NC"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-09-03",
-  "updateDate": "2026-09-09T13:12:06Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Health, Education, Labor, and Pensions.",
+  "latestActionDate": "2026-09-14",
+  "updateDate": "2026-10-07T19:06:27Z",
   "originChamber": "House",
   "policyArea": "Education",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
   "summary": "<p><strong>Protect Economic and Academic Freedom Act of 2026</strong></p><p>This bill prohibits institutions of higher education (IHEs) that participate in federal student aid programs from engaging in boycotts against Israel. Specifically,&nbsp;IHEs may not engage in a commercial action intended to limit commercial relations with Israel, or with an entity licensed by, regulated by, or organized under the laws of Israel, that is not based on a valid business reason.&nbsp;</p><p>Further,&nbsp;IHEs receiving, or applying to receive, Title VI funds (federal funding for foreign language and international education programs) must annually certify that (1) students and faculty are allowed to participate in academic programs located in Israel in the same manner and under the same terms and conditions as programs in other foreign countries, and (2) students and faculty at postsecondary institutions located in Israel may participate in such IHE’s academic programs in the same manner and under the same terms and conditions as students and faculty from other foreign countries.&nbsp;</p>",
   "cosponsors": 1,
   "committees": [
+    {
+      "name": "Health, Education, Labor, and Pensions Committee",
+      "systemCode": "sshr00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-14T20:13:23Z"
+        }
+      ]
+    },
     {
       "name": "Education and Workforce Committee",
       "systemCode": "hsed00",
@@ -43,6 +55,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-14",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Health, Education, Labor, and Pensions."
+    },
     {
       "date": "2026-09-03",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

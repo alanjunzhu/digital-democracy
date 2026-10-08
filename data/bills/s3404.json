@@ -11,9 +11,9 @@
     "party": "D",
     "state": "MI"
   },
-  "latestAction": "Message on Senate action sent to the House.",
+  "latestAction": "Held at the desk.",
   "latestActionDate": "2026-09-24",
-  "updateDate": "2026-10-01T17:11:41Z",
+  "updateDate": "2026-10-08T11:32:34Z",
   "originChamber": "Senate",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3404",
@@ -45,10 +45,6 @@
   "actions": [
     {
       "date": "2026-09-24",
-      "text": "Message on Senate action sent to the House."
-    },
-    {
-      "date": "2026-09-24",
       "text": "Held at the desk.",
       "chamber": "House"
     },
@@ -56,6 +52,10 @@
       "date": "2026-09-24",
       "text": "Received in the House.",
       "chamber": "House"
+    },
+    {
+      "date": "2026-09-24",
+      "text": "Message on Senate action sent to the House."
     },
     {
       "date": "2026-09-23",
