@@ -1,0 +1,27 @@
+{
+  "eventId": "119583",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“More Choices, Brighter Futures: Expanding Education Freedom”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-10-23T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119583?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119583/documents/HHRG-119-ED00-20261023-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

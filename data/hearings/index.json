@@ -1,8 +1,26 @@
 {
-  "lastUpdated": "2026-10-08T17:05:01.478Z",
+  "lastUpdated": "2026-10-09T16:42:30.444Z",
   "congress": 119,
   "total": 429,
   "hearings": [
+    {
+      "eventId": "119583",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“More Choices, Brighter Futures: Expanding Education Freedom”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-10-23T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119583?format=json"
+    },
     {
       "eventId": "119575",
       "congress": 119,
@@ -1843,6 +1861,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119562?format=json"
     },
     {
+      "eventId": "119557",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Unequal Treatment: Addressing the Drivers of Unaffordability for Oral Chemotherapy”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsgo27",
+          "name": "House Oversight and Government Reform Subcommittee on Health Care and Financial Services"
+        }
+      ],
+      "location": {
+        "room": "2154",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119557?format=json"
+    },
+    {
       "eventId": "119543",
       "congress": 119,
       "chamber": "House",
@@ -1885,28 +1925,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119542?format=json"
-    },
-    {
-      "eventId": "119557",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Unequal Treatment: Addressing the Drivers of Unaffordability for Oral Chemotherapy”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsgo27",
-          "name": "House Oversight and Government Reform Subcommittee on Health Care and Financial Services"
-        }
-      ],
-      "location": {
-        "room": "2154",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119557?format=json"
     },
     {
       "eventId": "119551",
@@ -5179,28 +5197,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119452?format=json"
-    },
-    {
-      "eventId": "119454",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Committee on House Administration Elections Subcommittee Hearing:“Election Observation: Best Practices and Congress’s Role”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-15T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsha08",
-          "name": "House Administration Subcommittee on Elections"
-        }
-      ],
-      "location": {
-        "room": "1310",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119454?format=json"
     },
     {
       "eventId": "119457",
