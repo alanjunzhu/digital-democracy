@@ -11,9 +11,9 @@
     "party": "D",
     "state": "CA"
   },
-  "latestAction": "Ordered to be Reported by the Yeas and Nays: 23 - 0.",
-  "latestActionDate": "2026-09-16",
-  "updateDate": "2026-09-17T08:07:43Z",
+  "latestAction": "Placed on the Union Calendar, Calendar No. 747.",
+  "latestActionDate": "2026-10-09",
+  "updateDate": "2026-10-10T08:05:28Z",
   "originChamber": "House",
   "policyArea": "Commerce",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10352",
@@ -27,6 +27,10 @@
       "type": "Standing",
       "activities": [
         {
+          "name": "Reported By",
+          "date": "2026-10-09T16:49:45Z"
+        },
+        {
           "name": "Markup By",
           "date": "2026-09-16T20:26:06Z"
         },
@@ -39,6 +43,20 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-09",
+      "text": "Placed on the Union Calendar, Calendar No. 747.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-10-09",
+      "text": "Reported by the Committee on Small Business. H. Rept. 119-850.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-10-09",
+      "text": "Reported by the Committee on Small Business. H. Rept. 119-850."
+    },
     {
       "date": "2026-09-16",
       "text": "Ordered to be Reported by the Yeas and Nays: 23 - 0.",

@@ -89,10 +89,22 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1607,
+      "billId": "hres1607",
+      "title": "Expressing support for the designation of September 2026 as \"National Workforce Development Month\".",
+      "introducedDate": "2026-10-05",
+      "latestAction": "Referred to the House Committee on Education and Workforce.",
+      "latestActionDate": "2026-10-05",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1607"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10649,
       "billId": "hr10649",
-      "title": "To amend the Comprehensive Addiction and Recovery Act of 2016 to authorize the Attorney General, in coordination with the Administrator of the Drug Enforcement Administration, the Secretary of Health and Human Services, and the Director of the Office of National Drug Control Policy, to award grants to covered entities to establish or maintain disposal sites for unwanted prescription medications, and for other purposes.",
+      "title": "Safe Disposal of Opioids Act of 2026",
       "introducedDate": "2026-10-01",
       "latestAction": "Referred to the House Committee on Energy and Commerce.",
       "latestActionDate": "2026-10-01",
@@ -674,18 +686,6 @@
       "latestActionDate": "2025-06-10",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3856"
-    },
-    {
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 482,
-      "billId": "hres482",
-      "title": "Recognizing World Oceans Day and the need to protect, conserve, maintain, and rebuild the ocean and its resources.",
-      "introducedDate": "2025-06-06",
-      "latestAction": "Referred to the Committee on Natural Resources, and in addition to the Committee on Science, Space, and Technology, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2025-06-06",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/482"
     }
   ]
 }

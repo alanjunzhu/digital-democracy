@@ -9,17 +9,8 @@
     "name": "Transportation and Infrastructure Committee"
   },
   "url": null,
-  "billCount": 53,
+  "billCount": 42,
   "bills": [
-    {
-      "billId": "hr10304",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 10304,
-      "relationshipType": "Discharged from",
-      "actionDate": "2026-09-15",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10304"
-    },
     {
       "billId": "hr2592",
       "congress": 119,
@@ -64,6 +55,15 @@
       "relationshipType": "Discharged from",
       "actionDate": "2026-09-15",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9530"
+    },
+    {
+      "billId": "hr10304",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10304,
+      "relationshipType": "Referred to",
+      "actionDate": "2026-09-09",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10304"
     },
     {
       "billId": "hr7613",
@@ -381,42 +381,6 @@
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/5847"
     },
     {
-      "billId": "hr5556",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5556,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-09-24",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5556"
-    },
-    {
-      "billId": "hr5523",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5523,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-09-20",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5523"
-    },
-    {
-      "billId": "hr5451",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5451,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-09-19",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5451"
-    },
-    {
-      "billId": "hr5455",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5455,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-09-19",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5455"
-    },
-    {
       "billId": "hr5502",
       "congress": 119,
       "type": "H.R.",
@@ -424,69 +388,6 @@
       "relationshipType": "Referred to",
       "actionDate": "2025-09-19",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/5502"
-    },
-    {
-      "billId": "hr5231",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5231,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-09-10",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5231"
-    },
-    {
-      "billId": "hr5205",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5205,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-09-09",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5205"
-    },
-    {
-      "billId": "hr5087",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5087,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-09-03",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5087"
-    },
-    {
-      "billId": "hr5049",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 5049,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-08-27",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5049"
-    },
-    {
-      "billId": "hr4994",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4994,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-08-20",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4994"
-    },
-    {
-      "billId": "hr4686",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4686,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-07-24",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4686"
-    },
-    {
-      "billId": "hr4590",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4590,
-      "relationshipType": "Referred to",
-      "actionDate": "2025-07-23",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4590"
     }
   ]
 }

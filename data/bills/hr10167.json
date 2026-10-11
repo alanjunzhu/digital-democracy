@@ -11,15 +11,31 @@
     "party": "R",
     "state": "MI"
   },
-  "latestAction": "Referred to the House Committee on Financial Services.",
-  "latestActionDate": "2026-08-27",
-  "updateDate": "2026-09-10T18:26:08Z",
+  "latestAction": "Passed Senate without amendment by Unanimous Consent.",
+  "latestActionDate": "2026-09-28",
+  "updateDate": "2026-10-09T03:38:25Z",
   "originChamber": "House",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10167",
   "summary": "<p><strong>Common Cents Act</strong></p><p>This bill ends the production of the penny for general circulation, requires rounding to an amount divisible by five for the payment or transfer of cash, and allows the nickel to be composed of different material.</p><p>The Department of the Treasury must stop producing the penny, except to meet collector needs. The penny shall continue to be legal tender.</p><p>Any person selling goods or services in a cash transaction, entering into other transfers of cash, or paying cash wages to an employee must round the payment up or down in accordance with the bill.</p><p>The bill also allows Treasury to discontinue the minting for circulation of any coin if Treasury follows procedures as outlined by the bill, including providing notice and a briefing to Congress. </p><p>The Federal Reserve Board must periodically report on a strategic plan for the acceptance of penny orders and deposits at commercial coin terminals that provide services under agreements with Federal Reserve banks.&nbsp;</p><p>Finally, the bill allows for a different material composition of the nickel. In addition to being made from an alloy of copper and nickel, the nickel may also be clad with an inner core of zinc and an outer layer of nickel.&nbsp;</p>",
   "cosponsors": 1,
   "committees": [
+    {
+      "name": "Banking, Housing, and Urban Affairs Committee",
+      "systemCode": "ssbk00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2026-09-29T02:56:28Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2026-09-15T22:04:22Z"
+        }
+      ]
+    },
     {
       "name": "Financial Services Committee",
       "systemCode": "hsba00",
@@ -35,6 +51,55 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-28",
+      "text": "Passed Senate without amendment by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-28",
+      "text": "Passed/agreed to in Senate: Passed Senate without amendment by Unanimous Consent."
+    },
+    {
+      "date": "2026-09-28",
+      "text": "Senate Committee on Banking, Housing, and Urban Affairs discharged by Unanimous Consent. (consideration: CR S5120)"
+    },
+    {
+      "date": "2026-09-28",
+      "text": "Senate Committee on Banking, Housing, and Urban Affairs discharged by Unanimous Consent. (consideration: CR S5120)"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "On motion to suspend the rules and pass the bill Agreed to by voice vote. (text: CR H5599-5601)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill Agreed to by voice vote."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 10167.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Considered under suspension of the rules. (consideration: CR H5599-5602)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Ms. De La Cruz moved to suspend the rules and pass the bill.",
+      "chamber": "House"
+    },
     {
       "date": "2026-08-27",
       "text": "Referred to the House Committee on Financial Services.",

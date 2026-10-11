@@ -64,10 +64,46 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1618,
+      "billId": "hres1618",
+      "title": "Recognizing the third anniversary of the October 7, 2023, terrorist attacks on Israel, honoring the victims and the hostages, and calling for the complete disarmament of Hamas for a durable end to the war in Gaza.",
+      "introducedDate": "2026-10-06",
+      "latestAction": "Referred to the House Committee on Foreign Affairs.",
+      "latestActionDate": "2026-10-06",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1618"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10757,
+      "billId": "hr10757",
+      "title": "To provide for a limitation on contributions to the United Nations.",
+      "introducedDate": "2026-10-06",
+      "latestAction": "Referred to the House Committee on Foreign Affairs.",
+      "latestActionDate": "2026-10-06",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10757"
+    },
+    {
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1612,
+      "billId": "hres1612",
+      "title": "Honoring Captain Smit Machchhar and the crew and passengers of Flydubai Flight 1073, and condemning the attempted terrorist attack on that flight.",
+      "introducedDate": "2026-10-05",
+      "latestAction": "Referred to the House Committee on Foreign Affairs.",
+      "latestActionDate": "2026-10-05",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1612"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10670,
       "billId": "hr10670",
-      "title": "To prohibit Chinese AI models from being used on government-issued devices or software systems, to prohibit the procurement of any such models, and for other purposes.",
+      "title": "China FIREWALL Act of 2026",
       "introducedDate": "2026-10-01",
       "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
       "latestActionDate": "2026-10-01",
@@ -79,7 +115,7 @@
       "type": "H.R.",
       "number": 10671,
       "billId": "hr10671",
-      "title": "To amend the Cyber Incident Reporting for Critical Infrastructure Act of 2022 to reauthorize a program of the Cybersecurity and Infrastructure Security Agency relating to security vulnerability warnings, and for other purposes.",
+      "title": "Securing Our Critical Infrastructure Act",
       "introducedDate": "2026-10-01",
       "latestAction": "Referred to the House Committee on Homeland Security.",
       "latestActionDate": "2026-10-01",
@@ -625,42 +661,6 @@
       "latestActionDate": "2025-11-28",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/6319"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6321,
-      "billId": "hr6321",
-      "title": "Lung Cancer Medicare Access to Precise Testing Act",
-      "introducedDate": "2025-11-28",
-      "latestAction": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2025-11-28",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6321"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6027,
-      "billId": "hr6027",
-      "title": "To amend title 38, United States Code, to provide for an annual increase in the rates of compensation for veterans with service-connected disabilities and the rates of dependency and indemnity compensation for the survivors of certain disabled veterans, and for other purposes.",
-      "introducedDate": "2025-11-12",
-      "latestAction": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
-      "latestActionDate": "2025-11-17",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6027"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6026,
-      "billId": "hr6026",
-      "title": "To direct the Secretary of Veterans Affairs and the Secretary of Education to submit a report on the availability, accessibility, and affordability of childcare for veteran families.",
-      "introducedDate": "2025-11-12",
-      "latestAction": "Referred to the Subcommittee on Economic Opportunity.",
-      "latestActionDate": "2025-11-17",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6026"
     }
   ]
 }

@@ -15,8 +15,17 @@
       "name": "Rules and Organization of the House Subcommittee"
     }
   ],
-  "billCount": 165,
+  "billCount": 164,
   "bills": [
+    {
+      "billId": "hr10780",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10780,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-09",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10780"
+    },
     {
       "billId": "hr10697",
       "congress": 119,
@@ -1447,24 +1456,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-10-24",
       "url": "https://www.congress.gov/bill/119th-congress/house-resolution/830"
-    },
-    {
-      "billId": "hres801",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 801,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-10-10",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/801"
-    },
-    {
-      "billId": "hres802",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 802,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-10-10",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/802"
     },
     {
       "billId": "hr4634",
