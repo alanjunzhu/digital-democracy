@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-12T19:30:28.859Z",
+  "lastUpdated": "2026-10-13T17:14:26.262Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -1081,6 +1081,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338745?format=json"
     },
     {
+      "eventId": "119538",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Import Controls: Tools to Counter the CCP’s Industrial Policy and Supply Chain Threats",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-16T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hlzs00",
+          "name": ""
+        }
+      ],
+      "location": {
+        "room": "390",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119538?format=json"
+    },
+    {
       "eventId": "119529",
       "congress": 119,
       "chamber": "House",
@@ -1194,28 +1216,6 @@
         "hr10163"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119573?format=json"
-    },
-    {
-      "eventId": "119538",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Import Controls: Tools to Counter the CCP’s Industrial Policy and Supply Chain Threats",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-16T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hlzs00",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "390",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119538?format=json"
     },
     {
       "eventId": "119570",
@@ -6136,28 +6136,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119424?format=json"
     },
     {
-      "eventId": "119385",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "China’s Economic Espionage and Subnational Influence in the United States",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-25T14:30:00Z",
-      "committees": [
-        {
-          "systemCode": "hlzs00",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "390",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119385?format=json"
-    },
-    {
       "eventId": "119405",
       "congress": 119,
       "chamber": "House",
@@ -10036,6 +10014,33 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337102?format=json"
+    },
+    {
+      "eventId": "118298",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative hearing on H.R. 1676 (Rep. Donalds), “Make SWAPs Efficient Act of 2025.” H.R. 3538 (Rep. Garbarino), “Wildlife Confiscations Network Act of 2025.” H.R. 3857 (Rep. Hurd), “Snow Water Supply Forecasting Reauthorization Act of 2025.” H.R. 3858 (Rep. Dingell), “Sport Fish Restoration, Recreational Boating Safety, and Wildlife Restoration Act of 2025.”",
+      "meetingStatus": "Scheduled",
+      "date": "2025-06-24T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii13",
+          "name": "House Natural Resources Subcommittee on Water, Wildlife and Fisheries"
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr3857",
+        "hr3538",
+        "hr3858",
+        "hr1676"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118298?format=json"
     },
     {
       "eventId": "118308",
