@@ -11,9 +11,9 @@
     "party": "R",
     "state": "UT"
   },
-  "latestAction": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5226-5231)",
-  "latestActionDate": "2026-09-30",
-  "updateDate": "2026-10-09T03:53:20Z",
+  "latestAction": "Message on Senate action sent to the House.",
+  "latestActionDate": "2026-10-14",
+  "updateDate": "2026-10-15T10:56:19Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/7831",
@@ -63,6 +63,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-14",
+      "text": "Message on Senate action sent to the House."
+    },
     {
       "date": "2026-09-30",
       "text": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5226-5231)"
@@ -146,11 +150,6 @@
     {
       "date": "2026-05-14",
       "text": "Committee Consideration and Mark-up Session Held",
-      "chamber": "House"
-    },
-    {
-      "date": "2026-05-14",
-      "text": "Subcommittee on Energy and Mineral Resources Discharged",
       "chamber": "House"
     }
   ],

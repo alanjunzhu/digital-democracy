@@ -11,9 +11,9 @@
     "party": "D",
     "state": "IL"
   },
-  "latestAction": "Passed Senate without amendment by Voice Vote. (consideration: CR S5120)",
-  "latestActionDate": "2026-09-28",
-  "updateDate": "2026-10-09T03:38:25Z",
+  "latestAction": "Message on Senate action sent to the House.",
+  "latestActionDate": "2026-10-14",
+  "updateDate": "2026-10-15T10:56:19Z",
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/8205",
@@ -43,6 +43,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-14",
+      "text": "Message on Senate action sent to the House."
+    },
     {
       "date": "2026-09-28",
       "text": "Passed Senate without amendment by Voice Vote. (consideration: CR S5120)"
@@ -131,11 +135,6 @@
     {
       "date": "2026-04-06",
       "text": "Referred to the Subcommittee on Health.",
-      "chamber": "House"
-    },
-    {
-      "date": "2026-04-06",
-      "text": "Referred to the House Committee on Energy and Commerce.",
       "chamber": "House"
     }
   ],

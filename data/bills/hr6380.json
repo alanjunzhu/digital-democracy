@@ -11,9 +11,9 @@
     "party": "R",
     "state": "AZ"
   },
-  "latestAction": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5226)",
-  "latestActionDate": "2026-09-30",
-  "updateDate": "2026-10-09T03:38:25Z",
+  "latestAction": "Message on Senate action sent to the House.",
+  "latestActionDate": "2026-10-14",
+  "updateDate": "2026-10-15T10:56:20Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/6380",
@@ -67,6 +67,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-14",
+      "text": "Message on Senate action sent to the House."
+    },
     {
       "date": "2026-09-30",
       "text": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5226)"
@@ -152,11 +156,6 @@
     {
       "date": "2026-02-11",
       "text": "Subcommittee on Federal Lands Discharged",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-12-11",
-      "text": "Subcommittee Hearings Held",
       "chamber": "House"
     }
   ],

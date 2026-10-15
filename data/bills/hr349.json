@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "349",
+  "number": 349,
   "billId": "hr349",
   "title": "Goldie’s Act",
   "introducedDate": "2025-01-13",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the Subcommittee on Livestock, Dairy, and Poultry.",
   "latestActionDate": "2025-02-14",
+  "updateDate": "2026-10-14T08:05:27Z",
   "originChamber": "House",
   "policyArea": "Animals",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/349",
   "summary": "<p><strong>Goldie's Act</strong></p><p>This bill expands enforcement provisions under the Animal Welfare Act (AWA).</p><p>Specifically, the bill directs the Department of Agriculture (USDA) to document and record detailed descriptions of violations of the act observed during inspections and investigations. USDA must provide a copy of all records documenting violations to state, local, and municipal animal control or law enforcement officials within 24 hours of such inspections or investigations.</p><p>Inspections must be held at least once a year of each research facility, the premises of each animal dealer, and each exhibitor of animals. If violations are found during inspections, then USDA must conduct any necessary follow-up inspections until all the violations are corrected. Inspectors must confiscate or destroy in a humane manner animals found to be suffering physical or psychological harm as a result of failure to comply with the AWA.</p><p>Violators are subject to civil penalties as outlined in the bill.</p>",
-  "cosponsors": 94,
+  "cosponsors": 102,
   "committees": [
-    "Agriculture Committee"
+    {
+      "name": "Agriculture Committee",
+      "systemCode": "hsag00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-13T17:04:20Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

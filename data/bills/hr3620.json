@@ -11,9 +11,9 @@
     "party": "R",
     "state": "AK"
   },
-  "latestAction": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5144)",
-  "latestActionDate": "2026-09-29",
-  "updateDate": "2026-10-09T03:38:25Z",
+  "latestAction": "Message on Senate action sent to the House.",
+  "latestActionDate": "2026-10-14",
+  "updateDate": "2026-10-15T10:56:20Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/3620",
@@ -83,6 +83,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-14",
+      "text": "Message on Senate action sent to the House."
+    },
     {
       "date": "2026-09-29",
       "text": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5144)"
@@ -166,11 +170,6 @@
     {
       "date": "2025-07-23",
       "text": "Ordered to be Reported by Unanimous Consent.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-07-23",
-      "text": "Committee Consideration and Mark-up Session Held",
       "chamber": "House"
     }
   ],

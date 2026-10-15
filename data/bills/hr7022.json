@@ -11,9 +11,9 @@
     "party": "R",
     "state": "TX"
   },
-  "latestAction": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5237-5238)",
-  "latestActionDate": "2026-09-30",
-  "updateDate": "2026-10-09T03:53:20Z",
+  "latestAction": "Message on Senate action sent to the House.",
+  "latestActionDate": "2026-10-14",
+  "updateDate": "2026-10-15T10:56:20Z",
   "originChamber": "House",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/7022",
@@ -63,6 +63,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-14",
+      "text": "Message on Senate action sent to the House."
+    },
     {
       "date": "2026-09-30",
       "text": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5237-5238)"
@@ -148,11 +152,6 @@
     {
       "date": "2026-01-15",
       "text": "Subcommittee Consideration and Mark-up Session Held",
-      "chamber": "House"
-    },
-    {
-      "date": "2026-01-12",
-      "text": "Referred to the Subcommittee on Communications and Technology.",
       "chamber": "House"
     }
   ],
