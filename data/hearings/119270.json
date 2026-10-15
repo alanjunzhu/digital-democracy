@@ -21,6 +21,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119270?format=json",
   "witnesses": [
     {
+      "name": "Mr. Michael Skelly",
+      "position": "CEO and Co-founder",
+      "organization": "GridUnited"
+    },
+    {
       "name": "The Honorable Tony Clarke",
       "position": "Executive Director",
       "organization": "National Association of Regulatory Utility Commissioners"
@@ -49,11 +54,6 @@
       "name": "Mr. Rob Gramlich",
       "position": "President",
       "organization": "Grid Strategies"
-    },
-    {
-      "name": "Mr. Michael Skelly",
-      "position": "CEO and Co-founder",
-      "organization": "GridUnited"
     },
     {
       "name": "The Honorable Tony Clark",

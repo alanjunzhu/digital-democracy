@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14T14:47:08.097Z",
+  "lastUpdated": "2026-10-15T14:32:28.384Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -4438,32 +4438,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338665?format=json"
     },
     {
-      "eventId": "119389",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative Hearing on the following bill:\r\n•    H.R. 8003 (Rep. Deluzio), “Expanding the Fast Track Act of 2026.’’\r\n•    H.R. 9640 (Rep. Wittman), “Earth MRI Reauthorization Act of 2026.’’\r\n•    H.R. 9646 (Rep. Hurd), “Quantum-Enhanced Critical Minerals Mapping Act of 2026.’’",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-21T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii06",
-          "name": "House Natural Resources Subcommittee on Energy and Mineral Resources"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr8003",
-        "hr9640",
-        "hr9646"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119389?format=json"
-    },
-    {
       "eventId": "119491",
       "congress": 119,
       "chamber": "House",
@@ -4496,6 +4470,32 @@
         "hr8875"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119491?format=json"
+    },
+    {
+      "eventId": "119389",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative Hearing on the following bill:\r\n•    H.R. 8003 (Rep. Deluzio), “Expanding the Fast Track Act of 2026.’’\r\n•    H.R. 9640 (Rep. Wittman), “Earth MRI Reauthorization Act of 2026.’’\r\n•    H.R. 9646 (Rep. Hurd), “Quantum-Enhanced Critical Minerals Mapping Act of 2026.’’",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-21T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii06",
+          "name": "House Natural Resources Subcommittee on Energy and Mineral Resources"
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr8003",
+        "hr9640",
+        "hr9646"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119389?format=json"
     },
     {
       "eventId": "119473",
@@ -5450,28 +5450,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119467?format=json"
-    },
-    {
-      "eventId": "119451",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Ending Supply Chain Dependency: Aligning Tools, Capital, and Partnerships",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-15T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa00",
-          "name": "House Foreign Affairs"
-        }
-      ],
-      "location": {
-        "room": "2172",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119451?format=json"
     },
     {
       "eventId": "338661",
@@ -7251,7 +7229,6 @@
       "relatedBillIds": [
         "hr1729",
         "hr2290",
-        "hr249",
         "hr3657",
         "hr3857",
         "hr3872",
@@ -7260,16 +7237,10 @@
         "s1288",
         "s1341",
         "s1349",
-        "s140",
         "s1413",
         "s1476",
         "s1547",
-        "s1737",
-        "s1870",
         "s2753",
-        "s332",
-        "s3518",
-        "s3526",
         "s365",
         "s3693",
         "s3723",
@@ -7284,8 +7255,15 @@
         "s791",
         "s888",
         "s945",
+        "hr249",
+        "s140",
+        "s1737",
+        "s1870",
         "s2437",
-        "s3500"
+        "s332",
+        "s3500",
+        "s3518",
+        "s3526"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338549?format=json"
     },
@@ -8609,28 +8587,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119269?format=json"
     },
     {
-      "eventId": "119260",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Expanding the Mission: The Future of the National Center for \r\nWarrior Independence in West LA",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-13T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr00",
-          "name": "House Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119260?format=json"
-    },
-    {
       "eventId": "119270",
       "congress": 119,
       "chamber": "House",
@@ -8651,6 +8607,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119270?format=json"
+    },
+    {
+      "eventId": "119260",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Expanding the Mission: The Future of the National Center for \r\nWarrior Independence in West LA",
+      "meetingStatus": "Scheduled",
+      "date": "2026-05-13T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr00",
+          "name": "House Veterans' Affairs"
+        }
+      ],
+      "location": {
+        "room": "360",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119260?format=json"
     },
     {
       "eventId": "119268",
@@ -8952,6 +8930,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119134?format=json"
+    },
+    {
+      "eventId": "119142",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Safeguarding Main Street: Combatting Fraud and Exploitation in Our Capital Markets",
+      "meetingStatus": "Scheduled",
+      "date": "2026-04-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba16",
+          "name": "House Financial Services Subcommittee on Capital Markets"
+        }
+      ],
+      "location": {
+        "room": "2128",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119142?format=json"
     },
     {
       "eventId": "119156",

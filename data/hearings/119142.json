@@ -1,0 +1,83 @@
+{
+  "eventId": "119142",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Safeguarding Main Street: Combatting Fraud and Exploitation in Our Capital Markets",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-15T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba16",
+      "name": "House Financial Services Subcommittee on Capital Markets"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119142?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Jilenne Gunther",
+      "position": "National Director of BankSafe Initiative",
+      "organization": "AARP"
+    },
+    {
+      "name": "Mr. Andrew Verstein",
+      "position": "Professor of Law and Vice Dean for Curricular and Academic Affairs",
+      "organization": "UCLA School of Law"
+    },
+    {
+      "name": "Mr. Bryan Smith",
+      "position": "Senior Vice President of Complex Investigations and Intelligence",
+      "organization": "FINRA"
+    },
+    {
+      "name": "Mr. Matthew Michel",
+      "position": "Founder and Managing Partner",
+      "organization": "InvestorLink Capital Markets, LLC"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Safeguarding Main Street: Combatting Fraud and Exploitation in Our Capital Markets",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119142",
+      "format": ""
+    },
+    {
+      "name": "Safeguarding Main Street: Combatting Fraud and Exploitation in Our Capital Markets",
+      "url": "https://www.youtube.com/watch?v=r_jl8xv-0pc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119142/documents/HHRG-119-BA16-20260415-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 2478, the Financial Exploitation Prevention Act of 2025",
+      "url": "https://www.congress.gov/119/meeting/house/119142/documents/BILLS-119HR2478ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6161, the SEC Data Protection Act",
+      "url": "https://www.congress.gov/119/meeting/house/119142/documents/BILLS-119HR6161ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R___, the Honesty in Your Promotions and Endorsements (HYPE) Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119142/documents/BILLS-119pih-HYPEAct.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119142/documents/HHRG-119-BA16-20260415-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}
