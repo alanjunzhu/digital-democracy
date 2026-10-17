@@ -1,0 +1,52 @@
+{
+  "eventId": "118139",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "U.S. Military Posture and National Security Challenges in Europe",
+  "meetingStatus": "Scheduled",
+  "date": "2025-04-08T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas00",
+      "name": "House Armed Services"
+    }
+  ],
+  "location": {
+    "room": "2118",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118139?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "20250408: Full Hearing: U.S. Military Posture and National Security Challenges in Europe",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118139",
+      "format": ""
+    },
+    {
+      "name": "20250408: Full Hearing: U.S. Military Posture and National Security Challenges in Europe",
+      "url": "https://www.youtube.com/watch?v=AdR83NiStDM",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Ms. Thompson Bio",
+      "url": "https://www.congress.gov/119/meeting/house/118139/documents/HHRG-119-AS00-20250408-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Gen Cavoli Testimony",
+      "url": "https://www.congress.gov/119/meeting/house/118139/documents/HHRG-119-AS00-20250408-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Gen Cavoli Bio",
+      "url": "https://www.congress.gov/119/meeting/house/118139/documents/HHRG-119-AS00-20250408-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

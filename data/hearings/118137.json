@@ -1,0 +1,52 @@
+{
+  "eventId": "118137",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "U.S. Military Posture and National Security Challenges in the Indo-Pacific Region",
+  "meetingStatus": "Scheduled",
+  "date": "2025-04-09T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas00",
+      "name": "House Armed Services"
+    }
+  ],
+  "location": {
+    "room": "2118",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118137?format=json",
+  "witnesses": [
+    {
+      "name": "General Xavier Brunson",
+      "position": "Commander",
+      "organization": "United Nations Command / Combined Forces Command / U.S. Forces Korea"
+    },
+    {
+      "name": "Mr. John Noh",
+      "position": "Performing the Duties of the Assistant Secretary of Defense For Indo-Pacific Security Affairs",
+      "organization": "Department of Defense"
+    },
+    {
+      "name": "Admiral Samual Paparo",
+      "position": "Commander",
+      "organization": "U.S. Indo-Pacific Command"
+    }
+  ],
+  "videos": [
+    {
+      "name": "20250409: Full Hearing: U.S. Military Posture and National Security Challenges in the Indo-Pacific",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118137",
+      "format": ""
+    },
+    {
+      "name": "20250409: Full Hearing: U.S. Military Posture and National Security Challenges in the Indo-Pacific",
+      "url": "https://www.youtube.com/watch?v=B6tuVhHLTko",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

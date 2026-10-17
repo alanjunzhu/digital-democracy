@@ -1,0 +1,73 @@
+{
+  "eventId": "118312",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Supporting Farmers, Strengthening Conservation, Sustaining Working Lands\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-06-05T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsag14",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "1300",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118312?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Tim Fink",
+      "position": "Policy Director",
+      "organization": "American Farmland Trust"
+    },
+    {
+      "name": "Mr. Russell Boening",
+      "position": "President",
+      "organization": "Texas Farm Bureau"
+    },
+    {
+      "name": "Mr. Christopher McLeland",
+      "position": "Managing Director of Agriculture Programs",
+      "organization": "Ducks Unlimited"
+    },
+    {
+      "name": "Dr. Dan Sebert",
+      "position": "Senior Advisor and Former Executive Director",
+      "organization": "National Watershed Coalition"
+    },
+    {
+      "name": "Ms. Nicole Galase",
+      "position": "Managing Director",
+      "organization": "Hawaii Cattlemen's Council"
+    }
+  ],
+  "videos": [
+    {
+      "name": "“Supporting Farmers, Strengthening Conservation, Sustaining Working Lands”",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118312",
+      "format": ""
+    },
+    {
+      "name": "“Supporting Farmers, Strengthening Conservation, Sustaining Working Lands”",
+      "url": "https://www.youtube.com/watch?v=5XPrwrFVx84",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Witness-List_06.05.2025",
+      "url": "https://www.congress.gov/119/meeting/house/118312/documents/HHRG-119-AG14-WList-20250605.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Transcript_06.05.2025",
+      "url": "https://www.congress.gov/119/meeting/house/118312/documents/HHRG-119-AG14-Transcript-20250605.pdf",
+      "format": "PDF"
+    }
+  ]
+}

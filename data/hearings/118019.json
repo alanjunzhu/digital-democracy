@@ -1,0 +1,47 @@
+{
+  "eventId": "118019",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "U.S. Special Operations Forces and Command – Challenges and Resource Priorities for Fiscal Year 2026",
+  "meetingStatus": "Rescheduled",
+  "date": "2025-04-09T12:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas26",
+      "name": "House Armed Services Subcommittee on Intelligence and Special Operations"
+    }
+  ],
+  "location": {
+    "room": "2118",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118019?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Colby Jenkins",
+      "position": "Performing the Duties of the Assistant Secretary of Defense for Special Operations and Low Intensity Conflict",
+      "organization": "U.S. Department of Defense"
+    },
+    {
+      "name": "General Bryan Fenton",
+      "position": "Commander",
+      "organization": "U.S. Special Operations Command"
+    }
+  ],
+  "videos": [
+    {
+      "name": "20250401: ISO Hearing: U.S. SOF – Challenges and Resource Priorities for FY 2026",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118019",
+      "format": ""
+    },
+    {
+      "name": "20250401: ISO Hearing: U.S. SOF – Challenges and Resource Priorities for FY 2026",
+      "url": "https://www.youtube.com/watch?v=KQvsUtaZoS8",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

@@ -1,0 +1,53 @@
+{
+  "eventId": "118368",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"For the Purpose of Receiving Testimony from The Honorable Brooke L. Rollins, Secretary, U.S. Department of Agriculture\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-06-11T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsag00",
+      "name": "House Agriculture"
+    }
+  ],
+  "location": {
+    "room": "1300",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118368?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Brooke Rollins",
+      "position": "Secretary",
+      "organization": "United States Department of Agriculture"
+    },
+    {
+      "name": "The Honorable Brooke Rollins",
+      "position": "Secretary",
+      "organization": "United States Department of Agriculture"
+    }
+  ],
+  "videos": [
+    {
+      "name": "To receive testimony from The Honorable Brooke L. Rollins, Secretary, U.S. Department of Agriculture",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118368",
+      "format": ""
+    },
+    {
+      "name": "To receive testimony from The Honorable Brooke L. Rollins, Secretary, U.S. Department of Agriculture",
+      "url": "https://www.youtube.com/watch?v=n7ECfiQtWMg",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Transcript_06.11.2025",
+      "url": "https://www.congress.gov/119/meeting/house/118368/documents/HHRG-119-AG00-Transcript-20250611.pdf",
+      "format": "PDF"
+    }
+  ]
+}

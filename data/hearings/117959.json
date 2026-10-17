@@ -1,0 +1,57 @@
+{
+  "eventId": "117959",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Role of Special Operations in Great Power Competition",
+  "meetingStatus": "Scheduled",
+  "date": "2025-02-26T18:30:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas26",
+      "name": "House Armed Services Subcommittee on Intelligence and Special Operations"
+    }
+  ],
+  "location": {
+    "room": "2118",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/117959?format=json",
+  "witnesses": [
+    {
+      "name": "Major General Peter Huntley",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Lieutenant General Michael Conley",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Lieutenant General Jonathan Braga",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Rear Admiral Lower Half Milton Sands",
+      "position": "",
+      "organization": ""
+    }
+  ],
+  "videos": [
+    {
+      "name": "20250226: FC: ISO Hearing: The Role of Special Operations in Great Power Competition",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/117959",
+      "format": ""
+    },
+    {
+      "name": "20250226: FC: ISO Hearing: The Role of Special Operations in Great Power Competition",
+      "url": "https://www.youtube.com/watch?v=MiTe9nd_2eI",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

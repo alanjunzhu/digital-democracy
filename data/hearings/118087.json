@@ -1,0 +1,57 @@
+{
+  "eventId": "118087",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "U.S. Military Posture and National Security Challenges in North and South America",
+  "meetingStatus": "Scheduled",
+  "date": "2025-04-01T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas00",
+      "name": "House Armed Services"
+    }
+  ],
+  "location": {
+    "room": "2118",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118087?format=json",
+  "witnesses": [
+    {
+      "name": "Admiral Alvin Holsey",
+      "position": "Commander,  U.S. Southern Command",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Rafael Leonardo",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Mr. Robert Salesses",
+      "position": "",
+      "organization": ""
+    },
+    {
+      "name": "Commander Gregory Guillot",
+      "position": "U.S. Northern Command and North American Aerospace Defense Command",
+      "organization": ""
+    }
+  ],
+  "videos": [
+    {
+      "name": "20250401: Full Hearing: US Military Posture & National Security Challenges in North & South America",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118087",
+      "format": ""
+    },
+    {
+      "name": "20250401: Full Hearing: US Military Posture & National Security Challenges in North & South America",
+      "url": "https://www.youtube.com/watch?v=Mx99nRaBKq8",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

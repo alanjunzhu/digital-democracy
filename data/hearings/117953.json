@@ -1,0 +1,52 @@
+{
+  "eventId": "117953",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Strengthening America's Defense Industrial Base, Workforce and Production Lines to Deter War",
+  "meetingStatus": "Scheduled",
+  "date": "2025-02-26T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas00",
+      "name": "House Armed Services"
+    }
+  ],
+  "location": {
+    "room": "2118",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/117953?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Eric Fanning",
+      "position": "President and Chief Executive Officer",
+      "organization": "Aerospace Industries Association"
+    },
+    {
+      "name": "The Honorable David Norquist",
+      "position": "President and Chief Executive Officer",
+      "organization": "National Defense Industrial Association"
+    },
+    {
+      "name": "Mr. Matthew Paxton",
+      "position": "President",
+      "organization": "Shipbuilders Council of America"
+    }
+  ],
+  "videos": [
+    {
+      "name": "20250226: FC: Strengthening America’s DIB, Workforce and Production Lines to Deter War",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/117953",
+      "format": ""
+    },
+    {
+      "name": "20250226: FC: Strengthening America’s DIB, Workforce and Production Lines to Deter War",
+      "url": "https://www.youtube.com/watch?v=oqTzfEcVOP8",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

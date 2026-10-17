@@ -1,0 +1,73 @@
+{
+  "eventId": "118055",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Inside the Biden FBI: Waste, Fraud, Abuse, and a Bureau Leadership in Decline”",
+  "meetingStatus": "Rescheduled",
+  "date": "2025-04-02T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsju13",
+      "name": "House Judiciary Subcommittee on Oversight"
+    }
+  ],
+  "location": {
+    "room": "2141",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118055?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Stewart Whitson",
+      "position": "Senior Director of Federal Affairs",
+      "organization": "Foundation for Government Accountability"
+    },
+    {
+      "name": "Mr. Richard Stout",
+      "position": "Director",
+      "organization": "Reform the Bureau"
+    },
+    {
+      "name": "Ms. Nicole Parker",
+      "position": "Former FBI Special Agent",
+      "organization": ""
+    },
+    {
+      "name": "Dr. Luke Hunt",
+      "position": "Associate Professor",
+      "organization": "University of Alabama"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Inside the Biden FBI: Waste, Fraud, Abuse, and a Bureau Leadership in Decline",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118055",
+      "format": ""
+    },
+    {
+      "name": "Inside the Biden FBI: Waste, Fraud, Abuse, and a Bureau Leadership in Decline",
+      "url": "https://www.youtube.com/watch?v=FpBcE_ybpr4",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "A letter dated March 26, 2025, from Ranking Member Raskin to Attorney General Bondi and Director Patel, submitted for the Record by Mr. Raskin of MD",
+      "url": "https://www.congress.gov/119/meeting/house/118055/documents/HHRG-119-JU13-20250402-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "An article from Politico titled, “Waltz’s team set up at least 20 Signal group chats for crises across the world”, submitted for the Record by Mr. Raskin of MD",
+      "url": "https://www.congress.gov/119/meeting/house/118055/documents/HHRG-119-JU13-20250402-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "An article from The New York Times titled, “No Bias Found in F.B.I. Report on Catholic Extremists”, submitted for the Record by Ms. Crockett of TX",
+      "url": "https://www.congress.gov/119/meeting/house/118055/documents/HHRG-119-JU13-20250402-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

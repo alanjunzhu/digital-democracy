@@ -1,0 +1,63 @@
+{
+  "eventId": "117919",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Justice Delayed: The Crisis of Undermanned Federal Courts”",
+  "meetingStatus": "Scheduled",
+  "date": "2025-02-25T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsju03",
+      "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
+    }
+  ],
+  "location": {
+    "room": "2141",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/117919?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Timothy Tymkovich",
+      "position": "Circuit Judge",
+      "organization": "U.S. Court of Appeals for the Tenth Circuit"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Justice Delayed: The Crisis of Undermanned Federal Courts",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/117919",
+      "format": ""
+    },
+    {
+      "name": "Justice Delayed: The Crisis of Undermanned Federal Courts",
+      "url": "https://www.youtube.com/watch?v=erXQ4kIIQeE",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "A draft of a bill to amend title 28, United States Code, to limit the authority of district courts to provide injunctive relief, and for other purposes, submitted for the Record by Mr. Issa of CA",
+      "url": "https://www.congress.gov/119/meeting/house/117919/documents/HHRG-119-JU03-20250225-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 4886 from the 117th Congress, submitted for the Record by Mr. Issa of CA",
+      "url": "https://www.congress.gov/119/meeting/house/117919/documents/HHRG-119-JU03-20250225-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Discussion draft of the JUDGES Act of 2025, submitted for the Record by Mr. Issa of CA",
+      "url": "https://www.congress.gov/119/meeting/house/117919/documents/HHRG-119-JU03-20250225-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "A draft of a bill to amend title 28, United States Code, to provide for transparency and oversight of third-party beneficiaries in civil actions, submitted for the Record by Mr. Issa of CA",
+      "url": "https://www.congress.gov/119/meeting/house/117919/documents/HHRG-119-JU03-20250225-SD003.pdf",
+      "format": "PDF"
+    }
+  ]
+}

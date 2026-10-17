@@ -1,0 +1,68 @@
+{
+  "eventId": "117871",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Examining the Economic Crisis in Farm Country\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-02-11T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsag00",
+      "name": "House Agriculture"
+    }
+  ],
+  "location": {
+    "room": "1300",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/117871?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. John Newton",
+      "position": "Executive Head",
+      "organization": "Terrain"
+    },
+    {
+      "name": "Ms. Alisha Schwertner",
+      "position": "Owner",
+      "organization": "Eric and Alisha Schwertner Farms"
+    },
+    {
+      "name": "Mr. Ryan Talley",
+      "position": "Partner",
+      "organization": "Talley Farms"
+    },
+    {
+      "name": "Mr. Rodney Weinzierl",
+      "position": "Owner",
+      "organization": "Weinzierl Farms"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Examining the Economic Crisis in Farm Country",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/117871",
+      "format": ""
+    },
+    {
+      "name": "Examining the Economic Crisis in Farm Country",
+      "url": "https://www.youtube.com/watch?v=_dROkjgDGyU",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Witness List",
+      "url": "https://www.congress.gov/119/meeting/house/117871/documents/HHRG-119-AG00-20250211-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Transcript_02.11.2025",
+      "url": "https://www.congress.gov/119/meeting/house/117871/documents/HHRG-119-AG00-Transcript-20250211-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}
