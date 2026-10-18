@@ -11,9 +11,9 @@
     "party": "R",
     "state": "AZ"
   },
-  "latestAction": "Message on Senate action sent to the House.",
-  "latestActionDate": "2026-10-14",
-  "updateDate": "2026-10-15T10:56:20Z",
+  "latestAction": "Presented to President.",
+  "latestActionDate": "2026-10-15",
+  "updateDate": "2026-10-16T08:05:25Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/6380",
@@ -67,6 +67,14 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-15",
+      "text": "Presented to President."
+    },
+    {
+      "date": "2026-10-15",
+      "text": "Presented to President."
+    },
     {
       "date": "2026-10-14",
       "text": "Message on Senate action sent to the House."
@@ -146,16 +154,6 @@
     {
       "date": "2026-02-11",
       "text": "Ordered to be Reported (Amended) by Unanimous Consent.",
-      "chamber": "House"
-    },
-    {
-      "date": "2026-02-11",
-      "text": "Committee Consideration and Mark-up Session Held",
-      "chamber": "House"
-    },
-    {
-      "date": "2026-02-11",
-      "text": "Subcommittee on Federal Lands Discharged",
       "chamber": "House"
     }
   ],

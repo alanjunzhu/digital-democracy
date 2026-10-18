@@ -11,9 +11,9 @@
     "party": "D",
     "state": "WA"
   },
-  "latestAction": "Message on Senate action sent to the House.",
-  "latestActionDate": "2026-09-28",
-  "updateDate": "2026-10-14T18:19:34Z",
+  "latestAction": "Presented to President.",
+  "latestActionDate": "2026-10-14",
+  "updateDate": "2026-10-15T16:07:33Z",
   "originChamber": "House",
   "policyArea": "Native Americans",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/2388",
@@ -67,6 +67,14 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-14",
+      "text": "Presented to President."
+    },
+    {
+      "date": "2026-10-14",
+      "text": "Presented to President."
+    },
     {
       "date": "2026-09-28",
       "text": "Message on Senate action sent to the House."
@@ -145,16 +153,6 @@
     {
       "date": "2025-06-25",
       "text": "Ordered to be Reported by Unanimous Consent.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-06-25",
-      "text": "Committee Consideration and Mark-up Session Held",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-06-25",
-      "text": "Subcommittee on Indian and Insular Affairs Discharged",
       "chamber": "House"
     }
   ],

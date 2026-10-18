@@ -11,9 +11,9 @@
     "party": "R",
     "state": "AK"
   },
-  "latestAction": "Message on Senate action sent to the House.",
-  "latestActionDate": "2026-10-14",
-  "updateDate": "2026-10-15T10:56:20Z",
+  "latestAction": "Presented to President.",
+  "latestActionDate": "2026-10-15",
+  "updateDate": "2026-10-16T08:05:23Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/3620",
@@ -83,6 +83,14 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-15",
+      "text": "Presented to President."
+    },
+    {
+      "date": "2026-10-15",
+      "text": "Presented to President."
+    },
     {
       "date": "2026-10-14",
       "text": "Message on Senate action sent to the House."
@@ -161,15 +169,6 @@
     {
       "date": "2025-12-09",
       "text": "Reported by the Committee on Natural Resources. H. Rept. 119-398, Part I.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-12-09",
-      "text": "Reported by the Committee on Natural Resources. H. Rept. 119-398, Part I."
-    },
-    {
-      "date": "2025-07-23",
-      "text": "Ordered to be Reported by Unanimous Consent.",
       "chamber": "House"
     }
   ],
