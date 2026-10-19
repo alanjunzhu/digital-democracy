@@ -1,0 +1,73 @@
+{
+  "eventId": "119371",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Agricultural Perspectives on the Future of the USMCA\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-10T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsag00",
+      "name": "House Agriculture"
+    }
+  ],
+  "location": {
+    "room": "1300",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119371?format=json",
+  "witnesses": [
+    {
+      "name": "Mrs. Kristen Sawin",
+      "position": "Vice President, Government & Corporate Affairs",
+      "organization": "Weyerhaeuser"
+    },
+    {
+      "name": "Mr. Michael Lichte",
+      "position": "Chief Insights and Optimization Officer",
+      "organization": "Dairy Farmers of America"
+    },
+    {
+      "name": "Mr. Dave Puglia",
+      "position": "President and Chief Executive Officer",
+      "organization": "Western Growers Association"
+    },
+    {
+      "name": "Mrs. Jamie Beyer",
+      "position": "ASA Director and Executive Committee Member",
+      "organization": "American Soybean Association"
+    },
+    {
+      "name": "Mr. Michael Schumpp",
+      "position": "Senior Director, International Affairs",
+      "organization": "Meat Institute"
+    },
+    {
+      "name": "Mr. Neil Herrington",
+      "position": "Senior Vice President, Americas Program",
+      "organization": "U.S. Chamber of Commerce"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing on Agricultural Perspectives on the Future of the USMCA",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119371",
+      "format": ""
+    },
+    {
+      "name": "Hearing on Agricultural Perspectives on the Future of the USMCA",
+      "url": "https://www.youtube.com/watch?v=a56zdXhDvm4",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Witness-List_06.10.2026",
+      "url": "https://www.congress.gov/119/meeting/house/119371/documents/HHRG-119-AG00-WList-20260610-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

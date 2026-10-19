@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-18T13:40:35.211Z",
+  "lastUpdated": "2026-10-19T16:42:26.186Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -3521,24 +3521,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338683?format=json"
     },
     {
-      "eventId": "119460",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Building an AI-Ready America: How AI Is Creating Opportunities Across America's Workforce”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-24T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed00",
-          "name": "House Education and Workforce"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119460?format=json"
-    },
-    {
       "eventId": "338671",
       "congress": 119,
       "chamber": "Senate",
@@ -3706,28 +3688,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119408?format=json"
     },
     {
-      "eventId": "119432",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Charting a New Course: Countering China's Dominance in Global Shipbuilding",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa05",
-          "name": "House Foreign Affairs East Asia and Pacific Subcommittee"
-        }
-      ],
-      "location": {
-        "room": "2172",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119432?format=json"
-    },
-    {
       "eventId": "338669",
       "congress": 119,
       "chamber": "Senate",
@@ -3848,60 +3808,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119484?format=json"
     },
     {
-      "eventId": "119489",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative Proposals to Strengthen Consumer Protection in a Changing Marketplace.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif17",
-          "name": "House Energy and Commerce Subcommittee on Commerce, Manufacturing, and Trade"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr6832",
-        "hr9708",
-        "hr2713",
-        "hr7502",
-        "hr5956",
-        "hr3209",
-        "hr5967",
-        "hr3875",
-        "hr7945"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119489?format=json"
-    },
-    {
-      "eventId": "119482",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Broken Trust: How the Biden-Harris DOL Leaked Confidential Information”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed10",
-          "name": "House Education and Workforce Subcommittee on Workforce Protections"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119482?format=json"
-    },
-    {
       "eventId": "119492",
       "congress": 119,
       "chamber": "House",
@@ -3960,147 +3866,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119483?format=json"
-    },
-    {
-      "eventId": "119494",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "H.R. 9772, H.R. 9771, H.R. 9721, and H.R. 9722",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hswm00",
-          "name": "House Ways and Means"
-        }
-      ],
-      "location": {
-        "room": "1100",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119494?format=json"
-    },
-    {
-      "eventId": "119486",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Committee on House Administration Full Committee Hearing, “Oversight of the Smithsonian: Radical Revisionism at the National Museum of American History.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsha00",
-          "name": "Committee on House Administration"
-        }
-      ],
-      "location": {
-        "room": "1310",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119486?format=json"
-    },
-    {
-      "eventId": "119463",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "United Nations Accountability and Reform: Advancing an America First Foreign Policy Through Strategic Diplomacy and Burden Sharing",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa00",
-          "name": "House Foreign Affairs"
-        }
-      ],
-      "location": {
-        "room": "2172",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119463?format=json"
-    },
-    {
-      "eventId": "119485",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Funding Lapses: Analyzing Shutdown Reform",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsap00",
-          "name": "House Appropriations"
-        }
-      ],
-      "location": {
-        "room": "2128",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119485?format=json"
-    },
-    {
-      "eventId": "119357",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Mark-up of:\r\n•\tH.R. 309 (Rep. Nehls), “National Law Enforcement Officers Remembrance, Support and Community Outreach Act”\r\n•\tH.R. 1693 (Rep. Hageman), To redesignate the National Historic Trails Interpretive Center in Casper, Wyoming, as the “Barbara L. Cubin National Historic Trails Interpretive Center”. \r\n•\tH.R. 4219 (Rep. Case), “National Wildlife Refuge System Invasive Species Strike Team Act of 2025”\r\n•\tH.R. 4931 (Rep. Murphy of NC), “National Park System Long-Term Lease Investment Act”\r\n•\tH.R. 5063 (Rep. Kiggans), “Safe Beaches, Safe Swimmers Act” \r\n•\tH.R. 6021 (Rep. Begich), “Archie Cavanaugh Migratory Bird Treaty Amendment Act”\r\n•\tH.R. 8121 (Rep. Plaskett), To designate the Christiansted Bandstand at the Christiansted National Historic Site, St. Croix, Virgin Islands, as the “Peter G. Thurland, Sr., Bandstand”.\r\n•\tH.R. 8454 (Rep. McClintock), To provide for the transfer of administrative jurisdiction over certain Federal land in the State of California, and for other purposes.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii00",
-          "name": "House Natural Resources"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr4219",
-        "hr8454",
-        "hr309",
-        "hr1693",
-        "hr5063",
-        "hr4931",
-        "hr8121",
-        "hr6021"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119357?format=json"
-    },
-    {
-      "eventId": "119479",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"For the Purpose of Receiving Testimony from Chief Tom Schultz, U.S. Forest Service\"",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsag15",
-          "name": "House Subcommittee on Forestry and Horticulture"
-        }
-      ],
-      "location": {
-        "room": "1300",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119479?format=json"
     },
     {
       "eventId": "338682",
@@ -4496,52 +4261,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119481?format=json"
-    },
-    {
-      "eventId": "119480",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "H.R. 9773, Permanent Trump Secure Border Act and Ratification of Subcommittee Assignments",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-21T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju00",
-          "name": "House Judiciary"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr9773"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119480?format=json"
-    },
-    {
-      "eventId": "119472",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "25 Years After 9/11: Confronting the Next Generation of Threats",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-21T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hlig00",
-          "name": "House Intelligence (Permanent Select)"
-        }
-      ],
-      "location": {
-        "room": "1334",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119472?format=json"
     },
     {
       "eventId": "119474",
@@ -5248,36 +4967,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338645?format=json"
     },
     {
-      "eventId": "119448",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "Subcommittee Markup of Seven Pieces of Legislation",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-14T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif18",
-          "name": "House Energy and Commerce Subcommittee on Environment"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr9317",
-        "hr9617",
-        "hr9616",
-        "hr2140",
-        "hr9618",
-        "hr3194",
-        "hr9615"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119448?format=json"
-    },
-    {
       "eventId": "338642",
       "congress": 119,
       "chamber": "Senate",
@@ -5344,35 +5033,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119433?format=json"
     },
     {
-      "eventId": "119447",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Subcommittee Markup of Six Pieces of Legislation",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-14T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif03",
-          "name": "House Energy and Commerce Subcommittee on Energy"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr9612",
-        "hr9084",
-        "hr9614",
-        "hr3978",
-        "hr9613",
-        "hr5549"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119447?format=json"
-    },
-    {
       "eventId": "338644",
       "congress": 119,
       "chamber": "Senate",
@@ -5393,28 +5053,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338644?format=json"
-    },
-    {
-      "eventId": "119446",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“AI on Main Street: How AI is Shaping the Future of Small Business.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-14T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hssm00",
-          "name": "House Small Business"
-        }
-      ],
-      "location": {
-        "room": "2360",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119446?format=json"
     },
     {
       "eventId": "338621",
@@ -5459,55 +5097,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119426?format=json"
-    },
-    {
-      "eventId": "119422",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Memorializing our Veterans: Outreach, Upkeep, and Community Partnerships \r\nat Veterans Cemeteries",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-30T18:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr09",
-          "name": "House Veterans' Affairs Subcommittee on Disability Assistance and Memorial Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119422?format=json"
-    },
-    {
-      "eventId": "119423",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "American Global Competitiveness at 250: Legislative Proposals to Secure U.S. Technology Leadership.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-30T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif17",
-          "name": "House Energy and Commerce Subcommittee on Commerce, Manufacturing, and Trade"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr9385",
-        "hr6207",
-        "hr7334",
-        "hr2321"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119423?format=json"
     },
     {
       "eventId": "119418",
@@ -5702,28 +5291,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119396?format=json"
     },
     {
-      "eventId": "119410",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Combating Waste, Fraud, and Abuse in SNAP”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-25T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsgo16",
-          "name": "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency"
-        }
-      ],
-      "location": {
-        "room": "2154",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119410?format=json"
-    },
-    {
       "eventId": "338608",
       "congress": 119,
       "chamber": "Senate",
@@ -5854,37 +5421,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338600?format=json"
-    },
-    {
-      "eventId": "119393",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Subcommittee Markup of Eight Pieces of Legislation",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif03",
-          "name": "House Energy and Commerce Subcommittee on Energy"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr6529",
-        "hr9335",
-        "hr2986",
-        "hr9339",
-        "hr9332",
-        "hr9338",
-        "hr6633",
-        "hr9340"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119393?format=json"
     },
     {
       "eventId": "338579",
@@ -6642,6 +6178,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338544?format=json"
     },
     {
+      "eventId": "119371",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Agricultural Perspectives on the Future of the USMCA\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-10T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsag00",
+          "name": "House Agriculture"
+        }
+      ],
+      "location": {
+        "room": "1300",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119371?format=json"
+    },
+    {
       "eventId": "338543",
       "congress": 119,
       "chamber": "Senate",
@@ -6902,72 +6460,6 @@
         "hr5549"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119367?format=json"
-    },
-    {
-      "eventId": "119364",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"On Call for America: Strengthening Access Through Locum Tenens Providers\"",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-09T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed10",
-          "name": "House Education and Workforce Subcommittee on Workforce Protections"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119364?format=json"
-    },
-    {
-      "eventId": "119329",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Various Measures",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-09T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa00",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "2172",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119329?format=json"
-    },
-    {
-      "eventId": "119365",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“The Southern Poverty Law Center: Manufacturing Hate, Part II”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-09T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju00",
-          "name": "House Judiciary"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119365?format=json"
     },
     {
       "eventId": "338541",
@@ -7364,37 +6856,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338510?format=json"
-    },
-    {
-      "eventId": "119343",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Rules of the Road: Examining Legislation to Modernize the Clean Air Act's Mobile Source Requirements",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-03T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif18",
-          "name": "House Energy and Commerce Subcommittee on Environment"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr7000",
-        "hr2165",
-        "hr8782",
-        "hr2140",
-        "hr3194",
-        "hr6200",
-        "hr6250",
-        "hr9083"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119343?format=json"
     },
     {
       "eventId": "338507",
@@ -7878,28 +7339,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338418?format=json"
     },
     {
-      "eventId": "119304",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Examining the Medicare Physician Fee Schedule, MACRA, and Opportunities for Payment Reforms",
-      "meetingStatus": "Rescheduled",
-      "date": "2026-05-20T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif14",
-          "name": "House Energy and Commerce Subcommittee on Health"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119304?format=json"
-    },
-    {
       "eventId": "119293",
       "congress": 119,
       "chamber": "House",
@@ -8366,28 +7805,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119213?format=json"
     },
     {
-      "eventId": "119167",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "The Fiscal Year 2027 Department of Energy Budget.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-04-16T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif03",
-          "name": "House Energy and Commerce Subcommittee on Energy"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119167?format=json"
-    },
-    {
       "eventId": "119134",
       "congress": 119,
       "chamber": "House",
@@ -8678,28 +8095,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119064?format=json"
     },
     {
-      "eventId": "119077",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Winter Storm Fern Lessons: Supplying Reliable Power to Meet Peak Demand",
-      "meetingStatus": "Scheduled",
-      "date": "2026-03-17T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif03",
-          "name": "House Energy and Commerce Subcommittee on Energy"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119077?format=json"
-    },
-    {
       "eventId": "338054",
       "congress": 119,
       "chamber": "NoChamber",
@@ -8872,28 +8267,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118992?format=json"
     },
     {
-      "eventId": "118997",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "\"Proposals for a Water Resources Development Act of 2026 - Administration Priorities\"",
-      "meetingStatus": "Scheduled",
-      "date": "2026-02-24T15:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hspw02",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "2167",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118997?format=json"
-    },
-    {
       "eventId": "337980",
       "congress": 119,
       "chamber": "NoChamber",
@@ -8938,28 +8311,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118948?format=json"
     },
     {
-      "eventId": "118954",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Lowering Health Care Costs for All\r\nAmericans: An Examination of the Prescription Drug Supply Chain",
-      "meetingStatus": "Scheduled",
-      "date": "2026-02-11T15:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif14",
-          "name": "House Energy and Commerce Subcommittee on Health"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118954?format=json"
-    },
-    {
       "eventId": "337959",
       "congress": 119,
       "chamber": "Senate",
@@ -8980,34 +8331,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/337959?format=json"
-    },
-    {
-      "eventId": "118937",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Markup of 5 Bills",
-      "meetingStatus": "Scheduled",
-      "date": "2026-02-04T19:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif03",
-          "name": "House Energy and Commerce Subcommittee on Energy"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr7258",
-        "hr7257",
-        "hr7272",
-        "hr7266",
-        "hr7305"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118937?format=json"
     },
     {
       "eventId": "337942",
@@ -9054,28 +8377,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118930?format=json"
     },
     {
-      "eventId": "118897",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Chemicals in Commerce: Legislative Proposal to Modernize America’s Chemical Safety Law, Strengthen Critical Supply Chains, and Grow Domestic Manufacturing.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-01-22T19:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif18",
-          "name": "House Energy and Commerce Subcommittee on Environment"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118897?format=json"
-    },
-    {
       "eventId": "118882",
       "congress": 119,
       "chamber": "House",
@@ -9096,28 +8397,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118882?format=json"
-    },
-    {
-      "eventId": "118890",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "Lowering Health Care Costs for All Americans: An Examination of Health Insurance Affordability",
-      "meetingStatus": "Scheduled",
-      "date": "2026-01-22T14:45:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif14",
-          "name": "House Energy and Commerce Subcommittee on Health"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118890?format=json"
     },
     {
       "eventId": "337769",
@@ -9252,6 +8531,160 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337762?format=json"
     },
     {
+      "eventId": "118730",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Building A Talent Marketplace: How LERs Empower Workers and Expand Opportunity\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-12-10T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed13",
+          "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118730?format=json"
+    },
+    {
+      "eventId": "118717",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Safeguarding Student Privacy and Parental Rights: A Review of FERPA and PPRA”",
+      "meetingStatus": "Scheduled",
+      "date": "2025-12-03T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118717?format=json"
+    },
+    {
+      "eventId": "118716",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Public Funds, Private Politics: Examining Bias in the Truman Scholarship Program”",
+      "meetingStatus": "Scheduled",
+      "date": "2025-12-03T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed13",
+          "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118716?format=json"
+    },
+    {
+      "eventId": "118704",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Pension Predators: Stopping Class Action Abuse Against Workers' Retirement\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-12-02T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118704?format=json"
+    },
+    {
+      "eventId": "118683",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Member Day",
+      "meetingStatus": "Scheduled",
+      "date": "2025-11-21T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": {
+        "room": "2261",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118683?format=json"
+    },
+    {
+      "eventId": "118664",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"From Classroom to Career: Strengthening Skills Pathways Through CTE\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-11-19T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118664?format=json"
+    },
+    {
+      "eventId": "118458",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"E-Verify: Ensuring Lawful Employment in America\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-11-19T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed10",
+          "name": "House Education and Workforce Subcommittee on Workforce Protections"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118458?format=json"
+    },
+    {
       "eventId": "337663",
       "congress": 119,
       "chamber": "NoChamber",
@@ -9318,6 +8751,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337429?format=json"
     },
     {
+      "eventId": "118603",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"No More Surprises: Reforming College Pricing for Students and Families\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-09-16T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed13",
+          "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118603?format=json"
+    },
+    {
       "eventId": "337384",
       "congress": 119,
       "chamber": "NoChamber",
@@ -9338,6 +8793,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337384?format=json"
+    },
+    {
+      "eventId": "118587",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"From Playground to Classroom: The Spread of Antisemitism in K-12 Schools\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-09-10T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118587?format=json"
     },
     {
       "eventId": "118604",
@@ -9362,6 +8839,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118604?format=json"
     },
     {
+      "eventId": "118573",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Unmasking Union Antisemitism\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-09-09T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118573?format=json"
+    },
+    {
       "eventId": "337380",
       "congress": 119,
       "chamber": "NoChamber",
@@ -9382,6 +8881,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337380?format=json"
+    },
+    {
+      "eventId": "118564",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Foundations First: Reclaiming Reading and Math through Proven Instruction\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-09-03T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118564?format=json"
     },
     {
       "eventId": "337302",
@@ -9428,6 +8949,50 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337260?format=json"
     },
     {
+      "eventId": "118497",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Safe Workplaces, Stronger Partnerships: The Future of OSHA Compliance Assistance\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-07-16T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed10",
+          "name": "House Education and Workforce Subcommittee on Workforce Protections"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118497?format=json"
+    },
+    {
+      "eventId": "118469",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Antisemitism in Higher Education: Examining the Role of Faculty, Funding, and Ideology”",
+      "meetingStatus": "Rescheduled",
+      "date": "2025-07-15T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118469?format=json"
+    },
+    {
       "eventId": "337125",
       "congress": 119,
       "chamber": "NoChamber",
@@ -9472,6 +9037,72 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337102?format=json"
     },
     {
+      "eventId": "118405",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "\"Enhancing Educational Outcomes in Indian Country: Postsecondary Education at the Bureau of Indian Education\"",
+      "meetingStatus": "Canceled",
+      "date": "2025-06-24T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed13",
+          "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118405?format=json"
+    },
+    {
+      "eventId": "118387",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "Enhancing Educational Outcomes in Indian Country: Postsecondary Education at the Bureau of Indian Education.",
+      "meetingStatus": "Rescheduled",
+      "date": "2025-06-24T14:30:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": {
+        "room": "1334HR",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118387?format=json"
+    },
+    {
+      "eventId": "118406",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Child Care and the American Workforce: Removing Barriers to Economic Growth”",
+      "meetingStatus": "Scheduled",
+      "date": "2025-06-24T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118406?format=json"
+    },
+    {
       "eventId": "118298",
       "congress": 119,
       "chamber": "House",
@@ -9497,6 +9128,28 @@
         "hr1676"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118298?format=json"
+    },
+    {
+      "eventId": "118363",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Restoring Balance: Ensuring Fairness and Transparency at the NLRB\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-06-11T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118363?format=json"
     },
     {
       "eventId": "118368",
@@ -9609,6 +9262,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118330?format=json"
     },
     {
+      "eventId": "118285",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Restoring Excellence: The Case Against DEI\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-05-21T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed13",
+          "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118285?format=json"
+    },
+    {
       "eventId": "118250",
       "congress": 119,
       "chamber": "House",
@@ -9636,6 +9311,94 @@
         "hr513"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118250?format=json"
+    },
+    {
+      "eventId": "118255",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Reclaiming OSHA's Mission: Ensuring Safety Without Overreach\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-05-15T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed10",
+          "name": "House Education and Workforce Subcommittee on Workforce Protections"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118255?format=json"
+    },
+    {
+      "eventId": "118239",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Reimagining Education: How Charter Schools Are Closing Gaps and Opening Doors”",
+      "meetingStatus": "Rescheduled",
+      "date": "2025-05-14T14:30:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118239?format=json"
+    },
+    {
+      "eventId": "118209",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Beyond the Ivy League: Stopping the Spread of Antisemitism on American Campuses\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-05-07T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118209?format=json"
+    },
+    {
+      "eventId": "118183",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"FECA Reform and Oversight: Prioritizing Workers, Protecting Taxpayer Dollars\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-05-06T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed10",
+          "name": "House Education and Workforce Subcommittee on Workforce Protections"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118183?format=json"
     },
     {
       "eventId": "118152",
@@ -9753,6 +9516,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118019?format=json"
     },
     {
+      "eventId": "118023",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Game Changer: the NLRB, Student-Athletes, and the Future of College Sports\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-04-08T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118023?format=json"
+    },
+    {
       "eventId": "118139",
       "congress": 119,
       "chamber": "House",
@@ -9797,6 +9582,50 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118055?format=json"
     },
     {
+      "eventId": "118022",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"A Healthy Workforce: Expanding Access and Affordability in Employer-Sponsored Health Care\"",
+      "meetingStatus": "Rescheduled",
+      "date": "2025-04-02T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118022?format=json"
+    },
+    {
+      "eventId": "118021",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"From Chalkboards to Chatbots: The Impact of AI on K-12 Education\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-04-01T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118021?format=json"
+    },
+    {
       "eventId": "118087",
       "congress": 119,
       "chamber": "House",
@@ -9839,6 +9668,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118073?format=json"
+    },
+    {
+      "eventId": "118020",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"The Future of Wage Laws: Assessing the FLSA's Effectiveness, Challenges, and Opportunities\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-03-25T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed10",
+          "name": "House Education and Workforce Subcommittee on Workforce Protections"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118020?format=json"
     },
     {
       "eventId": "118038",
@@ -9907,6 +9758,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/336705?format=json"
     },
     {
+      "eventId": "117961",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Education Without Limits: Exploring the Benefits of School Choice\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-03-11T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/117961?format=json"
+    },
+    {
       "eventId": "117995",
       "congress": 119,
       "chamber": "House",
@@ -9927,6 +9800,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/117995?format=json"
+    },
+    {
+      "eventId": "117960",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Strengthening WIOA: Improving Outcomes for America's Workforce\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-03-05T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed13",
+          "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/117960?format=json"
     },
     {
       "eventId": "117974",
@@ -10037,6 +9932,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/117959?format=json"
+    },
+    {
+      "eventId": "117886",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Unleashing America's Workforce and Strengthening Our Economy\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-02-26T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/117886?format=json"
     },
     {
       "eventId": "117953",
@@ -10213,6 +10130,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/117864?format=json"
+    },
+    {
+      "eventId": "117854",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"The State of American Education\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-02-05T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/117854?format=json"
     }
   ]
 }

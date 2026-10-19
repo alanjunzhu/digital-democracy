@@ -1,0 +1,93 @@
+{
+  "eventId": "118683",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Member Day",
+  "meetingStatus": "Scheduled",
+  "date": "2025-11-21T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": {
+    "room": "2261",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118683?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Kevin Hern",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Maxine Dexter",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Randy Fine",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Suzanne Bonamici",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Dave Taylor",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Tracey Mann",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Jahana Hayes",
+      "position": "Member of Congress",
+      "organization": ""
+    }
+  ],
+  "videos": [
+    {
+      "name": "Member Day Hearing",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118683",
+      "format": ""
+    },
+    {
+      "name": "Member Day Hearing",
+      "url": "https://www.youtube.com/watch?v=jkZTF9ycT_M",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Rep. Mark Takano (CA-39) | Submission for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118683/documents/HHRG-119-ED00-20251121-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Susie Lee (NV-03) Remarks | Submission for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118683/documents/HHRG-119-ED00-20251121-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Andy Barr (KY-06) Remarks | Submission for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118683/documents/HHRG-119-ED00-20251121-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118683/documents/HHRG-119-ED00-20251121-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

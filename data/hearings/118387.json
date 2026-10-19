@@ -1,0 +1,41 @@
+{
+  "eventId": "118387",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Enhancing Educational Outcomes in Indian Country: Postsecondary Education at the Bureau of Indian Education.",
+  "meetingStatus": "Rescheduled",
+  "date": "2025-06-24T14:30:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": {
+    "room": "1334HR",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118387?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118387/documents/HMTG-119-II15-20250624-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice (TIME CHANGE)",
+      "url": "https://www.congress.gov/119/meeting/house/118387/documents/HMTG-119-II15-20250624-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/118387/documents/HMTG-119-II15-20250624-SD003.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "eventId": "118285",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Restoring Excellence: The Case Against DEI\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-05-21T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed13",
+      "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118285?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Shaun Harper",
+      "position": "Provost Professor of Education, Public Policy, and Business",
+      "organization": "University of Southern California"
+    },
+    {
+      "name": "Ms. Renu Mukherjee",
+      "position": "Fellow",
+      "organization": "Manhattan Institute"
+    },
+    {
+      "name": "Dr. Kurt Miceli",
+      "position": "Medical Director",
+      "organization": "Do No Harm"
+    },
+    {
+      "name": "Mr. Dan Morenoff",
+      "position": "Executive Director",
+      "organization": "American Civil Rights Project"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Restoring Excellence: The Case Against DEI",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118285",
+      "format": ""
+    },
+    {
+      "name": "Restoring Excellence: The Case Against DEI",
+      "url": "https://www.youtube.com/watch?v=D7zAMYJLMCw",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118285/documents/HHRG-119-ED13-20250521-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Alma S. Adams | Submission for the Record | The Leadership Conference Education Fund Fact Sheet",
+      "url": "https://www.congress.gov/119/meeting/house/118285/documents/HHRG-119-ED13-20250521-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Alma S. Adams | Submission for the Record | Southern Poverty Law Center Statement",
+      "url": "https://www.congress.gov/119/meeting/house/118285/documents/HHRG-119-ED13-20250521-SD003.pdf",
+      "format": "PDF"
+    }
+  ]
+}

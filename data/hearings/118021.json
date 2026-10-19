@@ -1,0 +1,68 @@
+{
+  "eventId": "118021",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"From Chalkboards to Chatbots: The Impact of AI on K-12 Education\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-04-01T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed14",
+      "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118021?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Julia Rafal-Baer",
+      "position": "CEO",
+      "organization": "ILO Group"
+    },
+    {
+      "name": "Mr. Chris Chism",
+      "position": "Superintendent",
+      "organization": "Pearl Public School District"
+    },
+    {
+      "name": "Ms. Erin Mote",
+      "position": "CEO",
+      "organization": "InnovateEDU/EDSAFE AI Alliance"
+    },
+    {
+      "name": "Dr. Sid Dobrin",
+      "position": "Chair, Department of English",
+      "organization": "University of Florida"
+    }
+  ],
+  "videos": [
+    {
+      "name": "From Chalkboards to Chatbots: The Impact of AI on K-12 Education",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118021",
+      "format": ""
+    },
+    {
+      "name": "From Chalkboards to Chatbots: The Impact of AI on K-12 Education",
+      "url": "https://www.youtube.com/watch?v=PuO6a2usjPw",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Ms. Erin Mote | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118021/documents/HHRG-119-ED14-20250401-QFR001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ms. Erin Mote | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118021/documents/HHRG-119-ED14-20250401-QFR001-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

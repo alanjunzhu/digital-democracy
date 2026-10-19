@@ -1,0 +1,73 @@
+{
+  "eventId": "118497",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Safe Workplaces, Stronger Partnerships: The Future of OSHA Compliance Assistance\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-07-16T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed10",
+      "name": "House Education and Workforce Subcommittee on Workforce Protections"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118497?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Chris Williams",
+      "position": "CAE (Chief Association Executive), Executive Director",
+      "organization": "Voluntary Protection Program Participants' Association (VPPA)"
+    },
+    {
+      "name": "Mr. Myron Harper",
+      "position": "National Health and Safety Director",
+      "organization": "Cintas Corporation"
+    },
+    {
+      "name": "Ms. Rebecca Reindel",
+      "position": "MS, MPH, Director of Occupational Safety and Health",
+      "organization": "AFL-CIO"
+    },
+    {
+      "name": "Mr. Kevin Sell",
+      "position": "Senior Manager, Corporate Development",
+      "organization": "Kwest Group"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Safe Workplaces, Stronger Partnerships: The Future of OSHA Compliance Assistance",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118497",
+      "format": ""
+    },
+    {
+      "name": "Safe Workplaces, Stronger Partnerships: The Future of OSHA Compliance Assistance",
+      "url": "https://www.youtube.com/watch?v=kuOKnSoU_vQ",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Chairman Ryan Mackenzie | Submission for the Record | NRF Letter",
+      "url": "https://www.congress.gov/119/meeting/house/118497/documents/HHRG-119-ED10-20250716-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Ilhan Omar | Submission for the Record | United Steelworkers Statement",
+      "url": "https://www.congress.gov/119/meeting/house/118497/documents/HHRG-119-ED10-20250716-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118497/documents/HHRG-119-ED10-20250716-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

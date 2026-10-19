@@ -1,0 +1,73 @@
+{
+  "eventId": "118730",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Building A Talent Marketplace: How LERs Empower Workers and Expand Opportunity\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-12-10T15:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed13",
+      "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118730?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Scott Pulsipher",
+      "position": "President",
+      "organization": "Western Governors University"
+    },
+    {
+      "name": "Mr. Greg DiDonato",
+      "position": "Vice President of Business Development",
+      "organization": "EBSCO Information Services"
+    },
+    {
+      "name": "Mr. Scott Cheney",
+      "position": "Chief Executive Officer",
+      "organization": "Credential Engine"
+    },
+    {
+      "name": "Mr. Alex Kaplan",
+      "position": "Advisor",
+      "organization": "American Association of College Registrars and Admission Officers"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Building a Talent Marketplace: How LERs Empower Workers and Expand Opportunity",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118730",
+      "format": ""
+    },
+    {
+      "name": "Building a Talent Marketplace: How LERs Empower Workers and Expand Opportunity",
+      "url": "https://www.youtube.com/watch?v=g7StJETsi1Y",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Mr. Scott Cheney | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118730/documents/HHRG-119-ED13-20251210-QFR001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Mr. Scott Cheney | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118730/documents/HHRG-119-ED13-20251210-QFR001-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118730/documents/HHRG-119-ED13-20251210-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

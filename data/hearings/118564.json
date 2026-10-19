@@ -1,0 +1,83 @@
+{
+  "eventId": "118564",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Foundations First: Reclaiming Reading and Math through Proven Instruction\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-09-03T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed14",
+      "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118564?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Brent Harrison",
+      "position": "Superintendent",
+      "organization": "Saraland City Schools"
+    },
+    {
+      "name": "Dr. Jhanae Wingfield",
+      "position": "Assistant Professor of Early Childhood and Literacy Education",
+      "organization": "Department of Urban Education at Rutgers University-Newark"
+    },
+    {
+      "name": "Ms. Chandra Roughton",
+      "position": "Founder",
+      "organization": "Luminous Minds"
+    },
+    {
+      "name": "Dr. Cade Brumley",
+      "position": "State Superintendent of Education",
+      "organization": "State of Louisiana"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Foundations First: Reclaiming Reading and Math through Proven Instruction",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118564",
+      "format": ""
+    },
+    {
+      "name": "Foundations First: Reclaiming Reading and Math through Proven Instruction",
+      "url": "https://www.youtube.com/watch?v=x73mMhoGQi4",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118564/documents/HHRG-119-ED14-20250903-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Suzanne Bonamici | Submission for the Record | The Times-Picayune/The New Orleans Advocate Online Article",
+      "url": "https://www.congress.gov/119/meeting/house/118564/documents/HHRG-119-ED14-20250903-SD005.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Suzanne Bonamici | Submission for the Record | Arizona State University Policy Scan and Review",
+      "url": "https://www.congress.gov/119/meeting/house/118564/documents/HHRG-119-ED14-20250903-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Suzanne Bonamici | Submission for the Record | KPEL Article",
+      "url": "https://www.congress.gov/119/meeting/house/118564/documents/HHRG-119-ED14-20250903-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Summer Lee | Submission for the Record | South Carolina Law Review Case Study",
+      "url": "https://www.congress.gov/119/meeting/house/118564/documents/HHRG-119-ED14-20250903-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

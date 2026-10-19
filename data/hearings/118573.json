@@ -1,0 +1,83 @@
+{
+  "eventId": "118573",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Unmasking Union Antisemitism\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-09-09T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed02",
+      "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118573?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Kyle Mann",
+      "position": "Senior Staff Attorney",
+      "organization": "New York Legal Assistance Group"
+    },
+    {
+      "name": "Mr. David Rubinstein",
+      "position": "Ph.D. Candidate, Department of History",
+      "organization": "Cornell University"
+    },
+    {
+      "name": "Dr. Joseph McCartin, Ph.D.",
+      "position": "Professor of History and Executive Director",
+      "organization": "Kalmanovitz Initiative for Labor and the Working Poor, Georgetown University"
+    },
+    {
+      "name": "Mr. Glenn Taubman",
+      "position": "Staff Attorney",
+      "organization": "National Right to Work Legal Defense Foundation"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Unmasking Union Antisemitism",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118573",
+      "format": ""
+    },
+    {
+      "name": "Unmasking Union Antisemitism",
+      "url": "https://www.youtube.com/watch?v=XJI76UUDOSM",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Chairman Rick W. Allen | Submission for the Record | Karin Yaniv Testimony",
+      "url": "https://www.congress.gov/119/meeting/house/118573/documents/HHRG-119-ED02-20250909-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Chairman Rick W. Allen | Submission for the Record | CGSU Statement",
+      "url": "https://www.congress.gov/119/meeting/house/118573/documents/HHRG-119-ED02-20250909-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Chairman Rick W. Allen | Submission for the Record | HCEW Testimony- Shelley Goldfarb",
+      "url": "https://www.congress.gov/119/meeting/house/118573/documents/HHRG-119-ED02-20250909-SD005.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118573/documents/HHRG-119-ED02-20250909-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Virginia Foxx | Submission for the Record | Wall Street Journal Article",
+      "url": "https://www.congress.gov/119/meeting/house/118573/documents/HHRG-119-ED02-20250909-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

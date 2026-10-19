@@ -1,0 +1,78 @@
+{
+  "eventId": "118603",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"No More Surprises: Reforming College Pricing for Students and Families\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-09-16T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed13",
+      "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118603?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Andrew Gillen",
+      "position": "Research Fellow",
+      "organization": "Cato Institute"
+    },
+    {
+      "name": "Mr. Justin Draeger",
+      "position": "Senior Vice President, Affordability",
+      "organization": "Strada Education Foundation"
+    },
+    {
+      "name": "Mr. Lee Wishing III",
+      "position": "Vice President for Student Recruitment and Chief Marketing Officer",
+      "organization": "Grove City College"
+    },
+    {
+      "name": "Ms. Amy Laitinen",
+      "position": "Senior Director of Higher Education",
+      "organization": "New America"
+    }
+  ],
+  "videos": [
+    {
+      "name": "No More Surprises: Reforming College Pricing for Students and Families",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118603",
+      "format": ""
+    },
+    {
+      "name": "No More Surprises: Reforming College Pricing for Students and Families",
+      "url": "https://www.youtube.com/watch?v=l9P6XrM3HeY",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Dr. Andrew Gillen | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118603/documents/HHRG-119-ED13-20250916-QFR001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ms. Amy Laitinen | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118603/documents/HHRG-119-ED13-20250916-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118603/documents/HHRG-119-ED13-20250916-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Dr. Andrew Gillen | Questions and Responses for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/118603/documents/HHRG-119-ED13-20250916-QFR001-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}
