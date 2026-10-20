@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-19T16:42:26.186Z",
+  "lastUpdated": "2026-10-20T14:34:34.703Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -5247,28 +5247,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119424?format=json"
     },
     {
-      "eventId": "119405",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "State Medicaid Program Integrity: Examining Fraud Risks and Oversight Deficiencies.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-25T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif02",
-          "name": "House Energy and Commerce Subcommittee on Oversight and Investigations"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119405?format=json"
-    },
-    {
       "eventId": "119396",
       "congress": 119,
       "chamber": "House",
@@ -8093,6 +8071,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119064?format=json"
+    },
+    {
+      "eventId": "119049",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Updating America’s Financial Privacy Framework for the 21st Century",
+      "meetingStatus": "Scheduled",
+      "date": "2026-03-17T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba00",
+          "name": "House Financial Services"
+        }
+      ],
+      "location": {
+        "room": "2128",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119049?format=json"
     },
     {
       "eventId": "338054",

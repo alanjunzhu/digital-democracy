@@ -1,0 +1,83 @@
+{
+  "eventId": "119049",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Updating America’s Financial Privacy Framework for the 21st Century",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-17T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119049?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Nathan Taylor",
+      "position": "Partner",
+      "organization": "Morrison Foerster"
+    },
+    {
+      "name": "Ms. Laura MacCleery",
+      "position": "Senior Director",
+      "organization": "Policy and Advocacy, UnidosUS"
+    },
+    {
+      "name": "Ms. Clara Kim",
+      "position": "Senior Vice President",
+      "organization": "Bank Policy Institute"
+    },
+    {
+      "name": "Mr. Jordan Crenshaw",
+      "position": "Senior Vice President",
+      "organization": "Technology Engagement Center, U.S. Chamber of Commerce"
+    },
+    {
+      "name": "Mr. Nathan Taylor",
+      "position": "Partner",
+      "organization": "Morrison Foster"
+    },
+    {
+      "name": "Mr. Steve Boms",
+      "position": "Executive Director",
+      "organization": "Financial Data and Technology Association"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Updating America’s Financial Privacy Framework for the 21st Century",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119049",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Updating America’s Financial Privacy Framework for the 21st Century",
+      "url": "https://www.youtube.com/watch?v=bNgfFr5TW8s",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119049/documents/HHRG-119-BA00-20260317-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119049/documents/HHRG-119-BA00-20260317-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R.____, a bill to make improvements to title V of the Gramm-Leach-Bliley\r\nAct, and for other purposes",
+      "url": "https://www.congress.gov/119/meeting/house/119049/documents/BILLS-119pih-makesimprovementstoTitleVoftheGLBAt.pdf",
+      "format": "PDF"
+    }
+  ]
+}
