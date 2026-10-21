@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-20T14:34:34.703Z",
+  "lastUpdated": "2026-10-21T14:45:43.073Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -3734,28 +3734,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338677?format=json"
     },
     {
-      "eventId": "119488",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative Hearing on Protecting Communications Networks and Improving Connectivity",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T17:30:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif16",
-          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119488?format=json"
-    },
-    {
       "eventId": "338651",
       "congress": 119,
       "chamber": "Senate",
@@ -4719,6 +4697,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119464?format=json"
     },
     {
+      "eventId": "119439",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Protecting American Innovation: The Federal Research Security Enterprise",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hlzs00",
+          "name": ""
+        }
+      ],
+      "location": {
+        "room": "390",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119439?format=json"
+    },
+    {
       "eventId": "119434",
       "congress": 119,
       "chamber": "House",
@@ -5011,28 +5011,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338658?format=json"
     },
     {
-      "eventId": "119433",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Oversight Hearing on “Innovative Technologies and Initiatives to Tackle the MMIP Crisis in Indian Country”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-14T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii15",
-          "name": "House Natural Resources Subcommittee on Oversight and Investigations"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119433?format=json"
-    },
-    {
       "eventId": "338644",
       "congress": 119,
       "chamber": "Senate",
@@ -5075,28 +5053,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338621?format=json"
-    },
-    {
-      "eventId": "119426",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“250 Years of American Legacy: Small Businesses and the American Dream.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-01T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hssm00",
-          "name": "House Small Business"
-        }
-      ],
-      "location": {
-        "room": "2360",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119426?format=json"
     },
     {
       "eventId": "119418",
@@ -8397,6 +8353,50 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118882?format=json"
+    },
+    {
+      "eventId": "118819",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Building an AI-Ready America\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-01-14T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118819?format=json"
+    },
+    {
+      "eventId": "118804",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Who's Watching the Kids? How Employers, Innovators, and Parents are Solving America's Child Care Crunch\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-01-13T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed14",
+          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118804?format=json"
     },
     {
       "eventId": "337769",

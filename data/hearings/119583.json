@@ -15,7 +15,28 @@
   "location": null,
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119583?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Nathan Benefield",
+      "position": "Chief Policy Officer",
+      "organization": "Commonwealth Foundation"
+    },
+    {
+      "name": "Ms. Ilen Perez-Valdes",
+      "position": "Future Leaders Fellow",
+      "organization": "AFC"
+    },
+    {
+      "name": "Ms. Susan Spicka",
+      "position": "Executive Director",
+      "organization": "Education Voters of Pennsylvania"
+    },
+    {
+      "name": "Mr. Eric Paisner",
+      "position": "Chief Legal Officer",
+      "organization": "National Alliance for Public Charter Schools"
+    }
+  ],
   "videos": [
     {
       "name": "More Choices, Brighter Futures: Expanding Education Freedom",

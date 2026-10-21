@@ -1,0 +1,78 @@
+{
+  "eventId": "118819",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Building an AI-Ready America\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-01-14T15:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118819?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Chaya Nayak",
+      "position": "Head of Certifications and Jobs Platform",
+      "organization": "OpenAI"
+    },
+    {
+      "name": "Mr. Adeel Khan",
+      "position": "Founder & CEO",
+      "organization": "MagicSchool AI"
+    },
+    {
+      "name": "Ms. Alexandra Givens",
+      "position": "President & CEO",
+      "organization": "Center for Democracy & Technology"
+    },
+    {
+      "name": "Mr. Kevin Frazier",
+      "position": "AI Innovation & Law Fellow",
+      "organization": "University of Texas Law School"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Building an AI-Ready America",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118819",
+      "format": ""
+    },
+    {
+      "name": "Building an AI-Ready America",
+      "url": "https://www.youtube.com/watch?v=RM0aq5ynUiQ",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118819/documents/HHRG-119-ED00-20260114-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Mark Takano | Submission for the Record | AFSCME Letter",
+      "url": "https://www.congress.gov/119/meeting/house/118819/documents/HHRG-119-ED00-20260114-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Robert C. \"Bobby\" Scott | Submission for the Record | Economic Policy Institute Report",
+      "url": "https://www.congress.gov/119/meeting/house/118819/documents/HHRG-119-ED00-20260114-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Robert C. \"Bobby\" Scott | Submission for the Record | NPR Article",
+      "url": "https://www.congress.gov/119/meeting/house/118819/documents/HHRG-119-ED00-20260114-SD004.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "eventId": "118804",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Who's Watching the Kids? How Employers, Innovators, and Parents are Solving America's Child Care Crunch\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-01-13T15:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed14",
+      "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118804?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Alex Grover",
+      "position": "CEO",
+      "organization": "i2M"
+    },
+    {
+      "name": "Ms. Amy Matsui",
+      "position": "Vice President for Child Care & Income Security",
+      "organization": "National Women's Law Center"
+    },
+    {
+      "name": "Ms. Mary Lou Burke Afonso",
+      "position": "COO",
+      "organization": "Bright Horizons"
+    },
+    {
+      "name": "Mr. Haden Polseno-Hensley",
+      "position": "President and Co-Founder",
+      "organization": "Red Rooster Coffee Company, LLC"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Who’s Watching the Kids? How Employers, Innovators, and Parents Are Solving America’s Child Care...",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118804",
+      "format": ""
+    },
+    {
+      "name": "Who’s Watching the Kids? How Employers, Innovators, and Parents Are Solving America’s Child Care...",
+      "url": "https://www.youtube.com/watch?v=vKUDUzuz6uc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Rep. Robert C. \"Bobby\" Scott | Submission for the Record | National Women's Law Center Article",
+      "url": "https://www.congress.gov/119/meeting/house/118804/documents/HHRG-119-ED14-20260113-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Ranking Member Suzanne Bonamici | Submission for the Record | Small Business Majority Statement",
+      "url": "https://www.congress.gov/119/meeting/house/118804/documents/HHRG-119-ED14-20260113-SD005.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118804/documents/HHRG-119-ED14-20260113-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Alma S. Adams | Submission for the Record | First Five Years Fund Statement",
+      "url": "https://www.congress.gov/119/meeting/house/118804/documents/HHRG-119-ED14-20260113-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Adelita Grijalva | Submission for the Record | American Progress Article",
+      "url": "https://www.congress.gov/119/meeting/house/118804/documents/HHRG-119-ED14-20260113-SD004.pdf",
+      "format": "PDF"
+    }
+  ]
+}
