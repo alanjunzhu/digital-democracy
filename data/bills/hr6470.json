@@ -11,9 +11,9 @@
     "party": "R",
     "state": "UT"
   },
-  "latestAction": "Referred to the House Committee on the Budget.",
-  "latestActionDate": "2025-12-04",
-  "updateDate": "2026-09-08T19:31:27Z",
+  "latestAction": "Ordered to be Reported by the Yeas and Nays: 26 - 0.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-10-20T18:20:19Z",
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/6470",
@@ -27,6 +27,10 @@
       "type": "Standing",
       "activities": [
         {
+          "name": "Markup By",
+          "date": "2026-09-16T14:45:00Z"
+        },
+        {
           "name": "Referred To",
           "date": "2025-12-04T14:07:45Z"
         }
@@ -35,6 +39,16 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Ordered to be Reported by the Yeas and Nays: 26 - 0.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
     {
       "date": "2025-12-04",
       "text": "Referred to the House Committee on the Budget.",
