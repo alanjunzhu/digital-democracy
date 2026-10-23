@@ -1,0 +1,53 @@
+{
+  "eventId": "118809",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Drugs, Thugs, and Fish: Examining Coast Guard Law Enforcement Efforts.\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-01-13T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw07",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118809?format=json",
+  "witnesses": [
+    {
+      "name": "Heather MacLeod",
+      "position": "Director, Homeland Security Programs",
+      "organization": "United States Government Accountability Office"
+    },
+    {
+      "name": "Vice Admiral David Barata",
+      "position": "Deputy for Operations Policy and Capabilities",
+      "organization": "United States Coast Guard"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Drugs, Thugs, and Fish: Examining Coast Guard Law Enforcement Efforts",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118809",
+      "format": ""
+    },
+    {
+      "name": "Drugs, Thugs, and Fish: Examining Coast Guard Law Enforcement Efforts",
+      "url": "https://www.youtube.com/watch?v=6uFGhux0A6k",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/118809/documents/HHRG-119-PW07-20260113-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

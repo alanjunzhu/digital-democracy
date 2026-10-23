@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-22T14:45:50.418Z",
+  "lastUpdated": "2026-10-23T14:32:12.389Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -5121,28 +5121,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119419?format=json"
     },
     {
-      "eventId": "119417",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“A Midlife Crisis? IP and the Internet After 40”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-30T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju03",
-          "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119417?format=json"
-    },
-    {
       "eventId": "338611",
       "congress": 119,
       "chamber": "NoChamber",
@@ -8397,6 +8375,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118804?format=json"
+    },
+    {
+      "eventId": "118809",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Drugs, Thugs, and Fish: Examining Coast Guard Law Enforcement Efforts.\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-01-13T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hspw07",
+          "name": ""
+        }
+      ],
+      "location": {
+        "room": "2167",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118809?format=json"
     },
     {
       "eventId": "337769",
