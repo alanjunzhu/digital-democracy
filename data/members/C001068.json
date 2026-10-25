@@ -105,6 +105,18 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.R.",
+      "number": 10844,
+      "billId": "hr10844",
+      "title": "Mobile Stroke Units Improve Health Outcomes Act of 2026",
+      "introducedDate": "2026-10-19",
+      "latestAction": "Referred to the Committee on Ways and Means, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2026-10-19",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10844"
+    },
+    {
+      "congress": 119,
       "type": "H.J.Res.",
       "number": 218,
       "billId": "hjres218",
@@ -690,18 +702,6 @@
       "latestActionDate": "2025-02-12",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/1240"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 1188,
-      "billId": "hr1188",
-      "title": "Police CAMERA Act of 2025",
-      "introducedDate": "2025-02-11",
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2025-02-11",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1188"
     }
   ]
 }

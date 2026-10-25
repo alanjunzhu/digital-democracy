@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "330",
+  "number": 330,
   "billId": "hr330",
   "title": "Organ Donation Referral Improvement Act",
   "introducedDate": "2025-01-09",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Energy and Commerce.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-10-23T08:05:24Z",
   "originChamber": "House",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/330",
   "summary": "<p><strong>Organ Donation Referral Improvement Act</strong></p><p>This bill requires the&nbsp;Office of the Assistant Secretary for Planning and Evaluation (ASPE) in the&nbsp;Department of Health and Human Services to conduct a study on hospitals’ use of electronic automated referrals for organ donations. The bill defines <em>electronic automated referral</em> as an electronic system that uses electronic health records to identify patients who are potential organ donors and automatically refers those patients to organ procurement organizations.&nbsp;</p><p>The ASPE must include specified components in the study, including identifying benefits, reviewing best practices, and developing recommendations for the use of electronic automated referrals for organ donations. </p>",
-  "cosponsors": 14,
+  "cosponsors": 15,
   "committees": [
-    "Energy and Commerce Committee"
+    {
+      "name": "Energy and Commerce Committee",
+      "systemCode": "hsif00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:30:05Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
