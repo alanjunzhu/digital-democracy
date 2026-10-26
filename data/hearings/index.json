@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-25T14:00:49.426Z",
+  "lastUpdated": "2026-10-26T16:22:24.256Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -3824,28 +3824,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119492?format=json"
     },
     {
-      "eventId": "119483",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Oversight of SBA’s Office of Entrepreneurial Development.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hssm00",
-          "name": "House Small Business"
-        }
-      ],
-      "location": {
-        "room": "2360",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119483?format=json"
-    },
-    {
       "eventId": "338682",
       "congress": 119,
       "chamber": "Senate",
@@ -5053,6 +5031,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338621?format=json"
+    },
+    {
+      "eventId": "119443",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "PACT Act Implementation: Modernizing VA Disability Claims Through Effective Technology",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-13T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr11",
+          "name": "House Veterans' Affairs Subcommittee on Technology Modernization"
+        }
+      ],
+      "location": {
+        "room": "360",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119443?format=json"
     },
     {
       "eventId": "119418",
