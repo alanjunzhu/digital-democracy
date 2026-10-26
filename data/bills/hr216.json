@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "216",
+  "number": 216,
   "billId": "hr216",
   "title": "SEC Act of 2025",
   "introducedDate": "2025-01-07",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Financial Services.",
   "latestActionDate": "2025-01-07",
+  "updateDate": "2026-10-26T15:08:27Z",
   "originChamber": "House",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/216",
   "summary": "<p><strong>Securities Enforcement Clarity Act of 2025 or the SEC Act of 2025</strong></p><p>This bill specifies when separate occurrences of securities law violations must be considered as a single violation for purposes of calculating penalties. Specifically, separate occurrences must be counted as a single violation when the acts in question are the result of (1) a common or a substantially overlapping cause, (2) the same misstatement or omission, or (3) a continuing failure to comply.</p><p>The bill applies to various violations of securities law, including those involving the registration, offer, and sale of securities; and the conduct of brokers, dealers, and investment advisers.</p>",
   "cosponsors": 0,
   "committees": [
-    "Financial Services Committee"
+    {
+      "name": "Financial Services Committee",
+      "systemCode": "hsba00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-07T16:03:00Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
