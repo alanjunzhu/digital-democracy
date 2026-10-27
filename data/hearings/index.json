@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-26T16:22:24.256Z",
+  "lastUpdated": "2026-10-27T15:37:08.040Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -4066,33 +4066,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338663?format=json"
     },
     {
-      "eventId": "119475",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative Hearing on: • H.R. 7332 (Rep. Matsui), “Whale CHARTS Act of 2026” • H.R. 7466 (Rep. Jackson of TX), “SAFE CATTLE Act” • H.R. 8876 (Rep. Walberg), “Aquatic Invasive Species Control and Prevention Act of 2026” • H.R. 9621 (Rep. Baumgartner), “Northwest Endangered Salmon Predation Prevention Act of 2026”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-21T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii13",
-          "name": "House Natural Resources Subcommittee on Water, Wildlife and Fisheries"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr8876",
-        "hr7332",
-        "hr9621",
-        "hr7466"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119475?format=json"
-    },
-    {
       "eventId": "338676",
       "congress": 119,
       "chamber": "Senate",
@@ -4169,32 +4142,6 @@
         "hr8875"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119491?format=json"
-    },
-    {
-      "eventId": "119389",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative Hearing on the following bill:\r\n•    H.R. 8003 (Rep. Deluzio), “Expanding the Fast Track Act of 2026.’’\r\n•    H.R. 9640 (Rep. Wittman), “Earth MRI Reauthorization Act of 2026.’’\r\n•    H.R. 9646 (Rep. Hurd), “Quantum-Enhanced Critical Minerals Mapping Act of 2026.’’",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-21T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii06",
-          "name": "House Natural Resources Subcommittee on Energy and Mineral Resources"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr8003",
-        "hr9640",
-        "hr9646"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119389?format=json"
     },
     {
       "eventId": "119481",
@@ -7717,6 +7664,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119213?format=json"
     },
     {
+      "eventId": "119132",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Oversight Hearing on 4 Bills:\r\n•H.R. 4219 (Rep. Case), “National Wildlife Refuge System Invasive Species Strike Team Act of 2025”\r\n•H.R. 6251 (Rep. Begich), To amend the Marine Mammal Protection Act of 1972 to allow importation of polar bear trophies taken in sport hunts in Canada before the date the polar bear was determined to be a threatened species under the Endangered Species Act of 1973\r\n•\tH.R. 7288 (Rep. Johnson of SD), “Western South Dakota Water Supply Project Feasibility Study Act”\r\n•H.R. 8195 (Rep. Walberg), “Responsible Cormorant Management and Control Act of 2026”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-04-16T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii13",
+          "name": ""
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119132?format=json"
+    },
+    {
       "eventId": "119134",
       "congress": 119,
       "chamber": "House",
@@ -8727,6 +8696,24 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337656?format=json"
+    },
+    {
+      "eventId": "118597",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative hearing on the following bills:\r\n\r\n• H.R. 309 (Rep. Nehls), “National Law Enforcement Officers Remembrance, Support and Community Outreach Act”\r\n• H.R. 2196 (Rep. Hudson), To provide for an extension of the legislative authority of the National Emergency Medical Services Memorial Foundation to establish a commemorative work in the District of Columbia and its environs.\r\n• H.R. 4284 (Rep. Leger Fernandez), “Small Cemetery Conveyance Act”\r\n• H.R. 4386 (Rep. Walberg), To amend the Federal Lands Recreation Enhancement Act to clarify entrance privileges for vehicles with respect to the America the Beautiful interagency pass.\r\n• H.R. 4467 (Rep. Thompson of MS), “Vicksburg National Military Park Boundary Modification Act”\r\n• H.R. 5131 (Rep. Begich), “Public Lands Military Readiness Act of 2025”.",
+      "meetingStatus": "Scheduled",
+      "date": "2025-09-18T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii10",
+          "name": "House Natural Resources Subcommittee on Federal Lands"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118597?format=json"
     },
     {
       "eventId": "337429",
