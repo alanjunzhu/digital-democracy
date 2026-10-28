@@ -1,0 +1,48 @@
+{
+  "eventId": "119157",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"For the Purpose of Receiving Testimony from the Honorable Michael S. Selig, Chairman, U.S. Commodity Futures Trading Commission\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-16T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsag00",
+      "name": "House Agriculture"
+    }
+  ],
+  "location": {
+    "room": "1300",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119157?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Michael Selig",
+      "position": "Chairman",
+      "organization": "U.S. Commodity Futures Trading Commission"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing to Receive Testimony from the Honorable Michael S. Selig, Chairman, CFTC",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119157",
+      "format": ""
+    },
+    {
+      "name": "Hearing to Receive Testimony from the Honorable Michael S. Selig, Chairman, CFTC",
+      "url": "https://www.youtube.com/watch?v=o10gZ_3EUVw",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Transcript_04.16.2026",
+      "url": "https://www.congress.gov/119/meeting/house/119157/documents/HHRG-119-AG00-Transcript-20260416.pdf",
+      "format": "PDF"
+    }
+  ]
+}

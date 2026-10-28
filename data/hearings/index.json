@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-27T15:37:08.040Z",
+  "lastUpdated": "2026-10-28T16:21:03.400Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -2251,6 +2251,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119517?format=json"
     },
     {
+      "eventId": "119520",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Renewal of USPTO Fee Setting Authority: Giving Full Effect to the America Invents Act”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju03",
+          "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
+        }
+      ],
+      "location": {
+        "room": "2141",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119520?format=json"
+    },
+    {
       "eventId": "119527",
       "congress": 119,
       "chamber": "House",
@@ -2336,28 +2358,6 @@
         "hr3194"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119518?format=json"
-    },
-    {
-      "eventId": "119520",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Renewal of USPTO Fee Setting Authority: Giving Full Effect to the America Invents Act”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju03",
-          "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119520?format=json"
     },
     {
       "eventId": "119524",
@@ -7642,26 +7642,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119204?format=json"
     },
     {
-      "eventId": "119213",
+      "eventId": "119157",
       "congress": 119,
       "chamber": "House",
       "type": "Hearing",
-      "title": "The Fiscal Year 2027 Department of Health and Human Services Budget",
+      "title": "\"For the Purpose of Receiving Testimony from the Honorable Michael S. Selig, Chairman, U.S. Commodity Futures Trading Commission\"",
       "meetingStatus": "Scheduled",
-      "date": "2026-04-21T14:00:00Z",
+      "date": "2026-04-16T14:00:00Z",
       "committees": [
         {
-          "systemCode": "hsif14",
-          "name": "House Energy and Commerce Subcommittee on Health"
+          "systemCode": "hsag00",
+          "name": "House Agriculture"
         }
       ],
       "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
+        "room": "1300",
+        "building": "Longworth House Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119213?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119157?format=json"
     },
     {
       "eventId": "119132",
