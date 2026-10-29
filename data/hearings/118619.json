@@ -1,0 +1,73 @@
+{
+  "eventId": "118619",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Task Force on Monetary Policy, Treasury Market Resilience, and Economic Prosperity: Less Mandates. More Independence",
+  "meetingStatus": "Scheduled",
+  "date": "2025-09-17T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118619?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Skanda Amarnath",
+      "position": "Executive Director",
+      "organization": "Employ America"
+    },
+    {
+      "name": "Mr. Curtis Dubay",
+      "position": "Chief Economist",
+      "organization": "U.S. Chamber of Commerce"
+    },
+    {
+      "name": "Dr. Douglas Holtz-Eakin",
+      "position": "President",
+      "organization": "American Action Forum"
+    },
+    {
+      "name": "Mr. Alex Pollock",
+      "position": "Senior Fellow",
+      "organization": "Mises Institute"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Less Mandates. More Independence.",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118619",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Less Mandates. More Independence.",
+      "url": "https://www.youtube.com/watch?v=b4wyGUozfhA",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118619/documents/HHRG-119-BA00-20250917-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/118619/documents/HHRG-119-BA00-20250917-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. ____, the Price Stability Act of 2025",
+      "url": "https://www.congress.gov/119/meeting/house/118619/documents/BILLS-119pih-removethemandateontheBoar.pdf",
+      "format": "PDF"
+    }
+  ]
+}

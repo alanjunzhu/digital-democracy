@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-28T16:21:03.400Z",
+  "lastUpdated": "2026-10-29T16:30:58.930Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -3664,28 +3664,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119487?format=json"
-    },
-    {
-      "eventId": "119408",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“False Narratives Surrounding Conditions at the Delaney Hall ICE Detention Center”",
-      "meetingStatus": "Rescheduled",
-      "date": "2026-07-22T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju13",
-          "name": "House Judiciary Subcommittee on Oversight"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119408?format=json"
     },
     {
       "eventId": "338669",
@@ -8280,6 +8258,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118930?format=json"
     },
     {
+      "eventId": "118880",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Examining the Policies and Priorities of the Mine Safety and Health Administration”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-01-22T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed10",
+          "name": "House Education and Workforce Subcommittee on Workforce Protections"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118880?format=json"
+    },
+    {
       "eventId": "118882",
       "congress": 119,
       "chamber": "House",
@@ -8714,6 +8714,28 @@
       "location": null,
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118597?format=json"
+    },
+    {
+      "eventId": "118619",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Task Force on Monetary Policy, Treasury Market Resilience, and Economic Prosperity: Less Mandates. More Independence",
+      "meetingStatus": "Scheduled",
+      "date": "2025-09-17T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba00",
+          "name": "House Financial Services"
+        }
+      ],
+      "location": {
+        "room": "2128",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118619?format=json"
     },
     {
       "eventId": "337429",
@@ -9225,28 +9247,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337039?format=json"
-    },
-    {
-      "eventId": "118330",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Oversight Hearing titled “Restoring American Seafood Competitiveness.”",
-      "meetingStatus": "Scheduled",
-      "date": "2025-06-04T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii13",
-          "name": ""
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118330?format=json"
     },
     {
       "eventId": "118285",
