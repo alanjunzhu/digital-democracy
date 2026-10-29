@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "58",
+  "number": 58,
   "billId": "hr58",
   "title": "Voter Integrity Protection Act",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on the Judiciary.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-10-28T19:43:41Z",
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/58",
   "summary": "<p><b>Voter Integrity Protection Act</b></p> <p>This bill imposes additional immigration-related penalties for non-U.S. nationals (<i>aliens</i> under federal law) who vote in an election for federal office.</p> <p> It shall be an aggravated felony for a non-U.S. national who is unlawfully present to violate an existing prohibition against a non-U.S. national voting in a federal election. (An aggravated felony conviction carries various immigration consequences, such as rendering the non-U.S. national inadmissible, deportable, and barred from establishing good moral character for naturalization.)</p> <p>A non-U.S. national who is unlawfully present and who knowingly violates the prohibition against voting in a federal election shall be deportable.</p>",
-  "cosponsors": 2,
+  "cosponsors": 3,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:07:05Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

@@ -11,20 +11,33 @@
     "party": "R",
     "state": "FL"
   },
-  "latestAction": "Under authority of the order of the Senate of September 30, 2026, ordered read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
+  "latestAction": "Read twice and referred to the Committee on Homeland Security and Governmental Affairs under authority of the order of the Senate of 09/30/2026.",
   "latestActionDate": "2026-10-15",
-  "updateDate": "2026-10-23T14:42:47Z",
+  "updateDate": "2026-10-29T11:03:45Z",
   "originChamber": "Senate",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5684",
   "summary": "",
   "cosponsors": 0,
-  "committees": [],
+  "committees": [
+    {
+      "name": "Homeland Security and Governmental Affairs Committee",
+      "systemCode": "ssga00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-10-15T15:45:19Z"
+        }
+      ]
+    }
+  ],
   "subjects": [],
   "actions": [
     {
       "date": "2026-10-15",
-      "text": "Under authority of the order of the Senate of September 30, 2026, ordered read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+      "text": "Read twice and referred to the Committee on Homeland Security and Governmental Affairs under authority of the order of the Senate of 09/30/2026."
     },
     {
       "date": "2026-10-15",

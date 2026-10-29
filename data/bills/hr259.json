@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "259",
+  "number": 259,
   "billId": "hr259",
   "title": "No Funding for Illegal Migrant Billboards Act",
   "introducedDate": "2025-01-09",
@@ -13,14 +13,37 @@
   },
   "latestAction": "Referred to the Subcommittee on Border Security and Enforcement.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-10-29T14:12:41Z",
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/259",
   "summary": "<p><strong>No Funding for Illegal Migrant Billboards Act</strong></p><p>This bill prohibits the Department of Homeland Security (DHS) from obligating or expending funds to advertise the Office of the Immigration Detention Ombudsman or its functions to the general public. The office’s functions include investigating violations of the rights of individuals in immigration detention, inspecting immigration detention facilities, and providing assistance to individuals affected by the potential misconduct of DHS officers.</p>",
   "cosponsors": 2,
   "committees": [
-    "Homeland Security Committee",
-    "Judiciary Committee"
+    {
+      "name": "Homeland Security Committee",
+      "systemCode": "hshm00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:34:35Z"
+        }
+      ]
+    },
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:34:30Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

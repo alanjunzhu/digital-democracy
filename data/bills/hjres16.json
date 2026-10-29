@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.J.Res.",
-  "number": "16",
+  "number": 16,
   "billId": "hjres16",
   "title": "Proposing an amendment to the Constitution of the United States extending the right to vote to citizens sixteen years of age or older.",
   "introducedDate": "2025-01-09",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on the Judiciary.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-10-27T20:55:59Z",
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/16",
   "summary": "<p><strong></strong>This joint resolution proposes a constitutional amendment to lower the minimum age for the right to vote from 18 to 16.</p>",
   "cosponsors": 6,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:41:00Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

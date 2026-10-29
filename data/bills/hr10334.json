@@ -3,7 +3,7 @@
   "type": "H.R.",
   "number": 10334,
   "billId": "hr10334",
-  "title": "To require validation of electronic filing identification numbers used to electronically file tax returns and other documents.",
+  "title": "EFIN Verification Act of 2026",
   "introducedDate": "2026-09-10",
   "sponsor": {
     "bioguideId": "E000298",
@@ -11,14 +11,14 @@
     "party": "R",
     "state": "KS"
   },
-  "latestAction": "Referred to the House Committee on Ways and Means.",
-  "latestActionDate": "2026-09-10",
-  "updateDate": "2026-09-11T08:05:33Z",
+  "latestAction": "Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 40 - 0.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-10-28T20:06:25Z",
   "originChamber": "House",
-  "policyArea": "",
+  "policyArea": "Taxation",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10334",
-  "summary": "",
-  "cosponsors": 1,
+  "summary": "<p><strong>EFIN Verification Act of 2026</strong></p><p>This bill requires the Internal Revenue Service (IRS) or a specified&nbsp;validator (e.g., software provider or state agency) to validate that an electronic filing identification number (EFIN) is authorized and active before a federal tax return or other document may be electronically filed with the IRS. (As background, an EFIN is assigned by the IRS to an individual or entity who is authorized to file federal tax returns and other documents on behalf of other taxpayers.)</p><p>Specifically, the bill requires (1) the IRS to develop a program to validate the status of an&nbsp;EFIN in real time, and (2) EFINs to be validated prior to the&nbsp;initial use and at intervals determined by the IRS.</p>",
+  "cosponsors": 3,
   "committees": [
     {
       "name": "Ways and Means Committee",
@@ -26,6 +26,10 @@
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Markup By",
+          "date": "2026-09-16T15:32:00Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-09-10T19:30:35Z"
@@ -35,6 +39,16 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Ordered to be Reported in the Nature of a Substitute by the Yeas and Nays: 40 - 0.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
     {
       "date": "2026-09-10",
       "text": "Referred to the House Committee on Ways and Means.",

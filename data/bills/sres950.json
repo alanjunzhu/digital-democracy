@@ -11,20 +11,37 @@
     "party": "R",
     "state": "ME"
   },
-  "latestAction": "Under authority of the order of the Senate of September 30, 2026, ordered referred to the Committee on the Judiciary.",
+  "latestAction": "Referred to the Committee on the Judiciary under authority of the order of the Senate of 09/30/2026.",
   "latestActionDate": "2026-10-15",
-  "updateDate": "2026-10-22T12:43:37Z",
+  "updateDate": "2026-10-29T10:56:49Z",
   "originChamber": "Senate",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/950",
   "summary": "<p>This resolution designates the week of September 14-18, 2026, as National Clean Energy Week.</p>",
   "cosponsors": 9,
-  "committees": [],
+  "committees": [
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "ssju00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-10-15T15:55:37Z"
+        }
+      ]
+    }
+  ],
   "subjects": [],
   "actions": [
     {
       "date": "2026-10-15",
-      "text": "Under authority of the order of the Senate of September 30, 2026, ordered referred to the Committee on the Judiciary."
+      "text": "Referred to the Committee on the Judiciary under authority of the order of the Senate of 09/30/2026."
+    },
+    {
+      "date": "2026-10-15",
+      "text": "Submitted in Senate"
     }
   ],
   "textUrl": "https://www.congress.gov/bill/119th-congress/senate-resolution/950/text"

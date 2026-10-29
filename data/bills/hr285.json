@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "285",
+  "number": 285,
   "billId": "hr285",
   "title": "Advanced Border Coordination Act of 2025",
   "introducedDate": "2025-01-09",
@@ -13,15 +13,49 @@
   },
   "latestAction": "Referred to the Subcommittee on Border Security and Enforcement.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-10-29T14:49:23Z",
   "originChamber": "House",
   "policyArea": "Immigration",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/285",
   "summary": "<p><strong>Advanced Border Coordination Act of 2025</strong></p><p>This bill requires the Department of Homeland Security to establish at least two Joint Operations Centers along the U.S.-Mexico border. The centers shall provide centralized operations hubs for (1) coordinating operations between federal, state, local, and tribal agencies as needed; and (2) coordinating and supporting border operations, including detecting criminal activity, such as activity related to transnational criminal organizations and illegal border crossings.</p>",
   "cosponsors": 5,
   "committees": [
-    "Homeland Security Committee",
-    "Ways and Means Committee",
-    "Judiciary Committee"
+    {
+      "name": "Homeland Security Committee",
+      "systemCode": "hshm00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:36:40Z"
+        }
+      ]
+    },
+    {
+      "name": "Ways and Means Committee",
+      "systemCode": "hswm00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:36:35Z"
+        }
+      ]
+    },
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:36:30Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

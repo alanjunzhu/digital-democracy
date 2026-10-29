@@ -11,20 +11,33 @@
     "party": "D",
     "state": "MA"
   },
-  "latestAction": "Under authority of the order of the Senate of September 30, 2026, ordered read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
+  "latestAction": "Read twice and referred to the Committee on Banking, Housing, and Urban Affairs under authority of the order of the Senate of 09/30/2026.",
   "latestActionDate": "2026-10-15",
-  "updateDate": "2026-10-20T18:21:00Z",
+  "updateDate": "2026-10-29T11:03:45Z",
   "originChamber": "Senate",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5685",
   "summary": "",
   "cosponsors": 3,
-  "committees": [],
+  "committees": [
+    {
+      "name": "Banking, Housing, and Urban Affairs Committee",
+      "systemCode": "ssbk00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-10-15T15:46:45Z"
+        }
+      ]
+    }
+  ],
   "subjects": [],
   "actions": [
     {
       "date": "2026-10-15",
-      "text": "Under authority of the order of the Senate of September 30, 2026, ordered read twice and referred to the Committee on Banking, Housing, and Urban Affairs."
+      "text": "Read twice and referred to the Committee on Banking, Housing, and Urban Affairs under authority of the order of the Senate of 09/30/2026."
     },
     {
       "date": "2026-10-15",

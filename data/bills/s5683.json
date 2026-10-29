@@ -11,20 +11,33 @@
     "party": "D",
     "state": "NV"
   },
-  "latestAction": "Under authority of the order of the Senate of September 30, 2026, ordered read twice and referred to the Committee on Armed Services.",
+  "latestAction": "Read twice and referred to the Committee on Armed Services under authority of the order of the Senate of 09/30/2026.",
   "latestActionDate": "2026-10-15",
-  "updateDate": "2026-10-20T20:40:52Z",
+  "updateDate": "2026-10-29T11:03:45Z",
   "originChamber": "Senate",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5683",
   "summary": "",
   "cosponsors": 1,
-  "committees": [],
+  "committees": [
+    {
+      "name": "Armed Services Committee",
+      "systemCode": "ssas00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-10-15T15:43:58Z"
+        }
+      ]
+    }
+  ],
   "subjects": [],
   "actions": [
     {
       "date": "2026-10-15",
-      "text": "Under authority of the order of the Senate of September 30, 2026, ordered read twice and referred to the Committee on Armed Services."
+      "text": "Read twice and referred to the Committee on Armed Services under authority of the order of the Senate of 09/30/2026."
     },
     {
       "date": "2026-10-15",

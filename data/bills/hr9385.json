@@ -11,9 +11,9 @@
     "party": "R",
     "state": "WI"
   },
-  "latestAction": "Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote.",
-  "latestActionDate": "2026-09-01",
-  "updateDate": "2026-09-03T08:06:43Z",
+  "latestAction": "Ordered to be Reported by the Yeas and Nays: 25 - 20.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-10-28T19:46:42Z",
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9385",
@@ -26,6 +26,10 @@
       "chamber": "House",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Markup By",
+          "date": "2026-09-16T14:06:45Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-06-22T16:00:15Z"
@@ -47,6 +51,16 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Ordered to be Reported by the Yeas and Nays: 25 - 20.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
     {
       "date": "2026-09-01",
       "text": "Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote.",

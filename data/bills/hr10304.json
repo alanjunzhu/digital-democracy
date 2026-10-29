@@ -11,9 +11,9 @@
     "party": "R",
     "state": "CA"
   },
-  "latestAction": "Referred to the House Committee on Transportation and Infrastructure.",
-  "latestActionDate": "2026-09-08",
-  "updateDate": "2026-09-11T08:05:48Z",
+  "latestAction": "Ordered to be Reported (Amended) by Voice Vote.",
+  "latestActionDate": "2026-09-15",
+  "updateDate": "2026-10-28T20:05:29Z",
   "originChamber": "House",
   "policyArea": "Transportation and Public Works",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10304",
@@ -27,6 +27,10 @@
       "type": "Standing",
       "activities": [
         {
+          "name": "Markup By",
+          "date": "2026-09-15T16:55:22Z"
+        },
+        {
           "name": "Referred To",
           "date": "2026-09-08T18:02:05Z"
         }
@@ -35,6 +39,26 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-15",
+      "text": "Ordered to be Reported (Amended) by Voice Vote.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-15",
+      "text": "Subcommittee on Aviation Discharged",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-09",
+      "text": "Referred to the Subcommittee on Aviation.",
+      "chamber": "House"
+    },
     {
       "date": "2026-09-08",
       "text": "Referred to the House Committee on Transportation and Infrastructure.",
