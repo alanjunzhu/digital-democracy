@@ -1,0 +1,84 @@
+{
+  "eventId": "119376",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Delivering Quality and Modern Healthcare to Michigan's Veterans and Servicemembers",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-12T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr11",
+      "name": "House Veterans' Affairs Subcommittee on Technology Modernization"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119376?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Mark Hausman",
+      "position": "Chief Medical Officer",
+      "organization": "Veterans Integrated Service Network 10, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Mr. Zachary Schwartz",
+      "position": "Principal Deputy Assistant Secretary",
+      "organization": "Office of Information and Technology, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Ms. Carol Harris",
+      "position": "Director, Information Technology and Cybersecurity",
+      "organization": "U.S. Government Accountability Office"
+    },
+    {
+      "name": "Mr. Jed Hansen",
+      "position": "Co-Chair, Rural Veterans Health Special Interest Group",
+      "organization": "National Rural Health Association"
+    },
+    {
+      "name": "Mr. Ben Frederick",
+      "position": "Associate Vice President of Advocacy & Government Relations",
+      "organization": "Memorial Healthcare"
+    },
+    {
+      "name": "Mr. Andrew Gradison",
+      "position": "Senior Advisor to the Under Secretary for Health",
+      "organization": "Veterans Health Administration, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Major Michael Reeve",
+      "position": "Director of Veterans Affairs",
+      "organization": "Shiawassee County"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Subcommittee on Technology Modernization Oversight Field Hearing",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119376",
+      "format": ""
+    },
+    {
+      "name": "Subcommittee on Technology Modernization Oversight Field Hearing",
+      "url": "https://www.youtube.com/watch?v=iqFxulvSNeY",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119376/documents/HHRG-119-VR11-20260612-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119376/documents/HHRG-119-VR11-WList-20260612.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Final Printed Hearing",
+      "url": "https://www.congress.gov/119/meeting/house/119376/documents/HHRG-119-VR11-Transcript-20260612.pdf",
+      "format": "PDF"
+    }
+  ]
+}

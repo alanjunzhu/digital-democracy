@@ -1,0 +1,68 @@
+{
+  "eventId": "119218",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Data Centers, Telecommunications Networks, and Space-Based Systems: Modernizing DHS’s SRMA Role for the Communications and IT Sectors”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-29T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm08",
+      "name": "Homeland Security Subcommittee on Cybersecurity and Infrastructure Protection"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119218?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Robert Mayer",
+      "position": "Senior Vice President, Cybersecurity & Innovation",
+      "organization": "USTelecom-The Boradband Association"
+    },
+    {
+      "name": "Mr. Sam Visner",
+      "position": "Chair, Board of Directors",
+      "organization": "Space Information Sharing and Analysis Center"
+    },
+    {
+      "name": "Rear Admiral Upper Half Mark Montgomery",
+      "position": "Senior Director and Senior Fellow",
+      "organization": "Center on Cyber and Technology Innovation, Foundation for Defense of Democracies"
+    },
+    {
+      "name": "Mr. Scott Algeier",
+      "position": "Executive Director",
+      "organization": "Information Technology-Information Sharing and Analysis Center"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Data Centers, Telecom, & Space-Based Systems: Modernizing DHS's Role for Communications, IT Sectors",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119218",
+      "format": ""
+    },
+    {
+      "name": "Data Centers, Telecom, & Space-Based Systems: Modernizing DHS's Role for Communications, IT Sectors",
+      "url": "https://www.youtube.com/watch?v=dZi9AS1GGXk",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119218/documents/HHRG-119-HM08-20260429-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119218/documents/HHRG-119-HM08-WList-20260429.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "eventId": "117888",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Full Committee Hearing, \"Part 2: Committee Funding for the 119th Congress\"",
+  "meetingStatus": "Scheduled",
+  "date": "2025-02-12T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsha00",
+      "name": "Committee on House Administration"
+    }
+  ],
+  "location": {
+    "room": "1310",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/117888?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable James Comer",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Angie Craig",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable James McGovern",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Glenn Thompson",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Virginia Foxx",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
+      "name": "The Honorable Mike Bost",
+      "position": "Member of Congress",
+      "organization": ""
+    }
+  ],
+  "videos": [
+    {
+      "name": "Full Committee Hearing, “Part 2: Committee Funding for the 119th Congress”",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/117888",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Hearing, “Part 2: Committee Funding for the 119th Congress”",
+      "url": "https://www.youtube.com/watch?v=ZwD5cDErMlQ",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/117888/documents/HHRG-119-HA00-20250212-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

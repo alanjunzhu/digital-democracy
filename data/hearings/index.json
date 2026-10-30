@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-29T16:30:58.930Z",
+  "lastUpdated": "2026-10-30T16:22:39.845Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -2724,28 +2724,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119501?format=json"
     },
     {
-      "eventId": "119504",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "Committee on House Administration Joint Deposition of Matt DeBergalis",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-20T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsha00",
-          "name": "Committee on House Administration"
-        }
-      ],
-      "location": {
-        "room": "2237",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119504?format=json"
-    },
-    {
       "eventId": "338721",
       "congress": 119,
       "chamber": "Senate",
@@ -4980,28 +4958,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119443?format=json"
     },
     {
-      "eventId": "119418",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Field of Fees: Private Equity’s Role in the Commercialization of American Youth Sports”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-30T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed14",
-          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119418?format=json"
-    },
-    {
       "eventId": "119435",
       "congress": 119,
       "chamber": "House",
@@ -5922,6 +5878,24 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338561?format=json"
+    },
+    {
+      "eventId": "119376",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Delivering Quality and Modern Healthcare to Michigan's Veterans and Servicemembers",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-12T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr11",
+          "name": "House Veterans' Affairs Subcommittee on Technology Modernization"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119376?format=json"
     },
     {
       "eventId": "338552",
@@ -7176,6 +7150,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338418?format=json"
     },
     {
+      "eventId": "119305",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Legislative Hearing on: H.R: 6733, The “VISN Reform Act of 2025”; H.R.6580, The “VA National Formulary Act of 2025”; H.R.6599, The “Leasing and Infrastructure Act of 2025”; H.R.6583, The “Research Reform Act of 2025”; H.R. 6549, The “VA Contracting and Procurement Act”; H.R.6740, The “VA TRUST Act”; H.R. 6764, The “Veterans Affairs Advisory Committee Oversight Act of 2025”; H.R. 6904, The “Veterans Readiness and Employment Improvement and Accountability Act of 2025”; H.R. 6843, The “Establishing the Veterans Economic Opportunity and Transition Administration Act of 2025”; H.R. 6833, The “Acquisition Reform and Cost Assessment Act of 2025”; H.R.2303, The “Board of Veterans’ Appeals Attorney Retention and Backlog Reduction Act”; H.R.210, The “Dental Care for Veterans Act”; H.R.3183, The “SAFE STEPS for Veterans Act of 2025”; H.R.5203, “To direct the Secretary of Veterans Affairs to update directives of the Department of Veterans Affairs regarding the management of acute sexual assault, and for other purposes; H.R.4114, The “EVEST Act”; H.R.3869, The “Every Veteran Housed Act”; H.R.2722, The “VA Funding and Workforce Protection Act”; H.R.1391, The “Student Veteran Benefit Restoration Act of 2025”; H.R.8044, The “Get Justice-Involved Veterans BACK HOME Act”; Discussion Draft: The “Toxic Exposure Advisory Committee Establishment Act”; Discussion Draft, “To amend title 38, United States Code, to establish the Advisory Committee on Toxic Exposure of the Department of Veterans Affairs”; Discussion Draft: The “Honor Vets Act”; Discussion Draft, “To provide for the modernization of the electronic health record system and other health information technology activities and systems of the Department of Veterans Affairs, and for other purposes.”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-05-20T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr00",
+          "name": "House Veterans' Affairs"
+        }
+      ],
+      "location": {
+        "room": "360",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119305?format=json"
+    },
+    {
       "eventId": "119293",
       "congress": 119,
       "chamber": "House",
@@ -7363,28 +7359,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119269?format=json"
     },
     {
-      "eventId": "119270",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Wires, Rates, and States: Permitting Transmission for Reliable and Affordable Power",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-13T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif03",
-          "name": "House Energy and Commerce Subcommittee on Energy"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119270?format=json"
-    },
-    {
       "eventId": "119260",
       "congress": 119,
       "chamber": "House",
@@ -7407,26 +7381,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119260?format=json"
     },
     {
-      "eventId": "119199",
+      "eventId": "119270",
       "congress": 119,
       "chamber": "House",
       "type": "Hearing",
-      "title": "Oversight hearing titled “Examining the President's FY 2027 Budget Request for the Department of the Interior.”",
+      "title": "Wires, Rates, and States: Permitting Transmission for Reliable and Affordable Power",
       "meetingStatus": "Scheduled",
-      "date": "2026-05-13T14:00:00Z",
+      "date": "2026-05-13T14:15:00Z",
       "committees": [
         {
-          "systemCode": "hsii00",
-          "name": "House Natural Resources"
+          "systemCode": "hsif03",
+          "name": "House Energy and Commerce Subcommittee on Energy"
         }
       ],
       "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
+        "room": "2123",
+        "building": "Rayburn House Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119199?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119270?format=json"
     },
     {
       "eventId": "119249",
@@ -7471,6 +7445,28 @@
         "hr6529"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119189?format=json"
+    },
+    {
+      "eventId": "119218",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Data Centers, Telecommunications Networks, and Space-Based Systems: Modernizing DHS’s SRMA Role for the Communications and IT Sectors”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-04-29T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hshm08",
+          "name": "Homeland Security Subcommittee on Cybersecurity and Infrastructure Protection"
+        }
+      ],
+      "location": {
+        "room": "310",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119218?format=json"
     },
     {
       "eventId": "119248",
@@ -7910,28 +7906,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119082?format=json"
     },
     {
-      "eventId": "119065",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Protecting Patients and Safeguarding Taxpayer Dollars: The Role of CMS in Combatting Medicare and Medicaid Fraud",
-      "meetingStatus": "Scheduled",
-      "date": "2026-03-17T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif02",
-          "name": "House Energy and Commerce Subcommittee on Oversight and Investigations"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119065?format=json"
-    },
-    {
       "eventId": "119064",
       "congress": 119,
       "chamber": "House",
@@ -7952,6 +7926,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119064?format=json"
+    },
+    {
+      "eventId": "119065",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Protecting Patients and Safeguarding Taxpayer Dollars: The Role of CMS in Combatting Medicare and Medicaid Fraud",
+      "meetingStatus": "Scheduled",
+      "date": "2026-03-17T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif02",
+          "name": "House Energy and Commerce Subcommittee on Oversight and Investigations"
+        }
+      ],
+      "location": {
+        "room": "2123",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119065?format=json"
     },
     {
       "eventId": "119049",
@@ -9271,35 +9267,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118285?format=json"
     },
     {
-      "eventId": "118250",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Leg Hrg on the following bills: •\tH.R. 513 (Rep. Higgins), “Offshore Lands Authorities Act of 2025”\r\n•\tH.R. 931 (Rep. Downing), To allow certain Federal minerals to be mined consistent with the Bull Mountains Mining Plan Modification, and for other purposes.\r\n•\tH.R. 2250 (Rep. DelBene), “National Landslide Preparedness Act Reauthorization Act of 2025” \r\n•\tH.R. 2556 (Rep. Hunt), “Comprehensive Offshore Resource Evaluation Act of 2025” or the “CORE Act of 2025”\r\n•\tH.R. 3168 (Rep. Valadao), “National Earthquake Hazards Reduction Program Reauthorization Act of 2025” \r\n•\tH.R. 3176 (Rep. Begich), To amend the John D. Dingell, Jr. Conservation, Management, and Recreation Act to reauthorize the National Volcano Early Warning and Monitoring System.",
-      "meetingStatus": "Scheduled",
-      "date": "2025-05-20T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii06",
-          "name": "House Natural Resources Subcommittee on Energy and Mineral Resources"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr3176",
-        "hr2556",
-        "hr931",
-        "hr3168",
-        "hr2250",
-        "hr513"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118250?format=json"
-    },
-    {
       "eventId": "118255",
       "congress": 119,
       "chamber": "House",
@@ -10029,6 +9996,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/117919?format=json"
+    },
+    {
+      "eventId": "117888",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Full Committee Hearing, \"Part 2: Committee Funding for the 119th Congress\"",
+      "meetingStatus": "Scheduled",
+      "date": "2025-02-12T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsha00",
+          "name": "Committee on House Administration"
+        }
+      ],
+      "location": {
+        "room": "1310",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/117888?format=json"
     },
     {
       "eventId": "117881",
