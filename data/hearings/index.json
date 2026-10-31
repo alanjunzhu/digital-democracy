@@ -1,8 +1,26 @@
 {
-  "lastUpdated": "2026-10-30T16:22:39.845Z",
+  "lastUpdated": "2026-10-31T15:33:13.285Z",
   "congress": 119,
   "total": 429,
   "hearings": [
+    {
+      "eventId": "119588",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Workers in Charge: Restoring Choice and Accountability in the Workplace\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-13T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed00",
+          "name": "House Education and Workforce"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119588?format=json"
+    },
     {
       "eventId": "119583",
       "congress": 119,
@@ -4499,28 +4517,6 @@
         "s4960"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338648?format=json"
-    },
-    {
-      "eventId": "119455",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Emerging Fraud Threats and the Evolving Fraud Landscape”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-15T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsgo24",
-          "name": "House Oversight and Government Reform Subcommittee on Government Operations"
-        }
-      ],
-      "location": {
-        "room": "2154",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119455?format=json"
     },
     {
       "eventId": "119457",

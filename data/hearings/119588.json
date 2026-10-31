@@ -1,0 +1,27 @@
+{
+  "eventId": "119588",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Workers in Charge: Restoring Choice and Accountability in the Workplace\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-13T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed00",
+      "name": "House Education and Workforce"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119588?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119588/documents/HHRG-119-ED00-20261113-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
