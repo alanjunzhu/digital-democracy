@@ -34,6 +34,15 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "s5689",
+      "congress": 119,
+      "type": "S.",
+      "number": 5689,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5689"
+    },
+    {
       "billId": "hr1703",
       "congress": 119,
       "type": "H.R.",
@@ -2273,15 +2282,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-04-15",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4303"
-    },
-    {
-      "billId": "s4306",
-      "congress": 119,
-      "type": "S.",
-      "number": 4306,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-15",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4306"
     }
   ]
 }

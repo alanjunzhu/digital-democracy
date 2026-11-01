@@ -42,6 +42,33 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "s5687",
+      "congress": 119,
+      "type": "S.",
+      "number": 5687,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5687"
+    },
+    {
+      "billId": "sres950",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 950,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/950"
+    },
+    {
+      "billId": "sres951",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 951,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/951"
+    },
+    {
       "billId": "hr8352",
       "congress": 119,
       "type": "H.R.",
@@ -2263,33 +2290,6 @@
       "relationshipType": "Reported By",
       "actionDate": "2026-05-11",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3062"
-    },
-    {
-      "billId": "s4445",
-      "congress": 119,
-      "type": "S.",
-      "number": 4445,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-30",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4445"
-    },
-    {
-      "billId": "s4446",
-      "congress": 119,
-      "type": "S.",
-      "number": 4446,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-30",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4446"
-    },
-    {
-      "billId": "s4461",
-      "congress": 119,
-      "type": "S.",
-      "number": 4461,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-04-30",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4461"
     }
   ]
 }

@@ -26,6 +26,15 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "s5684",
+      "congress": 119,
+      "type": "S.",
+      "number": 5684,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5684"
+    },
+    {
       "billId": "s2938",
       "congress": 119,
       "type": "S.",
@@ -768,7 +777,7 @@
       "congress": 119,
       "type": "S.",
       "number": 2542,
-      "relationshipType": "Markup By",
+      "relationshipType": "Reported By",
       "actionDate": "2026-08-06",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2542"
     },
@@ -795,7 +804,7 @@
       "congress": 119,
       "type": "S.",
       "number": 4505,
-      "relationshipType": "Reported By",
+      "relationshipType": "Markup By",
       "actionDate": "2026-08-06",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4505"
     },
@@ -1902,7 +1911,7 @@
       "congress": 119,
       "type": "S.J.Res.",
       "number": 102,
-      "relationshipType": "Reported By",
+      "relationshipType": "Markup By",
       "actionDate": "2026-02-04",
       "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/102"
     },
@@ -2265,15 +2274,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-12-03",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3327"
-    },
-    {
-      "billId": "s3336",
-      "congress": 119,
-      "type": "S.",
-      "number": 3336,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-12-03",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3336"
     }
   ]
 }

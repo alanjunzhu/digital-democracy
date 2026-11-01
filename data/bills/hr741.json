@@ -11,15 +11,27 @@
     "party": "D",
     "state": "AZ"
   },
-  "latestAction": "Placed on the Union Calendar, Calendar No. 668.",
-  "latestActionDate": "2026-08-27",
-  "updateDate": "2026-09-05T17:06:14Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Indian Affairs.",
+  "latestActionDate": "2026-09-15",
+  "updateDate": "2026-10-31T02:42:05Z",
   "originChamber": "House",
   "policyArea": "Native Americans",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/741",
   "summary": "<p><strong>Stronger Engagement for Indian Health Needs Act of </strong><strong>2025</strong></p><p>This bill elevates the current position of the Director of the Indian Health Service within the Department of Health and Human Services (HHS) to Assistant Secretary for Indian Health within HHS.</p>",
   "cosponsors": 3,
   "committees": [
+    {
+      "name": "Indian Affairs Committee",
+      "systemCode": "slia00",
+      "chamber": "Senate",
+      "type": "Other",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-15T22:13:14Z"
+        }
+      ]
+    },
     {
       "name": "Energy and Commerce Committee",
       "systemCode": "hsif00",
@@ -59,6 +71,44 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-15",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Indian Affairs."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "The title of the measure was amended. Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote. (text: CR H5568)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote. (text: CR H5568)"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 741.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Considered under suspension of the rules. (consideration: CR H5568-5570)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Mr. Westerman moved to suspend the rules and pass the bill, as amended.",
+      "chamber": "House"
+    },
     {
       "date": "2026-08-27",
       "text": "Placed on the Union Calendar, Calendar No. 668.",
@@ -116,14 +166,6 @@
       "date": "2025-01-28",
       "text": "Referred to the Committee on Natural Resources, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
       "chamber": "House"
-    },
-    {
-      "date": "2025-01-28",
-      "text": "Introduced in House"
-    },
-    {
-      "date": "2025-01-28",
-      "text": "Introduced in House"
     }
   ],
   "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/741/text"

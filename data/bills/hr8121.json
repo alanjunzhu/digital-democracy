@@ -11,15 +11,27 @@
     "party": "D",
     "state": "VI"
   },
-  "latestAction": "Placed on the Union Calendar, Calendar No. 677.",
-  "latestActionDate": "2026-08-27",
-  "updateDate": "2026-09-09T20:16:45Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources.",
+  "latestActionDate": "2026-09-15",
+  "updateDate": "2026-10-31T02:42:04Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/8121",
   "summary": "<p>This bill designates the bandstand at the Christiansted National Historic Site as the Peter G. Thurland, Sr., Bandstand. The historic site is located within St. Croix, U.S. Virgin Islands.</p>",
   "cosponsors": 0,
   "committees": [
+    {
+      "name": "Energy and Natural Resources Committee",
+      "systemCode": "sseg00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-09-15T22:07:33Z"
+        }
+      ]
+    },
     {
       "name": "Natural Resources Committee",
       "systemCode": "hsii00",
@@ -39,6 +51,39 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-15",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote. (text: CR H5566)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote."
+    },
+    {
+      "date": "2026-09-14",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 8121.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Considered under suspension of the rules. (consideration: CR H5566-5567)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-14",
+      "text": "Mr. Westerman moved to suspend the rules and pass the bill, as amended.",
+      "chamber": "House"
+    },
     {
       "date": "2026-08-27",
       "text": "Placed on the Union Calendar, Calendar No. 677.",

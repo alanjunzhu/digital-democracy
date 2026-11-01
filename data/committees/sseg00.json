@@ -26,6 +26,24 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "s5688",
+      "congress": 119,
+      "type": "S.",
+      "number": 5688,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5688"
+    },
+    {
+      "billId": "s5690",
+      "congress": 119,
+      "type": "S.",
+      "number": 5690,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5690"
+    },
+    {
       "billId": "hr2306",
       "congress": 119,
       "type": "H.R.",
@@ -2256,24 +2274,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-01-28",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3708"
-    },
-    {
-      "billId": "s3719",
-      "congress": 119,
-      "type": "S.",
-      "number": 3719,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-01-28",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3719"
-    },
-    {
-      "billId": "s3695",
-      "congress": 119,
-      "type": "S.",
-      "number": 3695,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-01-27",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3695"
     }
   ]
 }

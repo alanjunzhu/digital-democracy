@@ -38,6 +38,24 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "s5682",
+      "congress": 119,
+      "type": "S.",
+      "number": 5682,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5682"
+    },
+    {
+      "billId": "sjres221",
+      "congress": 119,
+      "type": "S.J.Res.",
+      "number": 221,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/221"
+    },
+    {
       "billId": "hr1744",
       "congress": 119,
       "type": "H.R.",
@@ -2268,24 +2286,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-12-02",
       "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/24"
-    },
-    {
-      "billId": "sres522",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 522,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-12-02",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/522"
-    },
-    {
-      "billId": "sres523",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 523,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-12-02",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/523"
     }
   ]
 }

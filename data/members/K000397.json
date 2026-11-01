@@ -49,10 +49,22 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1640,
+      "billId": "hres1640",
+      "title": "Expressing support for the designation of October 2026 as \"National Financial Planning Month\".",
+      "introducedDate": "2026-10-26",
+      "latestAction": "Referred to the House Committee on Financial Services.",
+      "latestActionDate": "2026-10-26",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1640"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10880,
       "billId": "hr10880",
-      "title": "To establish a pilot program for voluntary federal change of address notification service operated by the Administrator of General Services, and for other purposes.",
+      "title": "Tell the Government Once Act",
       "introducedDate": "2026-10-22",
       "latestAction": "Referred to the Committee on Oversight and Government Reform, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
       "latestActionDate": "2026-10-22",
@@ -634,18 +646,6 @@
       "latestActionDate": "2025-03-26",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/2370"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 2201,
-      "billId": "hr2201",
-      "title": "Improving VA Training for Military Sexual Trauma Claims Act",
-      "introducedDate": "2025-03-18",
-      "latestAction": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
-      "latestActionDate": "2025-05-20",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2201"
     }
   ]
 }

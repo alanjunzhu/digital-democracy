@@ -34,6 +34,15 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "s5685",
+      "congress": 119,
+      "type": "S.",
+      "number": 5685,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-10-15",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5685"
+    },
+    {
       "billId": "s1564",
       "congress": 119,
       "type": "S.",
@@ -2273,15 +2282,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-12-09",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3408"
-    },
-    {
-      "billId": "s3342",
-      "congress": 119,
-      "type": "S.",
-      "number": 3342,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-12-04",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3342"
     }
   ]
 }
