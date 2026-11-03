@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-01T16:30:39.050Z",
+  "lastUpdated": "2026-11-03T17:25:56.261Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -2269,6 +2269,39 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119517?format=json"
     },
     {
+      "eventId": "119518",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Markup",
+      "title": "Ten Pieces of Legislation",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif00",
+          "name": "House Energy and Commerce"
+        }
+      ],
+      "location": {
+        "room": "2123",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr2140",
+        "hr5549",
+        "hr3978",
+        "hr9317",
+        "hr9615",
+        "hr9613",
+        "hr9614",
+        "hr9084",
+        "hr9612",
+        "hr3194"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119518?format=json"
+    },
+    {
       "eventId": "119520",
       "congress": 119,
       "chamber": "House",
@@ -2343,39 +2376,6 @@
         "hr10136"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json"
-    },
-    {
-      "eventId": "119518",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Ten Pieces of Legislation",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif00",
-          "name": "House Energy and Commerce"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr2140",
-        "hr5549",
-        "hr3978",
-        "hr9317",
-        "hr9615",
-        "hr9613",
-        "hr9614",
-        "hr9084",
-        "hr9612",
-        "hr3194"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119518?format=json"
     },
     {
       "eventId": "119524",
@@ -3738,66 +3738,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338651?format=json"
     },
     {
-      "eventId": "119484",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Unleashing the Golden Age of Science: Examining the Priorities of the FY2027 Research and Technology Enterprise",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hssy00",
-          "name": "House Science, Space, and Technology"
-        }
-      ],
-      "location": {
-        "room": "2318",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119484?format=json"
-    },
-    {
-      "eventId": "119492",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "the Full Committee to consider the following:\r\n\r\n1) H.R. 6610, Pharmacists Fight Back [in Federal Employee Health Benefit Plans Act];\r\n\r\n2) H.R. 9720, D.C. Taxing Authority Review Act;\r\n      \r\n3) H.R. 9725, Restoring Integrity and Efficiency to Inspector General Oversight Act of 2025;\r\n\r\n4) H.R. 9643, Comment Integrity and Management Act;\r\n\r\n5) H.R. 9741, To name the DC Tuition Assistance Grant program the “Eleanor Holmes Norton District of Columbia Tuition Assistance Grant Program”;\r\n           \r\n6) Several postal naming measures.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsgo00",
-          "name": "House Oversight and Government Reform"
-        }
-      ],
-      "location": {
-        "room": "2154",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr8359",
-        "hr9741",
-        "hr8945",
-        "hr9643",
-        "hr9725",
-        "hr4283",
-        "hr8326",
-        "hr6610",
-        "hr8999",
-        "hr9026",
-        "hr6006",
-        "hr9720",
-        "hr9570",
-        "hr7365",
-        "hr8419"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119492?format=json"
-    },
-    {
       "eventId": "338682",
       "congress": 119,
       "chamber": "Senate",
@@ -4996,6 +4936,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119419?format=json"
+    },
+    {
+      "eventId": "119403",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "H.R. 8552, the “Veterans’ Compensation Cost-of-Living Adjustment Act of 2026”; \r\nH.R. 8767, the “Compensation Fund Recrediting Act”; \r\nH.R. 9006, the “Locating Our Unclaimed Veterans Act”; \r\nH.R. 6588, the “PROVIDE Act” \r\nH.R. 6921, the “Hawai’i National Cemetery Act” \r\nDiscussion Draft, the “Unclaimed Veterans’ Legacy Grant Program Act”",
+      "meetingStatus": "Rescheduled",
+      "date": "2026-06-25T19:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr09",
+          "name": "House Veterans' Affairs Subcommittee on Disability Assistance and Memorial Affairs"
+        }
+      ],
+      "location": {
+        "room": "360",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119403?format=json"
     },
     {
       "eventId": "338611",
@@ -7546,28 +7508,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119212?format=json"
     },
     {
-      "eventId": "119186",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Nuclear Regulatory Commission: Oversight of Activities, Priorities, and Fiscal Year 2027 Budget.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-04-22T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif03",
-          "name": "House Energy and Commerce Subcommittee on Energy"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119186?format=json"
-    },
-    {
       "eventId": "338180",
       "congress": 119,
       "chamber": "NoChamber",
@@ -8226,6 +8166,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337942?format=json"
+    },
+    {
+      "eventId": "118908",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Building an AI-Ready America: Adopting AI at Work”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-02-03T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118908?format=json"
     },
     {
       "eventId": "118930",
@@ -9129,6 +9091,28 @@
         "hr1676"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118298?format=json"
+    },
+    {
+      "eventId": "118293",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Oversight hearing titled “Examining the President's FY 2026 Budget Request for the Department of the Interior.”",
+      "meetingStatus": "Scheduled",
+      "date": "2025-06-12T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii00",
+          "name": ""
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118293?format=json"
     },
     {
       "eventId": "118363",

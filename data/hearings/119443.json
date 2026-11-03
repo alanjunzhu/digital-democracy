@@ -21,6 +21,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119443?format=json",
   "witnesses": [
     {
+      "name": "Mr. Gregg Orto",
+      "position": "Deputy Director, National Veterans Service",
+      "organization": "Veterans of Foreign Wars"
+    },
+    {
       "name": "Mr. Derek Herbert",
       "position": "Acting Chief Production Officer",
       "organization": "Veterans Benefits Administration, U.S. Department of Veterans Affairs"
@@ -39,11 +44,6 @@
       "name": "Mr. Jeremy Villanueva",
       "position": "Associate Legislative Director",
       "organization": "Paralyzed Veterans of America"
-    },
-    {
-      "name": "Mr. Gregg Orto",
-      "position": "Deputy Director, National Veterans Service",
-      "organization": "Veterans of Foreign Wars"
     },
     {
       "name": "Mr. Robert Orifici",
@@ -72,6 +72,11 @@
     {
       "name": "U.S. Department of Veterans Affairs Response to Chairman Barrett and Ranking Member Budzinski",
       "url": "https://www.congress.gov/119/meeting/house/119443/documents/HHRG-119-VR11-20260713-QFR002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "U.S. Department of Veterans Affairs Response Attachments to Chairman Barrett and Ranking Member Budzinski",
+      "url": "https://www.congress.gov/119/meeting/house/119443/documents/HHRG-119-VR11-20260713-QFR003.pdf",
       "format": "PDF"
     },
     {
