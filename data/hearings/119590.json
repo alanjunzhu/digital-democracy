@@ -1,0 +1,31 @@
+{
+  "eventId": "119590",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"The Rise of Sports Gambling on College Campuses\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-11T15:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsed13",
+      "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+    }
+  ],
+  "location": {
+    "room": "2175",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119590?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119590/documents/HHRG-119-ED13-20261111-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
