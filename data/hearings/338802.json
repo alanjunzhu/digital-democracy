@@ -6,7 +6,12 @@
   "title": "Hearings to examine the nomination of Justin Schwab, of the District of Columbia, to be an Assistant Administrator of the Environmental Protection Agency.",
   "meetingStatus": "Scheduled",
   "date": "2026-11-10T15:30:00Z",
-  "committees": [],
+  "committees": [
+    {
+      "systemCode": "ssev00",
+      "name": "Senate Environment and Public Works"
+    }
+  ],
   "location": {
     "room": "406",
     "building": "Dirksen Senate Office Building",
@@ -15,6 +20,17 @@
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338802?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the nomination of Justin Schwab, of the District of Columbia, to be an Assistant Administrator of the Environmental Protection Agency.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338802",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the nomination of Justin Schwab, of the District of Columbia, to be an Assistant Administrator of the Environmental Protection Agency.",
+      "url": "https://www.senate.gov/isvp/?comm=epw&filename=epw111026",
+      "format": ""
+    }
+  ],
   "meetingDocuments": []
 }

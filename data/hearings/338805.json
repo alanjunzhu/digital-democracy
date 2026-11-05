@@ -6,7 +6,12 @@
   "title": "Hearings to examine the nominations of Francis Browne, of the District of Columbia, to be an Under Secretary, and Robert Stebbins, of New York, to be General Counsel, both of the Department of the Treasury, and Christopher Abbott, of Virginia, to be an Assistant Secretary of Commerce.",
   "meetingStatus": "Scheduled",
   "date": "2026-11-10T16:00:00Z",
-  "committees": [],
+  "committees": [
+    {
+      "systemCode": "ssfi00",
+      "name": "Senate Finance"
+    }
+  ],
   "location": {
     "room": "215",
     "building": "Dirksen Senate Office Building",
@@ -15,6 +20,17 @@
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338805?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the nominations of Francis Browne, of the District of Columbia, to be an Under Secretary, and Robert Stebbins, of New York, to be General Counsel, both of the Department of the Treasury, and Christopher Abbott, of Virginia, to be an Assistant Secretary of Commerce.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338805",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the nominations of Francis Browne, of the District of Columbia, to be an Under Secretary, and Robert Stebbins, of New York, to be General Counsel, both of the Department of the Treasury, and Christopher Abbott, of Virginia, to be an Assistant Secretary of Commerce.",
+      "url": "https://www.senate.gov/isvp/?comm=finance&filename=finance111026",
+      "format": ""
+    }
+  ],
   "meetingDocuments": []
 }

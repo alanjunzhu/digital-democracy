@@ -6,7 +6,12 @@
   "title": "Hearings to examine the nomination of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior.",
   "meetingStatus": "Scheduled",
   "date": "2026-11-10T14:30:00Z",
-  "committees": [],
+  "committees": [
+    {
+      "systemCode": "sseg00",
+      "name": "Senate Energy and Natural Resources"
+    }
+  ],
   "location": {
     "room": "366",
     "building": "Dirksen Senate Office Building",
@@ -15,6 +20,17 @@
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338800?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the nomination of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338800",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the nomination of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior.",
+      "url": "https://www.senate.gov/isvp/?comm=energy&filename=energy111026",
+      "format": ""
+    }
+  ],
   "meetingDocuments": []
 }

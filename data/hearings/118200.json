@@ -1,0 +1,41 @@
+{
+  "eventId": "118200",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Science, Technology, and Innovation Posture",
+  "meetingStatus": "Scheduled",
+  "date": "2025-05-06T19:30:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas35",
+      "name": "House Armed Services Subcommittee on Cyber, Information Technologies, and Innovation"
+    }
+  ],
+  "location": {
+    "room": "2212",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118200?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Doug Beck",
+      "position": "Director",
+      "organization": "Defense Innovation Unit"
+    },
+    {
+      "name": "Mr. George Rumford",
+      "position": "Director",
+      "organization": "Test Resource Management Center"
+    },
+    {
+      "name": "Mr. James Mazol",
+      "position": "Performing the Duties of the Under Secretary of Defense for Research and Engineering and Chief Technology Officer",
+      "organization": "Office of the Secretary of Defense"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": []
+}

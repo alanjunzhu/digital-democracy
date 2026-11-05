@@ -1,0 +1,57 @@
+{
+  "eventId": "119592",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "One Year Later: Assessing Nigeria’s Efforts to Protect Christians and Secure the Middle Belt",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-12T16:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa16",
+      "name": "House Foreign Affairs Subcommittee on Africa"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119592?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Frank Garcia",
+      "position": "Assistant Secretary, Bureau of African Affairs",
+      "organization": "U.S. Department of State"
+    },
+    {
+      "name": "The Honorable Riley Barnes",
+      "position": "Assistant Secretary, Bureau of Democracy, Human Rights, and Labor",
+      "organization": "U.S. Department of State"
+    },
+    {
+      "name": "Ms. Nina Shea",
+      "position": "Senior Fellow and Director, Center for Religious Freedom",
+      "organization": "The Hudson Institute"
+    },
+    {
+      "name": "Mr. Ryan Brown",
+      "position": "CEO",
+      "organization": "Open Doors US"
+    },
+    {
+      "name": "Ms. Oge Onubogu",
+      "position": "Director and Senior Fellow, Africa Program",
+      "organization": "Center for Strategic and International Studies"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119592/documents/HHRG-119-FA16-20261112-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

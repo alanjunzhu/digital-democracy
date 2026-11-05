@@ -6,7 +6,12 @@
   "title": "Hearings to examine the nomination of Catherine Eschbach, of Texas, to be General Counsel of the Equal Employment Opportunity Commission.",
   "meetingStatus": "Scheduled",
   "date": "2026-11-10T15:00:00Z",
-  "committees": [],
+  "committees": [
+    {
+      "systemCode": "sshr00",
+      "name": "Senate Health, Education, Labor, and Pensions"
+    }
+  ],
   "location": {
     "room": "430",
     "building": "Dirksen Senate Office Building",
@@ -15,6 +20,17 @@
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338801?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Hearings to examine the nomination of Catherine Eschbach, of Texas, to be General Counsel of the Equal Employment Opportunity Commission.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338801",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine the nomination of Catherine Eschbach, of Texas, to be General Counsel of the Equal Employment Opportunity Commission.",
+      "url": "https://www.senate.gov/isvp/?comm=help&filename=help111026",
+      "format": ""
+    }
+  ],
   "meetingDocuments": []
 }
