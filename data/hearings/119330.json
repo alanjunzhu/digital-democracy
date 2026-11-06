@@ -26,6 +26,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119330?format=json",
   "witnesses": [
     {
+      "name": "The Honorable Mike Ezell",
+      "position": "Member of Congress",
+      "organization": ""
+    },
+    {
       "name": "Captain Marty Scanlon",
       "position": "President",
       "organization": "Blue Water Fishermen's Association"
@@ -57,11 +62,6 @@
     },
     {
       "name": "The Honorable Suzanne Bonamici",
-      "position": "Member of Congress",
-      "organization": ""
-    },
-    {
-      "name": "The Honorable Mike Ezell",
       "position": "Member of Congress",
       "organization": ""
     }

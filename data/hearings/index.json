@@ -1,14 +1,38 @@
 {
-  "lastUpdated": "2026-11-05T17:45:08.042Z",
+  "lastUpdated": "2026-11-06T17:01:01.638Z",
   "congress": 119,
   "total": 429,
   "hearings": [
+    {
+      "eventId": "118861",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "H.R. 1013 – Retirement Fairness for Charities and Educational Institutions Act of 2025",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-09T21:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsru00",
+          "name": "House Rules"
+        }
+      ],
+      "location": {
+        "room": "H-313",
+        "building": "Capitol",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr1013"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118861?format=json"
+    },
     {
       "eventId": "338808",
       "congress": 119,
       "chamber": "Senate",
       "type": "Open Business Meeting",
-      "title": "Business meeting to consider pending nominations and Fiscal Year 2027 Major Medical Facility Lease Authorizations.",
+      "title": "Business meeting to consider the nominations of Gary Shatswell, of Washington, to be an Assistant Secretary (Information and Technology), Michael Tierney, of Pennsylvania, to be an Assistant Secretary (Office of Accountability and Whistleblower Protection), and Maria Lopez, of Florida, to be Chairman of the Board, all of the Department of Veterans Affairs, and Robert R. Fleck, of Pennsylvania,  David M. Jones, of Virginia, vice a new position created by Public Law 118-196, approved December 23, 2024, Daniel F. Rendleman, of Illinois, and James Lewis Quinn, of Virginia, each to be a Judge of the United States Court of Appeals for Veterans Claims for the term of fifteen years, and Fiscal Year 2027 Major Medical Facility Lease Authorizations.",
       "meetingStatus": "Scheduled",
       "date": "2026-11-09T22:30:00Z",
       "committees": [
@@ -92,28 +116,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338806?format=json"
     },
     {
-      "eventId": "338802",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of Justin Schwab, of the District of Columbia, to be an Assistant Administrator of the Environmental Protection Agency.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-11-10T15:30:00Z",
-      "committees": [
-        {
-          "systemCode": "ssev00",
-          "name": "Senate Environment and Public Works"
-        }
-      ],
-      "location": {
-        "room": "406",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338802?format=json"
-    },
-    {
       "eventId": "338804",
       "congress": 119,
       "chamber": "Senate",
@@ -134,6 +136,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338804?format=json"
+    },
+    {
+      "eventId": "338802",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nomination of Justin Schwab, of the District of Columbia, to be an Assistant Administrator of the Environmental Protection Agency.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-10T15:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssev00",
+          "name": "Senate Environment and Public Works"
+        }
+      ],
+      "location": {
+        "room": "406",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338802?format=json"
     },
     {
       "eventId": "338803",
@@ -2057,28 +2081,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119549?format=json"
     },
     {
-      "eventId": "119544",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"Out of Touch: When Union Politics Leave Workers Behind\"",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed02",
-          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119544?format=json"
-    },
-    {
       "eventId": "119550",
       "congress": 119,
       "chamber": "House",
@@ -2099,6 +2101,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119550?format=json"
+    },
+    {
+      "eventId": "119544",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Out of Touch: When Union Politics Leave Workers Behind\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119544?format=json"
     },
     {
       "eventId": "119562",
@@ -2774,28 +2798,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119522?format=json"
     },
     {
-      "eventId": "119498",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "Member Day Hearing on Proposed Rules Changes for the 120th Congress",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsru00",
-          "name": "House Rules"
-        }
-      ],
-      "location": {
-        "room": "H-313",
-        "building": "Capitol",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119498?format=json"
-    },
-    {
       "eventId": "119534",
       "congress": 119,
       "chamber": "House",
@@ -2984,24 +2986,6 @@
       "location": null,
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119513?format=json"
-    },
-    {
-      "eventId": "119501",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Deployed, Not Disqualified: Defending Servicemembers in Our Schools”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-25T15:30:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed00",
-          "name": "House Education and Workforce"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119501?format=json"
     },
     {
       "eventId": "338721",
@@ -3319,28 +3303,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338701?format=json"
     },
     {
-      "eventId": "338704",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Business Meeting",
-      "title": "Business meeting to markup S.737, to require certain interactive computer services to adopt and operate technology verification measures to ensure that users of the platform are not minors, S.1748, to protect the safety of children on the internet, S.4199, to require entities that make artificial intelligence chatbots available to minors to implement certain safe design features, S.4407, to require the creation of family accounts for children to be able to use artificial intelligence chatbots, to require verifiable parental consent for teens using artificial intelligence chatbots, S.5171, to require a study of AI-enabled toys and development of a joint action plan regarding the marketing and sale of AI-enabled toys, and a promotion list in the Coast Guard.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-05T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "sscm00",
-          "name": "Senate Commerce, Science, and Transportation"
-        }
-      ],
-      "location": {
-        "room": "253",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338704?format=json"
-    },
-    {
       "eventId": "338702",
       "congress": 119,
       "chamber": "Senate",
@@ -3361,6 +3323,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338702?format=json"
+    },
+    {
+      "eventId": "338704",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to markup S.737, to require certain interactive computer services to adopt and operate technology verification measures to ensure that users of the platform are not minors, S.1748, to protect the safety of children on the internet, S.4199, to require entities that make artificial intelligence chatbots available to minors to implement certain safe design features, S.4407, to require the creation of family accounts for children to be able to use artificial intelligence chatbots, to require verifiable parental consent for teens using artificial intelligence chatbots, S.5171, to require a study of AI-enabled toys and development of a joint action plan regarding the marketing and sale of AI-enabled toys, and a promotion list in the Coast Guard.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-08-05T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "sscm00",
+          "name": "Senate Commerce, Science, and Transportation"
+        }
+      ],
+      "location": {
+        "room": "253",
+        "building": "Russell Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338704?format=json"
     },
     {
       "eventId": "338697",
@@ -4240,6 +4224,33 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338663?format=json"
+    },
+    {
+      "eventId": "119475",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative Hearing on: • H.R. 7332 (Rep. Matsui), “Whale CHARTS Act of 2026” • H.R. 7466 (Rep. Jackson of TX), “SAFE CATTLE Act” • H.R. 8876 (Rep. Walberg), “Aquatic Invasive Species Control and Prevention Act of 2026” • H.R. 9621 (Rep. Baumgartner), “Northwest Endangered Salmon Predation Prevention Act of 2026”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-21T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii13",
+          "name": "House Natural Resources Subcommittee on Water, Wildlife and Fisheries"
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr8876",
+        "hr7332",
+        "hr9621",
+        "hr7466"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119475?format=json"
     },
     {
       "eventId": "338676",
@@ -6815,6 +6826,33 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338510?format=json"
     },
     {
+      "eventId": "119330",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative Hearing on: \r\n•\tH.R. 2406 (Rep. Bonamici), “National Oceanic and Atmospheric Administration Sexual Harassment and Assault Prevention Improvements Act of 2025”\r\n•\tH.R. 8401 (Rep. Begich), To amend the Marine Mammal Protection Act of 1972 to allow the transport, purchase, and sale of pelts of, and handicrafts, garments, and art produced from, Southcentral and Southeast Alaska northern sea otters that are taken for subsistence purposes.\r\n•\tH.R. 8542 (Rep. Ezell), “Offshore Parity Act of 2026”\r\n•\tH.R. 8904 (Rep. Radewagen), To amend the Magnuson-Stevens Fishery Conservation and Management Act to provide for the regulation of fishing in marine national monuments.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-03T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii13",
+          "name": "House Natural Resources Subcommittee on Water, Wildlife and Fisheries"
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr8401",
+        "hr8542",
+        "hr2406",
+        "hr8904"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119330?format=json"
+    },
+    {
       "eventId": "338509",
       "congress": 119,
       "chamber": "Senate",
@@ -7551,28 +7589,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119132?format=json"
-    },
-    {
-      "eventId": "119134",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Faster Decisions, Stronger Outcomes: VA’s Work to \r\nStreamline the Disability Claims Backlog",
-      "meetingStatus": "Scheduled",
-      "date": "2026-04-15T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr00",
-          "name": "House Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119134?format=json"
     },
     {
       "eventId": "119142",

@@ -1,0 +1,38 @@
+{
+  "eventId": "118861",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "H.R. 1013 – Retirement Fairness for Charities and Educational Institutions Act of 2025",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-09T21:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsru00",
+      "name": "House Rules"
+    }
+  ],
+  "location": {
+    "room": "H-313",
+    "building": "Capitol",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr1013"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118861?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 1013 – Retirement Fairness for Charities and Educational Institutions Act of 2025",
+      "url": "https://www.congress.gov/119/meeting/house/118861/documents/BILLS-119hr1013rh.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: H. Rept. 119-390 – Report from the Committee on Financial Services to accompany H.R. 1013",
+      "url": "https://www.congress.gov/119/meeting/house/118861/documents/CRPT-119hrpt390.pdf",
+      "format": "PDF"
+    }
+  ]
+}
