@@ -1,0 +1,73 @@
+{
+  "eventId": "119313",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight hearing titled “The Federal Reclamation Program’s Next Century”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-20T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsii13",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "1324",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119313?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. J. Petersen",
+      "position": "Director of Water Policy",
+      "organization": "San Luis & Delta-Mendota Water Authority"
+    },
+    {
+      "name": "Mr. Scott Cameron",
+      "position": "Principal Deputy Assistant Secretary",
+      "organization": "U.S. Department of the Interior"
+    },
+    {
+      "name": "Mr. Shivaji Deshmukh",
+      "position": "General Manager",
+      "organization": "Metropolitan Water District of Southern California"
+    },
+    {
+      "name": "Ms. Samantha Barncastle",
+      "position": "Executive Director",
+      "organization": "Family Farm Alliance"
+    },
+    {
+      "name": "Ms. Jennifer Patrick",
+      "position": "Project Manager",
+      "organization": "Milk River Joint Board of Control"
+    }
+  ],
+  "videos": [
+    {
+      "name": "The Federal Reclamation Program’s Next Century",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119313",
+      "format": ""
+    },
+    {
+      "name": "The Federal Reclamation Program’s Next Century",
+      "url": "https://www.youtube.com/watch?v=D6vkObOAMcI",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119313/documents/HHRG-119-II13-20260520-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119313/documents/HHRG-119-II13-20260520-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}
