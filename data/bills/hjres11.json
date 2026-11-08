@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.J.Res.",
-  "number": "11",
+  "number": 11,
   "billId": "hjres11",
   "title": ".Proposing a balanced budget amendment to the Constitution requiring that each agency and department's funding is justified.",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on the Judiciary.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-05T21:49:14Z",
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/11",
   "summary": "<p>This joint resolution proposes a constitutional amendment prohibiting total outlays for a fiscal year from exceeding total receipts for that fiscal year unless (1) Congress authorizes the excess by a three-fifths vote of each chamber, and (2) total outlays do not exceed a specified percentage of the estimated gross domestic product of the United States. The prohibition excludes outlays for repayment of debt principal and receipts derived from borrowing. </p> <p>The amendment requires a three-fifths vote of each chamber of Congress to increase revenue or increase the limit on the debt of the United States. </p> <p>The amendment also requires the President to submit an annual budget in which total outlays do not exceed total receipts. The President's budget must also include justifications and specified details regarding funding proposed for departments and agencies. </p> <p>Congress may waive the requirements due to a declaration of war, a military conflict, an event that causes an imminent and serious military threat to national security, or a natural disaster.</p>",
   "cosponsors": 4,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:21:30Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

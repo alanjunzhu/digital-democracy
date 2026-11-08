@@ -40,10 +40,22 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.J.Res.",
+      "number": 221,
+      "billId": "hjres221",
+      "title": "Proposing an amendment to the Constitution of the United States giving Congress power to regulate campaign contributions for Federal elections.",
+      "introducedDate": "2026-11-02",
+      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestActionDate": "2026-11-02",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/221"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10943,
       "billId": "hr10943",
-      "title": "To amend the William Wilberforce Trafficking Victims Protection Reauthorization Act of 2008 to direct the Secretary of Health and Human Services to provide counsel for unaccompanied alien children in immigration proceedings, and for other purposes.",
+      "title": "Counsel for Kids Act of 2026",
       "introducedDate": "2026-10-29",
       "latestAction": "Referred to the House Committee on the Judiciary.",
       "latestActionDate": "2026-10-29",
@@ -589,18 +601,6 @@
       "latestActionDate": "2025-06-12",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3933"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 3931,
-      "billId": "hr3931",
-      "title": "Kids on the Go Act of 2025",
-      "introducedDate": "2025-06-11",
-      "latestAction": "Referred to the Subcommittee on Highways and Transit.",
-      "latestActionDate": "2025-06-12",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3931"
     }
   ]
 }

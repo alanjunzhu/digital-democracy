@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "102",
+  "number": 102,
   "billId": "hr102",
   "title": "American Sovereignty and Species Protection Act of 2025",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Natural Resources.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-06T20:57:03Z",
   "originChamber": "House",
   "policyArea": "Environmental Protection",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/102",
   "summary": "<p><strong>American Sovereignty and Species Protection Act of 2025</strong></p><p>This bill limits the protection of endangered or threatened species to species that are native to the United States. In addition, the bill prohibits certain funding for endangered or threatened species from being used to acquire lands, waters, or other interests in foreign countries.</p>",
   "cosponsors": 0,
   "committees": [
-    "Natural Resources Committee"
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:05:40Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

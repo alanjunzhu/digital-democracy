@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.J.Res.",
-  "number": "2",
+  "number": 2,
   "billId": "hjres2",
   "title": "Proposing a balanced budget amendment to the Constitution of the United States.",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on the Judiciary.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-05T22:28:07Z",
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/2",
   "summary": "<p>This joint resolution proposes a constitutional amendment that prohibits total outlays for any fiscal year from exceeding total receipts for that fiscal year.</p><p>The amendment also prohibits (1) increases to the federal debt limit, and (2) a bill that increases revenue from becoming law unless the bill has been approved by two-thirds of each chamber of Congress with a roll call vote.</p>",
   "cosponsors": 0,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:09:40Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

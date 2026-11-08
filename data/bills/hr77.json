@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "77",
+  "number": 77,
   "billId": "hr77",
   "title": "Midnight Rules Relief Act",
   "introducedDate": "2025-01-03",
@@ -13,15 +13,57 @@
   },
   "latestAction": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
   "latestActionDate": "2025-02-13",
+  "updateDate": "2026-11-06T22:59:47Z",
   "originChamber": "House",
   "policyArea": "Government Operations and Politics",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/77",
   "summary": "<p><strong>Midnight Rules Relief Act</strong></p><p>This bill allows Congress to disapprove multiple regulations under one joint resolution of disapproval if the regulations were submitted for review during a portion  of the final year of a President's term.</p><p> Under current law, the Congressional Review Act generally&nbsp;provides for a period of additional review during the succeeding Congress for regulations that were submitted during the last 60 legislative days of the prior Congress. However, each joint resolution may disapprove of only one regulation.</p>",
   "cosponsors": 12,
   "committees": [
-    "Homeland Security and Governmental Affairs Committee",
-    "Judiciary Committee",
-    "Rules Committee"
+    {
+      "name": "Homeland Security and Governmental Affairs Committee",
+      "systemCode": "ssga00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-02-13T17:21:16Z"
+        }
+      ]
+    },
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Unknown",
+          "date": "2025-02-12T21:55:02Z"
+        },
+        {
+          "name": "Unknown",
+          "date": "2025-02-12T21:28:42Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:06:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Rules Committee",
+      "systemCode": "hsru00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:06:05Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

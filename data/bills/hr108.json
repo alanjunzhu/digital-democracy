@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "108",
+  "number": 108,
   "billId": "hr108",
   "title": "Space Research Innovation Act",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Science, Space, and Technology.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-06T21:56:41Z",
   "originChamber": "House",
   "policyArea": "Science, Technology, Communications",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/108",
   "summary": "<p><strong>Space Research Innovation Act</strong></p><p>This bill directs the National Aeronautics and Space Administration (NASA) to establish a university-affiliated research center to fund analyses and engineering support related to cislunar and deep&nbsp;space missions and interplanetary research. Entities eligible to participate in the center include institutions of higher education, operators of federally funded research and development centers, and nonprofit research institutions.</p>",
   "cosponsors": 0,
   "committees": [
-    "Science, Space, and Technology Committee"
+    {
+      "name": "Science, Space, and Technology Committee",
+      "systemCode": "hssy00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:07:15Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.J.Res.",
-  "number": "15",
+  "number": 15,
   "billId": "hjres15",
   "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Commercial Water Heating Equipment\".",
   "introducedDate": "2025-01-09",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Energy and Commerce.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-11-05T22:19:59Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/15",
   "summary": "<p>This joint resolution nullifies the final rule titled <em>Energy Conservation Program: Energy Conservation Standards for Commercial Water Heating Equipment</em>, which was submitted by the Department of Energy on October 6, 2023. The rule adopts more stringent energy conservation standards for commercial water heating equipment under the Energy Policy and Conservation Act in order to achieve more energy savings.</p>",
   "cosponsors": 0,
   "committees": [
-    "Energy and Commerce Committee"
+    {
+      "name": "Energy and Commerce Committee",
+      "systemCode": "hsif00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T14:32:30Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

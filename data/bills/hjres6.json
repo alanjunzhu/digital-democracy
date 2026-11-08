@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.J.Res.",
-  "number": "6",
+  "number": 6,
   "billId": "hjres6",
   "title": "Proposing an amendment to the Constitution of the United States to provide for balanced budgets for the Government.",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on the Judiciary.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-05T22:29:38Z",
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/6",
   "summary": "<p>This joint resolution proposes a constitutional amendment prohibiting total outlays for a fiscal year from exceeding total receipts for that fiscal year unless Congress authorizes the excess by a two-thirds roll call vote of each chamber. </p> <p>The amendment also requires the President to submit an annual budget in which total outlays for the fiscal year do not exceed total receipts. </p> <p>Congress may waive the requirements for any fiscal year in which (1) a declaration of war is in effect by a roll call vote, or (2) a declaration of a natural disaster or a national emergency is in effect that was declared by a joint resolution that became law after being adopted by a majority of each chamber of Congress. </p>",
   "cosponsors": 0,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:08:20Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

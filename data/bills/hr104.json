@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "104",
+  "number": 104,
   "billId": "hr104",
   "title": "Protecting Arizona from Federal Land Grabs Act",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Natural Resources.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-06T21:05:24Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/104",
   "summary": "<p><strong>Protecting Arizona from Federal Land Grabs Act</strong></p> <p>This bill prohibits any further extension or establishment of national monuments in Arizona except by express authorization of Congress. </p>",
   "cosponsors": 1,
   "committees": [
-    "Natural Resources Committee"
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:09:15Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

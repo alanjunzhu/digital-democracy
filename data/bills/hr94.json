@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "94",
+  "number": 94,
   "billId": "hr94",
   "title": "To terminate the designation of the Islamic Republic of Pakistan as a major non-NATO ally, and for other purposes.",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Foreign Affairs.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-06T22:58:03Z",
   "originChamber": "House",
   "policyArea": "International Affairs",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/94",
   "summary": "<p>This bill removes Pakistan's designation as a major non-NATO ally, a status that allows for various benefits such as access to excess U.S. defense supplies and participation in cooperative defense research and development projects.</p><p>The President may not redesignate Pakistan as a major non-NATO ally without certifying that the country has taken various actions against the Haqqani Network, including continuing to conduct military actions against the Taliban-affiliated group and prosecuting its leaders.</p>",
   "cosponsors": 0,
   "committees": [
-    "Foreign Affairs Committee"
+    {
+      "name": "Foreign Affairs Committee",
+      "systemCode": "hsfa00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:06:30Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
