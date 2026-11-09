@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-08T16:27:25.069Z",
+  "lastUpdated": "2026-11-09T20:16:51.327Z",
   "congress": 119,
   "total": 429,
   "hearings": [
@@ -2143,28 +2143,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119562?format=json"
     },
     {
-      "eventId": "119557",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Unequal Treatment: Addressing the Drivers of Unaffordability for Oral Chemotherapy”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsgo27",
-          "name": "House Oversight and Government Reform Subcommittee on Health Care and Financial Services"
-        }
-      ],
-      "location": {
-        "room": "2154",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119557?format=json"
-    },
-    {
       "eventId": "119543",
       "congress": 119,
       "chamber": "House",
@@ -2185,6 +2163,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119543?format=json"
+    },
+    {
+      "eventId": "119557",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Unequal Treatment: Addressing the Drivers of Unaffordability for Oral Chemotherapy”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsgo27",
+          "name": "House Oversight and Government Reform Subcommittee on Health Care and Financial Services"
+        }
+      ],
+      "location": {
+        "room": "2154",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119557?format=json"
     },
     {
       "eventId": "119542",
@@ -2533,38 +2533,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119517?format=json"
     },
     {
-      "eventId": "119506",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative hearing on:      H.R. 642 (Rep. Steube), “Myakka Wild and Scenic River Act of 2025”;\r\nH.R. 5470 (Rep. LaHood), “Route 66 National Historic Trail Designation Act”;\r\nH.R. 6788 (Rep. Downing), “Montana Sportsmen Conservation Act”;\r\nH.R. 9269 (Rep. Clyburn), “Renewing the African American Civil Rights Network Act”;\r\nH.R. 9600 (Rep. Raskin), \"Common Sense Act 250 Act of 2026\";\r\nH.R. 9779 (Rep. Gonzalez), “Hands Off Our Boca Chica Beach Act of 2026” ;\r\nH.R. 10128 (Rep. McClintock), To codify Secretary's Order No. 3434 of the Department of the Interior;\r\nH.R. 10136 (Rep. Westerman), “Crossett Experimental Forest Act of 2026”;\r\nS. 675 (Rep. Hoeven) “Theodore Roosevelt Presidential Library Act”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii10",
-          "name": "House Natural Resources Subcommittee on Federal Lands"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr9269",
-        "hr642",
-        "hr9779",
-        "hr10128",
-        "hr9600",
-        "hr5470",
-        "hr6788",
-        "s675",
-        "hr10136"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json"
-    },
-    {
       "eventId": "119520",
       "congress": 119,
       "chamber": "House",
@@ -2618,6 +2586,38 @@
         "hr3194"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119518?format=json"
+    },
+    {
+      "eventId": "119506",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative hearing on:      H.R. 642 (Rep. Steube), “Myakka Wild and Scenic River Act of 2025”;\r\nH.R. 5470 (Rep. LaHood), “Route 66 National Historic Trail Designation Act”;\r\nH.R. 6788 (Rep. Downing), “Montana Sportsmen Conservation Act”;\r\nH.R. 9269 (Rep. Clyburn), “Renewing the African American Civil Rights Network Act”;\r\nH.R. 9600 (Rep. Raskin), \"Common Sense Act 250 Act of 2026\";\r\nH.R. 9779 (Rep. Gonzalez), “Hands Off Our Boca Chica Beach Act of 2026” ;\r\nH.R. 10128 (Rep. McClintock), To codify Secretary's Order No. 3434 of the Department of the Interior;\r\nH.R. 10136 (Rep. Westerman), “Crossett Experimental Forest Act of 2026”;\r\nS. 675 (Rep. Hoeven) “Theodore Roosevelt Presidential Library Act”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-02T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii10",
+          "name": "House Natural Resources Subcommittee on Federal Lands"
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr9269",
+        "hr642",
+        "hr9779",
+        "hr10128",
+        "hr9600",
+        "hr5470",
+        "hr6788",
+        "s675",
+        "hr10136"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119506?format=json"
     },
     {
       "eventId": "119527",
@@ -2752,30 +2752,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119497?format=json"
     },
     {
-      "eventId": "119522",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Strengthening the American Economy: Promoting Growth, Opportunity, and Prosperity",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsba00",
-          "name": "House Financial Services"
-        }
-      ],
-      "location": {
-        "room": "2128",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr7866"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119522?format=json"
-    },
-    {
       "eventId": "119534",
       "congress": 119,
       "chamber": "House",
@@ -2897,55 +2873,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119516?format=json"
-    },
-    {
-      "eventId": "119515",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Countering Houthi Terrorism: Protecting U.S. Interests and Security in the Red Sea",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-01T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa13",
-          "name": "House Subcommittee on the Middle East and North Africa"
-        }
-      ],
-      "location": {
-        "room": "2172",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119515?format=json"
-    },
-    {
-      "eventId": "118857",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "H.R. 9436 – To amend the Consolidated Appropriations Act, 2023 to extend the time period for which certain regulation concerning the North Atlantic right whale are effective. [Northeast Lobsterman Protection Act of 2026]; H.R. 4795 – \tProtect Economic and Academic Freedom Act of 2026; H.R. 1501 – Protecting Domestic Mining Act of 2025; H. Res. 1490 – Providing for the condemnation and denouncement of socialism in all its forms, and for other purposes.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-31T20:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsru00",
-          "name": "House Rules"
-        }
-      ],
-      "location": {
-        "room": "H-313",
-        "building": "Capitol",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr4795",
-        "hr1501",
-        "hr9436",
-        "hres1490"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118857?format=json"
     },
     {
       "eventId": "338721",
@@ -7153,6 +7080,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338426?format=json"
     },
     {
+      "eventId": "119309",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Bad Medicine: Politics, Unions, and Antisemitism in Health Care\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-05-20T14:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119309?format=json"
+    },
+    {
       "eventId": "119305",
       "congress": 119,
       "chamber": "House",
@@ -7270,28 +7219,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338405?format=json"
-    },
-    {
-      "eventId": "119261",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "H.R.5634, the “Veterans Flight Training Responsibility Act of 2026”;\r\nH.R.7083, the “CRUISE Act”;\r\nH.R.7103, the “Improving Emerging Tech Opportunities for Veterans Act”;\r\nH.R.2283, the “Recognizing Community Organizations for Veteran Engagement and \r\nRecovery Act”;\r\nH.R.6993, the “BEACON Act of 2026”;\r\nH.R.6652, the “U.S. Vets of the FAS Act”;\r\nH.R.6444, the “Blast Overpressure Research and Mitigation Task Force Act”;\r\nH.R. 7950, the “VA Congressional Accountability Act”;\r\nH.R. 7683, the “VA Fiscal Management and Modernization Act”;\r\nH.R. 8052, the “VIP Act”;\r\nH.R. 6698, the “Board of Veterans Appeals Annual Report Transparency Act of 2025”; \r\nH.R.3159, the “Improving SCRA Benefit Utilization Act”;\r\nH.R. 5436, To amend title 38, United States Code, to prohibit an educational institution from \r\nwithholding a transcript from an individual who pursued a course or program of education at \r\nsuch institution using post-9/11 educational assistance”;\r\nH.R.5999, the “Veteran Opioid Emergency Treatment Act”;\r\nH.R. 8010, the “VA Police Recruitment and Retention Act of 2026;\r\nH.R. 7260, the “National Cemetery Administration Annual Report Act of 2026”;\r\nH.R. 5723, the “Fraud Reduction And Uncovering Deception (FRAUD) in VA Disability \r\nExams Act”;\r\nLease Resolutions",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-14T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr00",
-          "name": "House Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119261?format=json"
     },
     {
       "eventId": "119277",
@@ -7764,6 +7691,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/338091?format=json"
     },
     {
+      "eventId": "119034",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "Committee Business to Consider:\r\n1) Amendment to Committee Rules;\r\n2) Release of Committee Transcripts.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-03-24T21:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hlig00",
+          "name": "House Intelligence (Permanent Select)"
+        }
+      ],
+      "location": {
+        "room": "HVC-304",
+        "building": "Capitol",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119034?format=json"
+    },
+    {
       "eventId": "338062",
       "congress": 119,
       "chamber": "NoChamber",
@@ -8121,6 +8070,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/337959?format=json"
+    },
+    {
+      "eventId": "118922",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Runaway College Spending Meets the Working Families Tax Cuts\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-02-04T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed13",
+          "name": "House Education and Workforce Subcommittee on Higher Education and Workforce Development"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118922?format=json"
     },
     {
       "eventId": "337942",
@@ -9048,6 +9019,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118298?format=json"
     },
     {
+      "eventId": "118340",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Security to Model: Securing Artificial Intelligence to Strengthen Cybersecurity”",
+      "meetingStatus": "Scheduled",
+      "date": "2025-06-12T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hshm08",
+          "name": "Homeland Security Subcommittee on Cybersecurity and Infrastructure Protection"
+        }
+      ],
+      "location": {
+        "room": "310",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118340?format=json"
+    },
+    {
       "eventId": "118293",
       "congress": 119,
       "chamber": "House",
@@ -9112,28 +9105,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118368?format=json"
-    },
-    {
-      "eventId": "118308",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Legislative hearing on:\r\n• H.R. 1045 (Rep. Kennedy of UT), “Utah Wildfire Research Institute Act of 2025”\r\n• H.R. 1655 (Rep. Bentz), “Wildfire Communications Resiliency Act”\r\n• H.R. 3187 (Rep. Hill), To require the Secretary of Agriculture to convey a parcel of property of the Forest Service to Perry County, Arkansas, and for other purposes.\r\n• H.R. 3444 (Rep. Huffman), “Tribal Self-Determination and Co-Management in Forestry Act of 2025.”",
-      "meetingStatus": "Scheduled",
-      "date": "2025-06-10T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsii10",
-          "name": "House Natural Resources Subcommittee on Federal Lands"
-        }
-      ],
-      "location": {
-        "room": "1324",
-        "building": "Longworth House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118308?format=json"
     },
     {
       "eventId": "118312",
@@ -9244,6 +9215,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118239?format=json"
+    },
+    {
+      "eventId": "118220",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Information Technology and Artificial Intelligence Posture of the Department of Defense",
+      "meetingStatus": "Scheduled",
+      "date": "2025-05-08T13:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsas35",
+          "name": "House Armed Services Subcommittee on Cyber, Information Technologies, and Innovation"
+        }
+      ],
+      "location": {
+        "room": "2212",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118220?format=json"
     },
     {
       "eventId": "118209",

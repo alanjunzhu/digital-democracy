@@ -19,7 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119590?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Dr. Lindsey Mortenson",
+      "position": "Chief Mental Health Officer, Clinical Assistant Professor of Psychiatry, and Executive Director of University Health & Counseling",
+      "organization": "University of Michigan"
+    },
+    {
+      "name": "Dr. Daniel Durkin",
+      "position": "Associate Professor",
+      "organization": "University of Mississippi"
+    },
+    {
+      "name": "Mr. Jordan Maynard",
+      "position": "Chair",
+      "organization": "Massachusetts Gaming Commission"
+    },
+    {
+      "name": "Ms. Cindy Clouner, MPH, LSW, OCPS",
+      "position": "Managing Director",
+      "organization": "Higher Education Center for Alcohol and Drug Misuse Prevention and Recovery, The Ohio State University"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

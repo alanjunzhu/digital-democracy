@@ -1,0 +1,68 @@
+{
+  "eventId": "118340",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Security to Model: Securing Artificial Intelligence to Strengthen Cybersecurity”",
+  "meetingStatus": "Scheduled",
+  "date": "2025-06-12T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm08",
+      "name": "Homeland Security Subcommittee on Cybersecurity and Infrastructure Protection"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118340?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Kiran Chinnagangannagari",
+      "position": "Co-Founder and Chief Product & Technology Officer",
+      "organization": "Securin Inc."
+    },
+    {
+      "name": "Mr. Steve Faehl",
+      "position": "U.S. Government Security Leader",
+      "organization": "Microsoft"
+    },
+    {
+      "name": "Mr. Gareth Maclachlan",
+      "position": "Chief Product Officer",
+      "organization": "Trellix"
+    },
+    {
+      "name": "Mr. Jonathan Dambrot",
+      "position": "Chief Executive Officer",
+      "organization": "Cranium AI, Inc."
+    }
+  ],
+  "videos": [
+    {
+      "name": "Security to Model: Securing Artificial Intelligence to Strengthen Cybersecurity",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118340",
+      "format": ""
+    },
+    {
+      "name": "Security to Model: Securing Artificial Intelligence to Strengthen Cybersecurity",
+      "url": "https://www.youtube.com/watch?v=tnmfsinO9sM",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118340/documents/HHRG-119-HM08-20250612-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/118340/documents/HHRG-119-HM08-WList-20250612.pdf",
+      "format": "PDF"
+    }
+  ]
+}

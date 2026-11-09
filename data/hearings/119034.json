@@ -1,0 +1,46 @@
+{
+  "eventId": "119034",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Committee Business to Consider:\r\n1) Amendment to Committee Rules;\r\n2) Release of Committee Transcripts.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-24T21:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hlig00",
+      "name": "House Intelligence (Permanent Select)"
+    }
+  ],
+  "location": {
+    "room": "HVC-304",
+    "building": "Capitol",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119034?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119034/documents/CRPT-119-IG00-Vote001-20260324.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119034/documents/CRPT-119-IG00-Vote002-20260324.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119034/documents/CRPT-119-IG00-Vote003-20260324.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Amendment to HPSCI Committee Rule #14",
+      "url": "https://www.congress.gov/119/meeting/house/119034/documents/HMTG-119-IG00-20260324-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

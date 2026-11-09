@@ -1,0 +1,36 @@
+{
+  "eventId": "118220",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Information Technology and Artificial Intelligence Posture of the Department of Defense",
+  "meetingStatus": "Scheduled",
+  "date": "2025-05-08T13:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas35",
+      "name": "House Armed Services Subcommittee on Cyber, Information Technologies, and Innovation"
+    }
+  ],
+  "location": {
+    "room": "2212",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118220?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "20250508: CITI Hearing:  Information Technology and AI Posture of the Department of Defense",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118220",
+      "format": ""
+    },
+    {
+      "name": "20250508: CITI Hearing:  Information Technology and AI Posture of the Department of Defense",
+      "url": "https://www.youtube.com/watch?v=fLMraghK_28",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}
