@@ -12,7 +12,11 @@
       "name": "Senate Commerce, Science, and Transportation"
     }
   ],
-  "location": null,
+  "location": {
+    "room": "253",
+    "building": "Russell Senate Office Building",
+    "address": ""
+  },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338803?format=json",
   "witnesses": [],

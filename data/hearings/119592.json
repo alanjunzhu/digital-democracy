@@ -21,6 +21,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119592?format=json",
   "witnesses": [
     {
+      "name": "Mr. Ryan Brown",
+      "position": "CEO",
+      "organization": "Open Doors US"
+    },
+    {
       "name": "The Honorable Frank Garcia",
       "position": "Assistant Secretary, Bureau of African Affairs",
       "organization": "U.S. Department of State"
@@ -36,17 +41,23 @@
       "organization": "The Hudson Institute"
     },
     {
-      "name": "Mr. Ryan Brown",
-      "position": "CEO",
-      "organization": "Open Doors US"
-    },
-    {
       "name": "Ms. Oge Onubogu",
       "position": "Director and Senior Fellow, Africa Program",
       "organization": "Center for Strategic and International Studies"
     }
   ],
-  "videos": [],
+  "videos": [
+    {
+      "name": "One Year Later: Assessing Nigeria's Efforts to protect Christians and Secure the Middle Belt",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119592",
+      "format": ""
+    },
+    {
+      "name": "One Year Later: Assessing Nigeria's Efforts to protect Christians and Secure the Middle Belt",
+      "url": "https://www.youtube.com/watch?v=jA976mOgtbc",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "Hearing Notice",

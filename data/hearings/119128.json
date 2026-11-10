@@ -1,0 +1,63 @@
+{
+  "eventId": "119128",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“TSA Modernization: Industry Perspectives on Key Security and Travel Reforms 25 Years\r\nAfter 9/11”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-20T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm00",
+      "name": "House Homeland Security"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119128?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Chris McLaughlin",
+      "position": "Chief Executive Officer",
+      "organization": "Dallas Forth Worth International Airport (DFW)"
+    },
+    {
+      "name": "The Honorable Christopher Sununu",
+      "position": "President and CEO",
+      "organization": "Airlines for America"
+    },
+    {
+      "name": "Dr. Everett Kelley",
+      "position": "National President",
+      "organization": "American Federation of Government Employees"
+    }
+  ],
+  "videos": [
+    {
+      "name": "TSA Modernization: Industry Perspectives on Key Security and Travel Reforms 25 Years After 9/11",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119128",
+      "format": ""
+    },
+    {
+      "name": "TSA Modernization: Industry Perspectives on Key Security and Travel Reforms 25 Years After 9/11",
+      "url": "https://www.youtube.com/watch?v=zWdL8BvEATo",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119128/documents/HHRG-119-HM00-20260520-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119128/documents/HHRG-119-HM00-WList-20260520.pdf",
+      "format": "PDF"
+    }
+  ]
+}
