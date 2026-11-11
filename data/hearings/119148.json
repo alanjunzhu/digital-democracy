@@ -1,0 +1,93 @@
+{
+  "eventId": "119148",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Computing Power and Competition: Examining the Semiconductor Ecosystem.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-15T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsif17",
+      "name": "House Energy and Commerce Subcommittee on Commerce, Manufacturing, and Trade"
+    }
+  ],
+  "location": {
+    "room": "2123",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119148?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Jason Oxman",
+      "position": "President and CEO",
+      "organization": "Information Technology Industry Council"
+    },
+    {
+      "name": "Mr. Jason Grebe",
+      "position": "Senior Vice President Corporate Planning",
+      "organization": "Intel"
+    },
+    {
+      "name": "Dr. Charles Wessner",
+      "position": "Nonresident Senior Advisor",
+      "organization": "Renewing American Innovation Program, Center for Strategic and International Studies (CSIS)"
+    },
+    {
+      "name": "Mr. Asad Ramzanali",
+      "position": "Director of AI and Technology Policy, Vanderbilt Policy Accelerator",
+      "organization": "Vanderbilt University"
+    }
+  ],
+  "videos": [
+    {
+      "name": "CMT Hearing: Computing Power and Competition: Examining the Semiconductor Ecosystem",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119148",
+      "format": ""
+    },
+    {
+      "name": "CMT Hearing: Computing Power and Competition: Examining the Semiconductor Ecosystem",
+      "url": "https://www.youtube.com/watch?v=9BbXbZwEFpI",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/119148/documents/HHRG-119-IF17-20260415-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Unedited Transcript",
+      "url": "https://www.congress.gov/119/meeting/house/119148/documents/HHRG-119-IF17-Transcript-20260415.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119148/documents/HHRG-119-IF17-20260415-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119148/documents/HHRG-119-IF17-20260415-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Documents for the Record",
+      "url": "https://www.congress.gov/119/meeting/house/119148/documents/HHRG-119-IF17-20260415-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement from Chairman Gus Bilirakis",
+      "url": "https://www.congress.gov/119/meeting/house/119148/documents/HHRG-119-IF17-MState-A000370-20260415.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Opening Statement from Chairman Brett Guthrie",
+      "url": "https://www.congress.gov/119/meeting/house/119148/documents/HHRG-119-IF17-MState-G000558-20260415.pdf",
+      "format": "PDF"
+    }
+  ]
+}

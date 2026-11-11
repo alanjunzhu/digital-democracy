@@ -1,0 +1,31 @@
+{
+  "eventId": "119597",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Protecting Main Street, Securing America: Examining Cybersecurity Challenges for Small Business Contractors.”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-18T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssm23",
+      "name": "House Small Business Subcommittee on Contracting and Infrastructure"
+    }
+  ],
+  "location": {
+    "room": "2360",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119597?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Public Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119597/documents/HHRG-119-SM23-20261118-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "eventId": "338828",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Hearings to examine pending nominations.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-18T16:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssju00",
+      "name": "Senate Judiciary"
+    }
+  ],
+  "location": {
+    "room": "G50",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338828?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Hearings to examine pending nominations.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338828",
+      "format": ""
+    },
+    {
+      "name": "Hearings to examine pending nominations.",
+      "url": "https://www.senate.gov/isvp/?comm=judiciary&filename=judiciary111826",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}
