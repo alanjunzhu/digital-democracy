@@ -1,0 +1,48 @@
+{
+  "eventId": "119339",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Committee on House Administration Full Committee Hearing, \"“Oversight of the Architect of the Capitol: Addressing Past Lessons, Present Projects, and Future Challenges”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-03T14:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsha00",
+      "name": "Committee on House Administration"
+    }
+  ],
+  "location": {
+    "room": "1310",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119339?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Thomas Austin",
+      "position": "Architect of the Capitol",
+      "organization": ""
+    }
+  ],
+  "videos": [
+    {
+      "name": "Full Committee Hearing: Oversight of the Architect of the Capitol",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119339",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Hearing: Oversight of the Architect of the Capitol",
+      "url": "https://www.youtube.com/watch?v=fNCYqkBRhE8",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119339/documents/HHRG-119-HA00-20260603-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

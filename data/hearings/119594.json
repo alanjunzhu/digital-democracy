@@ -1,0 +1,31 @@
+{
+  "eventId": "119594",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Oversight of the Bureau of Alcohol, Tobacco, Firearms and Explosives’ Out-of-Business Records Retention Practices”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-18T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsgo33",
+      "name": "House Oversight and Government Reform Subcommittee on Federal Law Enforcement"
+    }
+  ],
+  "location": {
+    "room": "2154",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119594?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119594/documents/HHRG-119-GO33-20261118-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

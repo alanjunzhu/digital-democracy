@@ -1,0 +1,31 @@
+{
+  "eventId": "119600",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Adoption of Lease Resolutions",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-19T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr00",
+      "name": "House Veterans' Affairs"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119600?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Business Meeting Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119600/documents/HMTG-119-VR00-20261119-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

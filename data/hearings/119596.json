@@ -1,0 +1,36 @@
+{
+  "eventId": "119596",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Psychedelic-Assisted Therapies for Veterans: The Path Forward",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-18T19:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hsvr03",
+      "name": "House Veterans' Affairs Subcommittee on Health"
+    }
+  ],
+  "location": {
+    "room": "360",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119596?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119596/documents/HHRG-119-VR03-20261118-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: Special Forces Foundation",
+      "url": "https://www.congress.gov/119/meeting/house/119596/documents/HHRG-119-VR03-20261118-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

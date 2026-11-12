@@ -1,30 +1,8 @@
 {
-  "lastUpdated": "2026-11-11T17:33:36.904Z",
+  "lastUpdated": "2026-11-12T17:48:05.677Z",
   "congress": 119,
   "total": 430,
   "hearings": [
-    {
-      "eventId": "119592",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "One Year Later: Assessing Nigeria’s Efforts to Protect Christians and Secure the Middle Belt",
-      "meetingStatus": "Scheduled",
-      "date": "2026-11-12T16:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsfa16",
-          "name": "House Foreign Affairs Subcommittee on Africa"
-        }
-      ],
-      "location": {
-        "room": "2172",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119592?format=json"
-    },
     {
       "eventId": "119588",
       "congress": 119,
@@ -156,11 +134,33 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338826?format=json"
     },
     {
+      "eventId": "338831",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider the nominations of Justin Bytheway, of Utah, to be Ambassador to the Kingdom of Tonga, William Flens, of the District of Columbia, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Republic of Chad, Douglas Holder, of Florida, to be Ambassador to the Republic of Bulgaria, Marc Dillard, of Virginia, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Republic of Madagascar, and to serve concurrently and without additional compensation as Ambassador to the Union of the Comoros, Jessica Long, of Virginia, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Islamic Republic of Mauritania, William Grayson, of California, to be Ambassador to the Republic of Indonesia, Mark Abreu, of Florida, to be Ambassador to the Republic of El Salvador, Nicholas Checker, of Wisconsin, to be Ambassador to the Republic of Rwanda, Michael Young, of Utah, to be Ambassador to the Republic of Serbia, Ronald Johnson, of Massachusetts, to be Ambassador to Bosnia and Herzegovina, Julia Nesheiwat, of Florida, to be Ambassador-at-Large for the Arctic (New Position), Peter McCoy, of South Carolina, to be Ambassador to Montenegro, Nathaniel Morris, of Kentucky, to be Ambassador to the Republic of Colombia, Keith Noreika, of Pennsylvania, to be Ambassador to the Republic of Lithuania, and Jennifer Johnson-Carroll, of Florida, to be Ambassador to the Republic of Trinidad and Tobago, all of the Department of State, and Sarah B. Rogers, of New York, to be Chief Executive Officer of the United States Agency for Global Media, and Rebekah Jurata, of California, to be United States Executive Director of the International Monetary Fund.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-18T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfr00",
+          "name": "Senate Foreign Relations"
+        }
+      ],
+      "location": {
+        "room": "116",
+        "building": "Capitol (Senate side)",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338831?format=json"
+    },
+    {
       "eventId": "338800",
       "congress": 119,
       "chamber": "Senate",
       "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior.",
+      "title": "Hearings to examine the nominations of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior, and Toby Deen, of Colorado, to be an Assistant Secretary of Energy (Hydrocarbons and Geothermal Energy).",
       "meetingStatus": "Scheduled",
       "date": "2026-11-18T14:30:00Z",
       "committees": [
@@ -176,6 +176,50 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338800?format=json"
+    },
+    {
+      "eventId": "338830",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider the nominations of Mark Priebe, of Virginia, to be Inspector General, Department of Education, Heidi Overton, of New Mexico, to be Commissioner of Food and Drugs, Department of Health and Human Services, Michael Doyle, of Pennsylvania, to be a Member of the Occupational Safety and Health Review Commission, Catherine Eschbach, of Texas, to be General Counsel of the Equal Employment Opportunity Commission, and James O'Neill, of Texas, to be Director of the National Science Foundation.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-18T14:45:00Z",
+      "committees": [
+        {
+          "systemCode": "sshr00",
+          "name": "Senate Health, Education, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "430",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338830?format=json"
+    },
+    {
+      "eventId": "119589",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Worldwide Threats to the Homeland: 25 Years After 9/11”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-18T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hshm00",
+          "name": "House Homeland Security"
+        }
+      ],
+      "location": {
+        "room": "310",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119589?format=json"
     },
     {
       "eventId": "119597",
@@ -244,6 +288,50 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338828?format=json"
     },
     {
+      "eventId": "119594",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Oversight of the Bureau of Alcohol, Tobacco, Firearms and Explosives’ Out-of-Business Records Retention Practices”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-18T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsgo33",
+          "name": "House Oversight and Government Reform Subcommittee on Federal Law Enforcement"
+        }
+      ],
+      "location": {
+        "room": "2154",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119594?format=json"
+    },
+    {
+      "eventId": "119596",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Psychedelic-Assisted Therapies for Veterans: The Path Forward",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-18T19:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr03",
+          "name": "House Veterans' Affairs Subcommittee on Health"
+        }
+      ],
+      "location": {
+        "room": "360",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119596?format=json"
+    },
+    {
       "eventId": "338823",
       "congress": 119,
       "chamber": "Senate",
@@ -310,13 +398,123 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338822?format=json"
     },
     {
+      "eventId": "119598",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Strengthening Rural America Through USDA Rural Development Programs and Partnerships\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-19T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsag22",
+          "name": "House Agriculture Subcommittee on Commodity Markets, Digital Assets, and Rural Development"
+        }
+      ],
+      "location": {
+        "room": "1300",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119598?format=json"
+    },
+    {
+      "eventId": "119601",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“A Climate of Bias: How Environmental Activists Influence the Judiciary”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-19T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju03",
+          "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
+        }
+      ],
+      "location": {
+        "room": "2141",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119601?format=json"
+    },
+    {
+      "eventId": "119600",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "Adoption of Lease Resolutions",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-19T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr00",
+          "name": "House Veterans' Affairs"
+        }
+      ],
+      "location": {
+        "room": "360",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119600?format=json"
+    },
+    {
+      "eventId": "119599",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Beyond Go-Live: VA Electronic Health Record Modernization Status Update",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-19T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsvr00",
+          "name": "House Veterans' Affairs"
+        }
+      ],
+      "location": {
+        "room": "360",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119599?format=json"
+    },
+    {
+      "eventId": "119604",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Legislative Hearing on: H.R. 10307 (Rep. Begich), \"Anaktuvuk Pass Food Security Access Act\", H.R. 10458 (Rep. Salinas), \"Grand Ronde Land Transfer Act of 2026\", H.R. 10751 (Rep. Bergman), \"Tribal Oral Health Sovereignty Act\", and H.R. 10956 (Rep. Kennedy of UT), \"IHS Workforce Parity Act of 2026\".",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-19T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsii24",
+          "name": "House Natural Resources Subcommittee on Indian and Insular Affairs"
+        }
+      ],
+      "location": {
+        "room": "1324",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119604?format=json"
+    },
+    {
       "eventId": "119593",
       "congress": 119,
       "chamber": "House",
       "type": "Hearing",
       "title": "HEARING",
-      "meetingStatus": "Scheduled",
-      "date": "2026-11-19T15:00:00Z",
+      "meetingStatus": "Rescheduled",
+      "date": "2026-11-20T13:30:00Z",
       "committees": [
         {
           "systemCode": "hlzs00",
@@ -324,12 +522,34 @@
         }
       ],
       "location": {
-        "room": "HVC 210",
-        "building": "Capitol",
+        "room": "210",
+        "building": "Cannon House Office Building",
         "address": ""
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119593?format=json"
+    },
+    {
+      "eventId": "119592",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "One Year Later: Assessing Nigeria’s Efforts to Protect Christians and Secure the Middle Belt",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-12T16:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa16",
+          "name": "House Foreign Affairs Subcommittee on Africa"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119592?format=json"
     },
     {
       "eventId": "119590",
@@ -1093,6 +1313,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338762?format=json"
     },
     {
+      "eventId": "338767",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine flock's nationwide AI surveillance network.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-23T18:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssju22",
+          "name": "Senate Judiciary Subcommittee on Crime and Counterterrorism"
+        }
+      ],
+      "location": {
+        "room": "562",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338767?format=json"
+    },
+    {
       "eventId": "338765",
       "congress": 119,
       "chamber": "Senate",
@@ -1119,28 +1361,6 @@
         "s5354"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338765?format=json"
-    },
-    {
-      "eventId": "338767",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine flock's nationwide AI surveillance network.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-23T18:30:00Z",
-      "committees": [
-        {
-          "systemCode": "ssju22",
-          "name": "Senate Judiciary Subcommittee on Crime and Counterterrorism"
-        }
-      ],
-      "location": {
-        "room": "562",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338767?format=json"
     },
     {
       "eventId": "338757",
@@ -1401,28 +1621,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338724?format=json"
     },
     {
-      "eventId": "338756",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Business Meeting",
-      "title": "Business meeting to consider an original bill entitled, \"Agricultural Act of 2026\".",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-16T19:30:00Z",
-      "committees": [
-        {
-          "systemCode": "ssaf00",
-          "name": "Senate Agriculture, Nutrition, and Forestry"
-        }
-      ],
-      "location": {
-        "room": "318",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338756?format=json"
-    },
-    {
       "eventId": "338748",
       "congress": 119,
       "chamber": "Senate",
@@ -1443,6 +1641,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338748?format=json"
+    },
+    {
+      "eventId": "338756",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider an original bill entitled, \"Agricultural Act of 2026\".",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-16T19:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssaf00",
+          "name": "Senate Agriculture, Nutrition, and Forestry"
+        }
+      ],
+      "location": {
+        "room": "318",
+        "building": "Russell Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338756?format=json"
     },
     {
       "eventId": "338744",
@@ -2675,24 +2895,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119539?format=json"
     },
     {
-      "eventId": "119533",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Industrial Base and Workforce Development for Skilled Trades",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-04T17:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsap02",
-          "name": "House Appropriations Subcommittee on Defense"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119533?format=json"
-    },
-    {
       "eventId": "119528",
       "congress": 119,
       "chamber": "House",
@@ -2713,28 +2915,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119528?format=json"
-    },
-    {
-      "eventId": "119526",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "‘“Subject to the Jurisdiction Thereof’: Birthright Citizenship and the Fourteenth Amendment, Part II”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju10",
-          "name": "House Judiciary Subcommittee on Constitution and Limited Government"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119526?format=json"
     },
     {
       "eventId": "119521",
@@ -2912,94 +3092,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119524?format=json"
     },
     {
-      "eventId": "119530",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Full Committee Hearing on Strategic Partnerships to Secure Critical Resources and Supply Chains",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hswm00",
-          "name": "House Ways and Means"
-        }
-      ],
-      "location": {
-        "room": "390",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119530?format=json"
-    },
-    {
-      "eventId": "119531",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "A Resolution to assign Representative Goodlander to subcommittees on the  \r\nHouse Committee on Veterans’ Affairs",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr00",
-          "name": "House Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119531?format=json"
-    },
-    {
-      "eventId": "119532",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Powering the Nuclear Renaissance: Accelerating U.S. Leadership in Advanced Nuclear Reactors",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hssy20",
-          "name": "House Science, Space, and Technology Subcommittee on Energy"
-        }
-      ],
-      "location": {
-        "room": "2318",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119532?format=json"
-    },
-    {
-      "eventId": "119534",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Subcommittee Markup of 6 Bills",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-01T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif16",
-          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119534?format=json"
-    },
-    {
       "eventId": "119535",
       "congress": 119,
       "chamber": "House",
@@ -3033,28 +3125,6 @@
         "hr6488"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119535?format=json"
-    },
-    {
-      "eventId": "119514",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Supporting Working Families: State-Led Child Care Solutions”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-01T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed14",
-          "name": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119514?format=json"
     },
     {
       "eventId": "119516",
@@ -3278,28 +3348,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338703?format=json"
     },
     {
-      "eventId": "338699",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the next 250, focusing on small businesses leading the way.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-05T18:30:00Z",
-      "committees": [
-        {
-          "systemCode": "sssb00",
-          "name": "Senate Small Business and Entrepreneurship"
-        }
-      ],
-      "location": {
-        "room": "428A",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338699?format=json"
-    },
-    {
       "eventId": "338705",
       "congress": 119,
       "chamber": "Senate",
@@ -3320,6 +3368,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338705?format=json"
+    },
+    {
+      "eventId": "338699",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the next 250, focusing on small businesses leading the way.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-08-05T18:30:00Z",
+      "committees": [
+        {
+          "systemCode": "sssb00",
+          "name": "Senate Small Business and Entrepreneurship"
+        }
+      ],
+      "location": {
+        "room": "428A",
+        "building": "Russell Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338699?format=json"
     },
     {
       "eventId": "338720",
@@ -3372,6 +3442,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338700?format=json"
     },
     {
+      "eventId": "338702",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nominations of Peter McCoy, of South Carolina, to be Ambassador to Montenegro, Daniel Travis, of California, a Career Member of the Senior Foreign Service, Class of Counselor, to be Ambassador to the Republic of Sierra Leone, and Nathaniel Morris, of Kentucky, to be Ambassador to the Republic of Colombia, all of the Department of State.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-08-05T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfr00",
+          "name": "Senate Foreign Relations"
+        }
+      ],
+      "location": {
+        "room": "419",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338702?format=json"
+    },
+    {
       "eventId": "338704",
       "congress": 119,
       "chamber": "Senate",
@@ -3414,28 +3506,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338701?format=json"
-    },
-    {
-      "eventId": "338702",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nominations of Peter McCoy, of South Carolina, to be Ambassador to Montenegro, Daniel Travis, of California, a Career Member of the Senior Foreign Service, Class of Counselor, to be Ambassador to the Republic of Sierra Leone, and Nathaniel Morris, of Kentucky, to be Ambassador to the Republic of Colombia, all of the Department of State.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-05T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfr00",
-          "name": "Senate Foreign Relations"
-        }
-      ],
-      "location": {
-        "room": "419",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338702?format=json"
     },
     {
       "eventId": "338697",
@@ -4075,6 +4145,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338682?format=json"
     },
     {
+      "eventId": "338681",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the President's 2026 trade policy agenda.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-22T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfi00",
+          "name": "Senate Finance"
+        }
+      ],
+      "location": {
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338681?format=json"
+    },
+    {
       "eventId": "338667",
       "congress": 119,
       "chamber": "Senate",
@@ -4111,26 +4203,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338667?format=json"
     },
     {
-      "eventId": "338681",
+      "eventId": "338666",
       "congress": 119,
       "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the President's 2026 trade policy agenda.",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider the nominations of Hal Duncan, of Texas, to be Deputy Director of the Office of Management and Budget, Brian Cavanaugh, of Maryland, to be Under Secretary for Management, and Cameron Hamilton, of Virginia, to be Administrator of the Federal Emergency Management Agency, both of the Department of Homeland Security, Charles Baldis, of Virginia, to be Special Counsel, Office of Special Counsel, Bradford Pentony Wilson, of New Jersey, to be Archivist of the United States, Jeffrey Brodsky, and William Gallo, of Florida, both to be a Governor of the United States Postal Service, James Woodruff, of Florida, to be Chairman of the Merit Systems Protection Board, Charlton Allen, of North Carolina, to be General Counsel of the Federal Labor Relations Authority, James Andrew Crowell IV, and Stuart Gordon Nash, both to be an Associate Judge of the District of Columbia Court of Appeals, and Christopher Michael De Bono, Michael Christopher DiLorenzo, Sharon E. Goodie, Craig Edward Leen, Christine Michelle Macey, and John Barlow Timmer, each to be an Associate Judge of the Superior Court of the District of Columbia.",
       "meetingStatus": "Scheduled",
-      "date": "2026-07-22T14:00:00Z",
+      "date": "2026-07-22T13:30:00Z",
       "committees": [
         {
-          "systemCode": "ssfi00",
-          "name": "Senate Finance"
+          "systemCode": "ssga00",
+          "name": "Senate Homeland Security and Governmental Affairs"
         }
       ],
       "location": {
-        "room": "215",
+        "room": "342",
         "building": "Dirksen Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338681?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338666?format=json"
     },
     {
       "eventId": "338664",
@@ -4153,28 +4245,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338664?format=json"
-    },
-    {
-      "eventId": "338666",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Business Meeting",
-      "title": "Business meeting to consider the nominations of Hal Duncan, of Texas, to be Deputy Director of the Office of Management and Budget, Brian Cavanaugh, of Maryland, to be Under Secretary for Management, and Cameron Hamilton, of Virginia, to be Administrator of the Federal Emergency Management Agency, both of the Department of Homeland Security, Charles Baldis, of Virginia, to be Special Counsel, Office of Special Counsel, Bradford Pentony Wilson, of New Jersey, to be Archivist of the United States, Jeffrey Brodsky, and William Gallo, of Florida, both to be a Governor of the United States Postal Service, James Woodruff, of Florida, to be Chairman of the Merit Systems Protection Board, Charlton Allen, of North Carolina, to be General Counsel of the Federal Labor Relations Authority, James Andrew Crowell IV, and Stuart Gordon Nash, both to be an Associate Judge of the District of Columbia Court of Appeals, and Christopher Michael De Bono, Michael Christopher DiLorenzo, Sharon E. Goodie, Craig Edward Leen, Christine Michelle Macey, and John Barlow Timmer, each to be an Associate Judge of the Superior Court of the District of Columbia.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-22T13:30:00Z",
-      "committees": [
-        {
-          "systemCode": "ssga00",
-          "name": "Senate Homeland Security and Governmental Affairs"
-        }
-      ],
-      "location": {
-        "room": "342",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338666?format=json"
     },
     {
       "eventId": "338670",
@@ -4920,28 +4990,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338661?format=json"
     },
     {
-      "eventId": "338646",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nominations of Sean Kaufman, of Georgia, to be Assistant Secretary for Preparedness and Response, and Erica Schwartz, of Florida, to be Director of the Centers for Disease Control and Prevention, both of the Department of Health and Human Services.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-15T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "sshr00",
-          "name": "Senate Health, Education, Labor, and Pensions"
-        }
-      ],
-      "location": {
-        "room": "430",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338646?format=json"
-    },
-    {
       "eventId": "338650",
       "congress": 119,
       "chamber": "Senate",
@@ -4962,6 +5010,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338650?format=json"
+    },
+    {
+      "eventId": "338646",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nominations of Sean Kaufman, of Georgia, to be Assistant Secretary for Preparedness and Response, and Erica Schwartz, of Florida, to be Director of the Centers for Disease Control and Prevention, both of the Department of Health and Human Services.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-15T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "sshr00",
+          "name": "Senate Health, Education, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "430",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338646?format=json"
     },
     {
       "eventId": "338647",
@@ -5579,6 +5649,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338601?format=json"
     },
     {
+      "eventId": "338584",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nomination of Mark Cruz, of Oregon, to be Director of the Indian Health Service, Department of Health and Human Services.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-24T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "slia00",
+          "name": "Senate Indian Affairs"
+        }
+      ],
+      "location": {
+        "room": "628",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338584?format=json"
+    },
+    {
       "eventId": "338587",
       "congress": 119,
       "chamber": "Senate",
@@ -5621,28 +5713,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338585?format=json"
-    },
-    {
-      "eventId": "338584",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of Mark Cruz, of Oregon, to be Director of the Indian Health Service, Department of Health and Human Services.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "slia00",
-          "name": "Senate Indian Affairs"
-        }
-      ],
-      "location": {
-        "room": "628",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338584?format=json"
     },
     {
       "eventId": "338582",
@@ -6303,28 +6373,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338543?format=json"
     },
     {
-      "eventId": "338547",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the U.S. Fish and Wildlife Service.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-10T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssev00",
-          "name": "Senate Environment and Public Works"
-        }
-      ],
-      "location": {
-        "room": "406",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338547?format=json"
-    },
-    {
       "eventId": "338542",
       "congress": 119,
       "chamber": "Senate",
@@ -6345,6 +6393,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338542?format=json"
+    },
+    {
+      "eventId": "338547",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the President's proposed budget request for fiscal year 2027 for the U.S. Fish and Wildlife Service.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-10T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssev00",
+          "name": "Senate Environment and Public Works"
+        }
+      ],
+      "location": {
+        "room": "406",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338547?format=json"
     },
     {
       "eventId": "338548",
@@ -6427,28 +6497,6 @@
         "s3526"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338549?format=json"
-    },
-    {
-      "eventId": "338521",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Closed Markup Session",
-      "title": "Closed business meeting to markup the National Defense Authorization Act for fiscal year 2027.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-10T13:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssas00",
-          "name": "Senate Armed Services"
-        }
-      ],
-      "location": {
-        "room": "222",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338521?format=json"
     },
     {
       "eventId": "338520",
@@ -6541,28 +6589,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338541?format=json"
-    },
-    {
-      "eventId": "338518",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Closed Markup Session",
-      "title": "Closed business meeting to markup the National Defense Authorization Act for fiscal year 2027.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-09T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssas14",
-          "name": "Senate Armed Services Subcommittee on Airland"
-        }
-      ],
-      "location": {
-        "room": "232A",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338518?format=json"
     },
     {
       "eventId": "338517",
@@ -6741,28 +6767,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338526?format=json"
     },
     {
-      "eventId": "338510",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine COVID-19 injections and attacks on scientific publications.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-03T18:30:00Z",
-      "committees": [
-        {
-          "systemCode": "ssga01",
-          "name": "Senate Homeland Security and Governmental Affairs Permanent Subcommittee on Investigations"
-        }
-      ],
-      "location": {
-        "room": "342",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338510?format=json"
-    },
-    {
       "eventId": "338505",
       "congress": 119,
       "chamber": "Senate",
@@ -6783,6 +6787,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338505?format=json"
+    },
+    {
+      "eventId": "338510",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine COVID-19 injections and attacks on scientific publications.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-03T18:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssga01",
+          "name": "Senate Homeland Security and Governmental Affairs Permanent Subcommittee on Investigations"
+        }
+      ],
+      "location": {
+        "room": "342",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338510?format=json"
     },
     {
       "eventId": "119330",
@@ -6810,6 +6836,28 @@
         "hr8904"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119330?format=json"
+    },
+    {
+      "eventId": "338507",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine protecting American citizenship, focusing on denaturalization and its constitutional limits.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-03T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssju21",
+          "name": "Senate Judiciary Subcommittee on Constitution"
+        }
+      ],
+      "location": {
+        "room": "226",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338507?format=json"
     },
     {
       "eventId": "338509",
@@ -6844,26 +6892,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338509?format=json"
     },
     {
-      "eventId": "338507",
+      "eventId": "119339",
       "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine protecting American citizenship, focusing on denaturalization and its constitutional limits.",
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Committee on House Administration Full Committee Hearing, \"“Oversight of the Architect of the Capitol: Addressing Past Lessons, Present Projects, and Future Challenges”",
       "meetingStatus": "Scheduled",
-      "date": "2026-06-03T18:00:00Z",
+      "date": "2026-06-03T14:15:00Z",
       "committees": [
         {
-          "systemCode": "ssju21",
-          "name": "Senate Judiciary Subcommittee on Constitution"
+          "systemCode": "hsha00",
+          "name": "Committee on House Administration"
         }
       ],
       "location": {
-        "room": "226",
-        "building": "Dirksen Senate Office Building",
+        "room": "1310",
+        "building": "Longworth House Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338507?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119339?format=json"
     },
     {
       "eventId": "338427",
@@ -7128,28 +7176,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119305?format=json"
-    },
-    {
-      "eventId": "119293",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Corrosion, Collapse, and Clean-Up: Examining the Potomac Interceptor Collapse.",
-      "meetingStatus": "Rescheduled",
-      "date": "2026-05-20T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif02",
-          "name": "House Energy and Commerce Subcommittee on Oversight and Investigations"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119293?format=json"
     },
     {
       "eventId": "119128",
@@ -7673,28 +7699,6 @@
         "hr5629"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119107?format=json"
-    },
-    {
-      "eventId": "119115",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "The Telecommunications Act of 1996: 30 Years Later",
-      "meetingStatus": "Scheduled",
-      "date": "2026-03-26T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif16",
-          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119115?format=json"
     },
     {
       "eventId": "338091",

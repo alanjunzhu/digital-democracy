@@ -1,0 +1,51 @@
+{
+  "eventId": "119604",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Legislative Hearing on: H.R. 10307 (Rep. Begich), \"Anaktuvuk Pass Food Security Access Act\", H.R. 10458 (Rep. Salinas), \"Grand Ronde Land Transfer Act of 2026\", H.R. 10751 (Rep. Bergman), \"Tribal Oral Health Sovereignty Act\", and H.R. 10956 (Rep. Kennedy of UT), \"IHS Workforce Parity Act of 2026\".",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-19T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsii24",
+      "name": "House Natural Resources Subcommittee on Indian and Insular Affairs"
+    }
+  ],
+  "location": {
+    "room": "1324",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119604?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 10307 (Rep. Begich)",
+      "url": "https://www.congress.gov/119/meeting/house/119604/documents/BILLS-11910307ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10458 (Rep. Salinas)",
+      "url": "https://www.congress.gov/119/meeting/house/119604/documents/BILLS-11910458ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10751 (Rep. Bergman)",
+      "url": "https://www.congress.gov/119/meeting/house/119604/documents/BILLS-11910751ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 10956 (Rep. Kennedy of UT)",
+      "url": "https://www.congress.gov/119/meeting/house/119604/documents/BILLS-11910956ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119604/documents/HHRG-119-II24-20261119-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
