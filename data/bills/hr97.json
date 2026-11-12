@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "97",
+  "number": 97,
   "billId": "hr97",
   "title": "Injunctive Authority Clarification Act of 2025",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on the Judiciary.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-10T21:29:03Z",
   "originChamber": "House",
   "policyArea": "Law",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/97",
   "summary": "<p><strong>Injunctive Authority Clarification Act of 2025&nbsp;</strong></p><p>This bill prohibits federal courts from issuing injunctive orders that bar enforcement of a federal law or policy against a nonparty, unless the nonparty is represented by a party in a class action lawsuit.</p>",
   "cosponsors": 4,
   "committees": [
-    "Judiciary Committee"
+    {
+      "name": "Judiciary Committee",
+      "systemCode": "hsju00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:06:25Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

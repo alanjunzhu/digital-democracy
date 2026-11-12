@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "92",
+  "number": 92,
   "billId": "hr92",
   "title": "Strategic Production Response and Implementation Act",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Energy and Commerce.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-10T20:47:47Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/92",
   "summary": "<p><strong>Strategic Production Response and Implementation Act</strong></p><p>This bill modifies the Energy Policy and Conservation Act to prohibit&nbsp;the Department of Energy (DOE) from drawing down petroleum products in the Strategic Petroleum Reserve until DOE develops and implements a plan to increase the percentage of federal lands leased for oil and gas production. The increase must be equal to&nbsp;the percentage of petroleum in the Strategic Petroleum Reserve that is to be drawn down. However, the bill does not apply to a  drawdown of&nbsp;petroleum products in the case of a severe energy supply interruption, which is permitted under current law.&nbsp;</p><p>The plan must not provide for a total increase in the percentage of federal lands leased for oil and gas production in excess of 10%.</p>",
   "cosponsors": 0,
   "committees": [
-    "Energy and Commerce Committee"
+    {
+      "name": "Energy and Commerce Committee",
+      "systemCode": "hsif00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:10:20Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

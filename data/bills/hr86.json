@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "86",
+  "number": 86,
   "billId": "hr86",
   "title": "NOSHA Act",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Education and Workforce.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-10T20:18:32Z",
   "originChamber": "House",
   "policyArea": "Labor and Employment",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/86",
   "summary": "<p><strong>Nullify Occupational Safety and Health Administration Act or the NOSHA Act</strong></p><p>This bill abolishes the Occupational Safety and Health Administration (OSHA) and its functions. OSHA, which is part of the Department of Labor, sets and enforces workplace safety and health standards and provides related training, outreach, education, and assistance.</p>",
   "cosponsors": 0,
   "committees": [
-    "Education and Workforce Committee"
+    {
+      "name": "Education and Workforce Committee",
+      "systemCode": "hsed00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:17:45Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [
