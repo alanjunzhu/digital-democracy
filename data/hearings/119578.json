@@ -1,0 +1,31 @@
+{
+  "eventId": "119578",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Beyond the Storm: Assessing FEMA’s Mission Readiness”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-19T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm12",
+      "name": "Homeland Security Subcommittee on Emergency Management and Technology"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119578?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119578/documents/HHRG-119-HM12-20261119-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

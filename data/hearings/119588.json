@@ -17,6 +17,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119588?format=json",
   "witnesses": [
     {
+      "name": "Mr. Braxton Winston",
+      "position": "President",
+      "organization": "North Carolina AFL-CIO"
+    },
+    {
       "name": "Mr. William Messenger",
       "position": "Vice President and Legal Director",
       "organization": "National Right to Work Legal Defense Foundation"
@@ -25,11 +30,6 @@
       "name": "Ms. Jennifer Betts",
       "position": "Office Managing Shareholder",
       "organization": "Ogletree Deakins, P.C."
-    },
-    {
-      "name": "Mr. Braxton Winston",
-      "position": "President",
-      "organization": "North Carolina AFL-CIO"
     },
     {
       "name": "Mr. Terry Bowman",

@@ -1,0 +1,37 @@
+{
+  "eventId": "119605",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Unlocking Central Asia: Advancing U.S. Economic and Strategic Opportunity",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-19T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa19",
+      "name": "House Foreign Affairs South and Central Asia Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119605?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable S. Paul Kapur",
+      "position": "Assistant Secretary, Bureau of South and Central Asian Affairs",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119605/documents/HHRG-119-FA19-20261119-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

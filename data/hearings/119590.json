@@ -21,6 +21,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119590?format=json",
   "witnesses": [
     {
+      "name": "Ms. Cindy Clouner, MPH, LSW, OCPS",
+      "position": "Managing Director",
+      "organization": "Higher Education Center for Alcohol and Drug Misuse Prevention and Recovery, The Ohio State University"
+    },
+    {
       "name": "Dr. Lindsey Mortenson",
       "position": "Chief Mental Health Officer, Clinical Assistant Professor of Psychiatry, and Executive Director of University Health & Counseling",
       "organization": "University of Michigan"
@@ -34,11 +39,6 @@
       "name": "Mr. Jordan Maynard",
       "position": "Chair",
       "organization": "Massachusetts Gaming Commission"
-    },
-    {
-      "name": "Ms. Cindy Clouner, MPH, LSW, OCPS",
-      "position": "Managing Director",
-      "organization": "Higher Education Center for Alcohol and Drug Misuse Prevention and Recovery, The Ohio State University"
     }
   ],
   "videos": [
@@ -62,6 +62,11 @@
     {
       "name": "Ranking Member Alma S. Adams | Submission for the Record | Protect Borrowers Article",
       "url": "https://www.congress.gov/119/meeting/house/119590/documents/HHRG-119-ED13-20261111-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Rep. Lucy McBath | Submission for the Record | Federal Reserve Board Report",
+      "url": "https://www.congress.gov/119/meeting/house/119590/documents/HHRG-119-ED13-20261111-SD003.pdf",
       "format": "PDF"
     }
   ]

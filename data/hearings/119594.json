@@ -19,12 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119594?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Aidan Johnston",
+      "position": "Director, Federal Affairs",
+      "organization": "Gun Owners of America"
+    },
+    {
+      "name": "Mr. Wally Nelson",
+      "position": "Deputy Assistant Director (retired)",
+      "organization": "Bureau of Alcohol, Tobacco, Firearms, and Explosives"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Notice",
       "url": "https://www.congress.gov/119/meeting/house/119594/documents/HHRG-119-GO33-20261118-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119594/documents/HHRG-119-GO33-20261118-SD002.pdf",
       "format": "PDF"
     }
   ]

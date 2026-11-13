@@ -1,0 +1,47 @@
+{
+  "eventId": "119606",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Hidden Chokepoint: China’s Dominance in Pharmaceuticals",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-19T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa05",
+      "name": "House Foreign Affairs East Asia and Pacific Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2200",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119606?format=json",
+  "witnesses": [
+    {
+      "name": "Dr. Ron Piervincenzi",
+      "position": "CEO",
+      "organization": "U.S. Pharmacopeia"
+    },
+    {
+      "name": "Mr. Andrew Rechenberg",
+      "position": "Senior Economist",
+      "organization": "Coalition for a Prosperous America"
+    },
+    {
+      "name": "Mr. Thomas Bollyky",
+      "position": "Bloomberg Chair in Global Health, Senior Fellow for International Economics, Law, and Development, Director of the Global Health Program",
+      "organization": "Council on Foreign Relations"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119606/documents/HHRG-119-FA05-20261119-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
