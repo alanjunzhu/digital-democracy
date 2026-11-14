@@ -1,0 +1,54 @@
+{
+  "eventId": "118862",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "H.R. 3495 – Direct Seller and Real Estate Agent Harmonization Act; H.R. 5267 – American Franchise Act",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-17T21:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsru00",
+      "name": "House Rules"
+    }
+  ],
+  "location": {
+    "room": "H-313",
+    "building": "Capitol",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr5267",
+    "hr3495"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118862?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": ":: H. Rept. 119-494 Part II – Supplemental report from the Committee on Education and Workforce to accompany H.R. 3495",
+      "url": "https://www.congress.gov/119/meeting/house/118862/documents/CRPT-119hrpt494-pt2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 5267 – American Franchise Act",
+      "url": "https://www.congress.gov/119/meeting/house/118862/documents/BILLS-119hr5267rh.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: H. Rept. 119-802 – Report from the Committee on Education and Workforce to accompany H.R. 5267",
+      "url": "https://www.congress.gov/119/meeting/house/118862/documents/CRPT-119hrpt802.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 3495 – Direct Seller and Real Estate Agent Harmonization Act",
+      "url": "https://www.congress.gov/119/meeting/house/118862/documents/BILLS-119hr3495rh.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: H. Rept. 119-494 Part I – Report from the Committee on Education and Workforce to accompany H.R. 3495",
+      "url": "https://www.congress.gov/119/meeting/house/118862/documents/CRPT-119hrpt494.pdf",
+      "format": "PDF"
+    }
+  ]
+}

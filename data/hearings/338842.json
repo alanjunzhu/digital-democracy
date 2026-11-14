@@ -1,0 +1,25 @@
+{
+  "eventId": "338842",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Business Meeting",
+  "title": "Business meeting to consider pending calendar business.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-18T05:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssva00",
+      "name": "Senate Veterans' Affairs"
+    }
+  ],
+  "location": {
+    "room": "216",
+    "building": "Capitol (Senate side)",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338842?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

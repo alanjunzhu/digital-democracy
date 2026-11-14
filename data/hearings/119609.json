@@ -1,0 +1,25 @@
+{
+  "eventId": "119609",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Business Meeting to Consider: \r\nRelease of Unclassified Report on the Committee's Open Investigation and Additional Matters",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-17T22:15:00Z",
+  "committees": [
+    {
+      "systemCode": "hlig00",
+      "name": "House Intelligence (Permanent Select)"
+    }
+  ],
+  "location": {
+    "room": "---------",
+    "building": "Capitol",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119609?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

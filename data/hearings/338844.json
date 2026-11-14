@@ -1,0 +1,25 @@
+{
+  "eventId": "338844",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Business Meeting",
+  "title": "Business meeting to consider pending calendar business.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-16T05:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssaf00",
+      "name": "Senate Agriculture, Nutrition, and Forestry"
+    }
+  ],
+  "location": {
+    "room": "216",
+    "building": "Capitol (Senate side)",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338844?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}
