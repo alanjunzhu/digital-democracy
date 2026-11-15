@@ -38,6 +38,42 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "hr11026",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 11026,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-12",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/11026"
+    },
+    {
+      "billId": "hr10972",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10972,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-10",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10972"
+    },
+    {
+      "billId": "hr10985",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10985,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-10",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10985"
+    },
+    {
+      "billId": "hr10962",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 10962,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-09",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10962"
+    },
+    {
       "billId": "hres1643",
       "congress": 119,
       "type": "H.Res.",
@@ -2250,42 +2286,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-02-12",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7547"
-    },
-    {
-      "billId": "hr7555",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 7555,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-02-12",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7555"
-    },
-    {
-      "billId": "hr7558",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 7558,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-02-12",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7558"
-    },
-    {
-      "billId": "hr7485",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 7485,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-02-11",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7485"
-    },
-    {
-      "billId": "hres1058",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 1058,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-02-11",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1058"
     }
   ]
 }

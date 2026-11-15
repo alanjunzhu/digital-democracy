@@ -11,15 +11,27 @@
     "party": "R",
     "state": "FL"
   },
-  "latestAction": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
-  "latestActionDate": "2025-04-04",
-  "updateDate": "2026-11-06T09:06:53Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Armed Services.",
+  "latestActionDate": "2026-11-12",
+  "updateDate": "2026-11-14T09:06:01Z",
   "originChamber": "House",
   "policyArea": "Armed Forces and National Security",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/2102",
   "summary": "<p><strong>Major Richard Star Act</strong></p><p>This bill allows a veteran with a combat-related disability to receive retirement pay, without reduction, concurrently with their disability compensation. This includes veterans with a combat-related disability and fewer than 20 years of creditable service. (Currently, veterans who receive combat-related special compensation and retirement pay are subject to an offset in retirement pay for concurrent receipt of such benefits.)</p>",
-  "cosponsors": 341,
+  "cosponsors": 342,
   "committees": [
+    {
+      "name": "Armed Services Committee",
+      "systemCode": "ssas00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-11-12T18:16:55Z"
+        }
+      ]
+    },
     {
       "name": "Veterans' Affairs Committee",
       "systemCode": "hsvr00",
@@ -47,6 +59,39 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-12",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Armed Services."
+    },
+    {
+      "date": "2026-11-12",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-12",
+      "text": "On passage Passed by the Yeas and Nays: 392 - 18 (Roll no. 323). (text: CR H6195)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-12",
+      "text": "Passed/agreed to in House: On passage Passed by the Yeas and Nays: 392 - 18 (Roll no. 323). (text: CR H6195)"
+    },
+    {
+      "date": "2026-11-12",
+      "text": "The previous question was ordered pursuant to the rule.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-12",
+      "text": "DEBATE - The House proceeded with one hour of debate on H.R. 2102.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-12",
+      "text": "Considered under the provisions of rule H. Res. 1247. (consideration: CR H6195-6201)",
+      "chamber": "House"
+    },
     {
       "date": "2025-04-04",
       "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",

@@ -11,15 +11,27 @@
     "party": "R",
     "state": "VA"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-11-11",
-  "updateDate": "2026-11-12T16:20:01Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Environment and Public Works.",
+  "latestActionDate": "2026-11-12",
+  "updateDate": "2026-11-13T21:26:33Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/5549",
   "summary": "<p><strong>Efficient Nuclear Licensing Hearings Act</strong></p><p>This bill expedites the process of reviewing certain uncontested permits and licenses&nbsp;for nuclear power plants (e.g., construction permits and operating licenses) by removing a requirement for the Nuclear Regulatory Commission (NRC) to hold a public hearing at the end of the process. The bill applies to the licenses and permits if a hearing has not been requested by a person whose interest may be affected. The bill also&nbsp;directs the NRC to use informal adjudicatory procedures if such a hearing is&nbsp;held.</p><p>Additionally,&nbsp;the bill directs the NRC to hold an adjudicatory hearing regarding the licensing of the construction and operation of a uranium enrichment facility only if the person whose interest may be affected by such construction and operation has requested the hearing.</p>",
   "cosponsors": 25,
   "committees": [
+    {
+      "name": "Environment and Public Works Committee",
+      "systemCode": "ssev00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-11-12T18:17:27Z"
+        }
+      ]
+    },
     {
       "name": "Energy and Commerce Committee",
       "systemCode": "hsif00",
@@ -39,6 +51,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-12",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Environment and Public Works."
+    },
     {
       "date": "2026-11-11",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

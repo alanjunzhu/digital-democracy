@@ -38,6 +38,24 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "sres472",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 472,
+      "relationshipType": "Discharged From",
+      "actionDate": "2026-11-11",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/472"
+    },
+    {
+      "billId": "s5691",
+      "congress": 119,
+      "type": "S.",
+      "number": 5691,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-09",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5691"
+    },
+    {
       "billId": "s5682",
       "congress": 119,
       "type": "S.",
@@ -2268,24 +2286,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-12-03",
       "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/525"
-    },
-    {
-      "billId": "hr4423",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4423,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-12-02",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4423"
-    },
-    {
-      "billId": "sconres24",
-      "congress": 119,
-      "type": "S.Con.Res.",
-      "number": 24,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-12-02",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/24"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "132",
+  "number": 132,
   "billId": "hr132",
   "title": "Western Water Accelerated Revenue Repayment Act",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Natural Resources.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-14T00:41:25Z",
   "originChamber": "House",
   "policyArea": "Water Resources Development",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/132",
   "summary": "<p><strong>Western Water Accelerated Revenue Repayment Act</strong></p><p>This bill permanently authorizes a provision under the Water Infrastructure Improvements for the Nation (WIIN) Act that (1) allows certain water users (e.g., agriculture and municipal water users) in western states to prepay what they owe under contracts with the Bureau of Reclamation for delivering water through a lump sum payment or over a period of three years; and (2) requires a specified portion of the receipts generated from such prepayments be directed to the Reclamation Water Storage Account for the construction of water storage. Such prepayments do not alter certain requirements for the disposition of amounts that are directed by project-specific&nbsp;statutes in effect prior to the passage of the&nbsp;WIIN Act to accounts other than the General Reclamation Fund.</p>",
   "cosponsors": 1,
   "committees": [
-    "Natural Resources Committee"
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:24:45Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

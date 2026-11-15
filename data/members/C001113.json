@@ -59,6 +59,18 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "S.Con.Res.",
+      "number": 41,
+      "billId": "sconres41",
+      "title": "A concurrent resolution recognizing the significance of equal pay and the disparity in wages paid to Latinas in comparison to White, non-Hispanic men.",
+      "introducedDate": "2026-11-09",
+      "latestAction": "Referred to the Committee on Health, Education, Labor, and Pensions. (text: CR S5359)",
+      "latestActionDate": "2026-11-09",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/41"
+    },
+    {
+      "congress": 119,
       "type": "S.",
       "number": 5681,
       "billId": "s5681",
@@ -296,30 +308,6 @@
       "latestActionDate": "2026-06-08",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4701"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 4534,
-      "billId": "s4534",
-      "title": "Microbusiness Support Act",
-      "introducedDate": "2026-05-14",
-      "latestAction": "Read twice and referred to the Committee on Small Business and Entrepreneurship.",
-      "latestActionDate": "2026-05-14",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4534"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 4532,
-      "billId": "s4532",
-      "title": "Small Business Wildfire Smoke Recovery Act",
-      "introducedDate": "2026-05-14",
-      "latestAction": "Read twice and referred to the Committee on Small Business and Entrepreneurship.",
-      "latestActionDate": "2026-05-14",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4532"
     }
   ]
 }

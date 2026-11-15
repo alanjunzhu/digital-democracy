@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "130",
+  "number": 130,
   "billId": "hr130",
   "title": "Trust the Science Act",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Natural Resources.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-13T23:52:23Z",
   "originChamber": "House",
   "policyArea": "Animals",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/130",
   "summary": "<p><b>Trust the Science Act</b></p> <p>This bill directs the Department of the Interior to remove protections for the gray wolf under the Endangered Species Act of 1973 (ESA). Specifically, the bill requires Interior to reissue the final rule titled <i>Endangered and Threatened Wildlife and Plants; Removing the Gray Wolf (Canis lupus) From the List of Endangered and Threatened Wildlife</i> and published on November 3, 2020.</p> <p>The rule removed the gray wolf in the lower 48 United States, except for the Mexican wolf (<em>C. l. baileyi</em>) subspecies, from the endangered and threatened species list. However, the U.S. District Court for the Northern District of California vacated the rule on February 10, 2022. As a result, the gray wolf reattained the protection status it had prior to the rule's promulgation. </p> <p>The bill also prohibits the reissuance of the rule from being subject to judicial review.</p>",
   "cosponsors": 0,
   "committees": [
-    "Natural Resources Committee"
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:22:25Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

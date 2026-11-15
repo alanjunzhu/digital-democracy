@@ -11,15 +11,27 @@
     "party": "R",
     "state": "OK"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-11-11",
-  "updateDate": "2026-11-12T16:34:24Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
+  "latestActionDate": "2026-11-12",
+  "updateDate": "2026-11-13T11:57:00Z",
   "originChamber": "House",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/1013",
   "summary": "<p><strong>Retirement Fairness for Charities and Educational Institutions Act of 2025</strong><em></em></p><p>This bill allows 403(b) retirement plans (i.e., retirement plans designed for certain employees of public schools, charities, and churches) to invest in collective investment trusts, which are a group of pooled investment assets held by a bank or trust company, and in insurance company separate accounts.</p>",
   "cosponsors": 24,
   "committees": [
+    {
+      "name": "Banking, Housing, and Urban Affairs Committee",
+      "systemCode": "ssbk00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-11-12T18:16:28Z"
+        }
+      ]
+    },
     {
       "name": "Financial Services Committee",
       "systemCode": "hsba00",
@@ -44,6 +56,10 @@
   "subjects": [],
   "actions": [
     {
+      "date": "2026-11-12",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs."
+    },
+    {
       "date": "2026-11-11",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",
       "chamber": "House"
@@ -55,7 +71,7 @@
     },
     {
       "date": "2026-11-11",
-      "text": "Passed/agreed to in House: On passage Passed by the Yeas and Nays: 295 - 128 (Roll no. 321)."
+      "text": "Passed/agreed to in House: On passage Passed by the Yeas and Nays: 295 - 128 (Roll no. 321). (text of amendment in the nature of a substitute: CR H6166)"
     },
     {
       "date": "2026-11-11",

@@ -11,15 +11,27 @@
     "party": "D",
     "state": "FL"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-11-11",
-  "updateDate": "2026-11-12T16:20:23Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources.",
+  "latestActionDate": "2026-11-12",
+  "updateDate": "2026-11-14T05:08:40Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9084",
   "summary": "<p><em>The following analysis is based on <a href=\"https://docs.house.gov/billsthisweek/20261109/H.R.%209084,%20Department%20of%20Energy%20Nuclear%20Transparency%20Act.pdf\">draft bill text</a> that was made available by the House of Representatives and may differ from the bill text as introduced.</em></p><p><strong>Department of Energy Nuclear Transparency Act</strong></p><p>This bill directs the Department of Energy (DOE) to report actions related to its authorization of DOE nuclear facilities and other related DOE actions on a public website within 72 hours of those authorizations or actions occurring.&nbsp;</p><p>Specifically, DOE must post information about agreements to&nbsp;authorize&nbsp;nuclear facilities that fall under Hazard Category 1, 2, or 3.&nbsp;Hazard categories are based on the radioactive material inventories of the facilities and the potential consequences to the public, workers, and the environment. Hazard Category 1 represents the highest potential consequence.</p><p>DOE must also post a summary of any actions it took to&nbsp;alter a directive or safety standard relating to such facilities.</p><p>Further, DOE must post any preliminary documented safety analysis or documented safety analysis that it issues for such facilities.&nbsp;A <em>preliminary documented safety analysis&nbsp;</em>means documentation prepared in connection with the design and construction of a new Hazard Category 1, 2, or 3 DOE nuclear facility or a major modification to such&nbsp;nuclear facility already in existence that provides a reasonable basis for the preliminary conclusion that the nuclear facility can be operated safely through the consideration of certain factors. A <em>documented safety analysis</em> means a documented analysis of the extent to which a nuclear facility can be operated safely with respect to workers, the public, and the environment.</p><p>DOE must also issue an annual report detailing any activities it took to authorize such DOE nuclear facilities during the previous year.</p>",
   "cosponsors": 1,
   "committees": [
+    {
+      "name": "Energy and Natural Resources Committee",
+      "systemCode": "sseg00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-11-12T18:18:01Z"
+        }
+      ]
+    },
     {
       "name": "Energy and Commerce Committee",
       "systemCode": "hsif00",
@@ -39,6 +51,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-12",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources."
+    },
     {
       "date": "2026-11-11",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

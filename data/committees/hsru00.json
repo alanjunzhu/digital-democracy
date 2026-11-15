@@ -15,8 +15,35 @@
       "name": "Rules and Organization of the House Subcommittee"
     }
   ],
-  "billCount": 161,
+  "billCount": 159,
   "bills": [
+    {
+      "billId": "hres1430",
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1430,
+      "relationshipType": "Unknown",
+      "actionDate": "2026-11-11",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1430"
+    },
+    {
+      "billId": "hres1656",
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1656,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-10",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1656"
+    },
+    {
+      "billId": "hres1650",
+      "congress": 119,
+      "type": "H.Res.",
+      "number": 1650,
+      "relationshipType": "Reported Original Measure",
+      "actionDate": "2026-11-09",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1650"
+    },
     {
       "billId": "hr10828",
       "congress": 119,
@@ -286,15 +313,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-07-16",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/9720"
-    },
-    {
-      "billId": "hres1430",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 1430,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-07-15",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1430"
     },
     {
       "billId": "hres1423",
@@ -1384,42 +1402,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-11-17",
       "url": "https://www.congress.gov/bill/119th-congress/house-resolution/884"
-    },
-    {
-      "billId": "hr6039",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 6039,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-12",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/6039"
-    },
-    {
-      "billId": "hres581",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 581,
-      "relationshipType": "Unknown",
-      "actionDate": "2025-11-12",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/581"
-    },
-    {
-      "billId": "hres873",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 873,
-      "relationshipType": "Reported Original Measure",
-      "actionDate": "2025-11-12",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/873"
-    },
-    {
-      "billId": "hres871",
-      "congress": 119,
-      "type": "H.Res.",
-      "number": 871,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-10",
-      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/871"
     },
     {
       "billId": "hr5975",

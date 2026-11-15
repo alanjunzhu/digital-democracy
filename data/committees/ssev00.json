@@ -23,8 +23,44 @@
       "name": "Clean Air, Climate, and Nuclear Innovation and Safety Subcommittee Subcommittee"
     }
   ],
-  "billCount": 182,
+  "billCount": 186,
   "bills": [
+    {
+      "billId": "hr5549",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 5549,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-12",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5549"
+    },
+    {
+      "billId": "hr9612",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9612,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-10",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9612"
+    },
+    {
+      "billId": "hr9613",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9613,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-10",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9613"
+    },
+    {
+      "billId": "s5711",
+      "congress": 119,
+      "type": "S.",
+      "number": 5711,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-10",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5711"
+    },
     {
       "billId": "s528",
       "congress": 119,
@@ -876,7 +912,7 @@
       "congress": 119,
       "type": "S.J.Res.",
       "number": 139,
-      "relationshipType": "Referred To",
+      "relationshipType": "Discharged From",
       "actionDate": "2026-03-19",
       "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/139"
     },

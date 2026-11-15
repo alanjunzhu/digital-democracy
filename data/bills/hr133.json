@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "133",
+  "number": 133,
   "billId": "hr133",
   "title": "Protecting American Energy Production Act",
   "introducedDate": "2025-01-03",
@@ -13,14 +13,37 @@
   },
   "latestAction": "Referred to the Committee on Natural Resources, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-14T00:04:06Z",
   "originChamber": "House",
   "policyArea": "Energy",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/133",
   "summary": "<p><strong>Protecting American Energy Production Act</strong></p><p>This bill prohibits the President from declaring a moratorium on the use of hydraulic fracturing unless Congress authorizes the moratorium. The bill also expresses the sense of Congress that states should maintain primacy&nbsp;(authority) for the regulation of hydraulic fracturing for oil and natural gas production on state and private lands.</p><p>Hydraulic fracturing, or fracking, is a process to extract underground resources such as oil or gas from a geologic formation by injecting water, a propping agent (e.g., sand), and chemical additives into a well under enough pressure to fracture the formation.</p>",
   "cosponsors": 0,
   "committees": [
-    "Energy and Commerce Committee",
-    "Natural Resources Committee"
+    {
+      "name": "Energy and Commerce Committee",
+      "systemCode": "hsif00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:25:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:24:50Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

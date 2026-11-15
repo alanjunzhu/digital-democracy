@@ -11,15 +11,27 @@
     "party": "R",
     "state": "MN"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-11-11",
-  "updateDate": "2026-11-12T09:06:31Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Small Business and Entrepreneurship.",
+  "latestActionDate": "2026-11-12",
+  "updateDate": "2026-11-13T11:56:36Z",
   "originChamber": "House",
   "policyArea": "Commerce",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10353",
   "summary": "<p><strong>SBIC Reporting Modernization Act of 2026</strong></p><p>This bill requires the Small Business Administration (SBA) to report quarterly on its website specified information about Small Business Investment Companies (SBICs), such as the amount of SBA-guaranteed financing SBICs receive. SBICs are privately owned companies, licensed and regulated by the SBA, which invest in small businesses through debt and equity.</p><p>The quarterly report must include (1) elements of the SBA's annual report, such as the number of licensed SBICs and the amount of government leverage each has received; (2) the number of SBIC applicants approved; and (3) the number of jobs created or sustained as a result of SBIC investments. (In general, an SBIC may receive $2 of SBA-guaranteed financing for every $1 in private capital the SBIC raises, subject to a $150 million limit).</p>",
   "cosponsors": 1,
   "committees": [
+    {
+      "name": "Small Business and Entrepreneurship Committee",
+      "systemCode": "sssb00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-11-12T19:42:52Z"
+        }
+      ]
+    },
     {
       "name": "Small Business Committee",
       "systemCode": "hssm00",
@@ -43,6 +55,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-12",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Small Business and Entrepreneurship."
+    },
     {
       "date": "2026-11-11",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",

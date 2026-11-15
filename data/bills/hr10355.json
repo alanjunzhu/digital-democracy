@@ -11,15 +11,27 @@
     "party": "D",
     "state": "NJ"
   },
-  "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-  "latestActionDate": "2026-11-11",
-  "updateDate": "2026-11-12T09:06:26Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Small Business and Entrepreneurship.",
+  "latestActionDate": "2026-11-12",
+  "updateDate": "2026-11-13T11:56:37Z",
   "originChamber": "House",
   "policyArea": "Commerce",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10355",
   "summary": "<p><strong>Disaster Loan Outreach Consistency Act</strong></p><p>This bill requires the Small Business Administration (SBA) to ensure that&nbsp;outreach materials for its disaster loan program (e.g., press releases, fact sheets) are accurate, current, and consistent across all&nbsp;disaster field operations centers. (The SBA Disaster Loan Program provides low-interest loans to homeowners, renters, businesses, and nonprofits to assist with recovering from declared disasters.)</p><p>Specifically, the&nbsp;SBA must (1) include in outreach materials updated information on the eligibility processes for and terms of the disaster loan program; (2) verify, prior to public release, that outreach materials are&nbsp;current; and (3) annually review outreach materials to ensure consistency across disaster field operations centers.&nbsp;</p>",
   "cosponsors": 2,
   "committees": [
+    {
+      "name": "Small Business and Entrepreneurship Committee",
+      "systemCode": "sssb00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-11-12T19:43:21Z"
+        }
+      ]
+    },
     {
       "name": "Small Business Committee",
       "systemCode": "hssm00",
@@ -43,6 +55,10 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-12",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Small Business and Entrepreneurship."
+    },
     {
       "date": "2026-11-11",
       "text": "Motion to reconsider laid on the table Agreed to without objection.",
