@@ -1,0 +1,63 @@
+{
+  "eventId": "119340",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Future of United States Maritime: Review of Fiscal Year 2027 Maritime Administration and Federal Maritime Commission Budget Requests\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-03T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hspw07",
+      "name": ""
+    }
+  ],
+  "location": {
+    "room": "2167",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119340?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Laura DiBella",
+      "position": "Chairman",
+      "organization": "Federal Maritime Commission"
+    },
+    {
+      "name": "The Honorable Stephen Carmel",
+      "position": "Administrator",
+      "organization": "Maritime Administration"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Future of United States Maritime: Review of Fiscal Year 2027 MARAD and FMC Budget Requests",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119340",
+      "format": ""
+    },
+    {
+      "name": "Future of United States Maritime: Review of Fiscal Year 2027 MARAD and FMC Budget Requests",
+      "url": "https://www.youtube.com/watch?v=x3PFot0aeG8",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119340/documents/HHRG-119-PW07-20260603-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://www.congress.gov/119/meeting/house/119340/documents/HHRG-119-PW07-20260603-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119340/documents/CHRG-119hhrg65620.pdf",
+      "format": "PDF"
+    }
+  ]
+}

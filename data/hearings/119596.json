@@ -19,7 +19,38 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119596?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Andrew Gradison",
+      "position": "Senior Advisor",
+      "organization": "Veterans Health Administration, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Dr. Ilse Wiechers, MD",
+      "position": "Deputy Assistant Under Secretary for Health for Patient Care Services",
+      "organization": "Veterans Health Administration, U.S. Department of Veterans Affairs"
+    },
+    {
+      "name": "Dr. Leith States, MD",
+      "position": "Founder and Principal",
+      "organization": "States Strategies"
+    },
+    {
+      "name": "Dr. Marion Coe, Ph.D.",
+      "position": "Director, Clinical Development and Postmarketing Surveillance",
+      "organization": "Pinney Associates, Inc ."
+    },
+    {
+      "name": "Dr. Mark Niciu, Ph.D",
+      "position": "Assistant Professor",
+      "organization": "Department of Psychiatry, University of Iowa"
+    },
+    {
+      "name": "Dr. Raquel Halfond, Ph.D",
+      "position": "Senior Director, Evidence-Based Practice & Health Equity",
+      "organization": "American Psychological Association"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
@@ -35,6 +66,16 @@
     {
       "name": "Statement for the Record: Veterans of Foreign Wars",
       "url": "https://www.congress.gov/119/meeting/house/119596/documents/HHRG-119-VR03-20261118-SD003.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119596/documents/HHRG-119-VR03-WList-20261118.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: Disabled American Veterans",
+      "url": "https://www.congress.gov/119/meeting/house/119596/documents/HHRG-119-VR03-20261118-SD004.pdf",
       "format": "PDF"
     }
   ]

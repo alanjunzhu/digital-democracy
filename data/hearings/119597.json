@@ -5,7 +5,7 @@
   "type": "Hearing",
   "title": "“Protecting Main Street, Securing America: Examining Cybersecurity Challenges for Small Business Contractors.”",
   "meetingStatus": "Scheduled",
-  "date": "2026-11-18T15:00:00Z",
+  "date": "2026-11-18T15:45:00Z",
   "committees": [
     {
       "systemCode": "hssm23",
@@ -19,7 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119597?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Dave Dimlich",
+      "position": "President",
+      "organization": "SD3IT"
+    },
+    {
+      "name": "Ms. Lyndon Lattie",
+      "position": "Chief Executive Officer",
+      "organization": "SmartCert"
+    },
+    {
+      "name": "Ms. Allison Giddens",
+      "position": "President of Operations",
+      "organization": "Win-Tech, Inc."
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

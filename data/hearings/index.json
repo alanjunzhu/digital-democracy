@@ -1,52 +1,8 @@
 {
-  "lastUpdated": "2026-11-15T16:42:11.563Z",
+  "lastUpdated": "2026-11-16T19:56:08.707Z",
   "congress": 119,
   "total": 430,
   "hearings": [
-    {
-      "eventId": "338844",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Business Meeting",
-      "title": "Business meeting to consider pending calendar business.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-11-16T05:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssaf00",
-          "name": "Senate Agriculture, Nutrition, and Forestry"
-        }
-      ],
-      "location": {
-        "room": "216",
-        "building": "Capitol (Senate side)",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338844?format=json"
-    },
-    {
-      "eventId": "338820",
-      "congress": 119,
-      "chamber": "NoChamber",
-      "type": "Open Hearing",
-      "title": "To receive a briefing on generation victory, focusing on how Ukraine is educating students in wartime.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-11-16T16:00:00Z",
-      "committees": [
-        {
-          "systemCode": "jcse00",
-          "name": "Commission on Security and Cooperation in Europe (U.S. Helsinki Commission)"
-        }
-      ],
-      "location": {
-        "room": "2247",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/338820?format=json"
-    },
     {
       "eventId": "338827",
       "congress": 119,
@@ -317,28 +273,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338830?format=json"
     },
     {
-      "eventId": "119597",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Protecting Main Street, Securing America: Examining Cybersecurity Challenges for Small Business Contractors.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-11-18T15:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hssm23",
-          "name": "House Small Business Subcommittee on Contracting and Infrastructure"
-        }
-      ],
-      "location": {
-        "room": "2360",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119597?format=json"
-    },
-    {
       "eventId": "119589",
       "congress": 119,
       "chamber": "House",
@@ -393,6 +327,28 @@
         "s69"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338832?format=json"
+    },
+    {
+      "eventId": "119597",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Protecting Main Street, Securing America: Examining Cybersecurity Challenges for Small Business Contractors.”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-18T15:45:00Z",
+      "committees": [
+        {
+          "systemCode": "hssm23",
+          "name": "House Small Business Subcommittee on Contracting and Infrastructure"
+        }
+      ],
+      "location": {
+        "room": "2360",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119597?format=json"
     },
     {
       "eventId": "338824",
@@ -861,7 +817,7 @@
       "congress": 119,
       "chamber": "House",
       "type": "Hearing",
-      "title": "HEARING",
+      "title": "Outproducing the CCP: Restoring American Manufacturing",
       "meetingStatus": "Rescheduled",
       "date": "2026-11-20T13:30:00Z",
       "committees": [
@@ -877,6 +833,50 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119593?format=json"
+    },
+    {
+      "eventId": "338820",
+      "congress": 119,
+      "chamber": "NoChamber",
+      "type": "Open Hearing",
+      "title": "To receive a briefing on generation victory, focusing on how Ukraine is educating students in wartime.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-16T16:00:00Z",
+      "committees": [
+        {
+          "systemCode": "jcse00",
+          "name": "Commission on Security and Cooperation in Europe (U.S. Helsinki Commission)"
+        }
+      ],
+      "location": {
+        "room": "2247",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/338820?format=json"
+    },
+    {
+      "eventId": "338844",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider pending calendar business.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-11-16T05:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssaf00",
+          "name": "Senate Agriculture, Nutrition, and Forestry"
+        }
+      ],
+      "location": {
+        "room": "216",
+        "building": "Capitol (Senate side)",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338844?format=json"
     },
     {
       "eventId": "119588",
@@ -2723,6 +2723,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338743?format=json"
     },
     {
+      "eventId": "119571",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“The International Criminal Court’s Threat to the Sovereignty of the United States and its Allies”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-09-15T18:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju03",
+          "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
+        }
+      ],
+      "location": {
+        "room": "2237",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119571?format=json"
+    },
+    {
       "eventId": "119553",
       "congress": 119,
       "chamber": "House",
@@ -2809,28 +2831,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119306?format=json"
-    },
-    {
-      "eventId": "119571",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“The International Criminal Court’s Threat to the Sovereignty of the United States and its Allies”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju03",
-          "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
-        }
-      ],
-      "location": {
-        "room": "2237",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119571?format=json"
     },
     {
       "eventId": "119541",
@@ -7106,6 +7106,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119339?format=json"
     },
     {
+      "eventId": "119340",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Future of United States Maritime: Review of Fiscal Year 2027 Maritime Administration and Federal Maritime Commission Budget Requests\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-03T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hspw07",
+          "name": ""
+        }
+      ],
+      "location": {
+        "room": "2167",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119340?format=json"
+    },
+    {
       "eventId": "338506",
       "congress": 119,
       "chamber": "Senate",
@@ -7280,37 +7302,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119313?format=json"
-    },
-    {
-      "eventId": "119316",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "the full Committee to consider the following: \r\n\r\n1) H.R. 8096, Duplication Scoring Act of 2026;\r\n                       \r\n2) H.R. 8801, DC Rejecting Oppressive Automotive Driving Surcharges Act;\r\n       \r\n3) H.R. 8844, U.S. Customs and Border Protection Officer Retirement Technical Corrections Act;\r\n            \r\n4) H.R. 3087, Civil Rights Cold Case Records Collection Reauthorization Act;\r\n\r\n5) Several postal naming measures.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-20T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsgo00",
-          "name": "House Oversight and Government Reform"
-        }
-      ],
-      "location": {
-        "room": "2154",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr8840",
-        "hr4662",
-        "hr3350",
-        "hr8669",
-        "hr8096",
-        "hr8801",
-        "hr3087",
-        "hr8844"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119316?format=json"
     },
     {
       "eventId": "119260",

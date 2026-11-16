@@ -3,7 +3,7 @@
   "congress": 119,
   "chamber": "House",
   "type": "Hearing",
-  "title": "HEARING",
+  "title": "Outproducing the CCP: Restoring American Manufacturing",
   "meetingStatus": "Rescheduled",
   "date": "2026-11-20T13:30:00Z",
   "committees": [
@@ -19,7 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119593?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Pat Gelsinger",
+      "position": "General Partner",
+      "organization": "Playground Global"
+    },
+    {
+      "name": "Mark Widmar",
+      "position": "CEO",
+      "organization": "First Solar"
+    },
+    {
+      "name": "Owen Herrnstadt",
+      "position": "Former Member of the Board of Directors and Former Chief of Staff",
+      "organization": "The Board of Directors of the Export-Import Bank of the United States and The International Association of Machinists and Aerospace Workers (IAM)"
+    }
+  ],
   "videos": [],
   "meetingDocuments": []
 }
