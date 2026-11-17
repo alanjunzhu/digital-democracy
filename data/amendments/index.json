@@ -1,103 +1,519 @@
 {
-  "lastUpdated": "2026-11-13T18:41:56.896Z",
+  "lastUpdated": "2026-11-17T19:59:28.058Z",
   "congress": 119,
   "total": 500,
   "amendments": [
     {
-      "amendmentId": "samdt7002",
+      "amendmentId": "samdt7021",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 7002,
+      "number": 7021,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
+      "submittedDate": "2026-11-16T05:00:00Z",
       "proposedDate": "",
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "M000133",
-        "fullName": "Sen. Markey, Edward J. [D-MA]",
+        "bioguideId": "G000574",
+        "fullName": "Sen. Gallego, Ruben [D-AZ]",
         "party": "D",
-        "state": "MA"
+        "state": "AZ"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7021"
+    },
+    {
+      "amendmentId": "samdt7015",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7015,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-16T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001267",
+        "fullName": "Sen. Bennet, Michael F. [D-CO]",
+        "party": "D",
+        "state": "CO"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7002"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7015"
     },
     {
-      "amendmentId": "samdt7001",
+      "amendmentId": "samdt7018",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 7001,
+      "number": 7018,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
+      "submittedDate": "2026-11-16T05:00:00Z",
       "proposedDate": "",
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
         "party": "D",
-        "state": "NJ"
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7018"
+    },
+    {
+      "amendmentId": "samdt7019",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7019,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-16T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001153",
+        "fullName": "Sen. Murkowski, Lisa [R-AK]",
+        "party": "R",
+        "state": "AK"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7001"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7019"
     },
     {
-      "amendmentId": "samdt6986",
+      "amendmentId": "samdt7020",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6986,
+      "number": 7020,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
+      "submittedDate": "2026-11-16T05:00:00Z",
       "proposedDate": "",
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "C000127",
-        "fullName": "Sen. Cantwell, Maria [D-WA]",
+        "bioguideId": "S001194",
+        "fullName": "Sen. Schatz, Brian [D-HI]",
         "party": "D",
-        "state": "WA"
+        "state": "HI"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
+      "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6986"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7020"
     },
     {
-      "amendmentId": "samdt6987",
+      "amendmentId": "samdt7016",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6987,
+      "number": 7016,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
+      "submittedDate": "2026-11-16T05:00:00Z",
       "proposedDate": "",
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "C000127",
-        "fullName": "Sen. Cantwell, Maria [D-WA]",
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
         "party": "D",
-        "state": "WA"
+        "state": "VT"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
+      "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6987"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7016"
+    },
+    {
+      "amendmentId": "samdt7010",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7010,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-16T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "P000603",
+        "fullName": "Sen. Paul, Rand [R-KY]",
+        "party": "R",
+        "state": "KY"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7010"
+    },
+    {
+      "amendmentId": "samdt7012",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7012,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-16T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "O000174",
+        "fullName": "Sen. Ossoff, Jon [D-GA]",
+        "party": "D",
+        "state": "GA"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7012"
+    },
+    {
+      "amendmentId": "samdt7017",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7017,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-16T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7017"
+    },
+    {
+      "amendmentId": "samdt7014",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7014,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-16T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7014"
+    },
+    {
+      "amendmentId": "samdt7013",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7013,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-16T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7013"
+    },
+    {
+      "amendmentId": "samdt7009",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7009,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-16T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M000934",
+        "fullName": "Sen. Moran, Jerry [R-KS]",
+        "party": "R",
+        "state": "KS"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 3,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7009"
+    },
+    {
+      "amendmentId": "samdt7011",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7011,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-16T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "A000382",
+        "fullName": "Sen. Alsobrooks, Angela D. [D-MD]",
+        "party": "D",
+        "state": "MD"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7011"
+    },
+    {
+      "amendmentId": "samdt6886",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6886,
+      "chamber": "Senate",
+      "purpose": "To improve the bill.",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "2026-11-10T05:00:00Z",
+      "latestAction": "Considered by Senate. (consideration: CR S5679)",
+      "latestActionDate": "2026-11-16",
+      "sponsor": {
+        "bioguideId": "T000250",
+        "fullName": "Sen. Thune, John [R-SD]",
+        "party": "R",
+        "state": "SD"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6886"
+    },
+    {
+      "amendmentId": "samdt6885",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6885,
+      "chamber": "Senate",
+      "purpose": "To improve the bill.",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "2026-11-10T05:00:00Z",
+      "latestAction": "Considered by Senate. (consideration: CR S5679)",
+      "latestActionDate": "2026-11-16",
+      "sponsor": {
+        "bioguideId": "T000250",
+        "fullName": "Sen. Thune, John [R-SD]",
+        "party": "R",
+        "state": "SD"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6885"
+    },
+    {
+      "amendmentId": "samdt6884",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6884,
+      "chamber": "Senate",
+      "purpose": "To improve the bill.",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "2026-11-10T05:00:00Z",
+      "latestAction": "Considered by Senate. (consideration: CR S5679)",
+      "latestActionDate": "2026-11-16",
+      "sponsor": {
+        "bioguideId": "T000250",
+        "fullName": "Sen. Thune, John [R-SD]",
+        "party": "R",
+        "state": "SD"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6884"
+    },
+    {
+      "amendmentId": "samdt6883",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6883,
+      "chamber": "Senate",
+      "purpose": "In the nature of a substitute.",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "2026-11-10T05:00:00Z",
+      "latestAction": "Considered by Senate. (consideration: CR S5679)",
+      "latestActionDate": "2026-11-16",
+      "sponsor": {
+        "bioguideId": "C001047",
+        "fullName": "Sen. Capito, Shelley Moore [R-WV]",
+        "party": "R",
+        "state": "WV"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 3,
+      "recordedVotes": [
+        {
+          "voteId": "s2-rc264",
+          "chamber": "Senate",
+          "rollNumber": 264,
+          "sessionNumber": 2,
+          "date": "2026-11-17T00:04:08Z"
+        }
+      ],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6883"
+    },
+    {
+      "amendmentId": "samdt6890",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6890,
+      "chamber": "Senate",
+      "purpose": "To improve the bill.",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "2026-11-10T05:00:00Z",
+      "latestAction": "SA 6890 fell when SA 6889 fell.",
+      "latestActionDate": "2026-11-16",
+      "sponsor": {
+        "bioguideId": "T000250",
+        "fullName": "Sen. Thune, John [R-SD]",
+        "party": "R",
+        "state": "SD"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6890"
+    },
+    {
+      "amendmentId": "samdt6889",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6889,
+      "chamber": "Senate",
+      "purpose": "To improve the bill.",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "2026-11-10T05:00:00Z",
+      "latestAction": "SA 6889 fell when SA 6888 (the instructions of the motion to commit) fell.",
+      "latestActionDate": "2026-11-16",
+      "sponsor": {
+        "bioguideId": "T000250",
+        "fullName": "Sen. Thune, John [R-SD]",
+        "party": "R",
+        "state": "SD"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6889"
+    },
+    {
+      "amendmentId": "samdt6888",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6888,
+      "chamber": "Senate",
+      "purpose": "To improve the bill.",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "2026-11-10T05:00:00Z",
+      "latestAction": "SA 6888 (the instructions of the motion to commit) fell when cloture invoked on amendment SA 6883.",
+      "latestActionDate": "2026-11-16",
+      "sponsor": {
+        "bioguideId": "T000250",
+        "fullName": "Sen. Thune, John [R-SD]",
+        "party": "R",
+        "state": "SD"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6888"
+    },
+    {
+      "amendmentId": "samdt6887",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6887,
+      "chamber": "Senate",
+      "purpose": "To improve the bill.",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "2026-11-10T05:00:00Z",
+      "latestAction": "Considered by Senate. (consideration: CR S5679)",
+      "latestActionDate": "2026-11-16",
+      "sponsor": {
+        "bioguideId": "T000250",
+        "fullName": "Sen. Thune, John [R-SD]",
+        "party": "R",
+        "state": "SD"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6887"
     },
     {
       "amendmentId": "samdt7003",
@@ -124,10 +540,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7003"
     },
     {
-      "amendmentId": "samdt6988",
+      "amendmentId": "samdt7002",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6988,
+      "number": 7002,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -136,16 +552,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "C000127",
-        "fullName": "Sen. Cantwell, Maria [D-WA]",
+        "bioguideId": "M000133",
+        "fullName": "Sen. Markey, Edward J. [D-MA]",
         "party": "D",
-        "state": "WA"
+        "state": "MA"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 3,
+      "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6988"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7002"
     },
     {
       "amendmentId": "samdt6989",
@@ -172,10 +588,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6989"
     },
     {
-      "amendmentId": "samdt6982",
+      "amendmentId": "samdt6986",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6982,
+      "number": 6986,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -184,22 +600,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "W000800",
-        "fullName": "Sen. Welch, Peter [D-VT]",
+        "bioguideId": "C000127",
+        "fullName": "Sen. Cantwell, Maria [D-WA]",
         "party": "D",
-        "state": "VT"
+        "state": "WA"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 2,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6982"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6986"
     },
     {
-      "amendmentId": "samdt6981",
+      "amendmentId": "samdt7001",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6981,
+      "number": 7001,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -208,22 +624,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "W000800",
-        "fullName": "Sen. Welch, Peter [D-VT]",
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
         "party": "D",
-        "state": "VT"
+        "state": "NJ"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6981"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7001"
     },
     {
-      "amendmentId": "samdt6977",
+      "amendmentId": "samdt6988",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6977,
+      "number": 6988,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -232,22 +648,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "W000800",
-        "fullName": "Sen. Welch, Peter [D-VT]",
+        "bioguideId": "C000127",
+        "fullName": "Sen. Cantwell, Maria [D-WA]",
         "party": "D",
-        "state": "VT"
+        "state": "WA"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 3,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6977"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6988"
     },
     {
-      "amendmentId": "samdt6976",
+      "amendmentId": "samdt6987",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6976,
+      "number": 6987,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -256,16 +672,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "W000800",
-        "fullName": "Sen. Welch, Peter [D-VT]",
+        "bioguideId": "C000127",
+        "fullName": "Sen. Cantwell, Maria [D-WA]",
         "party": "D",
-        "state": "VT"
+        "state": "WA"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 2,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6976"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6987"
     },
     {
       "amendmentId": "samdt6985",
@@ -292,34 +708,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6985"
     },
     {
-      "amendmentId": "samdt6974",
+      "amendmentId": "samdt6976",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6974,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "K000377",
-        "fullName": "Sen. Kelly, Mark [D-AZ]",
-        "party": "D",
-        "state": "AZ"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 3,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6974"
-    },
-    {
-      "amendmentId": "samdt6975",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6975,
+      "number": 6976,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -337,79 +729,7 @@
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6975"
-    },
-    {
-      "amendmentId": "samdt6980",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6980,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000800",
-        "fullName": "Sen. Welch, Peter [D-VT]",
-        "party": "D",
-        "state": "VT"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6980"
-    },
-    {
-      "amendmentId": "samdt6978",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6978,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000800",
-        "fullName": "Sen. Welch, Peter [D-VT]",
-        "party": "D",
-        "state": "VT"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6978"
-    },
-    {
-      "amendmentId": "samdt6979",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6979,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000800",
-        "fullName": "Sen. Welch, Peter [D-VT]",
-        "party": "D",
-        "state": "VT"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6979"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6976"
     },
     {
       "amendmentId": "samdt6984",
@@ -436,6 +756,54 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6984"
     },
     {
+      "amendmentId": "samdt6979",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6979,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6979"
+    },
+    {
+      "amendmentId": "samdt6977",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6977,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6977"
+    },
+    {
       "amendmentId": "samdt6983",
       "congress": 119,
       "type": "S.Amdt.",
@@ -460,6 +828,150 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6983"
     },
     {
+      "amendmentId": "samdt6981",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6981,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6981"
+    },
+    {
+      "amendmentId": "samdt6980",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6980,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6980"
+    },
+    {
+      "amendmentId": "samdt6975",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6975,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6975"
+    },
+    {
+      "amendmentId": "samdt6978",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6978,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6978"
+    },
+    {
+      "amendmentId": "samdt6974",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6974,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "K000377",
+        "fullName": "Sen. Kelly, Mark [D-AZ]",
+        "party": "D",
+        "state": "AZ"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 3,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6974"
+    },
+    {
+      "amendmentId": "samdt6982",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6982,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000800",
+        "fullName": "Sen. Welch, Peter [D-VT]",
+        "party": "D",
+        "state": "VT"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6982"
+    },
+    {
       "amendmentId": "samdt6967",
       "congress": 119,
       "type": "S.Amdt.",
@@ -482,6 +994,174 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6967"
+    },
+    {
+      "amendmentId": "samdt6964",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6964,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "K000383",
+        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
+        "party": "I",
+        "state": "ME"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6964"
+    },
+    {
+      "amendmentId": "samdt6969",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6969,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M000133",
+        "fullName": "Sen. Markey, Edward J. [D-MA]",
+        "party": "D",
+        "state": "MA"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6969"
+    },
+    {
+      "amendmentId": "samdt6973",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6973,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001217",
+        "fullName": "Sen. Scott, Rick [R-FL]",
+        "party": "R",
+        "state": "FL"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6973"
+    },
+    {
+      "amendmentId": "samdt6970",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6970,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000779",
+        "fullName": "Sen. Wyden, Ron [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6970"
+    },
+    {
+      "amendmentId": "samdt6968",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6968,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M000133",
+        "fullName": "Sen. Markey, Edward J. [D-MA]",
+        "party": "D",
+        "state": "MA"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6968"
+    },
+    {
+      "amendmentId": "samdt6972",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6972,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001217",
+        "fullName": "Sen. Scott, Rick [R-FL]",
+        "party": "R",
+        "state": "FL"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6972"
+    },
+    {
+      "amendmentId": "samdt6966",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6966,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M000133",
+        "fullName": "Sen. Markey, Edward J. [D-MA]",
+        "party": "D",
+        "state": "MA"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6966"
     },
     {
       "amendmentId": "samdt6971",
@@ -532,10 +1212,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6965"
     },
     {
-      "amendmentId": "samdt6972",
+      "amendmentId": "samdt6958",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6972,
+      "number": 6958,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -544,22 +1224,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "S001217",
-        "fullName": "Sen. Scott, Rick [R-FL]",
-        "party": "R",
-        "state": "FL"
+        "bioguideId": "C001113",
+        "fullName": "Sen. Cortez Masto, Catherine [D-NV]",
+        "party": "D",
+        "state": "NV"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6972"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6958"
     },
     {
-      "amendmentId": "samdt6964",
+      "amendmentId": "samdt6962",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6964,
+      "number": 6962,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -577,133 +1257,13 @@
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6964"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6962"
     },
     {
-      "amendmentId": "samdt6970",
+      "amendmentId": "samdt6956",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6970,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000779",
-        "fullName": "Sen. Wyden, Ron [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6970"
-    },
-    {
-      "amendmentId": "samdt6966",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6966,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M000133",
-        "fullName": "Sen. Markey, Edward J. [D-MA]",
-        "party": "D",
-        "state": "MA"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6966"
-    },
-    {
-      "amendmentId": "samdt6968",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6968,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M000133",
-        "fullName": "Sen. Markey, Edward J. [D-MA]",
-        "party": "D",
-        "state": "MA"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6968"
-    },
-    {
-      "amendmentId": "samdt6973",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6973,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001217",
-        "fullName": "Sen. Scott, Rick [R-FL]",
-        "party": "R",
-        "state": "FL"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6973"
-    },
-    {
-      "amendmentId": "samdt6969",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6969,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M000133",
-        "fullName": "Sen. Markey, Edward J. [D-MA]",
-        "party": "D",
-        "state": "MA"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6969"
-    },
-    {
-      "amendmentId": "samdt6957",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6957,
+      "number": 6956,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -721,7 +1281,31 @@
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 2,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6957"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6956"
+    },
+    {
+      "amendmentId": "samdt6963",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6963,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "K000383",
+        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
+        "party": "I",
+        "state": "ME"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6963"
     },
     {
       "amendmentId": "samdt6953",
@@ -772,30 +1356,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6959"
     },
     {
-      "amendmentId": "samdt6962",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6962,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "K000383",
-        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
-        "party": "I",
-        "state": "ME"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6962"
-    },
-    {
       "amendmentId": "samdt6955",
       "congress": 119,
       "type": "S.Amdt.",
@@ -815,129 +1375,9 @@
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
+      "cosponsorCount": 3,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6955"
-    },
-    {
-      "amendmentId": "samdt6956",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6956,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001267",
-        "fullName": "Sen. Bennet, Michael F. [D-CO]",
-        "party": "D",
-        "state": "CO"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6956"
-    },
-    {
-      "amendmentId": "samdt6961",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6961,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "K000383",
-        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
-        "party": "I",
-        "state": "ME"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6961"
-    },
-    {
-      "amendmentId": "samdt6963",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6963,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "K000383",
-        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
-        "party": "I",
-        "state": "ME"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6963"
-    },
-    {
-      "amendmentId": "samdt6954",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6954,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001267",
-        "fullName": "Sen. Bennet, Michael F. [D-CO]",
-        "party": "D",
-        "state": "CO"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6954"
-    },
-    {
-      "amendmentId": "samdt6958",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6958,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C001113",
-        "fullName": "Sen. Cortez Masto, Catherine [D-NV]",
-        "party": "D",
-        "state": "NV"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6958"
     },
     {
       "amendmentId": "samdt6960",
@@ -964,34 +1404,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6960"
     },
     {
-      "amendmentId": "samdt6904",
+      "amendmentId": "samdt6957",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6904,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001227",
-        "fullName": "Sen. Schmitt, Eric [R-MO]",
-        "party": "R",
-        "state": "MO"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6904"
-    },
-    {
-      "amendmentId": "samdt6950",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6950,
+      "number": 6957,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1004,60 +1420,60 @@
         "fullName": "Sen. Bennet, Michael F. [D-CO]",
         "party": "D",
         "state": "CO"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6950"
-    },
-    {
-      "amendmentId": "samdt6949",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6949,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001267",
-        "fullName": "Sen. Bennet, Michael F. [D-CO]",
-        "party": "D",
-        "state": "CO"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6949"
-    },
-    {
-      "amendmentId": "samdt6902",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6902,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001305",
-        "fullName": "Sen. Budd, Ted [R-NC]",
-        "party": "R",
-        "state": "NC"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 3,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6902"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6957"
+    },
+    {
+      "amendmentId": "samdt6954",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6954,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001267",
+        "fullName": "Sen. Bennet, Michael F. [D-CO]",
+        "party": "D",
+        "state": "CO"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6954"
+    },
+    {
+      "amendmentId": "samdt6961",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6961,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "K000383",
+        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
+        "party": "I",
+        "state": "ME"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6961"
     },
     {
       "amendmentId": "samdt6951",
@@ -1084,10 +1500,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6951"
     },
     {
-      "amendmentId": "samdt6952",
+      "amendmentId": "samdt6950",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6952,
+      "number": 6950,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1105,13 +1521,13 @@
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6952"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6950"
     },
     {
-      "amendmentId": "samdt6903",
+      "amendmentId": "samdt6902",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6903,
+      "number": 6902,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1120,40 +1536,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "S001227",
-        "fullName": "Sen. Schmitt, Eric [R-MO]",
+        "bioguideId": "B001305",
+        "fullName": "Sen. Budd, Ted [R-NC]",
         "party": "R",
-        "state": "MO"
+        "state": "NC"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 4,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6903"
-    },
-    {
-      "amendmentId": "samdt6905",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6905,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001198",
-        "fullName": "Sen. Marshall, Roger [R-KS]",
-        "party": "R",
-        "state": "KS"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6905"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6902"
     },
     {
       "amendmentId": "samdt6901",
@@ -1180,6 +1572,174 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6901"
     },
     {
+      "amendmentId": "samdt6905",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6905,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001198",
+        "fullName": "Sen. Marshall, Roger [R-KS]",
+        "party": "R",
+        "state": "KS"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6905"
+    },
+    {
+      "amendmentId": "samdt6903",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6903,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001227",
+        "fullName": "Sen. Schmitt, Eric [R-MO]",
+        "party": "R",
+        "state": "MO"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6903"
+    },
+    {
+      "amendmentId": "samdt6952",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6952,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001267",
+        "fullName": "Sen. Bennet, Michael F. [D-CO]",
+        "party": "D",
+        "state": "CO"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6952"
+    },
+    {
+      "amendmentId": "samdt6904",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6904,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001227",
+        "fullName": "Sen. Schmitt, Eric [R-MO]",
+        "party": "R",
+        "state": "MO"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6904"
+    },
+    {
+      "amendmentId": "samdt6949",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6949,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001267",
+        "fullName": "Sen. Bennet, Michael F. [D-CO]",
+        "party": "D",
+        "state": "CO"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6949"
+    },
+    {
+      "amendmentId": "samdt6937",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6937,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001150",
+        "fullName": "Sen. Schiff, Adam B. [D-CA]",
+        "party": "D",
+        "state": "CA"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6937"
+    },
+    {
+      "amendmentId": "samdt7000",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 7000,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001153",
+        "fullName": "Sen. Murkowski, Lisa [R-AK]",
+        "party": "R",
+        "state": "AK"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 5,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7000"
+    },
+    {
       "amendmentId": "samdt6999",
       "congress": 119,
       "type": "S.Amdt.",
@@ -1199,7 +1759,7 @@
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 5,
+      "cosponsorCount": 6,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6999"
     },
@@ -1228,10 +1788,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7007"
     },
     {
-      "amendmentId": "samdt7006",
+      "amendmentId": "samdt6938",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 7006,
+      "number": 6938,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1240,40 +1800,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "M000934",
-        "fullName": "Sen. Moran, Jerry [R-KS]",
-        "party": "R",
-        "state": "KS"
+        "bioguideId": "S001150",
+        "fullName": "Sen. Schiff, Adam B. [D-CA]",
+        "party": "D",
+        "state": "CA"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
+      "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7006"
-    },
-    {
-      "amendmentId": "samdt7000",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 7000,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001153",
-        "fullName": "Sen. Murkowski, Lisa [R-AK]",
-        "party": "R",
-        "state": "AK"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 4,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7000"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6938"
     },
     {
       "amendmentId": "samdt6936",
@@ -1300,78 +1836,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6936"
     },
     {
-      "amendmentId": "samdt7004",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 7004,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001203",
-        "fullName": "Sen. Smith, Tina [D-MN]",
-        "party": "D",
-        "state": "MN"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7004"
-    },
-    {
-      "amendmentId": "samdt6938",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6938,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001150",
-        "fullName": "Sen. Schiff, Adam B. [D-CA]",
-        "party": "D",
-        "state": "CA"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6938"
-    },
-    {
-      "amendmentId": "samdt6937",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6937,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001150",
-        "fullName": "Sen. Schiff, Adam B. [D-CA]",
-        "party": "D",
-        "state": "CA"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6937"
-    },
-    {
       "amendmentId": "samdt7005",
       "congress": 119,
       "type": "S.Amdt.",
@@ -1396,10 +1860,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7005"
     },
     {
-      "amendmentId": "samdt6928",
+      "amendmentId": "samdt7004",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6928,
+      "number": 7004,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1408,22 +1872,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "L000570",
-        "fullName": "Sen. Luján, Ben Ray [D-NM]",
+        "bioguideId": "S001203",
+        "fullName": "Sen. Smith, Tina [D-MN]",
         "party": "D",
-        "state": "NM"
+        "state": "MN"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
+      "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6928"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7004"
     },
     {
-      "amendmentId": "samdt6930",
+      "amendmentId": "samdt7006",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6930,
+      "number": 7006,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1432,16 +1896,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "L000570",
-        "fullName": "Sen. Luján, Ben Ray [D-NM]",
-        "party": "D",
-        "state": "NM"
+        "bioguideId": "M000934",
+        "fullName": "Sen. Moran, Jerry [R-KS]",
+        "party": "R",
+        "state": "KS"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
+      "cosponsorCount": 2,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6930"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/7006"
     },
     {
       "amendmentId": "samdt6934",
@@ -1468,78 +1932,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6934"
     },
     {
-      "amendmentId": "samdt6927",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6927,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "L000570",
-        "fullName": "Sen. Luján, Ben Ray [D-NM]",
-        "party": "D",
-        "state": "NM"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6927"
-    },
-    {
-      "amendmentId": "samdt6933",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6933,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "V000128",
-        "fullName": "Sen. Van Hollen, Chris [D-MD]",
-        "party": "D",
-        "state": "MD"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 3,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6933"
-    },
-    {
-      "amendmentId": "samdt6932",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6932,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6932"
-    },
-    {
       "amendmentId": "samdt6929",
       "congress": 119,
       "type": "S.Amdt.",
@@ -1562,6 +1954,78 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6929"
+    },
+    {
+      "amendmentId": "samdt6927",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6927,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "L000570",
+        "fullName": "Sen. Luján, Ben Ray [D-NM]",
+        "party": "D",
+        "state": "NM"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 4,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6927"
+    },
+    {
+      "amendmentId": "samdt6932",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6932,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6932"
+    },
+    {
+      "amendmentId": "samdt6928",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6928,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "L000570",
+        "fullName": "Sen. Luján, Ben Ray [D-NM]",
+        "party": "D",
+        "state": "NM"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6928"
     },
     {
       "amendmentId": "samdt6931",
@@ -1588,10 +2052,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6931"
     },
     {
-      "amendmentId": "samdt6925",
+      "amendmentId": "samdt6930",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6925,
+      "number": 6930,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1609,13 +2073,13 @@
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6925"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6930"
     },
     {
-      "amendmentId": "samdt6918",
+      "amendmentId": "samdt6933",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6918,
+      "number": 6933,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -1624,160 +2088,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "bioguideId": "V000128",
+        "fullName": "Sen. Van Hollen, Chris [D-MD]",
         "party": "D",
-        "state": "OR"
+        "state": "MD"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 3,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6918"
-    },
-    {
-      "amendmentId": "samdt6924",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6924,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "L000570",
-        "fullName": "Sen. Luján, Ben Ray [D-NM]",
-        "party": "D",
-        "state": "NM"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6924"
-    },
-    {
-      "amendmentId": "samdt6922",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6922,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6922"
-    },
-    {
-      "amendmentId": "samdt6923",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6923,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "L000570",
-        "fullName": "Sen. Luján, Ben Ray [D-NM]",
-        "party": "D",
-        "state": "NM"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6923"
-    },
-    {
-      "amendmentId": "samdt6917",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6917,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6917"
-    },
-    {
-      "amendmentId": "samdt6920",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6920,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6920"
-    },
-    {
-      "amendmentId": "samdt6919",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6919,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6919"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6933"
     },
     {
       "amendmentId": "samdt6921",
@@ -1804,6 +2124,198 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6921"
     },
     {
+      "amendmentId": "samdt6925",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6925,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "L000570",
+        "fullName": "Sen. Luján, Ben Ray [D-NM]",
+        "party": "D",
+        "state": "NM"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6925"
+    },
+    {
+      "amendmentId": "samdt6924",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6924,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "L000570",
+        "fullName": "Sen. Luján, Ben Ray [D-NM]",
+        "party": "D",
+        "state": "NM"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 3,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6924"
+    },
+    {
+      "amendmentId": "samdt6923",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6923,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "L000570",
+        "fullName": "Sen. Luján, Ben Ray [D-NM]",
+        "party": "D",
+        "state": "NM"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 3,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6923"
+    },
+    {
+      "amendmentId": "samdt6919",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6919,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6919"
+    },
+    {
+      "amendmentId": "samdt6920",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6920,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6920"
+    },
+    {
+      "amendmentId": "samdt6917",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6917,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6917"
+    },
+    {
+      "amendmentId": "samdt6922",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6922,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6922"
+    },
+    {
+      "amendmentId": "samdt6918",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6918,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6918"
+    },
+    {
       "amendmentId": "samdt6996",
       "congress": 119,
       "type": "S.Amdt.",
@@ -1826,54 +2338,6 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6996"
-    },
-    {
-      "amendmentId": "samdt6911",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6911,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "P000603",
-        "fullName": "Sen. Paul, Rand [R-KY]",
-        "party": "R",
-        "state": "KY"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6911"
-    },
-    {
-      "amendmentId": "samdt6998",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6998,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "D000622",
-        "fullName": "Sen. Duckworth, Tammy [D-IL]",
-        "party": "D",
-        "state": "IL"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6998"
     },
     {
       "amendmentId": "samdt6997",
@@ -1924,30 +2388,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6912"
     },
     {
-      "amendmentId": "samdt6913",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6913,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "K000394",
-        "fullName": "Sen. Kim, Andy [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6913"
-    },
-    {
       "amendmentId": "samdt6914",
       "congress": 119,
       "type": "S.Amdt.",
@@ -1996,10 +2436,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6915"
     },
     {
-      "amendmentId": "samdt6993",
+      "amendmentId": "samdt6998",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6993,
+      "number": 6998,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2008,32 +2448,8 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "C000127",
-        "fullName": "Sen. Cantwell, Maria [D-WA]",
-        "party": "D",
-        "state": "WA"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 3,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6993"
-    },
-    {
-      "amendmentId": "samdt6990",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6990,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "D000563",
-        "fullName": "Sen. Durbin, Richard J. [D-IL]",
+        "bioguideId": "D000622",
+        "fullName": "Sen. Duckworth, Tammy [D-IL]",
         "party": "D",
         "state": "IL"
       },
@@ -2041,13 +2457,13 @@
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6990"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6998"
     },
     {
-      "amendmentId": "samdt6994",
+      "amendmentId": "samdt6913",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6994,
+      "number": 6913,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2056,22 +2472,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "C000127",
-        "fullName": "Sen. Cantwell, Maria [D-WA]",
+        "bioguideId": "K000394",
+        "fullName": "Sen. Kim, Andy [D-NJ]",
         "party": "D",
-        "state": "WA"
+        "state": "NJ"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 2,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6994"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6913"
     },
     {
-      "amendmentId": "samdt6947",
+      "amendmentId": "samdt6911",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6947,
+      "number": 6911,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2080,64 +2496,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001267",
-        "fullName": "Sen. Bennet, Michael F. [D-CO]",
-        "party": "D",
-        "state": "CO"
+        "bioguideId": "P000603",
+        "fullName": "Sen. Paul, Rand [R-KY]",
+        "party": "R",
+        "state": "KY"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6947"
-    },
-    {
-      "amendmentId": "samdt6991",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6991,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "G000574",
-        "fullName": "Sen. Gallego, Ruben [D-AZ]",
-        "party": "D",
-        "state": "AZ"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6991"
-    },
-    {
-      "amendmentId": "samdt6992",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6992,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C000127",
-        "fullName": "Sen. Cantwell, Maria [D-WA]",
-        "party": "D",
-        "state": "WA"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6992"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6911"
     },
     {
       "amendmentId": "samdt6948",
@@ -2164,10 +2532,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6948"
     },
     {
-      "amendmentId": "samdt6941",
+      "amendmentId": "samdt6994",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6941,
+      "number": 6994,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2176,16 +2544,136 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "S001150",
-        "fullName": "Sen. Schiff, Adam B. [D-CA]",
+        "bioguideId": "C000127",
+        "fullName": "Sen. Cantwell, Maria [D-WA]",
         "party": "D",
-        "state": "CA"
+        "state": "WA"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6994"
+    },
+    {
+      "amendmentId": "samdt6990",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6990,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "D000563",
+        "fullName": "Sen. Durbin, Richard J. [D-IL]",
+        "party": "D",
+        "state": "IL"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6941"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6990"
+    },
+    {
+      "amendmentId": "samdt6991",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6991,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "G000574",
+        "fullName": "Sen. Gallego, Ruben [D-AZ]",
+        "party": "D",
+        "state": "AZ"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6991"
+    },
+    {
+      "amendmentId": "samdt6947",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6947,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001267",
+        "fullName": "Sen. Bennet, Michael F. [D-CO]",
+        "party": "D",
+        "state": "CO"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6947"
+    },
+    {
+      "amendmentId": "samdt6993",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6993,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C000127",
+        "fullName": "Sen. Cantwell, Maria [D-WA]",
+        "party": "D",
+        "state": "WA"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 3,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6993"
+    },
+    {
+      "amendmentId": "samdt6992",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6992,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C000127",
+        "fullName": "Sen. Cantwell, Maria [D-WA]",
+        "party": "D",
+        "state": "WA"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6992"
     },
     {
       "amendmentId": "samdt6940",
@@ -2210,30 +2698,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6940"
-    },
-    {
-      "amendmentId": "samdt6942",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6942,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "P000145",
-        "fullName": "Sen. Padilla, Alex [D-CA]",
-        "party": "D",
-        "state": "CA"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 4,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6942"
     },
     {
       "amendmentId": "samdt6945",
@@ -2308,10 +2772,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6944"
     },
     {
-      "amendmentId": "samdt6910",
+      "amendmentId": "samdt6941",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6910,
+      "number": 6941,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2320,16 +2784,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "M001153",
-        "fullName": "Sen. Murkowski, Lisa [R-AK]",
-        "party": "R",
-        "state": "AK"
+        "bioguideId": "S001150",
+        "fullName": "Sen. Schiff, Adam B. [D-CA]",
+        "party": "D",
+        "state": "CA"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6910"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6941"
     },
     {
       "amendmentId": "samdt6939",
@@ -2356,10 +2820,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6939"
     },
     {
-      "amendmentId": "samdt6906",
+      "amendmentId": "samdt6910",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6906,
+      "number": 6910,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2368,40 +2832,64 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "M001198",
-        "fullName": "Sen. Marshall, Roger [R-KS]",
+        "bioguideId": "M001153",
+        "fullName": "Sen. Murkowski, Lisa [R-AK]",
         "party": "R",
-        "state": "KS"
+        "state": "AK"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6910"
+    },
+    {
+      "amendmentId": "samdt6942",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6942,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "P000145",
+        "fullName": "Sen. Padilla, Alex [D-CA]",
+        "party": "D",
+        "state": "CA"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 6,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6942"
+    },
+    {
+      "amendmentId": "samdt6909",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6909,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C001056",
+        "fullName": "Sen. Cornyn, John [R-TX]",
+        "party": "R",
+        "state": "TX"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6906"
-    },
-    {
-      "amendmentId": "samdt6907",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6907,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-12T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001198",
-        "fullName": "Sen. Marshall, Roger [R-KS]",
-        "party": "R",
-        "state": "KS"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6907"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6909"
     },
     {
       "amendmentId": "samdt6908",
@@ -2428,10 +2916,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6908"
     },
     {
-      "amendmentId": "samdt6909",
+      "amendmentId": "samdt6907",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6909,
+      "number": 6907,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2440,16 +2928,40 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "C001056",
-        "fullName": "Sen. Cornyn, John [R-TX]",
+        "bioguideId": "M001198",
+        "fullName": "Sen. Marshall, Roger [R-KS]",
         "party": "R",
-        "state": "TX"
+        "state": "KS"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6907"
+    },
+    {
+      "amendmentId": "samdt6906",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6906,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-12T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001198",
+        "fullName": "Sen. Marshall, Roger [R-KS]",
+        "party": "R",
+        "state": "KS"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6909"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6906"
     },
     {
       "amendmentId": "samdt7008",
@@ -2567,7 +3079,7 @@
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
+      "cosponsorCount": 3,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6926"
     },
@@ -2668,10 +3180,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6894"
     },
     {
-      "amendmentId": "samdt6899",
+      "amendmentId": "samdt6892",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6899,
+      "number": 6892,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2680,40 +3192,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001303",
-        "fullName": "Sen. Blunt Rochester, Lisa [D-DE]",
-        "party": "D",
-        "state": "DE"
+        "bioguideId": "K000393",
+        "fullName": "Sen. Kennedy, John [R-LA]",
+        "party": "R",
+        "state": "LA"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6899"
-    },
-    {
-      "amendmentId": "samdt6896",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6896,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-11T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "A000382",
-        "fullName": "Sen. Alsobrooks, Angela D. [D-MD]",
-        "party": "D",
-        "state": "MD"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 11,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6896"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6892"
     },
     {
       "amendmentId": "samdt6893",
@@ -2740,10 +3228,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6893"
     },
     {
-      "amendmentId": "samdt6895",
+      "amendmentId": "samdt6896",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6895,
+      "number": 6896,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2752,16 +3240,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "S001181",
-        "fullName": "Sen. Shaheen, Jeanne [D-NH]",
+        "bioguideId": "A000382",
+        "fullName": "Sen. Alsobrooks, Angela D. [D-MD]",
         "party": "D",
-        "state": "NH"
+        "state": "MD"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
+      "cosponsorCount": 12,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6895"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6896"
     },
     {
       "amendmentId": "samdt6891",
@@ -2788,10 +3276,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6891"
     },
     {
-      "amendmentId": "samdt6892",
+      "amendmentId": "samdt6895",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6892,
+      "number": 6895,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -2800,16 +3288,40 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "K000393",
-        "fullName": "Sen. Kennedy, John [R-LA]",
-        "party": "R",
-        "state": "LA"
+        "bioguideId": "S001181",
+        "fullName": "Sen. Shaheen, Jeanne [D-NH]",
+        "party": "D",
+        "state": "NH"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 1,
+      "cosponsorCount": 2,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6892"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6895"
+    },
+    {
+      "amendmentId": "samdt6899",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6899,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-11T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001303",
+        "fullName": "Sen. Blunt Rochester, Lisa [D-DE]",
+        "party": "D",
+        "state": "DE"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6899"
     },
     {
       "amendmentId": "samdt6900",
@@ -2884,196 +3396,76 @@
       "url": "https://www.congress.gov/amendment/119th-congress/house-amendment/273"
     },
     {
-      "amendmentId": "samdt6890",
+      "amendmentId": "samdt6853",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6890,
+      "number": 6853,
       "chamber": "Senate",
-      "purpose": "To improve the bill.",
+      "purpose": "",
       "description": "",
       "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "2026-11-10T05:00:00Z",
-      "latestAction": "Considered by Senate. (consideration: CR S5567)",
-      "latestActionDate": "2026-11-11",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "T000250",
-        "fullName": "Sen. Thune, John [R-SD]",
+        "bioguideId": "C001098",
+        "fullName": "Sen. Cruz, Ted [R-TX]",
         "party": "R",
-        "state": "SD"
+        "state": "TX"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6890"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6853"
     },
     {
-      "amendmentId": "samdt6889",
+      "amendmentId": "samdt6880",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6889,
+      "number": 6880,
       "chamber": "Senate",
-      "purpose": "To improve the bill.",
+      "purpose": "",
       "description": "",
       "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "2026-11-10T05:00:00Z",
-      "latestAction": "Considered by Senate. (consideration: CR S5567)",
-      "latestActionDate": "2026-11-11",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "T000250",
-        "fullName": "Sen. Thune, John [R-SD]",
-        "party": "R",
-        "state": "SD"
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6889"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6880"
     },
     {
-      "amendmentId": "samdt6888",
+      "amendmentId": "samdt6854",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6888,
+      "number": 6854,
       "chamber": "Senate",
-      "purpose": "To improve the bill.",
+      "purpose": "",
       "description": "",
       "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "2026-11-10T05:00:00Z",
-      "latestAction": "Considered by Senate. (consideration: CR S5567)",
-      "latestActionDate": "2026-11-11",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "T000250",
-        "fullName": "Sen. Thune, John [R-SD]",
+        "bioguideId": "M001153",
+        "fullName": "Sen. Murkowski, Lisa [R-AK]",
         "party": "R",
-        "state": "SD"
+        "state": "AK"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 5,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6888"
-    },
-    {
-      "amendmentId": "samdt6887",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6887,
-      "chamber": "Senate",
-      "purpose": "To improve the bill.",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "2026-11-10T05:00:00Z",
-      "latestAction": "Considered by Senate. (consideration: CR S5567)",
-      "latestActionDate": "2026-11-11",
-      "sponsor": {
-        "bioguideId": "T000250",
-        "fullName": "Sen. Thune, John [R-SD]",
-        "party": "R",
-        "state": "SD"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6887"
-    },
-    {
-      "amendmentId": "samdt6886",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6886,
-      "chamber": "Senate",
-      "purpose": "To improve the bill.",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "2026-11-10T05:00:00Z",
-      "latestAction": "Considered by Senate. (consideration: CR S5567)",
-      "latestActionDate": "2026-11-11",
-      "sponsor": {
-        "bioguideId": "T000250",
-        "fullName": "Sen. Thune, John [R-SD]",
-        "party": "R",
-        "state": "SD"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6886"
-    },
-    {
-      "amendmentId": "samdt6885",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6885,
-      "chamber": "Senate",
-      "purpose": "To improve the bill.",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "2026-11-10T05:00:00Z",
-      "latestAction": "Considered by Senate. (consideration: CR S5567)",
-      "latestActionDate": "2026-11-11",
-      "sponsor": {
-        "bioguideId": "T000250",
-        "fullName": "Sen. Thune, John [R-SD]",
-        "party": "R",
-        "state": "SD"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6885"
-    },
-    {
-      "amendmentId": "samdt6884",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6884,
-      "chamber": "Senate",
-      "purpose": "To improve the bill.",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "2026-11-10T05:00:00Z",
-      "latestAction": "Considered by Senate. (consideration: CR S5567)",
-      "latestActionDate": "2026-11-11",
-      "sponsor": {
-        "bioguideId": "T000250",
-        "fullName": "Sen. Thune, John [R-SD]",
-        "party": "R",
-        "state": "SD"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6884"
-    },
-    {
-      "amendmentId": "samdt6883",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6883,
-      "chamber": "Senate",
-      "purpose": "In the nature of a substitute.",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "2026-11-10T05:00:00Z",
-      "latestAction": "Cloture motion on amendment SA 6883 presented in Senate. (CR S5568)",
-      "latestActionDate": "2026-11-11",
-      "sponsor": {
-        "bioguideId": "C001047",
-        "fullName": "Sen. Capito, Shelley Moore [R-WV]",
-        "party": "R",
-        "state": "WV"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 3,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6883"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6854"
     },
     {
       "amendmentId": "samdt6852",
@@ -3124,10 +3516,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6879"
     },
     {
-      "amendmentId": "samdt6853",
+      "amendmentId": "samdt6871",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6853,
+      "number": 6871,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -3136,46 +3528,22 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "C001098",
-        "fullName": "Sen. Cruz, Ted [R-TX]",
-        "party": "R",
-        "state": "TX"
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 2,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6853"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6871"
     },
     {
-      "amendmentId": "samdt6854",
+      "amendmentId": "samdt6877",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6854,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001153",
-        "fullName": "Sen. Murkowski, Lisa [R-AK]",
-        "party": "R",
-        "state": "AK"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 4,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6854"
-    },
-    {
-      "amendmentId": "samdt6880",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6880,
+      "number": 6877,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -3193,13 +3561,13 @@
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6880"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6877"
     },
     {
-      "amendmentId": "samdt6875",
+      "amendmentId": "samdt6873",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6875,
+      "number": 6873,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -3217,7 +3585,7 @@
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6875"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6873"
     },
     {
       "amendmentId": "samdt6867",
@@ -3268,54 +3636,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6868"
     },
     {
-      "amendmentId": "samdt6877",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6877,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6877"
-    },
-    {
-      "amendmentId": "samdt6870",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6870,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6870"
-    },
-    {
       "amendmentId": "samdt6872",
       "congress": 119,
       "type": "S.Amdt.",
@@ -3338,102 +3658,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6872"
-    },
-    {
-      "amendmentId": "samdt6869",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6869,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6869"
-    },
-    {
-      "amendmentId": "samdt6876",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6876,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6876"
-    },
-    {
-      "amendmentId": "samdt6871",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6871,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6871"
-    },
-    {
-      "amendmentId": "samdt6873",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6873,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6873"
     },
     {
       "amendmentId": "samdt6874",
@@ -3460,6 +3684,102 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6874"
     },
     {
+      "amendmentId": "samdt6876",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6876,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6876"
+    },
+    {
+      "amendmentId": "samdt6869",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6869,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6869"
+    },
+    {
+      "amendmentId": "samdt6875",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6875,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6875"
+    },
+    {
+      "amendmentId": "samdt6870",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6870,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6870"
+    },
+    {
       "amendmentId": "samdt6866",
       "congress": 119,
       "type": "S.Amdt.",
@@ -3484,30 +3804,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6866"
     },
     {
-      "amendmentId": "samdt6855",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6855,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001194",
-        "fullName": "Sen. Schatz, Brian [D-HI]",
-        "party": "D",
-        "state": "HI"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6855"
-    },
-    {
       "amendmentId": "samdt6882",
       "congress": 119,
       "type": "S.Amdt.",
@@ -3527,15 +3823,15 @@
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 28,
+      "cosponsorCount": 34,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6882"
     },
     {
-      "amendmentId": "samdt6851",
+      "amendmentId": "samdt6855",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6851,
+      "number": 6855,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -3544,16 +3840,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "C001098",
-        "fullName": "Sen. Cruz, Ted [R-TX]",
-        "party": "R",
-        "state": "TX"
+        "bioguideId": "S001194",
+        "fullName": "Sen. Schatz, Brian [D-HI]",
+        "party": "D",
+        "state": "HI"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
+      "cosponsorCount": 6,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6851"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6855"
     },
     {
       "amendmentId": "samdt6861",
@@ -3580,6 +3876,30 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6861"
     },
     {
+      "amendmentId": "samdt6862",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6862,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6862"
+    },
+    {
       "amendmentId": "samdt6858",
       "congress": 119,
       "type": "S.Amdt.",
@@ -3602,30 +3922,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6858"
-    },
-    {
-      "amendmentId": "samdt6860",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6860,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "H001089",
-        "fullName": "Sen. Hawley, Josh [R-MO]",
-        "party": "R",
-        "state": "MO"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6860"
     },
     {
       "amendmentId": "samdt6863",
@@ -3652,30 +3948,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6863"
     },
     {
-      "amendmentId": "samdt6864",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6864,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-11-10T05:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "hr2347",
-      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6864"
-    },
-    {
       "amendmentId": "samdt6857",
       "congress": 119,
       "type": "S.Amdt.",
@@ -3698,6 +3970,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6857"
+    },
+    {
+      "amendmentId": "samdt6860",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6860,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "H001089",
+        "fullName": "Sen. Hawley, Josh [R-MO]",
+        "party": "R",
+        "state": "MO"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6860"
     },
     {
       "amendmentId": "samdt6859",
@@ -3724,10 +4020,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6859"
     },
     {
-      "amendmentId": "samdt6862",
+      "amendmentId": "samdt6851",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6862,
+      "number": 6851,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -3736,16 +4032,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
+        "bioguideId": "C001098",
+        "fullName": "Sen. Cruz, Ted [R-TX]",
+        "party": "R",
+        "state": "TX"
       },
       "amendedBillId": "hr2347",
       "amendedBillTitle": "Survivor Justice Tax Prevention Act",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6862"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6851"
     },
     {
       "amendmentId": "samdt6856",
@@ -3770,6 +4066,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6856"
+    },
+    {
+      "amendmentId": "samdt6864",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6864,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-11-10T05:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "hr2347",
+      "amendedBillTitle": "Survivor Justice Tax Prevention Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6864"
     },
     {
       "amendmentId": "samdt6849",
@@ -3964,30 +4284,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6848"
     },
     {
-      "amendmentId": "samdt5819",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5819,
-      "chamber": "Senate",
-      "purpose": "In the nature of a substitute.",
-      "description": "",
-      "submittedDate": "2026-06-09T04:00:00Z",
-      "proposedDate": "2026-09-30T04:00:00Z",
-      "latestAction": "Amendment SA 5819 agreed to in Senate by Unanimous Consent.",
-      "latestActionDate": "2026-09-30",
-      "sponsor": {
-        "bioguideId": "C001075",
-        "fullName": "Sen. Cassidy, Bill [R-LA]",
-        "party": "R",
-        "state": "LA"
-      },
-      "amendedBillId": "s3315",
-      "amendedBillTitle": "Health Care Cybersecurity and Resiliency Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5819"
-    },
-    {
       "amendmentId": "samdt6847",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4010,6 +4306,30 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6847"
+    },
+    {
+      "amendmentId": "samdt5819",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 5819,
+      "chamber": "Senate",
+      "purpose": "In the nature of a substitute.",
+      "description": "",
+      "submittedDate": "2026-06-09T04:00:00Z",
+      "proposedDate": "2026-09-30T04:00:00Z",
+      "latestAction": "Amendment SA 5819 agreed to in Senate by Unanimous Consent.",
+      "latestActionDate": "2026-09-30",
+      "sponsor": {
+        "bioguideId": "C001075",
+        "fullName": "Sen. Cassidy, Bill [R-LA]",
+        "party": "R",
+        "state": "LA"
+      },
+      "amendedBillId": "s3315",
+      "amendedBillTitle": "Health Care Cybersecurity and Resiliency Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5819"
     },
     {
       "amendmentId": "samdt6842",
@@ -4156,6 +4476,30 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6839"
     },
     {
+      "amendmentId": "samdt6836",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6836,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-28T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6836"
+    },
+    {
       "amendmentId": "samdt6837",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4202,30 +4546,6 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6838"
-    },
-    {
-      "amendmentId": "samdt6836",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6836,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-28T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001184",
-        "fullName": "Sen. Scott, Tim [R-SC]",
-        "party": "R",
-        "state": "SC"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6836"
     },
     {
       "amendmentId": "samdt6831",
@@ -4508,30 +4828,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6779"
     },
     {
-      "amendmentId": "samdt6832",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6832,
-      "chamber": "Senate",
-      "purpose": "To apply the prohibition relating to self-promotion through official advertisements to the President and the Vice President.",
-      "description": "",
-      "submittedDate": "2026-09-24T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "Referred to the Committee on Homeland Security and Governmental Affairs.",
-      "latestActionDate": "2026-09-24",
-      "sponsor": {
-        "bioguideId": "R000608",
-        "fullName": "Sen. Rosen, Jacky [D-NV]",
-        "party": "D",
-        "state": "NV"
-      },
-      "amendedBillId": "s4128",
-      "amendedBillTitle": "No Self-Promotion with Public Dollars Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6832"
-    },
-    {
       "amendmentId": "samdt6833",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4554,6 +4850,30 @@
       "cosponsorCount": 1,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6833"
+    },
+    {
+      "amendmentId": "samdt6832",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6832,
+      "chamber": "Senate",
+      "purpose": "To apply the prohibition relating to self-promotion through official advertisements to the President and the Vice President.",
+      "description": "",
+      "submittedDate": "2026-09-24T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "Referred to the Committee on Homeland Security and Governmental Affairs.",
+      "latestActionDate": "2026-09-24",
+      "sponsor": {
+        "bioguideId": "R000608",
+        "fullName": "Sen. Rosen, Jacky [D-NV]",
+        "party": "D",
+        "state": "NV"
+      },
+      "amendedBillId": "s4128",
+      "amendedBillTitle": "No Self-Promotion with Public Dollars Act",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6832"
     },
     {
       "amendmentId": "samdt6776",
@@ -4595,30 +4915,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6776"
     },
     {
-      "amendmentId": "samdt6778",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6778,
-      "chamber": "Senate",
-      "purpose": "To improve the bill.",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "2026-09-17T04:00:00Z",
-      "latestAction": "SA 6778 fell when SA 6777 was tabled.",
-      "latestActionDate": "2026-09-24",
-      "sponsor": {
-        "bioguideId": "T000250",
-        "fullName": "Sen. Thune, John [R-SD]",
-        "party": "R",
-        "state": "SD"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6778"
-    },
-    {
       "amendmentId": "samdt6777",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4643,52 +4939,28 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6777"
     },
     {
-      "amendmentId": "samdt6829",
+      "amendmentId": "samdt6778",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6829,
+      "number": 6778,
       "chamber": "Senate",
-      "purpose": "",
+      "purpose": "To improve the bill.",
       "description": "",
-      "submittedDate": "2026-09-23T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "2026-09-17T04:00:00Z",
+      "latestAction": "SA 6778 fell when SA 6777 was tabled.",
+      "latestActionDate": "2026-09-24",
       "sponsor": {
-        "bioguideId": "S001184",
-        "fullName": "Sen. Scott, Tim [R-SC]",
+        "bioguideId": "T000250",
+        "fullName": "Sen. Thune, John [R-SD]",
         "party": "R",
-        "state": "SC"
+        "state": "SD"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6829"
-    },
-    {
-      "amendmentId": "samdt6825",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6825,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-23T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000790",
-        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
-        "party": "D",
-        "state": "GA"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6825"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6778"
     },
     {
       "amendmentId": "samdt6826",
@@ -4715,6 +4987,30 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6826"
     },
     {
+      "amendmentId": "samdt6825",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6825,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-23T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000790",
+        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+        "party": "D",
+        "state": "GA"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6825"
+    },
+    {
       "amendmentId": "samdt6827",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4739,14 +5035,14 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6827"
     },
     {
-      "amendmentId": "samdt6818",
+      "amendmentId": "samdt6829",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6818,
+      "number": 6829,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
+      "submittedDate": "2026-09-23T04:00:00Z",
       "proposedDate": "",
       "latestAction": "",
       "latestActionDate": "",
@@ -4760,13 +5056,13 @@
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6818"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6829"
     },
     {
-      "amendmentId": "samdt6812",
+      "amendmentId": "samdt6823",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6812,
+      "number": 6823,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -4775,64 +5071,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "A000383",
-        "fullName": "Sen. Armstrong, Alan [R-OK]",
-        "party": "R",
-        "state": "OK"
+        "bioguideId": "B001277",
+        "fullName": "Sen. Blumenthal, Richard [D-CT]",
+        "party": "D",
+        "state": "CT"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6812"
-    },
-    {
-      "amendmentId": "samdt6811",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6811,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "K000393",
-        "fullName": "Sen. Kennedy, John [R-LA]",
-        "party": "R",
-        "state": "LA"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6811"
-    },
-    {
-      "amendmentId": "samdt6824",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6824,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001243",
-        "fullName": "Sen. Blackburn, Marsha [R-TN]",
-        "party": "R",
-        "state": "TN"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6824"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6823"
     },
     {
       "amendmentId": "samdt6816",
@@ -4859,30 +5107,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6816"
     },
     {
-      "amendmentId": "samdt6815",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6815,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "S001184",
-        "fullName": "Sen. Scott, Tim [R-SC]",
-        "party": "R",
-        "state": "SC"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6815"
-    },
-    {
       "amendmentId": "samdt6810",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4907,6 +5131,54 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6810"
     },
     {
+      "amendmentId": "samdt6824",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6824,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001243",
+        "fullName": "Sen. Blackburn, Marsha [R-TN]",
+        "party": "R",
+        "state": "TN"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6824"
+    },
+    {
+      "amendmentId": "samdt6818",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6818,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6818"
+    },
+    {
       "amendmentId": "samdt6813",
       "congress": 119,
       "type": "S.Amdt.",
@@ -4929,6 +5201,78 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6813"
+    },
+    {
+      "amendmentId": "samdt6812",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6812,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "A000383",
+        "fullName": "Sen. Armstrong, Alan [R-OK]",
+        "party": "R",
+        "state": "OK"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6812"
+    },
+    {
+      "amendmentId": "samdt6819",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6819,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001277",
+        "fullName": "Sen. Blumenthal, Richard [D-CT]",
+        "party": "D",
+        "state": "CT"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6819"
+    },
+    {
+      "amendmentId": "samdt6815",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6815,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "S001184",
+        "fullName": "Sen. Scott, Tim [R-SC]",
+        "party": "R",
+        "state": "SC"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6815"
     },
     {
       "amendmentId": "samdt6814",
@@ -4979,10 +5323,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6817"
     },
     {
-      "amendmentId": "samdt6823",
+      "amendmentId": "samdt6811",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6823,
+      "number": 6811,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -4991,40 +5335,16 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001277",
-        "fullName": "Sen. Blumenthal, Richard [D-CT]",
-        "party": "D",
-        "state": "CT"
+        "bioguideId": "K000393",
+        "fullName": "Sen. Kennedy, John [R-LA]",
+        "party": "R",
+        "state": "LA"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6823"
-    },
-    {
-      "amendmentId": "samdt6819",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6819,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001277",
-        "fullName": "Sen. Blumenthal, Richard [D-CT]",
-        "party": "D",
-        "state": "CT"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6819"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6811"
     },
     {
       "amendmentId": "samdt6800",
@@ -5051,10 +5371,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6800"
     },
     {
-      "amendmentId": "samdt6804",
+      "amendmentId": "samdt6806",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6804,
+      "number": 6806,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5063,104 +5383,8 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6804"
-    },
-    {
-      "amendmentId": "samdt6801",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6801,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6801"
-    },
-    {
-      "amendmentId": "samdt6808",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6808,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001244",
-        "fullName": "Sen. Moody, Ashley [R-FL]",
-        "party": "R",
-        "state": "FL"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6808"
-    },
-    {
-      "amendmentId": "samdt6822",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6822,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001277",
-        "fullName": "Sen. Blumenthal, Richard [D-CT]",
-        "party": "D",
-        "state": "CT"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6822"
-    },
-    {
-      "amendmentId": "samdt6809",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6809,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "T000278",
-        "fullName": "Sen. Tuberville, Tommy [R-AL]",
+        "bioguideId": "B001319",
+        "fullName": "Sen. Britt, Katie Boyd [R-AL]",
         "party": "R",
         "state": "AL"
       },
@@ -5168,55 +5392,7 @@
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 1,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6809"
-    },
-    {
-      "amendmentId": "samdt6802",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6802,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001288",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 2,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6802"
-    },
-    {
-      "amendmentId": "samdt6799",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6799,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-22T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000790",
-        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
-        "party": "D",
-        "state": "GA"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 5,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6799"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6806"
     },
     {
       "amendmentId": "samdt6820",
@@ -5243,10 +5419,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6820"
     },
     {
-      "amendmentId": "samdt6821",
+      "amendmentId": "samdt6822",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6821,
+      "number": 6822,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5264,7 +5440,7 @@
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6821"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6822"
     },
     {
       "amendmentId": "samdt6803",
@@ -5291,10 +5467,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6803"
     },
     {
-      "amendmentId": "samdt6806",
+      "amendmentId": "samdt6801",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6806,
+      "number": 6801,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5303,16 +5479,40 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "B001319",
-        "fullName": "Sen. Britt, Katie Boyd [R-AL]",
-        "party": "R",
-        "state": "AL"
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 1,
+      "cosponsorCount": 2,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6806"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6801"
+    },
+    {
+      "amendmentId": "samdt6804",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6804,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6804"
     },
     {
       "amendmentId": "samdt6807",
@@ -5339,10 +5539,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6807"
     },
     {
-      "amendmentId": "samdt6796",
+      "amendmentId": "samdt6809",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6796,
+      "number": 6809,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5351,16 +5551,112 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "H001042",
-        "fullName": "Sen. Hirono, Mazie K. [D-HI]",
-        "party": "D",
-        "state": "HI"
+        "bioguideId": "T000278",
+        "fullName": "Sen. Tuberville, Tommy [R-AL]",
+        "party": "R",
+        "state": "AL"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6809"
+    },
+    {
+      "amendmentId": "samdt6808",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6808,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001244",
+        "fullName": "Sen. Moody, Ashley [R-FL]",
+        "party": "R",
+        "state": "FL"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
       "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6796"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6808"
+    },
+    {
+      "amendmentId": "samdt6802",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6802,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001288",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "party": "D",
+        "state": "NJ"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 2,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6802"
+    },
+    {
+      "amendmentId": "samdt6821",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6821,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001277",
+        "fullName": "Sen. Blumenthal, Richard [D-CT]",
+        "party": "D",
+        "state": "CT"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6821"
+    },
+    {
+      "amendmentId": "samdt6799",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6799,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "W000790",
+        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
+        "party": "D",
+        "state": "GA"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 5,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6799"
     },
     {
       "amendmentId": "samdt6797",
@@ -5385,6 +5681,30 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6797"
+    },
+    {
+      "amendmentId": "samdt6796",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6796,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-22T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "H001042",
+        "fullName": "Sen. Hirono, Mazie K. [D-HI]",
+        "party": "D",
+        "state": "HI"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6796"
     },
     {
       "amendmentId": "samdt6798",
@@ -5483,78 +5803,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6781"
     },
     {
-      "amendmentId": "samdt6786",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6786,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001230",
-        "fullName": "Sen. Baldwin, Tammy [D-WI]",
-        "party": "D",
-        "state": "WI"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6786"
-    },
-    {
-      "amendmentId": "samdt6789",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6789,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6789"
-    },
-    {
-      "amendmentId": "samdt6792",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6792,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C000880",
-        "fullName": "Sen. Crapo, Mike [R-ID]",
-        "party": "R",
-        "state": "ID"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6792"
-    },
-    {
       "amendmentId": "samdt6788",
       "congress": 119,
       "type": "S.Amdt.",
@@ -5577,54 +5825,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6788"
-    },
-    {
-      "amendmentId": "samdt6790",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6790,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 4,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6790"
-    },
-    {
-      "amendmentId": "samdt6791",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6791,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "C000880",
-        "fullName": "Sen. Crapo, Mike [R-ID]",
-        "party": "R",
-        "state": "ID"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6791"
     },
     {
       "amendmentId": "samdt6787",
@@ -5651,10 +5851,10 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6787"
     },
     {
-      "amendmentId": "samdt6794",
+      "amendmentId": "samdt6789",
       "congress": 119,
       "type": "S.Amdt.",
-      "number": 6794,
+      "number": 6789,
       "chamber": "Senate",
       "purpose": "",
       "description": "",
@@ -5663,16 +5863,160 @@
       "latestAction": "",
       "latestActionDate": "",
       "sponsor": {
-        "bioguideId": "M001169",
-        "fullName": "Sen. Murphy, Christopher [D-CT]",
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
         "party": "D",
-        "state": "CT"
+        "state": "OR"
       },
       "amendedBillId": "s4668",
       "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 3,
+      "cosponsorCount": 0,
       "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6794"
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6789"
+    },
+    {
+      "amendmentId": "samdt6790",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6790,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "M001176",
+        "fullName": "Sen. Merkley, Jeff [D-OR]",
+        "party": "D",
+        "state": "OR"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 4,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6790"
+    },
+    {
+      "amendmentId": "samdt6786",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6786,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001230",
+        "fullName": "Sen. Baldwin, Tammy [D-WI]",
+        "party": "D",
+        "state": "WI"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6786"
+    },
+    {
+      "amendmentId": "samdt6792",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6792,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C000880",
+        "fullName": "Sen. Crapo, Mike [R-ID]",
+        "party": "R",
+        "state": "ID"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6792"
+    },
+    {
+      "amendmentId": "samdt6791",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6791,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "C000880",
+        "fullName": "Sen. Crapo, Mike [R-ID]",
+        "party": "R",
+        "state": "ID"
+      },
+      "amendedBillId": "s4784",
+      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "cosponsorCount": 1,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6791"
+    },
+    {
+      "amendmentId": "samdt6785",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6785,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001230",
+        "fullName": "Sen. Baldwin, Tammy [D-WI]",
+        "party": "D",
+        "state": "WI"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 11,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6785"
+    },
+    {
+      "amendmentId": "samdt6784",
+      "congress": 119,
+      "type": "S.Amdt.",
+      "number": 6784,
+      "chamber": "Senate",
+      "purpose": "",
+      "description": "",
+      "submittedDate": "2026-09-17T04:00:00Z",
+      "proposedDate": "",
+      "latestAction": "",
+      "latestActionDate": "",
+      "sponsor": {
+        "bioguideId": "B001230",
+        "fullName": "Sen. Baldwin, Tammy [D-WI]",
+        "party": "D",
+        "state": "WI"
+      },
+      "amendedBillId": "s4668",
+      "amendedBillTitle": "Protect College Sports Act of 2026",
+      "cosponsorCount": 0,
+      "recordedVotes": [],
+      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6784"
     },
     {
       "amendmentId": "samdt6775",
@@ -5723,126 +6067,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6795"
     },
     {
-      "amendmentId": "samdt6793",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6793,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6793"
-    },
-    {
-      "amendmentId": "samdt6784",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6784,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001230",
-        "fullName": "Sen. Baldwin, Tammy [D-WI]",
-        "party": "D",
-        "state": "WI"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6784"
-    },
-    {
-      "amendmentId": "samdt6785",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6785,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-17T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "B001230",
-        "fullName": "Sen. Baldwin, Tammy [D-WI]",
-        "party": "D",
-        "state": "WI"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 11,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6785"
-    },
-    {
-      "amendmentId": "samdt6773",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6773,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-16T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "H001104",
-        "fullName": "Sen. Husted, Jon [R-OH]",
-        "party": "R",
-        "state": "OH"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6773"
-    },
-    {
-      "amendmentId": "samdt6774",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6774,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-16T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M001169",
-        "fullName": "Sen. Murphy, Christopher [D-CT]",
-        "party": "D",
-        "state": "CT"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6774"
-    },
-    {
       "amendmentId": "hamdt272",
       "congress": 119,
       "type": "H.Amdt.",
@@ -5865,102 +6089,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/house-amendment/272"
-    },
-    {
-      "amendmentId": "samdt6771",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6771,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-15T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "M000934",
-        "fullName": "Sen. Moran, Jerry [R-KS]",
-        "party": "R",
-        "state": "KS"
-      },
-      "amendedBillId": "hr3633",
-      "amendedBillTitle": "Digital Asset Market Clarity Act",
-      "cosponsorCount": 11,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6771"
-    },
-    {
-      "amendmentId": "samdt6772",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6772,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-15T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "H001046",
-        "fullName": "Sen. Heinrich, Martin [D-NM]",
-        "party": "D",
-        "state": "NM"
-      },
-      "amendedBillId": "hr3633",
-      "amendedBillTitle": "Digital Asset Market Clarity Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6772"
-    },
-    {
-      "amendmentId": "samdt6770",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6770,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "T000278",
-        "fullName": "Sen. Tuberville, Tommy [R-AL]",
-        "party": "R",
-        "state": "AL"
-      },
-      "amendedBillId": "s4668",
-      "amendedBillTitle": "Protect College Sports Act of 2026",
-      "cosponsorCount": 0,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6770"
-    },
-    {
-      "amendmentId": "samdt6769",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 6769,
-      "chamber": "Senate",
-      "purpose": "",
-      "description": "",
-      "submittedDate": "2026-09-14T04:00:00Z",
-      "proposedDate": "",
-      "latestAction": "",
-      "latestActionDate": "",
-      "sponsor": {
-        "bioguideId": "W000790",
-        "fullName": "Sen. Warnock, Raphael G. [D-GA]",
-        "party": "D",
-        "state": "GA"
-      },
-      "amendedBillId": "s4784",
-      "amendedBillTitle": "National Defense Authorization Act for Fiscal Year 2027",
-      "cosponsorCount": 1,
-      "recordedVotes": [],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/6769"
     },
     {
       "amendmentId": "hamdt271",
@@ -7259,38 +7387,6 @@
       "url": "https://www.congress.gov/amendment/119th-congress/house-amendment/227"
     },
     {
-      "amendmentId": "samdt5812",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5812,
-      "chamber": "Senate",
-      "purpose": "To provide compensation to law enforcement officers who defended the United States Capitol during the events that occurred at or near the United States Capitol on January 6, 2021, and for other purposes.",
-      "description": "",
-      "submittedDate": "2026-06-05T04:00:00Z",
-      "proposedDate": "2026-06-05T04:00:00Z",
-      "latestAction": "Amendment SA 5812 ruled out of order by the chair.",
-      "latestActionDate": "2026-06-05",
-      "sponsor": {
-        "bioguideId": "C001075",
-        "fullName": "Sen. Cassidy, Bill [R-LA]",
-        "party": "R",
-        "state": "LA"
-      },
-      "amendedBillId": "s2",
-      "amendedBillTitle": "Secure America Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [
-        {
-          "voteId": "s2-rc159",
-          "chamber": "Senate",
-          "rollNumber": 159,
-          "sessionNumber": 2,
-          "date": "2026-06-05T07:53:23Z"
-        }
-      ],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5812"
-    },
-    {
       "amendmentId": "hamdt226",
       "congress": 119,
       "type": "H.Amdt.",
@@ -7313,134 +7409,6 @@
       "cosponsorCount": 0,
       "recordedVotes": [],
       "url": "https://www.congress.gov/amendment/119th-congress/house-amendment/226"
-    },
-    {
-      "amendmentId": "samdt5512",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5512,
-      "chamber": "Senate",
-      "purpose": "To provide a clarification relating to, and to prohibit the use of funds for, the White House Ballroom.",
-      "description": "",
-      "submittedDate": "2026-06-03T04:00:00Z",
-      "proposedDate": "2026-06-04T04:00:00Z",
-      "latestAction": "Amendment SA 5512 ruled out of order by the chair.",
-      "latestActionDate": "2026-06-04",
-      "sponsor": {
-        "bioguideId": "M001176",
-        "fullName": "Sen. Merkley, Jeff [D-OR]",
-        "party": "D",
-        "state": "OR"
-      },
-      "amendedBillId": "s2",
-      "amendedBillTitle": "Secure America Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [
-        {
-          "voteId": "s2-rc139",
-          "chamber": "Senate",
-          "rollNumber": 139,
-          "sessionNumber": 2,
-          "date": "2026-06-04T19:10:43Z"
-        }
-      ],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5512"
-    },
-    {
-      "amendmentId": "samdt5501",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5501,
-      "chamber": "Senate",
-      "purpose": "To prohibit the distribution of Federal funds to individuals convicted of certain crimes.",
-      "description": "",
-      "submittedDate": "2026-06-03T04:00:00Z",
-      "proposedDate": "2026-06-04T04:00:00Z",
-      "latestAction": "Amendment SA 5501 ruled out of order by the chair.",
-      "latestActionDate": "2026-06-04",
-      "sponsor": {
-        "bioguideId": "H000273",
-        "fullName": "Sen. Hickenlooper, John W. [D-CO]",
-        "party": "D",
-        "state": "CO"
-      },
-      "amendedBillId": "s2",
-      "amendedBillTitle": "Secure America Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [
-        {
-          "voteId": "s2-rc145",
-          "chamber": "Senate",
-          "rollNumber": 145,
-          "sessionNumber": 2,
-          "date": "2026-06-04T23:32:48Z"
-        }
-      ],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5501"
-    },
-    {
-      "amendmentId": "samdt5452",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5452,
-      "chamber": "Senate",
-      "purpose": "To reallocate funds that would have been used for the Anti-Weaponization Fund to fraud enforcement.",
-      "description": "",
-      "submittedDate": "2026-06-02T04:00:00Z",
-      "proposedDate": "2026-06-04T04:00:00Z",
-      "latestAction": "Amendment SA 5452 ruled out of order by the chair.",
-      "latestActionDate": "2026-06-04",
-      "sponsor": {
-        "bioguideId": "T000476",
-        "fullName": "Sen. Tillis, Thomas [R-NC]",
-        "party": "R",
-        "state": "NC"
-      },
-      "amendedBillId": "s2",
-      "amendedBillTitle": "Secure America Act",
-      "cosponsorCount": 0,
-      "recordedVotes": [
-        {
-          "voteId": "s2-rc138",
-          "chamber": "Senate",
-          "rollNumber": 138,
-          "sessionNumber": 2,
-          "date": "2026-06-04T18:21:38Z"
-        }
-      ],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5452"
-    },
-    {
-      "amendmentId": "samdt5545",
-      "congress": 119,
-      "type": "S.Amdt.",
-      "number": 5545,
-      "chamber": "Senate",
-      "purpose": "To make appropriations for the conduct of inspections of the Delaney Hall Detention Facility.",
-      "description": "",
-      "submittedDate": "2026-06-04T04:00:00Z",
-      "proposedDate": "2026-06-04T04:00:00Z",
-      "latestAction": "Amendment SA 5545 ruled out of order by the chair.",
-      "latestActionDate": "2026-06-04",
-      "sponsor": {
-        "bioguideId": "K000394",
-        "fullName": "Sen. Kim, Andy [D-NJ]",
-        "party": "D",
-        "state": "NJ"
-      },
-      "amendedBillId": "s2",
-      "amendedBillTitle": "Secure America Act",
-      "cosponsorCount": 1,
-      "recordedVotes": [
-        {
-          "voteId": "s2-rc146",
-          "chamber": "Senate",
-          "rollNumber": 146,
-          "sessionNumber": 2,
-          "date": "2026-06-05T00:25:48Z"
-        }
-      ],
-      "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/5545"
     },
     {
       "amendmentId": "hamdt224",
