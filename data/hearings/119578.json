@@ -19,12 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119578?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Cameron Hamilton",
+      "position": "Administrator, Federal Emergency Management Agency",
+      "organization": "U.S. Department of Homeland Security"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Hearing Notice",
       "url": "https://www.congress.gov/119/meeting/house/119578/documents/HHRG-119-HM12-20261119-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119578/documents/HHRG-119-HM12-WList-20261119.pdf",
       "format": "PDF"
     }
   ]

@@ -19,12 +19,33 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119599?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Michael Sicilia",
+      "position": "Chief Executive Officer",
+      "organization": "Oracle Corporation"
+    },
+    {
+      "name": "The Honorable Seema Verma",
+      "position": "Executive Vice President, Oracle Health and Life Sciences",
+      "organization": "Oracle Corporation"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Hearing Notice",
       "url": "https://www.congress.gov/119/meeting/house/119599/documents/HHRG-119-VR00-20261119-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119599/documents/HHRG-119-VR00-WList-20261119.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the RecordL Vietnam Veterans of America",
+      "url": "https://www.congress.gov/119/meeting/house/119599/documents/HHRG-119-VR00-20261119-SD002.pdf",
       "format": "PDF"
     }
   ]

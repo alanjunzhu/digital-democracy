@@ -21,6 +21,11 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119596?format=json",
   "witnesses": [
     {
+      "name": "Dr. Leith States, MD",
+      "position": "Founder and Principal",
+      "organization": "States Strategies"
+    },
+    {
       "name": "Mr. Andrew Gradison",
       "position": "Senior Advisor",
       "organization": "Veterans Health Administration, U.S. Department of Veterans Affairs"
@@ -29,11 +34,6 @@
       "name": "Dr. Ilse Wiechers, MD",
       "position": "Deputy Assistant Under Secretary for Health for Patient Care Services",
       "organization": "Veterans Health Administration, U.S. Department of Veterans Affairs"
-    },
-    {
-      "name": "Dr. Leith States, MD",
-      "position": "Founder and Principal",
-      "organization": "States Strategies"
     },
     {
       "name": "Dr. Marion Coe, Ph.D.",
@@ -76,6 +76,11 @@
     {
       "name": "Statement for the Record: Disabled American Veterans",
       "url": "https://www.congress.gov/119/meeting/house/119596/documents/HHRG-119-VR03-20261118-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: Mindbloom",
+      "url": "https://www.congress.gov/119/meeting/house/119596/documents/HHRG-119-VR03-20261118-SD005.pdf",
       "format": "PDF"
     }
   ]
