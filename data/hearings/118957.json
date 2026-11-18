@@ -1,0 +1,68 @@
+{
+  "eventId": "118957",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Homeownership and the Role of the Secondary Mortgage Market",
+  "meetingStatus": "Scheduled",
+  "date": "2026-02-11T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba04",
+      "name": "House Financial Services Subcommittee on Housing and Insurance"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118957?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Michael Bright",
+      "position": "Chief Executive Officer",
+      "organization": "Structured Finance Association"
+    },
+    {
+      "name": "Mr. Robert Broeksmit",
+      "position": "President and Chief Executive Officer",
+      "organization": "Mortgage Bankers Association"
+    },
+    {
+      "name": "Dr. Norbert Michel",
+      "position": "Vice President and Director, Center for Monetary and Financial Alternatives",
+      "organization": "Cato Institute"
+    },
+    {
+      "name": "Dr. Sharon Cornelissen",
+      "position": "Director of Housing",
+      "organization": "Consumer Federation of America"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Homeownership and the Role of the Secondary Mortgage Market",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118957",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Homeownership and the Role of the Secondary Mortgage Market",
+      "url": "https://www.youtube.com/watch?v=f3shEBpGfBg",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118957/documents/HHRG-119-BA04-20260211-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/118957/documents/HHRG-119-BA04-20260211-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

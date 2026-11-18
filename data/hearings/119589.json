@@ -19,12 +19,38 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119589?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Markwayne Mullin",
+      "position": "Secretary",
+      "organization": "U.S. Department of Homeland Security"
+    },
+    {
+      "name": "The Honorable Jay Clayton",
+      "position": "Director of National Intelligence",
+      "organization": "Office of the Director of National Intelligence"
+    },
+    {
+      "name": "Mr. Christopher Raia",
+      "position": "Deputy Director",
+      "organization": "Federal Bureau of Investigation"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Hearing Notice",
       "url": "https://www.congress.gov/119/meeting/house/119589/documents/HHRG-119-HM00-20261118-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Updated Hearing Witness List",
+      "url": "https://www.congress.gov/119/meeting/house/119589/documents/HHRG-119-HM00-WList-20261118-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119589/documents/HHRG-119-HM00-WList-20261118.pdf",
       "format": "PDF"
     }
   ]

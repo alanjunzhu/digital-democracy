@@ -1,0 +1,73 @@
+{
+  "eventId": "118983",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Arctic Security in an Era of Global Competition: Safeguarding U.S. Interests in Frigid Waters.”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-26T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm07",
+      "name": "House Homeland Security Subcommittee on Transportation and Maritime Security"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118983?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Bryan Clark",
+      "position": "Senior Fellow and Director, Center for Defense Concepts and Technology",
+      "organization": "Hudson Institute"
+    },
+    {
+      "name": "Ms. Marisol Maddox",
+      "position": "Senior Arctic Fellow, Institute of Arctic Studies",
+      "organization": "Dartmouth College"
+    },
+    {
+      "name": "Ms. Heather Conley",
+      "position": "Nonresident Senior Fellow",
+      "organization": "American Enterprise Institute"
+    },
+    {
+      "name": "Ms. Heather Conley",
+      "position": "Nonresident Senior Fellow",
+      "organization": "American Enterprise Institute, Testifying as a Private Citizen"
+    },
+    {
+      "name": "Ms. Marisol Maddox",
+      "position": "Senior Arctic Fellow, Institute of Arctic Studies",
+      "organization": "Dartmouth College, Testifying as a Private Citizen"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Arctic Security in an Era of Global Competition: Safeguarding U.S. Interests in Frigid Waters",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118983",
+      "format": ""
+    },
+    {
+      "name": "Arctic Security in an Era of Global Competition: Safeguarding U.S. Interests in Frigid Waters",
+      "url": "https://www.youtube.com/watch?v=I8zJQRv5xQg",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118983/documents/HHRG-119-HM07-20260326-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/118983/documents/HHRG-119-HM07-WList-20260326.pdf",
+      "format": "PDF"
+    }
+  ]
+}

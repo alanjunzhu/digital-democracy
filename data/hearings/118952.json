@@ -1,0 +1,53 @@
+{
+  "eventId": "118952",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight of the Securities and Exchange Commission",
+  "meetingStatus": "Scheduled",
+  "date": "2026-02-11T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118952?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Paul Atkins",
+      "position": "Chairman",
+      "organization": "U.S. Securities and Exchange Commission"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Oversight of the Securities and Exchange Commission",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118952",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Oversight of the Securities and Exchange Commission",
+      "url": "https://www.youtube.com/watch?v=CY5rJrzJr1E",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118952/documents/HHRG-119-BA00-20260211-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/118952/documents/HHRG-119-BA00-20260211-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

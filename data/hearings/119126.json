@@ -1,0 +1,68 @@
+{
+  "eventId": "119126",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Online Scams, Crypto Fraud, and Digital Extortion: An Examination of How Transnational Criminal Networks Target Americans”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-21T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm11",
+      "name": "Homeland Security Subcommittee on Border Security and Enforcement"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119126?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Cynthia Kaiser",
+      "position": "Senior Vice President",
+      "organization": "Halcyon Ransomware Research Center"
+    },
+    {
+      "name": "Mr. Ari Redbord",
+      "position": "Global Head of Policy",
+      "organization": "TRM Labs"
+    },
+    {
+      "name": "Mr. Joshua Bercu",
+      "position": "Senior Vice President of Policy",
+      "organization": "USTelecom - The Broadband Association"
+    },
+    {
+      "name": "Ms. Megan Stifel",
+      "position": "Chief Strategy Officer",
+      "organization": "Institute for Security and Technology"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Online Scams, Crypto Fraud & Digital Extortion: How Transnational Criminal Networks Target Americans",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119126",
+      "format": ""
+    },
+    {
+      "name": "Online Scams, Crypto Fraud & Digital Extortion: How Transnational Criminal Networks Target Americans",
+      "url": "https://www.youtube.com/watch?v=58UVfeHWMzc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/119126/documents/HHRG-119-HM11-WList-20260421.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Joint Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119126/documents/HHRG-119-HM11-20260421-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

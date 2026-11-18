@@ -1,0 +1,68 @@
+{
+  "eventId": "119205",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Diversifying Risk: The Benefits of Reinsurance and Credit Risk Transfers",
+  "meetingStatus": "Scheduled",
+  "date": "2026-04-22T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba04",
+      "name": "House Financial Services Subcommittee on Housing and Insurance"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119205?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Anthony Vidovich",
+      "position": "Executive Vice President and General Counsel",
+      "organization": "Everest Group"
+    },
+    {
+      "name": "Mr. Ben Walker",
+      "position": "Executive Managing Director",
+      "organization": "Aon Reinsurance"
+    },
+    {
+      "name": "Dr. Susan Wachter",
+      "position": "Albert Sussman Professor of Real Estate, Professor of Finance",
+      "organization": "The Wharton School of the University of Pennsylvania, and co-director of the Penn Institute for Urban Research"
+    },
+    {
+      "name": "Mr. Jerry Theodorou",
+      "position": "Director of the Finance, Insurance, and Trade Policy Program",
+      "organization": "R Street Institute"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Diversifying Risk: The Benefits of Reinsurance and Credit Risk Transfers",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119205",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Diversifying Risk: The Benefits of Reinsurance and Credit Risk Transfers",
+      "url": "https://www.youtube.com/watch?v=vsM2ICrkvyE",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119205/documents/HHRG-119-BA04-20260422-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119205/documents/HHRG-119-BA04-20260422-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

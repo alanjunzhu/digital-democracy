@@ -21,14 +21,19 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119593?format=json",
   "witnesses": [
     {
+      "name": "Mark Widmar",
+      "position": "CEO",
+      "organization": "First Solar"
+    },
+    {
       "name": "Pat Gelsinger",
       "position": "General Partner",
       "organization": "Playground Global"
     },
     {
-      "name": "Mark Widmar",
-      "position": "CEO",
-      "organization": "First Solar"
+      "name": "Tom O'Leary",
+      "position": "CEO, Co-founder",
+      "organization": "JetZero"
     },
     {
       "name": "Owen Herrnstadt",

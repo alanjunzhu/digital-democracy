@@ -1,0 +1,92 @@
+{
+  "eventId": "119081",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Markup",
+  "title": "Committee on House Administration Full Committee Markup of Various Measures",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-18T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsha00",
+      "name": "Committee on House Administration"
+    }
+  ],
+  "location": {
+    "room": "1310",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119081?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Full Committee Markup of Various Measures",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119081",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Markup of Various Measures",
+      "url": "https://www.youtube.com/watch?v=ovYfAKQEpdo",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/HMKP-119-HA00-20260318-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 5891",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/BILLS-119HR5891ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6028",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/BILLS-119HR6028ih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 5891 ANS",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/BILLS-119HR5891ANSih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R 6028 ANS",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/BILLS-119HR6028ANSih.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 1329",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/BILLS-119HR1329ih-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 1329 ANS",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/BILLS-119HR1329ih-U2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Amendment No.1",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/BILLS-119-HR1329-T000474-Amdt-1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Roll Call Vote #1",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/CRPT-119-HA00-Vote001-20260318.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Roll Call Vote #2",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/CRPT-119-HA00-Vote002-20260318.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Roll Call Vote #3",
+      "url": "https://www.congress.gov/119/meeting/house/119081/documents/CRPT-119-HA00-Vote003-20260318.pdf",
+      "format": "PDF"
+    }
+  ]
+}

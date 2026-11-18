@@ -1,0 +1,88 @@
+{
+  "eventId": "119023",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Fighting Fraud on the Front Lines: Challenges and Opportunities for Financial Institutions",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-05T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba20",
+      "name": "House Financial Services Subcommittee on Financial Institutions"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119023?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Patrick McDade",
+      "position": "Senior Vice President for Fraud and Technology Risk Management",
+      "organization": "EverBank"
+    },
+    {
+      "name": "Ms. Kate McKune",
+      "position": "General Counsel",
+      "organization": "Park Community Credit Union"
+    },
+    {
+      "name": "Mr. Joseph Schuster",
+      "position": "Partner",
+      "organization": "Ballard Spahr LLP"
+    },
+    {
+      "name": "Mr. Adam Rust",
+      "position": "Director of Financial Services",
+      "organization": "Consumer Federation of America"
+    },
+    {
+      "name": "Mrs. Gay Dempsey",
+      "position": "Chief Executive Officer",
+      "organization": "Bank of Lincoln County"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Fighting Fraud on the Front Lines: Challenges and Opportunities for Financial Institutions",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119023",
+      "format": ""
+    },
+    {
+      "name": "Fighting Fraud on the Front Lines: Challenges and Opportunities for Financial Institutions",
+      "url": "https://www.youtube.com/watch?v=K9ySj-D3WRs",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119023/documents/HHRG-119-BA20-20260305-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119023/documents/HHRG-119-BA20-20260305-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R.____, the Transaction Risk Analytics and Collaborative Exchange (TRACE) Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119023/documents/BILLS-119pih-securelysharefraud-relatedi.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R.____, the Bank Fraud Technology Advancement Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119023/documents/BILLS-119pih-bankingagenciestoconductan.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R.____, the Scrutinizing Transactions for Overt Payment Fraud (STOP Fraud) Act",
+      "url": "https://www.congress.gov/119/meeting/house/119023/documents/BILLS-119pih-addsflexibilitytotheExpedi.pdf",
+      "format": "PDF"
+    }
+  ]
+}
