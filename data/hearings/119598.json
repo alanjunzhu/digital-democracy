@@ -19,7 +19,44 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119598?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Ms. Tracy McIntyre",
+      "position": "Executive Director",
+      "organization": "Montana Cooperative Development Center"
+    },
+    {
+      "name": "Mr. Michael McWaters",
+      "position": "Chief Executive officer",
+      "organization": "Suwannee Valley Electric Cooperative"
+    },
+    {
+      "name": "Ms. Betsy Biemann",
+      "position": "Chief Executive Officer",
+      "organization": "Coastal Enterprises, Inc."
+    },
+    {
+      "name": "Mr. Michael McWaters",
+      "position": "Chief Executive officer",
+      "organization": "Suwannee Valley Electric Cooperative"
+    },
+    {
+      "name": "Mrs. Lori Blair",
+      "position": "Executive Director",
+      "organization": "Minnesota Rural Water Association"
+    },
+    {
+      "name": "Mr. Randy Welch",
+      "position": "Senior Training & Development Lead",
+      "organization": "Southeast Rural Community Assistance Project"
+    }
+  ],
   "videos": [],
-  "meetingDocuments": []
+  "meetingDocuments": [
+    {
+      "name": "Witness-List_11.19.2026",
+      "url": "https://www.congress.gov/119/meeting/house/119598/documents/HHRG-119-AG22-WList-20261119.pdf",
+      "format": "PDF"
+    }
+  ]
 }

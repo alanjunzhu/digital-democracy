@@ -1,0 +1,63 @@
+{
+  "eventId": "118674",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "No Exit Strategy: Burma's Endless Crisis and America's Limited Options",
+  "meetingStatus": "Scheduled",
+  "date": "2025-11-19T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa05",
+      "name": "House Foreign Affairs East Asia and Pacific Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118674?format=json",
+  "witnesses": [
+    {
+      "name": "Steve Ross",
+      "position": "Senior Fellow",
+      "organization": "Stimson Center"
+    },
+    {
+      "name": "The Honorable Kelley Currie",
+      "position": "Non-resident Senior Fellow",
+      "organization": "Atlantic Council's Indo-Pacific Security Initiative"
+    },
+    {
+      "name": "Lucky Karim",
+      "position": "Executive Director",
+      "organization": "Refugee Women for Peace and Justice (RWPJ)"
+    }
+  ],
+  "videos": [
+    {
+      "name": "No Exit Strategy: Burma's Endless Crisis and America's Limited Options",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118674",
+      "format": ""
+    },
+    {
+      "name": "No Exit Strategy: Burma's Endless Crisis and America's Limited Options",
+      "url": "https://www.youtube.com/watch?v=y6QXAR-xEZo",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/118674/documents/HHRG-119-FA05-20251119-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118674/documents/HHRG-119-FA05-20251119-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "eventId": "119046",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "U.S. Special Operations Forces and Command – Challenges and Resource Priorities for Fiscal Year 2027",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-18T19:30:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas26",
+      "name": "House Armed Services Subcommittee on Intelligence and Special Operations"
+    }
+  ],
+  "location": {
+    "room": "2212",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119046?format=json",
+  "witnesses": [
+    {
+      "name": "Admiral Frank Bradley",
+      "position": "Commander",
+      "organization": "United States Special Operations Command"
+    },
+    {
+      "name": "The Honorable Derrick Anderson",
+      "position": "Assistant Secretary of Defense for Special Operations and Low-Intensity Conflict",
+      "organization": "Office of the Secretary of Defense"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Intelligence & Special Operations Hearing: Special Operations Forces and Command Posture for FY27",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119046",
+      "format": ""
+    },
+    {
+      "name": "Intelligence & Special Operations Hearing: Special Operations Forces and Command Posture for FY27",
+      "url": "https://www.youtube.com/watch?v=7N1rh7YwMQU",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

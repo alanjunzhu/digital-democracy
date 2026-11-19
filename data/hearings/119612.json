@@ -19,7 +19,18 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119612?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Dr. Joseph Westlake",
+      "position": "Heliophysics Division Director, Science Mission Directorate",
+      "organization": "National Aeronautics and Space Administration"
+    },
+    {
+      "name": "Mr. Ken Graham",
+      "position": "National Weather Service Director",
+      "organization": "National Oceanic and Atmospheric Administration"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

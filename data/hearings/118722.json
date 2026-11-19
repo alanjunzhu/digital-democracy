@@ -1,0 +1,68 @@
+{
+  "eventId": "118722",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Worldwide Threats to the Homeland”",
+  "meetingStatus": "Scheduled",
+  "date": "2025-12-11T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm00",
+      "name": "House Homeland Security"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118722?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Kristi Noem",
+      "position": "Secretary",
+      "organization": "U.S. Department of Homeland Security"
+    },
+    {
+      "name": "The Honorable Joe Kent",
+      "position": "Director, National Counterterrorism Center",
+      "organization": "Office of the Director of National Intelligence"
+    },
+    {
+      "name": "Mr. Michael Glasheen",
+      "position": "Operations Director, National Security Branch",
+      "organization": "Federal Bureau of Investigation"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Worldwide Threats to the Homeland",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118722",
+      "format": ""
+    },
+    {
+      "name": "Worldwide Threats to the Homeland",
+      "url": "https://www.youtube.com/watch?v=UpnIjkUInII",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118722/documents/HHRG-119-HM00-20251211-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "",
+      "url": "https://www.congress.gov/119/meeting/house/118722/documents/HHRG-119-HM00-WList-20251211.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "A motion to table a motion by Mr. Thompson of Mississippi to subpoena Kristi Noem, Secretary, U.S. Department of Homeland Security, was AGREED TO by a recorded vote of 13 yeas and 12 nays.",
+      "url": "https://www.congress.gov/119/meeting/house/118722/documents/CRPT-119-HM00-Vote059-20251211.pdf",
+      "format": "PDF"
+    }
+  ]
+}

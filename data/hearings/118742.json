@@ -1,0 +1,63 @@
+{
+  "eventId": "118742",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Member Day",
+  "meetingStatus": "Scheduled",
+  "date": "2025-12-11T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa00",
+      "name": "House Foreign Affairs"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118742?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Nick LaLota",
+      "position": "Member of Congress",
+      "organization": "New York, District 01"
+    },
+    {
+      "name": "The Honorable Chris Smith",
+      "position": "Member of Congress",
+      "organization": "New Jersey, District 04"
+    },
+    {
+      "name": "The Honorable Lois Frankel",
+      "position": "Member of Congress",
+      "organization": "Florida, District 22"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Member Day Hearing",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118742",
+      "format": ""
+    },
+    {
+      "name": "Member Day Hearing",
+      "url": "https://www.youtube.com/watch?v=ZI0_lidrnbc",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118742/documents/HHRG-119-FA00-20251211-SD001-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/118742/documents/HHRG-119-FA00-20251211-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

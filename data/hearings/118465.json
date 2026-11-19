@@ -1,0 +1,62 @@
+{
+  "eventId": "118465",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Reforming Defense Acquisition to Deliver Capability at the Speed of Relevance",
+  "meetingStatus": "Rescheduled",
+  "date": "2025-07-23T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas00",
+      "name": "House Armed Services"
+    }
+  ],
+  "location": {
+    "room": "2118",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118465?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Michael Duffey",
+      "position": "Under Secretary of Defense for Acquisition and Sustainment",
+      "organization": "Office of the Secretary of Defense"
+    },
+    {
+      "name": "Mr. William Bailey",
+      "position": "Performing the Duties of Assistant Secretary of the Air Force (Acquisition, Technology & Logistics)",
+      "organization": "Department of the Air Force"
+    },
+    {
+      "name": "Mr. Jesse Tolleson, Jr.",
+      "position": "Acting Assistant Secretary of the Army (Acquisition, Logistics and Technology)",
+      "organization": "Department of the Army"
+    },
+    {
+      "name": "Major General Stephen Purdy, Jr.",
+      "position": "Acting Assistant Secretary of the Air Force (Space Acquisition and Integration)",
+      "organization": "Department of the Air Force"
+    },
+    {
+      "name": "Mr. Jason Potter",
+      "position": "Performing the Duties of Assistant Secretary of the Navy (Research, Development and Acquisition)",
+      "organization": "Department of the Navy"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Full Committee Hearing: Reforming Defense Acquisition to Deliver Capability",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118465",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Hearing: Reforming Defense Acquisition to Deliver Capability",
+      "url": "https://www.youtube.com/watch?v=VYzU1uwLrzY",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

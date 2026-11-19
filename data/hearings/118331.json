@@ -1,0 +1,47 @@
+{
+  "eventId": "118331",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Department of the Army Fiscal Year 2026 Posture",
+  "meetingStatus": "Scheduled",
+  "date": "2025-06-04T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsas00",
+      "name": "House Armed Services"
+    }
+  ],
+  "location": {
+    "room": "2118",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118331?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Daniel Driscoll",
+      "position": "Secretary of the Army",
+      "organization": "Department of the Army"
+    },
+    {
+      "name": "General Randy George",
+      "position": "Chief of Staff",
+      "organization": "Department of the Army"
+    }
+  ],
+  "videos": [
+    {
+      "name": "FULL Hearing: Department of the Army Fiscal Year 2026 Posture",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118331",
+      "format": ""
+    },
+    {
+      "name": "FULL Hearing: Department of the Army Fiscal Year 2026 Posture",
+      "url": "https://www.youtube.com/watch?v=fJ2lrSXopKA",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

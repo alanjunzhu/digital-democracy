@@ -1,0 +1,53 @@
+{
+  "eventId": "118515",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "FY26 State Department Posture: Bureau of Political Affairs",
+  "meetingStatus": "Scheduled",
+  "date": "2025-07-23T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa00",
+      "name": "House Foreign Affairs"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118515?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Allison Hooker",
+      "position": "Under Secretary of State for Political Affairs",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Under Secretary of State for Political Affairs Allison Hooker testifies before Congress",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118515",
+      "format": ""
+    },
+    {
+      "name": "Under Secretary of State for Political Affairs Allison Hooker testifies before Congress",
+      "url": "https://www.youtube.com/watch?v=7i7NkYh1Jx4",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118515/documents/HHRG-119-FA00-20250723-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/118515/documents/HHRG-119-FA00-20250723-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

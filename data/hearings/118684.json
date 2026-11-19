@@ -1,0 +1,63 @@
+{
+  "eventId": "118684",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Democracy in Peril: the Fight for Free Elections in Honduras",
+  "meetingStatus": "Scheduled",
+  "date": "2025-11-20T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa07",
+      "name": "House Foreign Affairs Subcommittee on Western Hemisphere"
+    }
+  ],
+  "location": {
+    "room": "2200",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118684?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Enrique Roig",
+      "position": "Vice President of External Affairs",
+      "organization": "Human Rights First"
+    },
+    {
+      "name": "Ms. Deborah Ullmer",
+      "position": "Regional Director, Latin America and the Caribbean Programs",
+      "organization": "National Democratic Institute (NDI)"
+    },
+    {
+      "name": "The Honorable Carlos Trujillo",
+      "position": "Former U.S. Ambassador to the Organization of American States (OAS)",
+      "organization": ""
+    }
+  ],
+  "videos": [
+    {
+      "name": "Democracy in Peril: the Fight for Free Elections in Honduras",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118684",
+      "format": ""
+    },
+    {
+      "name": "Democracy in Peril: the Fight for Free Elections in Honduras",
+      "url": "https://www.youtube.com/watch?v=Zam2-8_9WtM",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118684/documents/HHRG-119-FA07-20251120-SD001-U2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/118684/documents/HHRG-119-FA07-20251120-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}
