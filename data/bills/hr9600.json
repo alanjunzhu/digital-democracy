@@ -11,15 +11,27 @@
     "party": "D",
     "state": "MD"
   },
-  "latestAction": "Placed on the Union Calendar, Calendar No. 757.",
-  "latestActionDate": "2026-10-29",
-  "updateDate": "2026-11-12T21:26:20Z",
+  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources.",
+  "latestActionDate": "2026-11-18",
+  "updateDate": "2026-11-19T11:56:56Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9600",
   "summary": "<p><strong>Common Sense 250 Act of 2026</strong></p><p>This bill requires the authorized monument honoring Thomas Paine to be located in Area 1 of the National Mall, which is reserved for commemorative works of preeminent historical and lasting significance to the United States. Thomas Paine was a philosopher and writer whose pamphlet, <em>Common Sense</em>, advocated&nbsp;for American independence from Great Britain.</p>",
   "cosponsors": 1,
   "committees": [
+    {
+      "name": "Energy and Natural Resources Committee",
+      "systemCode": "sseg00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2026-11-18T21:49:01Z"
+        }
+      ]
+    },
     {
       "name": "Natural Resources Committee",
       "systemCode": "hsii00",
@@ -43,6 +55,49 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-18",
+      "text": "Received in the Senate and Read twice and referred to the Committee on Energy and Natural Resources."
+    },
+    {
+      "date": "2026-11-17",
+      "text": "Motion to reconsider laid on the table Agreed to without objection.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-17",
+      "text": "On motion to suspend the rules and pass the bill Agreed to by the Yeas and Nays: (2/3 required): 365 - 36 (Roll no. 325). (text: CR H6242)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-17",
+      "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill Agreed to by the Yeas and Nays: (2/3 required): 365 - 36 (Roll no. 325). (text: CR H6242)"
+    },
+    {
+      "date": "2026-11-17",
+      "text": "Considered as unfinished business. (consideration: CR H6251)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-17",
+      "text": "At the conclusion of debate, the Yeas and Nays were demanded and ordered. Pursuant to the provisions of clause 8, rule XX, the Chair announced that further proceedings on the motion would be postponed.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-17",
+      "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 9600.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-17",
+      "text": "Considered under suspension of the rules. (consideration: CR H6242-6243)",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-17",
+      "text": "Mr. Westerman moved to suspend the rules and pass the bill.",
+      "chamber": "House"
+    },
     {
       "date": "2026-10-29",
       "text": "Placed on the Union Calendar, Calendar No. 757.",

@@ -11,9 +11,9 @@
     "party": "R",
     "state": "MO"
   },
-  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
-  "latestActionDate": "2026-07-13",
-  "updateDate": "2026-07-15T13:08:24Z",
+  "latestAction": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5777-5778)",
+  "latestActionDate": "2026-11-18",
+  "updateDate": "2026-11-19T15:57:14Z",
   "originChamber": "House",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/2478",
@@ -26,6 +26,10 @@
       "chamber": "Senate",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2026-11-19T00:25:26Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-07-13T20:45:30Z"
@@ -55,6 +59,22 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-18",
+      "text": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S5777-5778)"
+    },
+    {
+      "date": "2026-11-18",
+      "text": "Passed/agreed to in Senate: Passed Senate without amendment by Unanimous Consent."
+    },
+    {
+      "date": "2026-11-18",
+      "text": "Senate Committee on Banking, Housing, and Urban Affairs discharged by Unanimous Consent."
+    },
+    {
+      "date": "2026-11-18",
+      "text": "Senate Committee on Banking, Housing, and Urban Affairs discharged by Unanimous Consent."
+    },
     {
       "date": "2026-07-13",
       "text": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs."
@@ -126,10 +146,6 @@
       "date": "2025-03-27",
       "text": "Referred to the House Committee on Financial Services.",
       "chamber": "House"
-    },
-    {
-      "date": "2025-03-27",
-      "text": "Introduced in House"
     },
     {
       "date": "2025-03-27",
