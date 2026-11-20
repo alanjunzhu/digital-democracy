@@ -21,13 +21,13 @@
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119599?format=json",
   "witnesses": [
     {
-      "name": "Mr. Michael Sicilia",
-      "position": "Chief Executive Officer",
+      "name": "The Honorable Seema Verma",
+      "position": "Executive Vice President, Oracle Health and Life Sciences",
       "organization": "Oracle Corporation"
     },
     {
-      "name": "The Honorable Seema Verma",
-      "position": "Executive Vice President, Oracle Health and Life Sciences",
+      "name": "Mr. Michael Sicilia",
+      "position": "Chief Executive Officer",
       "organization": "Oracle Corporation"
     }
   ],
@@ -56,6 +56,11 @@
     {
       "name": "Statement for the Record: Veterans of Foreign Wars",
       "url": "https://www.congress.gov/119/meeting/house/119599/documents/HHRG-119-VR00-20261119-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Statement for the Record: AMVETS",
+      "url": "https://www.congress.gov/119/meeting/house/119599/documents/HHRG-119-VR00-20261119-SD005.pdf",
       "format": "PDF"
     }
   ]

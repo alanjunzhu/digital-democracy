@@ -19,7 +19,28 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119604?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "The Honorable Esther Hugo",
+      "position": "Vice President",
+      "organization": "Village of Anaktuvuk Pass (Naqsraġmiut) Tribal Council"
+    },
+    {
+      "name": "The Honorable Mikah Carlos",
+      "position": "Board Member",
+      "organization": "National Indian Health Board"
+    },
+    {
+      "name": "The Honorable Cheryle Kennedy",
+      "position": "Chairwoman",
+      "organization": "The Confederated Tribes of Grand Ronde"
+    },
+    {
+      "name": "Ms. Dana Obey",
+      "position": "Vice President",
+      "organization": "American Dental Therapy Association"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
@@ -50,6 +71,26 @@
     {
       "name": "Hearing Memo",
       "url": "https://www.congress.gov/119/meeting/house/119604/documents/HHRG-119-II24-20261119-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Letter of Support from OKCIC CEO and NCUIH Board President for H.R. 10956 (Rep. Hurd)",
+      "url": "https://www.congress.gov/119/meeting/house/119604/documents/HHRG-119-II24-20261119-SD006.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "USDA Statement FTR (Rep. Hurd)",
+      "url": "https://www.congress.gov/119/meeting/house/119604/documents/HHRG-119-II24-20261119-SD007.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "DOI Statement FTR (Rep. Hurd)",
+      "url": "https://www.congress.gov/119/meeting/house/119604/documents/HHRG-119-II24-20261119-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "HHS Statement FTR (Rep. Hurd)",
+      "url": "https://www.congress.gov/119/meeting/house/119604/documents/HHRG-119-II24-20261119-SD005.pdf",
       "format": "PDF"
     },
     {
