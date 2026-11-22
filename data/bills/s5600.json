@@ -11,17 +11,21 @@
     "party": "R",
     "state": "OK"
   },
-  "latestAction": "Held at the desk.",
+  "latestAction": "Message on Senate action sent to the House.",
   "latestActionDate": "2026-10-05",
-  "updateDate": "2026-10-08T13:51:05Z",
+  "updateDate": "2026-11-21T00:26:40Z",
   "originChamber": "Senate",
   "policyArea": "Health",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5600",
   "summary": "",
-  "cosponsors": 3,
+  "cosponsors": 4,
   "committees": [],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-10-05",
+      "text": "Message on Senate action sent to the House."
+    },
     {
       "date": "2026-10-05",
       "text": "Held at the desk.",
@@ -31,10 +35,6 @@
       "date": "2026-10-05",
       "text": "Received in the House.",
       "chamber": "House"
-    },
-    {
-      "date": "2026-10-05",
-      "text": "Message on Senate action sent to the House."
     },
     {
       "date": "2026-09-29",

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "S.",
-  "number": "57",
+  "number": 57,
   "billId": "s57",
   "title": "MAPLE Act",
   "introducedDate": "2025-01-09",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Read twice and referred to the Committee on Agriculture, Nutrition, and Forestry.",
   "latestActionDate": "2025-01-09",
+  "updateDate": "2026-11-20T19:58:04Z",
   "originChamber": "Senate",
   "policyArea": "Agriculture and Food",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/57",
   "summary": "<p><strong>Making Agricultural Products Locally Essential Act or the&nbsp;MAPLE Act</strong></p><p>This bill includes maple syrup as one of the eligible&nbsp;foods under the&nbsp;Senior Farmers' Market Nutrition Program (SFMNP).&nbsp;</p><p>As background, the Department of Agriculture's&nbsp;SFMNP provides grants to participating states to provide low-income seniors with coupons/vouchers that&nbsp;may be used at farmers’ markets, roadside stands, and community supported agriculture programs to purchase eligible foods (i.e., fresh, nutritious, unprepared, locally-grown fruits, vegetables, herbs, and honey).</p>",
   "cosponsors": 5,
   "committees": [
-    "Agriculture, Nutrition, and Forestry Committee"
+    {
+      "name": "Agriculture, Nutrition, and Forestry Committee",
+      "systemCode": "ssaf00",
+      "chamber": "Senate",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-09T20:17:27Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

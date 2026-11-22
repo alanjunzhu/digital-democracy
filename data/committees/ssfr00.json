@@ -38,6 +38,42 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "hconres93",
+      "congress": 119,
+      "type": "H.Con.Res.",
+      "number": 93,
+      "relationshipType": "Discharged From",
+      "actionDate": "2026-11-19",
+      "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/93"
+    },
+    {
+      "billId": "hr5490",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 5490,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-19",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/5490"
+    },
+    {
+      "billId": "s5786",
+      "congress": 119,
+      "type": "S.",
+      "number": 5786,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-19",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5786"
+    },
+    {
+      "billId": "sres960",
+      "congress": 119,
+      "type": "S.Res.",
+      "number": 960,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-19",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/960"
+    },
+    {
       "billId": "sres472",
       "congress": 119,
       "type": "S.Res.",
@@ -378,15 +414,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-09-17",
       "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/865"
-    },
-    {
-      "billId": "hconres93",
-      "congress": 119,
-      "type": "H.Con.Res.",
-      "number": 93,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-09-16",
-      "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/93"
     },
     {
       "billId": "s5404",
@@ -2259,33 +2286,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2025-12-08",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3381"
-    },
-    {
-      "billId": "s3344",
-      "congress": 119,
-      "type": "S.",
-      "number": 3344,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-12-04",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3344"
-    },
-    {
-      "billId": "s3356",
-      "congress": 119,
-      "type": "S.",
-      "number": 3356,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-12-04",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3356"
-    },
-    {
-      "billId": "sres525",
-      "congress": 119,
-      "type": "S.Res.",
-      "number": 525,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-12-03",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/525"
     }
   ]
 }

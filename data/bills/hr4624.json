@@ -11,9 +11,9 @@
     "party": "R",
     "state": "GA"
   },
-  "latestAction": "Received in the Senate and Read twice and referred to the Committee on Commerce, Science, and Transportation.",
-  "latestActionDate": "2026-03-25",
-  "updateDate": "2026-09-25T11:08:31Z",
+  "latestAction": "Message on Senate action sent to the House.",
+  "latestActionDate": "2026-11-20",
+  "updateDate": "2026-11-21T12:08:43Z",
   "originChamber": "House",
   "policyArea": "Sports and Recreation",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/4624",
@@ -26,6 +26,10 @@
       "chamber": "Senate",
       "type": "Standing",
       "activities": [
+        {
+          "name": "Discharged From",
+          "date": "2026-11-19T20:44:12Z"
+        },
         {
           "name": "Referred To",
           "date": "2026-03-25T19:48:38Z"
@@ -71,6 +75,30 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-20",
+      "text": "Message on Senate action sent to the House."
+    },
+    {
+      "date": "2026-11-19",
+      "text": "Passed Senate with an amendment by Unanimous Consent."
+    },
+    {
+      "date": "2026-11-19",
+      "text": "Passed/agreed to in Senate: Passed Senate with an amendment by Unanimous Consent."
+    },
+    {
+      "date": "2026-11-19",
+      "text": "Measure laid before Senate by unanimous consent."
+    },
+    {
+      "date": "2026-11-19",
+      "text": "Senate Committee on Commerce, Science, and Transportation discharged by Unanimous Consent."
+    },
+    {
+      "date": "2026-11-19",
+      "text": "Senate Committee on Commerce, Science, and Transportation discharged by Unanimous Consent."
+    },
     {
       "date": "2026-03-25",
       "text": "Received in the Senate and Read twice and referred to the Committee on Commerce, Science, and Transportation."
@@ -136,24 +164,6 @@
       "date": "2026-01-21",
       "text": "Committee Consideration and Mark-up Session Held",
       "chamber": "House"
-    },
-    {
-      "date": "2025-07-23",
-      "text": "Referred to the Committee on Education and Workforce, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-07-23",
-      "text": "Referred to the Committee on Education and Workforce, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "chamber": "House"
-    },
-    {
-      "date": "2025-07-23",
-      "text": "Introduced in House"
-    },
-    {
-      "date": "2025-07-23",
-      "text": "Introduced in House"
     }
   ],
   "textUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4624/text"

@@ -48,6 +48,18 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.R.",
+      "number": 11054,
+      "billId": "hr11054",
+      "title": "Know Your Body Act",
+      "introducedDate": "2026-11-17",
+      "latestAction": "Referred to the Committee on Education and Workforce, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "latestActionDate": "2026-11-17",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/11054"
+    },
+    {
+      "congress": 119,
       "type": "H.Res.",
       "number": 1663,
       "billId": "hres1663",
@@ -633,18 +645,6 @@
       "latestActionDate": "2025-05-29",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/3665"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 2967,
-      "billId": "hr2967",
-      "title": "Ralph David Abernathy, Sr. National Historic Site Act",
-      "introducedDate": "2025-04-17",
-      "latestAction": "Referred to the House Committee on Natural Resources.",
-      "latestActionDate": "2025-04-17",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2967"
     }
   ]
 }

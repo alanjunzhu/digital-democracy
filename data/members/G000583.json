@@ -64,6 +64,18 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.R.",
+      "number": 11045,
+      "billId": "hr11045",
+      "title": "Preventing Overdoses with Test Strips Act",
+      "introducedDate": "2026-11-17",
+      "latestAction": "Referred to the House Committee on Energy and Commerce.",
+      "latestActionDate": "2026-11-17",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/11045"
+    },
+    {
+      "congress": 119,
       "type": "H.Res.",
       "number": 1659,
       "billId": "hres1659",
@@ -201,8 +213,8 @@
       "billId": "hr10671",
       "title": "Securing Our Critical Infrastructure Act",
       "introducedDate": "2026-10-01",
-      "latestAction": "Referred to the House Committee on Homeland Security.",
-      "latestActionDate": "2026-10-01",
+      "latestAction": "Referred to the Subcommittee on Cybersecurity and Infrastructure Protection.",
+      "latestActionDate": "2026-10-02",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10671"
     },
@@ -213,8 +225,8 @@
       "billId": "hr10519",
       "title": "To direct the Secretary of Homeland Security, acting through the Director of the Cybersecurity and Infrastructure Security Agency, to establish a Critical Infrastructure AI Cyber Defense Pilot Program, and for other purposes.",
       "introducedDate": "2026-09-21",
-      "latestAction": "Referred to the House Committee on Homeland Security.",
-      "latestActionDate": "2026-09-21",
+      "latestAction": "Referred to the Subcommittee on Cybersecurity and Infrastructure Protection.",
+      "latestActionDate": "2026-09-22",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10519"
     },
@@ -649,18 +661,6 @@
       "latestActionDate": "2026-02-10",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/7428"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 7429,
-      "billId": "hr7429",
-      "title": "Miranda’s Law",
-      "introducedDate": "2026-02-09",
-      "latestAction": "Referred to the Subcommittee on Highways and Transit.",
-      "latestActionDate": "2026-02-10",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/7429"
     }
   ]
 }

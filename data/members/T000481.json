@@ -57,13 +57,37 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "H.Res.",
+      "number": 1672,
+      "billId": "hres1672",
+      "title": "Recognizing violence against women in politics as a global phenomenon and supporting women's full and equal participation in political life.",
+      "introducedDate": "2026-11-19",
+      "latestAction": "Referred to the House Committee on the Judiciary.",
+      "latestActionDate": "2026-11-19",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1672"
+    },
+    {
+      "congress": 119,
+      "type": "H.R.",
+      "number": 11075,
+      "billId": "hr11075",
+      "title": "To prohibit persons from entering into non-disclosure agreements with certain governmental entities, and for other purposes.",
+      "introducedDate": "2026-11-18",
+      "latestAction": "Sponsor introductory remarks on measure. (CR H6299)",
+      "latestActionDate": "2026-11-19",
+      "originChamber": "House",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/11075"
+    },
+    {
+      "congress": 119,
       "type": "H.R.",
       "number": 10986,
       "billId": "hr10986",
       "title": "Lebanon TPS Act",
       "introducedDate": "2026-11-10",
-      "latestAction": "Referred to the House Committee on the Judiciary.",
-      "latestActionDate": "2026-11-10",
+      "latestAction": "Sponsor introductory remarks on measure. (CR H6260)",
+      "latestActionDate": "2026-11-18",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/10986"
     },
@@ -618,18 +642,6 @@
       "latestActionDate": "2025-03-31",
       "originChamber": "House",
       "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/85"
-    },
-    {
-      "congress": 119,
-      "type": "H.R.",
-      "number": 2475,
-      "billId": "hr2475",
-      "title": "Youth Homelessness Guaranteed Income Pilot Program Act of 2025",
-      "introducedDate": "2025-03-27",
-      "latestAction": "Referred to the Committee on Financial Services, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-      "latestActionDate": "2025-03-27",
-      "originChamber": "House",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2475"
     }
   ]
 }

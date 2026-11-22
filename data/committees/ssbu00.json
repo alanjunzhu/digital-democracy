@@ -8,6 +8,15 @@
   "billCount": 13,
   "bills": [
     {
+      "billId": "hr4464",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 4464,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-19",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4464"
+    },
+    {
       "billId": "sconres40",
       "congress": 119,
       "type": "S.Con.Res.",
@@ -30,7 +39,7 @@
       "congress": 119,
       "type": "S.Con.Res.",
       "number": 38,
-      "relationshipType": "Discharged From",
+      "relationshipType": "Referred To",
       "actionDate": "2026-08-07",
       "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/38"
     },
@@ -114,15 +123,6 @@
       "relationshipType": "Referred To",
       "actionDate": "2026-02-26",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3951"
-    },
-    {
-      "billId": "s3204",
-      "congress": 119,
-      "type": "S.",
-      "number": 3204,
-      "relationshipType": "Referred To",
-      "actionDate": "2025-11-19",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3204"
     }
   ]
 }

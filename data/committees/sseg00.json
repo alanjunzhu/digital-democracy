@@ -26,6 +26,42 @@
   "billCount": 250,
   "bills": [
     {
+      "billId": "hr9269",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9269,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-18",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9269"
+    },
+    {
+      "billId": "hr9600",
+      "congress": 119,
+      "type": "H.R.",
+      "number": 9600,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-18",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/9600"
+    },
+    {
+      "billId": "s5759",
+      "congress": 119,
+      "type": "S.",
+      "number": 5759,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-18",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5759"
+    },
+    {
+      "billId": "s5733",
+      "congress": 119,
+      "type": "S.",
+      "number": 5733,
+      "relationshipType": "Referred To",
+      "actionDate": "2026-11-17",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5733"
+    },
+    {
       "billId": "hr2306",
       "congress": 119,
       "type": "H.R.",
@@ -2238,42 +2274,6 @@
       "relationshipType": "Reported By",
       "actionDate": "2026-02-11",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/909"
-    },
-    {
-      "billId": "s3814",
-      "congress": 119,
-      "type": "S.",
-      "number": 3814,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-02-10",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3814"
-    },
-    {
-      "billId": "hr4090",
-      "congress": 119,
-      "type": "H.R.",
-      "number": 4090,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-02-05",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4090"
-    },
-    {
-      "billId": "s3785",
-      "congress": 119,
-      "type": "S.",
-      "number": 3785,
-      "relationshipType": "Referred To",
-      "actionDate": "2026-02-05",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3785"
-    },
-    {
-      "billId": "s446",
-      "congress": 119,
-      "type": "S.",
-      "number": 446,
-      "relationshipType": "Markup By",
-      "actionDate": "2026-02-04",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/446"
     }
   ]
 }

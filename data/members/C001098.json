@@ -73,10 +73,22 @@
   "sponsoredBills": [
     {
       "congress": 119,
+      "type": "S.Res.",
+      "number": 970,
+      "billId": "sres970",
+      "title": "A resolution commending and congratulating Texas Southmost College for 100 years of service to the State of Texas and the United States.",
+      "introducedDate": "2026-11-20",
+      "latestAction": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent.",
+      "latestActionDate": "2026-11-20",
+      "originChamber": "Senate",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-resolution/970"
+    },
+    {
+      "congress": 119,
       "type": "S.",
       "number": 5708,
       "billId": "s5708",
-      "title": "A bill to designate the community-based outpatient clinic of the Department of Veterans Affairs in Victoria, Texas, as the \"Master Sergeant Roy P. Benavidez VA Clinic\".",
+      "title": "Master Sergeant Roy P. Benavidez VA Clinic Act of 2026",
       "introducedDate": "2026-11-10",
       "latestAction": "Read twice and referred to the Committee on Veterans' Affairs.",
       "latestActionDate": "2026-11-10",
@@ -298,30 +310,6 @@
       "latestActionDate": "2026-06-04",
       "originChamber": "Senate",
       "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4693"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 4677,
-      "billId": "s4677",
-      "title": "SUSTAIN Act",
-      "introducedDate": "2026-06-03",
-      "latestAction": "Read twice and referred to the Committee on Armed Services.",
-      "latestActionDate": "2026-06-03",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4677"
-    },
-    {
-      "congress": 119,
-      "type": "S.",
-      "number": 4668,
-      "billId": "s4668",
-      "title": "Protect College Sports Act of 2026",
-      "introducedDate": "2026-06-02",
-      "latestAction": "Held at the desk.",
-      "latestActionDate": "2026-10-05",
-      "originChamber": "Senate",
-      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4668"
     }
   ]
 }
