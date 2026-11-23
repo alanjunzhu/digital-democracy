@@ -1,0 +1,53 @@
+{
+  "eventId": "118818",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Evaluating the Operations of the Committee on Foreign Investment in the United States (CFIUS)",
+  "meetingStatus": "Scheduled",
+  "date": "2026-01-14T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba10",
+      "name": "House Financial Services Subcommittee on National Security, Illicit Finance, and International Financial Institutions"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118818?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Chris Pilkerton",
+      "position": "Assistant Secretary for Investment Security",
+      "organization": "U.S. Department of the Treasury"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Evaluating the Operations of the Committee on Foreign Investment in the United States (CFIUS)",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118818",
+      "format": ""
+    },
+    {
+      "name": "Evaluating the Operations of the Committee on Foreign Investment in the United States (CFIUS)",
+      "url": "https://www.youtube.com/watch?v=0S1FZGMbE0s",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118818/documents/HHRG-119-BA10-20260114-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/118818/documents/HHRG-119-BA10-20260114-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "eventId": "119085",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Funding Lapse and Security Gaps: Assessing the Harmful Impacts of the DHS Shutdown on Americans”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-25T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hshm00",
+      "name": "House Homeland Security"
+    }
+  ],
+  "location": {
+    "room": "310",
+    "building": "Cannon House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119085?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Ha Nguyen McNeill",
+      "position": "Senior Official Performing the Duties of the Administrator, Transportation Security Administration (TSA)",
+      "organization": "U.S. Department of Homeland Security"
+    },
+    {
+      "name": "Mr. Nick Andersen",
+      "position": "Acting Director, Cybersecurity and Infrastructure Security Agency (CISA)",
+      "organization": "U.S. Department of Homeland Security"
+    },
+    {
+      "name": "Mr. Gregg Phillips",
+      "position": "Associate Administrator, Office of Response and Recovery, Federal Emergency Management Agency (FEMA)",
+      "organization": "U.S. Department of Homeland Security"
+    },
+    {
+      "name": "Admiral Thomas Allan",
+      "position": "Vice Commandant, United States Coast Guard",
+      "organization": "U.S. Department of Homeland Security"
+    },
+    {
+      "name": "Ms. Victoria Barton",
+      "position": "Associate Administrator, Office of External Affairs, Federal Emergency Management Agency (FEMA)",
+      "organization": "U.S. Department of Homeland Security"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Funding Lapse and Security Gaps: Assessing the Harmful Impacts of the DHS Shutdown on Americans",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119085",
+      "format": ""
+    },
+    {
+      "name": "Funding Lapse and Security Gaps: Assessing the Harmful Impacts of the DHS Shutdown on Americans",
+      "url": "https://www.youtube.com/watch?v=kqQVUV0x71Y",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119085/documents/HHRG-119-HM00-20260325-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Revised Witness List",
+      "url": "https://www.congress.gov/119/meeting/house/119085/documents/HHRG-119-HM00-WList-20260325.pdf",
+      "format": "PDF"
+    }
+  ]
+}

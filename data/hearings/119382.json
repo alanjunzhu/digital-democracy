@@ -1,0 +1,69 @@
+{
+  "eventId": "119382",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Task Force on Monetary Policy, Treasury Market Resilience, and Economic Prosperity: Examining the Structure of the Federal Reserve System",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-12T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": null,
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119382?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Benjamin Kelly",
+      "position": "Associate Professor of Economics",
+      "organization": "University of Oklahoma"
+    },
+    {
+      "name": "Mr. Benjamin Keen",
+      "position": "Associate Professor of Economics",
+      "organization": "University of Oklahoma"
+    },
+    {
+      "name": "Mr. Thomas Hoenig",
+      "position": "Distinguished Senior Fellow",
+      "organization": "Mercatus Center at George Mason University"
+    },
+    {
+      "name": "Ms. Esther George",
+      "position": "Former President and Chief Executive Officer",
+      "organization": "Federal Reserve Bank of Kansas City"
+    },
+    {
+      "name": "Mr. Gary Kelly",
+      "position": "Deputy Chair, Board of Directors",
+      "organization": "Federal Reserve Bank of Dallas"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Field Hearing Entitled: Examining the Structure of the Federal Reserve System",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119382",
+      "format": ""
+    },
+    {
+      "name": "Field Hearing Entitled: Examining the Structure of the Federal Reserve System",
+      "url": "https://www.youtube.com/watch?v=ZXUegTT31Bk",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119382/documents/HHRG-119-BA00-20260612-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119382/documents/HHRG-119-BA00-20260612-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "eventId": "118949",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Building a Solid Foundation: Restoring Trust and Transparency in Public Housing Agencies",
+  "meetingStatus": "Scheduled",
+  "date": "2026-02-10T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba09",
+      "name": "House Financial Services Subcommittee on Oversight and Investigations"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118949?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Bart Schwartz",
+      "position": "Co-founder & Chairman",
+      "organization": "Guidepost Solutions"
+    },
+    {
+      "name": "Mr. Milan Ozdinec",
+      "position": "President",
+      "organization": "Vargas Premier Corporation Consultants"
+    },
+    {
+      "name": "Mr. Eric Oberdorfer",
+      "position": "Director, Policy and Legislative Affairs",
+      "organization": "National Association of Housing and Redevelopment Officials"
+    },
+    {
+      "name": "Mr. Chase Haller",
+      "position": "Deputy Attorney General and Section Chief, Homeowners Protection Unit",
+      "organization": "Office of the Indiana Attorney General"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Restoring Trust and Transparency in Public Housing Agencies",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118949",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Restoring Trust and Transparency in Public Housing Agencies",
+      "url": "https://www.youtube.com/watch?v=lLLvbRufTtA",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118949/documents/HHRG-119-BA09-20260210-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/118949/documents/HHRG-119-BA09-20260210-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

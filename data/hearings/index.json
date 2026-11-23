@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-22T17:29:27.399Z",
+  "lastUpdated": "2026-11-23T21:49:06.320Z",
   "congress": 119,
   "total": 430,
   "hearings": [
@@ -2133,24 +2133,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338760?format=json"
     },
     {
-      "eventId": "119569",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "America's Fiscal Future: Examining the Need for a Fiscal Commission",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-21T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsbu00",
-          "name": "House Budget"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119569?format=json"
-    },
-    {
       "eventId": "119508",
       "congress": 119,
       "chamber": "House",
@@ -2473,99 +2455,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119529?format=json"
     },
     {
-      "eventId": "119574",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "H.R. 10357, H.R. 10334, H.R. 6130, H.R. 5439, H.R. 4093, H.R. 10346, and H.R. 10356",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-16T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hswm00",
-          "name": "House Ways and Means"
-        }
-      ],
-      "location": {
-        "room": "210",
-        "building": "Capitol",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119574?format=json"
-    },
-    {
-      "eventId": "119565",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Various Measures",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-16T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsba00",
-          "name": "House Financial Services"
-        }
-      ],
-      "location": {
-        "room": "2128",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr1653",
-        "hr10325",
-        "hr7030",
-        "hr7866",
-        "hr10234",
-        "hr4936",
-        "hr8957",
-        "hr5889",
-        "hr10184"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119565?format=json"
-    },
-    {
-      "eventId": "119573",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Markup",
-      "title": "Markup of Sixteen Bills",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-16T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif00",
-          "name": "House Energy and Commerce"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr2713",
-        "hr6207",
-        "hr5967",
-        "hr6152",
-        "hr2805",
-        "hr7294",
-        "hr7502",
-        "hr10152",
-        "hr8255",
-        "hr9385",
-        "hr7945",
-        "hr4950",
-        "hr10158",
-        "hr10170",
-        "hr6832",
-        "hr10163"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119573?format=json"
-    },
-    {
       "eventId": "338750",
       "congress": 119,
       "chamber": "Senate",
@@ -2805,50 +2694,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119553?format=json"
     },
     {
-      "eventId": "119572",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Restoring Election Integrity: Oversight of Voter Fraud in New Jersey”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju13",
-          "name": "House Judiciary Subcommittee on Oversight"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119572?format=json"
-    },
-    {
-      "eventId": "119541",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Main Street Meets Crypto: What Digital Assets Mean for Small Businesses.”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-15T15:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hssm22",
-          "name": "House Small Business Subcommittee on Innovation, Entrepreneurship, and Workforce Development"
-        }
-      ],
-      "location": {
-        "room": "2360",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119541?format=json"
-    },
-    {
       "eventId": "119549",
       "congress": 119,
       "chamber": "House",
@@ -3080,50 +2925,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119528?format=json"
-    },
-    {
-      "eventId": "119521",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“Less Red Tape, More Opportunity: Unleashing American Workers and Job Creators”",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed10",
-          "name": "House Education and Workforce Subcommittee on Workforce Protections"
-        }
-      ],
-      "location": {
-        "room": "2175",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119521?format=json"
-    },
-    {
-      "eventId": "119517",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Beyond Go-Live: VA Electronic Health Record Modernization Status Update",
-      "meetingStatus": "Scheduled",
-      "date": "2026-09-02T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr00",
-          "name": "House Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119517?format=json"
     },
     {
       "eventId": "119520",
@@ -5301,28 +5102,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119443?format=json"
     },
     {
-      "eventId": "119435",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Meeting",
-      "title": "Oversight of the National Telecommunications and Information Administration",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-30T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif16",
-          "name": "House Energy and Commerce Subcommittee on Communications and Technology"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119435?format=json"
-    },
-    {
       "eventId": "119403",
       "congress": 119,
       "chamber": "House",
@@ -6207,6 +5986,24 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338561?format=json"
     },
     {
+      "eventId": "119382",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Task Force on Monetary Policy, Treasury Market Resilience, and Economic Prosperity: Examining the Structure of the Federal Reserve System",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-12T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba00",
+          "name": "House Financial Services"
+        }
+      ],
+      "location": null,
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119382?format=json"
+    },
+    {
       "eventId": "119376",
       "congress": 119,
       "chamber": "House",
@@ -6289,6 +6086,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338544?format=json"
+    },
+    {
+      "eventId": "119375",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Committee on House Administration Full Committee Hearing: “Preventing Fraudulent Donations: Transparency, Verification, and Accountability”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-10T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsha00",
+          "name": "Committee on House Administration"
+        }
+      ],
+      "location": {
+        "room": "1310",
+        "building": "Longworth House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119375?format=json"
     },
     {
       "eventId": "119371",
@@ -6734,6 +6553,30 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119305?format=json"
     },
     {
+      "eventId": "119307",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Partnering for Innovation: How Bank-Fintech Collaborations Enhance Financial Infrastructure",
+      "meetingStatus": "Scheduled",
+      "date": "2026-05-20T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba21",
+          "name": "House Financial Services Subcommittee on Digital Assets, Financial Technology, and Artificial Intelligence"
+        }
+      ],
+      "location": {
+        "room": "2128",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [
+        "hr6552"
+      ],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119307?format=json"
+    },
+    {
       "eventId": "119128",
       "congress": 119,
       "chamber": "House",
@@ -6820,24 +6663,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119270?format=json"
-    },
-    {
-      "eventId": "119249",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"Protecting Workers and Powering America: The Future of Mining\"",
-      "meetingStatus": "Scheduled",
-      "date": "2026-05-08T13:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsed00",
-          "name": "House Education and Workforce"
-        }
-      ],
-      "location": null,
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119249?format=json"
     },
     {
       "eventId": "119189",
@@ -7248,6 +7073,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/338091?format=json"
     },
     {
+      "eventId": "119085",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Funding Lapse and Security Gaps: Assessing the Harmful Impacts of the DHS Shutdown on Americans”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-03-25T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hshm00",
+          "name": "House Homeland Security"
+        }
+      ],
+      "location": {
+        "room": "310",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119085?format=json"
+    },
+    {
       "eventId": "119034",
       "congress": 119,
       "chamber": "House",
@@ -7358,6 +7205,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119043?format=json"
     },
     {
+      "eventId": "119072",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Oversight of the Export-Import Bank",
+      "meetingStatus": "Scheduled",
+      "date": "2026-03-18T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba10",
+          "name": "House Financial Services Subcommittee on National Security, Illicit Finance, and International Financial Institutions"
+        }
+      ],
+      "location": {
+        "room": "2128",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119072?format=json"
+    },
+    {
       "eventId": "119081",
       "congress": 119,
       "chamber": "House",
@@ -7400,28 +7269,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119064?format=json"
-    },
-    {
-      "eventId": "119065",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Protecting Patients and Safeguarding Taxpayer Dollars: The Role of CMS in Combatting Medicare and Medicaid Fraud",
-      "meetingStatus": "Scheduled",
-      "date": "2026-03-17T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif02",
-          "name": "House Energy and Commerce Subcommittee on Oversight and Investigations"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119065?format=json"
     },
     {
       "eventId": "119049",
@@ -7710,6 +7557,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118952?format=json"
     },
     {
+      "eventId": "118949",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Building a Solid Foundation: Restoring Trust and Transparency in Public Housing Agencies",
+      "meetingStatus": "Scheduled",
+      "date": "2026-02-10T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba09",
+          "name": "House Financial Services Subcommittee on Oversight and Investigations"
+        }
+      ],
+      "location": {
+        "room": "2128",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118949?format=json"
+    },
+    {
       "eventId": "118941",
       "congress": 119,
       "chamber": "House",
@@ -7908,6 +7777,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118819?format=json"
     },
     {
+      "eventId": "118818",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Evaluating the Operations of the Committee on Foreign Investment in the United States (CFIUS)",
+      "meetingStatus": "Scheduled",
+      "date": "2026-01-14T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsba10",
+          "name": "House Financial Services Subcommittee on National Security, Illicit Finance, and International Financial Institutions"
+        }
+      ],
+      "location": {
+        "room": "2128",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118818?format=json"
+    },
+    {
       "eventId": "118804",
       "congress": 119,
       "chamber": "House",
@@ -7950,6 +7841,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118809?format=json"
+    },
+    {
+      "eventId": "118793",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Modernizing Retirement Policy for Today's Workforce\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-01-07T15:15:00Z",
+      "committees": [
+        {
+          "systemCode": "hsed02",
+          "name": "House Education and Workforce Subcommittee on Health, Employment, Labor, and Pensions"
+        }
+      ],
+      "location": {
+        "room": "2175",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118793?format=json"
     },
     {
       "eventId": "337769",
@@ -8238,6 +8151,50 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118716?format=json"
     },
     {
+      "eventId": "118682",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Flashpoint: A Path Toward Stability in the Western Balkans",
+      "meetingStatus": "Scheduled",
+      "date": "2025-12-02T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa14",
+          "name": "House Foreign Affairs Subcommittee on Europe"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118682?format=json"
+    },
+    {
+      "eventId": "118711",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“Securing America’s Energy Infrastructure: Addressing Cyber and Physical Threats to the Grid.”",
+      "meetingStatus": "Scheduled",
+      "date": "2025-12-02T15:30:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif03",
+          "name": "House Energy and Commerce Subcommittee on Energy"
+        }
+      ],
+      "location": {
+        "room": "2141",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118711?format=json"
+    },
+    {
       "eventId": "118704",
       "congress": 119,
       "chamber": "House",
@@ -8390,6 +8347,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337663?format=json"
+    },
+    {
+      "eventId": "118669",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Innovation with Integrity: Examining the Risks and Benefits of AI Chatbots",
+      "meetingStatus": "Scheduled",
+      "date": "2025-11-18T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsif02",
+          "name": "House Energy and Commerce Subcommittee on Oversight and Investigations"
+        }
+      ],
+      "location": {
+        "room": "2123",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118669?format=json"
     },
     {
       "eventId": "337656",

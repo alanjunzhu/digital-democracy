@@ -1,0 +1,80 @@
+{
+  "eventId": "119307",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Partnering for Innovation: How Bank-Fintech Collaborations Enhance Financial Infrastructure",
+  "meetingStatus": "Scheduled",
+  "date": "2026-05-20T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba21",
+      "name": "House Financial Services Subcommittee on Digital Assets, Financial Technology, and Artificial Intelligence"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [
+    "hr6552"
+  ],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119307?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Alexandra Steinberg Barrage",
+      "position": "Partner",
+      "organization": "Morrison Foerster"
+    },
+    {
+      "name": "Ms. Henrietta Thomas",
+      "position": "Executive General Manager for Advocacy, Risk & Compliance",
+      "organization": "Xero"
+    },
+    {
+      "name": "Ms. Sheetal Parikh",
+      "position": "General Counsel & Chief Compliance Officer",
+      "organization": "Treasury Prime"
+    },
+    {
+      "name": "Ms. Erica Khalili",
+      "position": "Co-founder, Chief Legal & Risk Officer",
+      "organization": "Lead Bank"
+    },
+    {
+      "name": "Mrs. Mitria Spotser",
+      "position": "Vice President, Federal Policy, and President, Julian Bond Institute for Financial Equity Research",
+      "organization": "Center for Responsible Lending"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: How Bank-Fintech Collaborations Enhance Financial Infrastructure",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119307",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: How Bank-Fintech Collaborations Enhance Financial Infrastructure",
+      "url": "https://www.youtube.com/watch?v=N9pDYMkCois",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119307/documents/HHRG-119-BA21-20260520-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119307/documents/HHRG-119-BA21-20260520-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 6552, the Bank-Fintech Partnership Enhancement Act",
+      "url": "https://www.congress.gov/119/meeting/house/119307/documents/BILLS-119HR6552ih.pdf",
+      "format": "PDF"
+    }
+  ]
+}

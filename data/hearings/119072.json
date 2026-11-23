@@ -1,0 +1,58 @@
+{
+  "eventId": "119072",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight of the Export-Import Bank",
+  "meetingStatus": "Scheduled",
+  "date": "2026-03-18T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba10",
+      "name": "House Financial Services Subcommittee on National Security, Illicit Finance, and International Financial Institutions"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119072?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable John Jovanovic",
+      "position": "President and Chairman",
+      "organization": "Export-Import Bank of the United States"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Hearing Entitled: Oversight of the Export-Import Bank",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119072",
+      "format": ""
+    },
+    {
+      "name": "Hearing Entitled: Oversight of the Export-Import Bank",
+      "url": "https://www.youtube.com/watch?v=3QdUUAydwfI",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119072/documents/HHRG-119-BA10-20260318-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119072/documents/HHRG-119-BA10-20260318-SD002.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R.__, the Export-Import Bank Reauthorization Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/119072/documents/BILLS-119pih-extendsauthorityoftheEXIMBank.pdf",
+      "format": "PDF"
+    }
+  ]
+}

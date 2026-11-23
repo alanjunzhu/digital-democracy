@@ -1,0 +1,63 @@
+{
+  "eventId": "118682",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Flashpoint: A Path Toward Stability in the Western Balkans",
+  "meetingStatus": "Scheduled",
+  "date": "2025-12-02T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa14",
+      "name": "House Foreign Affairs Subcommittee on Europe"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118682?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Edward Joseph",
+      "position": "Lecturer & Senior Fellow",
+      "organization": "Merrill Center for Strategic Studies, Foreign Policy Institute, Johns Hopkins SAIS"
+    },
+    {
+      "name": "Mr. Max Primorac",
+      "position": "Senior Research Fellow, Margaret Thatcher Center for Freedom",
+      "organization": "Heritage Foundation"
+    },
+    {
+      "name": "Mr. Luke Coffey",
+      "position": "Senior Fellow, Center on Europe and Eurasia",
+      "organization": "Hudson Institute"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Flashpoint: A Path Toward Stability in the Western Balkans",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118682",
+      "format": ""
+    },
+    {
+      "name": "Flashpoint: A Path Toward Stability in the Western Balkans",
+      "url": "https://www.youtube.com/watch?v=vTjPKL-muJE",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118682/documents/HHRG-119-FA14-20251202-SD001-U2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/118682/documents/HHRG-119-FA14-20251202-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

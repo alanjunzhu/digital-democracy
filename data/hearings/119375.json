@@ -1,0 +1,42 @@
+{
+  "eventId": "119375",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Committee on House Administration Full Committee Hearing: “Preventing Fraudulent Donations: Transparency, Verification, and Accountability”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-06-10T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsha00",
+      "name": "Committee on House Administration"
+    }
+  ],
+  "location": {
+    "room": "1310",
+    "building": "Longworth House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119375?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "“Preventing Fraudulent Donations: Transparency, Verification, and Accountability”",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119375",
+      "format": ""
+    },
+    {
+      "name": "“Preventing Fraudulent Donations: Transparency, Verification, and Accountability”",
+      "url": "https://www.youtube.com/watch?v=IDrEtGTWum8",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119375/documents/HHRG-119-HA00-20260610-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
