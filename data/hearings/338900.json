@@ -1,0 +1,36 @@
+{
+  "eventId": "338900",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Hearing",
+  "title": "Oversight hearings to examine United States export controls.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-12-03T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssbk00",
+      "name": "Senate Banking, Housing, and Urban Affairs"
+    }
+  ],
+  "location": {
+    "room": "106",
+    "building": "Dirksen Senate Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338900?format=json",
+  "witnesses": [],
+  "videos": [
+    {
+      "name": "Oversight hearings to examine United States export controls.",
+      "url": "https://www.congress.gov/event/119th-Congress/senate-event/338900",
+      "format": ""
+    },
+    {
+      "name": "Oversight hearings to examine United States export controls.",
+      "url": "https://www.senate.gov/isvp/?comm=banking&filename=banking120326",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": []
+}

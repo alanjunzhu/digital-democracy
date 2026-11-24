@@ -1,8 +1,30 @@
 {
-  "lastUpdated": "2026-11-23T21:49:06.320Z",
+  "lastUpdated": "2026-11-24T20:26:46.806Z",
   "congress": 119,
   "total": 430,
   "hearings": [
+    {
+      "eventId": "119601",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "“A Climate of Bias: How Environmental Activists Influence the Judiciary”",
+      "meetingStatus": "Rescheduled",
+      "date": "2026-12-01T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsju03",
+          "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
+        }
+      ],
+      "location": {
+        "room": "2141",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119601?format=json"
+    },
     {
       "eventId": "338860",
       "congress": 119,
@@ -24,6 +46,50 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338860?format=json"
+    },
+    {
+      "eventId": "338901",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to consider the nominations of Ashley Stow, of Texas, and Andrew Woodson, of Virginia, both to be a Member of the Federal Election Commission.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-12-01T17:15:00Z",
+      "committees": [
+        {
+          "systemCode": "ssra00",
+          "name": "Senate Rules and Administration"
+        }
+      ],
+      "location": {
+        "room": "216",
+        "building": "Capitol (Senate side)",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338901?format=json"
+    },
+    {
+      "eventId": "119617",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "\"Beyond the Content: Small Businesses in America's Creator Economy.\"",
+      "meetingStatus": "Scheduled",
+      "date": "2026-12-01T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hssm27",
+          "name": "House Small Business Subcommittee on Economic Growth, Tax, and Capital Access"
+        }
+      ],
+      "location": {
+        "room": "2360",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119617?format=json"
     },
     {
       "eventId": "338881",
@@ -64,6 +130,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338882?format=json"
+    },
+    {
+      "eventId": "119614",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Meeting",
+      "title": "“Behind the Walls: Understanding the Homeland Security Value of Correctional Intelligence”",
+      "meetingStatus": "Scheduled",
+      "date": "2026-12-02T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hshm05",
+          "name": "Homeland Security Subcommittee on Counterterrorism and Intelligence"
+        }
+      ],
+      "location": {
+        "room": "310",
+        "building": "Cannon House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119614?format=json"
     },
     {
       "eventId": "338883",
@@ -108,6 +196,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338880?format=json"
+    },
+    {
+      "eventId": "338900",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Oversight hearings to examine United States export controls.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-12-03T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssbk00",
+          "name": "Senate Banking, Housing, and Urban Affairs"
+        }
+      ],
+      "location": {
+        "room": "106",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338900?format=json"
     },
     {
       "eventId": "119593",
@@ -328,28 +438,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119578?format=json"
-    },
-    {
-      "eventId": "119601",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "“A Climate of Bias: How Environmental Activists Influence the Judiciary”",
-      "meetingStatus": "Postponed",
-      "date": "2026-11-19T15:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsju03",
-          "name": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet"
-        }
-      ],
-      "location": {
-        "room": "2141",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119601?format=json"
     },
     {
       "eventId": "119600",
@@ -3351,26 +3439,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338700?format=json"
     },
     {
-      "eventId": "338702",
+      "eventId": "338704",
       "congress": 119,
       "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nominations of Peter McCoy, of South Carolina, to be Ambassador to Montenegro, Daniel Travis, of California, a Career Member of the Senior Foreign Service, Class of Counselor, to be Ambassador to the Republic of Sierra Leone, and Nathaniel Morris, of Kentucky, to be Ambassador to the Republic of Colombia, all of the Department of State.",
+      "type": "Open Business Meeting",
+      "title": "Business meeting to markup S.737, to require certain interactive computer services to adopt and operate technology verification measures to ensure that users of the platform are not minors, S.1748, to protect the safety of children on the internet, S.4199, to require entities that make artificial intelligence chatbots available to minors to implement certain safe design features, S.4407, to require the creation of family accounts for children to be able to use artificial intelligence chatbots, to require verifiable parental consent for teens using artificial intelligence chatbots, S.5171, to require a study of AI-enabled toys and development of a joint action plan regarding the marketing and sale of AI-enabled toys, and a promotion list in the Coast Guard.",
       "meetingStatus": "Scheduled",
       "date": "2026-08-05T14:00:00Z",
       "committees": [
         {
-          "systemCode": "ssfr00",
-          "name": "Senate Foreign Relations"
+          "systemCode": "sscm00",
+          "name": "Senate Commerce, Science, and Transportation"
         }
       ],
       "location": {
-        "room": "419",
-        "building": "Dirksen Senate Office Building",
+        "room": "253",
+        "building": "Russell Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338702?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338704?format=json"
     },
     {
       "eventId": "338701",
@@ -3395,26 +3483,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338701?format=json"
     },
     {
-      "eventId": "338704",
+      "eventId": "338702",
       "congress": 119,
       "chamber": "Senate",
-      "type": "Open Business Meeting",
-      "title": "Business meeting to markup S.737, to require certain interactive computer services to adopt and operate technology verification measures to ensure that users of the platform are not minors, S.1748, to protect the safety of children on the internet, S.4199, to require entities that make artificial intelligence chatbots available to minors to implement certain safe design features, S.4407, to require the creation of family accounts for children to be able to use artificial intelligence chatbots, to require verifiable parental consent for teens using artificial intelligence chatbots, S.5171, to require a study of AI-enabled toys and development of a joint action plan regarding the marketing and sale of AI-enabled toys, and a promotion list in the Coast Guard.",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nominations of Peter McCoy, of South Carolina, to be Ambassador to Montenegro, Daniel Travis, of California, a Career Member of the Senior Foreign Service, Class of Counselor, to be Ambassador to the Republic of Sierra Leone, and Nathaniel Morris, of Kentucky, to be Ambassador to the Republic of Colombia, all of the Department of State.",
       "meetingStatus": "Scheduled",
       "date": "2026-08-05T14:00:00Z",
       "committees": [
         {
-          "systemCode": "sscm00",
-          "name": "Senate Commerce, Science, and Transportation"
+          "systemCode": "ssfr00",
+          "name": "Senate Foreign Relations"
         }
       ],
       "location": {
-        "room": "253",
-        "building": "Russell Senate Office Building",
+        "room": "419",
+        "building": "Dirksen Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338704?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338702?format=json"
     },
     {
       "eventId": "338697",
@@ -3483,28 +3571,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338698?format=json"
     },
     {
-      "eventId": "338695",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine building a resilient health care future with biotechnology.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-08-04T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfi10",
-          "name": "Senate Finance Subcommittee on Health Care"
-        }
-      ],
-      "location": {
-        "room": "215",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338695?format=json"
-    },
-    {
       "eventId": "338693",
       "congress": 119,
       "chamber": "Senate",
@@ -3525,6 +3591,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338693?format=json"
+    },
+    {
+      "eventId": "338695",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine building a resilient health care future with biotechnology.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-08-04T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfi10",
+          "name": "Senate Finance Subcommittee on Health Care"
+        }
+      ],
+      "location": {
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338695?format=json"
     },
     {
       "eventId": "338723",
@@ -4511,28 +4599,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338654?format=json"
     },
     {
-      "eventId": "338653",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of David Cummins, of Virginia, to be Administrator of the Transportation Security Administration.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-16T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "sscm00",
-          "name": "Senate Commerce, Science, and Transportation"
-        }
-      ],
-      "location": {
-        "room": "253",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338653?format=json"
-    },
-    {
       "eventId": "338657",
       "congress": 119,
       "chamber": "Senate",
@@ -4555,26 +4621,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338657?format=json"
     },
     {
-      "eventId": "338643",
+      "eventId": "338653",
       "congress": 119,
       "chamber": "Senate",
       "type": "Open Hearing",
-      "title": "Hearings to examine the nomination of Lieutenant General Douglas A. Schiess, USSF, to be general and Chief of Space Operations.",
+      "title": "Hearings to examine the nomination of David Cummins, of Virginia, to be Administrator of the Transportation Security Administration.",
       "meetingStatus": "Scheduled",
-      "date": "2026-07-16T13:30:00Z",
+      "date": "2026-07-16T14:00:00Z",
       "committees": [
         {
-          "systemCode": "ssas00",
-          "name": "Senate Armed Services"
+          "systemCode": "sscm00",
+          "name": "Senate Commerce, Science, and Transportation"
         }
       ],
       "location": {
-        "room": "G50",
-        "building": "Dirksen Senate Office Building",
+        "room": "253",
+        "building": "Russell Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338643?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338653?format=json"
     },
     {
       "eventId": "338662",
@@ -4619,6 +4685,28 @@
         "s945"
       ],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338662?format=json"
+    },
+    {
+      "eventId": "338643",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nomination of Lieutenant General Douglas A. Schiess, USSF, to be general and Chief of Space Operations.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-07-16T13:30:00Z",
+      "committees": [
+        {
+          "systemCode": "ssas00",
+          "name": "Senate Armed Services"
+        }
+      ],
+      "location": {
+        "room": "G50",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338643?format=json"
     },
     {
       "eventId": "338655",
@@ -4770,26 +4858,26 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119439?format=json"
     },
     {
-      "eventId": "119434",
+      "eventId": "338650",
       "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "\"Reforming FEMA: Ensuring the Nation's Disaster Readiness Works for Americans\"",
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the Semiannual Monetary Policy Report to the Congress.",
       "meetingStatus": "Scheduled",
       "date": "2026-07-15T14:00:00Z",
       "committees": [
         {
-          "systemCode": "hspw00",
-          "name": ""
+          "systemCode": "ssbk00",
+          "name": "Senate Banking, Housing, and Urban Affairs"
         }
       ],
       "location": {
-        "room": "2167",
-        "building": "Rayburn House Office Building",
+        "room": "538",
+        "building": "Dirksen Senate Office Building",
         "address": ""
       },
       "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119434?format=json"
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338650?format=json"
     },
     {
       "eventId": "338661",
@@ -4836,28 +4924,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338646?format=json"
-    },
-    {
-      "eventId": "338650",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the Semiannual Monetary Policy Report to the Congress.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-07-15T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssbk00",
-          "name": "Senate Banking, Housing, and Urban Affairs"
-        }
-      ],
-      "location": {
-        "room": "538",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338650?format=json"
     },
     {
       "eventId": "338647",
@@ -5212,28 +5278,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338608?format=json"
     },
     {
-      "eventId": "338606",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nominations of Brett Doyle, of Connecticut, David Foley, Jr., of Virginia, Samuel Negatu, of the District of Columbia, Peter-Anthony Pappas, of New Jersey, and Bartholomew Thanhauser, of New York, each to be a Member of the United States International Trade Commission.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-25T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssfi00",
-          "name": "Senate Finance"
-        }
-      ],
-      "location": {
-        "room": "215",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338606?format=json"
-    },
-    {
       "eventId": "338609",
       "congress": 119,
       "chamber": "Senate",
@@ -5254,6 +5298,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338609?format=json"
+    },
+    {
+      "eventId": "338606",
+      "congress": 119,
+      "chamber": "Senate",
+      "type": "Open Hearing",
+      "title": "Hearings to examine the nominations of Brett Doyle, of Connecticut, David Foley, Jr., of Virginia, Samuel Negatu, of the District of Columbia, Peter-Anthony Pappas, of New Jersey, and Bartholomew Thanhauser, of New York, each to be a Member of the United States International Trade Commission.",
+      "meetingStatus": "Scheduled",
+      "date": "2026-06-25T14:00:00Z",
+      "committees": [
+        {
+          "systemCode": "ssfi00",
+          "name": "Senate Finance"
+        }
+      ],
+      "location": {
+        "room": "215",
+        "building": "Dirksen Senate Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338606?format=json"
     },
     {
       "eventId": "338602",
@@ -5364,33 +5430,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/338610?format=json"
-    },
-    {
-      "eventId": "119392",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Trash to Treasure: Examining Legislation to Support Domestic Critical Mineral Recovery and Recycling",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-24T14:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif18",
-          "name": "House Energy and Commerce Subcommittee on Environment"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr3059",
-        "hr7523",
-        "hr3713",
-        "hr4370"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119392?format=json"
     },
     {
       "eventId": "338601",
@@ -6394,50 +6433,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338551?format=json"
     },
     {
-      "eventId": "338508",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine the nominations of Gary Shatswell, of Washington, to be an Assistant Secretary (Information and Technology), and Michael Tierney, of Pennsylvania, to be an Assistant Secretary (Office of Accountability and Whistleblower Protection), both of the Department of Veterans Affairs.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-03T20:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssva00",
-          "name": "Senate Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "418",
-        "building": "Russell Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338508?format=json"
-    },
-    {
-      "eventId": "338511",
-      "congress": 119,
-      "chamber": "Senate",
-      "type": "Open Hearing",
-      "title": "Hearings to examine proposed budget estimates and justification for fiscal year 2027 for the Department of State.",
-      "meetingStatus": "Scheduled",
-      "date": "2026-06-03T19:00:00Z",
-      "committees": [
-        {
-          "systemCode": "ssap20",
-          "name": "Senate Appropriations Subcommittee on State, Foreign Operations, and Related Programs"
-        }
-      ],
-      "location": {
-        "room": "138",
-        "building": "Dirksen Senate Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338511?format=json"
-    },
-    {
       "eventId": "119330",
       "congress": 119,
       "chamber": "House",
@@ -6750,28 +6745,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/119248?format=json"
     },
     {
-      "eventId": "119188",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "The Fiscal Year 2027 Environmental Protection Agency Budget",
-      "meetingStatus": "Scheduled",
-      "date": "2026-04-28T14:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif18",
-          "name": "House Energy and Commerce Subcommittee on Environment"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119188?format=json"
-    },
-    {
       "eventId": "119205",
       "congress": 119,
       "chamber": "House",
@@ -7012,43 +6985,6 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118983?format=json"
-    },
-    {
-      "eventId": "119107",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Policies to Protect Our Communities From Illicit Drug Threats",
-      "meetingStatus": "Scheduled",
-      "date": "2026-03-26T18:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif14",
-          "name": "House Energy and Commerce Subcommittee on Health"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [
-        "hr1227",
-        "hr1266",
-        "hr5880",
-        "hr7994",
-        "hr1561",
-        "hr8005",
-        "hr7184",
-        "hr2004",
-        "hr5630",
-        "hr7407",
-        "hr7970",
-        "hr2715",
-        "hr8000",
-        "hr5629"
-      ],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119107?format=json"
     },
     {
       "eventId": "338091",
@@ -7381,28 +7317,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118991?format=json"
     },
     {
-      "eventId": "119017",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Ready for Reuse: Legislative Proposals to Unleash the Potential of America’s Brownfields Sites",
-      "meetingStatus": "Scheduled",
-      "date": "2026-03-04T19:00:00Z",
-      "committees": [
-        {
-          "systemCode": "hsif18",
-          "name": "House Energy and Commerce Subcommittee on Environment"
-        }
-      ],
-      "location": {
-        "room": "2123",
-        "building": "Rayburn House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/119017?format=json"
-    },
-    {
       "eventId": "119016",
       "congress": 119,
       "chamber": "House",
@@ -7733,28 +7647,6 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118880?format=json"
     },
     {
-      "eventId": "118882",
-      "congress": 119,
-      "chamber": "House",
-      "type": "Hearing",
-      "title": "Community Care Network Next Generation: One Trillion Dollars of Oversight",
-      "meetingStatus": "Scheduled",
-      "date": "2026-01-22T15:15:00Z",
-      "committees": [
-        {
-          "systemCode": "hsvr00",
-          "name": "House Veterans' Affairs"
-        }
-      ],
-      "location": {
-        "room": "360",
-        "building": "Cannon House Office Building",
-        "address": ""
-      },
-      "relatedBillIds": [],
-      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118882?format=json"
-    },
-    {
       "eventId": "118819",
       "congress": 119,
       "chamber": "House",
@@ -7907,6 +7799,28 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/nochamber/337774?format=json"
+    },
+    {
+      "eventId": "118771",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Mexico’s Relationships with the Region",
+      "meetingStatus": "Scheduled",
+      "date": "2025-12-17T19:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa07",
+          "name": "House Foreign Affairs Subcommittee on Western Hemisphere"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118771?format=json"
     },
     {
       "eventId": "118764",
@@ -8085,6 +7999,28 @@
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118730?format=json"
     },
     {
+      "eventId": "118734",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Understanding Judea and Samaria: Historical, Strategic, and Political Dynamics in U.S.–Israel Relations",
+      "meetingStatus": "Scheduled",
+      "date": "2025-12-10T15:10:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa13",
+          "name": "House Subcommittee on the Middle East and North Africa"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118734?format=json"
+    },
+    {
       "eventId": "118720",
       "congress": 119,
       "chamber": "House",
@@ -8259,6 +8195,50 @@
       },
       "relatedBillIds": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house/118684?format=json"
+    },
+    {
+      "eventId": "118681",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "President Trump’s redesignation of Nigeria as a “Country of Particular Concern—CPC”: A serious, well-founded wake-up call",
+      "meetingStatus": "Scheduled",
+      "date": "2025-11-20T16:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa16",
+          "name": "House Foreign Affairs Subcommittee on Africa"
+        }
+      ],
+      "location": {
+        "room": "2172",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118681?format=json"
+    },
+    {
+      "eventId": "118680",
+      "congress": 119,
+      "chamber": "House",
+      "type": "Hearing",
+      "title": "Export Control Loopholes: Chipmaking Tools and their Subcomponents",
+      "meetingStatus": "Scheduled",
+      "date": "2025-11-20T15:00:00Z",
+      "committees": [
+        {
+          "systemCode": "hsfa19",
+          "name": "House Foreign Affairs South and Central Asia Subcommittee"
+        }
+      ],
+      "location": {
+        "room": "2200",
+        "building": "Rayburn House Office Building",
+        "address": ""
+      },
+      "relatedBillIds": [],
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house/118680?format=json"
     },
     {
       "eventId": "118664",

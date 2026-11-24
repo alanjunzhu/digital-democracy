@@ -1,0 +1,31 @@
+{
+  "eventId": "119617",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "\"Beyond the Content: Small Businesses in America's Creator Economy.\"",
+  "meetingStatus": "Scheduled",
+  "date": "2026-12-01T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hssm27",
+      "name": "House Small Business Subcommittee on Economic Growth, Tax, and Capital Access"
+    }
+  ],
+  "location": {
+    "room": "2360",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119617?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Public Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119617/documents/HHRG-119-SM27-20261201-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

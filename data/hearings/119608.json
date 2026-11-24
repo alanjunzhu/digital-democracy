@@ -20,7 +20,18 @@
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119608?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Committee Business: Export Control Reform Act Disclosure",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119608",
+      "format": ""
+    },
+    {
+      "name": "Committee Business: Export Control Reform Act Disclosure",
+      "url": "https://www.youtube.com/watch?v=6isAhFBsm-I",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "Member Attendance",
@@ -33,8 +44,13 @@
       "format": "PDF"
     },
     {
-      "name": "Export Control Reform Act UC",
-      "url": "https://www.congress.gov/119/meeting/house/119608/documents/HMTG-119-FA00-20261119-SD002.pdf",
+      "name": "Support Doc 1",
+      "url": "https://www.congress.gov/119/meeting/house/119608/documents/HMTG-119-FA00-20261119-SD002-U1.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Support Doc 2",
+      "url": "https://www.congress.gov/119/meeting/house/119608/documents/HMTG-119-FA00-20261119-SD003.pdf",
       "format": "PDF"
     }
   ]

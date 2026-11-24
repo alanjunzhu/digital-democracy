@@ -1,0 +1,63 @@
+{
+  "eventId": "118680",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Export Control Loopholes: Chipmaking Tools and their Subcomponents",
+  "meetingStatus": "Scheduled",
+  "date": "2025-11-20T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa19",
+      "name": "House Foreign Affairs South and Central Asia Subcommittee"
+    }
+  ],
+  "location": {
+    "room": "2200",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118680?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Chris McGuire",
+      "position": "Senior Fellow for China and Emerging Technologies",
+      "organization": "Council on Foreign Relations"
+    },
+    {
+      "name": "Mr. Kevin Wolf",
+      "position": "Partner, International Trade",
+      "organization": "Akin Gump Strauss Hauer & Feld LLP"
+    },
+    {
+      "name": "Mr. Dean Ball",
+      "position": "Senior Fellow",
+      "organization": "Foundation for American Innovation"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Export Control Loopholes: Chipmaking Tools and their Subcomponents",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/118680",
+      "format": ""
+    },
+    {
+      "name": "Export Control Loopholes: Chipmaking Tools and their Subcomponents",
+      "url": "https://www.youtube.com/watch?v=tUxb0pqNQ8w",
+      "format": ""
+    }
+  ],
+  "meetingDocuments": [
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/118680/documents/HHRG-119-FA19-20251120-MbrRoster.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118680/documents/HHRG-119-FA19-20251120-SD001-U1.pdf",
+      "format": "PDF"
+    }
+  ]
+}

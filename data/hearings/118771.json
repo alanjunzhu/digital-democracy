@@ -1,0 +1,47 @@
+{
+  "eventId": "118771",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Mexico’s Relationships with the Region",
+  "meetingStatus": "Scheduled",
+  "date": "2025-12-17T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa07",
+      "name": "House Foreign Affairs Subcommittee on Western Hemisphere"
+    }
+  ],
+  "location": {
+    "room": "2172",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118771?format=json",
+  "witnesses": [
+    {
+      "name": "Ms. Katherine Dueholm",
+      "position": "Principal Deputy Assistant Secretary, Bureau of Western Hemisphere Affairs",
+      "organization": "U.S. Department of State"
+    },
+    {
+      "name": "Mr. Chris Landberg",
+      "position": "Senior Bureau Official, Bureau of International Narcotics and Law Enforcement Affairs",
+      "organization": "U.S. Department of State"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/118771/documents/HHRG-119-FA07-20251217-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Member Attendance",
+      "url": "https://www.congress.gov/119/meeting/house/118771/documents/HHRG-119-FA07-20251217-MbrRoster.pdf",
+      "format": "PDF"
+    }
+  ]
+}

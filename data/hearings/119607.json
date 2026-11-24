@@ -44,7 +44,18 @@
   ],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119607?format=json",
   "witnesses": [],
-  "videos": [],
+  "videos": [
+    {
+      "name": "Full Committee Markup",
+      "url": "https://www.congress.gov/event/119th-Congress/house-event/119607",
+      "format": ""
+    },
+    {
+      "name": "Full Committee Markup",
+      "url": "https://www.youtube.com/watch?v=9SMdjE98Zvc",
+      "format": ""
+    }
+  ],
   "meetingDocuments": [
     {
       "name": "•\tH.R. 1031 (Rep. Tenney), “Fort Ontario Holocaust Refugee Shelter National Historical Park Establishment Act”",
