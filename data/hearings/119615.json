@@ -1,0 +1,57 @@
+{
+  "eventId": "119615",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "Oversight of Prudential Regulators",
+  "meetingStatus": "Scheduled",
+  "date": "2026-12-01T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119615?format=json",
+  "witnesses": [
+    {
+      "name": "The Honorable Michelle Bowman",
+      "position": "Vice Chair for Supervision",
+      "organization": "Board of Governors of the Federal Reserve System"
+    },
+    {
+      "name": "The Honorable Johnathan Gould",
+      "position": "Comptroller",
+      "organization": "Office of the Comptroller of the Currency"
+    },
+    {
+      "name": "The Honorable John Crews",
+      "position": "Chairman",
+      "organization": "National Credit Union Administration"
+    },
+    {
+      "name": "The Honorable Travis Hill",
+      "position": "Chairman",
+      "organization": "Federal Deposit Insurance Corporation"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119615/documents/HHRG-119-BA00-20261201-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119615/documents/HHRG-119-BA00-20261201-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "eventId": "119619",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Defend, Detect, Disclose: Responding to AI-Enabled Cyber Incidents”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-12-02T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsgo05",
+      "name": "House Oversight and Government Reform Subcommittee on Economic Growth, Energy Policy, and Regulatory Affairs"
+    }
+  ],
+  "location": {
+    "room": "2154",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119619?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119619/documents/HHRG-119-GO05-20261202-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

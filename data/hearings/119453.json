@@ -13,13 +13,28 @@
     }
   ],
   "location": {
-    "room": "2128",
+    "room": "2220",
     "building": "Rayburn House Office Building",
     "address": ""
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119453?format=json",
   "witnesses": [
+    {
+      "name": "Mr. Santiago Sueiro",
+      "position": "Senior Policy Analyst",
+      "organization": "UnidosUS"
+    },
+    {
+      "name": "Ms. Demetria McCain",
+      "position": "Director of Policy",
+      "organization": "NAACP Legal Defense Fund"
+    },
+    {
+      "name": "Ms. Alexis Goldstein",
+      "position": "Former CFPB Markets and Policy Fellow",
+      "organization": "NTEU 335, CFPB Union"
+    },
     {
       "name": "The Honorable Russell Vought",
       "position": "Acting Director",
@@ -42,6 +57,16 @@
     {
       "name": "Notice",
       "url": "https://www.congress.gov/119/meeting/house/119453/documents/HHRG-119-BA00-20260715-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Updated Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119453/documents/HHRG-119-BA00-20260715-SD004.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Updated Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119453/documents/HHRG-119-BA00-20260715-SD005.pdf",
       "format": "PDF"
     },
     {

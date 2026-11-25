@@ -1,0 +1,62 @@
+{
+  "eventId": "119616",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The Future of Financial Services: Opportunities, Challenges, and the Path Forward",
+  "meetingStatus": "Scheduled",
+  "date": "2026-12-02T15:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsba00",
+      "name": "House Financial Services"
+    }
+  ],
+  "location": {
+    "room": "2128",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119616?format=json",
+  "witnesses": [
+    {
+      "name": "Mr. Erik Syvertsen",
+      "position": "Chief Executive Officer and President",
+      "organization": "AngelList Asset Management"
+    },
+    {
+      "name": "Mr. Jim Johnson",
+      "position": "President, Banking",
+      "organization": "FIS"
+    },
+    {
+      "name": "Mr. Blake Breathitt",
+      "position": "Global Head of Strategy",
+      "organization": "Adyen"
+    },
+    {
+      "name": "Ms. Erica Khalili",
+      "position": "Co-Founder and Chief Legal & Risk Officer",
+      "organization": "Lead Bank"
+    },
+    {
+      "name": "Mr. Tom Feltner",
+      "position": "Associate Director of Consumer Policy",
+      "organization": "Americans for Financial Reform"
+    }
+  ],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119616/documents/HHRG-119-BA00-20261202-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memorandum",
+      "url": "https://www.congress.gov/119/meeting/house/119616/documents/HHRG-119-BA00-20261202-SD002.pdf",
+      "format": "PDF"
+    }
+  ]
+}

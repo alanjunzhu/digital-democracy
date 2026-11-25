@@ -1,0 +1,31 @@
+{
+  "eventId": "119620",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "“Defend, Detect, Disclose: Responding to AI-Enabled Cyber Incidents”",
+  "meetingStatus": "Scheduled",
+  "date": "2026-12-02T18:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsgo12",
+      "name": "House Oversight and Government Reform Subcommittee on Cybersecurity, Information Technology, and Government Innovation"
+    }
+  ],
+  "location": {
+    "room": "2154",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119620?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119620/documents/HHRG-119-GO12-20261202-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}

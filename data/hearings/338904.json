@@ -1,0 +1,25 @@
+{
+  "eventId": "338904",
+  "congress": 119,
+  "chamber": "Senate",
+  "type": "Open Business Meeting",
+  "title": "Business meeting to consider pending nominations.",
+  "meetingStatus": "Scheduled",
+  "date": "2026-12-01T14:00:00Z",
+  "committees": [
+    {
+      "systemCode": "ssfr00",
+      "name": "Senate Foreign Relations"
+    }
+  ],
+  "location": {
+    "room": "116",
+    "building": "Capitol (Senate side)",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/senate/338904?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": []
+}

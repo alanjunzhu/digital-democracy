@@ -1,0 +1,61 @@
+{
+  "eventId": "118863",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Meeting",
+  "title": "Senate amendment to H.R. 2347 – Bipartisan American Affordability and Jobs Act of 2026; H.R. 11142 – Stop Insider Trading Act; H.R. 3495 – Direct Seller and Real Estate Agent Harmonization Act; H.R. 5267 – American Franchise Act",
+  "meetingStatus": "Scheduled",
+  "date": "2026-11-30T21:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsru00",
+      "name": "House Rules"
+    }
+  ],
+  "location": {
+    "room": "H-313",
+    "building": "Capitol",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/118863?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "H.R. 3495 – Direct Seller and Real Estate Agent Harmonization Act",
+      "url": "https://www.congress.gov/119/meeting/house/118863/documents/BILLS-119hr3495rh.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: H. Rept. 119-494 Part I – Report from the Committee on Education and Workforce to accompany H.R. 3495",
+      "url": "https://www.congress.gov/119/meeting/house/118863/documents/CRPT-119hrpt494.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: H. Rept. 119-494 Part II – Supplemental report from the Committee on Education and Workforce to accompany H.R. 3495",
+      "url": "https://www.congress.gov/119/meeting/house/118863/documents/CRPT-119hrpt494-pt2.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 5267 – American Franchise Act",
+      "url": "https://www.congress.gov/119/meeting/house/118863/documents/BILLS-119hr5267rh.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": ":: H. Rept. 119-802 – Report from the Committee on Education and Workforce to accompany H.R. 5267",
+      "url": "https://www.congress.gov/119/meeting/house/118863/documents/CRPT-119hrpt802.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Senate amendment to H.R. 2347 – Bipartisan American Affordability and Jobs Act of 2026",
+      "url": "https://www.congress.gov/119/meeting/house/118863/documents/BILLS-119hr2347eas.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "H.R. 11142 – Stop Insider Trading Act",
+      "url": "https://www.congress.gov/119/meeting/house/118863/documents/BILLS-119hr11142ih.pdf",
+      "format": "PDF"
+    }
+  ]
+}
