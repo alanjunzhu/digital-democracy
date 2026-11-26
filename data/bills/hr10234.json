@@ -11,9 +11,9 @@
     "party": "R",
     "state": "IA"
   },
-  "latestAction": "Referred to the House Committee on Financial Services.",
-  "latestActionDate": "2026-09-02",
-  "updateDate": "2026-09-11T08:05:45Z",
+  "latestAction": "Placed on the Union Calendar, Calendar No. 790.",
+  "latestActionDate": "2026-11-24",
+  "updateDate": "2026-11-25T09:05:43Z",
   "originChamber": "House",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10234",
@@ -27,6 +27,14 @@
       "type": "Standing",
       "activities": [
         {
+          "name": "Reported By",
+          "date": "2026-11-24T16:52:42Z"
+        },
+        {
+          "name": "Markup By",
+          "date": "2026-09-16T15:04:00Z"
+        },
+        {
           "name": "Referred To",
           "date": "2026-09-02T14:00:30Z"
         }
@@ -35,6 +43,30 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-24",
+      "text": "Placed on the Union Calendar, Calendar No. 790.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-24",
+      "text": "Reported (Amended) by the Committee on Financial Services. H. Rept. 119-895.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-24",
+      "text": "Reported (Amended) by the Committee on Financial Services. H. Rept. 119-895."
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 42 - 7.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
     {
       "date": "2026-09-02",
       "text": "Referred to the House Committee on Financial Services.",

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "178",
+  "number": 178,
   "billId": "hr178",
   "title": "To require the Secretary of Agriculture to carry out activities to suppress wildfires, and for other purposes.",
   "introducedDate": "2025-01-03",
@@ -13,14 +13,45 @@
   },
   "latestAction": "Reported (Amended) by the Committee on Natural Resources. H. Rept. 119-429, Part I.",
   "latestActionDate": "2026-01-08",
+  "updateDate": "2026-11-25T18:48:48Z",
   "originChamber": "House",
   "policyArea": "Public Lands and Natural Resources",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/178",
   "summary": "<p>This bill sets out requirements for wildfire suppression and management activities carried out by the Forest Service.</p><p>These requirements apply to Forest Service land that (1) has a severe, extreme, or exceptional drought intensity rating; (2) has a National Wildland Fire Preparedness level of 5 (i.e., the highest level of wildland fire activity); or (3) is located in a fireshed ranked in the top 10% of wildfire exposure.</p><p>Within 24 hours of detecting a wildfire on such&nbsp;Forest Service land, the service must use all available resources to extinguish the wildfire. Additionally, the service may not inhibit the firefighting activities of state and local agencies that are authorized to respond to wildfires on the Forest Service land.</p><p>Further, the service may only initiate a backfire or burnout as part of a fire suppression strategy if&nbsp;it is ordered by the responsible incident commander or is necessary to protect the health and safety of firefighting personnel. The service must use all available resources to control any initiated fire until it is extinguished.</p><p>The bill also limits the service's use of prescribed fires (i.e., the controlled application of fire by a team of experts under specified weather conditions to restore health to ecosystems that depend on fire). When using prescribed fires as a fire resource management tool, the service must comply with applicable laws and regulations and immediately suppress any prescribed fire that exceeds its prescription.</p>",
   "cosponsors": 9,
   "committees": [
-    "Natural Resources Committee",
-    "Agriculture Committee"
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Reported By",
+          "date": "2026-01-08T21:50:48Z"
+        },
+        {
+          "name": "Markup By",
+          "date": "2025-07-23T18:55:45Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:24:15Z"
+        }
+      ]
+    },
+    {
+      "name": "Agriculture Committee",
+      "systemCode": "hsag00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:24:10Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "191",
+  "number": 191,
   "billId": "hr191",
   "title": "Inflation Reduction Act of 2025",
   "introducedDate": "2025-01-03",
@@ -13,20 +13,109 @@
   },
   "latestAction": "Referred to the Committee on Ways and Means, and in addition to the Committees on Energy and Commerce, Agriculture, Natural Resources, Financial Services, Science, Space, and Technology, Transportation and Infrastructure, and Oversight and Government Reform, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-25T21:37:44Z",
   "originChamber": "House",
   "policyArea": "Economics and Public Finance",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/191",
   "summary": "<p><strong>Inflation Reduction Act of 2025</strong></p><p>This bill repeals the Inflation Reduction Act of 2022 and rescinds any unobligated funds made available by the act.</p>",
   "cosponsors": 15,
   "committees": [
-    "Oversight and Government Reform Committee",
-    "Transportation and Infrastructure Committee",
-    "Science, Space, and Technology Committee",
-    "Financial Services Committee",
-    "Natural Resources Committee",
-    "Agriculture Committee",
-    "Energy and Commerce Committee",
-    "Ways and Means Committee"
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:18:35Z"
+        }
+      ]
+    },
+    {
+      "name": "Transportation and Infrastructure Committee",
+      "systemCode": "hspw00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:18:30Z"
+        }
+      ]
+    },
+    {
+      "name": "Science, Space, and Technology Committee",
+      "systemCode": "hssy00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:18:25Z"
+        }
+      ]
+    },
+    {
+      "name": "Financial Services Committee",
+      "systemCode": "hsba00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:18:20Z"
+        }
+      ]
+    },
+    {
+      "name": "Natural Resources Committee",
+      "systemCode": "hsii00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:18:15Z"
+        }
+      ]
+    },
+    {
+      "name": "Agriculture Committee",
+      "systemCode": "hsag00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:18:10Z"
+        }
+      ]
+    },
+    {
+      "name": "Energy and Commerce Committee",
+      "systemCode": "hsif00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:18:05Z"
+        }
+      ]
+    },
+    {
+      "name": "Ways and Means Committee",
+      "systemCode": "hswm00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:18:00Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

@@ -1,7 +1,7 @@
 {
   "congress": 119,
   "type": "H.R.",
-  "number": "172",
+  "number": 172,
   "billId": "hr172",
   "title": "Defund Heroin Injection Centers Act of 2025",
   "introducedDate": "2025-01-03",
@@ -13,13 +13,25 @@
   },
   "latestAction": "Referred to the House Committee on Oversight and Government Reform.",
   "latestActionDate": "2025-01-03",
+  "updateDate": "2026-11-25T18:34:14Z",
   "originChamber": "House",
   "policyArea": "Crime and Law Enforcement",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/172",
   "summary": "<p><strong>Defund Heroin Injection Centers Act of 2025</strong></p><p>This bill prohibits federal funds from being made available to a state, local, tribal, or private entity that operates or controls an injection center (i.e., a medically supervised injection site) in violation of the federal statute commonly known as the Crack House Statute. The statute generally prohibits making facilities available for the purpose of unlawfully using a controlled substance. </p>",
-  "cosponsors": 1,
+  "cosponsors": 2,
   "committees": [
-    "Oversight and Government Reform Committee"
+    {
+      "name": "Oversight and Government Reform Committee",
+      "systemCode": "hsgo00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Referred To",
+          "date": "2025-01-03T16:26:40Z"
+        }
+      ]
+    }
   ],
   "subjects": [],
   "actions": [

@@ -11,15 +11,31 @@
     "party": "R",
     "state": "KY"
   },
-  "latestAction": "Referred to the Committee on Financial Services, and in addition to the Committees on the Judiciary, Small Business, and Oversight and Government Reform, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-  "latestActionDate": "2026-08-31",
-  "updateDate": "2026-09-17T08:07:43Z",
+  "latestAction": "Ordered to be Reported (Amended) by the Yeas and Nays: 28 - 21.",
+  "latestActionDate": "2026-09-16",
+  "updateDate": "2026-09-22T15:45:53Z",
   "originChamber": "House",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/10184",
   "summary": "",
   "cosponsors": 30,
   "committees": [
+    {
+      "name": "Financial Services Committee",
+      "systemCode": "hsba00",
+      "chamber": "House",
+      "type": "Standing",
+      "activities": [
+        {
+          "name": "Markup By",
+          "date": "2026-09-16T15:10:00Z"
+        },
+        {
+          "name": "Referred To",
+          "date": "2026-08-31T16:02:40Z"
+        }
+      ]
+    },
     {
       "name": "Oversight and Government Reform Committee",
       "systemCode": "hsgo00",
@@ -55,22 +71,20 @@
           "date": "2026-08-31T16:02:45Z"
         }
       ]
-    },
-    {
-      "name": "Financial Services Committee",
-      "systemCode": "hsba00",
-      "chamber": "House",
-      "type": "Standing",
-      "activities": [
-        {
-          "name": "Referred To",
-          "date": "2026-08-31T16:02:40Z"
-        }
-      ]
     }
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-09-16",
+      "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 28 - 21.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
     {
       "date": "2026-08-31",
       "text": "Referred to the Committee on Financial Services, and in addition to the Committees on the Judiciary, Small Business, and Oversight and Government Reform, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",

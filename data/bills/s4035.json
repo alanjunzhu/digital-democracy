@@ -11,9 +11,9 @@
     "party": "D",
     "state": "CA"
   },
-  "latestAction": "Message on Senate action sent to the House.",
+  "latestAction": "Held at the desk.",
   "latestActionDate": "2026-11-20",
-  "updateDate": "2026-11-21T12:08:42Z",
+  "updateDate": "2026-11-24T13:53:08Z",
   "originChamber": "Senate",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4035",
@@ -41,10 +41,6 @@
   "actions": [
     {
       "date": "2026-11-20",
-      "text": "Message on Senate action sent to the House."
-    },
-    {
-      "date": "2026-11-20",
       "text": "Held at the desk.",
       "chamber": "House"
     },
@@ -52,6 +48,10 @@
       "date": "2026-11-20",
       "text": "Received in the House.",
       "chamber": "House"
+    },
+    {
+      "date": "2026-11-20",
+      "text": "Message on Senate action sent to the House."
     },
     {
       "date": "2026-11-19",

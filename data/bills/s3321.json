@@ -11,9 +11,9 @@
     "party": "R",
     "state": "IA"
   },
-  "latestAction": "Message on Senate action sent to the House.",
+  "latestAction": "Held at the desk.",
   "latestActionDate": "2026-11-20",
-  "updateDate": "2026-11-21T12:03:36Z",
+  "updateDate": "2026-11-24T13:53:34Z",
   "originChamber": "Senate",
   "policyArea": "Labor and Employment",
   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3321",
@@ -41,10 +41,6 @@
   "actions": [
     {
       "date": "2026-11-20",
-      "text": "Message on Senate action sent to the House."
-    },
-    {
-      "date": "2026-11-20",
       "text": "Held at the desk.",
       "chamber": "House"
     },
@@ -52,6 +48,10 @@
       "date": "2026-11-20",
       "text": "Received in the House.",
       "chamber": "House"
+    },
+    {
+      "date": "2026-11-20",
+      "text": "Message on Senate action sent to the House."
     },
     {
       "date": "2026-11-19",

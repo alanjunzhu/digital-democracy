@@ -11,9 +11,9 @@
     "party": "R",
     "state": "OH"
   },
-  "latestAction": "Referred to the House Committee on Financial Services.",
-  "latestActionDate": "2026-03-09",
-  "updateDate": "2026-09-09T14:52:57Z",
+  "latestAction": "Placed on the Union Calendar, Calendar No. 788.",
+  "latestActionDate": "2026-11-24",
+  "updateDate": "2026-11-25T09:05:52Z",
   "originChamber": "House",
   "policyArea": "Finance and Financial Sector",
   "url": "https://www.congress.gov/bill/119th-congress/house-bill/7866",
@@ -27,6 +27,14 @@
       "type": "Standing",
       "activities": [
         {
+          "name": "Reported By",
+          "date": "2026-11-24T16:52:06Z"
+        },
+        {
+          "name": "Markup By",
+          "date": "2026-09-16T15:06:00Z"
+        },
+        {
           "name": "Referred To",
           "date": "2026-03-09T17:03:05Z"
         }
@@ -35,6 +43,30 @@
   ],
   "subjects": [],
   "actions": [
+    {
+      "date": "2026-11-24",
+      "text": "Placed on the Union Calendar, Calendar No. 788.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-24",
+      "text": "Reported (Amended) by the Committee on Financial Services. H. Rept. 119-893.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-11-24",
+      "text": "Reported (Amended) by the Committee on Financial Services. H. Rept. 119-893."
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Ordered to be Reported (Amended) by the Yeas and Nays: 31 - 18.",
+      "chamber": "House"
+    },
+    {
+      "date": "2026-09-16",
+      "text": "Committee Consideration and Mark-up Session Held",
+      "chamber": "House"
+    },
     {
       "date": "2026-03-09",
       "text": "Referred to the House Committee on Financial Services.",
