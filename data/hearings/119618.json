@@ -1,0 +1,31 @@
+{
+  "eventId": "119618",
+  "congress": 119,
+  "chamber": "House",
+  "type": "Hearing",
+  "title": "The War in Ukraine: Lessons Learned and Future Threats",
+  "meetingStatus": "Scheduled",
+  "date": "2026-12-02T19:00:00Z",
+  "committees": [
+    {
+      "systemCode": "hsfa14",
+      "name": "House Foreign Affairs Subcommittee on Europe"
+    }
+  ],
+  "location": {
+    "room": "2200",
+    "building": "Rayburn House Office Building",
+    "address": ""
+  },
+  "relatedBillIds": [],
+  "url": "https://api.congress.gov/v3/committee-meeting/119/house/119618?format=json",
+  "witnesses": [],
+  "videos": [],
+  "meetingDocuments": [
+    {
+      "name": "Hearing Notice",
+      "url": "https://www.congress.gov/119/meeting/house/119618/documents/HHRG-119-FA14-20261202-SD001.pdf",
+      "format": "PDF"
+    }
+  ]
+}
