@@ -19,7 +19,23 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119618?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Rear Admiral Upper Half Mark Montgomery",
+      "position": "Center on Cyber and Technology Innovation and Senior Fellow",
+      "organization": "Foundation for Defense of Democracies"
+    },
+    {
+      "name": "Dr. Victoria Coates",
+      "position": "Vice President, Kathryn and Shelby Cullom Davis Institute for National Security and Foreign Policy",
+      "organization": "Heritage Foundation"
+    },
+    {
+      "name": "The Honorable William Taylor",
+      "position": "Former U.S. Ambassador to Ukraine",
+      "organization": ""
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {

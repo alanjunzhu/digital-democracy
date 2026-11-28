@@ -19,12 +19,33 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119617?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Ryan Schram",
+      "position": "Executive Director",
+      "organization": "Center for the Creator Economy at Syracuse University"
+    },
+    {
+      "name": "Ms. Stephanie Patrick",
+      "position": "Owner",
+      "organization": "Orbit Media"
+    },
+    {
+      "name": "Dr. Mikhail Varshavski",
+      "position": "CEO",
+      "organization": "DM Operations Inc."
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Public Notice",
       "url": "https://www.congress.gov/119/meeting/house/119617/documents/HHRG-119-SM27-20261201-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Public Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119617/documents/HHRG-119-SM27-20261201-SD002.pdf",
       "format": "PDF"
     }
   ]

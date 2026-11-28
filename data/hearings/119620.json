@@ -19,12 +19,33 @@
   },
   "relatedBillIds": [],
   "url": "https://api.congress.gov/v3/committee-meeting/119/house/119620?format=json",
-  "witnesses": [],
+  "witnesses": [
+    {
+      "name": "Mr. Neil Chilson",
+      "position": "Head of AI Policy",
+      "organization": "Abundance Institute"
+    },
+    {
+      "name": "Mr. Sam Rubin",
+      "position": "Senior Vice President of Consulting and Threat Intelligence at Unit 42",
+      "organization": "Palo Alto Networks"
+    },
+    {
+      "name": "Mr. Morgan Plummer",
+      "position": "Vice President of Policy Design & Delivery",
+      "organization": "Americans for Responsible Innovation"
+    }
+  ],
   "videos": [],
   "meetingDocuments": [
     {
       "name": "Notice",
       "url": "https://www.congress.gov/119/meeting/house/119620/documents/HHRG-119-GO12-20261202-SD001.pdf",
+      "format": "PDF"
+    },
+    {
+      "name": "Memo",
+      "url": "https://www.congress.gov/119/meeting/house/119620/documents/HHRG-119-GO12-20261202-SD002.pdf",
       "format": "PDF"
     }
   ]
